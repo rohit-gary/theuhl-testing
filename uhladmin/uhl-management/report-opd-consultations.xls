@@ -1,0 +1,187 @@
+
+        <table class="table" border="1">  
+                    <tr><td><b>Card</b></td><td><b>700</b></td></tr>
+        <table class="table" border="1">  
+                    <tr><td><b>Cash</b></td><td><b>6180</b></td></tr>
+   <table class="table" border="1">  
+                    <tr>  
+                         <th>ID</th>
+                         <th>Year</th>
+                         <th>Month</th>
+                         <th>Name</th>  
+                         <th>Age</th>                         
+                         <th>Address</th> 
+                         <th>ID Card Details</th>
+                         <th>PhoneNumber</th> 
+                         <th>Consulting Doctor</th>
+                         <th>Fees</th>
+                         <th>Other Charges</th>
+                         <th>Total Charges</th>
+                         <th>Payment Mode</th>
+                         <th>Diagnosis</th>
+                         <th>Consultation Date</th>
+                         <th>Consultation Time</th>
+                    </tr>
+  <tr>  
+                        <td>1</td>
+                        <td>2024</td> 
+                        <td>January</td>
+                        <td>Prateek</td>
+                        <td>34</td>
+                        <td>Test Address</td>
+                        <td>12345678</td>
+                        <td>8826789578</td>
+                        <td>Test </td>
+                        <td>700</td>
+                        <td></td>
+                        <td>700</td>
+                        <td>Cash</td>
+                        <td>Test Diagnosis</td>
+                        <td>2024-01-04</td>
+                        <td>13:01:42</td>
+                    </tr>
+   <tr>  
+                        <td>2</td>
+                        <td>2024</td> 
+                        <td>January</td>
+                        <td>Daina</td>
+                        <td>35</td>
+                        <td>Test Address</td>
+                        <td>1952</td>
+                        <td>8619343686</td>
+                        <td>Test </td>
+                        <td>700</td>
+                        <td></td>
+                        <td>700</td>
+                        <td>Card</td>
+                        <td>Test Diagonosis</td>
+                        <td>2024-01-16</td>
+                        <td>12:23:43</td>
+                    </tr>
+   <tr>  
+                        <td>3</td>
+                        <td>2024</td> 
+                        <td>January</td>
+                        <td>Anshika Gupta</td>
+                        <td>21</td>
+                        <td>budh vihar ph 2</td>
+                        <td></td>
+                        <td>8700073535</td>
+                        <td>Test </td>
+                        <td>700</td>
+                        <td></td>
+                        <td>700</td>
+                        <td>Cash</td>
+                        <td>cat bite</td>
+                        <td>2024-01-16</td>
+                        <td>13:01:48</td>
+                    </tr>
+   <tr>  
+                        <td>4</td>
+                        <td>2024</td> 
+                        <td>January</td>
+                        <td>Aditya</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>8595767648</td>
+                        <td>Test </td>
+                        <td>700</td>
+                        <td></td>
+                        <td>700</td>
+                        <td>Cash</td>
+                        <td></td>
+                        <td>2024-01-27</td>
+                        <td>04:51:49</td>
+                    </tr>
+   <tr>  
+                        <td>5</td>
+                        <td>2024</td> 
+                        <td>February</td>
+                        <td>Test 1</td>
+                        <td>78</td>
+                        <td>Test Address</td>
+                        <td></td>
+                        <td>8826789578</td>
+                        <td>Test </td>
+                        <td>800</td>
+                        <td></td>
+                        <td>800</td>
+                        <td>Cash</td>
+                        <td>Test Diagonosis</td>
+                        <td>2024-02-01</td>
+                        <td>14:28:26</td>
+                    </tr>
+   <tr>  
+                        <td>6</td>
+                        <td>2024</td> 
+                        <td>February</td>
+                        <td>Prateek</td>
+                        <td>34</td>
+                        <td>Test Address</td>
+                        <td>12345678</td>
+                        <td>8826789578</td>
+                        <td>Test </td>
+                        <td>900</td>
+                        <td>100</td>
+                        <td>1000</td>
+                        <td>Cash</td>
+                        <td></td>
+                        <td>2024-02-02</td>
+                        <td>08:19:41</td>
+                    </tr>
+   <tr>  
+                        <td>7</td>
+                        <td>2024</td> 
+                        <td>February</td>
+                        <td>Prateek</td>
+                        <td>34</td>
+                        <td>Test Address</td>
+                        <td>12345678</td>
+                        <td>8826789578</td>
+                        <td>Test </td>
+                        <td>700</td>
+                        <td>80</td>
+                        <td>780</td>
+                        <td>Cash</td>
+                        <td>Test Diagnosis----</td>
+                        <td>2024-02-02</td>
+                        <td>16:31:23</td>
+                    </tr>
+   <tr>  
+                        <td>8</td>
+                        <td>2024</td> 
+                        <td>February</td>
+                        <td>Prateek</td>
+                        <td>34</td>
+                        <td>Test Address</td>
+                        <td>12345678</td>
+                        <td>8826789578</td>
+                        <td>Test </td>
+                        <td>700</td>
+                        <td></td>
+                        <td>700</td>
+                        <td>Cash</td>
+                        <td>Test </td>
+                        <td>2024-02-02</td>
+                        <td>17:56:01</td>
+                    </tr>
+   <tr>  
+                        <td>9</td>
+                        <td>2024</td> 
+                        <td>February</td>
+                        <td>Prateek 2</td>
+                        <td>35</td>
+                        <td>Ajnara Homes</td>
+                        <td>1234</td>
+                        <td>8826789578</td>
+                        <td>Test </td>
+                        <td>800</td>
+                        <td></td>
+                        <td>800</td>
+                        <td>Cash</td>
+                        <td></td>
+                        <td>2024-02-03</td>
+                        <td>06:24:05</td>
+                    </tr>
+   

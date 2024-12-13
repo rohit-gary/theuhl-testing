@@ -1,0 +1,38 @@
+
+   <table class="table" border="1">  
+                    <tr>  
+                         <th>Book Name</th> 
+                         <th>Price</th> 
+                         <th>Book PDF</th>                            
+                         <th>Created By</th> 
+                         <th>Status</th> 
+                    </tr>
+  <tr>  
+                        <td>Test</td> 
+                        <td>3000</td>
+                        <td>Testbook_pdf.pdf</td>
+                        <td>admin@tathastuics.com</td>
+                        <td>Activate</td>
+                    </tr>
+   <tr>  
+                        <td>Test</td> 
+                        <td>3000</td>
+                        <td>Testbook_pdf.pdf</td>
+                        <td>admin@tathastuics.com</td>
+                        <td>Activate</td>
+                    </tr>
+   <tr>  
+                        <td>Test</td> 
+                        <td>3000</td>
+                        <td></td>
+                        <td>admin@tathastuics.com</td>
+                        <td>Activate</td>
+                    </tr>
+   <tr>  
+                        <td>Test2</td> 
+                        <td>3000</td>
+                        <td></td>
+                        <td>admin@tathastuics.com</td>
+                        <td>Activate</td>
+                    </tr>
+   

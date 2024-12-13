@@ -1,0 +1,7 @@
+{
+  "System Admin":["_Nav_Dashboard_Lead","_Nav_Dashboard","_Nav_Enquiries","_Nav_Admissions_Manage","_Nav_PaymentLink","_Nav_Users","_Nav_Company","_Nav_Admissions","_Nav_Website_Admissions","_Nav_Admissions_form","_Nav_books","_Nav_Resources","_Nav_courses","_Nav_Enrolled_Student","_Nav_Company_details","_Nav_Test_Result","_Nav_Educator","_Nav_Test","_Nav_All_Transaction","_Nav_Book_Dispatch","_Nav_Invoice_no","_Nav_Website_Manage"],
+  "Counsellor":["_Nav_Dashboard_Counsellor_Lead","_Nav_Dashboard","_Nav_Admissions_Manage","_Nav_PaymentLink","_Nav_All_Transaction","_Nav_Admissions"],
+  "ContentTeam":["_Nav_Dashboard","_Nav_Resources","_Nav_Dashboard_Content_team"],
+  "Book Dispatch":["_Nav_Dashboard","_Nav_Dashboard_Book_Dispatch","_Nav_Book_Dispatch","_Nav_Admissions","_Nav_courses"],
+  "Academic Head":["_Nav_Dashboard","_Nav_Dashboard_Educator","_Nav_Educator"]
+}

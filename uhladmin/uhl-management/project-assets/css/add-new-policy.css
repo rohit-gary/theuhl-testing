@@ -1,0 +1,207 @@
+        .step-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #e9ecef;
+    color: #6c757d;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.step-title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c757d;
+}
+.step-box.active .step-number {
+    background-color: #0d6efd;
+    color: #fff;
+}
+.step-box.completed .step-number {
+    background-color: #28a745; /* Green color for completed steps */
+    color: white;
+}
+.step-box.inactive .step-number {
+    background-color: #6c757d; /* Gray color for inactive steps */
+    color: white;
+}
+.step-line {
+    flex-grow: 1;
+    height: 3px;
+    background-color: #e9ecef;
+    margin: 0 15px;
+    margin-bottom: 41px;
+    transition: background-color 0.3s ease;
+}
+.step-box.active + .step-line {
+    background-color: #0d6efd;
+}
+.step-box.completed + .step-line {
+    background-color: #28a745; /* Green for completed steps */
+}
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .card-header {
+            background: linear-gradient(90deg, #0d6efd, #6610f2);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-save-next {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-save-next:hover {
+            background-color: #218838;
+        }
+        .loading {
+            display: none;
+        }
+        .loading.active {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+
+        .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.form-check {
+    margin-top: 10px;
+}
+/* Style for selected cards */
+.plan-card.selected {
+    border: 2px solid #28a745; /* Green border for selected card */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); /* Green glow effect */
+    cursor: pointer;
+    position: relative;
+    opacity: 0.85; /* Set opacity to 0.85 for a semi-transparent effect */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* When hovering over the selected card, make it stand out more */
+.plan-card.selected:hover {
+    opacity: 1; /* Remove opacity on hover for a more distinct effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Position for the green check mark */
+.check-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    z-index: 10; /* Ensure the check mark appears above the card */
+}
+
+/* Optional: Hover effect for card (non-selected) */
+.plan-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+/* Styling for the professional checkout page */
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.list-group-item {
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.list-group-item span {
+    font-size: 1.1rem;
+}
+
+#total-amount {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.list-group {
+    margin-bottom: 1.5rem;
+}
+

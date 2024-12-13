@@ -1,0 +1,78 @@
+
+2024-12-02_10:33:42_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_24
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:33:58_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:34:40_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:35:29_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:36:16_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:37:26_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:38:17_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:39:01_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_17
+{
+    "Token": "",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:39:41_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_24
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:40:22_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_24
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:40:30_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_24
+{
+    "Token": "",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:40:39_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_24
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_10:43:33_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\capture-doctor-onboardingImg.php_24
+{
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+    "imageData":"sdfvbbdfddghfdgnvnhnhg"
+}
+2024-12-02_12:30:13_C:\wamp64\www\Projects\unitedhealthlumina\uhl-management\api\capture-doctor-onboardingImg.php_26
+Request Data: {"Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA","imageData":"base64-encoded-image-data","CreatedBy":"username","TempImageID":""}
+2024-12-02_12:30:13_C:\wamp64\www\Projects\unitedhealthlumina\uhl-management\api\capture-doctor-onboardingImg.php_74
+Error: Signature verification failed
+2024-12-02_12:31:08_C:\wamp64\www\Projects\unitedhealthlumina\uhl-management\api\capture-doctor-onboardingImg.php_26
+Request Data: {"Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA","imageData":"base64-encoded-image-data","CreatedBy":"username","TempImageID":""}
+2024-12-02_12:31:34_C:\wamp64\www\Projects\unitedhealthlumina\uhl-management\api\capture-doctor-onboardingImg.php_26
+Request Data: {"Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA","imageData":"base64-encoded-image-data","CreatedBy":"username","TempImageID":""}
+2024-12-02_12:39:01_C:\wamp64\www\Projects\unitedhealthlumina\uhl-management\api\capture-doctor-onboardingImg.php_26
+Request Data: {"Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA","imageData":"base64-encoded-image-data","CreatedBy":"username","TempImageID":""}
+2024-12-02_12:39:03_C:\wamp64\www\Projects\unitedhealthlumina\uhl-management\api\capture-doctor-onboardingImg.php_26
+Request Data: {"Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA","imageData":"base64-encoded-image-data","CreatedBy":"username","TempImageID":""}

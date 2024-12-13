@@ -1,0 +1,179 @@
+@media (max-width: 767px) {
+    .security_box_row .security_box {
+        width: 100%;
+        margin-bottom: 11px;
+    }
+    .about_mobile_row{
+        flex-direction: column-reverse;
+    }
+
+    .about-section .inner-column {
+        text-align: center;
+    }
+    .sec-title h2:before {
+        display: none;
+    }
+
+    .sec-title h2 {
+        font-size: 2.3rem;
+    }
+
+    .banner_content h1 {
+        line-height: 47px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .banner_content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .banner_content p {
+        font-size: 1rem;
+        line-height: 29px;
+    }
+
+    .why_dwd_heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .why_dwd_heading p {
+        font-size: 1rem;
+    }
+
+    .about_content {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .footer_logo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer_navigation {
+        margin-bottom: 20px;
+    }
+
+    .social_media_icon {
+        justify-content: center;
+    }
+
+    .fms_banner_content ul {
+        justify-content: center;
+    }
+
+    .fms_banner_content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .fms_banner_section {
+        padding: 40px 0px 20px 0px;
+    }
+
+    .client_img {
+        width: 133px;
+        padding: 13px 24px;
+    }
+
+    .process_box {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .signup_banner {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .signup_content_box {
+        width: 100%;
+        padding: 20px 25px;
+    }
+
+    .signup_box {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .signup_form {
+        width: 100%;
+    }
+
+    .already_acc {
+        margin-top: 17px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        
+    }
+    .sign_up_logo{
+        display: block;
+        width: 56%;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .security_box_content a {
+        font-size: 1.1rem;
+    }
+
+    .security_box_content p {
+        font-size: 1rem;
+        line-height: 28px;
+        margin-top: 23px;
+    }
+
+    .security_box_content h5 {
+        font-size: 2rem;
+    }
+
+    .banner_section {
+        padding: 35px 0px;
+    }
+
+    .process_box h2 {
+        font-size: 2rem;
+        line-height: 38px;
+    }
+
+    .optional_box .optional_img {
+        text-align: center;
+        width: 70%;
+        margin: auto;
+    }
+
+    .optional_box .optional_img img {
+        width: 100%;
+    }
+
+    .optional_box {
+        height: auto;
+    }
+
+    .key_points_box {
+        width: 45%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .sign_up_banner_content {
+        text-align: center;
+    }
+
+    .sign_up_key_points {
+        flex-wrap: wrap;
+    }
+
+    .sign_up_banner_content h2 {
+        font-size: 2.8rem;
+        line-height: 48px;
+        font-weight: 700;
+    }
+
+}

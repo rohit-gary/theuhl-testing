@@ -1,0 +1,21 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.login_logo {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .login_logo {
+    width: 100%;
+  }
+
+  .container-login100 {
+    width: 100%;
+  }
+}
+
+.form-group {
+    text-align: left !important;
+}

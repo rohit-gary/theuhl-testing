@@ -1,0 +1,311 @@
+
+2024-12-09_18:02:25_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":null,"name":null,"policyNumber":null,"amount":"35998.00","phonenumber":null,"paymentStatus":"Success"}
+2024-12-09_18:06:27_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"admin@eqube.com","name":"Testing","policyNumber":"UHL207842","amount":"35998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-09_18:08:41_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"admin@eqube.com","name":"Testing","policyNumber":"UHL207842","amount":"35998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-09_18:10:40_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"admin@eqube.com","name":"Testing","policyNumber":"UHL207842","amount":"35998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-09_18:16:23_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"admin@eqube.com","name":"Testing","policyNumber":"UHL207842","amount":"35998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-09_18:16:56_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"admin@eqube.com","name":"Testing","policyNumber":"UHL207842","amount":"35998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-09_18:23:39_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"admin@eqube.com","name":"Testing","policyNumber":"UHL207842","amount":"35998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_09:46:35_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Testing","policyNumber":"UHL858422","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_09:48:36_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Testing","policyNumber":"UHL858422","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_09:52:58_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Testing","policyNumber":"UHL858422","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_10:02:35_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Testing","policyNumber":"UHL858422","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_10:03:07_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Testing","policyNumber":"UHL858422","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_10:17:09_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Testing","policyNumber":"UHL858422","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_10:20:09_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana52@gmail.com","name":"Chitransh Gary","policyNumber":"UHL185792","amount":"35998.00","phonenumber":"1234567892","paymentStatus":"Success"}
+2024-12-10_10:30:45_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana52@gmail.com","name":"Chitransh Gary","policyNumber":"UHL185792","amount":"35998.00","phonenumber":"1234567892","paymentStatus":"Success"}
+2024-12-10_10:34:02_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana52@gmail.com","name":"Chitransh Gary","policyNumber":"UHL185792","amount":"35998.00","phonenumber":"1234567892","paymentStatus":"Success"}
+2024-12-10_10:35:36_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana52@gmail.com","name":"Chitransh Gary","policyNumber":"UHL185792","amount":"35998.00","phonenumber":"1234567892","paymentStatus":"Success"}
+2024-12-10_10:37:28_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana52@gmail.com","name":"Chitransh Gary","policyNumber":"UHL185792","amount":"35998.00","phonenumber":"1234567892","paymentStatus":"Success"}
+2024-12-10_10:39:30_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana52@gmail.com","name":"Chitransh Gary","policyNumber":"UHL185792","amount":"35998.00","phonenumber":"1234567892","paymentStatus":"Success"}
+2024-12-10_10:42:16_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:43:08_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:46:21_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:47:45_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:50:32_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:51:51_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:55:37_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:55:56_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:56:24_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:57:15_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:57:34_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_10:58:39_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:09_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:16_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:18_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:19_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:32_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:32_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:33_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:02:48_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:04:48_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:05:09_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:05:21_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:05:35_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:08:44_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:09:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:10:55_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:13:03_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:14:32_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:15:54_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:16:34_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:17:13_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:17:53_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_11:22:43_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:13:16_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:15:23_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:15:28_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:16:31_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:17:29_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:17:47_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:19:31_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:20:53_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:22:29_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:23:30_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:24:31_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:25:11_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:25:52_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:27:45_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:28:07_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:31:24_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:33:31_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:34:17_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:35:02_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:35:19_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:39:55_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:40:33_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:40:35_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:41:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:41:39_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:42:25_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:44:27_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:45:20_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:46:25_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:50:40_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:51:10_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:59:01_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_12:59:32_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_13:00:45_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_13:57:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_13:58:39_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_13:59:11_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:00:12_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:10:06_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:10:52_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:11:27_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:13:34_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:16:21_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:17:30_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:21:29_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:21:35_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:22:37_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:23:56_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:30:22_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:33:08_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:33:59_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:34:47_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:35:10_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:36:08_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:36:25_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:38:43_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:39:26_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:40:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:40:32_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:40:59_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:41:27_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:44:17_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:02_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:03_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:03_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:04_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:05_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:05_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:05_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:45:25_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+
+2024-12-10_14:48:42_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Rohit Maurya","policyNumber":"UHL740180","amount":"15998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_14:52:42_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Rohit Maurya","policyNumber":"UHL740180","amount":"15998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_14:53:37_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Rohit Maurya","policyNumber":"UHL740180","amount":"15998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_14:56:00_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Rohit Maurya","policyNumber":"UHL740180","amount":"15998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_16:28:45_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"lifeapana@gmail.com","name":"Rohit Maurya","policyNumber":"UHL740180","amount":"15998.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_16:33:26_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_16:41:33_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_16:42:05_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_16:48:08_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_16:49:36_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:10:06_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:26:45_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:28:43_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:29:29_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:29:54_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:30:35_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_17:31:12_C:\wamp64\www\Projects\unitedhealthlumina_3.0\uhladmin\uhl-management\service-reports\generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL861193","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-10_21:59:56_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya Testing ","policyNumber":"UHL717667","amount":"5999.00","phonenumber":"8528528529","paymentStatus":"Success"}
+2024-12-10_22:04:04_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya Testing ","policyNumber":"UHL717667","amount":"5999.00","phonenumber":"8528528529","paymentStatus":"Success"}
+2024-12-10_22:51:13_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya Testing ","policyNumber":"UHL717667","amount":"5999.00","phonenumber":"8528528529","paymentStatus":"Success"}
+2024-12-10_22:58:14_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya Testing ","policyNumber":"UHL717667","amount":"5999.00","phonenumber":"8528528529","paymentStatus":"Success"}
+2024-12-11_10:35:49_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL130712","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-11_10:45:25_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Testing","policyNumber":"UHL310383","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-11_11:20:03_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Testing","policyNumber":"UHL550542","amount":"12018.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-11_11:30:42_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Testing","policyNumber":"UHL231169","amount":"12018.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-11_12:29:12_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rahul Kashyap","policyNumber":"UHL271444","amount":"10009.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-11_16:48:48_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"pgfiry@gmail.com","name":"Prateek Gupta","policyNumber":"UHL670582","amount":"5999.00","phonenumber":"8826789578","paymentStatus":"Success"}
+2024-12-11_17:14:31_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Rohit Maurya","policyNumber":"UHL933511","amount":"5999.00","phonenumber":"8528528520","paymentStatus":"Success"}
+2024-12-11_18:57:14_/var/www/html/theuhl.in/uhladmin/uhl-management/service-reports/generate-policy-doc-new.php_20
+{"email":"rohitmaurya.gary@gmail.com","name":"Prateek Gupta","policyNumber":"UHL259255","amount":"15998.00","phonenumber":"8948975967","paymentStatus":"Success"}

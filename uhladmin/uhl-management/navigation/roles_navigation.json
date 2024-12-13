@@ -1,0 +1,66 @@
+{
+  "System Admin": [
+    "_Nav_Dashboard",
+    "_Nav_Users",
+    "_Nav_Configuration",
+     "_Nav_faqs",
+     "_Nav_Plan",
+      "_Nav_Channel_Partner",
+       "_Nav_Customer",
+       "_Nav_Account",
+       "_Nav_Neft"
+  ],
+  "Admin": [
+    "_Nav_Dashboard",
+    "_Nav_Users",    
+    "_Nav_Configuration",
+    "_Nav_faqs",
+     "_Nav_Plan",
+      "_Nav_Channel_Partner",
+       "_Nav_Customer",
+       "_Nav_Account",
+       "_Nav_Neft"
+
+  ],
+  "Client Admin": [
+    "_Nav_Dashboard",
+    "_Nav_Users",
+    "_Nav_Configuration",
+    "_Nav_faqs",
+     "_Nav_Plan",
+     "_Nav_Channel_Partner",
+      "_Nav_Customer",
+      "_Nav_Account",
+      "_Nav_Neft"
+  ],
+
+  "Channel Partner": [
+    "_Nav_Dashboard",
+   "_Nav_Plan",
+    "_Nav_Customer"
+  ],
+
+  "Sales Man": [
+    "_Nav_Dashboard",
+   "_Nav_Plan",
+    "_Nav_Customer"
+  ],
+
+  "Policy Customer": [
+    "_Nav_Dashboard_Customer",
+    "_Nav_Document",
+    "_Nav_Reimbursement"
+   
+  ],
+
+  "Accountant":[
+    "_Nav_Dashboard",
+    "_Nav_Account",
+    "_Nav_Neft"
+  ]
+
+
+
+
+  
+}

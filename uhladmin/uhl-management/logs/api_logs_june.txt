@@ -1,0 +1,119 @@
+
+2024-06-06_15:51:32_C:\wamp64\www\Projects\jll\jll-management\api\login.php_11
+{
+    "username":"durgesh.guhagarkar@jll.com",
+    "password":"test@123"
+}
+2024-06-06_15:51:32_C:\wamp64\www\Projects\jll\jll-management\api\login.php_59
+{"message":"Authentication done","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY2OTI5MiwiZXhwIjo0ODcxMjY5MjkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjpudWxsfX0.pV-GC481WdwDPbF3RgRjqDfzPE58WbzRpRXwZbRt-Cbp37qPFsHpQmrJwCQ8GtKGR2Q8UVgXXWoF12nmlocbog","role":"Admin"}
+2024-06-06_15:53:49_C:\wamp64\www\Projects\jll\jll-management\api\login.php_11
+{
+    "username":"durgesh.guhagarkar@jll.com",
+    "password":"test@123"
+}
+2024-06-06_15:53:49_C:\wamp64\www\Projects\jll\jll-management\api\login.php_59
+{"message":"Authentication done","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY2OTQyOSwiZXhwIjo0ODcxMjY5NDI5LCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.JUd-2VGg7bPxLXw26OiCCvSm_WhKfJug4hNgZVEsfn9-G6XdvsFRAqxkdo9H3sAkRraa3lndMClvnx9VGfk9MQ","role":"Admin"}
+2024-06-06_15:57:02_C:\wamp64\www\Projects\jll\jll-management\api\login.php_11
+{
+    "username":"durgesh.guhagarkar@jll.com",
+    "password":"test@123"
+}
+2024-06-06_15:57:02_C:\wamp64\www\Projects\jll\jll-management\api\login.php_59
+{"message":"Authentication done","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY2OTYyMiwiZXhwIjo0ODcxMjY5NjIyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.ofjCc6VbTA27KREaHP5WmJM1qkmwS8R9M3OsYe4U6HeYe8LfCBn3lLpjrFGD0GsCBoCC1BJN1_t5IZchgaUTAg","role":"Admin"}
+2024-06-06_15:57:20_C:\wamp64\www\Projects\jll\jll-management\api\decode_token.php_12
+{
+    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY2OTYyMiwiZXhwIjo0ODcxMjY5NjIyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.ofjCc6VbTA27KREaHP5WmJM1qkmwS8R9M3OsYe4U6HeYe8LfCBn3lLpjrFGD0GsCBoCC1BJN1_t5IZchgaUTAg"
+}
+2024-06-06_15:57:50_C:\wamp64\www\Projects\jll\jll-management\api\decode_token.php_12
+{
+    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY2OTYyMiwiZXhwIjo0ODcxMjY5NjIyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.ofjCc6VbTA27KREaHP5WmJM1qkmwS8R9M3OsYe4U6HeYe8LfCBn3lLpjrFGD0GsCBoCC1BJN1_t5IZchgaUTAg"
+}
+2024-06-06_16:11:32_C:\wamp64\www\Projects\jll\jll-management\api\login.php_11
+{
+    "username":"durgesh.guhagarkar@jll.com",
+    "password":"test@123"
+}
+2024-06-06_16:11:32_C:\wamp64\www\Projects\jll\jll-management\api\login.php_59
+{"message":"Authentication done","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY3MDQ5MiwiZXhwIjo0ODcxMjcwNDkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.T80n2-vwJzjR1eYHrGQS6sgkuAWMaU24RfVqBMLiXSLo3FILYLfQToDX5TWMlZ0cIbREpVexmW3gMY2R7EwgxA","role":"Admin"}
+2024-06-06_16:12:05_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_15
+{"ID":"9","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY3MDQ5MiwiZXhwIjo0ODcxMjcwNDkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.T80n2-vwJzjR1eYHrGQS6sgkuAWMaU24RfVqBMLiXSLo3FILYLfQToDX5TWMlZ0cIbREpVexmW3gMY2R7EwgxA"}
+2024-06-06_16:12:05_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_69
+{"error":false,"data":{"report_images":[],"report_images_id":[],"CompanyName":null,"CompanySiteName":null,"ServiceName":null}}
+2024-06-06_16:12:47_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_15
+{"ID":"9","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY3MDQ5MiwiZXhwIjo0ODcxMjcwNDkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.T80n2-vwJzjR1eYHrGQS6sgkuAWMaU24RfVqBMLiXSLo3FILYLfQToDX5TWMlZ0cIbREpVexmW3gMY2R7EwgxA"}
+2024-06-06_16:12:47_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_69
+{"error":false,"data":{"report_images":[],"report_images_id":[],"CompanyName":null,"CompanySiteName":null,"ServiceName":null}}
+2024-06-06_16:15:30_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_15
+{"ID":"9","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY3MDQ5MiwiZXhwIjo0ODcxMjcwNDkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.T80n2-vwJzjR1eYHrGQS6sgkuAWMaU24RfVqBMLiXSLo3FILYLfQToDX5TWMlZ0cIbREpVexmW3gMY2R7EwgxA"}
+2024-06-06_16:15:30_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_69
+{"error":false,"data":{"report_images":[],"report_images_id":[],"CompanyName":null,"CompanySiteName":null,"ServiceName":null}}
+2024-06-06_16:18:54_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_15
+{"ID":"9","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY3MDQ5MiwiZXhwIjo0ODcxMjcwNDkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.T80n2-vwJzjR1eYHrGQS6sgkuAWMaU24RfVqBMLiXSLo3FILYLfQToDX5TWMlZ0cIbREpVexmW3gMY2R7EwgxA"}
+2024-06-06_16:18:54_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_69
+{"error":false,"data":{"ID":"6","ReportID":"9","CompanyID":"1","CompanySiteID":"1","ReportedBy":"durgesh","HelpdeskComplaintNumber":"JLL_99","AttendedDate":"6\/6\/2024","RegisteredDate":"6\/6\/2024","CompletedDate":"6\/6\/2024","NatureOfCall":"Warranty","ProblemReportedByClient":"Test","JLLObservation":" Test ","ActionTaken":"Test ","Remarks":"Test ","Technician":"149597","ClientRepresentative":"durgesh","ClientRepresentativeContact":"7210720153","ClientRepresentativeEmails":"Test ","ClientRepresentativeDesignation":"Test ","ClientSignature":"https:\/\/localhost\/Projects\/jll\/jll-management\/service-reports\/media\/signature\/cs_9_66618a950f322.jpg","CreatedDate":"2024-06-06","CreatedTime":"15:37:41","CreatedBy":"149597","UpdatedDate":"2024-06-06","UpdatedTime":"15:38:23","UpdatedBy":"","IsActive":"1","TechnicianName":"Durgesh Guhagarkar","TechnicianPhoneNumber":"9167406313","ReportCreatedByName":"Durgesh Guhagarkar","Status":"Completed","ChannelPartner":"JLL MES","ServiceID":"1","report_images":["https:\/\/localhost\/Projects\/jll\/jll-management\/service-reports\/media\/service_image\/mi_9_66618a656a6b0.jpg"],"report_images_id":["5"],"CompanyName":"Test Company","CompanySiteName":"Test Company 1 Site 1","ServiceName":"General Service"}}
+2024-06-06_16:19:08_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_15
+{"ID":"9","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNzY3MDQ5MiwiZXhwIjo0ODcxMjcwNDkyLCJkYXRhIjp7InVzZXJfaWQiOiI5MSIsInVzZXJuYW1lIjoiMTQ5NTk3In19.T80n2-vwJzjR1eYHrGQS6sgkuAWMaU24RfVqBMLiXSLo3FILYLfQToDX5TWMlZ0cIbREpVexmW3gMY2R7EwgxA"}
+2024-06-06_16:19:08_C:\wamp64\www\Projects\jll\jll-management\api\get_service_report_details_by_id.php_69
+{"error":false,"data":{"ID":"6","ReportID":"9","CompanyID":"1","CompanySiteID":"1","ReportedBy":"durgesh","HelpdeskComplaintNumber":"JLL_99","AttendedDate":"6\/6\/2024","RegisteredDate":"6\/6\/2024","CompletedDate":"6\/6\/2024","NatureOfCall":"Warranty","ProblemReportedByClient":"Test","JLLObservation":" Test ","ActionTaken":"Test ","Remarks":"Test ","Technician":"149597","ClientRepresentative":"durgesh","ClientRepresentativeContact":"7210720153","ClientRepresentativeEmails":"Test ","ClientRepresentativeDesignation":"Test ","ClientSignature":"https:\/\/localhost\/Projects\/jll\/jll-management\/service-reports\/media\/signature\/cs_9_66618a950f322.jpg","CreatedDate":"2024-06-06","CreatedTime":"15:37:41","CreatedBy":"149597","UpdatedDate":"2024-06-06","UpdatedTime":"15:38:23","UpdatedBy":"","IsActive":"1","TechnicianName":"Durgesh Guhagarkar","TechnicianPhoneNumber":"9167406313","ReportCreatedByName":"Durgesh Guhagarkar","Status":"Completed","ChannelPartner":"JLL MES","ServiceID":"1","report_images":["https:\/\/localhost\/Projects\/jll\/jll-management\/service-reports\/media\/service_image\/mi_9_66618a656a6b0.jpg"],"report_images_id":["5"],"CompanyName":"Test Company","CompanySiteName":"Test Company 1 Site 1","ServiceName":"General Service"}}
+2024-06-06_21:36:23_C:\wamp64\www\Projects\jll\jll-management\api\post_general_service_report_details.php_14
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNDcyMzgxMSwiZXhwIjo0ODY4MzIzODExLCJkYXRhIjp7InVzZXJfaWQiOiI1NSIsInVzZXJuYW1lIjoicGdmaXJ5In19.onSWOC5lOMPZyQi5jwUJRwMXG_qZPcC4bovC1Uf_8mshBoqNF-15JEPbIkx0Mljq6CVykto3eZGh27dVDRvXzw",
+    "CompanyID": "1",
+    "CompanySiteID": "1",
+    "ReportID": "14",
+    "action": "draft",
+    "ReportedBy": "Prateek Gupta",
+    "HelpdeskComplaintNumber": "JLL_7676",
+    "AttendedDate": "5/2/2024",
+    "NatureOfCall": "warranty",
+    "ProblemReportedByClient": "Problem Reported By Client",
+    "JLLObservation": "JLL Observation",
+    "ActionTaken": "Action Taken",
+    "CompletedDate": "5/2/2024"
+}
+2024-06-06_21:36:23_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_53
+ INSERT INTO `general_service_report`(`ReportID`, `CompanyID`, `CompanySiteID`, `ReportedBy`, `HelpdeskComplaintNumber`, `AttendedDate`, `CompletedDate`,`RegisteredDate`, `NatureOfCall`, `ProblemReportedByClient`, `JLLObservation`, `ActionTaken`,Remarks,`Technician`,`CreatedDate`, `CreatedTime`, `CreatedBy`,`UpdatedDate`, `UpdatedTime`, `UpdatedBy`) VALUES (14,,,'Prateek Gupta','JLL_7676','5/2/2024','5/2/2024','','warranty','Problem Reported By Client','JLL Observation','Action Taken','','pgfiry','2024-06-06','21:36:23','pgfiry','2024-06-06','21:36:23','pgfiry')
+2024-06-06_21:36:23_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_58
+ HelpdeskComplaintNumber = 'JLL_7676' where ID = 14
+2024-06-06_21:36:23_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_67
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ','Prateek Gupta','JLL_7676','5/2/2024','5/2/2024','','warranty','Problem Reporte' at line 1
+2024-06-06_21:36:23_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_87
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2024-06-06_21:36:23_C:\wamp64\www\Projects\jll\jll-management\api\post_general_service_report_details.php_48
+{"sql":" INSERT INTO `general_service_report`(`ReportID`, `CompanyID`, `CompanySiteID`, `ReportedBy`, `HelpdeskComplaintNumber`, `AttendedDate`, `CompletedDate`,`RegisteredDate`, `NatureOfCall`, `ProblemReportedByClient`, `JLLObservation`, `ActionTaken`,Remarks,`Technician`,`CreatedDate`, `CreatedTime`, `CreatedBy`,`UpdatedDate`, `UpdatedTime`, `UpdatedBy`) VALUES (14,,,'Prateek Gupta','JLL_7676','5\/2\/2024','5\/2\/2024','','warranty','Problem Reported By Client','JLL Observation','Action Taken','','pgfiry','2024-06-06','21:36:23','pgfiry','2024-06-06','21:36:23','pgfiry')","error":true,"message":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ','Prateek Gupta','JLL_7676','5\/2\/2024','5\/2\/2024','','warranty','Problem Reporte' at line 1"}
+2024-06-06_21:39:38_C:\wamp64\www\Projects\jll\jll-management\api\initiate_service_report.php_14
+{
+    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNDcyMjkwMiwiZXhwIjo0ODY4MzIyOTAyLCJkYXRhIjp7InVzZXJfaWQiOiI1NSIsInVzZXJuYW1lIjoicGdmaXJ5In19.0iM-eKI2qSAcQs5Q_3QB6Gfwyn4QxSOV2gl_fWeKEJ-OxaUACJenaeimiqeHt52SVtZCpLo2eVnx67exGvNhXQ",
+    "CompanyID":2,
+    "CompanySiteID":1,
+    "ServiceID":1,
+    "ChannelPartner":"JLL MES"
+}
+2024-06-06_21:39:38_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_19
+INSERT INTO service_reports(CompanyID,CompanySiteID,ServiceID,ChannelPartner,Status,CreatedDate,CreatedTime,CreatedBy) VALUES (2,1,1,'JLL MES','Initiated','2024-06-06','21:39:38','pgfiry')
+2024-06-06_21:39:38_C:\wamp64\www\Projects\jll\jll-management\api\initiate_service_report.php_40
+{"message":"Data Inserted","error":false,"last_insert_id":11}
+2024-06-06_21:39:50_C:\wamp64\www\Projects\jll\jll-management\api\post_general_service_report_details.php_14
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJqbGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IkpMTCIsImlhdCI6MTcxNDcyMzgxMSwiZXhwIjo0ODY4MzIzODExLCJkYXRhIjp7InVzZXJfaWQiOiI1NSIsInVzZXJuYW1lIjoicGdmaXJ5In19.onSWOC5lOMPZyQi5jwUJRwMXG_qZPcC4bovC1Uf_8mshBoqNF-15JEPbIkx0Mljq6CVykto3eZGh27dVDRvXzw",
+    "CompanyID": "1",
+    "CompanySiteID": "1",
+    "ReportID": "11",
+    "action": "draft",
+    "ReportedBy": "Prateek Gupta",
+    "HelpdeskComplaintNumber": "JLL_7676",
+    "AttendedDate": "5/2/2024",
+    "NatureOfCall": "warranty",
+    "ProblemReportedByClient": "Problem Reported By Client",
+    "JLLObservation": "JLL Observation",
+    "ActionTaken": "Action Taken",
+    "CompletedDate": "5/2/2024"
+}
+2024-06-06_21:39:50_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_53
+ INSERT INTO `general_service_report`(`ReportID`, `CompanyID`, `CompanySiteID`, `ReportedBy`, `HelpdeskComplaintNumber`, `AttendedDate`, `CompletedDate`,`RegisteredDate`, `NatureOfCall`, `ProblemReportedByClient`, `JLLObservation`, `ActionTaken`,Remarks,`Technician`,`CreatedDate`, `CreatedTime`, `CreatedBy`,`UpdatedDate`, `UpdatedTime`, `UpdatedBy`) VALUES (11,2,1,'Prateek Gupta','JLL_7676','5/2/2024','5/2/2024','','warranty','Problem Reported By Client','JLL Observation','Action Taken','','pgfiry','2024-06-06','21:39:50','pgfiry','2024-06-06','21:39:50','pgfiry')
+2024-06-06_21:39:50_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_58
+ HelpdeskComplaintNumber = 'JLL_7676' where ID = 11
+2024-06-06_21:39:50_C:\wamp64\www\Projects\jll\jll-management\classes\servicereport.class.php_87
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2024-06-06_21:39:50_C:\wamp64\www\Projects\jll\jll-management\api\post_general_service_report_details.php_48
+{"message":"Report Updated","error":false,"last_insert_id":8}

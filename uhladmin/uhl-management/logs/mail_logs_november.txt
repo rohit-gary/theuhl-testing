@@ -1,0 +1,27 @@
+
+2024-11-20_13:01:06_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+
+2024-11-20_13:10:19_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"majhawaliya0@gmail.com","name":"Test ","PlanID":"14","policyNumber":"UHL479951","amount":"10.00","policyID":"25","paymentStatus":"Success"}
+2024-11-20_13:41:07_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"prakashbackgroundD@gmail.com","name":"OMPRAKASH YADAV","PlanID":"14","policyNumber":"UHL452087","amount":"10.00","policyID":"26","paymentStatus":"Success"}
+2024-11-20_15:00:38_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"majhawaliya0@gmail.com","name":"Rohit maurya testing","PlanID":"14","policyNumber":"UHL731324","amount":"10.00","policyID":"27","paymentStatus":"Success"}
+2024-11-20_16:23:42_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"majhawaliya0@gmail.com","name":"Chitransh Gary","PlanID":"14","policyNumber":"UHL121537","amount":"10.00","policyID":"28","paymentStatus":"Success"}
+2024-11-20_17:36:27_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"akkiechaudhary28@gmail.com","name":"Akash","PlanID":"14","policyNumber":"UHL325378","amount":"10.00","policyID":"30","phonenumber":"09643899034","paymentStatus":"Success"}
+2024-11-20_23:06:26_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"rahulrajwani900@gmail.com","name":"Vijay ","PlanID":"14","policyNumber":"UHL535674","amount":"10.00","policyID":"31","phonenumber":"8989898989","paymentStatus":"Success"}
+2024-11-22_17:51:52_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"vnaina599@gmail.com","name":"Rohit Testing","PlanID":"11","policyNumber":"UHL607554","amount":"10.00","policyID":"36","phonenumber":"7992011052","paymentStatus":"Success"}
+2024-11-23_13:56:37_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"ombackground@gmail.com","name":"Rahul","PlanID":"9","policyNumber":"UHL503668","amount":"100.00","policyID":"38","phonenumber":"87003139222","paymentStatus":"Success"}
+2024-11-25_20:40:51_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"fedorprakash@gmail.com","name":"Omprakash ","PlanID":"9","policyNumber":"UHL395715","amount":"100.00","policyID":"44","phonenumber":"8700313920","paymentStatus":"Success"}
+2024-11-27_23:36:37_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"rohitkushwaha134@gmail.com","name":"Rohit Testing Payment","PlanID":"9","policyNumber":"UHL516783","amount":"10.00","policyID":"91","phonenumber":"9651265631","paymentStatus":"Success"}
+2024-11-28_11:41:43_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"rohitkushwaha127@gmail.com","name":"Rohit testing","PlanID":"11","policyNumber":"UHL706292","amount":"5.00","policyID":"95","phonenumber":"6393254371","paymentStatus":"Success"}
+2024-11-28_14:26:20_/var/www/html/unitedhealthlumina.com/uhl-management/service-reports/generate-policy-doc.php_20
+{"email":"mahendrabandukwala@gmail.com","name":"Mahendra kumar bandukwala","PlanID":"13","policyNumber":"UHL727493","amount":"49999.00","policyID":"96","phonenumber":"9828344264","paymentStatus":"Success"}

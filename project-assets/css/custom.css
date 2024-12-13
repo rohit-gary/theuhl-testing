@@ -1,0 +1,381 @@
+.upper-bnr{
+    border-radius: 10%;
+    margin-top: -3rem;
+   
+  }
+  .upper-bnr img{
+     border-radius: 1%;
+  }
+
+  /* Card default appearance */
+.section-full .card {
+  border: 1px solid transparent; 
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional initial shadow */
+}
+
+
+.section-full .card:hover {
+  border-color: #28a745; 
+  transform: translateY(-10px) scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 128, 0, 0.3); 
+}
+
+/
+.section-full .card-body i {
+  color: #007bff; 
+  transition: color 0.3s ease;
+}
+
+
+.section-full .card:hover .card-body i {
+  color: #28a745; 
+}
+
+.section-full .card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s;
+}
+
+.section-full .card:hover {
+  transform: translateY(-5px); 
+}
+
+.section-full .card-body i {
+  color: #007bff;
+}
+
+        .gradient-bg {
+            background: linear-gradient(to bottom right, #ffffff, #d4edda); /* White to light green */
+            border-radius: 8px; /* Optional: rounded corners */
+            padding: 20px; /* Optional: padding for the card */
+        }
+
+        .title {
+            margin: 0; /* Optional: remove margin for the title */
+        }
+
+        .appointment-btn {
+            width: fit-content; /* Make the button full width */
+        }
+
+.card-img-top{
+  height:100px;
+}
+
+
+/* Clients Grid Styling */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px; 
+    justify-items: center; 
+    padding: 30px 0;
+}
+
+.clients-grid .client-item {
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out; 
+    border-radius: 5%;
+}
+
+.clients-grid .client-item img {
+    width: 100%; 
+    height: auto; 
+    max-width: 150px; 
+/*    filter: grayscale(100%);*/
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.clients-grid .client-item:hover img {
+    filter: grayscale(0); /* Remove greyscale on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+@media (max-width: 767.98px) {
+    .nav-tabs {
+        display: none;
+    }
+}
+
+
+.upper-bnr {
+    position: relative; 
+}
+
+.upper-bnr img {
+    width: 100%; 
+    height: auto; 
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-64%, -110%); 
+    color: white;
+    font-size: 2rem; 
+    text-align: center; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.overlay-text-mobile {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 2rem; 
+    text-align: center; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+.mt-7{
+        margin-top: 100px;
+    }
+
+  .overlaytextbanner  .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.overlaytextbanner .bottom-left {
+  position: absolute;
+  bottom: -4px;
+  left: 16px;
+}
+
+.overlaytextbanner .top-left {
+  position: absolute;
+  top: 0.5em;
+  left: 2em;
+}
+
+.overlaytextbanner .top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.overlaytextbanner .bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.overlaytextbanner .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlaytextbanner h2{
+        color: #fff;
+    font-weight: 1000;
+    margin-top: 0.5em;
+}
+
+.overlaytextbanner h3{
+        color: #fff;
+    
+}
+
+.overlaytextbanner .features h4 {
+    color:#fff;
+    position: relative;
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-top:2em;
+}
+
+.overlaytextbanner .features h4:not(:last-child)::after {
+  
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background-color: #fff; 
+}
+
+/*------top banner-----*/
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-left {
+    
+    left: 10%; 
+    top: 15%; 
+    color: #fff; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.top-left h2 {
+    font-size: 3vw; 
+    margin-bottom: 10px; 
+}
+
+.top-left h3 {
+    font-size: 2vw; 
+    margin-bottom: 20px; 
+}
+
+.top-left a {
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 1.2vw; 
+    text-align: center;
+}
+
+.bottom-left {
+    bottom: 10%; 
+    left: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.feature-item h4 {
+    font-size: 1.2vw; 
+}
+
+.bottom-left {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.feature-item {
+    position: relative; 
+    padding: 0 15px; 
+}
+
+.feature-item:not(:last-child)::after {
+     content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background-color: #fff; 
+}
+
+
+
+
+@media (max-width: 900px) {
+    .top-left a {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .top-left a {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) { 
+    .feature-item:nth-child(n+5) { 
+        display: none; 
+    }
+
+     .top-left a {
+        display: none;
+    }
+
+    h4 {
+    
+    margin-bottom: 5px;
+}
+}
+
+
+.feature-item-mobile {
+    position: relative; 
+    
+}
+
+.feature-item-mobile:not(:last-child)::after {
+     content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    background-color: #fff; 
+}
+
+.overlaytextbanner .bottom-left-mobile {
+    
+       bottom: -10px;
+    left: -1px;
+}
+
+.mobile-top-left{
+    font-size: 2vw !important;
+    margin-bottom: 20px !important;
+}
+
+.bottom-left-mobile .feature-item-mobile h4 {
+    font-size: 2.2vw !important;
+}
+  .mobile-banner-btn {
+    position: relative;  /* Make container relative to position tagline */
+    text-align: center;  /* Center align the text */
+  }
+  
+  .white-strip {
+    background-color: white; /* White background strip */
+    padding: 4px;
+    display: inline-block;
+    border-radius: 5px;
+    
+    cursor: pointer; 
+  }
+
+  .tagline-mobile {
+    font-style: italic;   /* Italic text */
+    font-weight: bold;    /* Bold text */
+    font-size: 12px;      /* Optional: Adjust the font size */
+  }
+
+
+/* for uhl plan on indexpage*/
+@media (max-width:768px){
+        .mobile-form{
+            margin-top: -10em !important;
+        }
+    }
+
+    .nav-tabs .nav-link {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: bold; 
+    color: #000; 
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link.active {
+    color: #007bff; 
+    text-decoration: none; 
+}
+
+
+
+
+
+

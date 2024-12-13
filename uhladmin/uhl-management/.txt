@@ -1,0 +1,44 @@
+
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+
+{
+  "System Admin": [
+    "_Nav_Dashboard",
+    "_Nav_Service_Reports",
+    "_Nav_Users",
+    "_Nav_Company",
+    "_Nav_Company_Sites",
+    "_Nav_Configuration"
+  ],
+  "Admin": [
+    "_Nav_Dashboard",
+    "_Nav_Service_Reports",
+    "_Nav_Users",
+    "_Nav_Company",
+    "_Nav_Company_Sites",
+    "_Nav_Configuration"
+  ],
+  "Client Admin": [
+    "_Nav_Dashboard",
+    "_Nav_Service_Reports",
+    "_Nav_Users",
+    "_Nav_Company",
+    "_Nav_Company_Sites",
+    "_Nav_Configuration"
+  ]
+}
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+
+
+http://localhost/Projects/uhl/uhl-management/PolicyCustomer/include/create-policy-doc.php
+
+ &nbsp;&nbsp;
+             <a class='btn text-secondary bg-secondary-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='UpdatePolicy_modal($ID)' data-bs-original-title='Edit'><span class='fa fa-pencil-square-o fs-14'></span></a>

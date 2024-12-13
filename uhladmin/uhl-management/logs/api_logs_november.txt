@@ -1,0 +1,44 @@
+
+2024-11-29_14:12:58_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjc3MDM0MCwiZXhwIjo0ODg2MzcwMzQwLCJkYXRhIjp7InVzZXJfaWQiOiI2IiwidXNlcm5hbWUiOiJzYWxlc21hbkB1aGwuY29tIn19.9EBFAokK0L1F1YxzoGic4nPgH5B-iMJgTI0BMH5s5rzwELmKErh63YWeyZO02ktXNDcNOdlFLEZy0i7WCAvOtA",
+      "PolicyNumber": "UHL267549"
+}
+2024-11-29_14:12:58_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_50
+{"error":true,"message":"Invalid Token"}
+2024-11-29_14:17:28_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+      "PolicyNumber": "UHL267549"
+}
+2024-11-29_14:17:28_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_50
+{"error":true,"message":"Invalid Token"}
+2024-11-29_14:18:05_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+      "PolicyNumber": "UHL267549"
+}
+2024-11-29_14:18:24_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+      "PolicyNumber": "UHL267549"
+}
+2024-11-29_14:18:24_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_52
+{"error":true,"message":"Invalid Token"}
+2024-11-29_14:19:05_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+      "PolicyNumber": "UHL267549"
+}
+2024-11-29_17:39:27_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+      "ID": "1"
+}
+2024-11-29_17:47:35_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_18
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJycG0uZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6IlJQTSIsImlhdCI6MTczMjg1NjAzOCwiZXhwIjo0ODg2NDU2MDM4LCJkYXRhIjp7InVzZXJfaWQiOiI4IiwidXNlcm5hbWUiOiJEZWVwYWsifX0.cAxV1I8c_C6qaWi4IAfKYomgORvmQ3WV_VnTDBxvWjDMAzVIyKWL-Pe0vAEvVhVrvDNRl5dITsDq90WJ9DdwaA",
+      "ID": "1"
+}
+2024-11-29_17:47:35_C:\wamp64\www\Projects\unitedhealthlumina_new\uhl-management\api\get-reimbursement-by-policynumber.php_51
+{"error":false,"data":[{"ID":"1","PolicyNumber":"UHL267549","HospitalName":"Testing","CheckupDate":"2024-11-26","CheckupCost":"20000.00","Documents":"[]","Reason":"","Status":"Pending","Remark":"","CreatedDate":"2024-11-26","CreatedTime":"16:07:26","CreatedBy":"rohitmaurya.gary@gmail.com","CreatedAt":"2024-11-26 16:07:26","IsActive":"1"}]}

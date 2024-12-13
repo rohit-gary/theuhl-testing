@@ -1,0 +1,59 @@
+    public function PostGeneralServiceReport($data)
+	{
+		extract($data);
+		$where = " where ReportID = $ReportID";
+		$number_of_rows = $this->_getTotalRows($this->conn,'general_service_report',$where);
+		$CreatedDate = $UpdatedDate = date("Y-m-d");
+		$CreatedTime = $UpdatedTime = date("H:i:s");
+		$CreatedBy = $UpdatedBy = $data['username'];
+		$technician_user_name = $data['username'];
+		if(isset($data['source']))
+		{
+			$technician_user_name = $data['Technician'];
+		}
+		if($number_of_rows > 0)
+		{
+			// Update
+			$sql_update_general_service_report = " ReportedBy = '$ReportedBy',RegisteredDate='$RegisteredDate'AttendedDate='$AttendedDate',NatureOfCall = '$NatureOfCall',ProblemReportedByClient='$ProblemReportedByClient',JLLObservation = '$JLLObservation',ActionTaken='$ActionTaken',Remarks='$Remarks',Technician='$technician_user_name',ClientRepresentative='$ClientRepresentative',UpdatedDate='$UpdatedDate',UpdatedTime='$UpdatedTime',UpdatedBy='$username' where ReportID = $ReportID";
+			$this->log_obj->WriteLog($sql_update_general_service_report,__FILE__,__LINE__);
+			$response = $this->_UpdateTableRecords($this->conn,'general_service_report',$sql_update_general_service_report);
+		}
+		else
+		{
+			// Insert
+			$sql_insert_general_service_report = " INSERT INTO `general_service_report`(`ReportID`, `CompanyID`, `CompanySiteID`, `ReportedBy`, `HelpdeskComplaintNumber`, `AttendedDate`,`RegisteredDate`, `NatureOfCall`, `ProblemReportedByClient`, `JLLObservation`, `ActionTaken`, `Remarks`, `Technician`, `ClientRepresentative`, `CreatedDate`, `CreatedTime`, `CreatedBy`,`UpdatedDate`, `UpdatedTime`, `UpdatedBy`) VALUES ($ReportID,$CompanyID,$CompanySiteID,'$ReportedBy','$HelpdeskComplaintNumber','$AttendedDate','$RegisteredDate','$NatureOfCall','$ProblemReportedByClient','$JLLObservation','$ActionTaken','$Remarks','$technician_user_name','$ClientRepresentative','$CreatedDate','$CreatedTime','$CreatedBy','$UpdatedDate','$UpdatedTime','$UpdatedBy')";
+			$this->log_obj->WriteLog($sql_insert_general_service_report,__FILE__,__LINE__);
+			$response = $this->_InsertTableRecords($this->conn,$sql_insert_general_service_report);
+		}
+
+		$sql_update_report_complaint_number = " HelpdeskComplaintNumber = '$HelpdeskComplaintNumber' where ID = $ReportID";
+		$this->log_obj->WriteLog($sql_update_report_complaint_number,__FILE__,__LINE__);
+		$this->_UpdateTableRecords($this->conn,'service_reports',$sql_update_report_complaint_number);
+
+		if($response['error'] == false)
+		{
+			$response['message'] = "Report Updated";
+		}
+		else
+		{
+			$this->log_obj->WriteLog($response['message'],__FILE__,__LINE__);
+		}
+
+		if($action == "Draft")
+		{
+			$sql_update_report_status = " Status = 'Draft' where ID = $ReportID";
+			$this->log_obj->WriteLog($sql_update_report_status,__FILE__,__LINE__);
+		}
+		else
+		{
+			$sql_update_report_status = " Status = 'Completed' where ID = $ReportID";
+			$this->log_obj->WriteLog($sql_update_report_status,__FILE__,__LINE__);
+		}
+		$response_update_status = $this->_UpdateTableRecords($this->conn,'service_reports',$sql_update_report_status);
+		if($response_update_status['error'] == true)
+		{
+			$this->log_obj->WriteLog($response_update_status['message'],__FILE__,__LINE__);
+		}
+		return $response;
+
+	}

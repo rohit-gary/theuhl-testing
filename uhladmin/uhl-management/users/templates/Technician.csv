@@ -1,0 +1,51 @@
+ID,Technician Name,Technicain Username (must be unique),Password,Email (not mandatory),Phone Number,Zone,
+1,Akhtar Ahmed Hasan Shaikh,110229,test@123,akhtarshaikh612@gmail.com,9870777227,MUMBAI,West
+2,Sohit Kumar,110290,test@123,romangujjar931@gmail.com,9312642640,DELHI,North
+3,Mohammad Shadab Alim Khan,126582,test@123,shadykhan473@gmail.com,9152133884,MUMBAI,West
+4,B Lokesh Kumar Rao,133475,test@123,rklokesh006@gmail.com,6291664704,KOLKATA,North
+5,Virender Prasad,143385,test@123,Dropmailtoviren@gmail.com,7428447796,GURGAON,North
+6,Jivan Kumar T,15392,test@123,jeevankumarjk301@gmail.com,9686006719,BANGALORE,South
+7,Maneesh Tomar,16531,test@123,manishtomar135@gmail.com,8800943439,NOIDA,North
+8,Pradeep Kumar,16536,test@123,,9807102162,NOIDA,North
+9,S A Leo Prakash,16924,test@123,leoprksh@gmail.com,9791216560,HYDERABAD,South
+10,Suresh Kumar Das,18793,test@123,sureshkumardas125@gmail.com,7008572421,Bhubaneswar,North
+11,Satish Kumar,20130,test@123,sathish182012@gmail.com,9742066616,BANGALORE,South
+12,Basavaraj,21099,test@123,basava3006@gmail.com,8884118941,BANGALORE,South
+13,Santhosh Kumar Ulaganathan,24586,test@123,sandy.ind89@gmail.com,9003053219,CHENNAI,South
+14,Dadu Jumma Shaikh,40638,test@123,shaikhdadu988@gmail.com,9321111405,MUMBAI,West
+15,Visali Datti,73936,test@123,visalidatti86@gmail.com,8106834193,HYDERABAD,South
+16,Raees Dadu Shaikh,78503,test@123,shaikhraees619@Gmail.com,8369982812,MUMBAI,West
+17,Sagar Harishchandra Jadhav,81785,test@123,Jadhavsagar2177@gmail.com,8329042925,PUNE,West
+18,Ahmad Ali Azmat Ali Khan,93223,test@123,ahmedkhan3766@gmail.com,8169831838,MUMBAI,West
+19,Faisal Waqar,93225,test@123,faisalwaqar786786@gmail.com,7738114896,MUMBAI,West
+20,Ranjan Kumar,93730,test@123,ranjan.kumarbara@gmail.com,7531036384,DELHI,North
+21,Krishna Kumar Tiwari,93745,test@123,krishnakiran212@gmail.com,9015526285,DELHI,North
+22,Bijendra Kumar Prajapati,93748,test@123,bijendrakumar3121987@gmail.com,9918249351,DELHI,North
+23,Ganpat Kannaujiya,98023,test@123,kannujiyagan1997@gmail.com,8454988563,MUMBAI,West
+24,Ramesh Chand,16509,test@123,rameshchandsingh71@gmail.com,9953706155 ,NOIDA,North
+25,Suresh Janardan Shelke,137899,test@123,sureshshelke16101975@gmail.com,8451042332,MUMBAI,West
+26,Juned Khan,13183,test@123,junedkhan77866@gmail.com,8882540148,DELHI,North
+27,Satyabrata Majhi,129856,test@123,port.candidate@cielhr.com,9556241745,BANGALORE,South
+28,SUNIL,124688,test@123,sp6355251@gmail.com,8929971438,MUMBAI,West
+29,Khushiram,121392,test@123,khushiramkhushiram6275@gmail.com,9813688692,GURGAON,North
+30,FAISAL SHAHZAD,115955,test@123,shahzad.faisal18@gmail.com,8543966601,LUCKNOW,North
+31,Maruthi Uppar,156450,test@123,,,BANGALORE,South
+32,kiran Kumar C J,156452,test@123,,,BANGALORE,South
+33,N Anil Kumar,156457,test@123,,,BANGALORE,South
+34,Sankesh Umeshappa Afinkoppa,156451,test@123,,,BANGALORE,South
+35,Halaswamy K S,156453,test@123,,,BANGALORE,South
+36,Deepanshu Gupta,423980,test@123,,,,Central
+37,Akash Sarkar,453290,test@123,,,,Central
+38,Durgesh Guhagarkar,149597,test@123,,,,Central
+39,Nagesh Tiwari,517983,test@123,,,,Central
+40,Manjunath Sulakhe,126715,test@123,,,,Central
+41,Shaurav Dutta,452758,test@123,,,,Central
+42,Jayanta Guha,172876,test@123,,,,Central
+43,Sunil Dwivedi,415504,test@123,,,,Central
+44,Peter Jackson,229265,test@123,,,,Central
+45,Harendra Singh,89114,test@123,,,,Central
+46,Divyandu Kanade,533348,test@123,,,,Central
+47,Priyangshu Das Gupta,534542,test@123,,,,Central
+48,Hampana MV,539807,test@123,,,,Central
+49,Akshay Dattatray Choudhary (),535825,test@123,,,,Central
+50,,,test@123,,,,Central

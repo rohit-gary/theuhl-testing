@@ -16,6 +16,13 @@ class Dbh
 		    $this->password = "";
 		    $this->dbname = "uhl_master";
 		}
+		elseif ($_SERVER['HTTP_HOST'] === 'theuhl.in' || $_SERVER['HTTP_HOST'] === 'www.theuhl.in') {
+        // Production server for theuhl.in
+        $this->servername = "localhost";
+        $this->dbusername = "root";
+        $this->password = "Gary@123";
+        $this->dbname = "testing_uhl_master"; // Use the testing database
+       } 
 		else
 		{
 			$this->servername = "localhost";

@@ -17,7 +17,7 @@ if (isset($_POST)) {
     $data['CreatedTime'] = date('H:i:s');
     $data['CreatedDate'] = date('Y-m-d');
     $data['CreatedBy'] = $_SESSION['dwd_email'];
-    $PolicyCustomerID = 012; // Adjust if you have this ID already generated.
+    $PolicyCustomerID = ''; // Adjust if you have this ID already generated.
 
     // Initialize response
     $response = [
@@ -25,6 +25,12 @@ if (isset($_POST)) {
         'message' => '',
         'data' => []
     ];
+
+       // Check if family_member session is already an array, if not initialize it
+    if (!isset($_SESSION['family_member']) || !is_array($_SESSION['family_member'])) {
+        $_SESSION['family_member'] = [];
+    }
+
 
     // Loop through members in POST data
     $index = 1;
@@ -48,7 +54,7 @@ if (isset($_POST)) {
         $age = $now->diff($dob)->y;
         $member['Age'] = $age;
          $response = $PolicyCustomer->InsertMemberForm($member);
-
+          $_SESSION['family_member'][] = $member;
         $index++;
     }
 

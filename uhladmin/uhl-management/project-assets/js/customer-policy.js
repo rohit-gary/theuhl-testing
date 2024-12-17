@@ -542,13 +542,21 @@ document.addEventListener('DOMContentLoaded', function() {
 /// -----new js for new form --------------------------------------------------------
 
 
-              let currentStep = 1;
-
-                    function goToNextStep() {
+                    let currentStep = 1;
+                    if (localStorage.getItem('currentStep') !== null) 
+                    {
+                        currentStep = localStorage.getItem('currentStep');
+                        console.log(currentStep);
+                    } 
+                    function goToNextStep() 
+                    {
+                        alert(currentStep);
+                        localStorage.setItem('currentStep',parseInt(currentStep) + 1);
                         goToStep(currentStep + 1);
                     }
 
                     function goToPreviousStep() {
+                        localStorage.setItem('currentStep',parseInt(currentStep) + 1);
                         goToStep(currentStep - 1);
                     }
 
@@ -619,17 +627,22 @@ document.addEventListener('DOMContentLoaded', function() {
                           $('#gotothirdstep').hide();
                             function saveSelectedPlans() {
                                     // Retrieve Customer ID
-                                    var customer_id = localStorage.getItem("customer_id");
+                                    // var customer_id = localStorage.getItem("customer_id");
+                                      // console.log('dsdss',customer_id_1);
 
-                                    
-                                    if (!customer_id) {
+                                    var customer_id_1 = $('#customer_id').val();
+
+                                    console.log('hfdd',customer_id_1);
+
+                                    if (!customer_id_1) {
                                         Alert("Customer ID not found. Please complete Step 1 first.");
                                         return false;
                                     }
 
                                     // Get form action and form ID
                                     let form_action = $("#form_action_policy").val();
-                                    let form_id = form_action !== "update" ? -1 : $("#form_id").val();
+                                    let form_id = $("#form_id_policy").val();
+                                   
 
                                    
                                   
@@ -646,7 +659,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                             url: "action/add-update-customer-plans.php",
                                             type: "POST",
                                             data: {
-                                                customer_id: customer_id,
+                                                customer_id: customer_id_1,
                                                 plans: selectedPlanIDs,
                                                 form_action: form_action,
                                                 form_id: form_id
@@ -654,8 +667,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                             success: function (data) {
                                                   var response = JSON.parse(data);
                                                    var PolicyNumber=response.PolicyNumber;
-                                                    localStorage.setItem("PolicyNumber", PolicyNumber);
+                                                      
                                                     Alert("Plans saved successfully.");
+                                                    $("#PolicyNumber").val(PolicyNumber);
                                                     $('#savePolicyBtn').hide();
                                                      $('#gotothirdstep').show();
 
@@ -680,7 +694,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function fetchPlansAndGenerateForms() {
 
     
-    var PolicyNumber = localStorage.getItem("PolicyNumber");
+   
+
+     var PolicyNumber=$("#PolicyNumber").val();
 
     if (!PolicyNumber) {
         Alert("Policy Number not found. Please complete All steps.");
@@ -926,12 +942,13 @@ function SaveCustomer(){
         success: function (data) {
             var response = JSON.parse(data);
             var ID=response.ID;
-            localStorage.setItem("customer_id", ID); 
+            
             Alert(response.message);
             
             if (response.error == false) {
                  $("#form_action").val("Update");
                  $("#form_id").val(ID);
+                 $("#customer_id").val(ID);
                  $('#gotosecondstep').show();
                  setTimeout(function(){      
                    // window.location.reload();
@@ -970,7 +987,7 @@ function savefamilyMember() {
     let formData = new FormData();
 
     // Retrieve the Policy Number from localStorage
-    const policyNumber = localStorage.getItem('PolicyNumber');
+
     let atLeastOneFilled = false;
 
     // Loop through each form to validate and collect data
@@ -1023,6 +1040,7 @@ function savefamilyMember() {
     }
 
     // Append the Policy Number for each member
+    var policyNumber=$('#PolicyNumber').val();
     if (policyNumber) {
         formData.append(`policy_number_${index + 1}`, policyNumber);
     } else {
@@ -1110,7 +1128,7 @@ function generatePaymentLink(policyID) {
                         clearInterval(checkPaymentStatusInterval); // Stop checking
                         alert("Thank you for your payment! Your payment was successful.");
                         setTimeout(function () {
-                            location.reload(); // Reload the page
+                            // location.reload(); // Reload the page
                         }, 4000);
                     }
                 }
@@ -1142,3 +1160,6 @@ function generatePaymentLink(policyID) {
         });
     }, 1000);
 }
+
+
+

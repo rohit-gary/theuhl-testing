@@ -18,11 +18,11 @@
     use Razorpay\Api\Api;
 
 
-    $keyId = 'rzp_live_ByoIjLl32Tm8w1';
-    $keySecret = 'QgIJaeh9XCDfQdJm2wAAC8z7';
+    // $keyId = 'rzp_live_ByoIjLl32Tm8w1';
+    // $keySecret = 'QgIJaeh9XCDfQdJm2wAAC8z7';
 
-    // $keyId = 'rzp_test_VHcUYxXlN9UYgv';
-    // $keySecret = 'cBj7elTcBMqd3h3jIQXvvFE8';
+    $keyId = 'rzp_test_VHcUYxXlN9UYgv';
+    $keySecret = 'cBj7elTcBMqd3h3jIQXvvFE8';
     $api = new Api($keyId, $keySecret);
 
     // Decode the JSON payload from the request body

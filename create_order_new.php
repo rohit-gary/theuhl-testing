@@ -10,11 +10,11 @@ require('vendor/autoload.php');
 use Razorpay\Api\Api;
 
 
-$keyId = 'rzp_live_ByoIjLl32Tm8w1';
-$keySecret = 'QgIJaeh9XCDfQdJm2wAAC8z7';
+// $keyId = 'rzp_live_ByoIjLl32Tm8w1';
+// $keySecret = 'QgIJaeh9XCDfQdJm2wAAC8z7';
 
-// $keyId = 'rzp_test_VHcUYxXlN9UYgv';
-// $keySecret = 'cBj7elTcBMqd3h3jIQXvvFE8';
+$keyId = 'rzp_test_VHcUYxXlN9UYgv';
+$keySecret = 'cBj7elTcBMqd3h3jIQXvvFE8';
 $api = new Api($keyId, $keySecret);
 
 $input = json_decode(file_get_contents('php://input'), true);

@@ -32,14 +32,19 @@ error_reporting(E_ALL);
 			{
                 
 				$response = $PolicyCustomer->InsertPolicyForm($data);
+
+				$_SESSION['policy_form'] = $_POST;
           
 				if($response['error'] == false)
 				{
 					
 					$response['error']=false;
 					$response['ID']=$response['last_insert_id'];
+					$_SESSION['policy_form_Id']=$response['last_insert_id'];
 					$response['PolicyNumber']=$response['PolicyNumber'];
+					$_SESSION['PolicyNumber']=$response['PolicyNumber'];
 					$response['message'] = " Policy Saved !";
+					$_SESSION['policy_form_action'] ='Update';
 				}
 				else
 				{

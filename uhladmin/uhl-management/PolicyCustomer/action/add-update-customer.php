@@ -38,7 +38,8 @@ error_reporting(E_ALL);
 				$data['UserID']=$masterResponce['last_insert_id'];
                 
 				$response = $PolicyCustomer->InsertCustomerForm($data);
-                
+
+                $_SESSION['customer_form'] = $_POST;
 
 
                $PolicyCustomer->InsertUserRole($masterResponce['last_insert_id']);
@@ -48,6 +49,8 @@ error_reporting(E_ALL);
 					$PolicyID=$response['last_insert_id'];
 					$response['error']=false;
 					$response['ID']=$response['last_insert_id'];
+					$_SESSION['customer_id'] = $response['last_insert_id'];
+					$_SESSION['action'] ='Update';
 					$encryptedPolicyID = base64_encode($PolicyID); 
 					$response['message'] = " User Information Saved. Kindly proceed to next step!";
 					$response['last_insert_id']= $encryptedPolicyID;

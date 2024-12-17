@@ -5,7 +5,8 @@ ini_set("display_startup_errors", 1);
 
 @session_start();
 require_once "../include/autoloader.inc.php";
-
+// print_r($_SESSION);
+// die();
 $conf = new Conf();
 ?>
 <!DOCTYPE html>
@@ -39,6 +40,25 @@ $conf = new Conf();
         $access = true;
     }
 
+    $customerForm = isset($_SESSION['customer_form']) ? $_SESSION['customer_form'] : [];
+    $policyForm = isset($_SESSION['policy_form']) ? $_SESSION['policy_form'] : [];
+    $Customerid = isset($_SESSION['customer_id']) ? $_SESSION['customer_id'] : '';
+    $Action = isset($_SESSION['action']) ? $_SESSION['action'] : '';
+    $PolicyFormId=isset($_SESSION['policy_form_Id']) ? $_SESSION['policy_form_Id'] : '';
+    $PolicyNumber=isset($_SESSION['PolicyNumber']) ? $_SESSION['PolicyNumber'] : '';
+    $policy_form_action=isset($_SESSION['policy_form_action']) ? $_SESSION['policy_form_action'] : '';
+    $FamilyMemberDetails= isset($_SESSION['family_member']) ? $_SESSION['family_member'] : '';     
+//   print_r($FamilyMemberDetails);
+// die();
+    // print_r($FamilyMemberDetails);
+    // print_r($Customerid);
+ 
+     $selectedGender = isset($customerForm['gender']) ? $customerForm['gender'] : ''; 
+
+     
+     $selectedPlans = isset($policyForm['plans']) ? $policyForm['plans'] : [];
+     // print_r($selectedPlans);
+     // die();
     ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -112,7 +132,55 @@ $conf = new Conf();
         padding: 10px;
     }
 }
+/* Drag & Drop Area Styles */
+.upload-area {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
 
+.upload-area:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff;
+}
+
+.upload-area.dragover {
+    background-color: #e2e6ea;
+    border-color: #0d6efd;
+}
+
+#fileList {
+    list-style: none;
+    padding-left: 0;
+}
+
+#fileList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #d6d6d6;
+}
+
+.file-name {
+    font-weight: bold;
+    color:#0a4064;
+}
+
+.remove-file-btn {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.remove-file-btn:hover {
+    color: #b52a30;
+}
+    
 
     </style>
 </head>
@@ -156,6 +224,11 @@ $conf = new Conf();
                                             <span class="step-number">4</span>
                                             <p class="step-title">Purchase Summary</p>
                                         </div>
+
+                                        <div class="step-box">
+                                            <span class="step-number">5</span>
+                                            <p class="step-title">Document Uplode</p>
+                                        </div>
                                         <!-- <div class="step-line"></div>
                                         <div class="step-box">
                                             <span class="step-number">5</span>
@@ -171,21 +244,21 @@ $conf = new Conf();
                                     <div class="card-header">Step 1: Basic Details</div>
                                     <div class="card-body">
                                         <form id="customer_form" onsubmit="return false;">
-                                            <input type="hidden" id="form_action" name="form_action" value="" />
-                                             <input type="hidden" id="form_id" name="form_id" value="" />
+                                            <input type="hidden" id="form_action" name="form_action" value="<?php echo isset($Action) ? $Action : ''; ?>" />
+                                             
                                            <div class="col-md-12">
                                                 <div class="row">
                                                 <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label">Name <span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Enter Name" name="poc_name" id="poc_name"> 
+                                                    <input type="text" class="form-control" placeholder="Enter Name" name="poc_name" id="poc_name" value="<?php echo isset($customerForm['poc_name']) ? $customerForm['poc_name'] : ''; ?>"> 
                                                 </div>
                                             </div>
 
                                                 <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label">Contact Number<span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Contact Number" name="poc_contact_number" id="poc_contact_number" oninput="validateNumericInput(this)">
+                                                    <input type="text" class="form-control" placeholder="Contact Number" name="poc_contact_number" id="poc_contact_number" oninput="validateNumericInput(this)" value="<?php echo isset($customerForm['poc_contact_number']) ?$customerForm['poc_contact_number'] : ''; ?>">
                                                 </div>
                                             </div>
 
@@ -198,11 +271,11 @@ $conf = new Conf();
                                                     <div class="form-group">
                                                         <label class="form-label">Gender <span class="text-red">*</span></label>
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+                                                            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" <?php echo ($selectedGender === 'male') ? 'checked' : ''; ?>>
                                                             <label class="form-check-label" for="genderMale">Male</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female"  <?php echo ($selectedGender === 'female') ? 'checked' : ''; ?> >
                                                             <label class="form-check-label" for="genderFemale">Female</label>
                                                         </div>
                                                     </div>
@@ -214,14 +287,15 @@ $conf = new Conf();
                                                 <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label">Date of Birth <span class="text-red">*</span></label>
-                                                    <input type="date" class="form-control" name="dob" id="dob" >
+                                                    <input type="date" class="form-control" name="dob" id="dob" 
+                                                    value="<?php echo isset($customerForm['dob']) ?$customerForm['dob'] : ''; ?>" >
                                                 </div>
                                             </div>
 
                                                 <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label">Email<span class="text-red">*</span></label>
-                                                    <input type="email" class="form-control" placeholder="Email" autocomplete="username" name="email" id="email">
+                                                    <input type="email" class="form-control" placeholder="Email" autocomplete="username" name="email" id="email" value="<?php echo isset($customerForm['email']) ?$customerForm['email'] : ''; ?>" >
                                                 </div>
                                             </div>
 
@@ -235,31 +309,24 @@ $conf = new Conf();
                                                 <label class="form-label">State<span class="text-red">*</span></label>
                                                 <select class="form-control form-select" name="state" id="state" required>
                                                     <option value="">Select State</option>
-                                                    <?php // Assuming $All_State is the array containing state data
-                                                    foreach (
-                                                        $All_State
-                                                        as $state
-                                                    ) {
-                                                        echo '<option value="' .
-                                                            htmlspecialchars(
-                                                                $state["ID"]
-                                                            ) .
-                                                            '">' .
-                                                            htmlspecialchars(
-                                                                $state[
-                                                                    "StateName"
-                                                                ]
-                                                            ) .
-                                                            "</option>";
-                                                    } ?>
-                                                </select>
+                                                    <?php 
+                                                    // Assuming $All_State is an array of state data
+                                                    $selectedState = isset($customerForm['state']) ? $customerForm['state'] : ''; // Get state from session
+                                                    foreach ($All_State as $state) {
+                                                        $stateID = htmlspecialchars($state['ID']);
+                                                        $stateName = htmlspecialchars($state['StateName']);
+                                                        $isSelected = ($stateID === $selectedState) ? 'selected' : ''; // Check if this state is selected
+                                                        echo '<option value="' . $stateID . '" ' . $isSelected . '>' . $stateName . '</option>';
+                                                    } 
+                                                    ?>
+                                                 </select>
                                             </div>
                                         </div>
 
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="form-group">
                                                     <label class="form-label">Pin Code <span class="text-red">*</span></label>
-                                                    <input type="number" class="form-control" placeholder="ZIP Code" name="pincode" id="pincode">
+                                                    <input type="number" class="form-control" placeholder="ZIP Code" name="pincode" id="pincode" value="<?php echo isset($customerForm['pincode']) ?$customerForm['pincode'] : ''; ?>" >
                                                 </div>
                                             </div>
 
@@ -268,12 +335,19 @@ $conf = new Conf();
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="form-label">Full Address <span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Home Address" name="address" id="address">
+                                                    <label class="form-label">Present Address <span class="text-red">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Home Address" name="address" id="address" value="<?php echo isset($customerForm['address']) ?$customerForm['address'] : ''; ?>" >
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Paramenet Address <span class="text-red">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Home Address" name="address" id="address" value="<?php echo isset($customerForm['address']) ?$customerForm['address'] : ''; ?>" >
                                                 </div>
                                             </div>
                                            
-                                            <button type="button" class="btn btn-success" onclick="SaveCustomer()" id="savecustomerBtn">Save</button>
+                                            <button type="button" class="btn btn-success"  onclick="SaveCustomer()" id="savecustomerBtn">Save</button>
                                             <button type="button" class="btn btn-primary" id="gotosecondstep" onclick="goToNextStep()">Next</button>
 
                                         </form>
@@ -286,36 +360,44 @@ $conf = new Conf();
                                 <div class="card-header">Step 2: Choose Policy</div>
                                 <div class="card-body">
                                  <form id="policy_form" onsubmit="return false;">
-                                  <input type="hidden" id="form_action_policy" name="form_action" value="" />
-                                  <input type="hidden" id="form_id" name="form_id" value="" />
-                            <div class="row">
+                                 
+                                  <input type="hidden" id="form_action_policy" name="form_action" 
+                                  value="<?php echo isset($policy_form_action) ? $policy_form_action : ''; ?>" />
+                                  <input type="hidden" id="form_id_policy" name="form_id" 
+                                  value="<?php echo $PolicyFormId ?>" />
+                                  <input type="text" id="customer_id" value="<?php echo $Customerid; ?>" />
+                                  <div class="row">
                                 <?php
                                 // Loop through each plan to display it
                                 foreach ($All_Pans as $plan) {
-                                    ?>
-                                    <div class="col-md-4 mb-3">
-                                        <div class="card shadow-sm plan-card" id="plan-card-<?php echo $plan['ID']; ?>" onclick="togglePlanSelection(<?php echo $plan['ID']; ?>)">
-                                            <img src="<?php echo htmlspecialchars($plan['PlanImage']); ?>" class="card-img-top" alt="Plan Image">
-                                            <div class="card-body">
-                                                <h5 class="card-title"><?php echo htmlspecialchars($plan['PlanName']); ?></h5>
-                                                <p><strong>Duration:</strong> <?php echo htmlspecialchars($plan['PlanDuration']) . ' ' . htmlspecialchars($plan['PlanDurationFormat']); ?></p>
-                                                <p><strong>Family Members Covered:</strong> <?php echo htmlspecialchars($plan['PlanFamilyMember']); ?></p>
-                                                <p><strong>Cost:</strong> ₹<?php echo number_format(htmlspecialchars($plan['PlanCost']), 2); ?></p>
+                                    // Check if plan's ID is in the selected plans array
+                                    $isSelected = in_array($plan['ID'], $selectedPlans) ? 'checked' : '';
+                                    
+                                ?>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card shadow-sm plan-card" id="plan-card-<?php echo $plan['ID']; ?>" onclick="togglePlanSelection(<?php echo $plan['ID']; ?>)">
+                                        <img src="<?php echo htmlspecialchars($plan['PlanImage']); ?>" class="card-img-top" alt="Plan Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php echo htmlspecialchars($plan['PlanName']); ?></h5>
+                                            <p><strong>Duration:</strong> <?php echo htmlspecialchars($plan['PlanDuration']) . ' ' . htmlspecialchars($plan['PlanDurationFormat']); ?></p>
+                                            <p><strong>Family Members Covered:</strong> <?php echo htmlspecialchars($plan['PlanFamilyMember']); ?></p>
+                                            <p><strong>Cost:</strong> ₹<?php echo number_format(htmlspecialchars($plan['PlanCost']), 2); ?></p>
 
-                                                <!-- Checkbox for selection -->
-                                                <input type="checkbox" class="form-check-input" name="selected_plan[]" value="<?php echo htmlspecialchars($plan['ID']); ?>" id="plan-<?php echo $plan['ID']; ?>" style="display: none;">
-                                                
-                                                <!-- Green check mark (hidden by default) -->
-                                                <div class="check-mark" id="check-mark-<?php echo $plan['ID']; ?>" style="display: none;">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                </div>
+                                            <!-- Checkbox for selection -->
+                                            <input type="checkbox" class="form-check-input" name="selected_plan[]" value="<?php echo htmlspecialchars($plan['ID']); ?>" id="plan-<?php echo $plan['ID']; ?>"  style="display: block;" <?php echo $isSelected  ?> >
+                                            
+                                            <!-- Green check mark (hidden by default) -->
+                                            <div class="check-mark" id="check-mark-<?php echo $plan['ID']; ?>" style="display: none;">
+                                                <i class="fas fa-check-circle text-success"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <?php
+                                </div>
+                                <?php
                                 }
                                 ?>
                             </div>
+
 
                             <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
                             <button type="button" class="btn btn-success" onclick="saveSelectedPlans()" id="savePolicyBtn">Save</button>
@@ -337,9 +419,9 @@ $conf = new Conf();
                                             <input type="hidden" id="form_action_family" name="form_action" value="" />
                                             <input type="hidden" id="form_id" name="form_id" value="" />
 
+                                             <input type="text" id="PolicyNumber" value="<?php echo $PolicyNumber ?>">
                                             <!-- Dynamic member forms will be appended here -->
                                             <div id="step-3-form-container"></div>
-
                                             <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
                                             <button type="button" class="btn btn-success" onclick="savefamilyMember()" id="savefamilyMemberBtn">Save</button>
                                             <button type="button" class="btn btn-primary" onclick="goToNextStep()" id="gotofourthstep">Next</button>
@@ -368,6 +450,7 @@ $conf = new Conf();
                                     <div class="text-center mt-4">
                                         <button type="button" class="btn btn-secondary" onclick="goToPreviousStep()">Previous</button>
                                         <button type="button" class="btn btn-primary" onclick="savePolicyAmount()">Save Policy Amount & Generate Payment Link </button>
+                                         <button type="button" class="btn btn-primary" onclick="goToNextStep()" id="gotofifthstep">Next</button>
                                         
                                     </div>
                                 </div>
@@ -377,17 +460,51 @@ $conf = new Conf();
 
                           <!-- Add additional form sections for other steps -->
                                <div id="step-5" class="form-section">
-                                <div class="card">
-                                    <div class="card-header">Step 5: Payments</div>
-                                    <div class="card-body">
-                                        <form>
-                                          
-                                            
-
-                                        </form>
-                                    </div>
-                                </div>
+                        <div class="card shadow">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Step 5: Upload Documents</h5>
                             </div>
+                            <div class="card-body">
+                                <form id="upload-documents-form" enctype="multipart/form-data">
+
+                                <input type="text" id="PolicyNumberDocument" value="<?php echo $PolicyNumber ?>">
+                
+                                    <!-- File Upload Section -->
+                                    <div class="mb-4">
+                                        <label for="documentType" class="form-label fw-bold">Select Document Type</label>
+                                        <select class="form-select" id="documentType" name="documentType">
+                                            <option value="">Select a document type</option>
+                                            <option value="ID_Proof">ID Proof</option>
+                                            <option value="Address_Proof">Address Proof</option>
+                                            <option value="Income_Proof">Income Proof</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Drag & Drop Upload Area -->
+                                    <div class="upload-area border border-dashed p-4 text-center bg-light" id="upload-area">
+                                        <p class="mb-2">
+                                            <i class="fa fa-cloud-upload fa-2x text-primary"></i>
+                                        </p>
+                                        <p class="fw-bold">Drag & Drop files here or click to browse</p>
+                                        <input type="file" id="fileInput" multiple hidden>
+                                        <button type="button" class="btn btn-sm btn-secondary" id="browseFilesBtn">Browse Files</button>
+                                    </div>
+
+                                    <!-- Uploaded File List -->
+                                    <ul class="list-group mt-4" id="fileList"></ul>
+
+                                    <!-- Buttons -->
+                                    <div class="mt-4 d-flex justify-content-between">
+                                        <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
+                                        <button type="button" class="btn btn-success" id="uploadBtn">Upload Files</button>
+                                        <button type="button" class="btn btn-primary" onclick="goToNextStep()">Next</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
 
                         </div>
                     </div>
@@ -423,17 +540,22 @@ $conf = new Conf();
 
 
 
+
+          
+           <script>
+              let customer_id_1 =<?php echo  $Customerid ?>     
+         </script>
+        
         <script src="../project-assets/js/customer-policy.js"></script>
-        <script>
-                  
-</script>
+       
 <!-- // step -4 -->
 
 
 <script>
+
 // Function to display selected plans dynamically
 async function displaySelectedPlans() {
-    var PolicyNumber = localStorage.getItem("PolicyNumber");
+    var PolicyNumber=$("#PolicyNumber").val();
 
 
     if (!PolicyNumber) {
@@ -531,9 +653,7 @@ document.querySelector("#step4-button").addEventListener("click", navigateToStep
 
 // Proceed to payment function
 async function savePolicyAmount() {
-    var PolicyNumber = localStorage.getItem("PolicyNumber");
-
-    
+     var PolicyNumber=$("#PolicyNumberDocument").val();
     var plans = [];
 
     try {
@@ -591,8 +711,7 @@ async function savePolicyAmount() {
                 body: JSON.stringify(paymentData)
             });
 
-             localStorage.removeItem("PolicyNumber");
-                localStorage.removeItem("customer_id");
+            
 
             const paymentDataJson = await paymentResponse.json();
                 console.log('paymentdata', paymentDataJson);
@@ -617,10 +736,118 @@ async function savePolicyAmount() {
 
 
 
-
+     
 
 
         </script>
     </div>
+
+
+    <script type="text/javascript">
+        
+        // uplode files
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadArea = document.getElementById('upload-area');
+    const fileInput = document.getElementById('fileInput');
+    const browseFilesBtn = document.getElementById('browseFilesBtn');
+    const fileList = document.getElementById('fileList');
+    const uploadBtn = document.getElementById('uploadBtn');
+    let selectedFiles = [];
+
+    // Handle click to open file browser
+    browseFilesBtn.addEventListener('click', () => fileInput.click());
+
+    // Handle file input change
+    fileInput.addEventListener('change', function(e) {
+        handleFiles(e.target.files);
+    });
+
+    // Drag and Drop Events
+    uploadArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadArea.classList.add('dragover');
+    });
+
+    uploadArea.addEventListener('dragleave', () => {
+        uploadArea.classList.remove('dragover');
+    });
+
+    uploadArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadArea.classList.remove('dragover');
+        handleFiles(e.dataTransfer.files);
+    });
+
+    // Handle files and display preview
+    function handleFiles(files) {
+        Array.from(files).forEach(file => {
+            if (!fileAlreadyAdded(file.name)) {
+                selectedFiles.push(file);
+                displayFile(file);
+            }
+        });
+    }
+
+    // Check if file is already added
+    function fileAlreadyAdded(fileName) {
+        return selectedFiles.some(file => file.name === fileName);
+    }
+
+    // Display file preview
+    function displayFile(file) {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item');
+        listItem.innerHTML = `
+            <span class="file-name">${file.name}</span>
+            <button class="btn btn-sm remove-file-btn" data-name="${file.name}">
+                <i class="fa fa-times"></i> Remove
+            </button>
+        `;
+        fileList.appendChild(listItem);
+
+        // Remove file event
+        listItem.querySelector('.remove-file-btn').addEventListener('click', (e) => {
+            const fileName = e.target.closest('button').dataset.name;
+            removeFile(fileName);
+            fileList.removeChild(listItem);
+        });
+    }
+
+    // Remove file from array
+    function removeFile(fileName) {
+        selectedFiles = selectedFiles.filter(file => file.name !== fileName);
+    }
+
+    // Handle file upload
+    uploadBtn.addEventListener('click', () => {
+        if (selectedFiles.length === 0) {
+            alert('Please select files to upload.');
+            return;
+        }
+
+        const formData = new FormData();
+        selectedFiles.forEach(file => formData.append('files[]', file));
+
+        fetch('upload.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(response => {
+            alert('Files uploaded successfully');
+            fileList.innerHTML = '';
+            selectedFiles = [];
+        })
+        .catch(err => {
+            alert('Error uploading files');
+            console.error(err);
+        });
+    });
+});
+ 
+
+    </script>
 </body>
 </html>

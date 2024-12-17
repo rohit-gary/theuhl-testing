@@ -257,7 +257,7 @@ include("includes/meta.php");
 
             // Prepare Razorpay payment options
             var options = {
-                "key": "rzp_live_ByoIjLl32Tm8w1", // Test key for Razorpay, rzp_test_VHcUYxXlN9UYgv   rzp_live_ByoIjLl32Tm8w1 replace with your live key
+                "key": "rzp_test_VHcUYxXlN9UYgv", // Test key for Razorpay, rzp_test_VHcUYxXlN9UYgv   rzp_live_ByoIjLl32Tm8w1 replace with your live key
                 "amount": paymentData.amount * 100,  // Amount is in paise (i.e., 100 paise = 1 INR)
                 "currency": paymentData.currency,
                 "name": "UHL Health",

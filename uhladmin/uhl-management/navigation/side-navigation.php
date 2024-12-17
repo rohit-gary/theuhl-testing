@@ -106,6 +106,13 @@
                             <li class="sub-category">
                                 <h3>Customer Management</h3> 
                             </li>
+
+                               <li>
+                                   <a class="side-menu__item"  href="../PolicyCustomer/view-all-customer-new" class="list-group-item list-group-item-action">
+                                        <i class="side-menu__icon fa fa-user"></i>
+                                        <span class="side-menu__label">All Customer</span>
+                                    </a>
+                               </li>
                                  
                                  <li class="slide">
                                     <a class="side-menu__item" data-bs-toggle="collapse" href="#policyCusList">
@@ -115,9 +122,10 @@
                                     </a>
                                     <div class="collapse" id="policyCusList">
                                         <div class="list-group">
-                                            <a href="../PolicyCustomer/add-policy-customer-new" class="list-group-item list-group-item-action">
-                                                <i class="fa fa-plus mr-2"></i>Add Policy Customer
-                                            </a>
+                                                <a href="#" 
+                                                   class="list-group-item list-group-item-action clearSessionLink">
+                                                   <i class="fa fa-plus mr-2"></i> Add Policy Customer
+                                                </a>
                                             <a href="../PolicyCustomer/view-all-policy-customer-new" class="list-group-item list-group-item-action">
                                                 <i class="fa fa-list mr-2"></i> Policy Customer List
                                             </a>
@@ -355,3 +363,31 @@
                 </div>
             </div>
             <!--/APP-SIDEBAR-->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <script>
+    $(document).ready(function() {
+    $('.clearSessionLink').on('click', function(e) 
+    {
+        // Check if the item exists in localStorage
+        if (localStorage.getItem('currentStep') !== null) {
+            // If it exists, remove it
+            localStorage.removeItem('currentStep');
+            console.log('currentStep removed');
+        }
+        e.preventDefault();
+        $.ajax({
+            url: 'action/clear-session.php',
+            type: 'POST',
+            success: function(response) {
+                // After clearing the session, redirect the user
+                window.location.href = '../PolicyCustomer/add-policy-customer-new';
+            },
+            error: function() {
+                alert('Error clearing session.');
+            }
+        });
+    });
+});
+
+</script>

@@ -48,8 +48,6 @@ $conf = new Conf();
     $PolicyNumber=isset($_SESSION['PolicyNumber']) ? $_SESSION['PolicyNumber'] : '';
     $policy_form_action=isset($_SESSION['policy_form_action']) ? $_SESSION['policy_form_action'] : '';
     $FamilyMemberDetails= isset($_SESSION['family_member']) ? $_SESSION['family_member'] : '';     
-//   print_r($FamilyMemberDetails);
-// die();
     // print_r($FamilyMemberDetails);
     // print_r($Customerid);
  
@@ -57,7 +55,7 @@ $conf = new Conf();
 
      
      $selectedPlans = isset($policyForm['plans']) ? $policyForm['plans'] : [];
-     // print_r($selectedPlans);
+     // print_r($policyForm);
      // die();
     ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -459,48 +457,27 @@ $conf = new Conf();
 
 
                           <!-- Add additional form sections for other steps -->
-                               <div id="step-5" class="form-section">
+                            <div id="step-5" class="form-section">
                         <div class="card shadow">
                             <div class="card-header bg-primary text-white">
                                 <h5 class="mb-0">Step 5: Upload Documents</h5>
                             </div>
+
                             <div class="card-body">
-                                <form id="upload-documents-form" enctype="multipart/form-data">
+                                   <p class="my-3">Want to Add More Family Member</p>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#familyMemberModal" 
+                                        style="border-radius: 50%; width: 50px; height: 50px; align-items: center; justify-content: center; padding: 0;">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                        <div id="member_document_upload_form">
+                                            <!-- document upload form here -->
+                                        </div>
+                                        
 
-                                <input type="text" id="PolicyNumberDocument" value="<?php echo $PolicyNumber ?>">
-                
-                                    <!-- File Upload Section -->
-                                    <div class="mb-4">
-                                        <label for="documentType" class="form-label fw-bold">Select Document Type</label>
-                                        <select class="form-select" id="documentType" name="documentType">
-                                            <option value="">Select a document type</option>
-                                            <option value="ID_Proof">ID Proof</option>
-                                            <option value="Address_Proof">Address Proof</option>
-                                            <option value="Income_Proof">Income Proof</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
 
-                                    <!-- Drag & Drop Upload Area -->
-                                    <div class="upload-area border border-dashed p-4 text-center bg-light" id="upload-area">
-                                        <p class="mb-2">
-                                            <i class="fa fa-cloud-upload fa-2x text-primary"></i>
-                                        </p>
-                                        <p class="fw-bold">Drag & Drop files here or click to browse</p>
-                                        <input type="file" id="fileInput" multiple hidden>
-                                        <button type="button" class="btn btn-sm btn-secondary" id="browseFilesBtn">Browse Files</button>
-                                    </div>
+                                  
+                                </div>
 
-                                    <!-- Uploaded File List -->
-                                    <ul class="list-group mt-4" id="fileList"></ul>
-
-                                    <!-- Buttons -->
-                                    <div class="mt-4 d-flex justify-content-between">
-                                        <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
-                                        <button type="button" class="btn btn-success" id="uploadBtn">Upload Files</button>
-                                        <button type="button" class="btn btn-primary" onclick="goToNextStep()">Next</button>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -536,12 +513,6 @@ $conf = new Conf();
     </div>
 </div>
 
-
-
-
-
-
-          
            <script>
               let customer_id_1 =<?php echo  $Customerid ?>     
          </script>
@@ -556,7 +527,7 @@ $conf = new Conf();
 // Function to display selected plans dynamically
 async function displaySelectedPlans() {
     var PolicyNumber=$("#PolicyNumber").val();
-
+    
 
     if (!PolicyNumber) {
     Alert("Policy Number not found. Please complete the All steps.");
@@ -653,8 +624,9 @@ document.querySelector("#step4-button").addEventListener("click", navigateToStep
 
 // Proceed to payment function
 async function savePolicyAmount() {
-     var PolicyNumber=$("#PolicyNumberDocument").val();
-    var plans = [];
+    
+      var PolicyNumber=$("#PolicyNumber").val();
+             var plans = [];
 
     try {
         // AJAX call to fetch plans associated with the PolicyNumber
@@ -748,106 +720,313 @@ async function savePolicyAmount() {
         // uplode files
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const uploadArea = document.getElementById('upload-area');
-    const fileInput = document.getElementById('fileInput');
-    const browseFilesBtn = document.getElementById('browseFilesBtn');
-    const fileList = document.getElementById('fileList');
-    const uploadBtn = document.getElementById('uploadBtn');
-    let selectedFiles = [];
+// document.addEventListener('DOMContentLoaded', function() {
+//     const uploadArea = document.getElementById('upload-area');
+//     const fileInput = document.getElementById('fileInput');
+//     const browseFilesBtn = document.getElementById('browseFilesBtn');
+//     const fileList = document.getElementById('fileList');
+//     const uploadBtn = document.getElementById('uploadBtn');
+  
+//     let selectedFiles = [];
 
-    // Handle click to open file browser
-    browseFilesBtn.addEventListener('click', () => fileInput.click());
 
-    // Handle file input change
-    fileInput.addEventListener('change', function(e) {
-        handleFiles(e.target.files);
-    });
+     
 
-    // Drag and Drop Events
-    uploadArea.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        uploadArea.classList.add('dragover');
-    });
+//     // Handle click to open file browser
+//     browseFilesBtn.addEventListener('click', () => fileInput.click());
 
-    uploadArea.addEventListener('dragleave', () => {
-        uploadArea.classList.remove('dragover');
-    });
+//     // Handle file input change
+//     fileInput.addEventListener('change', function(e) {
+//         handleFiles(e.target.files);
+//     });
 
-    uploadArea.addEventListener('drop', (e) => {
-        e.preventDefault();
-        uploadArea.classList.remove('dragover');
-        handleFiles(e.dataTransfer.files);
-    });
+//     // Drag and Drop Events
+//     uploadArea.addEventListener('dragover', (e) => {
+//         e.preventDefault();
+//         uploadArea.classList.add('dragover');
+//     });
 
-    // Handle files and display preview
-    function handleFiles(files) {
-        Array.from(files).forEach(file => {
-            if (!fileAlreadyAdded(file.name)) {
-                selectedFiles.push(file);
-                displayFile(file);
-            }
-        });
-    }
+//     uploadArea.addEventListener('dragleave', () => {
+//         uploadArea.classList.remove('dragover');
+//     });
 
-    // Check if file is already added
-    function fileAlreadyAdded(fileName) {
-        return selectedFiles.some(file => file.name === fileName);
-    }
+//     uploadArea.addEventListener('drop', (e) => {
+//         e.preventDefault();
+//         uploadArea.classList.remove('dragover');
+//         handleFiles(e.dataTransfer.files);
+//     });
 
-    // Display file preview
-    function displayFile(file) {
-        const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item');
-        listItem.innerHTML = `
-            <span class="file-name">${file.name}</span>
-            <button class="btn btn-sm remove-file-btn" data-name="${file.name}">
-                <i class="fa fa-times"></i> Remove
-            </button>
-        `;
-        fileList.appendChild(listItem);
+//     // Handle files and display preview
+//     function handleFiles(files) {
+//         Array.from(files).forEach(file => {
+//             if (!fileAlreadyAdded(file.name)) {
+//                 selectedFiles.push(file);
+//                 displayFile(file);
+//             }
+//         });
+//     }
 
-        // Remove file event
-        listItem.querySelector('.remove-file-btn').addEventListener('click', (e) => {
-            const fileName = e.target.closest('button').dataset.name;
-            removeFile(fileName);
-            fileList.removeChild(listItem);
-        });
-    }
+//     // Check if file is already added
+//     function fileAlreadyAdded(fileName) {
+//         return selectedFiles.some(file => file.name === fileName);
+//     }
 
-    // Remove file from array
-    function removeFile(fileName) {
-        selectedFiles = selectedFiles.filter(file => file.name !== fileName);
-    }
+//     // Display file preview
+//     function displayFile(file) {
+//         const listItem = document.createElement('li');
+//         listItem.classList.add('list-group-item');
+//         listItem.innerHTML = `
+//             <span class="file-name">${file.name}</span>
+//             <button class="btn btn-sm remove-file-btn" data-name="${file.name}">
+//                 <i class="fa fa-times"></i> Remove
+//             </button>
+//         `;
+//         fileList.appendChild(listItem);
+
+//         // Remove file event
+//         listItem.querySelector('.remove-file-btn').addEventListener('click', (e) => {
+//             const fileName = e.target.closest('button').dataset.name;
+//             removeFile(fileName);
+//             fileList.removeChild(listItem);
+//         });
+//     }
+
+//     // Remove file from array
+//     function removeFile(fileName) {
+//         selectedFiles = selectedFiles.filter(file => file.name !== fileName);
+//     }
 
     // Handle file upload
-    uploadBtn.addEventListener('click', () => {
-        if (selectedFiles.length === 0) {
-            alert('Please select files to upload.');
-            return;
-        }
+    document.getElementById('uploadBtn').addEventListener('click', () => {
+    var documentType = document.getElementById('documentType').value;
+    var familyMemberSelect = document.getElementById('familyMemberSelect').value;
 
-        const formData = new FormData();
-        selectedFiles.forEach(file => formData.append('files[]', file));
+    if (!familyMemberSelect) {
+        alert('Please select a family member before uploading files.');
+        return;
+    }
 
-        fetch('upload.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(response => {
+    var PolicyNumber = $("#PolicyNumber").val();
+    console.log('PolicyNumber Found:', PolicyNumber);
+
+    // Prepare FormData with all form fields and selected files
+    let myForm = document.getElementById("upload-documents-form");
+    var formData = new FormData(myForm);
+
+    // Logging FormData for debugging
+    for (let [key, value] of formData.entries()) {
+        console.log(`${key}:`, value);
+    }
+
+    // Perform AJAX request
+    $.ajax({
+        url: "action/upload-documents-new.php",
+        type: "POST",
+        data: formData,
+        success: function (data) {
             alert('Files uploaded successfully');
-            fileList.innerHTML = '';
-            selectedFiles = [];
-        })
-        .catch(err => {
+            $('#fileList').empty();  // Clear file list
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
             alert('Error uploading files');
-            console.error(err);
+            console.error('Error:', textStatus, errorThrown);
+        },
+        cache: false,
+        contentType: false,
+        processData: false,
+    });
+});
+
+ 
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        
+
+        document.addEventListener('DOMContentLoaded', function () {
+    // Initial call to populate family members when the page loads
+    fetchFamilyMembers();
+    
+    // Event listener for clicking the "Refresh" badge
+    document.getElementById('refreshBadge').addEventListener('click', function () {
+        // Optionally, you can show a loading state
+        this.textContent = 'Loading...';
+        this.classList.add('bg-warning');
+
+        // Call the fetch function to reload family members
+        fetchFamilyMembers().then(() => {
+            this.textContent = 'Refresh';
+            this.classList.remove('bg-warning');
+            this.classList.add('bg-primary');
         });
     });
 });
- 
+
+async function fetchFamilyMembers() {
+    try {
+        const response = await fetch('include/get-family-members.php');
+        const data = await response.json();
+
+        if (data.length > 0) {
+            populateFamilyMemberSelect(data);
+        } else {
+            console.log('No family members found.');
+        }
+    } catch (err) {
+        console.error('Error fetching family members:', err);
+    }
+}
+
+function populateFamilyMemberSelect(data) {
+    const selectElement = document.getElementById('familyMemberSelect');
+    selectElement.innerHTML = '<option value="">Select a family member</option>'; // Reset the options
+    
+    data.forEach(member => {
+        const option = document.createElement('option');
+        option.value = member.ID; // Use PolicyCustomerID for the option value
+        option.textContent = member.Name; // Display the Name in the option
+        selectElement.appendChild(option);
+    });
+}
 
     </script>
 </body>
 </html>
+
+
+<!-- -----------------------------model for add more family member------------------------------ -->
+
+<div class="modal fade" id="familyMemberModal" tabindex="-1" aria-labelledby="familyMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="familyMemberModalLabel">Add Family Member</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+                <form id="familyMemberForm">
+                       <input type="hidden" id="ad_form_action" name="form_action"/>
+                       <input type="hidden" id="ad_form_id" name="form_id" />
+                     <!-- Plan Select Element -->
+                          <label for="familyMemberSelect" class="form-label fw-bold d-flex align-items-center">
+                            Select Plan 
+                            <span 
+                                id="refreshBadgePlan" 
+                                class="badge bg-primary ms-2" 
+                                style="cursor: pointer;" 
+                                title="Click to refresh Plan"
+                            >
+                                Refresh
+                            </span>
+                        </label>
+                            <select class="form-control" id="planSelect" name="planSelect" required>
+                                <option value="" disabled selected>Select Plan</option>
+                                <!-- Options will be populated dynamically here -->
+                            </select>
+
+
+                    <!-- Name -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ad_member_name" name="member_name" placeholder="Enter family member's name" required>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="ad_member_dob" name="member_dob" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Gender <span class="text-danger">*</span></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="ad_member_gender_male" name="member_gender" value="male" required>
+                            <label class="form-check-label" for="member_gender_male">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="ad_member_gender_female" name="member_gender" value="female" required>
+                            <label class="form-check-label" for="ad_member_gender_female">Female</label>
+                        </div>
+                    </div>
+
+                    <!-- Relationship -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Relationship <span class="text-danger">*</span></label>
+                        <select class="form-control" id="ad_member_relationship" name="member_relationship" required>
+                            <option value="" disabled selected>Select Relationship</option>
+                            <option value="MySelf">MySelf</option>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="son">Son</option>
+                            <option value="daughter">Daughter</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="submit" class="btn btn-primary" onclick="saveAdditionalFamilyMember()"form="familyMemberForm">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  
+    document.addEventListener('DOMContentLoaded', function () {
+   
+        
+    
+    document.getElementById('refreshBadgePlan').addEventListener('click', function () {
+       
+        this.textContent = 'Loading...';
+        this.classList.add('bg-warning');
+
+       
+        fetchPlans().then(() => {
+            this.textContent = 'Refresh';
+            this.classList.remove('bg-warning');
+            this.classList.add('bg-primary');
+        });
+    });
+});
+
+
+async function fetchPlans() {
+    try {
+        const response = await fetch('include/get-plans.php'); 
+        const data = await response.json();       
+        if (Array.isArray(data)) {
+            console.log('Data is an array:', data);
+            populatePlanSelect(data);
+        } else {
+            console.error('Data is not an array:', data);
+        }
+    } catch (err) {
+        console.error('Error fetching plans:', err);
+    }
+}
+
+// Populate the select input with options based on the fetched plans
+function populatePlanSelect(plans) {
+    const planSelect = document.getElementById('planSelect'); 
+    planSelect.innerHTML = '<option value="" disabled selected>Select Plan</option>';
+         plans.forEach(plan => {
+        const option = document.createElement('option');        
+        option.value = plan.ID;  
+        option.textContent = plan.PlanName;  
+        planSelect.appendChild(option);
+        console.log('options', option);
+    });
+}
+
+
+</script>

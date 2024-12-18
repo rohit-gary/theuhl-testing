@@ -593,6 +593,10 @@ document.addEventListener('DOMContentLoaded', function() {
                                     displaySelectedPlans();
 
                                 }
+                                if(step === 5)
+                                {
+                                    displayUploadDocumentForm();
+                                }
                         }
                     }
 
@@ -600,6 +604,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     // document.querySelectorAll(".step-box").forEach((stepBox, index) => {
                     //     stepBox.addEventListener("click", () => goToStep(index + 1));
                     // });
+
+                    // Function to upload document form
+                    function displayUploadDocumentForm()
+                    {
+                        $.post("ajax/get_document_upload_form.php", {
+                            
+                        },
+                        function(data, status) {
+                            
+                            document.getElementById("member_document_upload_form").innerHTML = data;
+                            
+                        });
+                    }
 
                  // Function to toggle card selection and display green check mark with opacity
                     function togglePlanSelection(planID) {
@@ -1068,6 +1085,7 @@ if (!isValid) {
         success: function (response) {
             try {
                 var result = JSON.parse(response);
+                console.log('fgffffgf',result);
                 Alert(result.message);
                 if (!result.error) {
                     // After successful submission
@@ -1163,3 +1181,87 @@ function generatePaymentLink(policyID) {
 
 
 
+// --------------save additional family member-----------------------
+
+function saveAdditionalFamilyMember() {
+       event.preventDefault(); 
+     var PolicyNumber=$("#PolicyNumber").val();
+     console.log('policynumberrrr',PolicyNumber);
+      if (!PolicyNumber) {
+        Alert(`Family PolicyNumber  is required`);
+        
+    }
+
+    let errorMessage = '';
+    let isValid = true;
+
+    const form = document.getElementById('familyMemberForm');
+   
+    const formData = new FormData(form); // Collect form data using FormData
+    formData.append('policy_number', PolicyNumber);
+    const memberName = form.querySelector('input[name="member_name"]');
+    const memberDob = form.querySelector('input[name="member_dob"]');
+    const memberGender = form.querySelector('input[name="member_gender"]:checked');
+    const memberRelationship = form.querySelector('select[name="member_relationship"]');
+    const planId = form.querySelector('select[name="planSelect"]');
+
+    // Validate required fields
+    if (!memberName.value.trim()) {
+        errorMessage += `Family member name is required.\n`;
+        isValid = false;
+    }
+
+    if (!memberDob.value.trim()) {
+        errorMessage += `Date of Birth is required.\n`;
+        isValid = false;
+    }
+
+    if (!memberGender) {
+        errorMessage += `Gender is required.\n`;
+        isValid = false;
+    }
+
+    if (!memberRelationship.value.trim()) {
+        errorMessage += `Relationship is required.\n`;
+        isValid = false;
+    }
+
+    if (!planId.value.trim()) {
+        errorMessage += `Plan selection is required.\n`;
+        isValid = false;
+    }
+
+    // If validation fails, show the error message
+    if (!isValid) {
+        Alert(errorMessage);
+        return; // Exit function if validation fails
+    }
+
+    // Proceed with AJAX request if validation is successful
+    $.ajax({
+        url: "include/save-Additionalfamily-members.php", // Ensure this is correct path
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            try {
+                const result = JSON.parse(response);
+                if (result.error) {
+                    Alert(result.message); // Show error message if any
+                } else {
+                    Alert('Family member details saved successfully!');
+                    $('#familyMemberModal').modal('hide'); 
+                    form.reset(); 
+                }
+            } catch (error) {
+                console.error("Error parsing response:", error);
+                alert("An error occurred while saving the family member details.");
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("AJAX Error:", status, error);
+            alert("Failed to save family member details. Please try again.");
+        }
+    });
+}

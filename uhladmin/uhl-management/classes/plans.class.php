@@ -102,6 +102,13 @@ public function _getTotalRows($conn, $table, $filter) {
 
 
 
+public function GetAllPlanDetailsbyID($ID){
+	     $sql = "SELECT * FROM plans where ID= $ID";
+		$Plan_list = $this->_getRecords($this->conn,$sql);
+		return $Plan_list;
+}
+
+
 public function GetPlanDetailsbyID($ID){
 	 $where = " where ID = $ID";
 		$Plan_list = $this->_getTableRecords($this->conn,'plans',$where);

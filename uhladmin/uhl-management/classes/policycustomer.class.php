@@ -795,11 +795,14 @@ public function InsertPolicyDocuments($data){
     $createdTime = $data['CreatedTime'];
     $createdDate = $data['CreatedDate'];
     $createdBy = $data['CreatedBy'];
+    $MemberID=$data['familyMemberSelect'];
+    $DocName=$data['documentType'];
+
 
     $sql = "INSERT INTO policy_customer_documents 
-            (PolicyID,PolicyNumber,Documents, CreatedDate, CreatedTime, CreatedBy) 
+            (PolicyID,MemberID,DocName,PolicyNumber,Documents, CreatedDate, CreatedTime, CreatedBy) 
             VALUES 
-            ('$policyID','$policyNumber','$documents', '$createdDate', '$createdTime', '$createdBy')";
+            ('$policyID','$policyNumber','$MemberID','$DocName','$documents', '$createdDate', '$createdTime', '$createdBy')";
 
     $response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
     return $response_insert_details;

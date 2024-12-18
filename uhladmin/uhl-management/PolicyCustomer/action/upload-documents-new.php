@@ -10,16 +10,18 @@ include("../../include/get-db-connection.php");
 
 $core = new Core();
 $core->setTimeZone();
-var_dump($_FILES);
-die();
+var_dump($_FILES); // For debugging the uploaded files
+die(); // Temporarily halt the script to check the output
 
 if (isset($_POST['PolicyNumber'])) {
     $policycustomer_obj = new PolicyCustomer($conn);
     $data = $_POST;
-     $policyID='';
+    $policyID = '';
+    
     var_dump($data);
-   die();
+    die();
 
+    // Handle the form data (e.g., family member, document type, etc.)
     if ($data['form_action'] != "Update") {
         $data['CreatedDate'] = date("Y-m-d");
         $data['CreatedTime'] = date("H:i:s");
@@ -35,6 +37,7 @@ if (isset($_POST['PolicyNumber'])) {
             mkdir($uploadDirectory, 0777, true);
         }
 
+        // Loop through the uploaded files and move them to the server
         foreach ($_FILES['policy_documents']['tmp_name'] as $index => $tmpName) {
             if ($_FILES['policy_documents']['error'][$index] == UPLOAD_ERR_OK) {
                 $fileExtension = pathinfo($_FILES['policy_documents']['name'][$index], PATHINFO_EXTENSION);
@@ -47,21 +50,24 @@ if (isset($_POST['PolicyNumber'])) {
             }
         }
 
-        $data['documents'] = json_encode($uploadedFiles);  // Convert file names to JSON for storage
+        // Convert the array of uploaded files to JSON for storage
+        $data['documents'] = json_encode($uploadedFiles);
+
+        // Save the data to the database
         $response = $policycustomer_obj->InsertPolicyDocuments($data);
 
         if ($response['error'] == false) {
-            $response['message'] = "Documents Uploded!";
+            $response['message'] = "Documents Uploaded!";
         } else {
             $response['error'] = true;
-            $response['message'] = "Some Technical Error! Please Try Again.";
+            $response['message'] = "Some technical error! Please try again.";
         }
     } else {
         $response = $service_obj->UpdateServiceDetails($data);
     }
 } else {
     $response['error'] = true;
-    $response['message'] = "Some Technical Errorwerty! Please Try Again.";
+    $response['message'] = "Some technical error! Please try again.";
 }
 
 echo json_encode($response);

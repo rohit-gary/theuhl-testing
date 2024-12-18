@@ -178,12 +178,57 @@ $conf = new Conf();
 .remove-file-btn:hover {
     color: #b52a30;
 }
-    
+    #confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Makes sure it doesn’t interfere with other elements */
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FF5733; /* Default color */
+  animation: fall 2s infinite ease-in;
+  opacity: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
     </style>
 </head>
 
 <body class="app sidebar-mini ltr light-mode">
+
+    <div id="confetti-container"></div>
+
     <div class="page">
         <div class="page-main">
             <?php
@@ -363,7 +408,7 @@ $conf = new Conf();
                                   value="<?php echo isset($policy_form_action) ? $policy_form_action : ''; ?>" />
                                   <input type="hidden" id="form_id_policy" name="form_id" 
                                   value="<?php echo $PolicyFormId ?>" />
-                                  <input type="text" id="customer_id" value="<?php echo $Customerid; ?>" />
+                                  <input type="hidden" id="customer_id" value="<?php echo $Customerid; ?>" />
                                   <div class="row">
                                 <?php
                                 // Loop through each plan to display it
@@ -417,7 +462,7 @@ $conf = new Conf();
                                             <input type="hidden" id="form_action_family" name="form_action" value="" />
                                             <input type="hidden" id="form_id" name="form_id" value="" />
 
-                                             <input type="text" id="PolicyNumber" value="<?php echo $PolicyNumber ?>">
+                                             <input type="hidden" id="PolicyNumber" value="<?php echo $PolicyNumber ?>">
                                             <!-- Dynamic member forms will be appended here -->
                                             <div id="step-3-form-container"></div>
                                             <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
@@ -457,29 +502,29 @@ $conf = new Conf();
 
 
                           <!-- Add additional form sections for other steps -->
-                            <div id="step-5" class="form-section">
-                        <div class="card shadow">
-                            <div class="card-header bg-primary text-white">
-                                <h5 class="mb-0">Step 5: Upload Documents</h5>
-                            </div>
-
-                            <div class="card-body">
-                                   <p class="my-3">Want to Add More Family Member</p>
-                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#familyMemberModal" 
-                                        style="border-radius: 50%; width: 50px; height: 50px; align-items: center; justify-content: center; padding: 0;">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                        <div id="member_document_upload_form">
-                                            <!-- document upload form here -->
-                                        </div>
-                                        
-
-
-                                  
+                                <div id="step-5" class="form-section">
+                            <div class="card shadow">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Step 5: Upload Documents</h5>
                                 </div>
 
+                                <div class="card-body">
+                                       <p class="my-3">Want to Add More Family Member</p>
+                                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#familyMemberModal" 
+                                            style="border-radius: 50%; width: 50px; height: 50px; align-items: center; justify-content: center; padding: 0;">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                            <div id="member_document_upload_form">
+                                                <!-- document upload form here -->
+                                            </div>
+                                            
+
+
+                                      
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
 
 
@@ -925,6 +970,7 @@ function populateFamilyMemberSelect(data) {
                             <select class="form-control" id="planSelect" name="planSelect" required>
                                 <option value="" disabled selected>Select Plan</option>
                                 <!-- Options will be populated dynamically here -->
+                                <!-- <?php include("../include/get-plans-new.php"); ?> -->
                             </select>
 
 
@@ -1028,5 +1074,152 @@ function populatePlanSelect(plans) {
     });
 }
 
+
+</script>
+
+
+<script type="text/javascript">
+
+let documentCounter = 1;
+
+function addFileInput() {
+    const container = document.getElementById('documents_container');
+    
+    const inputGroup = document.createElement('div');
+    inputGroup.classList.add('input-group', 'mb-2');
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.classList.add('form-control');
+    fileInput.name = 'policy_documentss[]';
+    fileInput.id = `documents_${documentCounter}`;
+
+    const removeButton = document.createElement('button');
+    removeButton.type = 'button';
+    removeButton.classList.add('btn', 'btn-outline-danger');
+    removeButton.textContent = '-';
+    removeButton.onclick = function () {
+        container.removeChild(inputGroup);
+    };
+
+    inputGroup.appendChild(fileInput);
+    inputGroup.appendChild(removeButton);
+    container.appendChild(inputGroup);
+
+    documentCounter++;
+}
+
+
+function addFileInputMember() {
+    const container = document.getElementById('documents_container_member');
+    
+    const inputGroup = document.createElement('div');
+    inputGroup.classList.add('input-group', 'mb-2');
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.classList.add('form-control');
+    fileInput.name = 'policy_documentss[]';
+    fileInput.id = `documents_${documentCounter}`;
+
+    const removeButton = document.createElement('button');
+    removeButton.type = 'button';
+    removeButton.classList.add('btn', 'btn-outline-danger');
+    removeButton.textContent = '-';
+    removeButton.onclick = function () {
+        container.removeChild(inputGroup);
+    };
+
+    inputGroup.appendChild(fileInput);
+    inputGroup.appendChild(removeButton);
+    container.appendChild(inputGroup);
+
+    documentCounter++;
+}
+
+// To retrieve files when submitting, gather all files from `policy_documents[]` inputs
+function getDocumentsArray() {
+    const filesArray = [];
+    const fileInputs = document.querySelectorAll("input[name='policy_documentss[]']");
+    fileInputs.forEach(input => {
+        if (input.files.length > 0) {
+            filesArray.push(input.files[0]);  // Store each file object
+        }
+    });
+    return filesArray;
+}
+
+    $("#UplodeDocumentssBtn").html("Add");
+
+function AddUploade() {
+    // Check if at least one document is uploaded, validate each file size and type
+    const fileInputs = document.querySelectorAll("input[name='policy_documentss[]']");
+    let fileSelected = false;
+    const maxFileSize = 10 * 1024 * 1024; // 10 MB in bytes
+    const allowedTypes = [
+    'application/pdf', // PDF files
+    'application/msword', // DOC files
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // DOCX files
+    'image/jpeg', // JPG files
+    'image/png' // PNG files
+];
+
+
+    for (let input of fileInputs) {
+        if (input.files.length > 0) {
+            fileSelected = true;
+            for (let file of input.files) {
+                // Check file size
+                if (file.size > maxFileSize) {
+                    Alert("Each document must be less than 10 MB. Please check your files and try again.");
+                    return false;
+                }
+                // Check file type
+                if (!allowedTypes.includes(file.type)) {
+                    Alert("Only PDF or DOC files are allowed. Please upload valid documents.");
+                    return false;
+                }
+            }
+        }
+    }
+
+    if (!fileSelected) {
+        Alert("Please upload at least one  Document.");
+        return false;
+    }
+
+    // Update button text to indicate loading
+    $("#UplodeDocumentssBtn").html("Please Wait..");
+
+    // Create a new FormData object to handle file uploads
+    let formData = new FormData(document.getElementById("policyDocumentss_form"));
+
+    // Make AJAX request with FormData
+    $.ajax({
+        url: "action/upload-documents.php",
+        type: "POST",
+        data: formData,
+        processData: false,  // Prevent jQuery from converting data
+        contentType: false,  // Set content type to false to let browser set it automatically
+        success: function(data) {
+            var response = JSON.parse(data);
+            Alert(response.message);
+            if (response.error == false) { 
+                setTimeout(function() {
+                   
+                }, 1500);
+                $("#UplodeDocumentssBtn").html("Add");
+                $('#policyDocumentss_form')[0].reset();
+            } else {
+                $("#UplodeDocumentssBtn").html("Add");
+            }
+        },
+        error: function(xhr, status, error) {
+            Alert("An error occurred while submitting the form. Please try again.");
+            $("#UplodeDocumentssBtn").html("Add");
+        }
+    });
+    return false;
+}
 
 </script>

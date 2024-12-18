@@ -802,7 +802,7 @@ public function InsertPolicyDocuments($data){
     $sql = "INSERT INTO policy_customer_documents 
             (PolicyID,MemberID,DocName,PolicyNumber,Documents, CreatedDate, CreatedTime, CreatedBy) 
             VALUES 
-            ('$policyID','$policyNumber','$MemberID','$DocName','$documents', '$createdDate', '$createdTime', '$createdBy')";
+            ('$policyID','$MemberID','$DocName','$policyNumber','$documents', '$createdDate', '$createdTime', '$createdBy')";
 
     $response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
     return $response_insert_details;

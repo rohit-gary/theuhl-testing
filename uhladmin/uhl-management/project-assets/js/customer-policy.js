@@ -543,20 +543,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
                     let currentStep = 1;
-                    if (localStorage.getItem('currentStep') !== null) 
-                    {
-                        currentStep = localStorage.getItem('currentStep');
-                        console.log(currentStep);
-                    } 
+                    // if (localStorage.getItem('currentStep') !== null) 
+                    // {
+                    //     currentStep = localStorage.getItem('currentStep');
+                    //     console.log(currentStep);
+                    // } 
                     function goToNextStep() 
                     {
-                        alert(currentStep);
-                        localStorage.setItem('currentStep',parseInt(currentStep) + 1);
+                     // alert(currentStep);
+                        // localStorage.setItem('currentStep',parseInt(currentStep) + 1);
                         goToStep(currentStep + 1);
                     }
 
                     function goToPreviousStep() {
-                        localStorage.setItem('currentStep',parseInt(currentStep) + 1);
+                        // localStorage.setItem('currentStep',parseInt(currentStep) + 1);
                         goToStep(currentStep - 1);
                     }
 
@@ -580,25 +580,26 @@ document.addEventListener('DOMContentLoaded', function() {
                                 steps[currentStep - 1].classList.remove("completed");
                             }
 
-                            // Add the 'active' class to the new step and section
-                            steps[step - 1].classList.add("active");
-                            sections[step - 1].classList.add("active");
+                                // Add the 'active' class to the new step and section
+                                steps[step - 1].classList.add("active");
+                                sections[step - 1].classList.add("active");
+                               displayUploadDocumentForm();
+                                currentStep = step;
+                                if (step === 3) {
+                                        fetchPlansAndGenerateForms();
 
-                            currentStep = step;
-                            if (step === 3) {
-                                    fetchPlansAndGenerateForms();
+                                    }
+                                    if (step === 4) {
+                                        displaySelectedPlans();
 
-                                }
-                                if (step === 4) {
-                                    displaySelectedPlans();
-
-                                }
-                                if(step === 5)
-                                {
-                                    displayUploadDocumentForm();
-                                }
+                                    }
+                                    if(step === 5)
+                                    {
+                                        displayUploadDocumentForm();
+                                        
+                                    }
+                            }
                         }
-                    }
 
                     // Add click event listener for steps to go directly to a particular step
                     // document.querySelectorAll(".step-box").forEach((stepBox, index) => {
@@ -608,7 +609,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Function to upload document form
                     function displayUploadDocumentForm()
                     {
-                        $.post("ajax/get_document_upload_form.php", {
+                        $.post("ajax/upload_documents_form.php", {
                             
                         },
                         function(data, status) {
@@ -617,6 +618,20 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                         });
                     }
+
+                    // function for add Additionalfamilymember form
+
+                    //  function displayAdditionalMemberForm()
+                    // {
+                    //     $.post("ajax/save-Additionalfamily-members.php", {
+                            
+                    //     },
+                    //     function(data, status) {
+                            
+                    //         document.getElementById("member_add_form").innerHTML = data;
+                            
+                    //     });
+                    // } 
 
                  // Function to toggle card selection and display green check mark with opacity
                     function togglePlanSelection(planID) {
@@ -1134,6 +1149,33 @@ function generatePaymentLink(policyID) {
             }
         });
 
+
+        function createConfetti() {
+  const confettiContainer = document.getElementById('confetti-container');
+  
+  // Define confetti colors
+  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FFFF33', '#FF33FF'];
+
+  // Create 50 confetti pieces
+  for (let i = 0; i < 50; i++) {
+    const confettiPiece = document.createElement('div');
+    confettiPiece.classList.add('confetti');
+    
+    // Randomize position, animation timing, and colors
+    confettiPiece.style.left = Math.random() * 100 + 'vw';
+    confettiPiece.style.animationDuration = Math.random() * 1 + 2 + 's';
+    confettiPiece.style.animationDelay = Math.random() * 3 + 's';
+    confettiPiece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    confettiContainer.appendChild(confettiPiece);
+    
+    // Remove confetti piece after animation ends to prevent clutter
+    setTimeout(() => {
+      confettiPiece.remove();
+    }, 10000);
+  }
+}
+
         // Start checking payment status every 5 seconds
         var checkPaymentStatusInterval = setInterval(function () {
             $.ajax({
@@ -1144,7 +1186,8 @@ function generatePaymentLink(policyID) {
                     var paymentStatus = JSON.parse(statusResponse);
                     if (!paymentStatus.error) {
                         clearInterval(checkPaymentStatusInterval); // Stop checking
-                        alert("Thank you for your payment! Your payment was successful.");
+                        Alert("Thank you for your payment! Your payment was successful.");
+                        createConfetti();
                         setTimeout(function () {
                             // location.reload(); // Reload the page
                         }, 4000);
@@ -1265,3 +1308,6 @@ function saveAdditionalFamilyMember() {
         }
     });
 }
+
+
+

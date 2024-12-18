@@ -1,17 +1,27 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Headers: Content-Type');
+var_dump($_POST);   
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 @session_start();
 require_once('../../include/autoloader.inc.php');
 include("../../include/get-db-connection.php");
 
 $core = new Core();
 $core->setTimeZone();
+var_dump($_FILES);
+die();
 
-if (isset($_POST['policy_number'])) {
+if (isset($_POST['PolicyNumber'])) {
     $policycustomer_obj = new PolicyCustomer($conn);
     $data = $_POST;
-
-    // print_r($_POST);
-    // die();
+     $policyID='';
+    var_dump($data);
+   die();
 
     if ($data['form_action'] != "Update") {
         $data['CreatedDate'] = date("Y-m-d");
@@ -20,7 +30,7 @@ if (isset($_POST['policy_number'])) {
 
         // Handle file uploads
         $uploadedFiles = [];
-        $policyNumber = $data['policy_number'];
+        $policyNumber = $data['PolicyNumber'];
         $policyID = $data['policy_ID'];
         $uploadDirectory = '../documents/';
 
@@ -28,9 +38,9 @@ if (isset($_POST['policy_number'])) {
             mkdir($uploadDirectory, 0777, true);
         }
 
-        foreach ($_FILES['policy_documentss']['tmp_name'] as $index => $tmpName) {
-            if ($_FILES['policy_documentss']['error'][$index] == UPLOAD_ERR_OK) {
-                $fileExtension = pathinfo($_FILES['policy_documentss']['name'][$index], PATHINFO_EXTENSION);
+        foreach ($_FILES['policy_documents']['tmp_name'] as $index => $tmpName) {
+            if ($_FILES['policy_documents']['error'][$index] == UPLOAD_ERR_OK) {
+                $fileExtension = pathinfo($_FILES['policy_documents']['name'][$index], PATHINFO_EXTENSION);
                 $uniqueFileName = $policyNumber . '_' . uniqid() . '.' . $fileExtension;
                 $targetFilePath = $uploadDirectory . $uniqueFileName;
 
@@ -54,7 +64,7 @@ if (isset($_POST['policy_number'])) {
     }
 } else {
     $response['error'] = true;
-    $response['message'] = "Some Technical Error! Please Try Again.";
+    $response['message'] = "Some Technical Errorwerty! Please Try Again.";
 }
 
 echo json_encode($response);

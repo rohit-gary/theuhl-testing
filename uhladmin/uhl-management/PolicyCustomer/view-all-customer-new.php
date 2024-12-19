@@ -80,14 +80,12 @@ $conf = new Conf();
                                                     <tr>
                                                         <th class="wd-5p border-bottom-0">#</th>
                                                         <th class="wd-15p border-bottom-0">Name</th>
-                                                        <th class="wd-15p border-bottom-0">Phone Number</th>
-                                                        <th class="wd-15p border-bottom-0">Policy Number</th>
-                                                        <!-- <th class="wd-25p border-bottom-0">Address</th> -->
-                                                         <th class="wd-25p border-bottom-0">Document Status</th>
-                                                         <th class="wd-15p border-bottom-0">Transaction Status</th>
-                                                        <th class="wd-15p border-bottom-0">Details</th>
+                                                        <th class="wd-15p border-bottom-0">Phone Number</th>  
+                                                         <th class="wd-25p border-bottom-0">Email</th>
+                                                         <th class="wd-15p border-bottom-0">Address</th>
+                                                    <!--     <th class="wd-15p border-bottom-0">Details</th>
                                                         <th class="wd-10p border-bottom-0">Action</th>
-                                                    </tr>
+ -->                                                    </tr>
                                                 </thead>
                                                
                                             </table>
@@ -126,17 +124,16 @@ $conf = new Conf();
 
         <script type="text/javascript">
             
-            $(document).ready(function () {
+    $(document).ready(function () {
     console.log('Hello policy customer');
-    var i = 1;
     $('#all_policy_customer').dataTable({
-         'responsive': true,
+        'responsive': true,
         'processing': true,
         'serverSide': true,
         'ordering': false,
         'serverMethod': 'post',
         'ajax': {
-            'url': 'ajax/view-all-policy-customer-post-new.php'
+            'url': 'ajax/view-all-customer-post-new.php'
         },
         'columnDefs': [{
             "targets": [0],
@@ -145,87 +142,29 @@ $conf = new Conf();
         "order": [
             [1, 'asc']
         ],
-        'columns': [{
-            "data": "id",
-            render: function (data, type, row, meta) {
-                return meta.row + meta.settings._iDisplayStart + 1;
-            }
-        },
-        {
-            data: 'Name'
-        },
-        {
-            data: 'ContactNumber'
-        },
-       
-        {
-            data: 'PolicyNumber'
-        },
-
-       
-
-        
-
-        {
-            data: 'Document Status',
-            render: function (data, type, row) {
-                    // Determine status class and text based on status
-                    let statusClass = '';
-                    let statusText = data.toLowerCase();
-
-                    if (statusText === 'uploded') {
-                        statusClass = 'bg-success text-white'; // Green for success
-                    } else if (statusText === 'pending') {
-                        statusClass = 'bg-warning text-dark'; // Yellow for pending
-                    } else if (statusText === 'failed') {
-                        statusClass = 'bg-danger text-white'; // Red for failed
-                    } else {
-                        statusClass = 'bg-danger text-white'; // Gray for unknown
-                    }
-
-                    // Return the status as a badge
-                    return `<span class="badge ${statusClass}" style="padding: 8px; font-size: 12px; text-transform: capitalize;">
-                                ${statusText}
-                            </span>`;
-                }
-        },
-
-        {
-                data: 'Transection Status',
-                render: function (data, type, row) {
-                    // Determine status class and text based on status
-                    let statusClass = '';
-                    let statusText = data.toLowerCase();
-
-                    if (statusText === 'success') {
-                        statusClass = 'bg-success text-white'; // Green for success
-                    } else if (statusText === 'pending') {
-                        statusClass = 'bg-warning text-dark'; // Yellow for pending
-                    } else if (statusText === 'failed') {
-                        statusClass = 'bg-danger text-white'; // Red for failed
-                    } else {
-                        statusClass = 'bg-secondary text-white'; // Gray for unknown
-                    }
-
-                    // Return the status as a badge
-                    return `<span class="badge ${statusClass}" style="padding: 8px; font-size: 12px; text-transform: capitalize;">
-                                ${statusText}
-                            </span>`;
+        'columns': [
+            {
+                "data": "ID",
+                render: function (data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1; // Serial number
                 }
             },
-
-        {
-            data: 'Details'
-        },
-        {
-            data: 'Action'
-        },
-
+            {
+                data: 'Name' // Name of the customer
+            },
+            {
+                data: 'ContactNumber' // Phone number of the customer
+            },
+            {
+                data: 'Email' // Email of the customer
+            },
+            {
+                data: 'Address' // Address of the customer
+            }
         ]
-
-
     });
 });
+
         </script>
 
         <script type="text/javascript">

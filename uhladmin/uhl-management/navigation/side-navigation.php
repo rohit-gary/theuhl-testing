@@ -107,6 +107,8 @@
                                 <h3>Customer Management</h3> 
                             </li>
 
+                               
+
                                <li>
                                 <a href="#" class="side-menu__item clearSessionLink">
                                    <i class="fa fa-user-plus"></i> Add Policy Customer
@@ -125,12 +127,16 @@
                                             <a href="../PolicyCustomer/view-all-policy-customer-new" class="list-group-item list-group-item-action">
                                                 <i class="fa fa-list mr-2"></i> Policy Customer List
                                             </a>
-                                             <a href="../PolicyCustomer/view-all-customer-new" class="list-group-item list-group-item-action">
-                                                    <i class="side-menu__icon fa fa-user"></i>
-                                                    <span class="side-menu__label">All Customer</span>
-                                                </a>
+
                                         </div>
                                 </li>
+
+                                <li>
+                                   <a class="side-menu__item"  href="../PolicyCustomer/view-all-customer-new" class="list-group-item list-group-item-action">
+                                        <i class="side-menu__icon fa fa-user"></i>
+                                        <span class="side-menu__label">All Customer</span>
+                                    </a>
+                               </li>
 
 
                             <?php

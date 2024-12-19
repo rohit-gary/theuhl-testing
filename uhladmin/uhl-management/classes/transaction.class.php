@@ -1,26 +1,26 @@
 <?php 
 class Transaction extends Core
 {
-	private $conn;
-	public function __construct($conn)
-	{
-		$this->conn = $conn;
-		$this->setTimeZone();
-	}
-	public function GetAllTransaction()
-	{
-		$where = " where 1";
-		$transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
-		return $transaction_list;
-	}
+    private $conn;
+    public function __construct($conn)
+    {
+        $this->conn = $conn;
+        $this->setTimeZone();
+    }
+    public function GetAllTransaction()
+    {
+        $where = " where 1";
+        $transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
+        return $transaction_list;
+    }
 
 
-	
-	public function GetAllTransactionByPolicyID($ID){
-		$where = " where policyID=$ID";
-		$transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
-		return $transaction_list;
-	} 
+    
+    public function GetAllTransactionByPolicyID($ID){
+        $where = " where policyID=$ID";
+        $transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
+        return $transaction_list;
+    } 
 
     public function GetAllTransactionByPolicyNumber($Number){
         $where = " where PolicyNumber= '$Number'";
@@ -47,10 +47,11 @@ public function insertPaymentsDetails($data) {
         echo "All required fields must be filled.";
         return;
     }
-
+    $policy_id_2='';
     // Prepare the data to insert into the payments table
     $paymentData = array(
-        'PolicyID' => $policy_id,
+        'PolicyID' => $policy_id_2,
+        'PolicyNumber'=>$policy_id,
         'razorpay_payment_id' => $razorpay_payment_id,
         'razorpay_order_id' => $razorpay_order_id,
         'Amount' => $amount,
@@ -81,7 +82,7 @@ public function insertPaymentsDetails($data) {
             );
 
             // Insert account details into PaymentBankDetail table
-            $response_insert_bank_details = $this->_InsertTableRecords_prepare($this->conn, 'paymentbankdetail', $bankDetails);
+            $response_insert_bank_details = $this->_InsertTableRecords_prepare($this->conn, 'PaymentBankDetail', $bankDetails);
 
             // Check if the bank details were inserted successfully
             if ($response_insert_bank_details) {

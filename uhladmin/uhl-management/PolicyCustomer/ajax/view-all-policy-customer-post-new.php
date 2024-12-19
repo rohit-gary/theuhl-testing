@@ -3,6 +3,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 @session_start();
+
+// print_r($_SESSION);
+// die();
 require_once('../../include/autoloader.inc.php');
 include("../../include/get-db-connection.php");
 
@@ -24,7 +27,7 @@ $row = $_POST['start'];
 $rowperpage = $_POST['length']; 
 $searchValue = $_POST['search']['value']; 
 
-$columnName = " "; 
+$columnName = "ac.ID"; 
 $columnSortOrder = "DESC"; 
 
 ## Check access level
@@ -33,36 +36,31 @@ if($UserType == "Client Admin" || $UserType=="Channel Partner") {
     $access = true;
 }
 
-## Search query
-$searchQuery = " ";
+$searchQuery = "";
 if($searchValue != '') {
-   $searchQuery = " and (Name like '%".$searchValue."%' or ContactNumber like '%".$searchValue."%'  or PolicyNumber like '%".$searchValue."%')";
+   $searchQuery = " AND (ac.Name LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%' 
+                     OR ac.ContactNumber LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%'  
+                     OR cp.PolicyNumber LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%')";
 }
 
-## Filter for active doctors
-$filter = " where 1";
+## Filter for access levels
+$filter = "WHERE 1=1"; // default where clause to simplify appending conditions
 
-## Additional filter if user is a "Channel Partner"
 if($UserType == "Channel Partner") {
-    $filter .= " and CreatedBy = '".$loggedin_email."'";
-}
-
-if($UserType=="Client User"){
-   if($RoleType == "Sales Man") {
-    $filter .= " and CreatedBy = '".$loggedin_email."'";
+    $filter .= " AND ac.CreatedBy = '" . mysqli_real_escape_string($conn, $loggedin_email) . "'";
 } 
 
+if($UserType == "Client User" && $RoleType == "Sales Man") {
+    $filter .= " AND ac.CreatedBy = '" . mysqli_real_escape_string($conn, $loggedin_email) . "'";
 }
 
-$filter = $filter . $searchQuery;
+$filter .= $searchQuery;
 
 ## Total number of records with filtering
-
-$sql_count = "SELECT count(*) as row_count
-        FROM 
-            all_customer ac
-        INNER JOIN 
-            customerpolicy cp ON ac.ID = cp.CustomerID". $filter;
+$sql_count = "SELECT COUNT(DISTINCT cp.PolicyNumber) AS row_count
+              FROM all_customer ac
+              INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID
+              $filter";
 $result_Count = mysqli_query($conn, $sql_count);
 if (!$result_Count) {
     die("Query failed: " . mysqli_error($conn));
@@ -76,13 +74,16 @@ $totalRecordwithFilter = $row_count_result['row_count'];
 $totalRecords = $PolicyCustomer->GetAllPolicyCustomer('all_customer');
 
 ## Pagination and ordering
-$filter = " limit ".$row.",".$rowperpage;
+
 
 ## Fetch doctor records
 // $policy_details_arr = $PolicyCustomer->_getTotalRecord($conn, 'policy_customer', $filter);
 
 ## Main SQL query to fetch policy details
-$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber, MAX(ac.CreatedBy) AS CreatedBy, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN pmd.Document IS NULL THEN 1 END) = 0 THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_member_details pmd ON cp.PolicyNumber = pmd.PolicyNumber GROUP BY ac.ID, cp.PolicyNumber ORDER BY ac.ID DESC, cp.PolicyNumber $filter";
+$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber, MAX(ac.CreatedBy) AS CreatedBy, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN pmd.Document IS NULL THEN 1 END) = 0 THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_member_details pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
+     GROUP BY ac.ID, cp.PolicyNumber ORDER BY ac.ID DESC, cp.PolicyNumber ";
+
+     // echo $sql;
     $result = mysqli_query($conn, $sql);
 
 if (!$result) {

@@ -475,6 +475,6 @@ header('Content-Disposition: attachment; filename="UHL_Health_Letter.pdf"');
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: 0');
 
-$mpdf->Output(' '.$PolicyCustomer_details['Name'].'.pdf', \Mpdf\Output\Destination::INLINE);
+$mpdf->Output(' '.$PolicyCustomer_details['UserName'].'.pdf', \Mpdf\Output\Destination::INLINE);
 
 ?>

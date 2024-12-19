@@ -46,12 +46,23 @@ public function cleantext($input) {
 		$CoverageComments = $data['coverage_comments'];
 		$PlanCost = $data['PlanCost'];
 		$PlanImportantPoint = $data['plan_point'];
+
+		$MinimumAge = $data['minimum_age'];
+		$MaximumAge = $data['maximum_age'];
+		$ValidArea = $data['valid_area'];
+		$Payments = $data['payments'];
+                                                                                                                                                                                                                                                                                    
+
+
+
+
 		$PlanHighlights = $data['plan_highlights'];
 		$PlanDescription = $data['plan_Description'];
 
 		$CreatedTime = $data['CreatedTime'];
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedBy = 'admin@uhl.com';
+		$IsDisplay=$data['isDisplay'];
 
        $PlanImage='';
        $random_numbers = rand(1000, 10000);
@@ -62,8 +73,8 @@ public function cleantext($input) {
 	        move_uploaded_file($_FILES["PlanImage"]["tmp_name"], $path);
        }
 
-		$sql = "INSERT INTO `plans`(`PlanName`,`PlanImage`,`PlanDuration`,`PlanDurationFormat`,`PlanFamilyMember`,`PlanMinimumFamilyMember`,`CoverageComments`,`PlanCost`,`PlanImportantPoint`,`PlanHighlights`,`PlanDescription`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$PlanName','$PlanImage','$PlanDuration','$PlanDurationFormat','$PlanFamilyMember','$PlanMinimumFamilyMember','$CoverageComments','$PlanCost','$PlanImportantPoint','$PlanHighlights','$PlanDescription','$CreatedDate','$CreatedTime','$CreatedBy')";
-		$response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
+		$sql = "INSERT INTO `plans`(`PlanName`,`PlanImage`,`PlanDuration`,`PlanDurationFormat`,`PlanFamilyMember`,`PlanMinimumFamilyMember`,`CoverageComments`,`PlanCost`,`PlanImportantPoint`,`MinimumAge`,`MaximumAge`,`ValidArea`,`Payments`,`PlanHighlights`,`PlanDescription`,`CreatedDate`, `CreatedTime`, `CreatedBy`,`IsDisplay`) VALUES ('$PlanName','$PlanImage','$PlanDuration','$PlanDurationFormat','$PlanFamilyMember','$PlanMinimumFamilyMember','$CoverageComments','$PlanCost','$PlanImportantPoint','$MinimumAge','$MaximumAge','$ValidArea','$Payments','$PlanHighlights','$PlanDescription','$CreatedDate','$CreatedTime','$CreatedBy','$IsDisplay')";
+		    $response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
 		return $response_insert_details;
 	}
 
@@ -153,12 +164,21 @@ public function UpdatePlanForm($data)
 		$CoverageComments = $data['coverage_comments'];
 		$PlanCost = $data['PlanCost'];
 		$PlanImportantPoint = $data['plan_point'];
+
+
+		$MinimumAge = $data['minimum_age'];
+		$MaximumAge = $data['maximum_age'];
+		$ValidArea = $data['valid_area'];
+		$Payments = $data['payments'];
+
+
 		$PlanHighlights = $data['plan_highlights'];
 		$PlanDescription = $data['plan_Description'];
 
 		$CreatedTime = $data['CreatedTime'];
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedBy = 'admin@uhl.com';
+		$IsDisplay=$data['isDisplay'];
 
 		$Plan_id = $data['form_id'];
 
@@ -189,7 +209,7 @@ public function UpdatePlanForm($data)
     }
 }
 
-	    if($PlanName == $old_programs_details['PlanName']  && $PlanDuration == $old_programs_details['PlanDuration'] && $PlanHighlights == $old_programs_details['PlanHighlights'] && $PlanDescription == $old_programs_details['PlanDescription'] && $PlanImage == $old_programs_details['PlanImage'] && $PlanDurationFormat == $old_programs_details['PlanDurationFormat']&& $PlanCost == $old_programs_details['PlanCost'] && $PlanFamilyMember == $old_programs_details['PlanFamilyMember']&& $CoverageComments == $old_programs_details['CoverageComments']&& $PlanImportantPoint == $old_programs_details['PlanImportantPoint'] && $PlanMinimumFamilyMember == $old_programs_details['min_family_member'] )
+	    if($PlanName == $old_programs_details['PlanName']  && $PlanDuration == $old_programs_details['PlanDuration'] && $PlanHighlights == $old_programs_details['PlanHighlights'] && $PlanDescription == $old_programs_details['PlanDescription'] && $PlanImage == $old_programs_details['PlanImage'] && $PlanDurationFormat == $old_programs_details['PlanDurationFormat']&& $PlanCost == $old_programs_details['PlanCost'] && $PlanFamilyMember == $old_programs_details['PlanFamilyMember']&& $CoverageComments == $old_programs_details['CoverageComments']&& $PlanImportantPoint == $old_programs_details['PlanImportantPoint'] && $PlanMinimumFamilyMember == $old_programs_details['min_family_member'] && $MinimumAge == $old_programs_details['minimum_age'] && $MaximumAge == $old_programs_details['maximum_age'] && $ValidArea == $old_programs_details['valid_area'] && $Payments == $old_programs_details['payments']&& $IsDisplay == $old_programs_details['isDisplay'])
 	    {
 	    	$response['message'] = "No changes to update";
 	    	$response['error'] = true;
@@ -204,12 +224,19 @@ public function UpdatePlanForm($data)
                  PlanMinimumFamilyMember= '$PlanMinimumFamilyMember', 
                  CoverageComments = '$CoverageComments', 
                  PlanCost = '$PlanCost', 
-                 PlanImportantPoint = '$PlanImportantPoint', 
+                 PlanImportantPoint = '$PlanImportantPoint',
+                 
+                 MinimumAge = '$MinimumAge',
+                 MaximumAge = '$MaximumAge',
+                 ValidArea = '$ValidArea',
+                 Payments = '$Payments',
+
                  PlanHighlights = '$PlanHighlights', 
                  PlanDescription = '$PlanDescription',
                  CreatedDate = '$CreatedDate',
                  CreatedTime = '$CreatedTime', 
-                 CreatedBy = '$CreatedBy'
+                 CreatedBy = '$CreatedBy',
+                 IsDisplay='$IsDisplay'
                  WHERE ID = $Plan_id";	
 
 
@@ -241,8 +268,19 @@ public function UpdatePlanCoordinator($data){
 		return $response;
 }
 
+public function GetAllPlanExclusitions(){
+	$where='Where IsActive=1';
+	$Plan_Exclustion = $this->_getTableRecords($this->conn, 'plan_exclusions', $where);
+    
+    return $Plan_Exclustion;
 
 }
+
+
+}
+
+
+
 
 
     

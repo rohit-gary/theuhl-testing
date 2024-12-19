@@ -1,26 +1,26 @@
 <?php 
 class Transaction extends Core
 {
-    private $conn;
-    public function __construct($conn)
-    {
-        $this->conn = $conn;
-        $this->setTimeZone();
-    }
-    public function GetAllTransaction()
-    {
-        $where = " where 1";
-        $transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
-        return $transaction_list;
-    }
+	private $conn;
+	public function __construct($conn)
+	{
+		$this->conn = $conn;
+		$this->setTimeZone();
+	}
+	public function GetAllTransaction()
+	{
+		$where = " where 1";
+		$transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
+		return $transaction_list;
+	}
 
 
-    
-    public function GetAllTransactionByPolicyID($ID){
-        $where = " where policyID=$ID";
-        $transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
-        return $transaction_list;
-    } 
+	
+	public function GetAllTransactionByPolicyID($ID){
+		$where = " where policyID=$ID";
+		$transaction_list = $this->_getTableRecords($this->conn,'payments',$where);
+		return $transaction_list;
+	} 
 
     public function GetAllTransactionByPolicyNumber($Number){
         $where = " where PolicyNumber= '$Number'";
@@ -47,7 +47,7 @@ public function insertPaymentsDetails($data) {
         echo "All required fields must be filled.";
         return;
     }
-    $policy_id_2='';
+    $policy_id_2='-1';
     // Prepare the data to insert into the payments table
     $paymentData = array(
         'PolicyID' => $policy_id_2,

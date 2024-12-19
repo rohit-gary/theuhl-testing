@@ -199,11 +199,59 @@ $conf = new Conf();
                                         <input type="text" class="form-control" name="PlanCost" id="PlanCost" placeholder="Plan Cost">
                                     </div>
 
-                                    <div class="mb-3 col-md-6" id="cost-container">
+                                        
+                                      
+                                    <div class="mb-3 col-md-6" id="cost-container_1">
                                         <label for="PlanCost" id="cost-label" class="col-form-label">Important Points to Covered<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="plan_point" id="plan_point" placeholder="Plan Important Points to Covered">
                                     </div>
 
+
+
+                                    <!-- ----------------------eligibility criteria & Scope Coverage-------------------- -->
+
+
+                                       <!-- ---------------------entry age fileds---------------- -->
+
+                                     <div class="mb-3 col-md-6" id="cost-container_2">
+                                        <label for="minimum_age" id="cost-label" class="col-form-label">Minimum Entry Age<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" name="minimum_age" id="minimum_age" placeholder="Enter Minimum Entry Age">
+                                    </div>
+
+
+                                    <div class="mb-3 col-md-6" id="cost-container_3">
+                                        <label for="maximum_age" id="cost-label" class="col-form-label">Maximum Entry Age<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" name="maximum_age" id="maximum_age" placeholder="Enter Maximum Entry Age">
+                                    </div>
+
+
+                                    <!-------------------------------valid area--------------------- -->
+                                    <div class="mb-3 col-md-6" id="cost-container_4">
+                                        <label for="valid_area" id="cost-label" class="col-form-label">Valid<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="valid_area" id="valid_area" placeholder="Enter valid Area">
+                                    </div>
+                               
+                                      
+                                      <!------------------------------Payments------------------- -->
+
+                                        <div class="mb-3 col-md-6" id="cost-container">
+                                        <label for="payments" id="cost-label" class="col-form-label">Payments<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="payments" id="payments" placeholder="Enter Payments">
+                                    </div>
+
+                                     <!-- --------Plan Display------------- -->
+
+                                      <div class="mb-3 col-md-6">
+                                        <label for="isDisplay" class="col-form-label">DisplayPlan<span class="text-danger"><span></label>
+                                        <select name="isDisplay" id="isDisplay" class="form-control">
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                            
+                                        </select>    
+                                    </div>
+
+
+ 
                                      <div class="mb-3 col-md-12">
                                         <label for="recipient-name" class="col-form-label">Plan Highlights <span class="text-danger">*<span></label>
                                         <textarea type="text" class="plan_highlights" name="plan_highlights" id="plan_highlights"
@@ -216,6 +264,8 @@ $conf = new Conf();
                                             Placeholder="Enter Plan Description"></textarea>
                                     </div>
 
+
+                                   
                                      
                                     
                                 </div>

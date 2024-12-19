@@ -115,7 +115,16 @@ function UpdatePlan_modal(Plans_id) {
                  $("#PlanCost").val(planData.PlanCost);
 
                   $("#plan_point").val(planData.PlanImportantPoint);
+                 
+                 $("#minimum_age").val(planData.MinimumAge);
+                 $("#maximum_age").val(planData.MaximumAge);
+                 $("#valid_area").val(planData.ValidArea);
+                 $("#payments").val(planData.Payments);
 
+                 $("#isDisplay").val(planData.IsDisplay);
+
+
+ 
                     if (!PlanHighlights) {
                 PlanHighlights = new RichTextEditor("#plan_highlights");
             }
@@ -181,6 +190,37 @@ function AddUpdatePlansForm() {
         Alert("Please Enter Plans Point.");
         return false;
     }
+
+
+
+     var minimum_age = $("#minimum_age").val();
+    if (minimum_age == "") {
+        Alert("Please Enter Minimum Age.");
+        return false;
+    }
+
+
+    var maximum_age = $("#maximum_age").val();
+    if (maximum_age == "") {
+        Alert("Please Enter Maximum Age.");
+        return false;
+    }
+
+
+
+     var valid_area = $("#valid_area").val();
+    if (valid_area == "") {
+        Alert("Please Enter Valid Area.");
+        return false;
+    }
+
+
+    var payments = $("#payments").val();
+    if (payments == "") {
+        Alert("Please Enter Payments.");
+        return false;
+    }
+
 
     var plan_highlights = $("#plan_highlights").val();
     if (plan_highlights == "") {

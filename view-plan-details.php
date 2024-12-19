@@ -28,6 +28,10 @@
         // Calculate the cost after subtracting 28%
         $newCost = $planCost * (1 - $discountPercentage / 100);
         $originalCost = round($newCost * 1.28); // Calculating 28% extra of the plan cost
+
+        $planExclusions=$plans->GetAllPlanExclusitions();
+
+       
         
     }
     ?>
@@ -40,6 +44,7 @@
       
 
      </style>
+
     </head>
 
     <?php include('includes/header.php'); ?>
@@ -184,7 +189,16 @@
 
                             
                         </div>
+
+
                     </div>
+                          
+
+
+                         
+             
+
+
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="dlab-tabs  product-description tabs-site-button">
@@ -225,18 +239,30 @@
                                             </tr>
                                             <tr>
                                                 <td>Plan Duration</td>
-                                                <td><?php echo $planDetails[0]['PlanDuration']; ?></td>
-                                            </tr>
-
-                                             <tr>
-                                                <td>Plan Duration Format</td>
-                                                <td><?php echo $planDetails[0]['PlanDurationFormat']; ?></td>
+                                                <td><?php echo $planDetails[0]['PlanDuration']; ?> <?php echo $planDetails[0]['PlanDurationFormat']; ?></td>
                                             </tr>
                                             
                                             <tr>
                                                 <td>Cost</td>
                                                 <td>₹<?php echo $planDetails[0]['PlanCost']; ?>(Including All GST   )</td>
                                             </tr>
+
+                                             <tr>
+                                                <td>Entry Age</td>
+                                                <td><?php echo $planDetails[0]['MinimumAge']; ?> to <?php echo $planDetails[0]['MaximumAge']; ?> Year </td>
+                                            </tr>
+
+                                             <tr>
+                                                <td>Valid</td>
+                                                <td><?php echo $planDetails[0]['ValidArea']; ?></td>
+                                            </tr>
+
+                                             <tr>
+                                                <td>Payments</td>
+                                                <td><?php echo $planDetails[0]['Payments']; ?></td>
+                                            </tr>
+
+
 
                                             <tr>
                                                 <td>Rating</td>
@@ -267,7 +293,45 @@
                
             </div>
 
-
+                     <!-- -------------- plan exclusitions------------ -->
+                <div class="row">
+               <div class="container">
+                      <div class="container">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-primary text-white text-center py-3">
+                                <p class="h4 mb-0">Plan Exclusions</p>
+                            </div>
+                            <div class="card-body">
+                                <?php if (!empty($planExclusions)) { ?>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col" class="text-center">#</th>
+                                                    <th scope="col">Exclusion Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($planExclusions as $index => $exclusion) { ?>
+                                                    <tr>
+                                                        <td class="text-center fw-bold"><?php echo ($index + 1); ?></td>
+                                                        <td><?php echo $exclusion['Details']; ?></td>
+                                                    </tr>
+                                                <?php } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="alert alert-warning text-center mt-3" role="alert">
+                                        <strong>Coming Soon...</strong>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <!-- ------------------- -->
         </div>
          <?php include("includes/footer.php") ?>
          <?php include("includes/script.php") ?>

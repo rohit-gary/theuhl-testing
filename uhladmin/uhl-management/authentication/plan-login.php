@@ -12,11 +12,6 @@
     <title>United Health Lumina</title>
     <?php
         include("../include/common-head.php");
-        require_once('../include/autoloader.inc.php');
-        $dbh = new Dbh();
-        $conn = $dbh->_connectodb();
-        $authentication = new Authentication($conn);
-        $session = new Session();
     ?>
 
     <style>
@@ -49,7 +44,7 @@
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12 bg-white p-6">
-                        <form class="login100-form validate-form" id="form-login">
+                        <form class="login100-form validate-form" id="form-planlogin">
                             <div class="text-center login_logo">
                                 <a href="./login"><img src="../project-assets/images/logo-green.png"
                                         class="header-brand-img" alt="" style="width:250px; margin-bottom:20px;"></a>
@@ -62,7 +57,7 @@
                                     <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
                                 </a>
                                 <input class="input100 border-start-0 form-control ms-0" type="Text"
-                                    placeholder="Enter Username / Email" name="email" id="email">
+                                    placeholder="Enter Policy Number" name="plan_number" id="plan_number">
                             </div>
                             <div class="wrap-input100 validate-input input-group pt-5" id="Password-toggle">
                                 <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
@@ -76,22 +71,10 @@
                                         Password?</a></p>
                             </div> -->
                             <div class="container-login100-form-btn">
-                                <a onclick="login();" class="login100-form-btn btn-primary cursor-pointer">
+                                <a onclick="loginPlanHolder();" class="login100-form-btn btn-primary cursor-pointer">
                                     Login
                                 </a>
                             </div>
-                              
-
-                           <!--   <div class="text-end pt-4">
-                                <p class="mb-0"><a href="../../uhl-management/authentication/plan-login" class="text-primary ms-1"><i class="ion-paper-airplane"></i>Are You Plan Holder Click Here to Login</a></p>
-                            </div>  -->
-
-
-                            <!-- <div class="container-login100-form-btn">
-                                <a href="https://play.google.com/store/apps/details?id=io.ionic.Jll_M.E.S&hl=en" class="login100-form-btn text-white btn-dark cursor-pointer">
-                                    <i class="mdi mdi-android"></i> &nbsp; Install App
-                                </a>
-                            </div> -->
 
                         </form>
                     </div>
@@ -114,28 +97,13 @@
     <?php
        include("../include/common-script.php");
     ?>
-    <script src="../project-assets/js/login.js"></script>
+    <script src="../project-assets/js/planholderlogin.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.0/jquery.min.js"
         integrity="sha512-e4WJV+b4BBNgVWODO1v6KU6xbZRf/9acSAWSc9B+q/OiSXt6Q3MPhxPOntoGGfA+zQPbnYjhXwWIuX4PPZCtzw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- SHOW PASSWORD JS -->
     <script src="../theme-assets/js/show-password.min.js"></script>
-    <script>
-    function downloadApp() {
-        // Create a new anchor element
-        var link = document.createElement('a');
-        // Set the href attribute to the URL of the file you want to download
-        link.href = 'https://jll.digitalworkdesk.com/apk-download/JLL-MES-Technician-App.apk';
-        // Set the download attribute to specify the filename
-        link.download = 'JLL-MES-Technician-App.apk';
-        // Append the anchor element to the document body
-        document.body.appendChild(link);
-        // Trigger a click event on the anchor element
-        link.click();
-        // Remove the anchor element from the document body
-        document.body.removeChild(link);
-    }
-    </script>
+  
 </body>
 
 </html>

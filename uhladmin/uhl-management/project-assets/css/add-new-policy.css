@@ -205,3 +205,159 @@
     margin-bottom: 1.5rem;
 }
 
+
+/*---------------new css for 20-12-2024------------ */
+
+.member-form {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.member-form h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Form Elements */
+.form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group, .form-check, .form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member-form {
+        padding: 20px;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .form-control {
+        padding: 10px;
+    }
+}
+/* Drag & Drop Area Styles */
+.upload-area {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.upload-area:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff;
+}
+
+.upload-area.dragover {
+    background-color: #e2e6ea;
+    border-color: #0d6efd;
+}
+
+#fileList {
+    list-style: none;
+    padding-left: 0;
+}
+
+#fileList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #d6d6d6;
+}
+
+.file-name {
+    font-weight: bold;
+    color:#0a4064;
+}
+
+.remove-file-btn {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.remove-file-btn:hover {
+    color: #b52a30;
+}
+    #confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Makes sure it doesn’t interfere with other elements */
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FF5733; /* Default color */
+  animation: fall 2s infinite ease-in;
+  opacity: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

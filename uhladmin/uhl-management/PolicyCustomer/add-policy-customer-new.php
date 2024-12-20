@@ -67,159 +67,7 @@ $conf = new Conf();
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
      <style>
-.member-form {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-.member-form h1 {
-    font-size: 28px;
-    text-align: center;
-    color: #4CAF50;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Card Styles */
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 20px;
-}
-
-.card-header {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-/* Form Elements */
-.form-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-}
-
-.input-group, .form-check, .form-group {
-    margin-bottom: 20px;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .member-form {
-        padding: 20px;
-    }
-    .card-body {
-        padding: 15px;
-    }
-    .form-control {
-        padding: 10px;
-    }
-}
-/* Drag & Drop Area Styles */
-.upload-area {
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.upload-area:hover {
-    background-color: #f8f9fa;
-    border-color: #007bff;
-}
-
-.upload-area.dragover {
-    background-color: #e2e6ea;
-    border-color: #0d6efd;
-}
-
-#fileList {
-    list-style: none;
-    padding-left: 0;
-}
-
-#fileList li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    border: 1px solid #d6d6d6;
-}
-
-.file-name {
-    font-weight: bold;
-    color:#0a4064;
-}
-
-.remove-file-btn {
-    background-color: transparent;
-    border: none;
-    color: #dc3545;
-    cursor: pointer;
-}
-
-.remove-file-btn:hover {
-    color: #b52a30;
-}
-    #confetti-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Makes sure it doesn’t interfere with other elements */
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.confetti {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #FF5733; /* Default color */
-  animation: fall 2s infinite ease-in;
-  opacity: 0;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-100px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 
     </style>
@@ -272,11 +120,7 @@ $conf = new Conf();
                                             <span class="step-number">5</span>
                                             <p class="step-title">Document Uplode</p>
                                         </div>
-                                        <!-- <div class="step-line"></div>
-                                        <div class="step-box">
-                                            <span class="step-number">5</span>
-                                            <p class="step-title">Payment Link</p>
-                                        </div> -->
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -286,114 +130,7 @@ $conf = new Conf();
                                 <div class="card">
                                     <div class="card-header">Step 1: Basic Details</div>
                                     <div class="card-body">
-                                        <form id="customer_form" onsubmit="return false;">
-                                            <input type="hidden" id="form_action" name="form_action" value="<?php echo isset($Action) ? $Action : ''; ?>" />
-                                             
-                                           <div class="col-md-12">
-                                                <div class="row">
-                                                <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Name <span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Enter Name" name="poc_name" id="poc_name" value="<?php echo isset($customerForm['poc_name']) ? $customerForm['poc_name'] : ''; ?>"> 
-                                                </div>
-                                            </div>
-
-                                                <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Contact Number<span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Contact Number" name="poc_contact_number" id="poc_contact_number" oninput="validateNumericInput(this)" value="<?php echo isset($customerForm['poc_contact_number']) ?$customerForm['poc_contact_number'] : ''; ?>">
-                                                </div>
-                                            </div>
-
-                                            </div>
-
-                                            </div>
-                                            
-                                            
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Gender <span class="text-red">*</span></label>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" <?php echo ($selectedGender === 'male') ? 'checked' : ''; ?>>
-                                                            <label class="form-check-label" for="genderMale">Male</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female"  <?php echo ($selectedGender === 'female') ? 'checked' : ''; ?> >
-                                                            <label class="form-check-label" for="genderFemale">Female</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            <div class="col-md-12">
-                                                <div class=row>
-                                                <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Date of Birth <span class="text-red">*</span></label>
-                                                    <input type="date" class="form-control" name="dob" id="dob" 
-                                                    value="<?php echo isset($customerForm['dob']) ?$customerForm['dob'] : ''; ?>" >
-                                                </div>
-                                            </div>
-
-                                                <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Email<span class="text-red">*</span></label>
-                                                    <input type="email" class="form-control" placeholder="Email" autocomplete="username" name="email" id="email" value="<?php echo isset($customerForm['email']) ?$customerForm['email'] : ''; ?>" >
-                                                </div>
-                                            </div>
-
-                                            </div>
-                                            </div>   
-                                            
-                                             <div class="col-md-12">
-                                             <div class=row>
-                                            <div class="col-sm-6 col-md-6">
-                                            <div class="form-group">
-                                                <label class="form-label">State<span class="text-red">*</span></label>
-                                                <select class="form-control form-select" name="state" id="state" required>
-                                                    <option value="">Select State</option>
-                                                    <?php 
-                                                    // Assuming $All_State is an array of state data
-                                                    $selectedState = isset($customerForm['state']) ? $customerForm['state'] : ''; // Get state from session
-                                                    foreach ($All_State as $state) {
-                                                        $stateID = htmlspecialchars($state['ID']);
-                                                        $stateName = htmlspecialchars($state['StateName']);
-                                                        $isSelected = ($stateID === $selectedState) ? 'selected' : ''; // Check if this state is selected
-                                                        echo '<option value="' . $stateID . '" ' . $isSelected . '>' . $stateName . '</option>';
-                                                    } 
-                                                    ?>
-                                                 </select>
-                                            </div>
-                                        </div>
-
-                                            <div class="col-sm-6 col-md-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Pin Code <span class="text-red">*</span></label>
-                                                    <input type="number" class="form-control" placeholder="ZIP Code" name="pincode" id="pincode" value="<?php echo isset($customerForm['pincode']) ?$customerForm['pincode'] : ''; ?>" >
-                                                </div>
-                                            </div>
-
-                                            </div>
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label">Present Address <span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Home Address" name="address" id="address" value="<?php echo isset($customerForm['address']) ?$customerForm['address'] : ''; ?>" >
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="form-label">Paramenet Address <span class="text-red">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Home Address" name="address" id="address" value="<?php echo isset($customerForm['address']) ?$customerForm['address'] : ''; ?>" >
-                                                </div>
-                                            </div>
-                                           
-                                            <button type="button" class="btn btn-success"  onclick="SaveCustomer()" id="savecustomerBtn">Save</button>
-                                            <button type="button" class="btn btn-primary" id="gotosecondstep" onclick="goToNextStep()">Next</button>
-
-                                        </form>
+                                       <?php include("include/step_one.php") ?>
                                     </div>
                                 </div>
                             </div>
@@ -402,50 +139,7 @@ $conf = new Conf();
                             <div class="card">
                                 <div class="card-header">Step 2: Choose Policy</div>
                                 <div class="card-body">
-                                 <form id="policy_form" onsubmit="return false;">
-                                 
-                                  <input type="hidden" id="form_action_policy" name="form_action" 
-                                  value="<?php echo isset($policy_form_action) ? $policy_form_action : ''; ?>" />
-                                  <input type="hidden" id="form_id_policy" name="form_id" 
-                                  value="<?php echo $PolicyFormId ?>" />
-                                  <input type="hidden" id="customer_id" value="<?php echo $Customerid; ?>" />
-                                  <div class="row">
-                                <?php
-                                // Loop through each plan to display it
-                                foreach ($All_Pans as $plan) {
-                                    // Check if plan's ID is in the selected plans array
-                                    $isSelected = in_array($plan['ID'], $selectedPlans) ? 'checked' : '';
-                                    
-                                ?>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card shadow-sm plan-card" id="plan-card-<?php echo $plan['ID']; ?>" onclick="togglePlanSelection(<?php echo $plan['ID']; ?>)">
-                                        <img src="<?php echo htmlspecialchars($plan['PlanImage']); ?>" class="card-img-top" alt="Plan Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?php echo htmlspecialchars($plan['PlanName']); ?></h5>
-                                            <p><strong>Duration:</strong> <?php echo htmlspecialchars($plan['PlanDuration']) . ' ' . htmlspecialchars($plan['PlanDurationFormat']); ?></p>
-                                            <p><strong>Family Members Covered:</strong> <?php echo htmlspecialchars($plan['PlanFamilyMember']); ?></p>
-                                            <p><strong>Cost:</strong> ₹<?php echo number_format(htmlspecialchars($plan['PlanCost']), 2); ?></p>
-
-                                            <!-- Checkbox for selection -->
-                                            <input type="checkbox" class="form-check-input" name="selected_plan[]" value="<?php echo htmlspecialchars($plan['ID']); ?>" id="plan-<?php echo $plan['ID']; ?>"  style="display: block;" <?php echo $isSelected  ?> >
-                                            
-                                            <!-- Green check mark (hidden by default) -->
-                                            <div class="check-mark" id="check-mark-<?php echo $plan['ID']; ?>" style="display: none;">
-                                                <i class="fas fa-check-circle text-success"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
-
-
-                            <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
-                            <button type="button" class="btn btn-success" onclick="saveSelectedPlans()" id="savePolicyBtn">Save</button>
-                            <button type="button" class="btn btn-primary" id="gotothirdstep" onclick="goToNextStep()">Next</button>
-                        </form>
+                                           <?php include("include/step_two.php") ?>
 
                                         </div>
                                     </div>
@@ -457,18 +151,7 @@ $conf = new Conf();
                                 <div class="card">
                                     <div class="card-header">Step 3: Member Details </div>
                                     <div class="card-body">
-                                        
-                                       <form id="step-3-form" onsubmit="return false;">
-                                            <input type="hidden" id="form_action_family" name="form_action" value="" />
-                                            <input type="hidden" id="form_id" name="form_id" value="" />
-
-                                             <input type="hidden" id="PolicyNumber" value="<?php echo $PolicyNumber ?>">
-                                            <!-- Dynamic member forms will be appended here -->
-                                            <div id="step-3-form-container"></div>
-                                            <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
-                                            <button type="button" class="btn btn-success" onclick="savefamilyMember()" id="savefamilyMemberBtn">Save</button>
-                                            <button type="button" class="btn btn-primary" onclick="goToNextStep()" id="gotofourthstep">Next</button>
-                                        </form>               
+                                         <?php include("include/step_three.php") ?>     
                                     </div>
                                 </div>
                             </div>
@@ -479,23 +162,7 @@ $conf = new Conf();
                             <div class="card">
                                 <div class="card-header">Step 4: Purchase Summary</div>
                                 <div class="card-body">
-                                    <!-- Display the selected plans -->
-                                    <div id="selected-plans-container"></div>
-
-                                    <hr>
-
-                                    <!-- Total amount section -->
-                                    <div class="d-flex justify-content-between mt-3">
-                                        <strong>Total:</strong>
-                                        <span id="total-amount" class="h4">₹0.00</span>
-                                    </div>
-
-                                    <div class="text-center mt-4">
-                                        <button type="button" class="btn btn-secondary" onclick="goToPreviousStep()">Previous</button>
-                                        <button type="button" class="btn btn-primary" onclick="savePolicyAmount()">Save Policy Amount & Generate Payment Link </button>
-                                         <button type="button" class="btn btn-primary" onclick="goToNextStep()" id="gotofifthstep">Next</button>
-                                        
-                                    </div>
+                                    <?php include("include/step_four.php") ?> 
                                 </div>
                             </div>
                         </div>
@@ -508,19 +175,8 @@ $conf = new Conf();
                                     <h5 class="mb-0">Step 5: Upload Documents</h5>
                                 </div>
 
-                                <div class="card-body">
-                                       <p class="my-3">Want to Add More Family Member</p>
-                                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#familyMemberModal" 
-                                            style="border-radius: 50%; width: 50px; height: 50px; align-items: center; justify-content: center; padding: 0;">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                            <div id="member_document_upload_form">
-                                                <!-- document upload form here -->
-                                            </div>
-                                            
-
-
-                                      
+                                    <div class="card-body">
+                                          <?php include("include/step_five.php") ?>          
                                     </div>
 
                                 </div>
@@ -537,34 +193,130 @@ $conf = new Conf();
         <?php include "../include/common-script.php"; ?>
 
            <!-- Modal for Payment Link -->
-<div id="paymentLinkModal" class="modal fade" tabindex="-1" aria-labelledby="paymentLinkModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
+                <div id="paymentLinkModal" class="modal fade" tabindex="-1" aria-labelledby="paymentLinkModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="paymentLinkModalLabel">Payment Link</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Your payment link is:</p>
+                                <div class="input-group">
+                                    <input type="text" id="paymentLink" readonly class="form-control" />
+                                    <button class="btn btn-outline-secondary" id="copyLinkBtn" type="button">Copy</button>
+                                </div>
+                                <p class="mt-3">You can also share it:</p>
+                                <button id="shareLinkEmailBtn" class="btn btn-primary w-100 mb-2">Share via Email</button>
+                                <button id="shareLinkWhatsappBtn" class="btn btn-success w-100">Share on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- ----------------------------------------------------- -->
+
+
+
+
+
+
+<!-- -----------------------------model for add more family member------------------------------ -->
+
+<div class="modal fade" id="familyMemberModal" tabindex="-1" aria-labelledby="familyMemberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="paymentLinkModalLabel">Payment Link</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="familyMemberModalLabel">Add Family Member</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
             </div>
             <div class="modal-body">
-                <p>Your payment link is:</p>
-                <div class="input-group">
-                    <input type="text" id="paymentLink" readonly class="form-control" />
-                    <button class="btn btn-outline-secondary" id="copyLinkBtn" type="button">Copy</button>
-                </div>
-                <p class="mt-3">You can also share it:</p>
-                <button id="shareLinkEmailBtn" class="btn btn-primary w-100 mb-2">Share via Email</button>
-                <button id="shareLinkWhatsappBtn" class="btn btn-success w-100">Share on WhatsApp</button>
+                <form id="familyMemberForm">
+                       <input type="hidden" id="ad_form_action" name="form_action"/>
+                       <input type="hidden" id="ad_form_id" name="form_id" />
+                     <!-- Plan Select Element -->
+                          <label for="familyMemberSelect" class="form-label fw-bold d-flex align-items-center">
+                            Select Plan 
+                            <span 
+                                id="refreshBadgePlan" 
+                                class="badge bg-primary ms-2" 
+                                style="cursor: pointer;" 
+                                title="Click to refresh Plan"
+                            >
+                                Refresh
+                            </span>
+                        </label>
+                            <select class="form-control" id="planSelect" name="planSelect" required>
+                                <option value="" disabled selected>Select Plan</option>
+                                <!-- Options will be populated dynamically here -->
+                                <!-- <?php include("../include/get-plans-new.php"); ?> -->
+                            </select>
+
+
+                    <!-- Name -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ad_member_name" name="member_name" placeholder="Enter family member's name" required>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="ad_member_dob" name="member_dob" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Gender <span class="text-danger">*</span></label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="ad_member_gender_male" name="member_gender" value="male" required>
+                            <label class="form-check-label" for="member_gender_male">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="ad_member_gender_female" name="member_gender" value="female" required>
+                            <label class="form-check-label" for="ad_member_gender_female">Female</label>
+                        </div>
+                    </div>
+
+                    <!-- Relationship -->
+                    <div class="form-group mb-3">
+                        <label class="form-label">Relationship <span class="text-danger">*</span></label>
+                        <select class="form-control" id="ad_member_relationship" name="member_relationship" required>
+                            <option value="" disabled selected>Select Relationship</option>
+                            <option value="MySelf">MySelf</option>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="son">Son</option>
+                            <option value="daughter">Daughter</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="submit" class="btn btn-primary" onclick="saveAdditionalFamilyMember()"form="familyMemberForm">Save</button>
             </div>
         </div>
     </div>
 </div>
 
-           <script>
-              let customer_id_1 =<?php echo  $Customerid ?>     
-         </script>
-        
-        <script src="../project-assets/js/customer-policy.js"></script>
-       
-<!-- // step -4 -->
+<!-- -------------------------------------------------------------- -->
+
+
+
+
+
+
+
+<script>
+let customer_id_1 =<?php echo  $Customerid ?>     
+</script>
+<script src="../project-assets/other-assets/date-picker/bootstrap-datepicker.js"></script>
+<script src="../project-assets/js/customer-policy.js"></script>
 
 
 <script>
@@ -750,20 +502,12 @@ async function savePolicyAmount() {
         alert("Error fetching plans. Please try again.");
     }
 }
+</script>
+  
 
-
-
+ <script type="text/javascript">
      
-
-
-        </script>
-    </div>
-
-
-    <script type="text/javascript">
-        
-        // uplode files
-
+ // uplode files
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const uploadArea = document.getElementById('upload-area');
@@ -942,88 +686,7 @@ function populateFamilyMemberSelect(data) {
 </html>
 
 
-<!-- -----------------------------model for add more family member------------------------------ -->
 
-<div class="modal fade" id="familyMemberModal" tabindex="-1" aria-labelledby="familyMemberModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="familyMemberModalLabel">Add Family Member</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
-            </div>
-            <div class="modal-body">
-                <form id="familyMemberForm">
-                       <input type="hidden" id="ad_form_action" name="form_action"/>
-                       <input type="hidden" id="ad_form_id" name="form_id" />
-                     <!-- Plan Select Element -->
-                          <label for="familyMemberSelect" class="form-label fw-bold d-flex align-items-center">
-                            Select Plan 
-                            <span 
-                                id="refreshBadgePlan" 
-                                class="badge bg-primary ms-2" 
-                                style="cursor: pointer;" 
-                                title="Click to refresh Plan"
-                            >
-                                Refresh
-                            </span>
-                        </label>
-                            <select class="form-control" id="planSelect" name="planSelect" required>
-                                <option value="" disabled selected>Select Plan</option>
-                                <!-- Options will be populated dynamically here -->
-                                <!-- <?php include("../include/get-plans-new.php"); ?> -->
-                            </select>
-
-
-                    <!-- Name -->
-                    <div class="form-group mb-3">
-                        <label class="form-label">Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="ad_member_name" name="member_name" placeholder="Enter family member's name" required>
-                    </div>
-
-                    <!-- Date of Birth -->
-                    <div class="form-group mb-3">
-                        <label class="form-label">Date of Birth <span class="text-danger">*</span></label>
-                        <input type="date" class="form-control" id="ad_member_dob" name="member_dob" required>
-                    </div>
-
-                    <!-- Gender -->
-                    <div class="form-group mb-3">
-                        <label class="form-label">Gender <span class="text-danger">*</span></label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" id="ad_member_gender_male" name="member_gender" value="male" required>
-                            <label class="form-check-label" for="member_gender_male">Male</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" id="ad_member_gender_female" name="member_gender" value="female" required>
-                            <label class="form-check-label" for="ad_member_gender_female">Female</label>
-                        </div>
-                    </div>
-
-                    <!-- Relationship -->
-                    <div class="form-group mb-3">
-                        <label class="form-label">Relationship <span class="text-danger">*</span></label>
-                        <select class="form-control" id="ad_member_relationship" name="member_relationship" required>
-                            <option value="" disabled selected>Select Relationship</option>
-                            <option value="MySelf">MySelf</option>
-                            <option value="father">Father</option>
-                            <option value="mother">Mother</option>
-                            <option value="brother">Brother</option>
-                            <option value="sister">Sister</option>
-                            <option value="spouse">Spouse</option>
-                            <option value="son">Son</option>
-                            <option value="daughter">Daughter</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                
-                <button type="submit" class="btn btn-primary" onclick="saveAdditionalFamilyMember()"form="familyMemberForm">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script>
   
@@ -1221,5 +884,18 @@ function AddUploade() {
     });
     return false;
 }
+
+</script>
+
+
+<!-- ----datepicker--------- -->
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#dob').datepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true,
+        todayHighlight: true
+    });
+});
 
 </script>

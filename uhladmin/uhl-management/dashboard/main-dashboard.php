@@ -24,7 +24,7 @@ $userEmail = $_SESSION['dwd_email'] ?? '';
    
 
 
-    // print_r($UserPolicy);
+    // print_r($userType);
     // die();
 
 
@@ -66,59 +66,8 @@ $userEmail = $_SESSION['dwd_email'] ?? '';
 
                         <!-- Dynamic Dashboard based on User Type -->
                         <div class="row">
-                            <?php if ($userType === 'System Admin' || $userType === 'Admin'): ?>
-                                <!-- System Admin / Admin view -->
-                                <div class="col-md-6">
-                                    <div class="card-box">
-                                        <h6>All Users</h6>
-                                        <span class="icon">👥</span>
-                                        <p class="text-number"><?php echo $dashboard->getTotalUsers(); ?></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-box">
-                                        <h6>All Policies</h6>
-                                        <span class="icon">📄</span>
-                                        <p class="text-number"><?php echo $dashboard->getTotalPolicies(); ?></p>
-                                    </div>
-                                </div>
-
-
-
-                            <?php endif; ?>
-
-                            <?php if ($userType === 'Policy Customer'): 
-
-
-                                   $policyCustomer_obj=new PolicyCustomer($conn);
-
-                                    $UserPolicy=$policyCustomer_obj->PolicyDetailsByUserID($userID);
-                                    $encrypt = new Encryption();
-                                    $UserPolicyID=$UserPolicy[0]['ID'];
-                                    $Policy_ID = $encrypt->encrypt_message($UserPolicyID);
-
-                                ?>
-                                <!-- Policy Customer view -->
-                                <div class="col-md-6">
-                                    <div class="card-box">
-                                        <h6>Remaining Coins</h6>
-                                        <span class="icon">💰</span>
-                                        <p class="text-number"><?php echo $dashboard->getCoinsLeft(); ?></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-box">
-                                        <h6>Download Policy Document</h6>
-                                        <button class="btn btn-primary" onclick="downloadPolicy()">Download</button>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
-
                             <?php if ($userType === 'Client Admin'): ?>
                                 <!-- Client Admin / Channel Partner view -->
-    
-
-
                                  <!-- ROW OPEN -->
                         <div class="row">
                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">

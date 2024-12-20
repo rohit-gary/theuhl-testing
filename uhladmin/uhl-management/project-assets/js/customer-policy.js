@@ -829,7 +829,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                     </div>
                     <div class="form-group mb-3">
                         <label class="form-label">Date of Birth <span class="text-red">*</span></label>
-                        <input type="date" class="form-control" id="member_dob_${plan.ID}_${i}" name="member_dob_${plan.ID}_${i}" required>
+                        <input type="text" class="form-control" id="member_dob_${plan.ID}_${i}" name="member_dob_${plan.ID}_${i}" required>
                     </div>
                     <div class="form-group mb-3">
                         <label class="form-label">Gender <span class="text-red">*</span></label>
@@ -871,6 +871,13 @@ function fetchPlanDetailsAndGenerateForm(plan) {
 
     // Append the generated form to the corresponding step
     $('#step-3-form-container').append(formHtml);
+
+    // Now initialize datepicker for all member DOB fields
+    $("input[id^='member_dob']").datepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true,
+        todayHighlight: true
+    });
     
 }
 
@@ -916,6 +923,33 @@ function SaveCustomer(){
         Alert("Please Enter DOB");
         return false;
     }
+
+    // Check if the date is in valid format dd-mm-yyyy
+            var datePattern = /^(\d{2})-(\d{2})-(\d{4})$/;
+            var match = dob.match(datePattern);
+
+            if (match) {
+                var day = parseInt(match[1], 10);
+                var month = parseInt(match[2], 10);
+                var year = parseInt(match[3], 10);
+
+                // Check if the year is between 1900 and the current year
+                var currentYear = new Date().getFullYear();
+                if (year < 1900 || year > currentYear) {
+                    Alert("Year should be Valid.");
+                    return false;
+                }
+
+                // Check if the date is valid
+                var date = new Date(year, month - 1, day);
+                if (date.getDate() !== day || date.getMonth() !== month - 1 || date.getFullYear() !== year) {
+                    Alert("Invalid date. Please enter a valid date.");
+                    return false;
+                }
+            } else {
+                Alert("Please enter the date in dd-mm-yyyy format.");
+                return false;
+            }
     
     var email = $("#email").val();
     if (email == "") {
@@ -1008,6 +1042,14 @@ function SaveCustomer(){
 
 
 $('#gotofourthstep').hide();
+$(document).ready(function() {
+    // Initialize datepicker for all member DOB fields
+    $("input[id^='member_dob']").datepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true,
+        todayHighlight: true
+    });
+});
 function savefamilyMember() {
     let isValid = true;
     let errorMessage = '';
@@ -1029,6 +1071,7 @@ function savefamilyMember() {
     const memberGender = form.querySelector('input[name^="member_gender_"]:checked');
     const memberRelationship = form.querySelector('select[name^="member_relationship_"]');
     const planId = form.querySelector('input[name^="plan_Id_"]');
+
 
     // Check if at least one family member's required fields are filled
     if (memberName && memberName.value.trim() && 
@@ -1053,11 +1096,25 @@ function savefamilyMember() {
         errorMessage += `Family member ${index + 1} - Plan ID is required.\n`;
     }
 
-    if (memberDob && memberDob.value.trim()) {
-        formData.append(`member_dob_${index + 1}`, memberDob.value);
-    } else {
-        errorMessage += `Family member ${index + 1} - Date of Birth is required.\n`;
-    }
+     if (memberDob && memberDob.value.trim()) {
+            // Date validation
+            let dob = new Date(memberDob.value);
+            let currentYear = new Date().getFullYear();
+
+            if (dob.getFullYear() > currentYear) {
+                errorMessage += `Family member ${index + 1} - Date of Birth cannot be in the future.\n`;
+                isValid = false;
+            } else if (dob.getFullYear() < 1900) {
+                errorMessage += `Family member ${index + 1} - Date of Birth cannot be before 1900.\n`;
+                isValid = false;
+            } else {
+                formData.append(`member_dob_${index + 1}`, memberDob.value);
+            }
+        } else {
+            errorMessage += `Family member ${index + 1} - Date of Birth is required.\n`;
+        }
+
+
 
     if (memberGender) {
         formData.append(`member_gender_${index + 1}`, memberGender.value);

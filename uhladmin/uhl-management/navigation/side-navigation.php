@@ -1,23 +1,27 @@
   <!--APP-SIDEBAR-->
-  <?php 
+  <?php
   $navigation = new Navigation();
-  $navigation->setNavigation($_SESSION['roles']);
+  $navigation->setNavigation($_SESSION["roles"]);
 
-  if (isset($_SESSION['dwd_UserType']) && $_SESSION['dwd_UserType'] === "Policy Customer") {
-    include "../include/common-head.php";
-   require_once "../include/autoloader.inc.php";
-   include "../include/get-db-connection.php";
-    $UserID = $_SESSION['dwd_UserID'];
-    $PolicyDetails_obj = new PolicyCustomer($conn);
-   $PolicyDetailss = $PolicyDetails_obj->PolicyDetailsByUserID($UserID);
-   $PolicyDetails=$PolicyDetailss[0];
-   if (!empty($PolicyDetails) && isset($PolicyDetails['ID'])) {
+  if (
+      isset($_SESSION["dwd_UserType"]) &&
+      $_SESSION["dwd_UserType"] === "Policy Customer"
+  ) {
+      include "../include/common-head.php";
+      require_once "../include/autoloader.inc.php";
+      include "../include/get-db-connection.php";
+      $UserID = $_SESSION["dwd_UserID"];
 
-       $encrypt = new Encryption();
-       $Policy_ID = $encrypt->encrypt_message($PolicyDetails['ID']);
-        
-   } 
-}
+      $PolicyDetails_obj = new PolicyCustomer($conn);
+      $PolicyDetailss = $PolicyDetails_obj->PolicyDetailsByUserID($UserID);
+      // print_r($PolicyDetailss);
+      // die();
+      $PolicyDetails = $PolicyDetailss[0];
+      if (!empty($PolicyDetails) && isset($PolicyDetails["ID"])) {
+          $encrypt = new Encryption();
+          $Policy_ID = $encrypt->encrypt_message($PolicyDetails["ID"]);
+      }
+  }
   ?>
   <div class="sticky">
                 <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
@@ -36,10 +40,7 @@
                         <div class="slide-left disabled " id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" /></svg></div>
                         <ul class="side-menu">
                             
-                            <?php 
-                            if($navigation->_Nav_Dashboard)
-                            {
-                            ?>
+                            <?php if ($navigation->_Nav_Dashboard) { ?>
                             <li class="sub-category">
                                 <h3>Dashboard</h3>
                             </li>
@@ -48,14 +49,9 @@
                                             class="side-menu__icon fe fe-home"></i><span
                                             class="side-menu__label">Dashboard</span></a>
                                 </li>
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
-                            <?php 
-                            if($navigation->_Nav_Dashboard_Customer)
-                            {
-                            ?>
+                            <?php if ($navigation->_Nav_Dashboard_Customer) { ?>
                             <li class="sub-category">
                                 <h3>Dashboard</h3>
                             </li>
@@ -64,9 +60,7 @@
                                             class="side-menu__icon fe fe-home"></i><span
                                             class="side-menu__label">Dashboard</span></a>
                                 </li>
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
               
 
                             </li>
@@ -75,10 +69,7 @@
 
                                
 
-                                  <?php
-                            if($navigation->_Nav_Plan)
-                            {
-                            ?>
+                                  <?php if ($navigation->_Nav_Plan) { ?>
                             <li class="sub-category">
                                 <h3>Plan Management</h3>
                                  </li>
@@ -87,9 +78,7 @@
                                 </li>   
 
 
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
 
                                  <!-- <li class="sub-category">
@@ -99,10 +88,7 @@
 
                           
 
-                           <?php
-                            if($navigation->_Nav_Customer)
-                            {
-                            ?>
+                           <?php if ($navigation->_Nav_Customer) { ?>
                             <li class="sub-category">
                                 <h3>Customer Management</h3> 
                             </li>
@@ -110,12 +96,18 @@
                                
 
                                <li>
-                                <a href="#" class="side-menu__item clearSessionLink">
+                                <a href="#" class="side-menu__item has-link clearSessionLink">
                                    <i class="fa fa-user-plus"></i> Add Policy Customer
                                 </a>
                                </li>
+
+                               <li>
+                                 <a href="../PolicyCustomer/view-all-policy-customer-new" class="side-menu__item has-link">
+                                 <i class="fa fa-list mr-2"></i><span class="side-menu__label">Policy Customer List</span> 
+                                </a>
+                               </li>
                                  
-                                 <li class="slide">
+                                <!--  <li class="slide">
                                     <a class="side-menu__item" data-bs-toggle="collapse" href="#policyCusList">
                                         <i class="side-menu__icon fa fa-user-plus"></i>
                                         <span class="side-menu__label">Policy Customer</span>
@@ -129,7 +121,7 @@
                                             </a>
 
                                         </div>
-                                </li>
+                                </li> -->
 
                                 <li>
                                    <a class="side-menu__item"  href="../PolicyCustomer/view-all-customer-new" class="list-group-item list-group-item-action">
@@ -139,15 +131,10 @@
                                </li>
 
 
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
 
-                            <?php 
-                            if($navigation->_Nav_Neft)
-                            {
-                            ?>
+                            <?php if ($navigation->_Nav_Neft) { ?>
                             <li class="sub-category">
                                 <h3>Accountant</h3>
                             </li>
@@ -171,15 +158,10 @@
                                             class="side-menu__label">Company Bank Account</span></a>    
                                 </li>
 
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
 
-                             <?php 
-                            if($navigation->_Nav_Account)
-                            {
-                            ?>
+                             <?php if ($navigation->_Nav_Account) { ?>
                             <li class="sub-category">
                                 <h3>Transaction Management</h3>
                             </li>
@@ -188,9 +170,7 @@
                                             class="side-menu__icon ion-cash"></i><span
                                             class="side-menu__label">All Transaction</span></a>
                                 </li>
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
                              
                             <!-- <li class="sub-category">
@@ -204,85 +184,51 @@
                              
 
                             
-                            <?php
-                            if($navigation->_Nav_Company)
-                            {
-                            ?>
+                            <?php if ($navigation->_Nav_Company) { ?>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_company" data-bs-toggle="slide" href="../company/view-companies.php"><i class="side-menu__icon fa fa-building"></i><span class="side-menu__label">Companies</span></a>
                                 </li>    
-                            <?php
-                            }
-                            ?>
-                            <?php
-                            if($navigation->_Nav_Company_Sites)
-                            {
-                            ?>
+                            <?php } ?>
+                            <?php if ($navigation->_Nav_Company_Sites) { ?>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_company_sites" data-bs-toggle="slide" href="../company/view-company-sites.php?nav=1"><i class="side-menu__icon zmdi zmdi-city-alt"></i><span class="side-menu__label">Company Sites</span></a>
                                 </li>    
-                            <?php
-                            }
-                            ?>
-                            <?php
-                            if($navigation->_Nav_Service_Reports)
-                            {
-                            ?>
+                            <?php } ?>
+                            <?php if ($navigation->_Nav_Service_Reports) { ?>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_servive_reports" data-bs-toggle="slide" href="../service-reports/view-all-service-reports.php"><i class="side-menu__icon fa fa-address-card"></i><span class="side-menu__label">Service Reports</span></a>
                                 </li>    
+                            <?php } ?>
                             <?php
-                            }
-                            ?>
-                            <?php
-                            if($navigation->_Nav_Services)
-                            {
-                            ?>
+                            if ($navigation->_Nav_Services) { ?>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_services" data-bs-toggle="slide" href="../services/view-services.php"><i class="side-menu__icon fa fa-address-card"></i><span class="side-menu__label">All Services</span></a>
                                 </li>   
-                            <?php
-                            }
-                            if($navigation->_Nav_Users)
-                            {
-                            ?>
+                            <?php }
+                            if ($navigation->_Nav_Users) { ?>
                              <li class="sub-category">
                                 <h3>Settings</h3>
                             </li>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../users/view-users.php"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Users</span></a>
                                 </li>    
-                            <?php
-                            }
+                            <?php }
 
-                            if($navigation->_Nav_Channel_Partner)
-                            {
-                            ?>
+                            if ($navigation->_Nav_Channel_Partner) { ?>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../channel-partner/view-all-channel-partner.php"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Channel Partner</span></a>
                                 </li>    
-                            <?php
-                            }
+                            <?php }
 
-                           if($navigation->_Nav_Configuration)
-                            {
-                            ?>
+                            if ($navigation->_Nav_Configuration) { ?>
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_configuration" data-bs-toggle="slide" href="../configuration/view-configuration.php"><i class="side-menu__icon fa fa-gear"></i><span class="side-menu__label">Configuration</span></a>
                                 </li>    
-                            <?php
-                            }
-                            
+                            <?php }
                             ?>
                             
                                
-                                 <?php
-                           
-                            
-                            
-                            if($navigation->_Nav_Users)
-                            {
-                            ?>
+                                 <?php if ($navigation->_Nav_Users) { ?>
                             <li class="sub-category">
                                 <h3>Doctor Management</h3> </li>
                                 <li class="slide">
@@ -297,17 +243,10 @@
                                 <li class="slide">
                                     <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../users/view-users.php"><i class="side-menu__icon  fa fa-headphones"></i><span class="side-menu__label">Customer Support</span></a>
                                 </li>     -->
-                            <?php
-                            }
-                            
-                            
-                            ?>
+                            <?php } ?>
                             
 
-                               <?php
-                            if($navigation->_Nav_faqs)
-                            {
-                            ?>
+                               <?php if ($navigation->_Nav_faqs) { ?>
                              <li class="sub-category">
                                 <h3>FAQs</h3> 
                             </li>
@@ -316,34 +255,24 @@
                                 </li>   
 
 
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
      
 
-                             <?php
-                            if($navigation->_Nav_Document)
-                            {
-                            ?>
+                             <?php if ($navigation->_Nav_Document) { ?>
                             <li class="sub-category">
                                 <h3>Health Plan</h3> 
                             </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_servive_reports" data-bs-toggle="slide" href="../PolicyCustomer/view-policy-details?PolicyID=<?php echo $Policy_ID?>"><i class="side-menu__icon fa fa-heartbeat"></i><span class="side-menu__label">My Health Plan </span></a>
+                                    <a class="side-menu__item" id="nav_servive_reports" data-bs-toggle="slide" href="../PolicyCustomer/view-policy-details?PolicyID=<?php echo $Policy_ID; ?>"><i class="side-menu__icon fa fa-heartbeat"></i><span class="side-menu__label">My Health Plan </span></a>
                                 </li> 
 
 
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
 
 
-                             <?php
-                            if($navigation->_Nav_Reimbursement)
-                            {
-                            ?>
+                             <?php if ($navigation->_Nav_Reimbursement) { ?>
                              <li class="sub-category">
                                 <h3>Reimbursement Management</h3> 
                             </li>
@@ -352,9 +281,7 @@
                                 </li>   
 
 
-                            <?php
-                            }
-                            ?>
+                            <?php } ?>
 
 
 

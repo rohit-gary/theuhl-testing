@@ -730,7 +730,7 @@ public function _getTableAllDetails($conn, $table_name, $where)
 
  public function PolicyDetailsByUserID($UserID){
 	$where = "where UserID = $UserID";
-	$user_policy_details = $this->_getTableRecords($this->conn,'policy_customer',$where);
+	$user_policy_details = $this->_getTableRecords($this->conn,'all_customer',$where);
 
 	return $user_policy_details;
 }

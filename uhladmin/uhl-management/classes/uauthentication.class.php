@@ -1,5 +1,5 @@
 <?php
-class Authentication extends Core
+class UAuthentication extends Core
 {
 	private $conn;
 	public function __construct($conn)
@@ -141,6 +141,52 @@ class Authentication extends Core
 	}
 
 
+  public function loginplan($data, $masterconn, $conn){
+    $response = array();
+    $planNumber = $data['plan_number'];  // Plan number from input
+    $password = $data['password'];  // Password from input
+    
+    // Check if the policy exists in the customerpolicy table (using $conn)
+    $filter = " WHERE cp.PolicyNumber = '$planNumber' ";
+
+    $query = "
+        SELECT u.ID as user_id, u.UserName, u.Name, u.PhoneNumber, u.Email, u.Password, u.OrgID, u.UserType, 
+               u.OTP, u.CreatedDate, u.CreatedTime, u.IsActive 
+        FROM users u 
+        INNER JOIN customerpolicy cp ON u.ID = cp.CustomerID
+        $filter
+    ";
+    
+    // Use the normal connection for querying the customerpolicy table
+    $result = $this->_getRecords($conn, 'customerpolicy', $query);  // Use normal connection here
+    
+    if ($result) {
+        // User exists, now fetch user details from the master connection
+        $row = $this->_getTableDetails($masterconn, 'users', $filter);  // Use master connection here
+        
+        // Assuming the password in the users table is hashed
+        if (password_verify($password, $row['Password'])) {
+            // Password matches
+            $response['UserType'] = $row['UserType'];
+            $response['UserID'] = $row['ID'];
+            $response['OrgID'] = $row['OrgID'];
+            $response['UserName'] = $row['UserName'];
+            $response['data'] = $data;
+            $response['error'] = false;
+            $response['message'] = "User authenticated";
+        } else {
+            // Incorrect password
+            $response['error'] = true;
+            $response['message'] = "Invalid password, please try again with the correct credentials.";
+        }
+    } else {
+        // User does not exist
+        $response['error'] = true;
+        $response['message'] = "No account found with this policy number.";
+    }
+
+    return $response;
+}
 
 	
 }

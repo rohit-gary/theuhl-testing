@@ -699,32 +699,37 @@ public function _getTableAllDetails($conn, $table_name, $where)
 	}
 
 
-	public function GetUserCurrentPlan($data){
-		extract($data);
-	 $where = " where UserID = '$ID' ";
-	 $user_details = $this->_getTableRecords($this->conn,'policy_customer',$where);		
-	 
-	 $CreatedDate = $UpdatedDate = date("Y-m-d");
-	 $CreatedTime = $UpdatedTime = date("H:i:s");
-	 $CreatedBy = $UpdatedBy = $data['username'];
+   public function GetUserCurrentPlan($data)
+    {
+        extract($data);
+        $where = "WHERE UserID = '$ID'";
+        $user_details = $this->_getTableRecords($this->conn, 'all_customer', $where);
+    
+        $CreatedDate = $UpdatedDate = date("Y-m-d");
+        $CreatedTime = $UpdatedTime = date("H:i:s");
+        $CreatedBy = $UpdatedBy = $data['username'];
+    
+        if (!empty($user_details)) {
+            $customerId = $user_details[0]['ID'];
+            $where = "WHERE CustomerID = '$customerId'";
+            $user_policy_details = $this->_getTableRecords($this->conn, 'customerpolicy', $where);
+    
+            if (!empty($user_policy_details)) {
+                $response = [
+                    "CustomerID" => $user_policy_details[0]['CustomerID'],
+                    "PolicyNumber" => $user_policy_details[0]['PolicyNumber'],
+                    "CreatedDate" => $user_policy_details[0]['CreatedDate'],
+                    "CreatedTime" => $user_policy_details[0]['CreatedTime'],
+                    "CreatedBy" => $user_policy_details[0]['CreatedBy'],
+                    "IsActive" => $user_policy_details[0]['IsActive'],
+                ];
+                return $response;
+            }
+        }
+    
+        return ["error" => true, "message" => "No records found"];
+    }
 
-	 if(!empty($user_details)){
-
-
-
-				 $Name=$user_details[0]['Name'];
-				 $ContactNumber=$user_details[0]['ContactNumber'];
-						
-					 $where = "where ContactNumber = '$ContactNumber'";
-					 $user_policy_details = $this->_getTableRecords($this->conn,'policy_customer',$where);
-		 
-		 
-							return $user_policy_details;
-	 }
-	
-
-
-}
  
 
 
@@ -1050,24 +1055,24 @@ public function _InsertTableRecords_prepare($conn, $tableName, $data)
 	    return $response;
 	}
 
-                    public function _getTablePlanId($conn, $table_name, $where)
-                    {
-                        $rows = array();  
-                        $sql = "SELECT PlanID FROM $table_name $where";  
-                        $result = mysqli_query($conn, $sql);  
+        public function _getTablePlanId($conn, $table_name, $where)
+        {
+            $rows = array();  
+            $sql = "SELECT PlanID FROM $table_name $where";  
+            $result = mysqli_query($conn, $sql);  
 
-                        if ($result) {
-                            
-                            $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                        } else {
-                           
-                            $error = mysqli_error($conn);
-                            echo $sql;
-                            echo $error;
-                        }
+            if ($result) {
+                
+                $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            } else {
+               
+                $error = mysqli_error($conn);
+                echo $sql;
+                echo $error;
+            }
 
-                        return $rows; 
-                    }
+            return $rows; 
+        }
 
     public function GetCustomerAllPlansIDByPolicyNumber($PolicyNumber){
        $where = " where PolicyNumber ='$PolicyNumber'";

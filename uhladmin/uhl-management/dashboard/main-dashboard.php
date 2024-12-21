@@ -11,8 +11,9 @@ $userID = $_SESSION['dwd_UserID'] ?? '';
 // print_r($_SESSION);
 // die();
 $userEmail = $_SESSION['dwd_email'] ?? '';
+$userRole = $_SESSION['roles'][0]['Role'] ?? '';
 
-// print_r($_SESSION);
+
 // die();
 
     $dbh = new Dbh();
@@ -127,36 +128,124 @@ $userEmail = $_SESSION['dwd_email'] ?? '';
                             </div>
 
 
+                          
+
+
+                            <!-------------------- total policy revenue--------- -->
+
+                              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-primary img-card box-primary-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                        <h2 class="mb-0 number-font"><?php echo $dashboard->GetTotalRevenueToday(); ?></h2>
+                                                        <p class="text-white mb-0">Today Policy Revenue</p>
+                                                    </div>
+                                                    <div class="ms-auto">  <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                          
+                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-warning img-card box-warning-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-dark">
+                                                  <h2 class="mb-0 number-font"><?php echo $dashboard->GetTotalRevenueBy(); ?></h2>
+                                                        <p class="text-dark mb-0">Total Revenue</p>
+                                                    </div>
+                                                    <div class="ms-auto">  <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-danger img-card box-danger-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                        <h2 class="mb-0 number-font"><?php echo  $dashboard->GetTotalRevenueByMonthly();?></h2>
+                                                        <p class="text-white mb-0">Monthly Policy Revenue</p>
+                                                    </div>
+                                                    <div class="ms-auto"> <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-info img-card box-info-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                        <h2 class="mb-0 number-font"><?php echo $dashboard->countDoctors(); ?></h2>
+                                                        <p class="text-white mb-0">Total Doctors</p>
+                                                    </div>
+                                                    <div class="ms-auto"> <i class="fa fa-user-md text-white fs-30 me-2 mt-2"></i> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                              <!---------- today revenue----------  -->
+                               <div class="row">
+                                    <!-- Card 1: Primary -->
+                                  
+                                      <!-- -----------today policycustomer---------------- -->
                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card bg-primary img-card box-primary-shadow">
+                                <div class="card bg-info img-card box-info-shadow">
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="text-white">
-                                                <h2 class="mb-0 number-font"><?php echo $dashboard->countDoctors(); ?></h2>
-                                                <p class="text-white mb-0">Total Doctors </p>
+                                                <h2 class="mb-0 number-font"><?php echo $dashboard->countPolicyTodayCreatedBy($userEmail); ?></h2>
+                                                <p class="text-white mb-0">Today Policy Customer</p>
                                             </div>
-                                            <div class="ms-auto"> <i class="fa fa-user-o text-white fs-30 me-2 mt-2"></i> </div>
+                                            <div class="ms-auto"> <i class="fa fa-envelope-o text-white fs-30 me-2 mt-2"></i> </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                                    <!-- Card 2: Success -->
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-success img-card box-success-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                <h2 class="mb-0 number-font"><?php echo $dashboard->countPolicyCreatedByMonthly($userEmail); ?></h2>
+                                                        <p class="text-white mb-0">Monthly Policy Customer</p>
+                                                    </div>
+                                                    <div class="ms-auto"> <i class="fa fa-check text-white fs-30 me-2 mt-2"></i> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3: Danger -->
+                                   
+                                    <!-- Card 4: Warning -->
+                                    <!-- ----All Customer------- -->
+                                    
+
+                                    <!-- Card 5: Info -->
+                                   
                             <!-- COL END -->
                         </div>
                         <!-- ROW CLOSED -->
                             <?php endif; ?>
 
+                            <!-- ----------------dashboard for sales persons---------------- -->
 
-
-
-                             <?php if ($userType === 'Channel Partner'): ?>
-                                <!-- Client Admin / Channel Partner view -->
-    
-
-
-                                 <!-- ROW OPEN -->
+                        <?php if ($userRole === 'Sales Man' || $userType === 'Channel Partner'): ?>
+                        <!-- Client Admin / Channel Partner view -->
+                         <!-- ROW OPEN -->
                         <div class="row">
-                            
-                            <!-- COL END -->
+
+                            <!--------total plans----------- -->
                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
                                 <div class="card bg-secondary img-card box-secondary-shadow">
                                     <div class="card-body">
@@ -170,10 +259,10 @@ $userEmail = $_SESSION['dwd_email'] ?? '';
                                     </div>
                                 </div>
                             </div>
-                            <!-- COL END -->
-                            
-                            <!-- COL END -->
-                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+
+                            <!-- ---total policy customer--------------- -->
+         
+                          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
                                 <div class="card bg-info img-card box-info-shadow">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -188,8 +277,109 @@ $userEmail = $_SESSION['dwd_email'] ?? '';
                             </div>
 
 
+                            <!-- -----------today policycustomer---------------- -->
+                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                <div class="card bg-info img-card box-info-shadow">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="text-white">
+                                                <h2 class="mb-0 number-font"><?php echo $dashboard->countPolicyTodayCreatedBy($userEmail); ?></h2>
+                                                <p class="text-white mb-0">Today Policy Customer</p>
+                                            </div>
+                                            <div class="ms-auto"> <i class="fa fa-envelope-o text-white fs-30 me-2 mt-2"></i> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-------------------- total policy revenue--------- -->
+                          
+                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-warning img-card box-warning-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-dark">
+                                                  <h2 class="mb-0 number-font"><?php echo $dashboard->GetTotalRevenueByCreatedBy($userEmail); ?></h2>
+                                                        <p class="text-dark mb-0">Total Revenue</p>
+                                                    </div>
+                                                    <div class="ms-auto">  <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                              <!---------- today revenue----------  -->
+                               <div class="row">
+                                    <!-- Card 1: Primary -->
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-primary img-card box-primary-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                        <h2 class="mb-0 number-font"><?php echo $dashboard->GetTotalRevenueByCreatedByToday($userEmail); ?></h2>
+                                                        <p class="text-white mb-0">Today Policy Revenue</p>
+                                                    </div>
+                                                    <div class="ms-auto">  <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 2: Success -->
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-success img-card box-success-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                <h2 class="mb-0 number-font"><?php echo $dashboard->countPolicyCreatedByMonthly($userEmail); ?></h2>
+                                                        <p class="text-white mb-0">Monthly Policy Customer</p>
+                                                    </div>
+                                                    <div class="ms-auto"> <i class="fa fa-check text-white fs-30 me-2 mt-2"></i> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 3: Danger -->
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-danger img-card box-danger-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                        <h2 class="mb-0 number-font"><?php echo  $dashboard->GetTotalRevenueByCreatedByMonthly($userEmail);; ?></h2>
+                                                        <p class="text-white mb-0">Monthly Policy Revenue</p>
+                                                    </div>
+                                                    <div class="ms-auto"> <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 4: Warning -->
+                                    <!-- ----All Customer------- -->
+                                    
+
+                                    <!-- Card 5: Info -->
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card bg-info img-card box-info-shadow">
+                                            <div class="card-body">
+                                                <div class="d-flex">
+                                                    <div class="text-white">
+                                                        <h2 class="mb-0 number-font"><?php echo $dashboard->countDoctors(); ?></h2>
+                                                        <p class="text-white mb-0">Total Doctors</p>
+                                                    </div>
+                                                    <div class="ms-auto"> <i class="fa fa-user-md text-white fs-30 me-2 mt-2"></i> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card 6: Secondary -->
+                                   
+                                </div>
                            
-                            <!-- COL END -->
                         </div>
                         <!-- ROW CLOSED -->
                             <?php endif; ?>

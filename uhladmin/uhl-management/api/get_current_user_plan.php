@@ -25,7 +25,8 @@ if(isset($data['token']))
 	{
 		$token_decoded = JWT::decode($jwt,new Key($secret_key, 'HS512'));
 
-		
+		 // print_r($token_decoded);
+		 // die();
         
 		$username = $token_decoded->data->username;
 		$userId = $token_decoded->data->user_id;

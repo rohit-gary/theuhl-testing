@@ -75,7 +75,7 @@ class Clientdashboard extends Core
 
   	$where='where IsActive= 1';
 
-  	$totalPolicyCustomer=$this->_getTotalRows($this->conn,'policy_customer',$where);
+  	$totalPolicyCustomer=$this->_getTotalRows($this->conn,'customerpolicy',$where);
   	return $totalPolicyCustomer;
 
   }
@@ -101,12 +101,161 @@ class Clientdashboard extends Core
 
   	$where="where IsActive= 1 And CreatedBy= '$userEmail'";
 
-  	$totalPolicyCustomer=$this->_getTotalRows($this->conn,'policy_customer',$where);
+  	$totalPolicyCustomer=$this->_getTotalRows($this->conn,'customerpolicy',$where);
   	return $totalPolicyCustomer;
 
   }
 
+public function countPolicyTodayCreatedBy($userEmail) {
+    $where = "WHERE IsActive = 1 AND CreatedBy = '$userEmail' AND CreatedDate = CURDATE()";
+    $totalPolicyCustomer = $this->_getTotalRows($this->conn, 'customerpolicy', $where);
+    return $totalPolicyCustomer;
+}
 
 
+public function countPolicyCreatedByMonthly($userEmail) {
+    $where = "WHERE IsActive = 1 
+              AND CreatedBy = '$userEmail' 
+              AND MONTH(CreatedDate) = MONTH(CURDATE()) 
+              AND YEAR(CreatedDate) = YEAR(CURDATE())";
+    $totalPolicyCustomer = $this->_getTotalRows($this->conn, 'customerpolicy', $where);
+    return $totalPolicyCustomer;
+}
+
+
+public function GetTotalRevenueByCreatedBy($para) {
+    $sql = "SELECT SUM(t.amount) AS TotalRevenue
+            FROM payments t
+            LEFT JOIN customerpolicy cp
+            ON t.PolicyNumber = cp.PolicyNumber
+            WHERE CreatedBy = '$para'";
+    $response = $this->_getRecords($this->conn, $sql);
+
+   
+   // Ensure you access the specific value
+    if (!empty($response) && isset($response[0]['TotalRevenue'])) {
+        // Format the revenue in Indian Rupee number format
+        return number_format($response[0]['TotalRevenue'], 2, '.', ',');
+    }
+
+    // Return 0 if no data is found, formatted as Indian Rupee
+    return number_format(0, 2, '.', ',');
+}
+
+
+public function GetTotalRevenueBy() {
+    $sql = "SELECT SUM(t.amount) AS TotalRevenue
+            FROM payments t
+            LEFT JOIN customerpolicy cp
+            ON t.PolicyNumber = cp.PolicyNumber
+            WHERE 1";
+    $response = $this->_getRecords($this->conn, $sql);
+
+   
+  // Ensure you access the specific value
+    if (!empty($response) && isset($response[0]['TotalRevenue'])) {
+        // Format the revenue in Indian Rupee number format
+        return number_format($response[0]['TotalRevenue'], 2, '.', ',');
+    }
+
+    // Return 0 if no data is found, formatted as Indian Rupee
+    return number_format(0, 2, '.', ',');
+}
+
+
+public function GetTotalRevenueByCreatedByToday($para) {
+    // Get today's date in the format YYYY-MM-DD
+    $today = date("Y-m-d");
+
+    // SQL query to sum amounts for today
+    $sql = "SELECT SUM(t.amount) AS TotalRevenue
+            FROM payments t
+            LEFT JOIN customerpolicy cp
+            ON t.PolicyNumber = cp.PolicyNumber
+            WHERE CreatedBy = '$para' 
+            AND DATE(cp.CreatedDate) = '$today'"; // Filter by today's date
+    $response = $this->_getRecords($this->conn, $sql);
+
+    // Ensure you access the specific value
+    if (!empty($response) && isset($response[0]['TotalRevenue'])) {
+        return $response[0]['TotalRevenue'];
+    }
+
+    // Return 0 if no data is found
+    return 0;
+}
+
+public function GetTotalRevenueToday() {
+    // Get today's date in the format YYYY-MM-DD
+    $today = date("Y-m-d");
+
+    // SQL query to sum amounts for today
+    $sql = "SELECT SUM(t.amount) AS TotalRevenue
+            FROM payments t
+            LEFT JOIN customerpolicy cp
+            ON t.PolicyNumber = cp.PolicyNumber
+            WHERE  DATE(cp.CreatedDate) = '$today'"; // Filter by today's date
+    $response = $this->_getRecords($this->conn, $sql);
+
+   // Ensure you access the specific value
+    if (!empty($response) && isset($response[0]['TotalRevenue'])) {
+        // Format the revenue in Indian Rupee number format
+        return number_format($response[0]['TotalRevenue'], 2, '.', ',');
+    }
+
+    // Return 0 if no data is found, formatted as Indian Rupee
+    return number_format(0, 2, '.', ',');
+}
+
+ 
+
+public function GetTotalRevenueByCreatedByMonthly($para) {
+    // Get current year and month
+    $currentYear = date("Y");
+    $currentMonth = date("m");
+
+    // SQL query to sum amounts for the current month
+    $sql = "SELECT SUM(t.amount) AS TotalRevenue
+            FROM payments t
+            LEFT JOIN customerpolicy cp
+            ON t.PolicyNumber = cp.PolicyNumber
+            WHERE CreatedBy = '$para'
+            AND YEAR(cp.CreatedDate) = '$currentYear'
+            AND MONTH(cp.CreatedDate) = '$currentMonth'"; // Filter by the current month and year
+    $response = $this->_getRecords($this->conn, $sql);
+
+   // Ensure you access the specific value
+    if (!empty($response) && isset($response[0]['TotalRevenue'])) {
+        // Format the revenue in Indian Rupee number format
+        return number_format($response[0]['TotalRevenue'], 2, '.', ',');
+    }
+
+    // Return 0 if no data is found, formatted as Indian Rupee
+    return number_format(0, 2, '.', ',');
+}
+
+public function GetTotalRevenueByMonthly() {
+    // Get current year and month
+    $currentYear = date("Y");
+    $currentMonth = date("m");
+
+    // SQL query to sum amounts for the current month
+    $sql = "SELECT SUM(t.amount) AS TotalRevenue
+            FROM payments t
+            LEFT JOIN customerpolicy cp
+            ON t.PolicyNumber = cp.PolicyNumber
+            WHERE YEAR(cp.CreatedDate) = '$currentYear'
+            AND MONTH(cp.CreatedDate) = '$currentMonth'"; // Filter by the current month and year
+    $response = $this->_getRecords($this->conn, $sql);
+
+    // Ensure you access the specific value
+    if (!empty($response) && isset($response[0]['TotalRevenue'])) {
+        // Format the revenue in Indian Rupee number format
+        return number_format($response[0]['TotalRevenue'], 2, '.', ',');
+    }
+
+    // Return 0 if no data is found, formatted as Indian Rupee
+    return number_format(0, 2, '.', ',');
+}
 
 }

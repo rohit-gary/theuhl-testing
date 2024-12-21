@@ -542,64 +542,70 @@ document.addEventListener('DOMContentLoaded', function() {
 /// -----new js for new form --------------------------------------------------------
 
 
-                    let currentStep = 1;
-                    // if (localStorage.getItem('currentStep') !== null) 
-                    // {
-                    //     currentStep = localStorage.getItem('currentStep');
-                    //     console.log(currentStep);
-                    // } 
-                    function goToNextStep() 
-                    {
-                     // alert(currentStep);
-                        // localStorage.setItem('currentStep',parseInt(currentStep) + 1);
-                        goToStep(currentStep + 1);
+                   let currentStep = 1;
+
+                    // Retrieve the current step from localStorage if it exists
+                    if (localStorage.getItem('currentStep') !== null) {
+                        currentStep = parseInt(localStorage.getItem('currentStep'), 10);
                     }
 
+                    // Function to initialize the step form on page load
+                    function initializeStepForm() {
+                        goToStep(currentStep); // Call goToStep with the currentStep value
+                    }
+
+                    // Function to navigate to the next step
+                    function goToNextStep() {
+                        currentStep++;
+                        localStorage.setItem('currentStep', currentStep); // Update localStorage
+                        goToStep(currentStep);
+                    }
+
+                    // Function to navigate to the previous step
                     function goToPreviousStep() {
-                        // localStorage.setItem('currentStep',parseInt(currentStep) + 1);
-                        goToStep(currentStep - 1);
+                        currentStep--;
+                        localStorage.setItem('currentStep', currentStep); // Update localStorage
+                        goToStep(currentStep);
                     }
 
+                    // Function to display the specific step form
                     function goToStep(step) {
                         const steps = document.querySelectorAll(".step-box");
                         const sections = document.querySelectorAll(".form-section");
 
                         if (step > 0 && step <= steps.length) {
-                            // Remove the 'active' class from the current step and section
-                            steps[currentStep - 1].classList.remove("active");
-                            sections[currentStep - 1].classList.remove("active");
+                            // Remove 'active' class from the current step and section
+                            steps.forEach((el, index) => {
+                                el.classList.remove("active", "completed", "inactive");
+                                sections[index].classList.remove("active");
+                            });
 
-                            // Mark the current step as completed if moving forward
-                            if (step > currentStep) {
-                                steps[currentStep - 1].classList.add("completed");
-                                steps[currentStep - 1].classList.remove("inactive");
-                            } 
-                            // If returning, mark it as inactive
-                            else if (step < currentStep) {
-                                steps[currentStep - 1].classList.add("inactive");
-                                steps[currentStep - 1].classList.remove("completed");
+                            // Mark previous steps as completed
+                            for (let i = 0; i < step - 1; i++) {
+                                steps[i].classList.add("completed");
                             }
 
-                                // Add the 'active' class to the new step and section
-                                steps[step - 1].classList.add("active");
-                                sections[step - 1].classList.add("active");
-                               displayUploadDocumentForm();
-                                currentStep = step;
-                                if (step === 3) {
-                                        fetchPlansAndGenerateForms();
+                            // Mark the current step as active
+                            steps[step - 1].classList.add("active");
+                            sections[step - 1].classList.add("active");
 
-                                    }
-                                    if (step === 4) {
-                                        displaySelectedPlans();
+                            currentStep = step; // Update the current step variable
 
-                                    }
-                                    if(step === 5)
-                                    {
-                                        displayUploadDocumentForm();
-                                        
-                                    }
+                            // Handle specific logic for certain steps
+                            if (step === 3) {
+                                fetchPlansAndGenerateForms();
+                            }
+                            if (step === 4) {
+                                displaySelectedPlans();
+                            }
+                            if (step === 5) {
+                                displayUploadDocumentForm();
                             }
                         }
+                    }
+
+                    // Call the initializeStepForm function on page load
+                    document.addEventListener('DOMContentLoaded', initializeStepForm);
 
                     // Add click event listener for steps to go directly to a particular step
                     // document.querySelectorAll(".step-box").forEach((stepBox, index) => {
@@ -657,78 +663,120 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Save the selected plans (supporting multiple selections)
 
                           $('#gotothirdstep').hide();
-                            function saveSelectedPlans() {
-                                    // Retrieve Customer ID
-                                    // var customer_id = localStorage.getItem("customer_id");
-                                      // console.log('dsdss',customer_id_1);
+                            async function saveSelectedPlans() 
+                            {
+                                let customer_id_1 = $('#customer_id').val();
 
-                                    var customer_id_1 = $('#customer_id').val();
+                                if (customer_id_1 === "") 
+                                {
+                                    try {
+                                        // Fetch customer ID from the session via AJAX
+                                        const response = await $.ajax({
+                                            url: 'action/get_session_value.php', // Replace with your server endpoint
+                                            method: 'GET',
+                                            dataType: 'json',
+                                        });
 
-                                    console.log('hfdd',customer_id_1);
-
-                                    if (!customer_id_1) {
-                                        Alert("Customer ID not found. Please complete Step 1 first.");
+                                        if (response.customer_id) {
+                                            // Set the fetched customer ID
+                                            customer_id_1 = response.customer_id;
+                                            //alert("Customer ID fetched: " + customer_id_1);
+                                        } else {
+                                            //alert("Customer ID not found in session.");
+                                            return false;
+                                        }
+                                    } catch (error) {
+                                        console.error('Error fetching customer ID from session:', error);
+                                        alert('An error occurred while fetching the customer ID.');
                                         return false;
                                     }
+                                }
 
-                                    // Get form action and form ID
-                                    let form_action = $("#form_action_policy").val();
-                                    let form_id = $("#form_id_policy").val();
-                                   
+                                console.log('Customer ID:', customer_id_1);
+                                //alert("Current Customer ID: " + customer_id_1);
 
-                                   
-                                  
+                                if (!customer_id_1) {
+                                    alert("Customer ID not found. Please complete Step 1 first.");
+                                    return false;
+                                }
 
-                                    // Get selected plans
-                                    let selectedPlans = document.querySelectorAll('input[name="selected_plan[]"]:checked');
-                                    let selectedPlanIDs = Array.from(selectedPlans).map(plan => plan.value);
+                                // Get form action and form ID
+                                let form_action = $("#form_action_policy").val();
+                                let form_id = $("#form_id_policy").val();
 
-                                    if (selectedPlanIDs.length > 0) {
-                                      
+                                alert(form_action);
+                                alert(form_id);
 
-                                        // Proceed to save the selected plans via AJAX
-                                        $.ajax({
+
+                                // Get selected plans
+                                let selectedPlans = document.querySelectorAll('input[name="selected_plan[]"]:checked');
+                                let selectedPlanIDs = Array.from(selectedPlans).map(plan => plan.value);
+
+                                if (selectedPlanIDs.length > 0) {
+                                    $("#savePolicyBtn").html('Please Wait..');
+
+                                    try {
+                                        // Save the selected plans via AJAX
+                                        const response = await $.ajax({
                                             url: "action/add-update-customer-plans.php",
                                             type: "POST",
                                             data: {
                                                 customer_id: customer_id_1,
                                                 plans: selectedPlanIDs,
                                                 form_action: form_action,
-                                                form_id: form_id
+                                                form_id: form_id,
                                             },
-                                            success: function (data) {
-                                                  var response = JSON.parse(data);
-                                                   var PolicyNumber=response.PolicyNumber;
-                                                      
-                                                    Alert("Plans saved successfully.");
-                                                    $("#PolicyNumber").val(PolicyNumber);
-                                                    $('#savePolicyBtn').hide();
-                                                     $('#gotothirdstep').show();
-
-                                            },
-                                            error: function () {
-                                                Alert("Error saving plans. Please try again.");
-                                            }
                                         });
-                                    } else {
-                                        Alert("Please select at least one plan.");
-                                    }
-                                    
 
-                                    $("#savePolicyBtn").html('Please Wait..');
+                                        const parsedResponse = JSON.parse(response);
+                                        const policyNumber = parsedResponse.PolicyNumber;
+
+                                        alert("Plans saved successfully.");
+                                        $("#PolicyNumber").val(policyNumber);
+                                        $('#savePolicyBtn').hide();
+                                        $('#gotothirdstep').show();
+                                    } catch (error) {
+                                        console.error('Error saving plans:', error);
+                                        alert("Error saving plans. Please try again.");
+                                    }
+                                } else {
+                                    alert("Please select at least one plan.");
                                 }
+                            }
 
 
             ////step-3
 
      
 
-function fetchPlansAndGenerateForms() {
-
+async function fetchPlansAndGenerateForms() 
+{
+    var PolicyNumber=$("#PolicyNumber").val();
     
-   
+    if (PolicyNumber === "") 
+    {
+        try {
+            // Fetch customer ID from the session via AJAX
+            const response = await $.ajax({
+                url: 'action/get_session_value.php', // Replace with your server endpoint
+                method: 'GET',
+                dataType: 'json',
+            });
 
-     var PolicyNumber=$("#PolicyNumber").val();
+            if (response.PolicyNumber) 
+            {
+                PolicyNumber = response.PolicyNumber;
+            } 
+            else 
+            {
+                return false;
+            }
+        } catch (error) {
+            console.error('Error fetching customer ID from session:', error);
+            alert('An error occurred while fetching the customer ID.');
+            return false;
+        }
+    }
 
     if (!PolicyNumber) {
         Alert("Policy Number not found. Please complete All steps.");
@@ -1159,7 +1207,7 @@ if (!isValid) {
                 var result = JSON.parse(response);
                 console.log('fgffffgf',result);
                 Alert(result.message);
-                if (!result.error) {
+                if (result.error===false) {
                     // After successful submission
                     $('#savefamilyMemberBtn').hide();
                     $('#gotofourthstep').show();
@@ -1366,5 +1414,10 @@ function saveAdditionalFamilyMember() {
     });
 }
 
+function AddNewMemberModal()
+{
+    fetchPlans();
+    $("#familyMemberModal").modal("show");
 
+}
 

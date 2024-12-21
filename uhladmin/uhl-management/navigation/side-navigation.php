@@ -310,7 +310,7 @@
         }
         e.preventDefault();
         $.ajax({
-            url: 'action/clear-session.php',
+            url: '../controllers/clear-session.php',
             type: 'POST',
             success: function(response) {
                 // After clearing the session, redirect the user

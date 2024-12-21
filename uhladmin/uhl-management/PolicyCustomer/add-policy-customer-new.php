@@ -76,7 +76,6 @@ $conf = new Conf();
 <body class="app sidebar-mini ltr light-mode">
 
     <div id="confetti-container"></div>
-
     <div class="page">
         <div class="page-main">
             <?php
@@ -95,6 +94,7 @@ $conf = new Conf();
                             <!-- Step Progress -->
                             <div class="row justify-content-center mb-4">
                                 <div class="col-lg-8">
+                            
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="step-box active">
                                             <span class="step-number">1</span>
@@ -198,7 +198,7 @@ $conf = new Conf();
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="paymentLinkModalLabel">Payment Link</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                             </div>
                             <div class="modal-body">
                                 <p>Your payment link is:</p>
@@ -894,7 +894,8 @@ function AddUploade() {
     $('#dob').datepicker({
         format: 'dd-mm-yyyy',
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
+        endDate: new Date() // Prevents selection of future dates
     });
 });
 

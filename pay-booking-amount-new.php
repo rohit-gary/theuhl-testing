@@ -193,7 +193,7 @@ include("includes/payu-paymentform-html.php");
                                             <div class="form-group">
                                             <label for="payment_gateway">Select Payment Gateway:</label>
                                             <div id="payment_gateway" class="d-flex flex-column">
-                                                <div class="form-check d-flex align-items-center">
+                                                <div class="form-check d-flex align-items-center d-none">
                                                     <input 
                                                         type="radio" 
                                                         class="form-check-input me-2" 
@@ -211,8 +211,8 @@ include("includes/payu-paymentform-html.php");
                                                         id="idfc" 
                                                         name="payment_gateway" 
                                                         value="idfc">
-                                                    <label class="form-check-label me-3" for="idfc">IDFC</label>
-                                                    <img src="project-assets/images/IDFC-logo-website.svg" style="height:50px">
+                                                    <label class="form-check-label me-3" for="idfc">UPI</label>
+                                                    <img src="project-assets/images/upi-logo.png" style="height:50px">
                                                 </div>
                                                 <div class="form-check d-flex align-items-center mt-2">
                                                     <input 

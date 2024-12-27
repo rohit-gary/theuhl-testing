@@ -232,6 +232,7 @@ public function InsertCustomerForm($data){
     $DateOfBirth = $data['dob'];
     $Email = $data['email'];
     $Address = $this->conn->real_escape_string($data['address']);
+    $PAddress = $this->conn->real_escape_string($data['p_address']);
     $State = $data['state'];
     $Pincode = $data['pincode'];
     $CreatedTime = $data['CreatedTime'];
@@ -248,13 +249,14 @@ public function InsertCustomerForm($data){
         'DateOfBirth' => $DateOfBirth,
         'Email' => $Email,
         'Address' => $Address,
+        'PermanentAddress'=>$PAddress,
         'State' => $State,
         'Pincode' => $Pincode,
         'CreatedDate' => $CreatedDate,
         'CreatedTime' => $CreatedTime,
         'CreatedBy' => $CreatedBy
-    );
 
+    );
     // Insert customer data
     $response_insert_details = $this->_InsertTableRecords_prepare($this->conn, 'all_customer', $customerData);
     return  $response_insert_details;
@@ -294,48 +296,48 @@ public function UpdateCustomerForm($data){
 }
 
 
-                                public function InsertPolicyForm($data) {
-                                // Prefix and random number for Policy Number
-                                $prefix = 'UHL';
-                                $randomNumber = mt_rand(100000, 999999);
-                                $PolicyNumber = $prefix . $randomNumber;
+    public function InsertPolicyForm($data) {
+    // Prefix and random number for Policy Number
+    $prefix = 'UHL';
+    $randomNumber = mt_rand(100000, 999999);
+    $PolicyNumber = $prefix . $randomNumber;
 
-                                // Retrieve data from input
-                                $CustomerID = $data['customer_id'];
-                                $PlanIDs = $data['plans']; // Multiple Plan IDs expected
-                                $PlanAmount = isset($data['plan_amount']) ? $data['plan_amount'] : 0; // Default amount if not provided
-                                $CreatedDate = date('Y-m-d'); // Current date
-                                $CreatedTime = date('H:i:s'); // Current time
-                                $CreatedBy = isset($data['CreatedBy']) ? $data['CreatedBy'] : 'System'; // Default to 'System'
+    // Retrieve data from input
+    $CustomerID = $data['customer_id'];
+    $PlanIDs = is_array($data['plans']) ? $data['plans'] : [$data['plans']]; // Multiple Plan IDs expected
+    $PlanAmount = isset($data['plan_amount']) ? $data['plan_amount'] : 0; // Default amount if not provided
+    $CreatedDate = date('Y-m-d'); // Current date
+    $CreatedTime = date('H:i:s'); // Current time
+    $CreatedBy = isset($data['CreatedBy']) ? $data['CreatedBy'] : 'System'; // Default to 'System'
 
-                                // Validate input data
-                                if (empty($CustomerID) || empty($PlanIDs) || !is_array($PlanIDs)) {
-                                    return "Invalid input data. Please provide a valid customer ID and plans.";
-                                }
+    // Validate input data
+    if (empty($CustomerID) || empty($PlanIDs) || !is_array($PlanIDs)) {
+        return "Invalid input data. Please provide a valid customer ID and plans.";
+    }
 
-                                // Loop through each Plan ID and insert a record
-                                foreach ($PlanIDs as $PlanID) {
-                                    // Prepare data for insertion
-                                        $customerData = array(
-                                        'CustomerID' => $CustomerID,
-                                        'PolicyNumber' => $PolicyNumber,
-                                        'PlanID' => $PlanID,
-                                        'CreatedDate' => $CreatedDate,
-                                        'CreatedTime' => $CreatedTime,
-                                        'CreatedBy' => $CreatedBy
-                                    );
+    // Loop through each Plan ID and insert a record
+    foreach ($PlanIDs as $PlanID) {
+        // Prepare data for insertion
+            $customerData = array(
+            'CustomerID' => $CustomerID,
+            'PolicyNumber' => $PolicyNumber,
+            'PlanID' => $PlanID,
+            'CreatedDate' => $CreatedDate,
+            'CreatedTime' => $CreatedTime,
+            'CreatedBy' => $CreatedBy
+        );
 
-                                    // Insert record into the database
-                                    $response_insert_details = $this->_InsertTableRecords_prepare($this->conn, 'customerpolicy', $customerData);
-                                    
-                                }
-                               
-                                 $response_insert_details['PolicyNumber']= $PolicyNumber;
-                              
-                                return $response_insert_details;
+        // Insert record into the database
+        $response_insert_details = $this->_InsertTableRecords_prepare($this->conn, 'customerpolicy', $customerData);
+        
+    }
+   
+     $response_insert_details['PolicyNumber']= $PolicyNumber;
+  
+    return $response_insert_details;
 
-                               
-                            }
+   
+}
 
 public function InsertPolicyCustomerForm($data)
 {

@@ -892,7 +892,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                     </div>
                     <div class="form-group mb-3">
                         <label class="form-label">Relationship <span class="text-red">*</span></label>
-                        <select class="form-control" id="member_relationship_${plan.ID}_${i}" name="member_relationship_${plan.ID}_${i}" required>
+                        <select class="form-control" id="member_relationship_${plan.ID}_${i}" name="member_relationship_${plan.ID}_${i}" onchange="myFunction(this)">
                             <option value="" disabled selected>Select Relationship</option>
                             <option value="MySelf">MySelf</option>
                             <option value="father">Father</option>
@@ -904,6 +904,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                             <option value="daughter">Daughter</option>
                             <option value="other">Other</option>
                         </select>
+                         <input type="text" class="form-control mt-2" id="other_relationship_${plan.ID}_${i}" name="other_relationship_${plan.ID}_${i}" placeholder="Specify relationship" style="display:none;">
                     </div>
                     <div class="form-group mb-3">
                        
@@ -929,6 +930,22 @@ function fetchPlanDetailsAndGenerateForm(plan) {
     
 }
 
+function myFunction(selectElement) {
+    // Find the closest parent div containing the select dropdown and the input field for 'Other'
+    const formGroup = selectElement.closest('.form-group');
+    
+    // Find the input field for 'Other' within the same parent container
+    const otherInput = formGroup.querySelector('input[type="text"]');
+    
+    // Check if "Other" is selected
+    if (selectElement.value === 'other') {
+        // Show the 'Other' input field
+        otherInput.style.display = 'block';
+    } else {
+        // Hide the 'Other' input field
+        otherInput.style.display = 'none';
+    }
+}
 
 
 
@@ -1118,7 +1135,10 @@ function savefamilyMember() {
     const memberDob = form.querySelector('input[name^="member_dob_"]');
     const memberGender = form.querySelector('input[name^="member_gender_"]:checked');
     const memberRelationship = form.querySelector('select[name^="member_relationship_"]');
+
     const planId = form.querySelector('input[name^="plan_Id_"]');
+
+    const otherRelationship = form.querySelector('input[name^="other_relationship_"]'); // Get the "Other" relationship field
 
 
     // Check if at least one family member's required fields are filled
@@ -1170,11 +1190,16 @@ function savefamilyMember() {
         errorMessage += `Family member ${index + 1} - Gender is required.\n`;
     }
 
-    if (memberRelationship && memberRelationship.value.trim()) {
-        formData.append(`member_relationship_${index + 1}`, memberRelationship.value);
-    } else {
-        errorMessage += `Family member ${index + 1} - Relationship is required.\n`;
-    }
+     if (memberRelationship && memberRelationship.value.trim()) {
+            formData.append(`member_relationship_${index + 1}`, memberRelationship.value);
+
+            // If "other" relationship is selected, add the other relationship value
+            if (memberRelationship.value === "other" && otherRelationship && otherRelationship.value.trim()) {
+                formData.append(`other_relationship_${index + 1}`, otherRelationship.value);
+            }
+        } else {
+            errorMessage += `Family member ${index + 1} - Relationship is required.\n`;
+        }
 
     // Append the Policy Number for each member
     var policyNumber=$('#PolicyNumber').val();

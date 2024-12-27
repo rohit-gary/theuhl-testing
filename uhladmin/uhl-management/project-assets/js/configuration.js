@@ -192,3 +192,148 @@ function UpdateDocCat(ID){
     });
   
 }
+
+
+function AddTestCat(){
+  $('#test_cat_form')[0].reset();
+  $("#form_action").val("Add");
+  $("#add_test_category_modal").modal("show");
+  $("#addUpdateTestBtn").html("Add");
+  $("#TestCategoryModalHeading").html("Add Test Category");
+}
+
+
+function AddUpdateTestCategory(){
+   var form_action = $("#form_action_test_cat").val();
+  var Test_category_name = $("#test_category_name").val();
+  if (Test_category_name == "") {
+    Alert("Please Enter Test_category Name");
+    return false;
+  }
+  $("#addUpdateTestBtn").html("Please Wait..");
+  $.ajax({
+    url: "action/add-update-test_category.php",
+    type: "POST",
+    data: $("#test_cat_form").serialize(),
+    success: function (data) {
+      var response = JSON.parse(data);
+      Alert(response.message);
+      if (response.error == false) {
+        $("#add_test_category_modal").modal("hide");
+        $("#addUpdateTestBtn").html("Add");
+        $('#test_cat_form')[0].reset();
+        setInterval(function () {
+          location.reload();
+        }, 1500);
+      }
+      else {
+        $("#addUpdateTestBtn").html("Add");
+      }
+    },
+  });
+  return false;
+}
+
+function UpdateTestCat(ID){
+   $("#form_action_test_cat").val("Update");
+  $("#form_test_cat_id").val(ID);
+  $("#add_test_category_modal").modal("show");
+  $("#addUpdateTestBtn").html("Update");
+  $("#TestCategoryModalHeading").html("Update Test Category");
+  
+  $.post("ajax/get-test-cat-details.php",
+    {
+      ID: ID
+    },
+    function (data, status) {
+      var response = JSON.parse(data);
+    
+      $("#test_category_name").val(response.TestCategoryName);
+    });
+}
+
+
+ function DeleteTestCat(ID) {
+    $.post("action/delete-test-cat-details.php",
+      { ID: ID },
+      function (data, status) {
+        var response = JSON.parse(data);
+        Alert(response.message);
+        if (response.error === false) {
+          location.reload();
+        }
+      });
+  }
+
+
+  function AddTest(){
+  $('#test_form')[0].reset();
+  $("#form_action_test").val("Add");
+  $("#add_test_modal").modal("show");
+  $("#addUpdateTBtn").html("Add");
+  $("#TestModalHeading").html("Add Test");
+  }
+
+
+function AddUpdateTest() {
+  var form_action = $("#form_action_test").val();
+  var test_name = $("#test_name").val();
+  var test_cat = $("#test_cat").val();
+  var test_type = $("#test_type").val();
+  var test_fee = $("#test_fee").val();
+
+  // Input validation
+  if (test_name.trim() === "") {
+    Alert("Please Enter Test Name");
+    return false;
+  }
+
+  // if (test_cat.trim() == "" || test_cat.trim() == " ") {
+  //   Alert("Please Select a Test Category");
+  //   return false;
+  // }
+
+  if (test_type.trim() === "") {
+    Alert("Please Enter Test Type");
+    return false;
+  }
+
+  if (test_fee.trim() === "" || isNaN(test_fee)) {
+    Alert("Please Enter a Valid Test Fee");
+    return false;
+  }
+
+  // Indicate loading
+  $("#addUpdateTBtn").html("Please Wait...").attr("disabled", true);
+
+  // AJAX request
+  $.ajax({
+    url: "action/add-update-test_category.php",
+    type: "POST",
+    data: $("#test_form").serialize(),
+    success: function (data) {
+      var response = JSON.parse(data);
+      Alert(response.message);
+
+      if (response.error === false) {
+        // Close modal and reset form
+        $("#add_test_modal").modal("hide");
+        $("#addUpdateTBtn").html("Add").attr("disabled", false);
+        $("#test_form")[0].reset();
+
+        // Reload page after a short delay
+        setTimeout(function () {
+          location.reload();
+        }, 1500);
+      } else {
+        $("#addUpdateTBtn").html("Add").attr("disabled", false);
+      }
+    },
+    error: function () {
+      Alert("An error occurred while processing the request.");
+      $("#addUpdateTBtn").html("Add").attr("disabled", false);
+    },
+  });
+
+  return false; // Prevent form submission
+}

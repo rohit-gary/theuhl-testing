@@ -1,11 +1,11 @@
 <?php 
 
 ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-   require_once('uhladmin/uhl-management/include/autoloader.inc.php');
-   include("uhladmin/uhl-management/include/db-connection.php");
+require_once('uhladmin/uhl-management/include/autoloader.inc.php');
+include("uhladmin/uhl-management/include/db-connection.php");
 
 $conf = new Conf();
 $dbh = new Dbh();
@@ -62,6 +62,8 @@ if (strstr($Service_cost, '/', true)) {
 
 include("includes/links.php");
 include("includes/meta.php");
+include("gateway-config.php");
+include("includes/payu-paymentform-html.php");
 ?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -188,16 +190,44 @@ include("includes/meta.php");
                             <input type="hidden" name="ID" value="<?php echo $policyCustomerID; ?>">
                             <input type="hidden" name="phone" id="phone" value="<?php echo $MobileNumber; ?>">
                             <input type="hidden" name="amount" id="amount" value="<?php echo $total_amount; ?>">
+                                            <div class="form-group">
+                                            <label for="payment_gateway">Select Payment Gateway:</label>
+                                            <div id="payment_gateway" class="d-flex flex-column">
+                                                <div class="form-check d-flex align-items-center">
+                                                    <input 
+                                                        type="radio" 
+                                                        class="form-check-input me-2" 
+                                                        id="razorpay" 
+                                                        name="payment_gateway" 
+                                                        value="razorpay" 
+                                                        checked>
+                                                    <label class="form-check-label me-3" for="razorpay">Razorpay</label>
+                                                    <img src="project-assets/images/razorpay.png" style="height:50px">
+                                                </div>
+                                                <div class="form-check d-flex align-items-center mt-2">
+                                                    <input 
+                                                        type="radio" 
+                                                        class="form-check-input me-2" 
+                                                        id="idfc" 
+                                                        name="payment_gateway" 
+                                                        value="idfc">
+                                                    <label class="form-check-label me-3" for="idfc">IDFC</label>
+                                                    <img src="project-assets/images/IDFC-logo-website.svg" style="height:50px">
+                                                </div>
+                                                <div class="form-check d-flex align-items-center mt-2">
+                                                    <input 
+                                                        type="radio" 
+                                                        class="form-check-input me-2" 
+                                                        id="payu" 
+                                                        name="payment_gateway" 
+                                                        value="payu">
+                                                    <label class="form-check-label me-3" for="payu">PayU</label>
+                                                    <img src="project-assets/images/new-payu-logo.svg" style="height:50px">
+                                                </div>
+                                            </div>
+                                        </div>
 
-                            <div class="form-group">
-                                <label for="payment_gateway">Select Payment Gateway:</label>
-                                <select id="payment_gateway" class="form-control" name="payment_gateway">
-                                    <option value="razorpay">Razorpay</option>
-                                    <!-- <option value="ccavenue">CCAvenue</option> -->
-                                </select>
-                            </div>
-
-                            <div class="text-center">
+                                        <div class="text-center">
                                 <!-- Dynamic Payment Button -->
                             </div>
                         </form>
@@ -213,13 +243,16 @@ include("includes/meta.php");
             </div>
         </div>
     </section>
-
+     
+      <?php include("includes/payu-paymentform.php"); ?>
     <?php include("includes/footer.php"); ?>
     <?php include("includes/script.php"); ?>
 
     <script>
    document.getElementById('pay-button').onclick = function (e) {
-    let selectedGateway = document.getElementById('payment_gateway').value;
+    // let selectedGateway = document.getElementById('payment_gateway').value;
+    let selectedGateway = document.querySelector('input[name="payment_gateway"]:checked').value;
+    console.log(selectedGateway);
     let amount = document.getElementById('amount').value;
     let card_name = document.getElementById('card_name').value;
     let phone = document.getElementById('phone').value;
@@ -303,7 +336,7 @@ include("includes/meta.php");
                 },
                 "prefill": {
                     "name": card_name,
-                    "email": phone, // You might want to use a proper email field instead of phone
+                    "email": phone, 
                     "contact": phone
                 },
                 "theme": {
@@ -347,9 +380,117 @@ include("includes/meta.php");
 
         document.body.appendChild(form);
         form.submit();
+    } else if(selectedGateway === 'idfc'){
+         let timestamp = Date.now();
+        let receiptID = `${policyCustomerID}_${timestamp}`;
+
+        let paymentData = {
+            amount: amount,
+            currency: 'INR',
+            receipt: receiptID,
+            description: 'Payment for Plan'
+        };
+
+        // Send data to PHP script to create Razorpay order
+        fetch('create_order_idfc.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(paymentData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert('Error: ' + data.error);
+                return;
+            }
+
+            // Prepare Razorpay payment options
+            var options = {
+                "key": "rzp_live_CIaXiqWSJYoxsg", // Test key for Razorpay, rzp_test_VHcUYxXlN9UYgv   rzp_live_ByoIjLl32Tm8w1 replace with your live key
+                "amount": paymentData.amount * 100,  // Amount is in paise (i.e., 100 paise = 1 INR)
+                "currency": paymentData.currency,
+                "name": "UHL Health",
+                "description": paymentData.description,
+                "order_id": data.orderId,  // Use the order ID returned by create_order.php
+                "handler": function (response) {
+                    // Send payment details to verify_payment.php
+                    fetch('verify_payment_idfc.php.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_signature: response.razorpay_signature,
+                            policyNumber:policyNumber,
+                            amount: amount,
+                            name: card_name,
+                            phone: phone
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            Swal.fire({
+                                title: "Payment Successful!",
+                                text: "Payment verified successfully. Please check your email!",
+                                icon: "success",
+                                confirmButtonText: "OK"
+                            }).then(() => {
+                                window.location.href = "all-plans.php"; // Redirect after successful payment
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "Verification Failed!",
+                                text: "Payment verification failed: " + data.message,
+                                icon: "error",
+                                confirmButtonText: "OK"
+                            });
+                        }
+                    });
+                },
+                "prefill": {
+                    "name": card_name,
+                    "email": phone, 
+                    "contact": phone
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            };
+
+            // Open Razorpay payment window
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        })
+        .catch(error => {
+            console.error('Error creating order:', error);
+        });
+    } else if(selectedGateway === 'payu'){
+          frmsubmit()
     }
+
 };
 
     </script>
+
+    <script type="text/javascript">     
+        
+        function frmsubmit()
+        {
+            document.getElementById("payment_form").submit();   
+            return true;
+        }
+        
+    </script>
+    
 </body>
 </html>
+
+
+
+
+    

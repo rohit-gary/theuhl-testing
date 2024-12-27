@@ -90,7 +90,7 @@
     <div class="col-md-12">
         <div class="form-group">
             <label class="form-label">Permanent Address <span class="text-red">*</span></label>
-            <input type="text" class="form-control" placeholder="Home Address" name="address" id="address" value="<?php echo isset($customerForm['address']) ? $customerForm['address'] : ''; ?>">
+            <input type="text" class="form-control" placeholder="Home Address" name="p_address" id="p_address" value="<?php echo isset($customerForm['address']) ? $customerForm['address'] : ''; ?>">
         </div>
     </div>
 

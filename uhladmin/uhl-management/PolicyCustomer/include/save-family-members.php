@@ -12,6 +12,8 @@ if (isset($_POST)) {
     $master = new PolicyCustomer($master_conn);
     $PolicyCustomer = new PolicyCustomer($conn);
     $data = $_POST;
+
+    
     
 
     // Retrieve basic data
@@ -37,6 +39,7 @@ if (isset($_POST)) {
 
     // Loop through members in POST data
     $index = 1;
+    $OtherRelationship=" "; 
     while (isset($data["member_name_$index"])) {
         $member = [
             'PolicyCustomerID' => $PolicyCustomerID,
@@ -50,6 +53,11 @@ if (isset($_POST)) {
             'CreatedTime' => $data['CreatedTime'],
             'CreatedBy' => $data['CreatedBy']
         ];
+
+                // Add 'OtherRelationship' only if it exists
+            if (isset($data["other_relationship_$index"])) {
+                $member['OtherRelationship'] = $data["other_relationship_$index"];
+            }
 
         // Calculate age from DateOfBirth
         $dob = new DateTime($member['DateOfBirth']);

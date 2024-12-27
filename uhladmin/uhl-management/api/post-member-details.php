@@ -19,7 +19,7 @@ $response = [];
 
 // Validate required fields
 if (
-    isset($data["PolicyCustomerID"]) &&
+    isset($data["PlanID"]) &&
     isset($data["PolicyNumber"]) &&
     isset($data["Name"]) &&
     isset($data["DateOfBirth"]) &&
@@ -33,7 +33,7 @@ if (
 
     // Prepare row data
     $rowData = [
-        "PolicyCustomerID" => $data["PolicyCustomerID"],
+        "PlanID" => $data["PlanID"],
         "PolicyNumber" => $data["PolicyNumber"],
         "Name" => $data["Name"],
         "DateOfBirth" => $data["DateOfBirth"],
@@ -42,7 +42,7 @@ if (
         "Relationship" => $data["Relationship"],
         "CreatedDate" => date("Y-m-d"),
         "CreatedTime" => date("H:i:s"),
-        "CreatedBy" => isset($_SESSION["dwd_email"]) ? $_SESSION["dwd_email"] : "admin@uhl",
+        "CreatedBy" => isset($_SESSION["dwd_email"]) ? $_SESSION["dwd_email"] : "App",
     ];
 
     // Insert into database
@@ -53,10 +53,11 @@ if (
         $rowData
     );
 
-    if ($insertResult) {
+    if ($insertResult['error']==false) {
         // Success response
         $response["error"] = false;
         $response["message"] = "Member inserted successfully.";
+        // 
     } else {
         // Handle insertion failure
         $response["error"] = true;
@@ -65,7 +66,7 @@ if (
 } else {
     // Return error for missing fields
     $response["error"] = true;
-    $response["message"] = "Missing required fields. Ensure 'PolicyCustomerID', 'PolicyNumber', 'Name', 'DateOfBirth', 'Gender', and 'Relationship' are provided.";
+    $response["message"] = "Missing required fields.";
 }
 
 // Log and output response

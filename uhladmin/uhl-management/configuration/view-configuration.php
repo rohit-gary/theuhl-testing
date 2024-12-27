@@ -15,8 +15,10 @@
         include("../include/get-db-connection.php");
         $setting = new Clientsetting($conn);
         $Service = new Service($conn);
+        $Test_obj = new Test($conn);
         $all_services = $Service->GetAllServices();
         $all_categories = $Service->GetAllDocCat();
+        $all_testcat=$Test_obj->GetAllTestCats();
 
       
     ?>
@@ -189,6 +191,89 @@
                                     </div>
                                 </div>
                             </div>
+
+
+                                <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <h3 class="card-title">All Test Categories</h3>
+                                        <a class="btn btn-info" onclick="AddTestCat()">Add</a>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-nowrap border-bottom"
+                                                id="all_student_detals">
+                                                <tbody>
+                                                    <?php
+                                                        foreach($all_testcat as $test_value)
+                                                        {
+                                                        ?>
+                                                    <tr>
+                                                        <td class="wd-15p border-bottom-0">
+                                                            <?= $test_value['TestCategoryName']; ?></td>
+                                                        <td class="wd-15p border-bottom-0">
+                                                            <a class="btn text-danger btn-sm"
+                                                                onclick="UpdateTestCat(<?= $test_value['ID'];?>)">
+                                                                <span class="fa fa-pencil-square-o fs-14"></span>
+                                                            </a>
+                                                            <a class="btn text-danger btn-sm"
+                                                                onclick="DeleteTestCat(<?= $test_value['ID'];?>)">
+                                                                <span class="fa fa-trash fs-14"></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                        }
+                                                        ?>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>         
+
+                            <div class="col-md-6">
+                                <div class="card ">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <h3 class="card-title">All Test</h3>
+                                        <a class="btn btn-info" onclick="AddTest()">Add</a>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-nowrap border-bottom"
+                                                id="all_student_detals">
+                                                <tbody>
+                                                    <?php
+                                                        foreach($all_testcat as $test_value)
+                                                        {
+                                                        ?>
+                                                    <tr>
+                                                        <td class="wd-15p border-bottom-0">
+                                                            <?= $test_value['TestCategoryName']; ?></td>
+                                                        <td class="wd-15p border-bottom-0">
+                                                            <a class="btn text-danger btn-sm"
+                                                                onclick="UpdateTest(<?= $test_value['ID'];?>)">
+                                                                <span class="fa fa-pencil-square-o fs-14"></span>
+                                                            </a>
+                                                            <a class="btn text-danger btn-sm"
+                                                                onclick="DeleteTest(<?= $test_value['ID'];?>)">
+                                                                <span class="fa fa-trash fs-14"></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                        }
+                                                        ?>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
                         </div>
 
 
@@ -308,3 +393,119 @@
 </div>
 
 <!-- doctors cat  modal end  -->
+
+
+<!-- Test Categories modal start  -->
+
+<div class="modal fade" id="add_test_category_modal" tabindex="1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h3 class="modal-title" id="TestCategoryModalHeading"></h3>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="test_cat_form" onsubmit="return false;">
+
+                    <input type="hidden" id="form_action_test_cat" name="form_action_test_cat" value="" />
+                    <input type="hidden" id="form_test_cat_id" name="form_test_cat_id" value="" />
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="test_category_name" class="col-form-label">Test Category Name<span
+                                    class="text-danger">*<span></label>
+                            <input type="text" class="form-control" name="test_category_name" id="test_category_name"
+                                Placeholder="Enter Test Category Name">
+                        </div>
+                    </div>
+
+
+                    <div class="mt-5 text-center">
+                        <button class="btn btn-success text-white" id="addUpdateTestBtn"
+                            onclick="AddUpdateTestCategory()"></button>
+                        <!-- <a href="#"  class="btn btn-success">Submit</a> -->
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- service modal end  -->
+
+
+
+
+<!-- Test  modal start  -->
+
+<div class="modal fade" id="add_test_modal" tabindex="1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h3 class="modal-title" id="TestModalHeading"></h3>
+                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="test_form" onsubmit="return false;">
+
+                    <input type="hidden" id="form_action_test" name="form_action_test" value="" />
+                    <input type="hidden" id="form_test_id" name="form_test_id" value="" />
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="test_name" class="col-form-label">Test Name<span
+                                    class="text-danger">*<span></label>
+                            <input type="text" class="form-control" name="test_name" id="test_name"
+                                Placeholder="Enter Test Name">
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="test_cat" class="col-form-label">Test Category<span
+                                    class="text-danger">*<span></label>
+                                 <select class="form-control" id="test_cat" name="test_cat">
+                                    <option value=" " selected>Select Test Category</option>
+                                    <?php
+                                    foreach ($all_testcat as $test_value) {
+                                        echo '<option value="' . htmlspecialchars($test_value['id']) . '">' . htmlspecialchars($test_value['TestCategoryName']) . '</option>';
+                                    }
+                                    ?>
+                                </select>
+
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="test_type" class="col-form-label">Test Type<span
+                                    class="text-danger">*<span></label>
+                            <input type="text" class="form-control" name="test_type" id="test_type"
+                                Placeholder="Enter Test Type">
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="test_fee" class="col-form-label">Test Fee<span
+                                    class="text-danger">*<span></label>
+                            <input type="text" class="form-control" name="test_fee" id="test_fee"
+                                Placeholder="Enter Test Fee">
+                        </div>
+                    </div>
+
+
+                    <div class="mt-5 text-center">
+                        <button class="btn btn-success text-white" id="addUpdateTBtn"
+                            onclick="AddUpdateTest()"></button>
+                        <!-- <a href="#"  class="btn btn-success">Submit</a> -->
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Test  modal start  -->

@@ -80,10 +80,10 @@ function verifyPayment($key,$salt,$txnid,$status)
         
     $qs= http_build_query($r);
     // for production
-    // $wsUrl = "https://info.payu.in/merchant/postservice.php?form=2";
+    $wsUrl = "https://info.payu.in/merchant/postservice.php?form=2";
    
     //for test
-    $wsUrl = "https://test.payu.in/merchant/postservice.php?form=2";
+    // $wsUrl = "https://test.payu.in/merchant/postservice.php?form=2";
     
     try 
     {       

@@ -56,7 +56,7 @@ $conf = new Conf();
 
     $transDetails=$trans_obj->GetAllTransactionByPolicyNumber($PolicyID);
 
-    $StateDetailss = $state_obj->GetStateNameByID($PolicyDetails['State']);
+    $StateDetailss = $state_obj->GetStateNameByID($PolicyDetails['sstate']);
     $StateDetails = $StateDetailss[0];
 
     $maxFamilyMembers = 01;
@@ -126,78 +126,78 @@ $conf = new Conf();
                                 </div>
                                 </div>
                            <div class="col-lg-12">
-    <!-- Policy Details Card -->
-    <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
-        <div class="card-header text-white d-flex justify-content-between align-items-center" 
-             style="background: linear-gradient(135deg, #007bff, #0056b3);">
-            <h4 class="mb-0">Policy Details</h4>
-            <span class="badge bg-success">Active</span>
-        </div>
-        <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                          <!-- Policy Details Card -->
+                            <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
+                                <div class="card-header text-white d-flex justify-content-between align-items-center" 
+                                     style="background: linear-gradient(135deg, #007bff, #0056b3);">
+                                    <h4 class="mb-0">Policy Details</h4>
+                                    <span class="badge bg-success">Active</span>
+                                </div>
+                                <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
 
-            <!-- Policy Details Table -->
-            <table class="table table-borderless align-middle">
-                <tbody>
-                    <tr>
-                        <th style="width: 30%; text-align: left; color: #6c757d;">Policy Name:</th>
-                        <td><?php echo htmlspecialchars(
-                            $PolicyDetails["PlanNames"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Policy Number:</th>
-                        <td><?php echo htmlspecialchars(
-                            $PolicyDetails["PolicyNumber"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Name:</th>
-                        <td><?php echo htmlspecialchars(
-                            $PolicyDetails["UserName"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Contact Number:</th>
-                        <td><?php echo htmlspecialchars(
-                            $PolicyDetails["MobileNumber"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Email:</th>
-                        <td><?php echo htmlspecialchars(
-                            $PolicyDetails["Email"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Address:</th>
-                        <td><?php echo htmlspecialchars(
-                            $PolicyDetails["Address"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">State:</th>
-                        <td><?php echo htmlspecialchars(
-                            $StateDetails["StateName"]
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Policy Start Date:</th>
-                        <td><?php echo htmlspecialchars(
-                           $formattedDate
-                        ); ?></td>
-                    </tr>
-                    <tr>
-                        <th style="text-align: left; color: #6c757d;">Policy End Date:</th>
-                        <td><?php echo htmlspecialchars(
-                            $expiryFormattedDate
-                        ); ?></td>
-                    </tr>
-                </tbody>
-            </table>
+                                    <!-- Policy Details Table -->
+                                    <table class="table table-borderless align-middle">
+                                        <tbody>
+                                            <tr>
+                                                <th style="width: 30%; text-align: left; color: #6c757d;">Policy Name:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["PlanNames"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Policy Number:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["PolicyNumber"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Name:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["UserName"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Contact Number:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["MobileNumber"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Email:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["Email"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Address:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["Address"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">State:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $StateDetails["StateName"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Policy Start Date:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                   $formattedDate
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: left; color: #6c757d;">Policy End Date:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $expiryFormattedDate
+                                                ); ?></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-        </div>
-    </div>
-</div>
+                                </div>
+                            </div>
+                        </div>
 
 
 
@@ -281,7 +281,7 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
             <form id="payments_form" onsubmit="return false;" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-group">
-                         <input type="hidden" class="form-control" id="policy_id" name="policy_id" value="<?php echo $PolicyID?>"required readonly>
+                         <input type="text" class="form-control" id="policy_id" name="policy_id" value="<?php echo $PolicyID?>"required readonly>
                         <label for="razorpay_payment_id">Transaction ID</label>
                         <input type="text" class="form-control" id="razorpay_payment_id" name="razorpay_payment_id" required>
                     </div>
@@ -1140,7 +1140,7 @@ function savefamilyMember() {
             Alert(response.message);
             if (response.error == false) { 
                 setTimeout(function() {
-                    location.reload();
+                    // location.reload();
                 }, 1500);
                 $("#UpdatePaymentsBtn").html("Update Payment");
                 $('form')[0].reset();  // Reset the form

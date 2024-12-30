@@ -67,7 +67,7 @@ if(isset($customerId)){
      $expiryFormattedDate = $expiryDateObj->format('d F Y');
 
        $state_obj = new State($conn);
-       $StateDetailss = $state_obj->GetStateNameByID($PolicyCustomer_details["State"]);
+       $StateDetailss = $state_obj->GetStateNameByID($PolicyCustomer_details["sstate"]);
        $StateDetails = $StateDetailss[0];
 
 
@@ -383,7 +383,16 @@ $html4 = '
     $PolicyCustomer_Member_detailss=$PolicyCustomer->getPolicyCustomerMemberDetails($customerId, $PolicyPlanID);
     $html4 .= '<h3>Members of ' . htmlspecialchars($CustomerPlanDetailss[0]['PlanName']) . '</h3>';
      foreach ($PolicyCustomer_Member_detailss as $index => $member) {
-    $dateOfBirth = DateTime::createFromFormat('Y-m-d', $member['DateOfBirth'])->format('d-m-Y');
+        $dateOfBirth = 'Invalid Date'; // Default value
+        if (!empty($member['DateOfBirth'])) {
+            $dateObject = DateTime::createFromFormat('Y-m-d', $member['DateOfBirth']);
+            if (!$dateObject) {
+                $dateObject = DateTime::createFromFormat('d-m-Y', $member['DateOfBirth']);
+            }
+            if ($dateObject) {
+                $dateOfBirth = $dateObject->format('d-m-Y');
+            }
+        }
     $html4 .= '
     <tr>
         <th colspan="2" style=" padding: 8px; background-color: transparent; text-align: left;">Member ' . ($index + 1) . ' '.$CustomerPlanDetailss[0]['PlanName'].'</th>

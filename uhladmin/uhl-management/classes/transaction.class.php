@@ -86,23 +86,25 @@ public function insertPaymentsDetails($data) {
 
             // Check if the bank details were inserted successfully
             if ($response_insert_bank_details) {
-                // Both payment and bank details inserted successfully
-                echo json_encode(['error' => false, 'message' => 'Payment and bank details inserted successfully!']);
+                 $response['error'] = false;
+                $response['message'] = 'Payment and bank details inserted successfully!';
             } else {
-                // Error inserting bank details
-                echo json_encode(['error' => true, 'message' => 'Error inserting bank details.']);
+              
+               $response['error'] = true;
+                $response['message'] = 'Error inserting bank details.';
             }
         } else {
-            // Payment mode is not bank or neft, skip bank details insertion
-            echo json_encode(['error' => false, 'message' => 'Payment details inserted successfully!']);
+             $response['error'] = false;
+            $response['message'] = 'Payment details inserted successfully!';
         }
     } else {
-        // Error inserting payment details
-        echo json_encode(['error' => true, 'message' => 'Error inserting payment details.']);
+         $response['error'] = true;
+        $response['message'] = 'Error inserting payment details.';
     }
+     return $response;
 }
 
-
+   
 }
 
 ?>

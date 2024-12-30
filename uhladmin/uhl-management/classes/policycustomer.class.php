@@ -617,7 +617,7 @@ return $response;
     MAX(ac.ContactNumber) AS MobileNumber, -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     MAX(ac.Email) AS Email,                -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     MAX(ac.Address) AS Address,            -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
-    MAX(ac.State) AS State,                -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
+    MAX(ac.State) AS sstate,                -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     MAX(ac.PinCode) AS PinCode,            -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     cp.PolicyNumber,
     MAX(cp.CreatedDate) AS CreatedDate,    -- Aggregating to avoid ONLY_FULL_GROUP_BY issue

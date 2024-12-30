@@ -687,7 +687,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         }
                                     } catch (error) {
                                         console.error('Error fetching customer ID from session:', error);
-                                        alert('An error occurred while fetching the customer ID.');
+                                        Alert('An error occurred while fetching the customer ID.');
                                         return false;
                                     }
                                 }
@@ -696,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 //alert("Current Customer ID: " + customer_id_1);
 
                                 if (!customer_id_1) {
-                                    alert("Customer ID not found. Please complete Step 1 first.");
+                                    Alert("Customer ID not found. Please complete Step 1 first.");
                                     return false;
                                 }
 

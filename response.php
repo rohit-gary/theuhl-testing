@@ -21,7 +21,6 @@ $postdata = $_POST;
 $msg = '';
 $status = '';
 
-
 if (isset($postdata['key'])) {
     $key                = $postdata['key'];
     $txnid              = $postdata['txnid'];
@@ -82,7 +81,7 @@ function verifyPayment($key,$salt,$txnid,$status)
     // for production
     $wsUrl = "https://info.payu.in/merchant/postservice.php?form=2";
    
-    //for test
+    // //for test
     // $wsUrl = "https://test.payu.in/merchant/postservice.php?form=2";
     
     try 

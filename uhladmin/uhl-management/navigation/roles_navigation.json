@@ -8,7 +8,8 @@
       "_Nav_Channel_Partner",
        "_Nav_Customer",
        "_Nav_Account",
-       "_Nav_Neft"
+       "_Nav_Neft",
+       "_Nav_DocTest"
   ],
   "Admin": [
     "_Nav_Dashboard",
@@ -19,7 +20,8 @@
       "_Nav_Channel_Partner",
        "_Nav_Customer",
        "_Nav_Account",
-       "_Nav_Neft"
+       "_Nav_Neft",
+       "_Nav_DocTest"
 
   ],
   "Client Admin": [
@@ -31,7 +33,8 @@
      "_Nav_Channel_Partner",
       "_Nav_Customer",
       "_Nav_Account",
-      "_Nav_Neft"
+      "_Nav_Neft",
+      "_Nav_DocTest"
   ],
 
   "Channel Partner": [

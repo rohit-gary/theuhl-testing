@@ -51,11 +51,24 @@ $PolicyNumber=isset($_SESSION['PolicyNumber']) ? $_SESSION['PolicyNumber'] : '';
 </div>
 
 <div class="mt-5 text-center">
-    <button type="button" class="btn btn-primary" onclick="goToPreviousStep()">Previous</button>
-<button class="btn btn-success text-white" id="UplodeDocumentssBtn" onclick="AddUploade()">Upload Document</button>
+    <button type="button" class="btn btn-primary" id="goToPreviousStepLastBtn"onclick="goToPreviousStep()">Previous</button>
+   <button class="btn btn-success text-white" id="UplodeDocumentssBtn" onclick="AddUploade()">Upload Document</button>
+
 
 </div>
+
 </form>
+<button class="btn btn-info text-black my-4" id="feezesendmail" onclick="feezesendmail('<?php echo $PolicyNumber; ?>')">Freeze AllStep & SendPolicyDoc</button>
 
 
+<!-- ---------------Thanks You Page-------------- -->
+<section id="last_step_thanks" style="display: none;">
+    
+   <div class="confetti"></div>
+  <div class="thank-you-card">
+    <h1>Thank You!</h1>
+    <p>Your form has been Successfully Submitted. </p>
+    <p>Go to Add Policy Customer Tab to Add More Customers</p>
+  </div>
+</section>
 

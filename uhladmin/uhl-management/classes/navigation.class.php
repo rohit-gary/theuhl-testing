@@ -17,6 +17,7 @@ class Navigation extends Core
 	public $_Nav_Dashboard_Customer;
 	public $_Nav_Account;
 	public $_Nav_Neft;
+	public $_Nav_DocTest;
 	public function __construct()
 	{
 		$_Nav_Users = false;
@@ -35,6 +36,7 @@ class Navigation extends Core
 		$_Nav_Dashboard_Customer=false;
 		$_Nav_Account=false;
 		$_Nav_Neft=false;
+		$_Nav_DocTest=false;
 	}
 	public function setNavigation($role_array)
 	{
@@ -89,6 +91,8 @@ class Navigation extends Core
 
 			if(in_array("_Nav_Neft",$temp_nav_array))
 				$this->_Nav_Neft=true;
+			if(in_array("_Nav_DocTest",$temp_nav_array))
+				$this->_Nav_DocTest=true;
 
 		}
 	}

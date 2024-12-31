@@ -10,16 +10,16 @@ include("../../include/get-db-connection.php");
 
 $core = new Core();
 $core->setTimeZone();
-var_dump($_FILES); // For debugging the uploaded files
-die(); // Temporarily halt the script to check the output
+// var_dump($_FILES); // For debugging the uploaded files
+// die(); // Temporarily halt the script to check the output
 
 if (isset($_POST['PolicyNumber'])) {
     $policycustomer_obj = new PolicyCustomer($conn);
     $data = $_POST;
     $policyID = '';
     
-    var_dump($data);
-    die();
+    // var_dump($data);
+    // die();
 
     // Handle the form data (e.g., family member, document type, etc.)
     if ($data['form_action'] != "Update") {

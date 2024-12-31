@@ -244,6 +244,15 @@
                                     <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../users/view-users.php"><i class="side-menu__icon  fa fa-headphones"></i><span class="side-menu__label">Customer Support</span></a>
                                 </li>     -->
                             <?php } ?>
+
+
+                                   <?php if ($navigation->_Nav_DocTest) { ?>
+                            <li class="sub-category">
+                                <h3>Test Management</h3> </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-doctest.php"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">All Test</span></a>
+                                </li> 
+                            <?php } ?>
                             
 
                                <?php if ($navigation->_Nav_faqs) { ?>

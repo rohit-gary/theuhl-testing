@@ -1446,3 +1446,47 @@ function AddNewMemberModal()
 
 }
 
+ // Generate confetti
+    const confettiContainer = document.querySelector('.confetti');
+    for (let i = 0; i < 50; i++) {
+      const piece = document.createElement('div');
+      piece.classList.add('confetti-piece');
+      piece.style.setProperty('--color', `hsl(${Math.random() * 360}, 100%, 50%)`);
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.animationDelay = Math.random() * 2 + 's';
+      confettiContainer.appendChild(piece);
+    }
+
+
+function feezesendmail(PolicyNumber) {
+    alert("Clicked last button: " + PolicyNumber);
+    $.ajax({
+        url: "action/send-policy-doc-email.php",
+        method: "GET",
+        data: { PolicyNumber: PolicyNumber },
+        success: function(data) {
+            var response=JSON.parse(data);
+            Alert(response.message);
+            if(response.error==false){     
+                 $('#policyDocumentss_form').hide();
+                 $('#feezesendmail').hide();
+                 $('#last_step_thanks').fadeIn();
+                 $('#AddNewMemberModalbtn').hide();
+                  setTimeout(function() {
+                       $.ajax({
+                          url:'../controllers/clear-session.php',
+                          method:"GET",
+                          success:function(data){
+                            if(data=='success'){
+                              window.location.href="../PolicyCustomer/view-all-policy-customer-new"
+                            }
+                          }
+                       })
+                    }, 3000);
+            }
+        },
+        error: function(xhr, status, error) {
+            Alert("Error occurred:", error);
+        }
+    });
+}

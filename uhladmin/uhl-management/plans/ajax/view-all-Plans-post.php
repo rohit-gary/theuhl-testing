@@ -86,8 +86,6 @@ foreach ($plans_details_arr as $plans_details_value) {
         }
     }
 
-
-
     $data[] = array(
         "id" => $ID,
         "PlanName" => $PlanName,

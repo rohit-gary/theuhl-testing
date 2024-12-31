@@ -47,12 +47,12 @@
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
                            
-                             <a class="btn btn-info" onclick="AddTest()">Add Test</a>
-                            <h1 class="page-title">All Tests</h1>
+                             <a class="btn btn-info" onclick="AddTestPackage()">Add Test Package</a>
+                            <h1 class="page-title">All Tests Package</h1>
                             <div>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="../dashboard/admin-dashboard">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">View Test </li>
+                                    <li class="breadcrumb-item active" aria-current="page">View Test Package </li>
                                 </ol>
                             </div>
                         </div>
@@ -70,10 +70,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th class="wd-5p border-bottom-0">#</th>
-                                                        <th class="wd-15p border-bottom-0">Test Name</th>
-                                                        <th class="wd-15p border-bottom-0">Test Category</th>  
-                                                        <th class="wd-15p border-bottom-0">Test Type</th> 
-                                                        <th class="wd-25p border-bottom-0">Test Price</th>
+                                                        <th class="wd-15p border-bottom-0">Test Package Name</th>
+                                                        <th class="wd-15p border-bottom-0">Test Package Category</th>  
+                                                        <th class="wd-15p border-bottom-0">Test Package Type</th> 
+                                                        <th class="wd-25p border-bottom-0">Test Package Price</th>
                                                         <th class="wd-15p border-bottom-0">Details</th>
                                                         <th class="wd-10p border-bottom-0">Action</th>
                                                    </tr>
@@ -100,11 +100,11 @@
         </div>
 
                             <!-- Test  modal start  -->
-                    <div class="modal fade" id="add_test_modal" tabindex="1">
+                    <div class="modal fade" id="add_test_Package_modal" tabindex="1">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content modal-content-demo">
                                 <div class="modal-header">
-                                    <h3 class="modal-title" id="TestModalHeading"></h3>
+                                    <h3 class="modal-title" id="TestPackageModalHeading"></h3>
                                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">×</span>
                                     </button>
@@ -112,21 +112,21 @@
                                 <div class="modal-body">
                                     <form id="test_form" onsubmit="return false;">
 
-                                        <input type="hidden" id="form_action_test" name="form_action_test" value="" />
-                                        <input type="hidden" id="form_test_id" name="form_test_id" value="" />
+                                        <input type="hidden" id="form_action_test" name="form_action_test_Package" value="" />
+                                        <input type="hidden" id="form_test_id" name="form_test_Package_id" value="" />
 
                                         <div class="row">
                                             <div class="form-group col-md-12">
                                                 <label for="test_name" class="col-form-label">Test Name<span
                                                         class="text-danger">*<span></label>
-                                                <input type="text" class="form-control" name="test_name" id="test_name"
+                                                <input type="text" class="form-control" name="test_Package_name" id="test_Package_name"
                                                     Placeholder="Enter Test Name">
                                             </div>
 
                                             <div class="col-12  col-md-12">
                                                 <label for="test_cat" class="col-form-label">Test Category<span
                                                         class="text-danger">*<span></label>
-                                                    <select class="form-control" id="test_cat" name="test_cat[]" multiple="multiple">
+                                                    <select class="form-control" id="test_Package_cat" name="test_Package_cat[]" multiple="multiple">
                                                     <option value=" " disabled></option>
                                                     <?php
                                                     foreach ($all_testcat as $test_value) {
@@ -141,21 +141,21 @@
                                             <div class="form-group col-md-12">
                                                 <label for="test_type" class="col-form-label">Test Type<span
                                                         class="text-danger">*<span></label>
-                                                <input type="text" class="form-control" name="test_type" id="test_type"
+                                                <input type="text" class="form-control" name="test_Package_type" id="test_Package_type"
                                                     Placeholder="Enter Test Type">
                                             </div>
 
                                             <div class="form-group col-md-12">
                                                 <label for="test_fee" class="col-form-label">Test Fee<span
                                                         class="text-danger">*<span></label>
-                                                <input type="text" class="form-control" name="test_fee" id="test_fee"
+                                                <input type="text" class="form-control" name="test_Package_fee" id="test_Package_fee"
                                                     Placeholder="Enter Test Fee">
                                             </div>
                                         </div>
 
 
                                         <div class="mt-5 text-center">
-                                            <button class="btn btn-success text-white" id="addUpdateTBtn"
+                                            <button class="btn btn-success text-white" id="addUpdatePackageBtn"
                                                 onclick="AddUpdateTest()"></button>
                                             <!-- <a href="#"  class="btn btn-success">Submit</a> -->
                                         </div>

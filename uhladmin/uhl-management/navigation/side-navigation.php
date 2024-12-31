@@ -97,13 +97,13 @@
 
                                <li>
                                 <a href="#" class="side-menu__item has-link clearSessionLink">
-                                   <i class="fa fa-user-plus"></i> Add Policy Customer
+                                   <i class="side-menu__icon fa fa-user-plus"></i> Add Policy Customer
                                 </a>
                                </li>
 
                                <li>
                                  <a href="../PolicyCustomer/view-all-policy-customer-new" class="side-menu__item has-link">
-                                 <i class="fa fa-list mr-2"></i><span class="side-menu__label">Policy Customer List</span> 
+                                 <i class="side-menu__icon fa fa-list mr-2"></i><span class="side-menu__label">Policy Customer List</span> 
                                 </a>
                                </li>
                                  
@@ -250,7 +250,11 @@
                             <li class="sub-category">
                                 <h3>Test Management</h3> </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-doctest.php"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">All Test</span></a>
+                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-doctest.php"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">All Test </span></a>
+                                </li> 
+
+                                <li class="slide">
+                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-test-package.php"><i class="side-menu__icon fa fa-medkit"></i><span class="side-menu__label">All Test Package</span></a>
                                 </li> 
                             <?php } ?>
                             

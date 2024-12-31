@@ -420,6 +420,7 @@ document.querySelector("#step4-button").addEventListener("click", navigateToStep
 
 
 // Proceed to payment function
+$('#gotofifthstep').hide();
 async function savePolicyAmount() {
     
       var PolicyNumber=$("#PolicyNumber").val();
@@ -488,6 +489,7 @@ async function savePolicyAmount() {
                 // Check if error is false
                 if (paymentDataJson.error === false) {
                     Alert("Payment data saved successfully!");
+                    $('#gotofifthstep').show();
                     // Redirect to payment gateway or confirmation page
                      generatePaymentLink(paymentDataJson.PolicyNumber);
                     // window.location.href = "payment-confirmation.php";

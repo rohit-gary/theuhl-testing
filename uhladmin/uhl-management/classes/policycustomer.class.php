@@ -1097,7 +1097,41 @@ public function _InsertTableRecords_prepare($conn, $tableName, $data)
 
         $response_insert_details = $this->_InsertTableRecords_prepare($this->conn, 'customerpolicyamount', $data);
         return $response_insert_details;
-    } 
+    }
+
+
+
+    public function getAllPolicyCustomerDetails() {
+    $stmt = $this->conn->prepare("SELECT 
+        ac.UserID,
+        MAX(ac.Name) AS UserName,
+        MAX(ac.ContactNumber) AS MobileNumber,
+        MAX(ac.Email) AS Email,
+        MAX(ac.Address) AS Address,
+        MAX(ac.State) AS sstate,
+        MAX(ac.PinCode) AS PinCode,
+        cp.PolicyNumber,
+        MAX(cp.CreatedDate) AS CreatedDate,
+        p.PlanName AS PlanNames,
+        MAX(cpa.Amount) AS TotalAmount,
+        MAX(py.status) AS PaymentStatus  
+    FROM 
+        all_customer ac
+    INNER JOIN 
+        customerpolicy cp ON ac.ID = cp.CustomerID
+    INNER JOIN 
+        customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber
+    LEFT JOIN 
+        plans p ON cp.PlanID = p.ID
+    LEFT JOIN 
+        payments py ON py.PolicyNumber = cp.PolicyNumber
+    GROUP BY 
+        cp.PolicyNumber, ac.UserID");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_all(MYSQLI_ASSOC); 
+
+}
 
 
 }

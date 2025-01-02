@@ -57,6 +57,7 @@ $conf = new Conf();
 
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
+                            <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()" id ="export_data">ExportData</button>
                             <h1 class="page-title">All Health Plans Customer</h1>
                             <div>
                                 <ol class="breadcrumb">

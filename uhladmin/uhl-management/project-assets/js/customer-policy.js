@@ -1490,3 +1490,13 @@ function feezesendmail(PolicyNumber) {
         }
     });
 }
+
+
+
+
+// --------------Export all Policy Customer data----------------------
+function ExportPolicyCustomer(){
+   
+   window.location.href="action/export-policy-customer-data.php"
+
+} 

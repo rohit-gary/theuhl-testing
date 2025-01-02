@@ -225,8 +225,12 @@
 
 
 $(document).ready(function() {
-    $('#test_cat').select2();
-     width: '100%'  // This ensures the select2 takes the full width of its container
+    $('#test_cat').select2({
+        placeholder: "Select Test Category Names",
+        allowClear: true,
+        height: '150px', 
+        width: '100%',
+    });
 });
 
 </script>

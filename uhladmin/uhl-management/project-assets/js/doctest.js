@@ -102,7 +102,8 @@ function UpdateTest(ID){
     
       $("#test_name").val(response.TestName);
 
-      $("#test_cat").val(response.TestCategory);
+       var testPackageCategoryArray = response.TestCategory.split(",");
+      $("#test_cat").val(testPackageCategoryArray).change();
 
       $("#test_type").val(response.TestType);
 
@@ -112,10 +113,133 @@ function UpdateTest(ID){
 
 
 
-function AddTestPackage(){
-   $('#test_Package_form')[0].reset();
+function AddTestPackage()
+{
+  $('#test_Package_form')[0].reset();
   $("#form_action_test_Package").val("Add");
   $("#add_test_Package_modal").modal("show");
   $("#addUpdatePackageBtn").html("Add");
-  $("#TestPackageModalHeading").html("Add Test");
+  $("#TestPackageModalHeading").html("Add Test Package");
+}
+
+
+function AddUpdateTestPackage()
+{
+
+  var form_action = $("#form_action_test_Package").val();
+  var test_Package_name = $("#test_Package_name").val();
+  var test_Package_cat = $("#test_Package_cat").val();
+  var package_test_name = $("#package_test_name").val();
+  var test_Package_type = $("#test_Package_type").val();
+  var test_Package_fee = $("#test_Package_fee").val();
+
+  
+  if (test_Package_name.trim() === "") {
+    Alert("Please Enter Test Package Name");
+    return false;
+  }
+
+   if (!test_Package_cat || test_Package_cat.length === 0) 
+   {
+    Alert("Please Select at Least One Test Category");
+    return false;
+    }
+
+
+  if (!package_test_name || package_test_name.length === 0) 
+    {
+    Alert("Please Select at Least One Package Test Name");
+    return false;
+    }
+
+  if (test_Package_type.trim() === "") {
+    Alert("Please Enter Test Package Type");
+    return false;
+  }
+
+  if (test_Package_fee.trim() === "" || isNaN(test_Package_fee)) {
+    Alert("Please Enter a Valid Test Package Fee");
+    return false;
+  }
+
+  // Indicate loading
+  $("#addUpdateTBtn").html("Please Wait...").attr("disabled", true);
+
+  // AJAX request
+  $.ajax({
+    url: "action/add-update-doc-test_package.php",
+    type: "POST",
+    data: $("#test_Package_form").serialize(),
+    success: function (data) {
+      var response = JSON.parse(data);
+      Alert(response.message);
+
+      if (response.error === false) {
+        // Close modal and reset form
+        $("#add_test_Package_modal").modal("hide");
+        $("#addUpdatePackageBtn").html("Add").attr("disabled", false);
+        $("#test_Package_form")[0].reset();
+
+        // Reload page after a short delay
+        setTimeout(function () {
+          location.reload();
+        }, 1500);
+      } else {
+        $("#addUpdatePackageBtn").html("Add").attr("disabled", false);
+      }
+    },
+    error: function () {
+      Alert("An error occurred while processing the request.");
+      $("#addUpdatePackageBtn").html("Add").attr("disabled", false);
+    },
+  });
+
+  return false; // Prevent form submission
+}
+
+function UpdateTestPackage(ID)
+{ 
+  $("#form_action_test_Package").val("Update");
+  $("#form_test_Package_id").val(ID);
+  $("#add_test_Package_modal").modal("show");
+  $("#addUpdatePackageBtn").html("Update");
+  $("#TestPackageModalHeading").html("Update Test Package");
+  
+  $.post("ajax/get-test-package_details.php",
+    {
+      ID: ID
+    },
+    function (data, status) {
+      var response = JSON.parse(data);
+
+      
+      var testPackageCategoryArray = response.TestPackageCategory.split(",");
+      var packageTestNameArray =    response.PackageTestName.split(",");
+        
+        // Set the values for multi-select fields
+      $("#test_Package_cat").val(testPackageCategoryArray).change();
+      $("#package_test_name").val(packageTestNameArray).change();
+      $("#test_Package_name").val(response.TestPackageName);
+
+      // $("#test_Package_cat").val(response.TestPackageCategory);
+
+      // $("#package_test_name").val(response.PackageTestName);
+
+      $("#test_Package_type").val(response.TestPackageType);
+
+      $("#test_Package_fee").val(response.TestPackageFee);
+    });
+}
+
+
+function DeleteTestPackage(ID){
+    $.post("action/delete-test-package-details.php",
+      { ID: ID },
+      function (data, status) {
+        var response = JSON.parse(data);
+        Alert(response.message);
+        if (response.error== false) {
+          location.reload();
+        }
+      });
 }

@@ -14,7 +14,12 @@ class Test extends Core
 		return $services_list;
 	}
 
-	
+	public function GetAllTestName()
+	{
+		$where = " where IsActive = 1";
+		$services_list = $this->_getTableRecords($this->conn,'doc_test',$where);
+		return $services_list;
+	}
 
 
 	public function GetTestCats($data)
@@ -64,7 +69,32 @@ class Test extends Core
 		$response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
 		return $response_insert_details;	
 	}
+     
 
+     public function InsertDocTestPackage($data)
+	{
+		$TestPackageName = $data['test_Package_name'];
+		$TestPackageCategory = $data['test_Package_cat'];
+		$PackageTestName = $data['package_test_name'];
+		$TestPackageType = $data['test_Package_type'];
+		$TestPackageFee = $data['test_Package_fee'];
+		
+
+		$CreatedDate = $data['CreatedDate'];
+		$CreatedTime = $data['CreatedTime'];
+		$CreatedBy = $data['CreatedBy'];
+		$sql = "INSERT INTO `test_package`(`TestPackageName`, `TestPackageCategory`,`PackageTestName`,`TestPackageType`,`TestPackageFee`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestPackageName','$TestPackageCategory','$PackageTestName','$TestPackageType','$TestPackageFee','$CreatedDate','$CreatedTime','$CreatedBy')";
+		$response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
+		return $response_insert_details;	
+	}
+
+	public function UpdateTestPackageDetails($data)
+	{
+		extract($data);
+		$update_sql = "TestPackageName = '$test_Package_name' , TestPackageCategory= '$test_Package_cat' ,PackageTestName='$package_test_name', TestPackageType= '$test_Package_type', TestPackageFee= '$test_Package_fee' where ID = $form_test_Package_id";
+		$response = $this->_UpdateTableRecords($this->conn,'test_package',$update_sql);
+		return $response;
+	}
 
 	
 	public function UpdateTestCatsDetails($data)
@@ -85,6 +115,10 @@ class Test extends Core
 
 
 
+
+
+
+
 	public function GetTestCatDetails($data)
 	{
 		$ID = $data['ID'];
@@ -102,6 +136,14 @@ class Test extends Core
 		return $service_details;
 	}
 
+	public function GetTestPackageDetails($data)
+	{
+		$ID = $data['ID'];
+		$where = " where ID = $ID";
+		$service_details = $this->_getTableDetails($this->conn,"test_package",$where);
+		return $service_details;
+	}
+
 	public function DeleteTestCat($data){
 		$ID = $data['ID'];
 		$where = " where ID = $ID";
@@ -115,6 +157,14 @@ class Test extends Core
 		$ID = $data['ID'];
 		$where = " where ID = $ID";
 		$service_details = $this->delete_identity_filter($this->conn,"doc_test",$where);
+		return $service_details;
+
+	}
+
+	 public function DeleteTestPackage($data){
+		$ID = $data['ID'];
+		$where = " where ID = $ID";
+		$service_details = $this->delete_identity_filter($this->conn,"test_package",$where);
 		return $service_details;
 
 	}

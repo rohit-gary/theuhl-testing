@@ -234,46 +234,7 @@
                                 </div>
                             </div>         
 
-                            <div class="col-md-6">
-                                <div class="card ">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h3 class="card-title">All Test</h3>
-                                        <a class="btn btn-info" onclick="AddTest()">Add</a>
-                                    </div>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered text-nowrap border-bottom"
-                                                id="all_student_detals">
-                                                <tbody>
-                                                    <?php
-                                                        foreach($all_testcat as $test_value)
-                                                        {
-                                                        ?>
-                                                    <tr>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <?= $test_value['TestCategoryName']; ?></td>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <a class="btn text-danger btn-sm"
-                                                                onclick="UpdateTest(<?= $test_value['ID'];?>)">
-                                                                <span class="fa fa-pencil-square-o fs-14"></span>
-                                                            </a>
-                                                            <a class="btn text-danger btn-sm"
-                                                                onclick="DeleteTest(<?= $test_value['ID'];?>)">
-                                                                <span class="fa fa-trash fs-14"></span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                        }
-                                                        ?>
-
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                        
+                                                
                         </div>
 
 

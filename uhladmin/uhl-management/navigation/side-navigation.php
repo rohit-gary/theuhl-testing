@@ -186,23 +186,23 @@
                             
                             <?php if ($navigation->_Nav_Company) { ?>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_company" data-bs-toggle="slide" href="../company/view-companies.php"><i class="side-menu__icon fa fa-building"></i><span class="side-menu__label">Companies</span></a>
+                                    <a class="side-menu__item" id="nav_company" data-bs-toggle="slide" href="../company/view-companies"><i class="side-menu__icon fa fa-building"></i><span class="side-menu__label">Companies</span></a>
                                 </li>    
                             <?php } ?>
                             <?php if ($navigation->_Nav_Company_Sites) { ?>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_company_sites" data-bs-toggle="slide" href="../company/view-company-sites.php?nav=1"><i class="side-menu__icon zmdi zmdi-city-alt"></i><span class="side-menu__label">Company Sites</span></a>
+                                    <a class="side-menu__item" id="nav_company_sites" data-bs-toggle="slide" href="../company/view-company-sites?nav=1"><i class="side-menu__icon zmdi zmdi-city-alt"></i><span class="side-menu__label">Company Sites</span></a>
                                 </li>    
                             <?php } ?>
                             <?php if ($navigation->_Nav_Service_Reports) { ?>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_servive_reports" data-bs-toggle="slide" href="../service-reports/view-all-service-reports.php"><i class="side-menu__icon fa fa-address-card"></i><span class="side-menu__label">Service Reports</span></a>
+                                    <a class="side-menu__item" id="nav_servive_reports" data-bs-toggle="slide" href="../service-reports/view-all-service-reports"><i class="side-menu__icon fa fa-address-card"></i><span class="side-menu__label">Service Reports</span></a>
                                 </li>    
                             <?php } ?>
                             <?php
                             if ($navigation->_Nav_Services) { ?>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_services" data-bs-toggle="slide" href="../services/view-services.php"><i class="side-menu__icon fa fa-address-card"></i><span class="side-menu__label">All Services</span></a>
+                                    <a class="side-menu__item" id="nav_services" data-bs-toggle="slide" href="../services/view-services"><i class="side-menu__icon fa fa-address-card"></i><span class="side-menu__label">All Services</span></a>
                                 </li>   
                             <?php }
                             if ($navigation->_Nav_Users) { ?>
@@ -210,19 +210,19 @@
                                 <h3>Settings</h3>
                             </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../users/view-users.php"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Users</span></a>
+                                    <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../users/view-users"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Users</span></a>
                                 </li>    
                             <?php }
 
                             if ($navigation->_Nav_Channel_Partner) { ?>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../channel-partner/view-all-channel-partner.php"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Channel Partner</span></a>
+                                    <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../channel-partner/view-all-channel-partner"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Channel Partner</span></a>
                                 </li>    
                             <?php }
 
                             if ($navigation->_Nav_Configuration) { ?>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_configuration" data-bs-toggle="slide" href="../configuration/view-configuration.php"><i class="side-menu__icon fa fa-gear"></i><span class="side-menu__label">Configuration</span></a>
+                                    <a class="side-menu__item" id="nav_configuration" data-bs-toggle="slide" href="../configuration/view-configuration"><i class="side-menu__icon fa fa-gear"></i><span class="side-menu__label">Configuration</span></a>
                                 </li>    
                             <?php }
                             ?>
@@ -232,7 +232,7 @@
                             <li class="sub-category">
                                 <h3>Doctor Management</h3> </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../doctors/view-doctors.php"><i class="side-menu__icon fa fa-stethoscope"></i><span class="side-menu__label">Doctors</span></a>
+                                    <a class="side-menu__item" id="nav_user" data-bs-toggle="slide" href="../doctors/view-doctors"><i class="side-menu__icon fa fa-stethoscope"></i><span class="side-menu__label">Doctors</span></a>
                                 </li> 
 
 
@@ -250,11 +250,11 @@
                             <li class="sub-category">
                                 <h3>Test Management</h3> </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-doctest.php"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">All Test </span></a>
+                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-doctest"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">All Test </span></a>
                                 </li> 
 
                                 <li class="slide">
-                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-test-package.php"><i class="side-menu__icon fa fa-medkit"></i><span class="side-menu__label">All Test Package</span></a>
+                                    <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide" href="../doctest/view-all-test-package"><i class="side-menu__icon fa fa-medkit"></i><span class="side-menu__label">All Test Package</span></a>
                                 </li> 
                             <?php } ?>
                             

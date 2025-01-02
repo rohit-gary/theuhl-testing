@@ -71,8 +71,16 @@ $totalRecordwithFilter = $row_count_result['row_count'];
 // $totalRecordwithFilter = $PolicyCustomer->_getTotalRows($conn, 'all_customer', $filter);
 
 ## Total number of records without filtering
-$totalRecords = $PolicyCustomer->GetAllPolicyCustomer('all_customer');
-
+$sql_count = "SELECT COUNT(DISTINCT cp.PolicyNumber) AS total_count
+              FROM all_customer ac
+              INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID";
+$result_total = mysqli_query($conn, $sql_count);
+if (!$result_total) {
+    die("Query failed: " . mysqli_error($conn));
+}
+$totalResult = $result_total->fetch_assoc();
+// $totalRecords = $PolicyCustomer->GetAllPolicyCustomer('all_customer');
+$totalRecords = $totalResult['total_count'];
 ## Pagination and ordering
 
 
@@ -81,7 +89,7 @@ $totalRecords = $PolicyCustomer->GetAllPolicyCustomer('all_customer');
 
 ## Main SQL query to fetch policy details
 $sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber, MAX(ac.CreatedBy) AS CreatedBy, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN pmd.Document IS NULL THEN 1 END) = 0 THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_member_details pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
-     GROUP BY ac.ID, cp.PolicyNumber ORDER BY ac.ID DESC, cp.PolicyNumber ";
+     GROUP BY ac.ID, cp.PolicyNumber ORDER BY ac.ID DESC, cp.PolicyNumber  LIMIT $row, $rowperpage ";
 
      // echo $sql;
     $result = mysqli_query($conn, $sql);
@@ -153,7 +161,7 @@ foreach ($policy_details_arr as $policy_details_value) {
 ## Prepare the JSON response
 $response = array(
     "draw" => intval($draw),
-    "iTotalRecords" => $totalRecordwithFilter,
+    "iTotalRecords" => $totalRecords,
     "iTotalDisplayRecords" => $totalRecordwithFilter,
     "aaData" => $data
 );

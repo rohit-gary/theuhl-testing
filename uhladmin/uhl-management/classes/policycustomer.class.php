@@ -1126,7 +1126,9 @@ public function _InsertTableRecords_prepare($conn, $tableName, $data)
     LEFT JOIN 
         payments py ON py.PolicyNumber = cp.PolicyNumber
     GROUP BY 
-        cp.PolicyNumber, ac.UserID");
+        cp.PolicyNumber, ac.UserID
+    ORDER BY 
+        MAX(cp.CreatedDate) DESC");
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_all(MYSQLI_ASSOC); 

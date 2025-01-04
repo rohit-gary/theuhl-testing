@@ -31,6 +31,12 @@ class Test extends Core
 		return $service_details;
 	}
 
+	public function GetAllTestPackage()
+	{
+		$where = " where IsActive = 1";
+		$services_list = $this->_getTableRecords($this->conn,'test_package',$where);
+		return $services_list;
+	}
 	
 	public function setTestCatsArraybyID()
 	{
@@ -91,7 +97,7 @@ class Test extends Core
 	public function UpdateTestPackageDetails($data)
 	{
 		extract($data);
-		$update_sql = "TestPackageName = '$test_Package_name' , TestPackageCategory= '$test_Package_cat' ,PackageTestName='$package_test_name', TestPackageType= '$test_Package_type', TestPackageFee= '$test_Package_fee' where ID = $form_test_Package_id";
+		$update_sql = "TestPackageName = '$test_Package_name' , TestPackageCategory= '$test_Package_cat' ,PackageTestName='$package_test_name', TestPackageCode= '$test_Package_code', TestPackageFee= '$test_Package_fee' where ID = $form_test_Package_id";
 		$response = $this->_UpdateTableRecords($this->conn,'test_package',$update_sql);
 		return $response;
 	}
@@ -108,7 +114,7 @@ class Test extends Core
 	public function UpdateTestDetails($data)
 	{
 		extract($data);
-		$update_sql = "TestName = '$test_name' , TestCategory= '$test_cat' , TestType= '$test_type', TestFee= '$test_fee' where ID = $form_test_id";
+		$update_sql = "TestName = '$test_name' , TestCategory= '$test_cat' , TestCode= '$test_code', TestFee= '$test_fee' where ID = $form_test_id";
 		$response = $this->_UpdateTableRecords($this->conn,'doc_test',$update_sql);
 		return $response;
 	}

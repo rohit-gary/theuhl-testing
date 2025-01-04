@@ -1,0 +1,8 @@
+
+2025-01-04_15:28:41_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_all_test_category.php_14
+ {
+    "CustomerID":"8",
+    "PlanID":"63"
+}
+2025-01-04_15:28:41_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_all_test_category.php_39
+{"error":false,"data":[{"ID":"1","TestCategoryName":"B","CreatedDate":"2024-12-25","CreatedTime":"12:11:06","CreatedBy":"AdminUhl","IsActive":"1"},{"ID":"8","TestCategoryName":"A","CreatedDate":"2024-12-25","CreatedTime":"13:03:28","CreatedBy":"AdminUhl","IsActive":"1"},{"ID":"9","TestCategoryName":"C","CreatedDate":"2024-12-25","CreatedTime":"13:03:34","CreatedBy":"AdminUhl","IsActive":"1"},{"ID":"10","TestCategoryName":"Complete Blood Count ","CreatedDate":"2025-01-02","CreatedTime":"17:49:18","CreatedBy":"AdminUhl","IsActive":"1"},{"ID":"11","TestCategoryName":"Dengue Profile (Elisa) Test:","CreatedDate":"2025-01-02","CreatedTime":"17:49:43","CreatedBy":"AdminUhl","IsActive":"1"}]}

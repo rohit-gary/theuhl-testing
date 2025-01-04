@@ -72,7 +72,7 @@
                                                         <th class="wd-5p border-bottom-0">#</th>
                                                         <th class="wd-15p border-bottom-0">Test Name</th>
                                                         <th class="wd-15p border-bottom-0">Test Category</th>  
-                                                        <th class="wd-15p border-bottom-0">Test Type</th> 
+                                                        <th class="wd-15p border-bottom-0">Test Code</th> 
                                                         <th class="wd-25p border-bottom-0">Test Price</th>
                                                         <th class="wd-15p border-bottom-0">Details</th>
                                                         <th class="wd-10p border-bottom-0">Action</th>
@@ -139,10 +139,10 @@
                                             </div>
 
                                             <div class="form-group col-md-12">
-                                                <label for="test_type" class="col-form-label">Test Type<span
+                                                <label for="test_type" class="col-form-label">Test Code<span
                                                         class="text-danger">*<span></label>
-                                                <input type="text" class="form-control" name="test_type" id="test_type"
-                                                    Placeholder="Enter Test Type">
+                                                <input type="text" class="form-control" name="test_code" id="test_code"
+                                                    Placeholder="Enter Test Code">
                                             </div>
 
                                             <div class="form-group col-md-12">

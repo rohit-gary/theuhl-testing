@@ -58,14 +58,14 @@ class Test extends Core
 	{
 		$TestName = $data['test_name'];
 		$TestCategory = $data['test_cat'];
-		$TestType = $data['test_type'];
+		$TestType = $data['test_code'];
 		$TestFee = $data['test_fee'];
 		
 
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedTime = $data['CreatedTime'];
 		$CreatedBy = $data['CreatedBy'];
-		$sql = "INSERT INTO `doc_test`(`TestName`, `TestCategory`,`TestType`,`TestFee`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestName','$TestCategory','$TestType','$TestFee','$CreatedDate','$CreatedTime','$CreatedBy')";
+		$sql = "INSERT INTO `doc_test`(`TestName`, `TestCategory`,`TestCode`,`TestFee`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestName','$TestCategory','$TestType','$TestFee','$CreatedDate','$CreatedTime','$CreatedBy')";
 		$response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
 		return $response_insert_details;	
 	}

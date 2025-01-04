@@ -11,7 +11,7 @@ function AddUpdateTest() {
   var form_action = $("#form_action_test").val();
   var test_name = $("#test_name").val();
   var test_cat = $("#test_cat").val();
-  var test_type = $("#test_type").val();
+  var test_type = $("#test_code").val();
   var test_fee = $("#test_fee").val();
 
   console.log(test_cat);

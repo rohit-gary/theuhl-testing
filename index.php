@@ -730,7 +730,7 @@
 
                 <!-- Login Button -->
                 <div class="col-12 mt-5 text-center">
-                    <a class="btn site-button appointment-btn btnhover13 btn-rounded" href="../admin/authentication/login.php">My Health Plan Login</a>
+                    <a class="btn site-button appointment-btn btnhover13 btn-rounded" href="./uhladmin">My Health Plan Login</a>
                 </div>
             </div>
         </div>

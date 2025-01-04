@@ -105,7 +105,7 @@ function UpdateTest(ID){
        var testPackageCategoryArray = response.TestCategory.split(",");
       $("#test_cat").val(testPackageCategoryArray).change();
 
-      $("#test_type").val(response.TestType);
+      $("#test_code").val(response.TestCode);
 
       $("#test_fee").val(response.TestFee);
     });
@@ -130,7 +130,7 @@ function AddUpdateTestPackage()
   var test_Package_name = $("#test_Package_name").val();
   var test_Package_cat = $("#test_Package_cat").val();
   var package_test_name = $("#package_test_name").val();
-  var test_Package_type = $("#test_Package_type").val();
+  var test_Package_type = $("#test_Package_code").val();
   var test_Package_fee = $("#test_Package_fee").val();
 
   
@@ -225,7 +225,7 @@ function UpdateTestPackage(ID)
 
       // $("#package_test_name").val(response.PackageTestName);
 
-      $("#test_Package_type").val(response.TestPackageType);
+      $("#test_Package_code").val(response.TestPackageCode);
 
       $("#test_Package_fee").val(response.TestPackageFee);
     });

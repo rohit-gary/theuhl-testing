@@ -76,7 +76,7 @@
                                                         <th class="wd-15p border-bottom-0">Test Package Name</th>
                                                         <th class="wd-15p border-bottom-0">Test Package Category</th> 
                                                         <th class="wd-15p border-bottom-0">Package Test Name</th>  
-                                                        <th class="wd-15p border-bottom-0">Test Package Type</th> 
+                                                        <th class="wd-15p border-bottom-0">Test Package Code</th> 
                                                         <th class="wd-25p border-bottom-0">Test Package Price</th>
                                                         <th class="wd-15p border-bottom-0">Details</th>
                                                         <th class="wd-10p border-bottom-0">Action</th>
@@ -155,10 +155,10 @@
 
 
                                             <div class="form-group col-md-12">
-                                                <label for="test_type" class="col-form-label">Test Package Type<span
+                                                <label for="test_type" class="col-form-label">Test Package Code<span
                                                         class="text-danger">*<span></label>
-                                                <input type="text" class="form-control" name="test_Package_type" id="test_Package_type"
-                                                    Placeholder="Enter Test Type">
+                                                <input type="text" class="form-control" name="test_Package_code" id="test_Package_code"
+                                                    Placeholder="Enter Test Code">
                                             </div>
 
 

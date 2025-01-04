@@ -76,14 +76,14 @@ class Test extends Core
 		$TestPackageName = $data['test_Package_name'];
 		$TestPackageCategory = $data['test_Package_cat'];
 		$PackageTestName = $data['package_test_name'];
-		$TestPackageType = $data['test_Package_type'];
+		$TestPackageType = $data['test_Package_code'];
 		$TestPackageFee = $data['test_Package_fee'];
 		
 
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedTime = $data['CreatedTime'];
 		$CreatedBy = $data['CreatedBy'];
-		$sql = "INSERT INTO `test_package`(`TestPackageName`, `TestPackageCategory`,`PackageTestName`,`TestPackageType`,`TestPackageFee`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestPackageName','$TestPackageCategory','$PackageTestName','$TestPackageType','$TestPackageFee','$CreatedDate','$CreatedTime','$CreatedBy')";
+		$sql = "INSERT INTO `test_package`(`TestPackageName`, `TestPackageCategory`,`PackageTestName`,`TestPackageCode`,`TestPackageFee`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestPackageName','$TestPackageCategory','$PackageTestName','$TestPackageType','$TestPackageFee','$CreatedDate','$CreatedTime','$CreatedBy')";
 		$response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
 		return $response_insert_details;	
 	}

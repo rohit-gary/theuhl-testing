@@ -68,13 +68,16 @@ if (!$result) {
     die("SQL Error: " . mysqli_error($conn));
 }
 
+
 ## Prepare data
 $data = [];
 while ($row = $result->fetch_assoc()) {
+    $ID = $row['ID'];
+    $details_html = "<a onclick = 'GetCustomerDetails(".$ID.")'><span class='badge bg-info'>View</span></a>";
     $data[] = array(
         "ID" => $row['ID'],
         "UserID" => $row['UserID'],
-        "Name" => $row['Name'],
+        "Name_ContactNumber" => $row['Name']."<br>".$row['ContactNumber'],
         "ContactNumber" => $row['ContactNumber'],
         "Gender" => $row['Gender'],
         "DateOfBirth" => $row['DateOfBirth'],
@@ -84,7 +87,7 @@ while ($row = $result->fetch_assoc()) {
         "Pincode" => $row['Pincode'],
         "CreatedBy" => $row['CreatedBy'],
         "CreatedDate" => $row['CreatedDate'],
-        "Action" => "<a href='view-customer-details?ID=" . $row['ID'] . "'><span class='badge bg-info'>View</span></a>"
+        "Details" => $details_html
     );
 }
 

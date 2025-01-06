@@ -126,7 +126,7 @@
                                 <li>
                                    <a class="side-menu__item"  href="../PolicyCustomer/view-all-customer-new" class="list-group-item list-group-item-action">
                                         <i class="side-menu__icon fa fa-user"></i>
-                                        <span class="side-menu__label">All Customer</span>
+                                        <span class="side-menu__label">All Customers</span>
                                     </a>
                                </li>
 

@@ -1447,15 +1447,15 @@ function AddNewMemberModal()
 }
 
  // Generate confetti
-    const confettiContainer = document.querySelector('.confetti');
-    for (let i = 0; i < 50; i++) {
-      const piece = document.createElement('div');
-      piece.classList.add('confetti-piece');
-      piece.style.setProperty('--color', `hsl(${Math.random() * 360}, 100%, 50%)`);
-      piece.style.left = Math.random() * 100 + 'vw';
-      piece.style.animationDelay = Math.random() * 2 + 's';
-      confettiContainer.appendChild(piece);
-    }
+const confettiContainer = document.querySelector('.confetti');
+for (let i = 0; i < 50; i++) {
+  const piece = document.createElement('div');
+  piece.classList.add('confetti-piece');
+  piece.style.setProperty('--color', `hsl(${Math.random() * 360}, 100%, 50%)`);
+  piece.style.left = Math.random() * 100 + 'vw';
+  piece.style.animationDelay = Math.random() * 2 + 's';
+  confettiContainer.appendChild(piece);
+}
 
 
 function feezesendmail(PolicyNumber) {
@@ -1500,3 +1500,4 @@ function ExportPolicyCustomer(){
    window.location.href="action/export-policy-customer-data.php"
 
 } 
+

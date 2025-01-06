@@ -32,6 +32,29 @@ if(isset($_POST['ID']))
 	}
 
 
+   $customer_Policydetails = $core->_getTableDetails($conn,'customerpolicy','where CustomerID = '. $customer_details['ID']);
+  
+   // print_r($customer_Policydetails);
+   // die();
+	if($customer_Policydetails != null)
+	{
+		$step = $step+1;
+	}
+     
+
+    $member_details = $core->_getTableDetails($conn,'policy_member_details',  "where PolicyNumber = '" . $customer_Policydetails['PolicyNumber'] . "'");
+	if($member_details != null)
+	{
+		$step = $step+1;
+	}
+
+    $customerpolicyamount = $core->_getTableDetails($conn,'customerpolicyamount',  "where PolicyNumber = '" . $customer_Policydetails['PolicyNumber'] . "'");
+	if($customerpolicyamount != null)
+	{
+		$step = $step+1;
+	}
+
+
 	$response['step'] = $step;
 	echo json_encode($response);
 }

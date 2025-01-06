@@ -1492,6 +1492,28 @@ function feezesendmail(PolicyNumber) {
 }
 
 
+function sendNeftPolicyDoc(PolicyNumber) {
+    alert("Clicked last button: " + PolicyNumber);
+    $.ajax({
+        url: "../controllers/send-policy-doc-email.php",
+        method: "GET",
+        data: { PolicyNumber: PolicyNumber },
+        success: function(data) {
+            var response=JSON.parse(data);
+            Alert(response.message);
+            if(response.error==false){     
+                  setTimeout(function() {
+                      location.reload();
+                    }, 3000);
+            }
+        },
+        error: function(xhr, status, error) {
+            Alert("Error occurred:", error);
+        }
+    });
+}
+
+
 
 
 // --------------Export all Policy Customer data----------------------

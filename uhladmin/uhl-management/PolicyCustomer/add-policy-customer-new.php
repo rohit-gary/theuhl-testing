@@ -93,6 +93,7 @@ $conf = new Conf();
 
                             <!-- Step Progress -->
                             <div class="row justify-content-center mb-4">
+                                <?php var_dump($_SESSION);?>
                                 <div class="col-lg-8">
                             
                                     <div class="d-flex justify-content-between align-items-center">

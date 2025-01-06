@@ -79,9 +79,8 @@ $conf = new Conf();
                                                 <thead>
                                                     <tr>
                                                         <th class="wd-5p border-bottom-0">#</th>
+                                                        <th class="wd-15p border-bottom-0">PolicyNumber</th>
                                                         <th class="wd-15p border-bottom-0">Transaction ID</th>
-                                                        <th class="wd-15p border-bottom-0">Order ID</th>
-                                                        
                                                         <th class="wd-15p border-bottom-0">Amount</th>
                                                         <th class="wd-15p border-bottom-0">Name</th>
                                                         <th class="wd-15p border-bottom-0">Phone</th>
@@ -89,7 +88,6 @@ $conf = new Conf();
                                                         <th class="wd-15p border-bottom-0">AccountNumber</th>
                                                         <th class="wd-15p border-bottom-0">IFSC Code</th>
                                                         <th class="wd-15p border-bottom-0">Date</th>
-                                                        <th class="wd-15p border-bottom-0">Remark</th>
                                                         <th class="wd-15p border-bottom-0">Action</th>
                                                         
                                                         
@@ -158,11 +156,12 @@ $conf = new Conf();
             }
         },
         {
-            data: 'TransactionID'
+            data: 'PolicyNumber'
         },
         {
-            data: 'OrderID'
+            data: 'TransactionID'
         },
+        
        
         {
             data: 'Amount'
@@ -180,7 +179,7 @@ $conf = new Conf();
             data: 'Status'
         },
         {
-            data: 'Account Number'
+            data: 'AccountNumber'
         },
 
         {
@@ -188,10 +187,6 @@ $conf = new Conf();
         },
         {
             data: 'Date'
-        },
-
-        {
-            data: 'Remark'
         },
 
         {

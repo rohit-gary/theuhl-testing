@@ -105,6 +105,7 @@ function generateFamilyMemberForm() {
                         </select>
                     </div>
                 </div>
+
             </div>
         </div>
         `;
@@ -594,6 +595,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             // Handle specific logic for certain steps
                             if (step === 3) {
                                 fetchPlansAndGenerateForms();
+                                setTimeout(() => {
+                                    PopulateFamilyMemberDetails();
+                                }, 1000); // 1000 milliseconds = 1 second
                             }
                             if (step === 4) {
                                 displaySelectedPlans();
@@ -873,7 +877,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                 <div class="card-body">
                     <div class="form-group mb-3">
                         <label class="form-label">Name <span class="text-red">*</span></label>
-                        <input type="text" class="form-control" id="member_name_${plan.ID}_${i}" name="member_name_${plan.ID}_${i}" placeholder="Enter family member's name" required>
+                        <input type="text" class="form-control" id="member_name_${plan.ID}_${i}" name="member_name_${plan.ID}_${i}" placeholder="Enter family member's name" value="" required>
                     </div>
                     <div class="form-group mb-3">
                         <label class="form-label">Date of Birth <span class="text-red">*</span></label>
@@ -910,6 +914,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                        
                         <input type="hidden" class="form-control" id="plan_Id_${plan.ID}_${i}" name="plan_Id_${plan.ID}_${i}" value="${plan.ID}" readonly>
                     </div>
+                    <input type="hidden" id="PolicyMemberID_${plan.ID}_${i}" name="PolicyMemberID_${plan.ID}_${i}" value="-1" />
                     <input type="hidden" id="policy_number_${plan.ID}_${i}" name="policy_number_${plan.ID}_${i}" value="${localStorage.getItem('PolicyNumber')}">
                 </div>
             </div>
@@ -1139,7 +1144,7 @@ function savefamilyMember() {
     const planId = form.querySelector('input[name^="plan_Id_"]');
 
     const otherRelationship = form.querySelector('input[name^="other_relationship_"]'); // Get the "Other" relationship field
-
+    const PolicyMemberID = form.querySelector('input[name^="PolicyMemberID_"]');
 
     // Check if at least one family member's required fields are filled
     if (memberName && memberName.value.trim() && 
@@ -1156,6 +1161,11 @@ function savefamilyMember() {
         formData.append(`member_name_${index + 1}`, memberName.value);
     } else {
         errorMessage += `Family member ${index + 1} - Name is required.\n`;
+    }
+
+    // Validate individual fields and add to formData if they are not empty
+    if (PolicyMemberID && PolicyMemberID.value.trim()) {
+        formData.append(`PolicyMemberID_${index + 1}`, PolicyMemberID.value);
     }
 
     if (planId && planId.value.trim()) {
@@ -1208,6 +1218,8 @@ function savefamilyMember() {
     } else {
         errorMessage += `Family member ${index + 1} - Policy Number is missing.\n`;
     }
+
+   
 });
 
 // Final check to ensure at least one member's form is filled
@@ -1523,3 +1535,96 @@ function ExportPolicyCustomer(){
 
 } 
 
+function PopulateFamilyMemberDetails()
+{
+    
+    $.post("ajax/get-member-details.php",
+    {
+    },
+    function (data, status) 
+    {
+        var response = JSON.parse(data);
+        if(response.member_exists === true)
+        {
+            
+            populateForms(response)
+        }
+        else
+        {
+            alert("Not Required");
+        }
+    })
+}
+
+function populateForms(response) {
+    if (!response.member_exists) return;
+
+    // Group members by PlanID
+    const groupedMembers = response.family_members.reduce((acc, member) => {
+        if (!acc[member.PlanID]) {
+            acc[member.PlanID] = [];
+        }
+        acc[member.PlanID].push(member);
+        return acc;
+    }, {});
+
+    //console.log(groupedMembers);
+
+    // Iterate over each PlanID and populate corresponding forms
+    for (const [planID, members] of Object.entries(groupedMembers)) {
+        let index = 1; // Reset index for each PlanID
+        members.forEach((member) => {
+            // Populate Name
+            var nameField1 = "member_name_"+planID+"_"+index;
+            console.log(nameField1);
+            console.log(member.Name);
+            
+            if(document.getElementById(nameField1))
+            {
+               
+                $("#"+nameField1).val(member.Name);
+               // document.getElementById(nameField1).value = member.Name;
+            }
+            else
+            {
+                //alert("Element doesn'exist");
+            }
+            
+            var dobField = "member_dob_"+planID+"_"+index;
+            if(document.getElementById(dobField))
+            {
+                
+                $("#"+dobField).val(member.DateOfBirth);
+               // document.getElementById(nameField1).value = member.Name;
+            }
+            else
+            {
+                //alert("Element doesn'exist");
+            }
+            var PolicyMemberID = "PolicyMemberID_"+planID+"_"+index;
+            if(document.getElementById(PolicyMemberID))
+            {
+                
+                $("#"+PolicyMemberID).val(member.ID);
+               // document.getElementById(nameField1).value = member.Name;
+            }
+            else
+            {
+                //alert("Element doesn'exist");
+            }
+
+
+            // Populate Gender
+            const genderFieldMale = document.getElementById(`member_gender_${planID}_${index}_male`);
+            const genderFieldFemale = document.getElementById(`member_gender_${planID}_${index}_female`);
+            if (member.Gender === "male" && genderFieldMale) genderFieldMale.checked = true;
+            if (member.Gender === "female" && genderFieldFemale) genderFieldFemale.checked = true;
+
+            // Populate Relationship
+            const relationshipField = document.getElementById(`member_relationship_${planID}_${index}`);
+            if (relationshipField) relationshipField.value = member.Relationship;
+
+            index++; // Increment index for the next member in the same PlanID
+        });
+    }
+}

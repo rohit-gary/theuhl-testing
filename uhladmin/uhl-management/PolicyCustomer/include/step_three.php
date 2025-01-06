@@ -1,4 +1,4 @@
-<?php var_dump($_SESSION); ?>
+
 <form id="step-3-form" onsubmit="return false;">
     <input type="hidden" id="form_action_family" name="form_action" value="" />
     <input type="hidden" id="form_id" name="form_id" value="" />

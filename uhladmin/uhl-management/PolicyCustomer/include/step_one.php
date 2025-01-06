@@ -1,4 +1,4 @@
-
+<?php var_dump($_SESSION);?>
 <form id="customer_form" onsubmit="return false;">
     <input type="hidden" id="form_action" name="form_action" value="<?php echo isset($Action) ? $Action : ''; ?>" />
 

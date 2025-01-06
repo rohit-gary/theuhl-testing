@@ -31,6 +31,24 @@ if(isset($_POST['ID']))
 		$_SESSION['action'] = "Update";
 	}
 
+	// Check for STEP 2
+	$customer_Policydetails = $core->_getTableRecords($conn,'customerpolicy','where CustomerID = '. $ID);
+	if($customer_Policydetails != null)
+	{
+		$step = $step+1;
+		$policy_form = array();
+		$policy_form['customer_id'] = $ID;
+		$policy_form['plans']  = array();
+		foreach ($customer_Policydetails as $i_plan) 
+		{
+			$PolicyNumber = $i_plan['PolicyNumber'];
+		 	array_push($policy_form['plans'],$i_plan['PlanID']);
+		}
+		$_SESSION['policy_form'] = $policy_form;
+		$_SESSION['PolicyNumber'] = $PolicyNumber;
+		$_SESSION['policy_form_action'] = "Update"; 
+	}
+
 
    $customer_Policydetails = $core->_getTableDetails($conn,'customerpolicy','where CustomerID = '. $customer_details['ID']);
   

@@ -57,11 +57,11 @@ $conf = new Conf();
 
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
-                            <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()" id ="export_data">ExportData</button>
+                        <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()" id ="export_data"> <i class="fa fa-download"></i> Export Data</button>
                             <h1 class="page-title">All Health Plans Customer</h1>
                             <div>
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="../dashboard/admin-dashboard">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../dashboard/main-dashboard">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">View Policy </li>
                                 </ol>
                             </div>
@@ -174,7 +174,7 @@ $conf = new Conf();
                     let statusClass = '';
                     let statusText = data.toLowerCase();
 
-                    if (statusText === 'uploded') {
+                    if (statusText === 'complete') {
                         statusClass = 'bg-success text-white'; // Green for success
                     } else if (statusText === 'pending') {
                         statusClass = 'bg-warning text-dark'; // Yellow for pending

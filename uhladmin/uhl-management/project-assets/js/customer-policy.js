@@ -910,7 +910,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                        
                         <input type="hidden" class="form-control" id="plan_Id_${plan.ID}_${i}" name="plan_Id_${plan.ID}_${i}" value="${plan.ID}" readonly>
                     </div>
-                    <input type="hidden" id="policy_number_${plan.ID}_${i}" name="policy_number_${plan.ID}_${i}" value="${localStorage.getItem('PolicyNumber')}">
+                    <input type="text" id="policy_number_${plan.ID}_${i}" name="policy_number_${plan.ID}_${i}" value="${localStorage.getItem('PolicyNumber')}">
                 </div>
             </div>
         </div>`;

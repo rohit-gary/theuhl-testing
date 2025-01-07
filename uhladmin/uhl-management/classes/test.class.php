@@ -175,6 +175,14 @@ class Test extends Core
 
 	}
 
+	public function GetTestNameByCatID($ID){  
+     $where="where TestCategory=$ID";
+     $Test_name=$this->_getTableRecords($this->conn,"doc_test",$where);
+     return $Test_name
+	}
+
 }
+
+
 
 ?>

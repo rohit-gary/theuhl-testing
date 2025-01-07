@@ -1091,6 +1091,13 @@ public function _InsertTableRecords_prepare($conn, $tableName, $data)
         return $response_insert_details;
     }
 
+     public function UpdateMemberForm($data,$where)
+     {
+        extract($data);
+        $response_insert_details = $this->_UpdateTableRecords_prepare($this->conn,'policy_member_details',$data,$where);
+        return $response_insert_details;
+    }
+
 
     public function InsertPolicyAmountDetails($data){
             extract($data);

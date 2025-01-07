@@ -463,6 +463,54 @@ class Core
 	    return $response;
 	}
 
+	public function _UpdateTableRecords_prepare($conn, $tableName, $data, $where)
+	{
+	    $response = array();
+
+	    // Build the columns and placeholders strings dynamically for SET clause
+	    $setParts = [];
+	    foreach ($data as $column => $value) {
+	        $setParts[] = "$column = ?";
+	    }
+	    $setClause = implode(", ", $setParts);
+
+	    // Build the WHERE clause dynamically
+	    $whereParts = [];
+	    foreach ($where as $column => $value) {
+	        $whereParts[] = "$column = ?";
+	    }
+	    $whereClause = implode(" AND ", $whereParts);
+
+	    // Prepare the SQL statement
+	    $sql = "UPDATE $tableName SET $setClause WHERE $whereClause";
+	    $stmt = $conn->prepare($sql);
+
+	    if ($stmt === false) {
+	        die("Error preparing statement: " . $conn->error);
+	    }
+
+	    // Bind the parameters dynamically
+	    $types = str_repeat('s', count($data) + count($where)); // Assuming all parameters are strings; adjust as needed
+	    $params = array_merge(array_values($data), array_values($where));
+	    $stmt->bind_param($types, ...$params);
+
+	    // Execute the statement
+	    if (!$stmt->execute()) 
+	    {
+	        $response['error'] = true;
+	        $response['message'] = $stmt->error;
+	    }
+	    else
+	    {
+	        $response['error'] = false;
+	        $response['message'] = "Data Updated";
+	        $response['affected_rows'] = $stmt->affected_rows;
+	    }
+
+	    $stmt->close();
+	    return $response;
+	}
+
 
 	public function _getSQLDetails($conn, $sql)
 	{

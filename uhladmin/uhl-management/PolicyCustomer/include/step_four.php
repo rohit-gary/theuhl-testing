@@ -1,4 +1,7 @@
 <!-- Display the selected plans -->
+<?php 
+var_dump($_SESSION); 
+?>
 <div id="selected-plans-container"></div>
 
 <hr>

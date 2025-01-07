@@ -1,4 +1,4 @@
-<?php var_dump($_SESSION); ?>
+
 <form id="policy_form" onsubmit="return false;">
 
     <input type="hidden" id="form_action_policy" name="form_action" 

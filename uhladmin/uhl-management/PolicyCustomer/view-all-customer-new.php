@@ -60,7 +60,7 @@ $conf = new Conf();
                             <h1 class="page-title">All Health Plans Customer</h1>
                             <div>
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="../dashboard/main-dashboard">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../dashboard/admin-dashboard">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">View Policy </li>
                                 </ol>
                             </div>
@@ -79,8 +79,8 @@ $conf = new Conf();
                                                 <thead>
                                                     <tr>
                                                         <th class="wd-5p border-bottom-0">#</th>
-                                                        <th class="wd-15p border-bottom-0">Name</th>
-                                                        <th class="wd-15p border-bottom-0">Phone Number</th>  
+                                                        <th class="wd-15p border-bottom-0">Name / Phone Number</th>
+                                                        <th class="wd-15p border-bottom-0">Details</th>  
                                                          <th class="wd-25p border-bottom-0">Email</th>
                                                          <th class="wd-15p border-bottom-0">Address</th>
                                                     <!--     <th class="wd-15p border-bottom-0">Details</th>
@@ -119,15 +119,16 @@ $conf = new Conf();
        include("../include/common-script.php");
         ?>
 
-           <script src="../project-assets/js/customer-policy.js"></script>
+    <script src="../project-assets/js/all-customers.js"></script>
 
 
         <script type="text/javascript">
             
-    $(document).ready(function () {
+    $(document).ready(function () 
+    {
     console.log('Hello policy customer');
     $('#all_policy_customer').dataTable({
-        'responsive': true,
+        'responsive': false,
         'processing': true,
         'serverSide': true,
         'ordering': false,
@@ -150,10 +151,10 @@ $conf = new Conf();
                 }
             },
             {
-                data: 'Name' // Name of the customer
+                data: 'Name_ContactNumber' // Name of the customer
             },
             {
-                data: 'ContactNumber' // Phone number of the customer
+                data: 'Details' // Phone number of the customer
             },
             {
                 data: 'Email' // Email of the customer

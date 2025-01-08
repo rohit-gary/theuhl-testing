@@ -1,4 +1,5 @@
 <!-- Display the selected plans -->
+
 <div id="selected-plans-container"></div>
 
 <hr>

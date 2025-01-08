@@ -9,7 +9,7 @@ if(isset($_POST['ID']))
 {
 	$ID = $_POST['ID'];
 	$step = 0;
-
+	$PolicyNumber = "";
 	// Check for STEP 1
 	$customer_details = $core->_getTableDetails($conn,'all_customer','where ID = '.$ID);
 	if($customer_details != null)
@@ -32,45 +32,46 @@ if(isset($_POST['ID']))
 	}
 
 	// Check for STEP 2
-	$customer_Policydetails = $core->_getTableRecords($conn,'customerpolicy','where CustomerID = '. $ID);
-	if($customer_Policydetails != null)
+	if($step == 1)
 	{
-		$step = $step+1;
-		$policy_form = array();
-		$policy_form['customer_id'] = $ID;
-		$policy_form['plans']  = array();
-		foreach ($customer_Policydetails as $i_plan) 
+		$customer_Policydetails = $core->_getTableRecords($conn,'customerpolicy','where CustomerID = '. $ID);
+		if($customer_Policydetails != null)
 		{
-			$PolicyNumber = $i_plan['PolicyNumber'];
-		 	array_push($policy_form['plans'],$i_plan['PlanID']);
+			$step = $step+1;
+			$policy_form = array();
+			$policy_form['customer_id'] = $ID;
+			$policy_form['plans']  = array();
+			foreach ($customer_Policydetails as $i_plan) 
+			{
+				$PolicyNumber = $i_plan['PolicyNumber'];
+			 	array_push($policy_form['plans'],$i_plan['PlanID']);
+			}
+			$_SESSION['policy_form'] = $policy_form;
+			$_SESSION['PolicyNumber'] = $PolicyNumber;
+			$_SESSION['policy_form_action'] = "Update"; 
 		}
-		$_SESSION['policy_form'] = $policy_form;
-		$_SESSION['PolicyNumber'] = $PolicyNumber;
-		$_SESSION['policy_form_action'] = "Update"; 
 	}
-
-
-   $customer_Policydetails = $core->_getTableDetails($conn,'customerpolicy','where CustomerID = '. $customer_details['ID']);
-  
-   // print_r($customer_Policydetails);
-   // die();
-	if($customer_Policydetails != null)
+	if($step == 2)
 	{
-		$step = $step+1;
-	}
-     
+		if($PolicyNumber != "")
+		{
+			// check for STEP 3
+			$family_member = array();
+			$where = " where PolicyNumber = '$PolicyNumber'";
+			$family_member_records = $core->_getTableRecords($conn,'policy_member_details',$where);
+			if($family_member_records != null)
+			{
+				$step = $step+1;
+				foreach($family_member_records as $family_member_record)
+				{
+					array_push($family_member,$family_member_record);
+				}
+				$_SESSION['family_member'] = $family_member;
+			}
 
-    $member_details = $core->_getTableDetails($conn,'policy_member_details',  "where PolicyNumber = '" . $customer_Policydetails['PolicyNumber'] . "'");
-	if($member_details != null)
-	{
-		$step = $step+1;
+		}
 	}
 
-    $customerpolicyamount = $core->_getTableDetails($conn,'customerpolicyamount',  "where PolicyNumber = '" . $customer_Policydetails['PolicyNumber'] . "'");
-	if($customerpolicyamount != null)
-	{
-		$step = $step+1;
-	}
 
 
 	$response['step'] = $step;

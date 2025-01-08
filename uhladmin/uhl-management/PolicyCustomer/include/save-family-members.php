@@ -1,5 +1,4 @@
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -64,8 +63,32 @@ if (isset($_POST)) {
         $now = new DateTime();
         $age = $now->diff($dob)->y;
         $member['Age'] = $age;
-        $response = $PolicyCustomer->InsertMemberForm($member);
-        $member['ID']=$response['last_insert_id'];
+        $to_be_inserted = true;
+        if(isset($data["PolicyMemberID_$index"]))
+        {
+            $PolicyMemberID = $data["PolicyMemberID_$index"];
+            if($PolicyMemberID != -1)
+            {
+                $to_be_inserted = false;
+            }
+        }
+        if($to_be_inserted)
+        {
+     
+            $response = $PolicyCustomer->InsertMemberForm($member);
+            $member['ID']=$response['last_insert_id'];
+        }
+        else
+        {
+
+            $whereCondition = [
+                'ID' => $PolicyMemberID
+            ];
+            $response = $PolicyCustomer->UpdateMemberForm($member,$whereCondition);
+            $member['ID']=$PolicyMemberID;
+        }
+        
+        
 
         $_SESSION['family_member'][] = $member;
         $response['PolicyNumber']= $PolicyNumber;

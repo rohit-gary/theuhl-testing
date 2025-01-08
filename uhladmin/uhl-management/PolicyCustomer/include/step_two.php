@@ -1,11 +1,11 @@
-<?php var_dump($_SESSION); ?>
+
 <form id="policy_form" onsubmit="return false;">
 
     <input type="hidden" id="form_action_policy" name="form_action" 
         value="<?php echo isset($policy_form_action) ? $policy_form_action : ''; ?>" />
     <input type="hidden" id="form_id_policy" name="form_id" 
         value="<?php echo $PolicyFormId ?>" />
-    <input type="text" id="customer_id" value="<?php echo $Customerid; ?>" />
+    <input type="hidden" id="customer_id" value="<?php echo $Customerid; ?>" />
   
 
     <div class="row">

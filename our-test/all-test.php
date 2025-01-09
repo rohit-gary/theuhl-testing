@@ -64,7 +64,7 @@
         <div class="content-area bg-white main-area-testpage">  
            <sction class="banner-area-test-page  py-5" >
            	<!-- style="background-color: #d0d0d052; -->
-               <div class="container" style="background-color: ; border-radius: 15px;">
+               <div class="container" style="background-color: #8cc5e2; border-radius: 15px;">
 			        <div class="row align-items-center">
 			            <!-- Content Section -->
 			            <div class="col-md-6 col-lg-6 text-center text-md-start">
@@ -75,7 +75,7 @@
 
 			            <!-- Image Section -->
 			            <div class="col-md-6 col-lg-6 text-center">
-			                <img src="../project-assets/images/generic-old.png" alt="test-desktop-banner" class="img-fluid rounded">
+			                <img src="../project-assets/images/generic-old.webp" alt="test-desktop-banner" class="img-fluid rounded">
 			            </div>
 			        </div>
     			</div>
@@ -783,9 +783,350 @@
           			</div>
           		</div>
           	</div>
+      
+
+				<section class="section-full bg-white content-inner my-2"> 
+						<div class="newbie-sec happy-mem-sect py-4" style="background-color:#8cc5e23d">
+						    <div class="container page-container">
+						        <div class="row mt-4">
+						            <!-- Image Section -->
+						               <div class="col-md-4 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+						                <div class="">
+						                    <div class="row">
+						                    	<h2 class="title">Health Checks for Key <span class="text-primary">Organs</span></h2>
+						                    </div>
+						                    <div class="row">
+						                    	<p>Discover our extensive suite of diagnostic tests designed specifically for vital body organs. These specialized tests are aimed at assessing the health and functionality of your essential organs, providing you with the insights and care you need to maintain optimal health.</p>
+						                    </div>
+						                </div> 
+						            </div>
+
+						            <!-- Cards Section -->
+						            <div class="col-md-8">
+						                <div class="row" style="margin-bottom: 2.5em;">
+						                    <!-- Card 1 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                   <img src="../project-assets/images/test/heart.png" style="height:4em">
+						                                    <h4 class="title">Heart</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 2 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                    <img src="../project-assets/images/test/kidney.png" style="height:4em">
+						                                    <h4 class="title">Kidney</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 3 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                   <img src="../project-assets/images/test/liver.png" style="height:4em">
+						                                    <h4 class="title">Liver</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 4 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="./contact-us">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                    <img src="../project-assets/images/test/fracture.png" style="height:4em">
+						                                    <h4 class="title">Bone</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 5 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/supplement.png" style="height:4em">
+						                                    <h4 class="title">Vitamin</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 6 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/hormones.png" style="height:4em">
+						                                    <h4 class="title">Hormones</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/gut-microbiota.png" style="height:4em">
+						                                    <h4 class="title">Gut Health</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/blood.png" style="height:4em">
+						                                    <h4 class="title">Blood</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/reph.png" style="height:4em">
+						                                    <h4 class="title">Reproductive Organs</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+						                </div>
+						            </div>
+						         
+						        </div>
+						    </div>
+						</div>
+				</section>
+
+                   
+				<section class="section-full bg-white content-inner"> 
+						<div class="newbie-sec happy-mem-sect py-4" style="background-color:#ffff; margin-top:-5em">
+						    <div class="container page-container">
+						        <div class="row mt-4">
+						            <!-- Image Section -->	              
+						            <!-- Cards Section -->
+						            <div class="col-md-8">
+						                <div class="row">
+						                    <!-- Card 1 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                   <img src="../project-assets/images/test/Women-Health.png" style="height:4em">
+						                                    <h4 class="title">Women Health</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 2 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                    <img src="../project-assets/images/test/Lifestyle-Checkup.png" style="height:4em">
+						                                    <h4 class="title">Lifestyle Checkup</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 3 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                   <img src="../project-assets/images/test/Cancer-Checkup.png" style="height:4em">
+						                                    <h4 class="title">Cancer Checkup</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 4 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="./contact-us">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                    <img src="../project-assets/images/test/Senior.png" style="height:4em">
+						                                    <h4 class="title">Senior Citizen</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 5 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/Full-Body-Checkups.png" style="height:4em">
+						                                    <h4 class="title">Full Body Checkups</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+
+						                    <!-- Card 6 -->
+						                    <div class="col-6 col-md-4 col-sm-6 mt-2">
+						                        <a href="../../admin/authentication/login">
+						                            <div class="card text-center h-100">
+						                                <div class="card-body">
+						                                     <img src="../project-assets/images/test/Diabetes.png" style="height:4em">
+						                                    <h4 class="title">Diabetes Checkup</h4>
+						                                </div>
+						                            </div>
+						                        </a>
+						                    </div>
+						                </div>
+						            </div>
+
+						             <div class="col-md-4 d-flex">
+						                <div class="">
+						                    <div class="row">
+						                    	<h2 class="title">Prioritize Your Wellness with<span class="text-primary"> Personalized Care</span></h2>
+						                    </div>
+						                    <div class="row">
+						                    	<p>Our customized health checkups are designed to meet your unique needs, focusing on your lifestyle, age, and medical history. Discover a tailored approach to preventive healthcare.</p>
+						                    </div>
+						                </div> 
+						            </div>
+						         
+						        </div>
+						    </div>
+						</div>
+				</section>
 
 
-          </section>  
+				</section>  
+			 <section class="my-3">
+			  <div class="container mb-3">
+			        <div class="row">
+			            <div class="col-md-12">
+			                <div class="card gradient-bg">
+			                    <div class="card-header gradient-bg mb-3" style="margin-bottom: 3em;">
+			                        <h2 class="title">Looking to buy a new life <span class="text-primary">Health Test?</span></h2>
+			                        <p>Our experts are happy to help you!</p>
+			                    </div>
+			                    <div class="card-body">
+			                        <form id="tte-review-form">
+			                            <div class="row mb-3">
+			                                <div class="col-md-3">
+			                                    <label for="needformName" class="form-label">Name</label>
+			                                    <input type="text" class="form-control" id="needformName" name="needformName"  placeholder="Enter full name" required>
+			                                    <div class="invalid-feedback">Please enter your name.</div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <label for="needformMobile" class="form-label">Mobile No.</label>
+			                                    <div class="input-group">
+			                                        <span class="input-group-text">+91</span>
+			                                        <input type="tel" class="form-control" id="needformMobile" name="needformMobile" placeholder="Enter mobile number" maxlength="10" required>
+			                                        <div class="invalid-feedback">Please enter your mobile number.</div>
+			                                    </div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <label for="planSelect" class="">Plan</label>
+			                                    <select class="form-control" id="planSelect" name="planSelect" required>
+			                                        <option value="" selected disabled>Select Test</option> 
+			                                        <option value="Complete Blood Count (CBC) with ESR">
+			                                        Complete Blood Count (CBC) with ESR</option>
+			                                        <option value="Complete Blood Count (CBC) with ESR">Complete Blood Count (CBC) with ESR</option>
+			                                        <option value="I don't know/I need help">I don't know/I need help</option>
+			                                    </select>
+			                                    <div class="invalid-feedback">Please select a Test.</div>
+			                                </div>
+			                                <div class="col-md-3">
+			                                    <br>
+			                                    <div class="input-group mt-2 d-flex justify-content-between align-items-center w-100">
+												    <button type="submit" class="btn site-button appointment-btn btnhover13 btn-rounded" onclick="Submitenquiry(event)">Get a Call Back</button>
+												    <img src="../project-assets/images/whatsapp.png" style="width:50px; height:auto; cursor: pointer;" onclick="alert('Comming soon....')">
+												</div>
+
+
+			                                </div>
+			                            </div>
+			                        </form>
+			                        <div class="form-text">
+			                            United Health Lumina Plan Ltd will send you updates on your policy, new products & services.
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</section>
+			<section class="section-full my-2"> 
+						<div class="newbie-sec happy-mem-sect py-4" style="background-color:#8cc5e23d">
+						    <div class="container page-container">
+						        <div class="row mt-4">
+						      <div class="row">
+						<div class="col-lg-12 col-md-12 m-b30">
+							<div class="dlab-accordion faq-1 box-sort-in m-b30" id="accordion1">
+								<div class="panel">
+									<div class="acod-head">
+										<h6 class="acod-title"> 
+											<a href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#faq1" class="collapsed" aria-expanded="true">
+											1. What are the benefits of subscribing to a United Health Lumina health plan?</a> </h6>
+									</div>
+									<div id="faq1" class="acod-body collapse" data-bs-parent="#accordion1">
+										<div class="acod-content">United Health Lumina's subscription plans offer a range of benefits, including comprehensive coverage for outpatient department (OPD) services, in-patient treatment, and preventive care, with flexible claim options.</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="acod-head">
+										<h6 class="acod-title"> 
+											<a href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed" aria-expanded="false">
+											2. What makes United Health Lumina’s OPD plans unique?</a> </h6>
+									</div>
+									<div id="faq2" class="acod-body collapse" data-bs-parent="#accordion1">
+										<div class="acod-content">United Health Lumina’s OPD-based health plans allow claims on outpatient treatments, offering subscribers flexibility for medical consultations, diagnostics, and more without needing hospitalization	.</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="acod-head">
+										<h6 class="acod-title"> 
+											<a href="javascript:void(0);" data-bs-toggle="collapse"  data-bs-target="#faq3" class="collapsed" aria-expanded="false">
+											3. Can I customize my health plan with United Health Lumina? </a> </h6>
+									</div>
+									<div id="faq3" class="acod-body collapse"  data-bs-parent="#accordion1">
+										<div class="acod-content"> Yes, United Health Lumina provides customizable health plan options to cater to specific medical needs, lifestyle requirements, and family size.
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="acod-head">
+										<h6 class="acod-title"> 
+											<a href="javascript:void(0);" data-bs-toggle="collapse"  data-bs-target="#faq4" class="collapsed" aria-expanded="false">
+											4.How are claims handled in United Health Lumina subscription plans? </a> </h6>
+									</div>
+									<div id="faq4" class="acod-body collapse" data-bs-parent="#accordion1">
+										<div class="acod-content">United Health Lumina offers a streamlined claims process with flexible reimbursement options, making it easier for members to claim expenses across OPD and in-patient services.</div>
+									</div>
+								</div>
+						
+							</div>
+						</div>
+						    </div>
+						</div>
+				</section>
         </div>
   </div>
     <?php include("../includes/footer1.php") ?>

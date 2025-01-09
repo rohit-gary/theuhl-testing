@@ -21,14 +21,12 @@
                 <!-- <img src="<?php echo htmlspecialchars($plan['PlanImage']); ?>" class="card-img-top" alt="Plan Image"> -->
                 <div class="card-body">
                     <h5 class="card-title"><?php echo htmlspecialchars($plan['PlanName']); ?></h5>
-                   <button class="btn btn-warning" onclick="event.stopPropagation(); openPlanDetailsModel(<?php echo htmlspecialchars(json_encode($plan), ENT_QUOTES, 'UTF-8'); ?>)">
+                    <p class="d-none"><strong>Duration:</strong> <?php echo htmlspecialchars($plan['PlanDuration']) . ' ' . htmlspecialchars($plan['PlanDurationFormat']); ?></p>
+                    <p class=""><strong>Family Members Covered:</strong> <?php echo htmlspecialchars($plan['PlanFamilyMember']); ?></p>
+                    <p class=""><strong>Cost:</strong> ₹<?php echo number_format(htmlspecialchars($plan['PlanCost']), 2); ?></p>
+                    <button class="btn btn-warning" onclick="event.stopPropagation(); openPlanDetailsModel(<?php echo htmlspecialchars(json_encode($plan), ENT_QUOTES, 'UTF-8'); ?>)">
                         <i class="ti-info-alt"></i>
                     </button>
-
-
-                    <p class="d-none"><strong>Duration:</strong> <?php echo htmlspecialchars($plan['PlanDuration']) . ' ' . htmlspecialchars($plan['PlanDurationFormat']); ?></p>
-                    <p class="d-none"><strong>Family Members Covered:</strong> <?php echo htmlspecialchars($plan['PlanFamilyMember']); ?></p>
-                    <p class="d-none"><strong>Cost:</strong> ₹<?php echo number_format(htmlspecialchars($plan['PlanCost']), 2); ?></p>
                     <!-- Checkbox for selection -->
                     <input type="checkbox" class="form-check-input" name="selected_plan[]" 
                         value="<?php echo htmlspecialchars($plan['ID']); ?>" 
@@ -80,7 +78,7 @@
                 <p><strong>Family Members Covered:</strong> <span id="modalPlanFamilyMember"></span></p>
                 <p><strong>Cost:</strong> ₹<span id="modalPlanCost"></span></p>
                 <p><strong>Plan Benefits:</strong></p>
-                <ul id="modalCoverageComments"></ul>
+                <ul id="modalCoverageComments" class="ms-3"></ul>
             </div>
         </div>
     </div>

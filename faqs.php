@@ -130,6 +130,30 @@
                 </div>
             </div>
             <!-- Your Faq End -->
+            <div class="container my-3">
+                        <div class="row">
+                            <!-- Video 1 -->
+                            <div class="col-md-4  mb-3">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                   <iframe width="350" height="200" src="https://www.youtube.com/embed/cLbAXER7nPg?si=MaOMxEfla-dOEl84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Video 2 -->
+                            <div class="col-md-4  mb-3">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                   <iframe width="350" height="200" src="https://www.youtube.com/embed/IXUzh5ln6_c?si=ouzac56P7_kkDBtX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="col-md-4  mb-3">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="350" height="200" src="https://www.youtube.com/embed/OhE1jyixS64?si=s63HmuZcbt1yP9RW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </div>
 		<!-- contact area END -->
     </div>

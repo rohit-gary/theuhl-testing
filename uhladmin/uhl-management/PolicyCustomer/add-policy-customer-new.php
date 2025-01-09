@@ -383,10 +383,10 @@ async function displaySelectedPlans() {
                         `;
                     }
                 } else {
-                    alert("No details found for Plan ID " + plan.PlanID);
+                    Alert("No details found for Plan ID " + plan.PlanID);
                 }
             } catch (error) {
-                alert("Error fetching details for Plan ID " + plan.PlanID + ". Please try again.");
+                Alert("Error fetching details for Plan ID " + plan.PlanID + ". Please try again.");
             }
         }
 
@@ -397,7 +397,7 @@ async function displaySelectedPlans() {
         document.getElementById("total-amount").textContent = `₹${totalAmount.toFixed(2)}`;
 
     } catch (error) {
-        alert("Error fetching plans. Please try again.");
+        Alert("Error fetching plans. Please try again.");
         console.error("Error:", error);
     }
 }
@@ -459,10 +459,10 @@ async function savePolicyAmount() {
                             totalAmount += parseFloat(planprice); // Ensure Price is a number
                         }
                     } else {
-                        alert("No details found for Plan ID " + plan.PlanID);
+                        Alert("No details found for Plan ID " + plan.PlanID);
                     }
                 } catch (error) {
-                    alert("Error fetching details for Plan ID " + plan.PlanID + ". Please try again.");
+                    Alert("Error fetching details for Plan ID " + plan.PlanID + ". Please try again.");
                 }
             }
 
@@ -484,7 +484,7 @@ async function savePolicyAmount() {
             
 
             const paymentDataJson = await paymentResponse.json();
-                console.log('paymentdata', paymentDataJson);
+                // console.log('paymentdata', paymentDataJson);
 
                 // Check if error is false
                 if (paymentDataJson.error === false) {
@@ -494,14 +494,14 @@ async function savePolicyAmount() {
                      generatePaymentLink(paymentDataJson.PolicyNumber);
                     // window.location.href = "payment-confirmation.php";
                 } else {
-                    alert("Error saving payment data: " + paymentDataJson.message);
+                    Alert("Error saving payment data: " + paymentDataJson.message);
                 }
                         } else {
-            alert("No plans found for the given Policy Number.");
+            Alert("No plans found for the given Policy Number.");
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("Error fetching plans. Please try again.");
+        Alert("Error fetching plans. Please try again.");
     }
 }
 </script>
@@ -593,12 +593,12 @@ async function savePolicyAmount() {
     var familyMemberSelect = document.getElementById('familyMemberSelect').value;
 
     if (!familyMemberSelect) {
-        alert('Please select a family member before uploading files.');
+        Alert('Please select a family member before uploading files.');
         return;
     }
 
     var PolicyNumber = $("#PolicyNumber").val();
-    console.log('PolicyNumber Found:', PolicyNumber);
+    // console.log('PolicyNumber Found:', PolicyNumber);
 
     // Prepare FormData with all form fields and selected files
     let myForm = document.getElementById("upload-documents-form");
@@ -615,11 +615,11 @@ async function savePolicyAmount() {
         type: "POST",
         data: formData,
         success: function (data) {
-            alert('Files uploaded successfully');
+            Alert('Files uploaded successfully');
             $('#fileList').empty();  // Clear file list
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            alert('Error uploading files');
+            Alert('Error uploading files');
             console.error('Error:', textStatus, errorThrown);
         },
         cache: false,

@@ -416,3 +416,7 @@
         transform: translateY(100vh) rotate(360deg);
       }
     }
+
+    .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem #2221209e !important;
+}

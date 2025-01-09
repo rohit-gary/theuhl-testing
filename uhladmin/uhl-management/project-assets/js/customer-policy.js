@@ -644,23 +644,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     // } 
 
                  // Function to toggle card selection and display green check mark with opacity
-                    function togglePlanSelection(planID) {
+                    function togglePlanSelection(planID)
+                     {
                         // Get the selected card and check mark
                         let selectedCard = document.getElementById('plan-card-' + planID);
                         let checkMark = selectedCard.querySelector('.check-mark');
                         let checkbox = selectedCard.querySelector('input[type="checkbox"]');
 
                         // If the card is not selected, select it
-                        if (!selectedCard.classList.contains('selected')) {
+                        if (!selectedCard.classList.contains('selected')) 
+                        {
                             selectedCard.classList.add('selected'); // Add selected style
                             checkMark.style.display = 'block'; // Show check mark
                             checkbox.checked = true; // Check the hidden checkbox
-                        } else {
+                        } else
+                         {
                             selectedCard.classList.remove('selected'); // Deselect the card
                             checkMark.style.display = 'none'; // Hide check mark
                             checkbox.checked = false; // Uncheck the hidden checkbox
-                        }
+                         }
                     }
+
+
                    
 
 
@@ -708,8 +713,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 let form_action = $("#form_action_policy").val();
                                 let form_id = $("#form_id_policy").val();
 
-                                alert(form_action);
-                                alert(form_id);
+                                // alert(form_action);
+                                // alert(form_id);
 
 
                                 // Get selected plans
@@ -735,7 +740,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         const parsedResponse = JSON.parse(response);
                                         const policyNumber = parsedResponse.PolicyNumber;
 
-                                        alert("Plans saved successfully.");
+                                        Alert("Plans saved successfully.");
                                         $("#PolicyNumber").val(policyNumber);
                                         $('#savePolicyBtn').hide();
                                         $('#gotothirdstep').show();
@@ -744,7 +749,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         alert("Error saving plans. Please try again.");
                                     }
                                 } else {
-                                    alert("Please select at least one plan.");
+                                    Alert("Please select at least one plan.");
                                 }
                             }
 
@@ -777,7 +782,7 @@ async function fetchPlansAndGenerateForms()
             }
         } catch (error) {
             console.error('Error fetching customer ID from session:', error);
-            alert('An error occurred while fetching the customer ID.');
+            Alert('An error occurred while fetching the customer ID.');
             return false;
         }
     }
@@ -814,7 +819,7 @@ async function fetchPlansAndGenerateForms()
 function fetchPlanDetailsAndGenerateForm(plan) {
     // Check if a form has already been generated for this plan
     if (document.getElementById('plan-' + plan.PlanID + '-members')) {
-        alert("The member form for Plan ID " + plan.PlanID + " has already been generated.");
+        Alert("The member form for Plan ID " + plan.PlanID + " has already been generated.");
         return;
     }
 
@@ -832,14 +837,14 @@ function fetchPlanDetailsAndGenerateForm(plan) {
                     if (numOfMembers && !isNaN(numOfMembers) && numOfMembers > 0) {
                         generateMemberForm(planDetails, numOfMembers); // Pass the plan and number of family members
                     } else {
-                        alert("No family members information found for Plan ID " + plan.PlanID);
+                        Alert("No family members information found for Plan ID " + plan.PlanID);
                     }
                 } else {
-                    alert("No details found for Plan ID " + plan.PlanID);
+                    Alert("No details found for Plan ID " + plan.PlanID);
                 }
             },
             error: function () {
-                alert("Error fetching plan details. Please try again.");
+                Alert("Error fetching plan details. Please try again.");
             }
         });
 }
@@ -850,14 +855,14 @@ function fetchPlanDetailsAndGenerateForm(plan) {
 
     // Check if the form already exists
     if (document.getElementById(formContainerId)) {
-        alert('Member form for this plan is already generated.');
+        Alert('Member form for this plan is already generated.');
         return;
     }
 
    
 
     if (!numOfMembers || isNaN(numOfMembers)) {
-        alert("Invalid number of family members!");
+        Alert("Invalid number of family members!");
         return;
     }
 
@@ -1229,7 +1234,7 @@ if (!atLeastOneFilled) {
 }
 
 if (!isValid) {
-    alert(errorMessage); // Show the errors, or handle them as required
+    Alert(errorMessage); // Show the errors, or handle them as required
 }
 
     // If everything is valid, proceed with AJAX request
@@ -1284,9 +1289,9 @@ function generatePaymentLink(policyID) {
             },
             success: function (emailResponse) {
                 if (!emailResponse.errorp) {
-                    alert(emailResponse.message);
+                    Alert(emailResponse.message);
                 } else {
-                    alert(emailResponse.message);
+                    Alert(emailResponse.message);
                 }
             }
         });
@@ -1346,7 +1351,7 @@ function generatePaymentLink(policyID) {
             var copyText = document.getElementById("paymentLink");
             copyText.select();
             document.execCommand("copy");
-            alert('Payment link copied to clipboard');
+            Alert('Payment link copied to clipboard');
         });
 
         // Share via Email
@@ -1446,7 +1451,7 @@ function saveAdditionalFamilyMember() {
         },
         error: function (xhr, status, error) {
             console.error("AJAX Error:", status, error);
-            alert("Failed to save family member details. Please try again.");
+            Alert("Failed to save family member details. Please try again.");
         }
     });
 }
@@ -1471,7 +1476,7 @@ for (let i = 0; i < 50; i++) {
 
 
 function feezesendmail(PolicyNumber) {
-    alert("Clicked last button: " + PolicyNumber);
+   
     $.ajax({
         url: "action/send-policy-doc-email.php",
         method: "GET",
@@ -1551,7 +1556,7 @@ function PopulateFamilyMemberDetails()
         }
         else
         {
-            alert("Not Required");
+            // Alert("Please Wait");
         }
     })
 }
@@ -1627,4 +1632,35 @@ function populateForms(response) {
             index++; // Increment index for the next member in the same PlanID
         });
     }
+}
+
+// --------open plans details model------
+
+function openPlanDetailsModel(plan) {
+    // Populate the modal fields with plan data
+    document.getElementById('modalPlanImage').src = plan.PlanImage;
+    document.getElementById('modalPlanName').textContent = plan.PlanName;
+    document.getElementById('modalPlanDuration').textContent = `${plan.PlanDuration} ${plan.PlanDurationFormat}`;
+    document.getElementById('modalPlanFamilyMember').textContent = plan.PlanFamilyMember;
+    document.getElementById('modalPlanCost').textContent = parseFloat(plan.PlanCost).toLocaleString();
+    // document.getElementById('modalPlanImportantPoints').textContent = plan.PlanImportantPoint;
+    const cleanedCoverageComments = cleanRichText(plan.PlanHighlights);
+    const coverageCommentsList = cleanedCoverageComments
+    .split(',')
+    .map(comment => `<li style="list-style-type: disc">${comment.trim()}</li>`)
+    .join('');
+    document.getElementById('modalCoverageComments').innerHTML = coverageCommentsList;
+    // Show the modal
+    const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
+    modal.show();
+}
+
+// Function to clean up unwanted styles and quotation marks
+function cleanRichText(content)
+ {
+
+    content = content.replace(/style="[^"]*"/g, ''); 
+    content = content.replace(/"/g, ''); 
+    content = content.replace(/\s+/g, ' ').trim(); 
+    return content;
 }

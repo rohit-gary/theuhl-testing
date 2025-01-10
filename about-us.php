@@ -3,7 +3,9 @@
     <?php include("includes/links.php") ?>
     <title>AboutUs-United Health Lumina</title>  
 <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-
+<style type="text/css">
+    
+</style>
 </head>
 <body id="bg-white">
 <div class="page-wraper">
@@ -187,7 +189,6 @@
                             </div> -->
                         </div>
                     </div>
-
 
                     <div class="container my-3">
                         <div class="row">

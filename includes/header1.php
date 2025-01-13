@@ -4,8 +4,9 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'h
 
 // Get the base URL dynamically
 $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/Projects/theuhl-testing';
-?>
 
+$cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+?>
 <header class="site-header mo-left header">
     <!-- <div class="top-bar">
         <div class="container">
@@ -41,6 +42,18 @@ $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/Projects/theuhl-testin
                 <div class="extra-nav">
                     <div class="extra-cell">
                         <a href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login" id="login-btn" class="site-button appointment-btn btnhover13" target="_blank">Login Here</a>
+                           <a href="javascript:void(0)" 
+                               class="btn btn-primary position-relative" 
+                               type="button" 
+                               data-bs-toggle="offcanvas" 
+                               data-bs-target="#offcanvasRight" 
+                               aria-controls="offcanvasRight" id="cart-icon">
+                                <i class="fa fa-shopping-cart"></i> <!-- Cart Icon -->
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                                    <?php echo $cartCount; ?> <!-- Set cart count from PHP -->
+                                </span>
+                            </a>
+
                     </div>
                 </div>
                 <!-- Quik search -->
@@ -62,13 +75,13 @@ $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/Projects/theuhl-testin
                         <li><a href="<?php echo $base_url; ?>/blogs">Blog<i class="fas fa-chevron-down"></i></a></li>
                         <li><a href="<?php echo $base_url; ?>/faqs">FAQ'S<i class="fas fa-chevron-down"></i></a></li>
                         <li><a href="<?php echo $base_url; ?>/contact-us">Contact Us<i class="fas fa-chevron-down"></i></a></li>
-                        <li class="">
+                        <!-- <li class="">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">
                                 <span class="badge bg-warning text-dark">
                                     <i class="fas fa-exclamation-circle me-1"></i>Disclaimer
                                 </span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -96,3 +109,6 @@ $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/Projects/theuhl-testin
         </div>
     </div>
 </div>
+
+
+<?php include('cart-list.php'); ?>

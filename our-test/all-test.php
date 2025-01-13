@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <head>
     <?php include("../includes/meta.php") ?>
     <?php include("../includes/links1.php") ?>
@@ -23,7 +25,7 @@
 
     	.card{
     		border-radius: 29px !important;
-/*    		background-color: #f0f8ff*/
+            /*background-color: #f0f8ff*/
     	}
 
     	.cart-btn{
@@ -56,7 +58,8 @@
     </style>
 </head>
 
-<body id="bg">
+
+<body id="bg" style="z-index:10">
   <div class="page-wraper">
       <div id="loading-area"></div>
       <!-- header -->
@@ -134,7 +137,7 @@
 
 								<div class="row">
 									<div class="col-6"><button class="cart-btn  btn btn-outline-warning btnhover13">View Details</button></div>
-									<div class="col-6"><button class="site-button cart-btn btnhover13">Add to cart</button></div>
+									<div class="col-6"><button class="site-button cart-btn btnhover13" data-product-id="1" data-product-name="Complete Blood Count (CBC)" data-product-price="450">Add to cart</button></div>
 								</div>
 								
 							</div>
@@ -196,7 +199,7 @@
 
 								<div class="row">
 									<div class="col-6"><button class="cart-btn  btn btn-outline-warning btnhover13">View Details</button></div>
-									<div class="col-6"><button class="site-button cart-btn btnhover13">Add to cart</button></div>
+									<div class="col-6"><button class="site-button cart-btn btnhover13" data-product-id="2" data-product-name="Blood Test" data-product-price="450">Add to cart</button></div>
 								</div>
 							</div>
 						</div>
@@ -1140,30 +1143,160 @@
         let currentCharIndex = 0;
         let isDeleting = false;
 
-        function typeEffect() {
-            const currentPhrase = phrases[currentPhraseIndex];
-            if (isDeleting) {
-                // Erase text
-                dynamicText.text(currentPhrase.substring(0, currentCharIndex - 1));
-                currentCharIndex--;
-                if (currentCharIndex === 0) {
-                    isDeleting = false;
-                    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-                }
-            } else {
-                // Type text
-                dynamicText.text(currentPhrase.substring(0, currentCharIndex + 1));
-                currentCharIndex++;
-                if (currentCharIndex === currentPhrase.length) {
-                    isDeleting = true;
-                }
-            }
-            // Adjust speed
-            const typingSpeed = isDeleting ? 150 : 350;
-            const pauseBeforeDelete = currentCharIndex === currentPhrase.length ? 2000 : 100;
-            setTimeout(typeEffect, isDeleting ? typingSpeed : pauseBeforeDelete);
-        }
-        // Initialize the typing effect
-        typeEffect();
+        function typeEffect() 
+        {
+	            const currentPhrase = phrases[currentPhraseIndex];
+	            if (isDeleting) {
+	                // Erase text
+	                dynamicText.text(currentPhrase.substring(0, currentCharIndex - 1));
+	                currentCharIndex--;
+	                if (currentCharIndex === 0) {
+	                    isDeleting = false;
+	                    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+	                }
+	            } else {
+	                // Type text
+	                dynamicText.text(currentPhrase.substring(0, currentCharIndex + 1));
+	                currentCharIndex++;
+	                if (currentCharIndex === currentPhrase.length) {
+	                    isDeleting = true;
+	                }
+	            }
+	            // Adjust speed
+	            const typingSpeed = isDeleting ? 150 : 350;
+	            const pauseBeforeDelete = currentCharIndex === currentPhrase.length ? 2000 : 100;
+	            setTimeout(typeEffect, isDeleting ? typingSpeed : pauseBeforeDelete);
+	        }
+	        // Initialize the typing effect
+	        typeEffect();
+    });
+
+
+    $(document).ready(function ()
+     {
+	    // Update the cart when an item is added
+	    $(".site-button").click(function () {
+	        var productId = $(this).data("product-id");
+	        var productName = $(this).data("product-name");
+	        var productPrice = $(this).data("product-price");
+
+	        $.ajax({
+	            url: "../action/cart.php",  // Your PHP script to handle the cart actions
+	            type: "POST",
+	            data: {
+	                action: "add",  // Action to add the item
+	                product_id: productId,
+	                product_name: productName,
+	                product_price: productPrice
+	            },
+	            success: function(response) {
+	                var cartData = JSON.parse(response);
+	                
+	                $("#cart-count").text(cartData.cartCount);
+
+	               
+	                updateCartSidebar(cartData.cartItems);
+	            }
+	        });
+    });
+
+   // Function to update cart sidebar
+function updateCartSidebar(cartItems)
+ {
+		    var cartSidebar = $("#offcanvasRight .offcanvas-body");
+		    cartSidebar.empty(); // Clear current cart items
+
+		    if (cartItems.length === 0) {
+		        cartSidebar.html("<h1>Oops, Cart is Empty Now</h1>");
+		    } else {
+		        var cartContent = "<ul>";
+		        cartItems.forEach(function(item, index) {
+		            cartContent += `
+		                <li>
+		                    ${item.name} - &#8377;${item.price}
+		                    <button class="btn btn-danger btn-sm remove-item" data-index="${index}">
+		                        Remove
+		                    </button>
+		                </li>`;
+		        });
+		        cartContent += "</ul>";
+		        cartSidebar.html(cartContent);
+
+		        // Attach event listeners to the remove buttons
+		        $(".remove-item").on("click", function () {
+		            var itemIndex = $(this).data("index");
+
+		            // Send AJAX request to remove the item
+		            $.ajax({
+		                url: "../action/remove_from_cart.php",
+		                type: "POST",
+		                data: { index: itemIndex },
+		                success: function (response) {
+		                    try {
+		                        var updatedCart = JSON.parse(response);
+
+		                        if (updatedCart.success) {
+		                            // Update the cart count
+		                            $("#cart-count").text(updatedCart.count);
+
+		                            // Update the cart sidebar
+		                            updateCartSidebar(updatedCart.items);
+		                        } else {
+		                            alert("Failed to remove item from cart.");
+		                        }
+		                    } catch (e) {
+		                        console.error("Invalid JSON response", e);
+		                        alert("Error updating cart.");
+		                    }
+		                },
+		                error: function () {
+		                    alert("Error removing item from cart.");
+		                }
+		            });
+		        });
+		    }
+		}
+});
+
+</script>
+
+
+<script>
+    // JavaScript to handle item removal
+    document.addEventListener('DOMContentLoaded', function ()
+     {
+	        const cartList = document.getElementById('cart-list');
+	        const cartCount = document.getElementById('cart-count');
+
+	        cartList.addEventListener('click', function (e) {
+	            if (e.target.classList.contains('remove-item')) {
+	                const index = e.target.dataset.index;
+
+	                // Send AJAX request to remove item
+	                fetch('../action/remove_from_cart.php', {
+	                    method: 'POST',
+	                    headers: {
+	                        'Content-Type': 'application/json'
+	                    },
+	                    body: JSON.stringify({ index: index })
+	                })
+	                .then(response => response.json())
+	                .then(data => {
+	                    if (data.success) {
+	                        // Update cart display
+	                        e.target.parentElement.remove();
+	                        cartCount.textContent = data.count;
+
+	                        // Show empty cart message if needed
+	                        if (data.count == 0) {
+	                            cartList.innerHTML = '<h1>Oops, Cart is Empty Now</h1>';
+	                        }
+	                    } else {
+	                        alert('Failed to remove item');
+	                    }
+	                })
+	                .catch(error => console.error('Error:', error));
+	            }
+	        });
     });
 </script>

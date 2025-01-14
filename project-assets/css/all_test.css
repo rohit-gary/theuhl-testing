@@ -1,0 +1,69 @@
+.banner-area-test-page
+{
+	background-color: #f0f0f0;
+	height:20em;
+}
+
+.upper-row
+{
+	background: linear-gradient(205deg, #3198cd 8.49%, #1b4e6f 91.51%);
+	border-radius: 10px;
+	position: relative;
+	top: -25px;
+	color: #fff;
+	height: 7em;
+}
+
+.upper-col
+{
+	padding: 8px;
+}
+
+.card
+{
+	border-radius: 29px !important;
+	/*background-color: #f0f8ff*/
+}
+
+.cart-btn
+{
+	border-radius: 10px;
+	margin: 10px;
+
+}
+
+.dis-span
+{
+	display: inline-block;
+	background-color: #ff6f61;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 2px 8px;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+
+.test-banner-heading
+{
+	font-weight: bolder;
+	font-size: 50px;
+	color:black;
+	line-height: 90px;
+}
+
+.test-banner-content
+{
+	font-size: 20px;
+	color:#ff6f61;
+	font-weight: bolder;
+}
+
+.bg-ddd
+{
+   background-color: #dddd;
+}
+
+.bg-offcanvas{
+	background-color: rgb(246 247 242);
+}

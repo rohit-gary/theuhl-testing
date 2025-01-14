@@ -21,6 +21,7 @@ $conf = new Conf();
 
     $encrypt = new Encryption();
     $PolicyID = $_GET["PolicyID"];
+    $EncPolicyID = $_GET["PolicyID"];
     $PolicyID = $encrypt->decrypt_message($PolicyID);
 
     $PolicyDetails_obj = new PolicyCustomer($conn);
@@ -192,6 +193,16 @@ $conf = new Conf();
                                                     $expiryFormattedDate
                                                 ); ?></td>
                                             </tr>
+                                            <tr>
+                                            <th style="text-align: left; color: #6c757d;">PaymentLink:</th>
+                                            <td>
+                                                <span id="paymentLinkText">
+                                                    http://localhost/Projects/theuhl-testing/pay-booking-amount-new?policyNumber=<?php echo htmlspecialchars($EncPolicyID); ?>
+                                                </span>
+                                                <button onclick="copyPaymentLink()" class="btn btn-link p-0" style="color: #007bff; text-decoration: underline; font-size: 14px;"><i class="ion ion-clipboard"></i></button>
+                                            </td>
+                                        </tr>
+
                                         </tbody>
                                     </table>
 
@@ -1158,6 +1169,19 @@ function savefamilyMember() {
 }
 
 
+</script>
+
+<script>
+    function copyPaymentLink() {
+        var paymentLink = document.getElementById("paymentLinkText").innerText;
+        var tempInput = document.createElement("input");
+        document.body.appendChild(tempInput);
+        tempInput.value = paymentLink;
+        tempInput.select(); 
+        document.execCommand("copy"); 
+        document.body.removeChild(tempInput);
+        Alert(paymentLink);
+    }
 </script>
 </body>
 </html>

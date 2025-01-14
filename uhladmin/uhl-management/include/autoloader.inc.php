@@ -22,6 +22,8 @@ function myAutoLoader($className){
 	$path7 = "uhladmin/uhl-management/classes/".$file_name;
 	$path8 = "../uhladmin/uhl-management/classes/".$file_name;
 	$path9 = "../uhladmin/admin/classes/".$file_name;
+	$path10 = "../../uhladmin/uhl-management/classes/".$file_name;
+	$path11 = "../../uhladmin/admin/classes/".$file_name;
 	if(file_exists($fullPath))
 	{
 		include_once $fullPath;
@@ -67,6 +69,14 @@ function myAutoLoader($className){
 	else if(file_exists($path9))
 	{
         include_once $path9;
+	}
+	else if(file_exists($path10))
+	{
+        include_once $path10;
+	}
+	else if(file_exists($path11))
+	{
+        include_once $path11;
 	}
 	else{
 

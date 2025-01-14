@@ -43,12 +43,12 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
                     <div class="extra-cell">
                         <a href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login" id="login-btn" class="site-button appointment-btn btnhover13" target="_blank">Login Here</a>
                            <a href="javascript:void(0)" 
-                               class="btn btn-primary position-relative" 
+                               class="btn  btn-outline-secondary position-relative " 
                                type="button" 
                                data-bs-toggle="offcanvas" 
                                data-bs-target="#offcanvasRight" 
                                aria-controls="offcanvasRight" id="cart-icon">
-                                <i class="fa fa-shopping-cart"></i> <!-- Cart Icon -->
+                                <i class="fa fa-shopping-cart text-black"></i> <!-- Cart Icon -->
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
                                     <?php echo $cartCount; ?> <!-- Set cart count from PHP -->
                                 </span>

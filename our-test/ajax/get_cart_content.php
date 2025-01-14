@@ -1,6 +1,7 @@
 <?php
 session_start();
 // unset($_SESSION['cart']);
+// unset(count($_SESSION['cart']));
 // Check if the cart is not empty
 if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
     $totalPrice = 0; // Initialize total price

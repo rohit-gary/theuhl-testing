@@ -95,7 +95,7 @@ include('include/logic.php');
 								</div>
 
 								<div class="row">
-									<div class="col-6"><button class="cart-btn  btn btn-outline-warning btnhover13">View Details</button></div>
+									<div class="col-6"><a class="cart-btn  btn btn-outline-warning btnhover13" href="./red-blood-cell-count-details">View Details</a></div>
 									<div class="col-6"><button class="site-button cart-btn btnhover13" data-product-id="<?php echo $test['ID']?>" data-product-name="<?php echo $test['TestName']?>" data-product-price=" <?php echo $test['TestFee']?>">Add to cart</button></div>
 								</div>
 								

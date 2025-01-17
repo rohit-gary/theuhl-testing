@@ -100,15 +100,7 @@ $conf = new Conf();
                     <!-- CONTAINER END -->
                 </div>
             </div>
-            <!--app-content close-->
-
-
-          
-
-
-            
-
-
+            <!--app-content close-->    
         <?php
        include("../navigation/right-side-navigation.php");
         ?>

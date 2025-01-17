@@ -8,22 +8,29 @@ $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'] . '/Projects/theuhl-testin
 $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 ?>
 <header class="site-header mo-left header">
-    <!-- <div class="top-bar">
+    <div class="top-bar">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="dlab-topbar-left">
                     <ul>
-                        <li><a href="javascript:void(0);">About Us</a></li>
-                        <li><a href="javascript:void(0);">Refund Policy</a></li>
-                        <li><a href="javascript:void(0);">Help Desk</a></li>
+                       <li><a href="<?php echo $base_url; ?>/blogs">Blog</a></li>
+                      
+                       <li class="">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">
+                                <span class="badge bg-warning text-dark">
+                                    <i class="fas fa-exclamation-circle me-1"></i>Disclaimer
+                                </span>
+                            </a>
+                        </li>
+                        <li class="d-md-block d-md-none"> <a href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login" id="login-btn" class="site-button  btnhover13" target="_blank">Login Here</a></li>
                     </ul>
                 </div>
-                <div class="dlab-topbar-right">
-                    <a href="javascript:void(0);" class="site-button radius-no">GET A QUOTE</a>						
+                <div class="dlab-topbar-right d-none d-md-block">
+                  <a href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login" id="login-btn" class="site-button  btnhover13" target="_blank">Login Here</a></li>	
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- main header -->
     <div class="sticky-header main-bar-wraper navbar-expand-lg">
         <div class="main-bar clearfix">
@@ -41,16 +48,16 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
                 <!-- extra nav -->
                 <div class="extra-nav">
                     <div class="extra-cell">
-                        <a href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login" id="login-btn" class="site-button appointment-btn btnhover13" target="_blank">Login Here</a>
+                        
                            <a href="javascript:void(0)" 
-                               class="btn  btn-outline-secondary position-relative " 
+                               class="btn btn-outline-secondary position-relative" 
                                type="button" 
                                data-bs-toggle="offcanvas" 
                                data-bs-target="#offcanvasRight" 
                                aria-controls="offcanvasRight" id="cart-icon">
                                 <i class="fa fa-shopping-cart text-black"></i> <!-- Cart Icon -->
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
-                                    <?php echo $cartCount; ?> <!-- Set cart count from PHP -->
+                                    0 <!-- Default count (will be updated dynamically) -->
                                 </span>
                             </a>
 
@@ -70,18 +77,13 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
                     </div>
                     <ul class="nav navbar-nav align-items-center">
                         <li class=""><a href="<?php echo $base_url; ?>/index">Home</a></li>
-                        <li><a href="<?php echo $base_url; ?>/about-us">About us <i class="fas fa-chevron-down"></i></a></li>
-                        <li><a href="<?php echo $base_url; ?>/all-plans">Our Health Plans<i class="fas fa-chevron-down"></i></a></li>
-                        <li><a href="<?php echo $base_url; ?>/blogs">Blog<i class="fas fa-chevron-down"></i></a></li>
-                        <li><a href="<?php echo $base_url; ?>/faqs">FAQ'S<i class="fas fa-chevron-down"></i></a></li>
-                        <li><a href="<?php echo $base_url; ?>/contact-us">Contact Us<i class="fas fa-chevron-down"></i></a></li>
-                        <!-- <li class="">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">
-                                <span class="badge bg-warning text-dark">
-                                    <i class="fas fa-exclamation-circle me-1"></i>Disclaimer
-                                </span>
-                            </a>
-                        </li> -->
+                        <li><a href="<?php echo $base_url; ?>/about-us">About us </a></li>
+                        <li><a href="<?php echo $base_url; ?>/all-plans">Our Health Plans</a></li>
+                        <li><a href="<?php echo $base_url; ?>/our-test/all-test"><i class="fas fa-microscope" style="font-size: 15px;"></i>Test</a></li>
+                          <li><a href="<?php echo $base_url; ?>/faqs">FAQ'S</a></li>
+                       
+                        <li><a href="<?php echo $base_url; ?>/contact-us">Contact Us</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -91,7 +93,7 @@ $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 </header>
 
 <!-- Bootstrap 5 Modal for Disclaimer -->
-<div class="modal fade mt-4" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
+<div class="modal fade mt-5" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="background-color:#85b94e">

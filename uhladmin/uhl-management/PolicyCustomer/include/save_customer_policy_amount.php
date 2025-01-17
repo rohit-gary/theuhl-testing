@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 @session_start();
 require_once('../../include/autoloader.inc.php');
 include("../../include/get-db-connection.php");
+include('../../controllers/common_controller.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if content-type is JSON
@@ -51,6 +52,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $response['message'] = 'Policy amount details saved successfully.';
                 $response['error']= false;
                  $response['PolicyNumber']= $encodedPolicyNumber;
+
+                 if($response['error']==false){
+                    $cus_details= $PolicyCustomer->getPolicyCustomerDetailsByPolicyNumber($PolicyNumber);
+                    $username= $cus_details['UserName'];
+                    $paymentlink = "https://unitedhealthlumina.com/pay-booking-amount-new?policyNumber=" . $encodedPolicyNumber;
+                    $wdata['PolicyNumber'] = $data['PolicyNumber'];
+                    $wdata['phonenumber'] = $cus_details['MobileNumber'];
+                    // $body_values = '["'.$UserName.'"]';
+                    $body_values = '["' . $username . '","' . $paymentlink . '"]';
+                    $wdata['body_values'] = $body_values;
+                    $wdata['template'] = "browse_paymentlinkon_whatsapp";
+                    _interakt_sendWhatsAppMessage_common($wdata);
+                    
+                }
            
         } else {
             $response['error'] = true;

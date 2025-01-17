@@ -123,6 +123,7 @@ $conf = new Conf();
         ?>
 
            <script src="../project-assets/js/customer-policy.js"></script>
+              <script src="../project-assets/js/all-customers.js"></script>
 
 
         <script type="text/javascript">

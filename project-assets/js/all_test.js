@@ -56,6 +56,7 @@
 			success: function(response)
 			{
 				var cartData = JSON.parse(response);
+				alert("Item added to cart!");
 				$("#cart-count").text(cartData.cartCount);
 				updateCartSidebar(cartData.cartItems);
 			}

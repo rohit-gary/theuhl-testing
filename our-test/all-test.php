@@ -456,4 +456,4 @@ include('include/logic.php');
     <?php include("../includes/footer1.php") ?>
     <?php include("../includes/script1.php") ?>
 </body>
-<script type="text/javascript" src="../project-assets/js/all_test.js" defer></script>
+<script type="text/javascript" src="../project-assets/js/all_test_new.js" defer></script>

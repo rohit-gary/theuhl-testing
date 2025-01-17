@@ -609,7 +609,7 @@ return $response;
 	}
 
 
-    public function getPolicyCustomerDetailsByPolicyNumber($Number)
+ public function getPolicyCustomerDetailsByPolicyNumber($Number)
 {
     $sql = "SELECT 
     ac.UserID,

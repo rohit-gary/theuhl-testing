@@ -64,7 +64,7 @@ $filter .= " ORDER BY " . $columnName . " " . $columnSortOrder;
 $filter .= " LIMIT " . $row . "," . $rowperpage;
 
 ## Fetch transaction records
-$sql = "SELECT 
+$sql = "SELECT DISTINCT 
             p.id AS payment_id, 
             p.razorpay_payment_id AS TransactionID, 
             p.razorpay_order_id AS OrderID, 

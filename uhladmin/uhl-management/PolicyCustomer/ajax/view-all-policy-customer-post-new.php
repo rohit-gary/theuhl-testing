@@ -36,6 +36,11 @@ if($UserType == "Client Admin" || $UserType=="Channel Partner") {
     $access = true;
 }
 
+$access_2 = false;
+if($UserType == "Client Admin") {
+    $access_2 = true;
+}
+
 $searchQuery = "";
 if($searchValue != '') {
    $searchQuery = " AND (ac.Name LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%' 
@@ -151,10 +156,17 @@ foreach ($policy_details_arr as $policy_details_value) {
         "CreatedDate" => $CreatedDate,
         "Transection Status"=>$PaymentStatus,
         "Details" => "<a href='view-policy-details-new?PolicyID=".$Policy_ID."'><span class='badge bg-info badge-sm  me-1 mb-1 mt-1'>View Policy Details</span></a>",
-        "Action" => $access ? 
-            "
-             <a class='btn text-secondary bg-secondary-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DownloadePolicyDoc(\"$PolicyNumber\")' data-bs-original-title='downlode'> <span class='fa fa-download'></span></a>" 
-            : 'N/A',
+       "Action" => ($access ? 
+            "<a class='btn text-secondary bg-secondary-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DownloadePolicyDoc(\"$PolicyNumber\")' data-bs-original-title='Download'> 
+                <span class='fa fa-download'></span>
+             </a>" 
+            : 'N/A') . 
+            ($access_2 ? 
+            " <a onclick='GetCustomerDetails($CustomerID)'>
+                <span class='badge bg-info'>View</span>
+             </a>" 
+            : ''),
+
     );
 }
 

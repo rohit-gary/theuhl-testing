@@ -1,29 +1,44 @@
 <?php
 session_start();
-// unset($_SESSION['cart']);
-// unset(count($_SESSION['cart']));
-// Check if the cart is not empty
-if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
-    $totalPrice = 0; // Initialize total price
-    $totalTests = count($_SESSION['cart']); // Total items in the cart
 
-    foreach ($_SESSION['cart'] as $index => $item) {
-        if ($item['id'] && $item['name'] && $item['price']) {
-            $totalPrice += $item['price']; // Accumulate total price
-            
+// Initialize database connection and fetch the cart items using temp_user_id
+require_once('../../uhladmin/uhl-management/include/autoloader.inc.php');
+include("../../uhladmin/uhl-management/include/db-connection.php");
+
+$Test_obj = new Test($conn);
+$temp_user_id = $_SESSION['temp_user_id'];
+
+// Fetch cart items from the database
+$cartItems = $Test_obj->GetCartItemsByTempUserId($temp_user_id);
+
+var_dump($cartItems);
+
+// Check if the cart is not empty
+if (count($cartItems) > 0) {
+    $totalPrice = 0; // Initialize total price
+    $totalTests = count($cartItems); // Total items in the cart
+
+    // Loop through the fetched cart items
+    foreach ($cartItems as $index => $item) {
+        if ($item['ProductID'] && $item['ProductName'] && $item['ProductPrice']) {
+            // Ensure that ProductPrice is numeric before adding it
+            $productPrice = is_numeric($item['ProductPrice']) ? floatval($item['ProductPrice']) : 0;
+
+            $totalPrice += $productPrice; // Accumulate total price
+
             // Render individual cart items
             echo '<div class="card shadow-sm mb-3" id="cart-item-' . $index . '">
                     <div class="card-body">
                         <div class="row align-items-center">
                             <!-- Item Details -->
                             <div class="col-sm-8 col-md-8 col-lg-8">
-                                <h5 class="card-title mb-1"><strong>' . htmlspecialchars($item['name']) . '</strong></h5>
-                                <p class="card-text text-muted mb-0">Price: &#8377;' . number_format($item['price'], 2) . '</p>
+                                <h5 class="card-title mb-1"><strong>' . htmlspecialchars($item['ProductName']) . '</strong></h5>
+                                <p class="card-text text-muted mb-0">Price: &#8377;' . number_format($productPrice, 2) . '</p>
                             </div>
                             
                             <!-- Remove Button -->
                             <div class="col-sm-4 col-md-4 col-lg-4 text-end">
-                                <button class="btn btn-danger btn-sm remove-item" data-index="' . $index . '" aria-label="Remove ' . htmlspecialchars($item['name']) . ' from cart">
+                                <button class="btn btn-danger btn-sm remove-item" data-product-id="' . $item['ProductID'] . '" aria-label="Remove ' . htmlspecialchars($item['ProductName']) . ' from cart">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </div>
@@ -67,3 +82,4 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
             <h1 class="mt-4" style="color: #6c757d;">Oops, Cart is Empty Now</h1>
         </div>';
 }
+?>

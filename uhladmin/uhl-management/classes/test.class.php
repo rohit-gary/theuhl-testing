@@ -119,12 +119,6 @@ class Test extends Core
 		return $response;
 	}
 
-
-
-
-
-
-
 	public function GetTestCatDetails($data)
 	{
 		$ID = $data['ID'];
@@ -180,6 +174,41 @@ class Test extends Core
      $Test_name=$this->_getTableRecords($this->conn,"doc_test",$where);
      return $Test_name;
 	}
+
+
+	// --------------Cart Functionality now here---------------------------------------
+
+
+	public function InsertTestCart($data)
+	{
+		$TestId = $data['productId'];
+		$ProductName=$data['productName'];
+	    $Price = $data['productPrice'];
+	    $UserId = $data['user_id'];
+	    $TempUserId = $data['temp_user_id'];
+		$CreatedDate = $data['CreatedDate'];
+		$CreatedTime = $data['CreatedTime'];
+		$CreatedBy = $data['CreatedBy'];
+		$sql = "INSERT INTO `test_cart`(`UserID`,`TempUserID`,`ProductID`,`ProductName`,`ProductPrice`,`Quantity`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$UserId','$TempUserId','$TestId','$ProductName','$Price','1','$CreatedDate','$CreatedTime','$CreatedBy')";
+		$response_insert_details = $this->_InsertTableRecords($this->conn,$sql);
+		return $response_insert_details;	
+	}
+
+	public function GetCartItemsByTempUserId($TempID){
+
+	 $where="where TempUserID='$TempID'";
+     $Test_cart_item=$this->_getTableRecords($this->conn,"test_cart",$where);
+     return $Test_cart_item;
+
+	}
+
+
+	public function DeleteTestCartItem($where){
+		$Test_cart_item = $this->_debug_delete_identity_filter($this->conn,"test_cart",$where);
+		return $Test_cart_item;
+
+	}
+
 
 }
 

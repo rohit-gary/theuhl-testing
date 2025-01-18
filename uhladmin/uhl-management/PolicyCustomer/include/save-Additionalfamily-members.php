@@ -54,7 +54,11 @@ if (isset($_POST)) {
         $age = $now->diff($dob)->y;
         $member['Age'] = $age; 
         $response = $PolicyCustomer->InsertMemberForm($member);
-        
+        if($response['error']==false){
+             $member['ID'] = $response['last_insert_id']; 
+            $_SESSION['family_member'][]= $member;
+        }
+       
     }
 
     

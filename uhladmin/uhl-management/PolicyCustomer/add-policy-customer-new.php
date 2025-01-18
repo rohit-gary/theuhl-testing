@@ -747,8 +747,8 @@ function populatePlanSelect(plans) {
 
 let documentCounter = 1;
 
-function addFileInput() {
-    const container = document.getElementById('documents_container');
+function addFileInput(formIndex) {
+    const container = document.getElementById(`documents_container_${formIndex}`);
     
     const inputGroup = document.createElement('div');
     inputGroup.classList.add('input-group', 'mb-2');
@@ -757,7 +757,7 @@ function addFileInput() {
     fileInput.type = 'file';
     fileInput.classList.add('form-control');
     fileInput.name = 'policy_documentss[]';
-    fileInput.id = `documents_${documentCounter}`;
+    fileInput.id = `documents_${formIndex}_${documentCounter}`;
 
     const removeButton = document.createElement('button');
     removeButton.type = 'button';
@@ -774,9 +774,8 @@ function addFileInput() {
     documentCounter++;
 }
 
-
-function addFileInputMember() {
-    const container = document.getElementById('documents_container_member');
+function addFileInputMember(formIndex) {
+    const container = document.getElementById(`documents_container_member_${formIndex}`);
     
     const inputGroup = document.createElement('div');
     inputGroup.classList.add('input-group', 'mb-2');
@@ -785,7 +784,7 @@ function addFileInputMember() {
     fileInput.type = 'file';
     fileInput.classList.add('form-control');
     fileInput.name = 'policy_documentss[]';
-    fileInput.id = `documents_${documentCounter}`;
+    fileInput.id = `documents_member_${formIndex}_${documentCounter}`;
 
     const removeButton = document.createElement('button');
     removeButton.type = 'button';
@@ -802,34 +801,40 @@ function addFileInputMember() {
     documentCounter++;
 }
 
-// To retrieve files when submitting, gather all files from `policy_documents[]` inputs
-function getDocumentsArray() {
+function getDocumentsArray(index) {
     const filesArray = [];
-    const fileInputs = document.querySelectorAll("input[name='policy_documentss[]']");
+    // Select all file inputs within the specific form using the index
+    const fileInputs = document.querySelectorAll(`#policyDocumentss_form_${index} input[name='policy_documentss[]']`);
+    
+    // Loop through each file input and check if any file is selected
     fileInputs.forEach(input => {
         if (input.files.length > 0) {
-            filesArray.push(input.files[0]);  // Store each file object
+            // Store the file object (considering that multiple files might be selected)
+            for (let file of input.files) {
+                filesArray.push(file);
+            }
         }
     });
     return filesArray;
 }
 
-    $("#UplodeDocumentssBtn").html("Add");
 
-function AddUploade() {
+    $("#UplodeDocumentssBtn").html("upload");
+
+function AddUploade(index) {
     // Check if at least one document is uploaded, validate each file size and type
-    const fileInputs = document.querySelectorAll("input[name='policy_documentss[]']");
+    const fileInputs = document.querySelectorAll(`#policyDocumentss_form_${index} input[name='policy_documentss[]']`);
     let fileSelected = false;
     const maxFileSize = 10 * 1024 * 1024; // 10 MB in bytes
     const allowedTypes = [
-    'application/pdf', // PDF files
-    'application/msword', // DOC files
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // DOCX files
-    'image/jpeg', // JPG files
-    'image/png' // PNG files
-];
+        'application/pdf', // PDF files
+        'application/msword', // DOC files
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // DOCX files
+        'image/jpeg', // JPG files
+        'image/png' // PNG files
+    ];
 
-
+    // Iterate over the file inputs
     for (let input of fileInputs) {
         if (input.files.length > 0) {
             fileSelected = true;
@@ -849,15 +854,15 @@ function AddUploade() {
     }
 
     if (!fileSelected) {
-        Alert("Please upload at least one  Document.");
+        Alert("Please upload at least one document.");
         return false;
     }
 
     // Update button text to indicate loading
-    $("#UplodeDocumentssBtn").html("Please Wait..");
+    $("#UplodeDocumentssBtn_" + index).html("Please Wait..");
 
     // Create a new FormData object to handle file uploads
-    let formData = new FormData(document.getElementById("policyDocumentss_form"));
+    let formData = new FormData(document.getElementById("policyDocumentss_form_" + index));
 
     // Make AJAX request with FormData
     $.ajax({
@@ -869,23 +874,25 @@ function AddUploade() {
         success: function(data) {
             var response = JSON.parse(data);
             Alert(response.message);
-            if (response.error == false) { 
+            if (response.error == false) {
                 setTimeout(function() {
-                   
+                    // Additional actions after successful upload, if needed
+                    location.reload();
                 }, 1500);
-                $("#UplodeDocumentssBtn").html("Add");
-                $('#policyDocumentss_form')[0].reset();
+                $("#UplodeDocumentssBtn_" + index).html("UplodeAgain");
+                $('#policyDocumentss_form_' + index)[0].reset(); // Reset the form after success
             } else {
-                $("#UplodeDocumentssBtn").html("Add");
+                $("#UplodeDocumentssBtn_" + index).html("UplodeAgain");
             }
         },
         error: function(xhr, status, error) {
             Alert("An error occurred while submitting the form. Please try again.");
-            $("#UplodeDocumentssBtn").html("Add");
+            $("#UplodeDocumentssBtn_" + index).html("Uplode");
         }
     });
     return false;
 }
+
 
 </script>
 
@@ -903,3 +910,5 @@ function AddUploade() {
 });
 
 </script>
+
+

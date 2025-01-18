@@ -604,6 +604,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             }
                             if (step === 5) {
                                 displayUploadDocumentForm();
+                                displayUploadedDocument();
                             }
                         }
                     }
@@ -628,6 +629,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                         });
                     }
+                    
+
 
                     // function for add Additionalfamilymember form
 
@@ -1442,7 +1445,11 @@ function saveAdditionalFamilyMember() {
                 } else {
                     Alert('Family member details saved successfully!');
                     $('#familyMemberModal').modal('hide'); 
-                    form.reset(); 
+                    form.reset();
+                    setTimeout(function (){
+                        location.reload();
+                    },2000);
+                     
                 }
             } catch (error) {
                 console.error("Error parsing response:", error);
@@ -1663,4 +1670,38 @@ function cleanRichText(content)
     content = content.replace(/"/g, ''); 
     content = content.replace(/\s+/g, ' ').trim(); 
     return content;
+}
+
+
+function viewDocument(doc) {
+    // Determine the base URL dynamically based on the hostname
+    const baseUrl = window.location.hostname === "localhost"
+        ? "http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/PolicyCustomer/documents/"
+        : "https://unitedhealthlumina.com/uhladmin/uhl-management/PolicyCustomer/documents/";
+
+    // Combine the base URL with the document name
+    const fullUrl = baseUrl + doc;
+
+    // Open the document in a new tab
+    window.open(fullUrl, '_blank');
+}
+
+
+function deleteDocument(doc) {
+    // Confirm before deletion
+    if (confirm('Are you sure you want to delete this document?')) {
+        // Perform an AJAX request to delete the document from the session
+        $.ajax({
+            url: 'action/delete_document.php', // A PHP script to handle the document deletion
+            method: 'POST',
+            data: { document: doc },
+            success: function(response) {
+                Alert('Document deleted successfully!');
+                // location.reload();  // Reload the page to update the document list
+            },
+            error: function(error) {
+                Alert('Error deleting document.');
+            }
+        });
+    }
 }

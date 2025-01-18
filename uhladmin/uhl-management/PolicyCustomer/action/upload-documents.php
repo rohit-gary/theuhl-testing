@@ -36,12 +36,21 @@ if (isset($_POST['policy_number'])) {
 
                 if (move_uploaded_file($tmpName, $targetFilePath)) {
                     $uploadedFiles[] = $uniqueFileName;  // Store only the file name
+
                 }
             }
         }
 
         $data['documents'] = json_encode($uploadedFiles);  // Convert file names to JSON for storage
         $response = $policycustomer_obj->InsertPolicyDocuments($data);
+
+        if($response['error']==false){
+            $familyMemberID=$data['familyMemberSelect'];
+             if (!isset($_SESSION['family_member_documents'][$familyMemberID])) {
+                    $_SESSION['family_member_documents'][$familyMemberID] = [];
+                }
+              $_SESSION['family_member_documents'][$familyMemberID] = array_merge($_SESSION['family_member_documents'][$familyMemberID], $uploadedFiles); 
+        }
 
         if ($response['error'] == false) {
             $response['message'] = "Documents Uploded!";
@@ -50,7 +59,7 @@ if (isset($_POST['policy_number'])) {
             $response['message'] = "Some Technical Error! Please Try Again.";
         }
     } else {
-        $response = $service_obj->UpdateServiceDetails($data);
+        $response = $service_obj->UpdatePolicyDocuments($data);
     }
 } else {
     $response['error'] = true;

@@ -615,8 +615,11 @@ return $response;
     ac.UserID,
     MAX(ac.Name) AS UserName,              -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     MAX(ac.ContactNumber) AS MobileNumber, -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
-    MAX(ac.Email) AS Email,                -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
-    MAX(ac.Address) AS Address,            -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
+    MAX(ac.Email) AS Email,
+    MAX(ac.DateOfBirth) AS DOB,
+    MAX(ac.PermanentAddress) AS PermanentAddress,               -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
+    MAX(ac.Address) AS Address,
+    MAX(ac.Pincode) AS Pincode,            -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     MAX(ac.State) AS sstate,                -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     MAX(ac.PinCode) AS PinCode,            -- Aggregating to avoid ONLY_FULL_GROUP_BY issue
     cp.PolicyNumber,

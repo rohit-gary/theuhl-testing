@@ -145,6 +145,13 @@ $conf = new Conf();
                                                     $PolicyDetails["PlanNames"]
                                                 ); ?></td>
                                             </tr>
+
+                                            <tr>
+                                                <th style="width: 30%; text-align: left; color: #6c757d;">Policy Amount:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["TotalAmount"]
+                                                ); ?></td>
+                                            </tr>
                                             <tr>
                                                 <th style="text-align: left; color: #6c757d;">Policy Number:</th>
                                                 <td><?php echo htmlspecialchars(
@@ -164,6 +171,12 @@ $conf = new Conf();
                                                 ); ?></td>
                                             </tr>
                                             <tr>
+                                                <th style="width: 30%; text-align: left; color: #6c757d;">DOB:</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["DOB"]
+                                                ); ?></td>
+                                            </tr>
+                                            <tr>
                                                 <th style="text-align: left; color: #6c757d;">Email:</th>
                                                 <td><?php echo htmlspecialchars(
                                                     $PolicyDetails["Email"]
@@ -173,6 +186,20 @@ $conf = new Conf();
                                                 <th style="text-align: left; color: #6c757d;">Address:</th>
                                                 <td><?php echo htmlspecialchars(
                                                     $PolicyDetails["Address"]
+                                                ); ?></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th style="width: 30%; text-align: left; color: #6c757d;">PermanentAddress  :</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["PermanentAddress"]
+                                                ); ?></td>
+                                            </tr>
+
+                                             <tr>
+                                                <th style="width: 30%; text-align: left; color: #6c757d;">Pincode  :</th>
+                                                <td><?php echo htmlspecialchars(
+                                                    $PolicyDetails["Pincode"]
                                                 ); ?></td>
                                             </tr>
                                             <tr>

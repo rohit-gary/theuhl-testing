@@ -162,16 +162,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function saveTestItem() {
-    // Check if user is logged in
-    const isLoggedIn = true;
-    
+function saveTestItem(sessionData) {
+   
+    let isLoggedIn = false;
+    if (sessionData.dwd_UserID) {
+        isLoggedIn = true; 
+    }
+
     if (!isLoggedIn) {
-        // Show login modal
         $('#loginModal').modal('show');
     } else {
-        // Proceed to payment
-        goToPayment();
+        alert('show model');
+        $('#checkOutModal').modal('show');
     }
 }
 
@@ -179,6 +181,7 @@ function goToPayment() {
     // Redirect to the payment module
     window.location.href = '/payment';
 }
+
 
 
 

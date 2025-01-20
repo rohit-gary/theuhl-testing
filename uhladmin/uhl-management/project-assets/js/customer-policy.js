@@ -397,7 +397,7 @@ function AddUpdateCustomerPolicyForm() {
 }
 
 
-function DeletePolicy(policy_id) {
+function DeletePolicy(PolicyNumber) {
     alertify.confirm(
         
         "Do you really want to delete Policy Customer?",
@@ -405,15 +405,13 @@ function DeletePolicy(policy_id) {
             $.post(
                 "action/delete-policy.php",
                 {
-                    ID: policy_id,
+                    PolicyNumber: PolicyNumber,
                 },
                 function (data, status) {
                     var response = JSON.parse(data);
                     Alert(response.message);
                     if (response.error == false) {
-                        setInterval(function () {
-                            location.reload();
-                        }, 2000);
+                        $('#all_policy_customer').DataTable().ajax.reload(null, false);
                     }
                 }
             );

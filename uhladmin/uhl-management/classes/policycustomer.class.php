@@ -592,10 +592,10 @@ return $response;
 
     public function DeletePolicy($data)
 	{
-		$ID = $data['ID'];
+		$PolicyNumber = $data['PolicyNumber'];
 		$update_param = "IsActive = 0
-                 WHERE ID =  $ID";
-		$response = $this->_UpdateTableRecords($this->conn, 'policy_customer', $update_param);
+                 WHERE PolicyNumber =  '$PolicyNumber'";
+		$response = $this->_UpdateTableRecords($this->conn, 'customerpolicy', $update_param);
 		return $response;
 	}
 

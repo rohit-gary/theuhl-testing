@@ -50,7 +50,7 @@ if($searchValue != '') {
 
 ## Filter for access levels
 $filter = "WHERE 1=1"; // default where clause to simplify appending conditions
-
+$filter = "WHERE cp.isActive=1";
 if($UserType == "Channel Partner") {
     $filter .= " AND ac.CreatedBy = '" . mysqli_real_escape_string($conn, $loggedin_email) . "'";
 } 
@@ -159,6 +159,8 @@ foreach ($policy_details_arr as $policy_details_value) {
        "Action" => ($access ? 
             "<a class='btn text-secondary bg-secondary-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DownloadePolicyDoc(\"$PolicyNumber\")' data-bs-original-title='Download'> 
                 <span class='fa fa-download'></span>
+             </a> &nbsp;&nbsp <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeletePolicy(\"$PolicyNumber\")' data-bs-original-title='Download'> 
+                <span class='fa fa-trash'></span>
              </a>" 
             : 'N/A') . 
             ($access_2 ? 

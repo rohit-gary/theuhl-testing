@@ -1,3 +1,6 @@
+<?php 
+$sessionDataJson = json_encode($_SESSION); 
+?>
 <section class="cart-aside bg-offcanvas">
     <div class="offcanvas offcanvas-end bg-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index:100000">
         <div class="offcanvas-header">
@@ -24,9 +27,11 @@
                         <!-- Proceed Button -->
                         <div class="col-6">
                             <form action=" " method="POST" onsubmit="return false;">
-                                <button type="button" class="btn site-button appointment-btn btnhover13 btn-rounded px-4" onclick="saveTestItem()">
-                                    Proceed
-                                </button>
+                                <button type="button" 
+                                    class="btn site-button appointment-btn btnhover13 btn-rounded px-4" 
+                                    onclick='saveTestItem(<?php echo $sessionDataJson; ?>)'>
+                                CheckOut
+                            </button>
                             </form>
                         </div>
                     </div>

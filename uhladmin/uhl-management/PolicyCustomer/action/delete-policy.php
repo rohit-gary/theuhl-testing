@@ -15,7 +15,7 @@ if(isset($_POST))
     if($response_data == true)
     {
         $response['error']  = false;
-        $response['message']  = "Plan has been Deleted!";
+        $response['message']  = "Policy has been Deleted!";
     }else{
         $response['message'] = "Some Technical Error ! Please Try Again.";
     }

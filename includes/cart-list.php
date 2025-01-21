@@ -1,5 +1,10 @@
-<?php 
-$sessionDataJson = json_encode($_SESSION); 
+<?php
+if (isset($_SESSION) && is_array($_SESSION)) {
+    $sessionDataJson = json_encode($_SESSION);
+} else {
+    $sessionDataJson = json_encode([]);
+}
+
 ?>
 <section class="cart-aside bg-offcanvas">
     <div class="offcanvas offcanvas-end bg-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index:100000">
@@ -68,3 +73,6 @@ $sessionDataJson = json_encode($_SESSION);
         </div>
     </div>
 </div>
+
+
+<!-- --------------checkOutModal---------------- -->

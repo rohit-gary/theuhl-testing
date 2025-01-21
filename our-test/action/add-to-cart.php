@@ -11,6 +11,8 @@ $Cart_obj = new Cart($conn);
 
 $cart_id = getOrCreateCart();
 
+$_SESSION['cart_id']=$cart_id;
+
 $response=[];
 
 $product_id = $_POST['product_id'];

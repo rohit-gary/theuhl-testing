@@ -170,10 +170,14 @@ function saveTestItem(sessionData) {
     }
 
     if (!isLoggedIn) {
-        $('#loginModal').modal('show');
+        // $('#loginModal').modal('show');
+        // alert(JSON.stringify(sessionData));
+        gotocreateaccount(sessionData);
     } else {
-        alert('show model');
+        console.log(JSON.stringify(sessionData));
+        alert(JSON.stringify(sessionData));
         $('#checkOutModal').modal('show');
+        
     }
 }
 
@@ -182,6 +186,7 @@ function goToPayment() {
     window.location.href = '/payment';
 }
 
-
-
+function gotocreateaccount(sessionData) {
+    window.location.href = `./create-account.php`;
+}
 

@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 require_once('../../include/autoloader.inc.php');
 include("../../include/get-db-connection.php");
 
-$PolicyCustomer = new PolicyCustomer($conn); 
+$PolicyCustomer = new PolicyCustomer($conn);
 $loggedin_email = $_SESSION['dwd_email'];
 $authentication = new Authentication($conn);
 $UserType = $authentication->SessionCheck();
@@ -24,26 +24,26 @@ $RoleType = $authentication->CheckRole($role);
 ## Read value
 $draw = $_POST['draw'];
 $row = $_POST['start'];
-$rowperpage = $_POST['length']; 
-$searchValue = $_POST['search']['value']; 
+$rowperpage = $_POST['length'];
+$searchValue = $_POST['search']['value'];
 
-$columnName = "ac.ID"; 
-$columnSortOrder = "DESC"; 
+$columnName = "ac.ID";
+$columnSortOrder = "DESC";
 
 ## Check access level
 $access = false;
-if($UserType == "Client Admin" || $UserType=="Channel Partner") {
+if ($UserType == "Client Admin" || $UserType == "Channel Partner") {
     $access = true;
 }
 
 $access_2 = false;
-if($UserType == "Client Admin") {
+if ($UserType == "Client Admin") {
     $access_2 = true;
 }
 
 $searchQuery = "";
-if($searchValue != '') {
-   $searchQuery = " AND (ac.Name LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%' 
+if ($searchValue != '') {
+    $searchQuery = " AND (ac.Name LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%' 
                      OR ac.ContactNumber LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%'  
                      OR cp.PolicyNumber LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%')";
 }
@@ -51,11 +51,11 @@ if($searchValue != '') {
 ## Filter for access levels
 $filter = "WHERE 1=1"; // default where clause to simplify appending conditions
 $filter = "WHERE cp.isActive=1";
-if($UserType == "Channel Partner") {
+if ($UserType == "Channel Partner") {
     $filter .= " AND ac.CreatedBy = '" . mysqli_real_escape_string($conn, $loggedin_email) . "'";
-} 
+}
 
-if($UserType == "Client User" && $RoleType == "Sales Man") {
+if ($UserType == "Client User" && $RoleType == "Sales Man") {
     $filter .= " AND ac.CreatedBy = '" . mysqli_real_escape_string($conn, $loggedin_email) . "'";
 }
 
@@ -93,11 +93,11 @@ $totalRecords = $totalResult['total_count'];
 // $policy_details_arr = $PolicyCustomer->_getTotalRecord($conn, 'policy_customer', $filter);
 
 ## Main SQL query to fetch policy details
-$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber, MAX(ac.CreatedBy) AS CreatedBy, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN pmd.Document IS NULL THEN 1 END) = 0 THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_member_details pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
+$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber, MAX(ac.CreatedBy) AS CreatedBy, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN JSON_LENGTH(pmd.Documents) > 0 THEN 1 END) THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_customer_documents pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
      GROUP BY ac.ID, cp.PolicyNumber ORDER BY ac.ID DESC, cp.PolicyNumber  LIMIT $row, $rowperpage ";
 
-     // echo $sql;
-    $result = mysqli_query($conn, $sql);
+// echo $sql;
+$result = mysqli_query($conn, $sql);
 
 if (!$result) {
     echo "SQL Error: " . mysqli_error($conn);
@@ -115,59 +115,59 @@ $data = [];
 
 ## Prepare the data for the response
 // $data = array();
-$docStatus="Pending";
+$docStatus = "Pending";
 foreach ($policy_details_arr as $policy_details_value) {
     extract($policy_details_value);
 
     // print_r($policy_details_value);
     // die();
 
-     $payment_datass = $PolicyCustomer->checkPaymentStatusByPolicyNumber($PolicyNumber);
-        // $payment_data=$payment_datass[0];
-       
+    $payment_datass = $PolicyCustomer->checkPaymentStatusByPolicyNumber($PolicyNumber);
+    // $payment_data=$payment_datass[0];
 
-         // var_dump($payment_data);
 
-              if (!empty($payment_datass) && isset($payment_datass[0])) {
-               $payment_data = $payment_datass[0];
+    // var_dump($payment_data);
 
-            // Check for payment status
-            if (!empty($payment_data) && isset($payment_data['status'])) {
-                $payment_status = $payment_data['status'];
-            } else {
-                $payment_status = 'Pending';
-            }
+    if (!empty($payment_datass) && isset($payment_datass[0])) {
+        $payment_data = $payment_datass[0];
+
+        // Check for payment status
+        if (!empty($payment_data) && isset($payment_data['status'])) {
+            $payment_status = $payment_data['status'];
         } else {
             $payment_status = 'Pending';
         }
+    } else {
+        $payment_status = 'Pending';
+    }
 
 
 
     $encrypt = new Encryption();
     $Policy_ID = $encrypt->encrypt_message($PolicyNumber);
-    
+
     $data[] = array(
-         "id" => $CustomerID,
-         "Name" => $UserName,
+        "id" => $CustomerID,
+        "Name" => $UserName,
         "ContactNumber" => $MobileNumber,
         "PolicyNumber" => $PolicyNumber,
-        "CreatedBy"=>$CreatedBy,
-        "Document Status"=>$DocumentStatus,
+        "CreatedBy" => $CreatedBy,
+        "Document Status" => $DocumentStatus,
         "CreatedDate" => $CreatedDate,
-        "Transection Status"=>$PaymentStatus,
-        "Details" => "<a href='view-policy-details-new?PolicyID=".$Policy_ID."'><span class='badge bg-info badge-sm  me-1 mb-1 mt-1'>View Policy Details</span></a>",
-       "Action" => ($access ? 
+        "Transection Status" => $PaymentStatus,
+        "Details" => "<a href='view-policy-details-new?PolicyID=" . $Policy_ID . "'><span class='badge bg-info badge-sm  me-1 mb-1 mt-1'>View Policy Details</span></a>",
+        "Action" => ($access ?
             "<a class='btn text-secondary bg-secondary-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DownloadePolicyDoc(\"$PolicyNumber\")' data-bs-original-title='Download'> 
                 <span class='fa fa-download'></span>
              </a> &nbsp;&nbsp <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeletePolicy(\"$PolicyNumber\")' data-bs-original-title='Download'> 
                 <span class='fa fa-trash'></span>
-             </a>" 
-            : 'N/A') . 
-            ($access_2 ? 
-            " <a onclick='GetCustomerDetails($CustomerID)'>
+             </a>"
+            : 'N/A') .
+            ($access_2 ?
+                " <a onclick='GetCustomerDetails($CustomerID)'>
                 <span class='badge bg-info'>View</span>
-             </a>" 
-            : ''),
+             </a>"
+                : ''),
 
     );
 }
@@ -188,6 +188,3 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 
 echo $json_response;
 ?>
-
-
-

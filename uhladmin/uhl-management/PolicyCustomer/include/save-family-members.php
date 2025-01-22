@@ -12,15 +12,15 @@ if (isset($_POST)) {
     $PolicyCustomer = new PolicyCustomer($conn);
     $data = $_POST;
 
-    
-    
+
+
 
     // Retrieve basic data
     $data['CreatedTime'] = date('H:i:s');
     $data['CreatedDate'] = date('Y-m-d');
     $data['CreatedBy'] = $_SESSION['dwd_email'];
     $PolicyCustomerID = '';
-    $PolicyNumber=$data['policy_number_1'];// Adjust if you have this ID already generated.
+    $PolicyNumber = $data['policy_number_1'];// Adjust if you have this ID already generated.
 
 
     // Initialize response
@@ -30,7 +30,7 @@ if (isset($_POST)) {
         'data' => []
     ];
 
-       // Check if family_member session is already an array, if not initialize it
+    // Check if family_member session is already an array, if not initialize it
     if (!isset($_SESSION['family_member']) || !is_array($_SESSION['family_member'])) {
         $_SESSION['family_member'] = [];
     }
@@ -38,7 +38,7 @@ if (isset($_POST)) {
 
     // Loop through members in POST data
     $index = 1;
-    $OtherRelationship=" "; 
+    $OtherRelationship = " ";
     while (isset($data["member_name_$index"])) {
         $member = [
             'PolicyCustomerID' => $PolicyCustomerID,
@@ -53,10 +53,10 @@ if (isset($_POST)) {
             'CreatedBy' => $data['CreatedBy']
         ];
 
-                // Add 'OtherRelationship' only if it exists
-            if (isset($data["other_relationship_$index"])) {
-                $member['OtherRelationship'] = $data["other_relationship_$index"];
-            }
+        // Add 'OtherRelationship' only if it exists
+        if (isset($data["other_relationship_$index"])) {
+            $member['OtherRelationship'] = $data["other_relationship_$index"];
+        }
 
         // Calculate age from DateOfBirth
         $dob = new DateTime($member['DateOfBirth']);
@@ -64,34 +64,47 @@ if (isset($_POST)) {
         $age = $now->diff($dob)->y;
         $member['Age'] = $age;
         $to_be_inserted = true;
-        if(isset($data["PolicyMemberID_$index"]))
-        {
+        if (isset($data["PolicyMemberID_$index"])) {
             $PolicyMemberID = $data["PolicyMemberID_$index"];
-            if($PolicyMemberID != -1)
-            {
+            if ($PolicyMemberID != -1) {
                 $to_be_inserted = false;
             }
         }
-        if($to_be_inserted)
-        {
-     
+        if ($to_be_inserted) {
+
             $response = $PolicyCustomer->InsertMemberForm($member);
-            $member['ID']=$response['last_insert_id'];
-        }
-        else
-        {
+            $member['ID'] = $response['last_insert_id'];
+        } else {
 
             $whereCondition = [
                 'ID' => $PolicyMemberID
             ];
-            $response = $PolicyCustomer->UpdateMemberForm($member,$whereCondition);
-            $member['ID']=$PolicyMemberID;
+            $response = $PolicyCustomer->UpdateMemberForm($member, $whereCondition);
+            $member['ID'] = $PolicyMemberID;
         }
-        
-        
 
-        $_SESSION['family_member'][] = $member;
-        $response['PolicyNumber']= $PolicyNumber;
+
+
+        // $_SESSION['family_member'][] = $member;
+        if (!isset($_SESSION['family_member'])) {
+            $_SESSION['family_member'] = [];
+        }
+        $exists = false;
+
+        foreach ($_SESSION['family_member'] as $existingMember) {
+            // Compare by 'ID' or any other unique fields
+            if ($existingMember['ID'] === $member['ID']) {
+                $exists = true;
+                break;
+            }
+        }
+
+        // Add the member to the session if it does not already exist
+        if (!$exists) {
+            $_SESSION['family_member'][] = $member;
+
+        }
+        $response['PolicyNumber'] = $PolicyNumber;
         $index++;
     }
 

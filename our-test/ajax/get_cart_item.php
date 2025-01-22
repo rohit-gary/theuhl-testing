@@ -12,9 +12,8 @@ $cart_id = getOrCreateCart();
 
 
 
-$cart_items  = $Cart_obj->GetCartItemByCartID($cart_id);
+$cart_items = $Cart_obj->GetCartItemByCartID($cart_id);
 
 header('Content-Type: application/json');
 echo json_encode($cart_items);
 ?>
-

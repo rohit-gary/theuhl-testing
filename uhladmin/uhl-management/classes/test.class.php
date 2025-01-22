@@ -274,6 +274,13 @@ class Test extends Core
 		return $response;
 	}
 
+	public function GetAllOrdersByUserID($UserID)
+	{
+		$sql = 'SELECT * from cart_items ci LEFT JOIN checkout ch on ch.CartID = ci.cart_id where ch.UserID = ' . $UserID;
+		$orders = $this->_getRecords($this->conn, $sql);
+		return $orders;
+	}
+
 
 }
 

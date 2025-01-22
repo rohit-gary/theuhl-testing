@@ -23,7 +23,7 @@
     }
 </style>
 <?php
-
+@session_start();
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
 
 
@@ -74,25 +74,32 @@ if (isset($_SESSION['dwd_UserID'])) {
                             <div class="dropdown">
                                 <a href="#" id="login-btn" class="site-button  dropdown-toggle"
                                     data-bs-toggle="dropdown">
-                                    <i class="fa fa-user" aria-hidden="true"></i> User
+                                    <i class="fa fa-user" aria-hidden="true"></i> <?php if ($is_logged_in == true) {
+                                        echo $name;
+                                    } else {
+                                        echo 'User';
+                                    } ?>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <?php if ($is_logged_in == true) { ?>
                                         <li><a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
-                                                to Dashboard</a></li><?php } ?>
+                                                to Policy Dashboard</a></li><?php } ?>
                                     <?php if ($is_logged_in == false) { ?>
-                                        <li><a class="dropdown-item"
-                                                href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login"
-                                                target="_blank">Login</a></li>
+                                        <li><a class="dropdown-item" href="<?php echo $base_url; ?>/login">Login Here</a>
+                                        </li>
                                     <?php } ?>
-                                    <li><a class="dropdown-item" href="<?php echo $base_url; ?>/user-login">
+                                    <li><a class="dropdown-item" href="<?php echo $base_url; ?>/account">
                                             Your Account</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo $base_url; ?>/register">SignUp</a>
-                                    </li>
-                                    <li><a class="dropdown-item"
-                                            href="<?php echo $base_url; ?>/uhladmin/authentication/logout"
-                                            target="_blank">Logout</a>
-                                    </li>
+                                    <?php if ($is_logged_in == false) { ?>
+                                        <li><a class="dropdown-item" href="<?php echo $base_url; ?>/createAccount">SignUp
+                                                Now</a>
+                                        </li>
+                                    <?php } ?>
+                                    <?php if ($is_logged_in == true) { ?>
+                                        <li><a class="dropdown-item"
+                                                href="<?php echo $base_url; ?>/action/logout">Logout</a>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </li>
@@ -110,19 +117,23 @@ if (isset($_SESSION['dwd_UserID'])) {
                         <ul class="dropdown-menu">
                             <?php if ($is_logged_in == true) { ?>
                                 <li><a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go to
-                                        Dashboard</a></li><?php } ?>
+                                        Policy Dashboard</a></li><?php } ?>
                             <?php if ($is_logged_in == false) { ?>
-                                <li><a class="dropdown-item"
-                                        href="<?php echo $base_url; ?>/uhladmin/admin/authentication/login"
-                                        target="_blank">Login</a></li>
+                                <li><a class="dropdown-item" href="<?php echo $base_url; ?>/login">Login Here</a>
+                                </li>
                             <?php } ?>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>/user-login">Your Account</a>
-                            </li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>/register">SignUp</a></li>
-                            <li><a class="dropdown-item"
-                                    href="<?php echo $base_url; ?>/uhladmin/admin/authentication/logout"
-                                    target="_blank">Logout</a>
-                            </li>
+                            <?php if ($is_logged_in == true) { ?>
+                                <li><a class="dropdown-item" href="<?php echo $base_url; ?>/account">Your Account</a>
+                                </li>
+                            <?php } ?>
+                            <?php if ($is_logged_in == false) { ?>
+                                <li><a class="dropdown-item" href="<?php echo $base_url; ?>/createAccount">SignUp Now</a>
+                                </li>
+                            <?php } ?>
+                            <?php if ($is_logged_in == true) { ?>
+                                <li><a class="dropdown-item" href="<?php echo $base_url; ?>/action/logout">Logout</a>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>

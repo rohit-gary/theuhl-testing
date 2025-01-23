@@ -150,9 +150,7 @@ foreach ($policy_details_arr as $policy_details_value) {
     $Name_html = $UserName."<br><small class='text-muted'>Created By: ".$CreatedBy."</small>";
 
     $data[] = array(
-        "id" => $CustomerID,
-        "Name" => $Name_html,
-    $data[] = array(
+ 
         "id" => $CustomerID,
         "Name" => $Name_html,
         "ContactNumber" => $MobileNumber,

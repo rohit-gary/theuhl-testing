@@ -387,7 +387,7 @@ include('include/logic.php');
 
 										<div class="row g-2 mt-3">
 											<div class="col-6">
-												<a class="cart-btn btn btn-outline-warning" href="./red-blood-cell-count-details">
+												<a class="detais-btn btn btn-outline-warning" href="./red-blood-cell-count-details">
 													View Details
 												</a>
 											</div>

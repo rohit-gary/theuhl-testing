@@ -176,7 +176,7 @@ function saveTestItem(sessionData) {
     } else {
         console.log(JSON.stringify(sessionData));
         alert(JSON.stringify(sessionData));
-        $('#checkOutModal').modal('show');
+        gotocheckout(sessionData, sessionData.dwd_UserID);
         
     }
 }
@@ -190,3 +190,8 @@ function gotocreateaccount(sessionData) {
     window.location.href = `./create-account.php`;
 }
 
+function gotocheckout(sessionData, user_id) {
+    alert(user_id);
+    let cart_id = sessionData.cart_id;
+    window.location.href = `./checkout.php?cart_id=${cart_id}&user_id=${user_id}`;
+  }

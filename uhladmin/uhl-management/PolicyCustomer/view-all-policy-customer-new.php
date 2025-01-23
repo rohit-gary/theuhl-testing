@@ -34,6 +34,12 @@ $conf = new Conf();
     }
 
 
+    $access_2 = false;
+    if ($UserType == "Client Admin") {
+        $access_2 = true;
+    }
+
+
     ?>
     <link rel="stylesheet" href="../theme-assets/plugins/richtexteditor/rte_theme_default.css" />
     <script type="text/javascript" src="../theme-assets/plugins/richtexteditor/rte.js"></script>
@@ -57,8 +63,14 @@ $conf = new Conf();
 
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
-                            <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()"
-                                id="export_data">Export Data</button>
+
+                         
+
+                            <?php if ($access_2 == true) { ?>
+                                <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()"
+                                    id="export_data">Export Data</button>
+                            <?php } ?>
+
                             <h1 class="page-title">All Health Plans Customer</h1>
                             <div>
                                 <ol class="breadcrumb">

@@ -10,7 +10,7 @@ $Cart_obj = new Cart($conn);
 
 $cart_id = getOrCreateCart();
 
-$cart_items  = $Cart_obj->GetCartItemByCartID($cart_id);
+$cart_items = $Cart_obj->GetCartItemByCartID($cart_id);
 
 
 $cart_count = count($cart_items);
@@ -18,4 +18,3 @@ $cart_count = count($cart_items);
 // Return the count as JSON
 echo json_encode(['cart_count' => $cart_count]);
 ?>
-

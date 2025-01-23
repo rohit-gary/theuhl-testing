@@ -1,13 +1,17 @@
 <?php
 if (isset($_SESSION) && is_array($_SESSION)) {
     $sessionDataJson = json_encode($_SESSION);
+    // var_dump($sessionDataJson);
 } else {
     $sessionDataJson = json_encode([]);
+    // var_dump($sessionDataJson);
+
 }
 
 ?>
 <section class="cart-aside bg-offcanvas">
-    <div class="offcanvas offcanvas-end bg-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index:100000">
+    <div class="offcanvas offcanvas-end bg-offcanvas" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel" style="z-index:100000">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Your Cart Item<i class="fa fa-shopping-cart"></i></h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -32,11 +36,11 @@ if (isset($_SESSION) && is_array($_SESSION)) {
                         <!-- Proceed Button -->
                         <div class="col-6">
                             <form action=" " method="POST" onsubmit="return false;">
-                                <button type="button" 
-                                    class="btn site-button appointment-btn btnhover13 btn-rounded px-4" 
+                                <button type="button"
+                                    class="btn site-button appointment-btn btnhover13 btn-rounded px-4"
                                     onclick='saveTestItem(<?php echo $sessionDataJson; ?>)'>
-                                CheckOut
-                            </button>
+                                    CheckOut
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -48,7 +52,8 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 
 
 <!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -61,11 +66,13 @@ if (isset($_SESSION) && is_array($_SESSION)) {
                 <form id="loginForm">
                     <div class="form-group">
                         <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter your password" required>
                     </div>
                     <button type="button" class="btn btn-primary" onclick="submitLogin()">Login</button>
                 </form>

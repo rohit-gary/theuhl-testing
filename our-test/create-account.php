@@ -5,7 +5,7 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 } else {
   $sessionDataJson = json_encode([]);
 }
-var_dump($_SESSION);
+
 ?>
 
 <head>

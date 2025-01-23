@@ -174,8 +174,7 @@ function saveTestItem(sessionData) {
         // alert(JSON.stringify(sessionData));
         gotocreateaccount(sessionData);
     } else {
-        console.log(JSON.stringify(sessionData));
-        alert(JSON.stringify(sessionData));
+
         gotocheckout(sessionData, sessionData.dwd_UserID);
         
     }
@@ -191,7 +190,19 @@ function gotocreateaccount(sessionData) {
 }
 
 function gotocheckout(sessionData, user_id) {
-    alert(user_id);
     let cart_id = sessionData.cart_id;
-    window.location.href = `./checkout.php?cart_id=${cart_id}&user_id=${user_id}`;
+    $.ajax({
+        url: 'ajax/update_cart_checkout.php',
+        method: 'GET',
+        data: { cart_id: cart_id },
+        success: function(response) {
+            var response = JSON.parse(response);
+            if(response.error==false){
+                window.location.href = `./checkout.php?cart_id=${cart_id}&user_id=${user_id}`;
+            }else{
+                alert(response.message);
+            }
+        }
+    })
+    
   }

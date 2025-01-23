@@ -11,9 +11,11 @@ $Cart_obj = new Cart($conn);
 
 $cart_id = getOrCreateCart();
 
-$_SESSION['cart_id']=$cart_id;
 
-$response=[];
+
+
+
+$response = [];
 
 $product_id = $_POST['product_id'];
 $product_name = $_POST['product_name'];
@@ -22,29 +24,29 @@ $quantity = 1; // Default quantity
 
 
 
- $item=$Cart_obj->GetcartItem($cart_id,$product_id);
+$item = $Cart_obj->GetcartItem($cart_id, $product_id);
 
 if ($item) {
-   
+
     $new_quantity = $item['quantity'] + $quantity;
 
-   
 
-    $response = $Cart_obj->UpdatecartitemQunatity($new_quantity,$item['id']);
+
+    $response = $Cart_obj->UpdatecartitemQunatity($new_quantity, $item['id']);
 
 } else {
-   
-    
-    $data['cart_id']=$cart_id;
-    $data['product_id']= $product_id;
-    $data['product_name']=$product_name;
-    $data['product_price']=$product_price;
-    $data['quantity']=$quantity;
 
-    $response =  $Cart_obj->InsertTestCartItem($data);
-    if($response['error']==false){
-        $response['error']=false;
-        $response['message']='Item added successfully';
+
+    $data['cart_id'] = $cart_id;
+    $data['product_id'] = $product_id;
+    $data['product_name'] = $product_name;
+    $data['product_price'] = $product_price;
+    $data['quantity'] = $quantity;
+
+    $response = $Cart_obj->InsertTestCartItem($data);
+    if ($response['error'] == false) {
+        $response['error'] = false;
+        $response['message'] = 'Item added successfully';
     }
 }
 

@@ -171,20 +171,14 @@ $conf = new Conf();
                     {
                         data: 'PolicyNumber'
                     },
-
-
-
-
-
                     {
                         data: 'Document Status',
                         render: function (data, type, row) {
                             // Determine status class and text based on status
                             let statusClass = '';
                             let statusText = data.toLowerCase();
-
-                            if (statusText === 'uploded') {
-                                statusClass = 'bg-success text-white'; // Green for success
+                            if (statusText === 'complete') {
+                                statusClass = 'bg-warning text-white'; // Green for success
                             } else if (statusText === 'pending') {
                                 statusClass = 'bg-warning text-dark'; // Yellow for pending
                             } else if (statusText === 'failed') {

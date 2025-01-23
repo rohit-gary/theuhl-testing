@@ -1166,6 +1166,14 @@ LIMIT 0, 25;";
     }
 
 
+    public function checkPolicyExistByUserId($UserID)
+    {
+        $where = " where CustomerID = $UserID";
+        $customer_members = $this->_getTableRecords($this->conn, "customerpolicy", $where);
+        return $customer_members;
+    }
+
+
 }
 
 

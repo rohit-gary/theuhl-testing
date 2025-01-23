@@ -36,6 +36,13 @@ $name = '';
 $redirectlink = '';
 
 if (isset($_SESSION['dwd_UserID'])) {
+    // include('include_file.php');
+    // $policyCustomer = $policy->checkPolicyExistByUserId($_SESSION['dwd_UserID']);
+    $policyCustomer = [];
+    $is_policy_exist = false;
+    if (!empty($policyCustomer)) {
+        $is_policy_exist = true;
+    }
     $is_logged_in = true;
     $name = $_SESSION['dwd_email'];
 
@@ -45,7 +52,11 @@ if (isset($_SESSION['dwd_UserID'])) {
 
 
         if ($role === 'Policy Customer') {
-            $redirectlink = 'http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/dashboard/policy-customer-main-dashboard';
+            if ($is_policy_exist) {
+                $redirectlink = 'http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/dashboard/policy-customer-main-dashboard';
+            } else {
+                $redirectlink = '';
+            }
         } else {
             $redirectlink = 'http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/dashboard/main-dashboard';
         }
@@ -81,9 +92,17 @@ if (isset($_SESSION['dwd_UserID'])) {
                                     } ?>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <?php if ($is_logged_in == true) { ?>
-                                        <li><a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
-                                                to Policy Dashboard</a></li><?php } ?>
+
+                                    <?php if ($is_logged_in == true): ?>
+
+                                        <?php if ($role == 'Client Admin' || $is_policy_exist === true): ?>
+                                            <li>
+                                                <a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
+                                                    to Policy Dashboard</a>
+                                            </li>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+
                                     <?php if ($is_logged_in == false) { ?>
                                         <li><a class="dropdown-item" href="<?php echo $base_url; ?>/login">Login Here</a>
                                         </li>
@@ -115,9 +134,18 @@ if (isset($_SESSION['dwd_UserID'])) {
                             } ?>
                         </a>
                         <ul class="dropdown-menu">
-                            <?php if ($is_logged_in == true) { ?>
-                                <li><a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go to
-                                        Policy Dashboard</a></li><?php } ?>
+
+                            <?php if ($is_logged_in == true): ?>
+
+                                <?php if ($role == 'Client Admin' || $is_policy_exist === true): ?>
+                                    <li>
+                                        <a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
+                                            to Policy Dashboard</a>
+                                    </li>
+                                <?php endif; ?>
+                            <?php endif; ?>
+
+
                             <?php if ($is_logged_in == false) { ?>
                                 <li><a class="dropdown-item" href="<?php echo $base_url; ?>/login">Login Here</a>
                                 </li>

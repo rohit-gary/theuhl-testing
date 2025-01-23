@@ -65,12 +65,27 @@ class Test extends Core
 		$TestCategory = $data['test_cat'];
 		$TestType = $data['test_code'];
 		$TestFee = $data['test_fee'];
-
+		$ReportTime = $data['report_time'];
+		$Parameters = $data['parameters'];
+		$Requisites = $data['requisites'];
+		$Measures = $data['measures'];
+		$Identifies = $data['identifies'];
+		$HomeMinutes = $data['home_minutes'];
+		$GoogleRating = $data['google_rating'];
+		$HappyCustomer = $data['happy_customer'];
+		$HeadingOne = $data['heading_one'];
+		$HeadingTwo = $data['heading_two'];
+		$HeadingThree = $data['heading_three'];
+		$HeadingFour = $data['heading_four'];
+		$DescriptionOne = $data['description_one'];
+		$DescriptionTwo = $data['description_two'];
+		$DescriptionThree = $data['description_three'];
+		$DescriptionFour = $data['description_four'];
 
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedTime = $data['CreatedTime'];
 		$CreatedBy = $data['CreatedBy'];
-		$sql = "INSERT INTO `doc_test`(`TestName`, `TestCategory`,`TestCode`,`TestFee`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestName','$TestCategory','$TestType','$TestFee','$CreatedDate','$CreatedTime','$CreatedBy')";
+		$sql = "INSERT INTO `doc_test`(`TestName`, `TestCategory`,`TestCode`,`TestFee`,`ReportTime`,`Parameters`,`Requisites`,`Measures`,`Identifies`,`HomeMinutes`,`HappyCustomer`,`GoogleRating`,`HeadingOne`,`HeadingTwo`,`HeadingThree`,`HeadingFour`,`DescriptionOne`,`DescriptionTwo`,`DescriptionThree`,`DescriptionFour`,`CreatedDate`, `CreatedTime`, `CreatedBy`) VALUES ('$TestName','$TestCategory','$TestType','$TestFee','$ReportTime','$Parameters','$Requisites','$Measures','$Identifies','$HomeMinutes','$HappyCustomer','$GoogleRating','$HeadingOne','$HeadingTwo','$HeadingThree','$HeadingFour','$DescriptionOne','$DescriptionTwo','$DescriptionThree','$DescriptionFour','$CreatedDate','$CreatedTime','$CreatedBy')";
 		$response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
 		return $response_insert_details;
 	}

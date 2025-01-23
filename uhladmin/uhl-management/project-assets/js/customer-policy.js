@@ -936,7 +936,9 @@ function fetchPlanDetailsAndGenerateForm(plan) {
     $("input[id^='member_dob']").datepicker({
         format: 'dd-mm-yyyy',
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
+        startDate: new Date(new Date().getFullYear() - 75, new Date().getMonth(), new Date().getDate()),
+        endDate: new Date()
     });
     
 }
@@ -1123,7 +1125,9 @@ $(document).ready(function() {
     $("input[id^='member_dob']").datepicker({
         format: 'dd-mm-yyyy',
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
+        startDate: new Date(new Date().getFullYear() - 75, new Date().getMonth(), new Date().getDate()),
+        endDate: new Date()
     });
 });
 function savefamilyMember() {

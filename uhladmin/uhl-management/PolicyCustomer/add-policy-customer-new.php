@@ -118,7 +118,7 @@ $conf = new Conf();
 
                                         <div class="step-box">
                                             <span class="step-number">5</span>
-                                            <p class="step-title">Document Uplode</p>
+                                            <p class="step-title">Document Upload</p>
                                         </div>
                                        
                                     </div>
@@ -905,6 +905,7 @@ function AddUploade(index) {
         format: 'dd-mm-yyyy',
         autoclose: true,
         todayHighlight: true,
+        startDate: new Date(new Date().getFullYear() - 75, new Date().getMonth(), new Date().getDate()),
         endDate: new Date() // Prevents selection of future dates
     });
 });

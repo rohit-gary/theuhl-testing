@@ -146,9 +146,13 @@ foreach ($policy_details_arr as $policy_details_value) {
     $encrypt = new Encryption();
     $Policy_ID = $encrypt->encrypt_message($PolicyNumber);
 
+
+    $Name_html = $UserName."<br><small class='text-muted'>Created By: ".$CreatedBy."</small>";
+
     $data[] = array(
+ 
         "id" => $CustomerID,
-        "Name" => $UserName,
+        "Name" => $Name_html,
         "ContactNumber" => $MobileNumber,
         "PolicyNumber" => $PolicyNumber,
         "CreatedBy" => $CreatedBy,

@@ -33,6 +33,7 @@ $conf = new Conf();
         $access = true;
     }
 
+
     $access_2 = false;
     if ($UserType == "Client Admin") {
         $access_2 = true;
@@ -62,10 +63,14 @@ $conf = new Conf();
 
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
+
+                         
+
                             <?php if ($access_2 == true) { ?>
                                 <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()"
-                                    id="export_data">ExportData</button>
+                                    id="export_data">Export Data</button>
                             <?php } ?>
+
                             <h1 class="page-title">All Health Plans Customer</h1>
                             <div>
                                 <ol class="breadcrumb">

@@ -14593,3 +14593,7 @@ input[type="radio"] + label:hover:before{
     footer li a {
         text-decoration: none !important;
     }
+
+    .dzsale{
+        display: none !important;
+    }

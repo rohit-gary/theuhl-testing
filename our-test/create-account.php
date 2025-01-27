@@ -169,7 +169,7 @@ if (isset($_SESSION) && is_array($_SESSION)) {
           alert(response.message);
           setTimeout(function () {
             updateCartUserid(response.user_id, sessionData);
-            gotocheckout(sessionData, response.user_id);
+            gotocheckoutnewuser(sessionData, response.user_id);
           }, 1000);
         } else {
           alert(response.message);
@@ -183,12 +183,26 @@ if (isset($_SESSION) && is_array($_SESSION)) {
     return false; // Prevent default form submission
   }
 
-  function gotocheckout(sessionData, user_id) {
+  function gotocheckoutnewuser(sessionData, user_id) {
+    alert('checkout');
     let cart_id = sessionData.cart_id;
-    window.location.href = `./checkout.php?cart_id=${cart_id}&user_id=${user_id}`;
+    $.ajax({
+      url: 'ajax/update_cart_checkout.php',
+      method: 'GET',
+      data: { cart_id: cart_id },
+      success: function (response) {
+        var response = JSON.parse(response);
+        if (response.error == false) {
+          window.location.href = `./checkout.php?user_id=${user_id}`;
+        } else {
+          alert(response.message);
+        }
+      }
+    })
   }
 
   function updateCartUserid(user_id, sessionData) {
+    alert('updateCartUserid');
     let cart_id = sessionData.cart_id;
     $.ajax({
       url: 'action/update-cart-user-id.php',
@@ -196,6 +210,8 @@ if (isset($_SESSION) && is_array($_SESSION)) {
       data: { UserID: user_id, CartID: cart_id }
     });
   }
+
+
 
 
 </script>

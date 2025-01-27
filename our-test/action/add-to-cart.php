@@ -7,14 +7,13 @@ include("../../uhladmin/uhl-management/include/db-connection.php");
 require_once('../ajax/init_cart.php');
 
 $Cart_obj = new Cart($conn);
+@session_start();
+$session_id = session_id();
+$user_id = null;
+$user_id = isset($_SESSION['dwd_UserID']) ? $_SESSION['dwd_UserID'] : null;
 
-
-$cart_id = getOrCreateCart();
-
-
-
-
-
+$cart_id = getOrCreateCart($session_id, $user_id);
+$_SESSION['cart_id'] = $cart_id;
 $response = [];
 
 $product_id = $_POST['product_id'];
@@ -47,6 +46,7 @@ if ($item) {
     if ($response['error'] == false) {
         $response['error'] = false;
         $response['message'] = 'Item added successfully';
+        $response['cart_id'] = $cart_id;
     }
 }
 

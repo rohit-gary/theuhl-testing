@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(response => response.text())
             .then(data => {
-                loadCart(); // Update cart details
+                var response = JSON.parse(data);
+                loadCart();
                 updateCartCount();
             })
             .catch(error => console.error('Error:', error));
@@ -75,6 +76,19 @@ function loadCart()
             const offcanvasFooter = document.querySelector('.offcanvas-footer');
             const totalPriceElement = document.getElementById('total-price');
             const totalTestsElement = document.getElementById('total-tests');
+             // Check if data is an array
+             if (!Array.isArray(data)) {
+                cartList.innerHTML = `
+                    <div class="text-center my-5">
+                        <div style="background-color: #f8f9fa; border-radius: 50%; width: 200px; height: 200px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                            <img src="../project-assets/images/emptycart-gif.gif" alt="Empty Cart" class="img-fluid" style="border-radius: 50%; max-width: 100%; max-height: 100%;">
+                        </div>
+                        <h1 class="mt-4" style="color: #6c757d;">Oops, Cart is Empty Now</h1>
+                    </div>
+                `;
+                offcanvasFooter.style.display = 'none'; // Hide footer if there's an error
+                return;
+            }
 
             if (data.length === 0) {
                 cartList.innerHTML = `
@@ -198,7 +212,7 @@ function gotocheckout(sessionData, user_id) {
         success: function(response) {
             var response = JSON.parse(response);
             if(response.error==false){
-                window.location.href = `./checkout.php?cart_id=${cart_id}&user_id=${user_id}`;
+                window.location.href = `./checkout.php`;
             }else{
                 alert(response.message);
             }

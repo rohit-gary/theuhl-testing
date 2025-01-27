@@ -37,8 +37,8 @@ class Cart extends Core
 
 		$UserId = $userid;
 		$sql = "INSERT INTO `carts`(`user_id`) VALUES ('$UserId')";
-		echo $sql;
 		$response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
+		return $response_insert_details;
 	}
 
 	public function InsertsessionIdIntocart($sessionId)
@@ -46,6 +46,7 @@ class Cart extends Core
 		$SessionId = $sessionId;
 		$sql = "INSERT INTO `carts`(`session_id`) VALUES ('$SessionId')";
 		$response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
+		return $response_insert_details;
 	}
 
 	public function InsertTestCartItem($data)

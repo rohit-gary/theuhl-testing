@@ -4,7 +4,7 @@ if (isset($_SESSION) && is_array($_SESSION)) {
     // var_dump($sessionDataJson);
 } else {
     $sessionDataJson = json_encode([]);
-    // var_dump($sessionDataJson);
+    var_dump($sessionDataJson);
 
 }
 

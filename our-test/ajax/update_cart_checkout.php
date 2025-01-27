@@ -1,18 +1,21 @@
 <?php
+@session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 require_once('../../uhladmin/uhl-management/include/autoloader.inc.php');
 include("../../uhladmin/uhl-management/include/db-connection.php");
 
-if (isset($_GET['cart_id'])) {
-  $cart_id = $_GET['cart_id'];
+if (isset($_SESSION['cart_id'])) {
+  $cart_id = $_SESSION['cart_id'];
 
 }
 
+
 $Cart_obj = new Cart($conn);
 $cart = $Cart_obj->GertCartDetails($cart_id);
+// var_dump($cart);
+// die();
 $cartitem = $cart[0];
 $data['cart_id'] = $cartitem['id'];
 $data['user_id'] = $cartitem['user_id'];

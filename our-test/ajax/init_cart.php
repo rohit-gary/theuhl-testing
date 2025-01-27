@@ -3,14 +3,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-function getOrCreateCart()
+function getOrCreateCart($session_id, $user_id)
 {
-    session_start();
-    // var_dump($_SESSION);
+
     require_once('../../uhladmin/uhl-management/include/autoloader.inc.php');
     include("../../uhladmin/uhl-management/include/db-connection.php");
-    $session_id = session_id();
-    // print_r($session_id);
     $cart_id = null;
     $Cart_obj = new Cart($conn);
     $user_id = isset($_SESSION['dwd_UserID']) ? $_SESSION['dwd_UserID'] : null;
@@ -20,14 +17,18 @@ function getOrCreateCart()
 
 
 
-        if ($cart) {
+        if ($cart && isset($cart['id'])) {
             $cart_id = $cart['id'];
         } else {
 
             $cart = $Cart_obj->InsertuserIdIntocart($user_id);
 
 
-            $cart_id = $cart['last_insert_id'];
+            if (isset($cart['last_insert_id'])) {
+                $cart_id = $cart['last_insert_id'];
+            } else {
+                throw new Exception('Failed to create a cart for the user.');
+            }
         }
     } else {
 
@@ -36,7 +37,7 @@ function getOrCreateCart()
 
 
 
-        if ($cart) {
+        if ($cart && isset($cart['id'])) {
             $cart_id = $cart['id'];
         } else {
 
@@ -44,11 +45,15 @@ function getOrCreateCart()
             $cart = $Cart_obj->InsertsessionIdIntocart($session_id);
 
 
-            $cart_id = $cart['last_insert_id'];
+            if (isset($cart['last_insert_id'])) {
+                $cart_id = $cart['last_insert_id'];
+            } else {
+                throw new Exception('Failed to create a cart for the session.');
+            }
         }
     }
 
-    $_SESSION['cart_id'] = $cart_id;
+
 
     return $cart_id;
 

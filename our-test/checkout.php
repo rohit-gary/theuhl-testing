@@ -1,14 +1,19 @@
-<?php include('include/logic.php');
+<?php @session_start();
+include('include/logic.php');
 $CartID = '';
-if (isset($_GET['cart_id']) || !empty(isset($_GET['cart_id']))) {
-    $CartID = $_GET['cart_id'];
+if (isset($_SESSION['cart_id']) || !empty(isset($_SESSION['cart_id']))) {
+    $CartID = $_SESSION['cart_id'];
 }
 $AllTest = $test_obj->GetAllProductByCartID($CartID);
 $finalTotal = 0;
-if (isset($_GET['user_id']) && !empty($_GET['user_id'])) {
-    $user_id = $_GET['user_id'];
+if (isset($_SESSION['dwd_user_id']) && !empty($_SESSION['dwd_user_id'])) {
+    $user_id = $_SESSION['dwd_user_id'];
 } else {
-    echo "<script> window.location.href = 'create-account.php';</script>";
+    if (isset($_GET['user_id'])) {
+        $user_id = $_GET['user_id'];
+    } else {
+        echo "<script> window.location.href = 'create-account.php';</script>";
+    }
 }
 ?>
 

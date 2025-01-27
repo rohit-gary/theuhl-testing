@@ -12,7 +12,7 @@ include('../../controllers/common_controller.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if content-type is JSON
     $contentType = $_SERVER["CONTENT_TYPE"] ?? '';
-    
+
     // Initialize response
     $response = [
         'error' => true,
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (strpos($contentType, 'application/json') !== false) {
         // Decode JSON input
         $data = json_decode(file_get_contents("php://input"), true);
-        
+
         if (isset($data['PolicyNumber']) && isset($data['Amount'])) {
             // Extract values from JSON data
             $PolicyNumber = $data['PolicyNumber'];
@@ -44,29 +44,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ];
 
             // Assuming InsertPolicyAmountDetails handles the insertion
-           
-                
-                $PolicyCustomer = new PolicyCustomer($conn);
-              $response= $PolicyCustomer->InsertPolicyAmountDetails($policyData);
-                $encodedPolicyNumber = base64_encode($PolicyNumber);
-                $response['message'] = 'Policy amount details saved successfully.';
-                $response['error']= false;
-                 $response['PolicyNumber']= $encodedPolicyNumber;
 
-                 if($response['error']==false){
-                    $cus_details= $PolicyCustomer->getPolicyCustomerDetailsByPolicyNumber($PolicyNumber);
-                    $username= $cus_details['UserName'];
-                    $paymentlink = "https://unitedhealthlumina.com/pay-booking-amount-new?policyNumber=" . $encodedPolicyNumber;
-                    $wdata['PolicyNumber'] = $data['PolicyNumber'];
-                    $wdata['phonenumber'] = $cus_details['MobileNumber'];
-                    // $body_values = '["'.$UserName.'"]';
-                    $body_values = '["' . $username . '","' . $paymentlink . '"]';
-                    $wdata['body_values'] = $body_values;
-                    $wdata['template'] = "browse_paymentlinkon_whatsapp";
-                    _interakt_sendWhatsAppMessage_common($wdata);
-                    
-                }
-           
+
+            $PolicyCustomer = new PolicyCustomer($conn);
+            $response = $PolicyCustomer->InsertPolicyAmountDetails($policyData);
+            $encodedPolicyNumber = base64_encode($PolicyNumber);
+            $response['message'] = 'Policy amount details saved successfully.';
+            $response['error'] = false;
+            $response['PolicyNumber'] = $encodedPolicyNumber;
+
+            if ($response['error'] == false) {
+                $cus_details = $PolicyCustomer->getPolicyCustomerDetailsByPolicyNumber($PolicyNumber);
+                $username = $cus_details['UserName'];
+                $paymentlink = "https://unitedhealthlumina.com/pay-booking-amount-new?policyNumber=" . $encodedPolicyNumber;
+                $wdata['PolicyNumber'] = $data['PolicyNumber'];
+                $wdata['phonenumber'] = $cus_details['MobileNumber'];
+                // $body_values = '["'.$UserName.'"]';
+                $body_values = '["' . $username . '","' . $paymentlink . '"]';
+                $wdata['body_values'] = $body_values;
+                $wdata['template'] = "browse_paymentlinkon_whatsapp";
+                _interakt_sendWhatsAppMessage_common($wdata);
+
+            }
+
         } else {
             $response['error'] = true;
             $response['message'] = "PolicyNumber or Amount is missing in the JSON data.";

@@ -7,15 +7,15 @@ error_reporting(E_ALL);
 require_once('../uhladmin/uhl-management/include/autoloader.inc.php');
 include("../uhladmin/uhl-management/include/db-connection.php");
 
-$core =  new Core($conn);
+$core = new Core($conn);
 
-$all_tests = $core->_getTableRecords($conn,'doc_test','where Parsed = 0');
+$all_tests = $core->_getTableRecords($conn, 'doc_test', 'where Parsed = 0');
 
-$k=0;
+$k = 0;
 
 function getGPTAnswer($heading)
 {
-    $apiKey = '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';
+    $apiKey = '';
     $apiUrl = 'https://api.openai.com/v1/chat/completions';
     $postData = json_encode([
         'model' => 'gpt-3.5-turbo',
@@ -53,8 +53,7 @@ function getGPTAnswer($heading)
     }
 }
 // Process each test row
-foreach ($all_tests as $test) 
-{
+foreach ($all_tests as $test) {
     $k++;
 
     // Extract required fields
@@ -94,16 +93,15 @@ foreach ($all_tests as $test)
         'DescriptionThree' => $descriptionThree,
         'DescriptionFour' => $descriptionFour,
         'DescriptionFive' => $descriptionFive,
-        'DescriptionSix'=> $descriptionSix,
-        'Parsed'=>1    
+        'DescriptionSix' => $descriptionSix,
+        'Parsed' => 1
     ];
     $whereCondition = [
         'ID' => $ID
     ];
     $response = $core->_UpdateTableRecords_prepare($conn, 'doc_test', $rowData, $whereCondition);
     var_dump($response);
-    if($k==10)
-    {
+    if ($k == 10) {
         break;
     }
 }

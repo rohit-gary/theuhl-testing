@@ -335,6 +335,7 @@ include('include/logic.php');
 				<div class="container">
 					<div class="row g-4">
 						<?php foreach ($all_test as $index => $test):
+							$testID = base64_encode($test['ID']);
 							$baseprice = intval($test['TestFee']);
 							$off = 0.16 * $baseprice;
 							$totaloff = intval($baseprice + $off);
@@ -387,7 +388,7 @@ include('include/logic.php');
 
 										<div class="row g-2 mt-3">
 											<div class="col-6">
-												<a class="detais-btn btn btn-outline-warning" href="./red-blood-cell-count-details">
+												<a class="detais-btn btn btn-outline-warning" href="./test-details?ID=<?php echo $testID ?>">
 													View Details
 												</a>
 											</div>

@@ -220,7 +220,7 @@ if (isset($_SESSION['dwd_UserID'])) {
                         <li><a href="<?php echo $base_url; ?>/about-us">About us </a></li>
                         <li><a href="<?php echo $base_url; ?>/all-plans">Our Health Plans</a></li>
                         <li><a href="<?php echo $base_url; ?>/our-test/all-test"><i class="fas fa-microscope"
-                                    style="font-size: 15px;"></i>Test</a></li>
+                                    style="font-size: 15px;"></i> Test</a></li>
                         <li><a href="<?php echo $base_url; ?>/faqs">FAQ'S</a></li>
 
                         <li><a href="<?php echo $base_url; ?>/contact-us">Contact Us</a></li>

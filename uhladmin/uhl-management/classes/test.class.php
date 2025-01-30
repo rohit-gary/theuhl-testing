@@ -150,6 +150,13 @@ class Test extends Core
 		return $service_details;
 	}
 
+	public function GetTestDetailsByID($ID)
+	{
+		$where = " where ID = $ID";
+		$service_details = $this->_getTableDetails($this->conn, "doc_test", $where);
+		return $service_details;
+	}
+
 	public function GetTestPackageDetails($data)
 	{
 		$ID = $data['ID'];

@@ -11,7 +11,7 @@ $temp_user_id = $_SESSION['temp_user_id'];
 // Fetch cart items from the database
 $cartItems = $Test_obj->GetCartItemsByTempUserId($temp_user_id);
 
-var_dump($cartItems);
+// var_dump($cartItems);
 
 // Check if the cart is not empty
 if (count($cartItems) > 0) {

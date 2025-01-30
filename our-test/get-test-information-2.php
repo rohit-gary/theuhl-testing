@@ -1,6 +1,6 @@
 <?php
 // OpenAI API configuration
-$apiKey = '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';
+$apiKey = '';
 $apiUrl = 'https://api.openai.com/v1/chat/completions';
 
 // Open the input CSV file

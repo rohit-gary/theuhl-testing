@@ -9,30 +9,30 @@
     <!-- TITLE -->
     <title>View Configuration - DWD</title>
     <?php
-        @session_start();
-        include("../include/common-head.php");
-        require_once('../include/autoloader.inc.php');
-        include("../include/get-db-connection.php");
-        $setting = new Clientsetting($conn);
-        $Service = new Service($conn);
-        $Test_obj = new Test($conn);
-        $all_services = $Service->GetAllServices();
-        $all_categories = $Service->GetAllDocCat();
-        $all_testcat=$Test_obj->GetAllTestCats();
+    @session_start();
+    include("../include/common-head.php");
+    require_once('../include/autoloader.inc.php');
+    include("../include/get-db-connection.php");
+    $setting = new Clientsetting($conn);
+    $Service = new Service($conn);
+    $Test_obj = new Test($conn);
+    $all_services = $Service->GetAllServices();
+    $all_categories = $Service->GetAllDocCat();
+    $all_testcat = $Test_obj->GetAllTestCats();
 
-      
+
     ?>
     <link rel="stylesheet" href="../project-assets/other-assets/date-picker/bootstrap-datepicker.css" />
     <style type="text/css">
-    .settings-display {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        .settings-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .settings-display .card {
-        width: 50%;
-    }
+        .settings-display .card {
+            width: 50%;
+        }
     </style>
 
 </head>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="row">
-                           
+
 
                             <!-- <div class="col-md-6">
                                 <div class="card ">
@@ -80,8 +80,7 @@
                                                 id="all_student_detals">
                                                 <tbody>
                                                     <?php
-                                                        foreach($all_zones as $zone_value)
-                                                        {
+                                                    foreach ($all_zones as $zone_value) {
                                                         ?>
                                                     <tr>
                                                         <td class="wd-15p border-bottom-0">
@@ -90,14 +89,14 @@
                                                             <?= $zone_value['ZoneEmail']; ?></td>
                                                         <td class="wd-15p border-bottom-0">
                                                             <a class="btn text-danger btn-sm"
-                                                                onclick="UpdateZone(<?=$zone_value['ID'];?>)">
+                                                                onclick="UpdateZone(<?= $zone_value['ID']; ?>)">
                                                                 <span class="fa fa-pencil-square-o fs-14"></span>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                     <?php
-                                                        }
-                                                        ?>
+                                                    }
+                                                    ?>
 
                                                 </tbody>
 
@@ -120,32 +119,33 @@
                                                 id="all_student_detals">
                                                 <tbody>
                                                     <?php
-                                                        foreach($all_categories as $cat_value)
-                                                        {
+                                                    foreach ($all_categories as $cat_value) {
                                                         ?>
-                                                    <tr>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <?= $cat_value['CategoryName']; ?></td>
+                                                        <tr>
+                                                            <td class="wd-15p border-bottom-0">
+                                                                <?= $cat_value['CategoryName']; ?>
+                                                            </td>
 
                                                             <td class="wd-15p border-bottom-0">
-                                                                <?php if(!empty($cat_value['CatImage'])): ?>
-                                                                    <img src="<?= $cat_value['CatImage']; ?>" alt="Category Image" width="50" height="50">
+                                                                <?php if (!empty($cat_value['CatImage'])): ?>
+                                                                    <img src="<?= $cat_value['CatImage']; ?>"
+                                                                        alt="Category Image" width="50" height="50">
                                                                 <?php else: ?>
                                                                     No Image Available
                                                                 <?php endif; ?>
                                                             </td>
 
-                                                        
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <a class="btn text-danger btn-sm"
-                                                                onclick="UpdateDocCat(<?=$cat_value['ID'];?>)">
-                                                                <span class="fa fa-pencil-square-o fs-14"></span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                        }
-                                                        ?>
+
+                                                            <td class="wd-15p border-bottom-0">
+                                                                <a class="btn text-danger btn-sm"
+                                                                    onclick="UpdateDocCat(<?= $cat_value['ID']; ?>)">
+                                                                    <span class="fa fa-pencil-square-o fs-14"></span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                    ?>
 
                                                 </tbody>
 
@@ -155,7 +155,7 @@
                                 </div>
                             </div>
 
-                             <div class="col-md-6">
+                            <div class="col-md-6">
                                 <div class="card ">
                                     <div class="card-header d-flex justify-content-between align-items-center">
                                         <h3 class="card-title">All Service</h3>
@@ -167,22 +167,22 @@
                                                 id="all_student_detals">
                                                 <tbody>
                                                     <?php
-                                                        foreach($all_services as $service_value)
-                                                        {
+                                                    foreach ($all_services as $service_value) {
                                                         ?>
-                                                    <tr>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <?= $service_value['ServiceName']; ?></td>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <a class="btn text-danger btn-sm"
-                                                                onclick="UpdateService(<?=$service_value['ID'];?>)">
-                                                                <span class="fa fa-pencil-square-o fs-14"></span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                        }
-                                                        ?>
+                                                        <tr>
+                                                            <td class="wd-15p border-bottom-0">
+                                                                <?= $service_value['ServiceName']; ?>
+                                                            </td>
+                                                            <td class="wd-15p border-bottom-0">
+                                                                <a class="btn text-danger btn-sm"
+                                                                    onclick="UpdateService(<?= $service_value['ID']; ?>)">
+                                                                    <span class="fa fa-pencil-square-o fs-14"></span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                    ?>
 
                                                 </tbody>
 
@@ -193,7 +193,7 @@
                             </div>
 
 
-                                <div class="col-md-6">
+                            <div class="col-md-6">
                                 <div class="card ">
                                     <div class="card-header d-flex justify-content-between align-items-center">
                                         <h3 class="card-title">All Test Categories</h3>
@@ -205,26 +205,26 @@
                                                 id="all_student_detals">
                                                 <tbody>
                                                     <?php
-                                                        foreach($all_testcat as $test_value)
-                                                        {
+                                                    foreach ($all_testcat as $test_value) {
                                                         ?>
-                                                    <tr>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <?= $test_value['TestCategoryName']; ?></td>
-                                                        <td class="wd-15p border-bottom-0">
-                                                            <a class="btn text-danger btn-sm"
-                                                                onclick="UpdateTestCat(<?= $test_value['ID'];?>)">
-                                                                <span class="fa fa-pencil-square-o fs-14"></span>
-                                                            </a>
-                                                            <a class="btn text-danger btn-sm"
-                                                                onclick="DeleteTestCat(<?= $test_value['ID'];?>)">
-                                                                <span class="fa fa-trash fs-14"></span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                        }
-                                                        ?>
+                                                        <tr>
+                                                            <td class="wd-15p border-bottom-0">
+                                                                <?= $test_value['TestCategoryName']; ?>
+                                                            </td>
+                                                            <td class="wd-15p border-bottom-0">
+                                                                <a class="btn text-danger btn-sm"
+                                                                    onclick="UpdateTestCat(<?= $test_value['ID']; ?>)">
+                                                                    <span class="fa fa-pencil-square-o fs-14"></span>
+                                                                </a>
+                                                                <a class="btn text-danger btn-sm"
+                                                                    onclick="DeleteTestCat(<?= $test_value['ID']; ?>)">
+                                                                    <span class="fa fa-trash fs-14"></span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                    ?>
 
                                                 </tbody>
 
@@ -232,9 +232,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>         
+                            </div>
 
-                                                
+
                         </div>
 
 
@@ -254,7 +254,7 @@
         include("../include/common-script.php");
         ?>
         <script>
-        $("#nav_configuration").addClass("active");
+            $("#nav_configuration").addClass("active");
         </script>
         <script src="../project-assets/js/configuration.js"></script>
 </body>
@@ -332,11 +332,12 @@
                     </div>
 
 
-                 <div class="mb-3 col-md-12">
-                        <label for="recipient-name" class="col-form-label">CatImage<span class="text-danger">*<span></label>
+                    <div class="mb-3 col-md-12">
+                        <label for="recipient-name" class="col-form-label">CatImage<span
+                                class="text-danger">*<span></label>
                         <input type="file" class="form-control" name="CatImage" id="CatImage">
                         <span class="text-danger" id="CatImage_span"></span>
-                        <input type="hidden" name='CatImage_hidden' id="CatImage_hidden" style="display:none;"> 
+                        <input type="hidden" name='CatImage_hidden' id="CatImage_hidden" style="display:none;">
                     </div>
 
 
@@ -429,14 +430,14 @@
                         <div class="form-group col-md-12">
                             <label for="test_cat" class="col-form-label">Test Category<span
                                     class="text-danger">*<span></label>
-                                 <select class="form-control" id="test_cat" name="test_cat">
-                                    <option value=" " selected>Select Test Category</option>
-                                    <?php
-                                    foreach ($all_testcat as $test_value) {
-                                        echo '<option value="' . htmlspecialchars($test_value['id']) . '">' . htmlspecialchars($test_value['TestCategoryName']) . '</option>';
-                                    }
-                                    ?>
-                                </select>
+                            <select class="form-control" id="test_cat" name="test_cat">
+                                <option value=" " selected>Select Test Category</option>
+                                <?php
+                                foreach ($all_testcat as $test_value) {
+                                    echo '<option value="' . htmlspecialchars($test_value['id']) . '">' . htmlspecialchars($test_value['TestCategoryName']) . '</option>';
+                                }
+                                ?>
+                            </select>
 
                         </div>
 

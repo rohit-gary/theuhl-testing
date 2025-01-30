@@ -200,6 +200,7 @@ function AddTestCat(){
   $("#add_test_category_modal").modal("show");
   $("#addUpdateTestBtn").html("Add");
   $("#TestCategoryModalHeading").html("Add Test Category");
+  $('#ImportTestBtn').html('Import Excel File');
 }
 
 
@@ -272,6 +273,7 @@ function UpdateTestCat(ID){
   $("#add_test_modal").modal("show");
   $("#addUpdateTBtn").html("Add");
   $("#TestModalHeading").html("Add Test");
+
   }
 
 
@@ -337,3 +339,23 @@ function AddUpdateTest() {
 
   return false; // Prevent form submission
 }
+
+function ImportTestCategory(){
+ let myForm = document.getElementById("test_cat_form");
+ var formData = new FormData(myForm);
+ $('#ImportTestBtn').html('Import..... Excel File ');
+ $.ajax({
+  url:'action/import-test-category.php',
+  type:'POST',
+  data:formData,
+  cache: false,
+  contentType: false,
+  processData: false,
+  success:function(data){
+    Alert(data);
+  }
+ })
+  
+
+}
+

@@ -60,10 +60,15 @@
     "_Nav_Dashboard",
     "_Nav_Account",
     "_Nav_Neft"
+  ],
+  "Test Manager": [
+    "_Nav_Dashboard",
+    "_Nav_DocTest"
   ]
 
 
 
 
   
+
 }

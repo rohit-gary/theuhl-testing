@@ -1,3 +1,18 @@
+<?php
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+require_once('./uhladmin/uhl-management/include/autoloader.inc.php');
+include("./uhladmin/uhl-management/include/db-connection.php");
+
+$conf = new Conf();
+$dbh = new Dbh();
+$core = new Core();
+$masterconn = $dbh->_connectodb();
+$test_obj = new Test($conn);
+$all_test = $test_obj->GetAllTestName();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +23,261 @@
   <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
 
   <style>
+    .see-more-btn {
+      cursor: pointer;
+    }
+
+    .featured-tests {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-tests::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('path/to/subtle-pattern.png') repeat;
+      opacity: 0.1;
+    }
+
+    .test-card-modern {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .test-card-modern:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .ribbon {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      z-index: 1;
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+      text-align: right;
+    }
+
+    .ribbon span {
+      font-size: 10px;
+      font-weight: bold;
+      color: #FFF;
+      text-align: center;
+      line-height: 20px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      width: 100px;
+      display: block;
+      background: var(--primary-gradient);
+      box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+      position: absolute;
+      top: 19px;
+      right: -21px;
+    }
+
+    .test-card-header {
+      padding: 1.5rem 1.5rem 0.5rem;
+    }
+
+    .icon-wrapper {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: var(--primary-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .icon-wrapper i {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .test-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2d3436;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .test-card-body {
+      padding: 0.5rem 1.5rem;
+    }
+
+    .price-tag {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .price-details {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .price-details .original {
+      color: #6c757d;
+      text-decoration: line-through;
+      font-size: 0.9rem;
+    }
+
+    .price-details .current {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .save-text {
+      display: block;
+      font-size: 0.8rem;
+      color: #2ecc71;
+      font-weight: 500;
+    }
+
+    .features-list {
+      margin-bottom: 1rem;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #636e72;
+    }
+
+    .test-card-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid #f1f1f1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .book-now {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 6px;
+    }
+
+    .see-more-btn {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      background: var(--primary-gradient);
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .see-more-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .see-more-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .see-more-btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .divider-center {
+      width: 80px;
+      height: 4px;
+      background: var(--primary-gradient);
+      margin: 1.5rem auto;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .col-md-6.col-lg-3 {
+        width: 50%;
+      }
+
+      .test-card-modern {
+        font-size: 0.9rem;
+      }
+
+      .test-title {
+        font-size: 0.9rem;
+      }
+    }
 
 
+    .test-card {
+      transition: transform 0.3s ease;
+      border: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .test-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .test-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(0, 123, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .test-card ul li {
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    .test-feature {
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .test-feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .test-feature h5 {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #333;
+    }
   </style>
+
 
 </head>
 
@@ -146,7 +413,7 @@
               <div class="row my-4">
                 <!-- Card 1 -->
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=OQ==">
+                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ==">
                     <div class="card text-center h-100">
 
                       <div class="card-body">
@@ -159,7 +426,7 @@
                 </div>
                 <!-- Card 2 -->
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTA=">
+                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA=">
                     <div class="card text-center h-100">
                       <div class="card-body">
                         <img src="project-assets/images/icon/family-insurance.png" style="height:4em">
@@ -170,7 +437,7 @@
                 </div>
                 <!-- Card 3 -->
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTE=">
+                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE=">
                     <div class="card text-center h-100">
                       <div class="card-body">
                         <img src="project-assets/images/icon/umbrella.png" style="height:4em">
@@ -181,7 +448,7 @@
                 </div>
                 <!-- Card 4 -->
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTI=">
+                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTI=">
                     <div class="card text-center h-100">
                       <div class="card-body">
                         <img src="project-assets/images/icon/patient.png" style="height:4em">
@@ -192,7 +459,7 @@
                 </div>
                 <!-- Card 5 -->
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTM=">
+                  <a href="#">
                     <div class="card text-center h-100">
                       <div class="card-body">
                         <img src="project-assets/images/icon/health-insurance.png" style="height:4em">
@@ -203,7 +470,7 @@
                 </div>
                 <!-- Card 6 -->
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTQ=">
+                  <a href="#">
                     <div class="card text-center h-100">
                       <div class="card-body">
                         <img src="project-assets/images/icon/shield.png" style="height:4em">
@@ -226,16 +493,13 @@
 
 
 
-
-
-
     <!-- here health plan subscription -->
 
     <section class="section-full bg-white content-inner" id="talktoexpert">
       <div class="container">
         <div class="row mobile-form" style="margin-top:-16em">
           <div class="col-md-12">
-            <div class="card gradient-bg">
+            <div class="card gradient-bg d-none">
               <div class="card-header gradient-bg">
                 <h2 class="title">Looking to buy a new life <span class="text-primary">Health plan?</span></h2>
                 <p>Our experts are happy to help you!</p>
@@ -317,7 +581,7 @@
                     <li><i class="fas fa-check-circle text-success me-2"></i>Stress Test</li>
                     <li><i class="fas fa-check-circle text-success me-2"></i>Heart Risk Assessment</li>
                   </ul>
-                  <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a>
+                  <!-- <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a> -->
                 </div>
               </div>
             </div>
@@ -336,7 +600,7 @@
                     <li><i class="fas fa-check-circle text-success me-2"></i>Glucose Tolerance</li>
                     <li><i class="fas fa-check-circle text-success me-2"></i>Diabetes Screening</li>
                   </ul>
-                  <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a>
+                  <!-- <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a> -->
                 </div>
               </div>
             </div>
@@ -355,7 +619,7 @@
                     <li><i class="fas fa-check-circle text-success me-2"></i>Kidney Function Test</li>
                     <li><i class="fas fa-check-circle text-success me-2"></i>Thyroid Profile</li>
                   </ul>
-                  <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a>
+                  <!-- <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a> -->
                 </div>
               </div>
             </div>
@@ -391,53 +655,96 @@
         </div>
       </section>
 
-      <style>
-        .test-card {
-          transition: transform 0.3s ease;
-          border: none;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .test-card:hover {
-          transform: translateY(-5px);
-        }
-
-        .test-icon {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          background: rgba(0, 123, 255, 0.1);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .test-card ul li {
-          margin-bottom: 10px;
-          color: #666;
-        }
-
-        .test-feature {
-          padding: 20px;
-          background: #fff;
-          border-radius: 10px;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-          height: 100%;
-          transition: transform 0.3s ease;
-        }
-
-        .test-feature:hover {
-          transform: translateY(-5px);
-        }
-
-        .test-feature h5 {
-          font-size: 1rem;
-          margin-top: 10px;
-          color: #333;
-        }
-      </style>
 
 
+
+    </section>
+
+    <section class="featured-tests py-5">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row mb-5 text-center">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="display-6 fw-bold mb-3">Our Medical <span class="text-primary">Test Services</span></h2>
+            <p class="lead text-muted">Comprehensive diagnostic solutions for your well-being</p>
+            <div class="divider-center"></div>
+          </div>
+        </div>
+
+        <!-- Test Cards Container -->
+        <div class="row g-4">
+          <?php
+          // Limit to first 20 tests
+          $limited_tests = array_slice($all_test, 0, 20);
+          foreach ($limited_tests as $index => $test):
+            $testID = base64_encode($test['ID']);
+            $baseprice = intval($test['TestFee']);
+            $off = 0.16 * $baseprice;
+            $totaloff = intval($baseprice + $off);
+            ?>
+            <div class="col-md-6 col-lg-3">
+              <div class="test-card-modern">
+                <div class="ribbon">
+                  <span>16% OFF</span>
+                </div>
+
+                <div class="test-card-header">
+                  <div class="icon-wrapper">
+                    <i class="fas fa-flask"></i>
+                  </div>
+                  <h3 class="test-title" title="<?php echo $test['TestName'] ?>">
+                    <?php echo strlen($test['TestName']) > 30 ? substr($test['TestName'], 0, 30) . '...' : $test['TestName']; ?>
+                  </h3>
+                </div>
+
+                <div class="test-card-body">
+                  <div class="price-tag">
+                    <div class="price-details">
+                      <span class="original">₹<?php echo $totaloff ?></span>
+                      <span class="current">₹<?php echo $test['TestFee'] ?></span>
+                    </div>
+                    <span class="save-text">Save ₹<?php echo $totaloff - $test['TestFee'] ?></span>
+                  </div>
+
+                  <div class="features-list">
+                    <div class="feature">
+                      <i class="fas fa-clock text-primary"></i>
+                      <span>Results in 6 hours</span>
+                    </div>
+                    <div class="feature">
+                      <i class="fas fa-home text-primary"></i>
+                      <span>Home Collection</span>
+                    </div>
+                    <div class="feature">
+                      <i class="fas fa-certificate text-primary"></i>
+                      <span>NABL Certified</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="test-card-footer">
+                  <a href="./our-test/test-details?ID=<?php echo $testID ?>" class="btn btn-link">
+                    <i class="fas fa-info-circle"></i> Details
+                  </a>
+                  <button class="btn btn-primary book-now d-none" data-product-id="<?php echo $test['ID'] ?>"
+                    data-product-name="<?php echo $test['TestName'] ?>"
+                    data-product-price="<?php echo $test['TestFee'] ?>">
+                    <i class="fas fa-calendar-check"></i> Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          <?php endforeach ?>
+        </div>
+
+        <!-- See More Button -->
+        <div class="text-center mt-5">
+          <a href="./our-test/all-test" class="see-more-btn">
+            See More Tests
+            <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
     </section>
   </div>
 
@@ -610,14 +917,14 @@
                     </div>
                     <div class="col-md-6">
 
-                      <p><a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=OQ=="
+                      <p><a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ=="
                           class="text-primary fw-bold">
                     </div>
                   </div>
                   <div class="d-flex gap-3 mt-3">
-                    <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=OQ=="
+                    <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ=="
                       class="btn site-button appointment-btn btnhover13 btn-rounded">Buy Plan</a>
-                    <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=OQ=="
+                    <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ=="
                       class="btn btn-outline-success">Know More</a>
                   </div>
                 </div>
@@ -666,9 +973,9 @@
                     </div>
                   </div>
                   <div class="d-flex gap-3 mt-3">
-                    <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTA="
+                    <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA="
                       class="btn site-button appointment-btn btnhover13 btn-rounded">Buy Plan</a>
-                    <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTA="
+                    <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA="
                       class="btn btn-outline-success">Know More</a>
                   </div>
                 </div>
@@ -716,9 +1023,9 @@
                     </div>
                   </div>
                   <div class="d-flex gap-3 mt-3">
-                    <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTE="
+                    <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE="
                       class="btn site-button appointment-btn btnhover13 btn-rounded">Buy Plan</a>
-                    <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTE="
+                    <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE="
                       class="btn btn-outline-success">Know More</a>
                   </div>
                 </div>
@@ -762,9 +1069,9 @@
                 </div>
               </div>
               <div class="d-flex gap-3 mt-3">
-                <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=OQ=="
+                <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ=="
                   class="btn site-button appointment-btn btnhover13 btn-rounded">Buy Plan</a>
-                <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=OQ=="
+                <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ=="
                   class="btn btn-outline-success">Know More</a>
               </div>
             </div>
@@ -803,9 +1110,9 @@
                 </div>
               </div>
               <div class="d-flex gap-3 mt-3">
-                <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTA="
+                <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA="
                   class="btn site-button appointment-btn btnhover13 btn-rounded">Buy Plan</a>
-                <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTA="
+                <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA="
                   class="btn btn-outline-success">Know More</a>
               </div>
             </div>
@@ -843,9 +1150,9 @@
                 </div>
               </div>
               <div class="d-flex gap-3 mt-3">
-                <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTE="
+                <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE="
                   class="btn site-button appointment-btn btnhover13 btn-rounded">Buy Plan</a>
-                <a href="https://unitedhealthlumina.com/uhl/view-plan-details.php?id=MTE="
+                <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE="
                   class="btn btn-outline-success">Know More</a>
               </div>
             </div>
@@ -917,7 +1224,7 @@
             <div class="row">
               <!-- Card 1 -->
               <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="../../admin/authentication/login">
+                <a href="uhladmin/admin/authentication/login">
                   <div class="card text-center h-100">
                     <div class="card-body">
                       <img src="project-assets/images/icon/pay-premium.png" style="height:4em">
@@ -929,7 +1236,7 @@
 
               <!-- Card 2 -->
               <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="../../admin/authentication/login">
+                <a href="uhladmin/admin/authentication/login">
                   <div class="card text-center h-100">
                     <div class="card-body">
                       <img src="project-assets/images/icon/download-Statement.png" style="height:4em">
@@ -941,7 +1248,7 @@
 
               <!-- Card 3 -->
               <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="../../admin/authentication/login">
+                <a href="uhladmin/admin/authentication/login">
                   <div class="card text-center h-100">
                     <div class="card-body">
                       <img src="project-assets/images/icon/register-claim.png" style="height:4em">
@@ -965,7 +1272,7 @@
 
               <!-- Card 5 -->
               <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="../../admin/authentication/login">
+                <a href="uhladmin/admin/authentication/login">
                   <div class="card text-center h-100">
                     <div class="card-body">
                       <img src="project-assets/images/icon/other-services.png" style="height:4em">
@@ -977,7 +1284,7 @@
 
               <!-- Card 6 -->
               <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="../../admin/authentication/login">
+                <a href="uhladmin/admin/authentication/login">
                   <div class="card text-center h-100">
                     <div class="card-body">
                       <img src="project-assets/images/icon/whatsapp-payment.png" style="height:4em">
@@ -1776,7 +2083,7 @@
                 <p>I’m securing my future by investing in the UHL Health Plan and opting for their retirement health
                   plans. In my opinion, it’s the best investment, as the policy covers 92% of my healthcare needs.</p>
               </div>
-              <div class="testimonial-detail"> <strong class="testimonial-name">Anil</strong> <span
+              <div class="testimonial-detail"> <strong class="testimonial-name">Saurabh</strong> <span
                   class="testimonial-position">People</span> </div>
             </div>
           </div>

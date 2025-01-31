@@ -133,6 +133,230 @@ include('include/logic.php');
 			color: var(--primary-color);
 			opacity: 0.9;
 		}
+
+		/* Global Styles */
+		.all_test_container {
+			background-color: #f8f9fa;
+			padding: 3rem 0;
+		}
+
+		/* Test Card Styles */
+		.test-card {
+			transition: var(--transition);
+			border: none;
+			border-radius: var(--border-radius);
+			overflow: hidden;
+			background: white;
+			box-shadow: var(--shadow-sm);
+		}
+
+		.test-card:hover {
+			transform: translateY(-5px);
+			box-shadow: var(--shadow-lg);
+		}
+
+		.test-card .card-body {
+			padding: 1.5rem;
+		}
+
+		.upper-col {
+			background: var(--primary-gradient);
+			margin: -1.5rem -1.5rem 1rem -1.5rem;
+			padding: 1.5rem;
+			border-radius: var(--border-radius) var(--border-radius) 0 0;
+		}
+
+		.test-name p {
+			color: white;
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin: 0;
+		}
+
+		.test-price-info {
+			background: rgba(255, 255, 255, 0.1);
+			padding: 12px;
+			border-radius: 10px;
+			backdrop-filter: blur(5px);
+		}
+
+		.dis-span {
+			background: #28a745;
+			padding: 2px 8px;
+			border-radius: 20px;
+			font-size: 12px;
+			color: white;
+			display: inline-block;
+			margin-left: 5px;
+		}
+
+		.info-row {
+			padding: 10px 0;
+			border-bottom: 1px solid #eee;
+			margin-bottom: 10px;
+		}
+
+		.info-row i {
+			color: #0d6efd;
+			margin-right: 8px;
+		}
+
+		.cart-btn {
+			width: 100%;
+			padding: 12px;
+			border-radius: 25px;
+			transition: var(--transition);
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
+
+		.btn-outline-warning:hover {
+			background: #ffc107;
+			color: #000;
+		}
+
+		/* Organ Section Styles */
+		.organ-card {
+			transition: var(--transition);
+			border: none;
+			border-radius: var(--border-radius);
+			background: white;
+			box-shadow: var(--shadow-sm);
+			padding: 1.5rem;
+		}
+
+		.organ-card:hover {
+			transform: translateY(-5px);
+			box-shadow: var(--shadow-md);
+		}
+
+		.organ-card img {
+			transition: var(--transition);
+			height: 4em;
+			margin-bottom: 1rem;
+		}
+
+		.organ-card:hover img {
+			transform: scale(1.1);
+		}
+
+		.organ-card .title {
+			color: #333;
+			font-size: 1.1rem;
+			margin: 0;
+		}
+
+		/* Section Styles */
+		.section-highlight {
+			position: relative;
+			padding: 4rem 0;
+			background: #fff;
+		}
+
+		.section-highlight::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(45deg, rgba(140, 197, 226, 0.15) 0%, rgba(140, 197, 226, 0.4) 100%);
+			z-index: 0;
+		}
+
+		.section-content {
+			position: relative;
+			z-index: 1;
+		}
+
+		.title {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1.5rem;
+			color: #333;
+		}
+
+		.title span.text-primary {
+			background: var(--primary-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.section-description {
+			color: #666;
+			line-height: 1.6;
+			margin-bottom: 2rem;
+		}
+
+
+		.test-card {
+			transition: var(--transition);
+			border: none;
+			border-radius: var(--border-radius);
+			overflow: hidden;
+			background: white;
+			box-shadow: var(--shadow-sm);
+			max-width: 300px;
+			/* Add max-width for smaller cards */
+			margin: 0 auto;
+			/* Center the card */
+		}
+
+		.test-card .card-body {
+			padding: 1rem;
+			/* Reduced padding */
+		}
+
+		.upper-col {
+			padding: 1rem;
+			/* Reduced padding */
+			margin: -1rem -1rem 0.8rem -1rem;
+			/* Adjusted margins */
+		}
+
+		.test-name p {
+			font-size: 1rem;
+			/* Smaller font size */
+			line-height: 1.2;
+		}
+
+		.test-price-info {
+			padding: 8px;
+			/* Reduced padding */
+			border-radius: 8px;
+		}
+
+		.test-price-info p {
+			font-size: 0.9rem;
+			/* Smaller font size */
+		}
+
+		.dis-span {
+			padding: 1px 6px;
+			font-size: 10px;
+		}
+
+		.info-row {
+			padding: 8px 0;
+			/* Reduced padding */
+			font-size: 0.9rem;
+			/* Smaller font size */
+		}
+
+		.info-row i {
+			font-size: 0.9rem;
+			/* Smaller icon size */
+		}
+
+		.cart-btn {
+			padding: 8px;
+			/* Reduced padding */
+			font-size: 12px;
+			/* Smaller font size */
+			border-radius: 20px;
+		}
 	</style>
 </head>
 
@@ -173,163 +397,7 @@ include('include/logic.php');
 				</div>
 			</section>
 
-			<style>
-				/* Global Styles */
-				.all_test_container {
-					background-color: #f8f9fa;
-					padding: 3rem 0;
-				}
 
-				/* Test Card Styles */
-				.test-card {
-					transition: var(--transition);
-					border: none;
-					border-radius: var(--border-radius);
-					overflow: hidden;
-					background: white;
-					box-shadow: var(--shadow-sm);
-				}
-
-				.test-card:hover {
-					transform: translateY(-5px);
-					box-shadow: var(--shadow-lg);
-				}
-
-				.test-card .card-body {
-					padding: 1.5rem;
-				}
-
-				.upper-col {
-					background: var(--primary-gradient);
-					margin: -1.5rem -1.5rem 1rem -1.5rem;
-					padding: 1.5rem;
-					border-radius: var(--border-radius) var(--border-radius) 0 0;
-				}
-
-				.test-name p {
-					color: white;
-					font-size: 1.2rem;
-					font-weight: 600;
-					margin: 0;
-				}
-
-				.test-price-info {
-					background: rgba(255, 255, 255, 0.1);
-					padding: 12px;
-					border-radius: 10px;
-					backdrop-filter: blur(5px);
-				}
-
-				.dis-span {
-					background: #28a745;
-					padding: 2px 8px;
-					border-radius: 20px;
-					font-size: 12px;
-					color: white;
-					display: inline-block;
-					margin-left: 5px;
-				}
-
-				.info-row {
-					padding: 10px 0;
-					border-bottom: 1px solid #eee;
-					margin-bottom: 10px;
-				}
-
-				.info-row i {
-					color: #0d6efd;
-					margin-right: 8px;
-				}
-
-				.cart-btn {
-					width: 100%;
-					padding: 12px;
-					border-radius: 25px;
-					transition: var(--transition);
-					text-transform: uppercase;
-					font-size: 14px;
-					font-weight: 600;
-					letter-spacing: 0.5px;
-				}
-
-				.btn-outline-warning:hover {
-					background: #ffc107;
-					color: #000;
-				}
-
-				/* Organ Section Styles */
-				.organ-card {
-					transition: var(--transition);
-					border: none;
-					border-radius: var(--border-radius);
-					background: white;
-					box-shadow: var(--shadow-sm);
-					padding: 1.5rem;
-				}
-
-				.organ-card:hover {
-					transform: translateY(-5px);
-					box-shadow: var(--shadow-md);
-				}
-
-				.organ-card img {
-					transition: var(--transition);
-					height: 4em;
-					margin-bottom: 1rem;
-				}
-
-				.organ-card:hover img {
-					transform: scale(1.1);
-				}
-
-				.organ-card .title {
-					color: #333;
-					font-size: 1.1rem;
-					margin: 0;
-				}
-
-				/* Section Styles */
-				.section-highlight {
-					position: relative;
-					padding: 4rem 0;
-					background: #fff;
-				}
-
-				.section-highlight::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					background: linear-gradient(45deg, rgba(140, 197, 226, 0.15) 0%, rgba(140, 197, 226, 0.4) 100%);
-					z-index: 0;
-				}
-
-				.section-content {
-					position: relative;
-					z-index: 1;
-				}
-
-				.title {
-					font-size: 2rem;
-					font-weight: 700;
-					margin-bottom: 1.5rem;
-					color: #333;
-				}
-
-				.title span.text-primary {
-					background: var(--primary-gradient);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-				}
-
-				.section-description {
-					color: #666;
-					line-height: 1.6;
-					margin-bottom: 2rem;
-				}
-			</style>
 
 			<section class="all_test_container">
 				<div class="container">
@@ -340,7 +408,7 @@ include('include/logic.php');
 							$off = 0.16 * $baseprice;
 							$totaloff = intval($baseprice + $off);
 							?>
-							<div class="col-md-6 col-lg-4 col-sm-12">
+							<div class="col-md-6 col-lg-3 col-sm-12">
 								<div class="test-card card">
 									<div class="card-body">
 										<div class="upper-col">

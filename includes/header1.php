@@ -95,7 +95,7 @@ if (isset($_SESSION['dwd_UserID'])) {
 
                                     <?php if ($is_logged_in == true): ?>
 
-                                        <?php if ($role == 'Client Admin' || $is_policy_exist === true): ?>
+                                        <?php if ($role == 'Admin' || $is_policy_exist === true): ?>
                                             <li>
                                                 <a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
                                                     to Policy Dashboard</a>
@@ -137,7 +137,7 @@ if (isset($_SESSION['dwd_UserID'])) {
 
                             <?php if ($is_logged_in == true): ?>
 
-                                <?php if ($role == 'Client Admin' || $is_policy_exist === true): ?>
+                                <?php if ($role == 'Admin' || $is_policy_exist === true): ?>
                                     <li>
                                         <a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
                                             to Policy Dashboard</a>

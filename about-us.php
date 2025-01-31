@@ -1,69 +1,76 @@
-    <head>
+<head>
     <?php include("includes/meta.php") ?>
-    <?php include("includes/links.php") ?>
-    <title>AboutUs-United Health Lumina</title>  
-<link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-<style type="text/css">
-    
-</style>
+    <?php include("includes/links1.php") ?>
+    <title>AboutUs-United Health Lumina</title>
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
 </head>
+
 <body id="bg-white">
-<div class="page-wraper">
-<div id="loading-area"></div>
-  <!-- header -->
-  <?php include('includes/header.php'); ?>
-   <div class=" bg-white">
-         <!-- inner page banner -->
-        <div class="dlab-bnr-inr overlay-black-middle " style="background-image:url(project-assets/images/banner/back-screen.png);">
-            <div class="container">
-                <div class="dlab-bnr-inr-entry">
-                    <h1 class="text-white">About US</h1>
-                    <!-- Breadcrumb row -->
-                    <div class="breadcrumb-row">
-                        <ul class="list-inline">
-                            <li><a href="./index">Home</a></li>
-                            <li>About Us</li>
-                        </ul>
+    <div class="page-wraper">
+        <div id="loading-area"></div>
+        <!-- header -->
+        <?php include('includes/header1.php'); ?>
+        <div class=" bg-white">
+            <!-- inner page banner -->
+            <div class="dlab-bnr-inr overlay-black-middle "
+                style="background-image:url(project-assets/images/banner/back-screen.png);">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry">
+                        <h1 class="text-white">About US</h1>
+                        <!-- Breadcrumb row -->
+                        <div class="breadcrumb-row">
+                            <ul class="list-inline">
+                                <li><a href="./index">Home</a></li>
+                                <li>About Us</li>
+                            </ul>
+                        </div>
+                        <!-- Breadcrumb row END -->
                     </div>
-                    <!-- Breadcrumb row END -->
                 </div>
             </div>
-        </div>
-        <!-- inner page banner END -->
-        <!-- inner page banner END -->
-       
-        <!-- About area -->
+            <!-- inner page banner END -->
+            <!-- inner page banner END -->
 
-        <div class="content bg-white">
-            <!-- About Services info -->
-            <div class="section-full content-inner bg-white video-section" style="background-image:url('images/background/bg-video.png');">
-                <div class="container">
-                    <div class="section-content">
-                        <div class="row d-flex">
-                            <div class="col-lg-6 col-md-12 m-b30">
-                                <div class="video-bx">
-                                    <img src="project-assets/images/about-us-2.jpg" alt="Signature">
-                                    <div class="video-play-icon">
-                                        <!-- <a href="#" class="popup-youtube video bg-primary"><i class="fas fa-play"></i></a> -->
+            <!-- About area -->
+
+            <div class="content bg-white">
+                <!-- About Services info -->
+                <div class="section-full content-inner bg-white video-section"
+                    style="background-image:url('images/background/bg-video.png');">
+                    <div class="container">
+                        <div class="section-content">
+                            <div class="row d-flex">
+                                <div class="col-lg-6 col-md-12 m-b30">
+                                    <div class="video-bx">
+                                        <img src="project-assets/images/about-us-2.jpg" alt="Signature">
+                                        <div class="video-play-icon">
+                                            <!-- <a href="#" class="popup-youtube video bg-primary"><i class="fas fa-play"></i></a> -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
-                                <div class="content-bx1">
-                                    <h2 class="m-b15 title">A Company providing<br><span class="text-primary">a primary healthcare services and wellness</span></h2>
-                                    <p class="m-b30"> At United Health Lumina, we specialize in delivering top-notch health services and maintenance solutions, ensuring your well-being is our top priority. Our dedicated team is committed to providing comprehensive care tailored to meet your health needs</p>                                          
-                                    <!-- <img src="project-assets/images/sign.png" width="200" alt=""> -->
-                                    <h4 class="m-b0">J Chaudhari</h4>
-                                    <span class="font-14">Company Director</span>
+                                <div class="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
+                                    <div class="content-bx1">
+                                        <h2 class="m-b15 title">A Company providing<br><span class="text-primary">a
+                                                primary healthcare services and wellness</span></h2>
+                                        <p class="m-b30"> At United Health Lumina, we specialize in delivering top-notch
+                                            health services and maintenance solutions, ensuring your well-being is our
+                                            top priority. Our dedicated team is committed to providing comprehensive
+                                            care tailored to meet your health needs</p>
+                                        <!-- <img src="project-assets/images/sign.png" width="200" alt=""> -->
+                                        <h4 class="m-b0">J Chaudhari</h4>
+                                        <span class="font-14">Company Director</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- About Services info END -->
-            <!-- Counter -->
-           <!--  <div class="section-full content-inner overlay-black-dark bg-img-fix" style="background-image:url(images/background/bg1.jpg);">
+                <!-- About Services info END -->
+                <!-- Counter -->
+                <!--  <div class="section-full content-inner overlay-black-dark bg-img-fix" style="background-image:url(images/background/bg1.jpg);">
                 <div class="container">
                     <div class="section-content text-center text-white">
                          <div class="row">
@@ -103,9 +110,9 @@
                     </div>
                 </div>
             </div> -->
-            <!-- Counter END -->
-            <!-- Team Section -->
-            <!-- <div class="section-full text-center bg-white content-inner">
+                <!-- Counter END -->
+                <!-- Team Section -->
+                <!-- <div class="section-full text-center bg-white content-inner">
                 <div class="container"> 
                     <div class="section-head text-black text-center">
                         <h2 class="title">Meet Our Team</h2>
@@ -169,8 +176,8 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <!-- <div class="dlab-box m-b30 dlab-team1">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <!-- <div class="dlab-box m-b30 dlab-team1">
                                 <div class="dlab-media">
                                     <a href="javascript:;">
                                         <img width="358" height="460" alt="" src="project-assets/images/our-team/pic4.jpg">
@@ -187,48 +194,60 @@
                                     </ul>
                                 </div>
                             </div> -->
-                        </div>
-                    </div>
-
-                    <div class="container my-3">
-                        <div class="row">
-                            <!-- Video 1 -->
-                            <div class="col-md-4  mb-3">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe width="350" height="200" src="https://www.youtube.com/embed/cLbAXER7nPg?si=MaOMxEfla-dOEl84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </div>
-
-                            <!-- Video 2 -->
-                            <div class="col-md-4  mb-3">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe width="350" height="200" src="https://www.youtube.com/embed/IXUzh5ln6_c?si=ouzac56P7_kkDBtX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </div>
-
-                            <!-- Video 3 -->
-                            <div class="col-md-4  mb-3">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe width="350" height="200" src="https://www.youtube.com/embed/OhE1jyixS64?si=s63HmuZcbt1yP9RW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-   
-            
-           
-          
+
+            <div class="container my-3">
+                <div class="row">
+                    <!-- Video 1 -->
+                    <div class="col-md-4  mb-3">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="350" height="200"
+                                src="https://www.youtube.com/embed/cLbAXER7nPg?si=MaOMxEfla-dOEl84"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="col-md-4  mb-3">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="350" height="200"
+                                src="https://www.youtube.com/embed/IXUzh5ln6_c?si=ouzac56P7_kkDBtX"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="col-md-4  mb-3">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="350" height="200"
+                                src="https://www.youtube.com/embed/OhE1jyixS64?si=s63HmuZcbt1yP9RW"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-     
     </div>
- 
-  
-        
-         
-</div>
- <?php include("includes/footer.php") ?>
-    <?php include("includes/script.php") ?>
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+
+    </div>
+    <?php include("includes/footer1.php") ?>
+    <?php include("includes/script1.php") ?>
 </body>

@@ -1,9 +1,11 @@
 <?php
+@session_start();
 if (isset($_SESSION) && is_array($_SESSION)) {
     $sessionDataJson = json_encode($_SESSION);
     // var_dump($sessionDataJson);
 } else {
     $sessionDataJson = json_encode([]);
+    // var_dump($sessionDataJson);
 
 
 }

@@ -276,6 +276,80 @@ $all_test = $test_obj->GetAllTestName();
       margin-top: 10px;
       color: #333;
     }
+
+    .test-card-modern .test-card-header.gradient-bg {
+      background: linear-gradient(135deg, #235789, #29A0B1);
+      padding: 1.5rem;
+      border-radius: 8px 8px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .test-card-modern .test-card-header.gradient-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+      pointer-events: none;
+    }
+
+    .test-card-modern .test-card-header.gradient-bg .icon-wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .test-card-modern .test-card-header.gradient-bg .icon-wrapper i {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .test-card-modern .test-card-header.gradient-bg .test-title {
+      color: white;
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .test-card-modern .test-card-header.gradient-bg:hover .icon-wrapper {
+      transform: scale(1.05);
+    }
+
+    .test-card-modern {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .test-card-modern .test-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    .test-card-modern .test-card-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.02);
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* Optional hover effect */
+    .test-card-modern:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
   </style>
 
 
@@ -682,13 +756,13 @@ $all_test = $test_obj->GetAllTestName();
             $off = 0.16 * $baseprice;
             $totaloff = intval($baseprice + $off);
             ?>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-12  col-lg-3">
               <div class="test-card-modern">
                 <div class="ribbon">
                   <span>16% OFF</span>
                 </div>
 
-                <div class="test-card-header">
+                <div class="test-card-header gradient-bg">
                   <div class="icon-wrapper">
                     <i class="fas fa-flask"></i>
                   </div>
@@ -726,8 +800,8 @@ $all_test = $test_obj->GetAllTestName();
                   <a href="./our-test/test-details?ID=<?php echo $testID ?>" class="btn btn-link">
                     <i class="fas fa-info-circle"></i> Details
                   </a>
-                  <button class="btn btn-primary book-now d-none" data-product-id="<?php echo $test['ID'] ?>"
-                    data-product-name="<?php echo $test['TestName'] ?>"
+                  <button class="btn btn-primary book-now cart-btn" data-product-id="<?php echo $test['ID'] ?>"
+                    data-product-id="<?php echo $test['ID'] ?>" data-product-name="<?php echo $test['TestName'] ?>"
                     data-product-price="<?php echo $test['TestFee'] ?>">
                     <i class="fas fa-calendar-check"></i> Book Now
                   </button>
@@ -738,14 +812,16 @@ $all_test = $test_obj->GetAllTestName();
         </div>
 
         <!-- See More Button -->
-        <div class="text-center mt-5">
-          <a href="./our-test/all-test" class="see-more-btn">
-            See More Tests
-            <i class="fas fa-arrow-right ms-2"></i>
-          </a>
-        </div>
+
       </div>
+
     </section>
+  </div>
+  <div class="text-center mt-5">
+    <a href="./our-test/all-test" class="see-more-btn">
+      See More Tests
+      <i class="fas fa-arrow-right ms-2"></i>
+    </a>
   </div>
 
   <section class="section-full  content-inner" style="background-color: aliceblue; margin-top:3.5em;z-index:-1">
@@ -2357,6 +2433,7 @@ $all_test = $test_obj->GetAllTestName();
   <?php include("includes/script1.php") ?>
 
   <script type="text/javascript" src="project-assets/js/index.js"></script>
+  <script type="text/javascript" src="project-assets/js/common-test.js"></script>
 </body>
 
 </html>

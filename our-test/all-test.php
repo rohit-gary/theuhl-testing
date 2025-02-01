@@ -357,6 +357,31 @@ include('include/logic.php');
 			/* Smaller font size */
 			border-radius: 20px;
 		}
+
+		.pagination .page-link {
+			color: #0d6efd;
+			background-color: #fff;
+			border: 1px solid #dee2e6;
+		}
+
+		.pagination .page-item.active .page-link {
+			background-color: #0d6efd;
+			border-color: #0d6efd;
+			color: #fff;
+		}
+
+		.pagination .page-link:hover {
+			background-color: #e9ecef;
+			border-color: #dee2e6;
+			color: #0d6efd;
+		}
+
+		.pagination .page-item.disabled .page-link {
+			color: #6c757d;
+			pointer-events: none;
+			background-color: #fff;
+			border-color: #dee2e6;
+		}
 	</style>
 </head>
 
@@ -399,7 +424,7 @@ include('include/logic.php');
 
 
 
-			<section class="all_test_container">
+			<section class="all_test_container d-none">
 				<div class="container">
 					<div class="row g-4">
 						<?php foreach ($all_test as $index => $test):
@@ -560,6 +585,150 @@ include('include/logic.php');
 						</div>
 					</div>
 				</section>
+			</section>
+
+
+			<?php
+			// Add this at the top of the file where you fetch your data
+			$items_per_page = 30;
+			$current_page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+			$total_items = count($all_test);
+			$total_pages = ceil($total_items / $items_per_page);
+
+			// Calculate the offset for the current page
+			$offset = ($current_page - 1) * $items_per_page;
+
+			// Slice the array to get only the items for the current page
+			$current_tests = array_slice($all_test, $offset, $items_per_page);
+			?>
+
+			<section class="all_test_container">
+				<div class="container">
+					<div class="row g-4">
+						<?php foreach ($current_tests as $index => $test):
+							$testID = base64_encode($test['ID']);
+							$baseprice = intval($test['TestFee']);
+							$off = 0.16 * $baseprice;
+							$totaloff = intval($baseprice + $off);
+							?>
+							<div class="col-md-6 col-lg-3 col-sm-12">
+								<div class="test-card card">
+									<div class="card-body">
+										<div class="upper-col">
+											<div class="row align-items-center">
+												<div class="col-7">
+													<div class="test-name">
+														<p><?php echo $test['TestName'] ?></p>
+													</div>
+												</div>
+												<div class="col-5">
+													<div class="test-price-info">
+														<p class="mb-0">
+															<span class="text-decoration-line-through text-white-50">₹<?php echo $totaloff ?></span>
+															<span class="text-white fw-bold">₹<?php echo $test['TestFee'] ?></span>
+															<span class="dis-span">16% OFF</span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="info-row row align-items-center">
+											<div class="col-6">
+												<div class="d-flex align-items-center">
+													<i class="fas fa-file-alt"></i>
+													<span>Reports within</span>
+												</div>
+											</div>
+											<div class="col-6 text-end">
+												<span class="fw-bold">6 hours</span>
+											</div>
+										</div>
+
+										<div class="info-row row align-items-center">
+											<div class="col-6">
+												<div class="d-flex align-items-center">
+													<i class="fas fa-microscope"></i>
+													<span>Tests included</span>
+												</div>
+											</div>
+											<div class="col-6 text-end">
+												<span class="fw-bold">1 test</span>
+											</div>
+										</div>
+
+										<div class="row g-2 mt-3">
+											<div class="col-6">
+												<a class="detais-btn btn btn-outline-warning" href="./test-details?ID=<?php echo $testID ?>">
+													View Details
+												</a>
+											</div>
+											<div class="col-6">
+												<button class="cart-btn btn btn-primary" data-product-id="<?php echo $test['ID'] ?>"
+													data-product-name="<?php echo $test['TestName'] ?>"
+													data-product-price="<?php echo $test['TestFee'] ?>">
+													Add to cart
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<?php endforeach ?>
+					</div>
+
+					<!-- Add pagination controls -->
+					<div class="row mt-4">
+						<div class="col-12">
+							<nav aria-label="Test pagination">
+								<ul class="pagination justify-content-center">
+									<?php if ($current_page > 1): ?>
+										<li class="page-item">
+											<a class="page-link" href="?page=<?php echo $current_page - 1 ?>" aria-label="Previous">
+												<span aria-hidden="true">&laquo;</span>
+											</a>
+										</li>
+									<?php endif; ?>
+
+									<?php
+									// Show limited page numbers with ellipsis
+									$start_page = max(1, $current_page - 2);
+									$end_page = min($total_pages, $current_page + 2);
+
+									if ($start_page > 1) {
+										echo '<li class="page-item"><a class="page-link" href="?page=1">1</a></li>';
+										if ($start_page > 2) {
+											echo '<li class="page-item disabled"><span class="page-link">...</span></li>';
+										}
+									}
+
+									for ($i = $start_page; $i <= $end_page; $i++):
+										?>
+										<li class="page-item <?php echo $i === $current_page ? 'active' : '' ?>">
+											<a class="page-link" href="?page=<?php echo $i ?>"><?php echo $i ?></a>
+										</li>
+									<?php endfor;
+
+									if ($end_page < $total_pages) {
+										if ($end_page < $total_pages - 1) {
+											echo '<li class="page-item disabled"><span class="page-link">...</span></li>';
+										}
+										echo '<li class="page-item"><a class="page-link" href="?page=' . $total_pages . '">' . $total_pages . '</a></li>';
+									}
+									?>
+
+									<?php if ($current_page < $total_pages): ?>
+										<li class="page-item">
+											<a class="page-link" href="?page=<?php echo $current_page + 1 ?>" aria-label="Next">
+												<span aria-hidden="true">&raquo;</span>
+											</a>
+										</li>
+									<?php endif; ?>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
 			</section>
 			<section class="my-3">
 				<div class="container mb-3">

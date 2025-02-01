@@ -142,4 +142,5 @@
 </div>
  <?php include("includes/footer.php") ?>
     <?php include("includes/script.php") ?>
+    <script type="text/javascript" src="project-assets/js/all_test_new.js"></script>
 </body>

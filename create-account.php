@@ -9,8 +9,8 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 ?>
 
 <head>
-  <?php include("../includes/meta.php") ?>
-  <?php include("../includes/links1.php") ?>
+  <?php include("./includes/meta.php") ?>
+  <?php include("./includes/links1.php") ?>
   <title>Our Most Popular Test</title>
   <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../project-assets/css/all_test.css">
@@ -19,7 +19,7 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 
   </style>
 </head>
-<?php include('../includes/header1.php'); ?>
+<?php include('./includes/header1.php'); ?>
 <div class="dlab-bnr-inr overlay-black-middle bg-pt"
   style="background-image:url(../project-assets/images/banner/back-screen.png);">
   <div class="container">
@@ -96,10 +96,10 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 </div>
 
 
-<?php include("../includes/footer1.php") ?>
-<?php include("../includes/script1.php") ?>
+<?php include("./includes/footer1.php") ?>
+<?php include("./includes/script1.php") ?>
 </body>
-<script type="text/javascript" src="../project-assets/js/all_test_new.js"></script>
+<script type="text/javascript" src="project-assets/js/common-test.js"></script>
 <script>
   var sessionData = <?php echo $sessionDataJson; ?>;
   console.log(sessionData);
@@ -161,7 +161,7 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 
     // AJAX request
     $.ajax({
-      url: 'action/add-test-customer.php',
+      url: './our-test/action/add-test-customer.php',
       type: 'POST',
       data: formData,
       success: function (response) {
@@ -188,13 +188,13 @@ if (isset($_SESSION) && is_array($_SESSION)) {
     // alert('checkout');
     let cart_id = sessionData.cart_id;
     $.ajax({
-      url: 'ajax/update_cart_checkout.php',
+      url: './our-test/ajax/update_cart_checkout.php',
       method: 'GET',
       data: { cart_id: cart_id },
       success: function (response) {
         var response = JSON.parse(response);
         if (response.error == false) {
-         window.location.href = `./checkout.php?user_id=${user_id}&cart_id=${cart_id}`;
+          window.location.href = `./our-test/checkout.php?user_id=${user_id}&cart_id=${cart_id}`;
         } else {
           alert(response.message);
         }
@@ -206,7 +206,7 @@ if (isset($_SESSION) && is_array($_SESSION)) {
     // alert('updateCartUserid');
     let cart_id = sessionData.cart_id;
     $.ajax({
-      url: 'action/update-cart-user-id.php',
+      url: './our-test/action/update-cart-user-id.php',
       type: 'POST',
       data: { UserID: user_id, CartID: cart_id }
     });

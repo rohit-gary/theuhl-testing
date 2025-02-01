@@ -198,4 +198,5 @@
 
 		<?php include("includes/footer1.php") ?>
 		<?php include("includes/script1.php") ?>
+		<script type="text/javascript" src="project-assets/js/all_test_new.js"></script>
 </body>

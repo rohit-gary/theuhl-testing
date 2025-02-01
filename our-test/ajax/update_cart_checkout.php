@@ -26,10 +26,12 @@ $cart_items = $Cart_obj->InsertCartDetails($data);
 if ($cart_items['error'] == false) {
   $cart_items_delete = $Cart_obj->DeleteCart($cart_id);
 
-
 }
 if ($cart_items['error'] == false) {
+   unset($_SESSION['cart_id']);
   echo json_encode(['error' => false, 'message' => 'Cart Updated']);
+
+
 } else {
   echo json_encode(['error' => true, 'message' => 'Cart Not Updated']);
 }

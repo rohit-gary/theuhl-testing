@@ -194,5 +194,5 @@ $AllPlan = $plans->GetAllPlan();
     <?php include("includes/footer1.php") ?>
     <?php include("includes/script1.php") ?>
 </body>
-
+<script type="text/javascript" src="project-assets/js/all_test_new.js"></script>
 </html>

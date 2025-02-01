@@ -70,7 +70,7 @@ $totaloff = intval($baseprice + $off);
             <!-- Product Information Section -->
             <div class="col-md-6">
               <h2 class="test-banner-heading-2" style="font-size: 30px; font-weight: 700; color: #333;">
-                Red Blood Cell Count (RBC Count)
+                <?php echo $test_details['TestName'] ?>
               </h2>
 
               <!-- Pricing Section -->
@@ -100,7 +100,7 @@ $totaloff = intval($baseprice + $off);
       <section class="test-info-section">
         <div class="container">
           <!-- First Row - Reports and Parameters -->
-          <div class="row">
+          <div class="row d-none">
             <!-- Desktop view: separate cards for Reports Within and Parameters -->
             <div class="col-lg-5 d-none d-lg-block text-center mb-2">
               <div class="card shadow-lg border-light rounded-3">
@@ -172,7 +172,7 @@ $totaloff = intval($baseprice + $off);
             </div>
           </div>
           <!-- Third Row - Measures and Identifies -->
-          <div class="row my-4">
+          <div class="row my-4 d-none">
             <!-- Desktop view: Measures and Identifies in separate cards -->
             <div class="col-lg-5 d-none d-lg-block mb-3">
               <div class="card shadow-lg border-light rounded-3">
@@ -293,412 +293,438 @@ $totaloff = intval($baseprice + $off);
             <h2 class="title">Why is this test <?php echo $test_details['TestName'] ?> taken?</h2>
             <p><?php echo $test_details['DescriptionFive'] ?></p>
           </div>
-          <div class="faq-test">
-            <h2 class="title">What are the Frequently Asked Questions about the test
-              <?php echo $test_details['TestName']; ?>?
-            </h2>
-            <div class="row my-5">
-              <div class="col-lg-12 col-md-12 m-b30">
-                <div class="dlab-accordion faq-1 box-sort-in m-b30" id="accordion1">
-                  <?php
-                  echo $test_details['DescriptionSix'];
-                  ?>
-                  <div class="text-center mt-4 d-none">
-                    <button class="site-button btnhover13 rounded" id="read-more-btn">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <?php
+          // Sample JSON data from your backend
+          
+          $jsonData = $test_details['DescriptionSix'];
+
+          // Decode JSON data
+          $data = json_decode($jsonData, true);
+
+          // Check if decoding was successful
+          if (isset($data['FAQs']) && is_array($data['FAQs'])) {
+            echo '<div class="faq-test">';
+            echo '<h2 class="title">Popular FAQs on Test</h2>';
+            echo '<div class="dlab-accordion faq-1 box-sort-in" id="accordion1">';
+
+            $index = 1;
+            foreach ($data['FAQs'] as $faq) {
+              $question = isset($faq['Question']) ? $faq['Question'] : (isset($faq['question']) ? $faq['question'] : 'No question available');
+              $answer = isset($faq['Answer']) ? $faq['Answer'] : (isset($faq['answer']) ? $faq['answer'] : 'No answer available');
+
+              echo '<div class="panel">';
+              echo '  <div class="acod-head">';
+              echo '    <h6 class="acod-title">';
+              echo '      <a href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#faq' . $index . '" class="collapsed" aria-expanded="false">';
+              echo '        ' . $index . '. ' . htmlspecialchars($question) . '</a>';
+              echo '    </h6>';
+              echo '  </div>';
+              echo '  <div id="faq' . $index . '" class="acod-body collapse" data-bs-parent="#accordion1">';
+              echo '    <div class="acod-content">' . htmlspecialchars($answer) . '</div>';
+              echo '  </div>';
+              echo '</div>';
+              $index++;
+            }
+
+
+            echo '</div>'; // End accordion
+            echo '</div>'; // End faq-test
+          } else {
+            echo '<p>No FAQs available.</p>';
+          }
+          ?>
+
 
         </div>
-      </section>
-
-
-      <section class="section-rating">
-        <div class="">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="sort-title clearfix text-center">
-
-                  <h2 class="title">Customer <span class="text-primary">Google Rating</span></h2>
-                </div>
-              </div>
-            </div>
-            <div class="section-content">
-              <div class="testimonial-two-dots owl-carousel owl-none owl-theme owl-dots-black-full">
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">2 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic1.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>Being the sole breadwinner, I was worried about my aging parents. UHL health plan provided the
-                        ideal coverage with additional benefits like fastest claim settlement .</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Rahul Kashyap</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">2 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic2.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>Choosing UHL HEALTH PLANS felt like an adventure. The website guided me smoothly and I was
-                        thrilled with the ease of comparison. Cheers UHL. The website guided me smoothly</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Adarsh Kumar</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">4 weeks ago</p>
-                      </div>
-                    </div>
-
-
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic3.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>Having UHL heath plan which is so beneficial and the investment is also low. Service provided
-                        is quick and on time. Online renewals are made so simple through online portal service.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Kushagra</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">2 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic1.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>I got the UHL Health Plan at a low cost, and the coverage is as high as promised. The service
-                        is excellent, and their staff is available 24/7 to assist with any inquiries.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Mahima Pandey</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                        <i class="far fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">2 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic2.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>I’m securing my future by investing in the UHL Health Plan and opting for their retirement
-                        health plans. In my opinion, it’s the best investment, as the policy covers 92% of my healthcare
-                        needs.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Ajeet</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">1 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic3.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>The claims process is easy due to the fast service provided by their dedicated staff. Plus, it
-                        offers tax-saving benefits, which is another great advantage. I'm very satisfied with it.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Chitransh Trivedi</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">1 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic1.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>I purchased the UHL Health Plan, opting for their term health coverage. The premiums are
-                        affordable, around Rs. 10K per year, making it a great option for my budget.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Tushar</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">2 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic2.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>I have the UHL Health Plan for my family of four, and it has proven to be reliable with many
-                        benefits and great returns on investment. The policy coverage is around 90%.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Naina Verma</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-                <div class="item p-a5">
-                  <div class="testimonial-9">
-                    <div class="testimonial-icon d-flex align-items-center justify-content-between">
-
-                      <div class="svg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
-                          <path fill="#4285f4"
-                            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
-                          <path fill="#34a853"
-                            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
-                          <path fill="#fbbc05"
-                            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
-                          <path fill="#eb4335"
-                            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
-                        </svg>
-                      </div>
-
-                      <!-- 5-star rating -->
-                      <div class="stars mx-3">
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                        <i class="fas fa-star" style="color: #FFD700;"></i>
-                      </div>
-
-                      <!-- Time -->
-                      <div class="time mx-3">
-                        <p class="mb-0">2 week ago</p>
-                      </div>
-                    </div>
-                    <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic3.jpg" width="100" height="100" alt=""></div> -->
-                    <div class="testimonial-text">
-                      <p>I’m securing my future by investing in the UHL Health Plan and opting for their retirement
-                        health plans. In my opinion, it’s the best investment, as the policy covers 92% of my healthcare
-                        needs.</p>
-                    </div>
-                    <div class="testimonial-detail"> <strong class="testimonial-name">Anil</strong> <span
-                        class="testimonial-position">People</span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
     </div>
+    </section>
+
+
+    <section class="section-rating">
+      <div class="">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="sort-title clearfix text-center">
+
+                <h2 class="title">Customer <span class="text-primary">Google Rating</span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="testimonial-two-dots owl-carousel owl-none owl-theme owl-dots-black-full">
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">2 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic1.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>Being the sole breadwinner, I was worried about my aging parents. UHL health plan provided the
+                      ideal coverage with additional benefits like fastest claim settlement .</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Rahul Kashyap</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">2 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic2.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>Choosing UHL HEALTH PLANS felt like an adventure. The website guided me smoothly and I was
+                      thrilled with the ease of comparison. Cheers UHL. The website guided me smoothly</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Adarsh Kumar</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">4 weeks ago</p>
+                    </div>
+                  </div>
+
+
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic3.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>Having UHL heath plan which is so beneficial and the investment is also low. Service provided
+                      is quick and on time. Online renewals are made so simple through online portal service.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Kushagra</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">2 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic1.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>I got the UHL Health Plan at a low cost, and the coverage is as high as promised. The service
+                      is excellent, and their staff is available 24/7 to assist with any inquiries.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Mahima Pandey</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                      <i class="far fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">2 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic2.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>I’m securing my future by investing in the UHL Health Plan and opting for their retirement
+                      health plans. In my opinion, it’s the best investment, as the policy covers 92% of my healthcare
+                      needs.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Ajeet</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">1 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic3.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>The claims process is easy due to the fast service provided by their dedicated staff. Plus, it
+                      offers tax-saving benefits, which is another great advantage. I'm very satisfied with it.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Chitransh Trivedi</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">1 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic1.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>I purchased the UHL Health Plan, opting for their term health coverage. The premiums are
+                      affordable, around Rs. 10K per year, making it a great option for my budget.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Tushar</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">2 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic2.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>I have the UHL Health Plan for my family of four, and it has proven to be reliable with many
+                      benefits and great returns on investment. The policy coverage is around 90%.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Naina Verma</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+              <div class="item p-a5">
+                <div class="testimonial-9">
+                  <div class="testimonial-icon d-flex align-items-center justify-content-between">
+
+                    <div class="svg-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="0.98em" height="1em" viewBox="0 0 256 262">
+                        <path fill="#4285f4"
+                          d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" />
+                        <path fill="#34a853"
+                          d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" />
+                        <path fill="#fbbc05"
+                          d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z" />
+                        <path fill="#eb4335"
+                          d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" />
+                      </svg>
+                    </div>
+
+                    <!-- 5-star rating -->
+                    <div class="stars mx-3">
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                      <i class="fas fa-star" style="color: #FFD700;"></i>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="time mx-3">
+                      <p class="mb-0">2 week ago</p>
+                    </div>
+                  </div>
+                  <!-- <div class="testimonial-pic radius style1"><img src="project-assets/images/testimonials/pic3.jpg" width="100" height="100" alt=""></div> -->
+                  <div class="testimonial-text">
+                    <p>I’m securing my future by investing in the UHL Health Plan and opting for their retirement
+                      health plans. In my opinion, it’s the best investment, as the policy covers 92% of my healthcare
+                      needs.</p>
+                  </div>
+                  <div class="testimonial-detail"> <strong class="testimonial-name">Anil</strong> <span
+                      class="testimonial-position">People</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
   </div>
   <?php include("../includes/footer1.php") ?>
   <?php include("../includes/script1.php") ?>

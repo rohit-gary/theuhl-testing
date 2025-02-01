@@ -98,6 +98,8 @@ if (isset($_SESSION) && is_array($_SESSION)) {
 <?php include("./includes/footer1.php") ?>
 <?php include("./includes/script1.php") ?>
 </body>
+  <script type="text/javascript" src="project-assets/js/all_test_new.js"></script>
+
 <script>
   function createAccount() {
     let name = $('#name_new').val().trim();

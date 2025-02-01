@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const productId = this.getAttribute('data-product-id');
             const productName = this.getAttribute('data-product-name');
             const productPrice = this.getAttribute('data-product-price');
-            fetch('action/add-to-cart.php', {
+            fetch('http://localhost/Projects/theuhl-testing/our-test/action/add-to-cart.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function loadCart() 
 {
-    fetch('ajax/get_cart_item.php')
+    fetch('http://localhost/Projects/theuhl-testing/our-test/ajax/get_cart_item.php')
         .then(response => response.json())
         .then(data => {
             const cartList = document.getElementById('cart-list');
@@ -139,7 +139,7 @@ function loadCart()
 
 function removeFromCart(itemId)
  {
-    fetch('action/remove_from_cart.php', {
+    fetch('http://localhost/Projects/theuhl-testing/our-test/action/remove_from_cart.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -161,7 +161,7 @@ function removeFromCart(itemId)
 function updateCartCount()
  {
    
-    fetch('ajax/get_cart_item_count.php')
+    fetch('http://localhost/Projects/theuhl-testing/our-test/ajax/get_cart_item_count.php')
         .then(response => response.json())
         .then(data => {
            
@@ -177,22 +177,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function saveTestItem(sessionData) {
-   
-    let isLoggedIn = false;
-    if (sessionData.dwd_UserID) {
-        isLoggedIn = true; 
-    }
+    $.ajax({
+        url: 'http://localhost/Projects/theuhl-testing/our-test/ajax/get_current_cart_ID.php',
+        method: 'GET',
+        success: function (data) {
+            try {
+                console.log(data);
+                var response = data;  // Ensure valid JSON parsing
+                var cart_id=response.cart_id;
+                alert(`Session cart ID response: ${response.cart_id}`); // Assuming response contains 'cart_id'
+                
+                let isLoggedIn = false;
+                if (sessionData.dwd_UserID) {
+                    isLoggedIn = true;
+                }
 
-    if (!isLoggedIn) {
-        // $('#loginModal').modal('show');
-        // alert(JSON.stringify(sessionData));
-        gotocreateaccount(sessionData);
-    } else {
-
-        gotocheckout(sessionData, sessionData.dwd_UserID);
-        
-    }
+                if (!isLoggedIn) {
+                    gotocreateaccount(sessionData);
+                } else {
+                    gotocheckout(cart_id, sessionData.dwd_UserID);
+                }
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("AJAX Error:", status, error);
+        }
+    });
 }
+
 
 function goToPayment() {
     // Redirect to the payment module
@@ -203,16 +217,19 @@ function gotocreateaccount(sessionData) {
     window.location.href = `./create-account.php`;
 }
 
-function gotocheckout(sessionData, user_id) {
-    let cart_id = sessionData.cart_id;
+function gotocheckout(cart_id_value, user_id) {
+    let cart_id = cart_id_value;
+    alert(`cart_id ${cart_id}`);
     $.ajax({
-        url: 'ajax/update_cart_checkout.php',
+        url: 'http://localhost/Projects/theuhl-testing/our-test/ajax/update_cart_checkout.php',
         method: 'GET',
         data: { cart_id: cart_id },
         success: function(response) {
             var response = JSON.parse(response);
             if(response.error==false){
-                window.location.href = `./checkout.php`;
+                loadCart();
+                updateCartCount();
+                window.location.href = `./checkout.php?cart_id=${cart_id}`;
             }else{
                 alert(response.message);
             }

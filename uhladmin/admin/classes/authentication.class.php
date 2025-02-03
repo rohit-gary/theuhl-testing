@@ -46,9 +46,9 @@ class Authentication extends Core
 		$ss=1;
 
 		$filter = "WHERE PhoneNumber = '$phonenumber' AND (OTP=$OTP AND IsActive='$ss')";
-    $filter_2 = "WHERE PhoneNumber = '$phonenumber'";
+        $filter_2 = "WHERE PhoneNumber = '$phonenumber'";
 
-		$num_rows = $this->_getTotalRows($this->conn,'temp_otp', $filter);
+		$num_rows = $this->_getTotalRows($this->conn,'users', $filter);
 		
 		
 		if($num_rows > 0)

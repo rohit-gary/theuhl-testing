@@ -729,7 +729,7 @@ $totaloff = intval($baseprice + $off);
   <?php include("../includes/footer1.php") ?>
   <?php include("../includes/script1.php") ?>
 </body>
-<script type="text/javascript" src="../project-assets/js/all_test.js" defer></script>
+<script type="text/javascript" src="../project-assets/js/all_test_new.js" defer></script>
 <script>
   document.getElementById('read-more-btn').addEventListener('click', function () {
     const hiddenFaqs = document.getElementById('hidden-faqs');

@@ -229,3 +229,4 @@
   <?php include("includes/script1.php") ?>
 
   <script type="text/javascript" src="project-assets/js/index.js"></script>
+  <script type="text/javascript" src="project-assets/js/common-test.js"></script>

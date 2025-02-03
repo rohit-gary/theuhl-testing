@@ -129,4 +129,12 @@ class CMUsers extends Core
 		return $user_details;
 	}
 
+	public function UpdateUserOTP($OTP, $MobileNumber){
+     $OTP=$OTP;
+     $sql="OTP = '$OTP' where PhoneNumber = '$MobileNumber'";
+     $response =$this-> _UpdateTableRecords($this->conn,'users',$sql);  
+     return $response;
+     
+	} 
+
 }

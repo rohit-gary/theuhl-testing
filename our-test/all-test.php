@@ -500,91 +500,7 @@ include('include/logic.php');
 					</div>
 				</div>
 
-				<!-- Health Checks Section -->
-				<section class="section-highlight mt-5">
-					<div class="container section-content">
-						<div class="row align-items-center mb-5">
-							<div class="col-md-4">
-								<h2 class="title">Health Checks for Key <span class="text-primary">Organs</span></h2>
-								<p class="section-description">
-									Discover our extensive suite of diagnostic tests designed specifically for vital body organs.
-									These specialized tests provide comprehensive insights for optimal health maintenance.
-								</p>
-							</div>
-
-							<div class="col-md-8">
-								<div class="row g-4">
-									<!-- Organ Cards -->
-									<?php
-									$organs = [
-										['name' => 'Heart', 'icon' => 'heart.png'],
-										['name' => 'Kidney', 'icon' => 'kidney.png'],
-										['name' => 'Liver', 'icon' => 'liver.png'],
-										['name' => 'Bone', 'icon' => 'fracture.png'],
-										['name' => 'Vitamin', 'icon' => 'supplement.png'],
-										['name' => 'Hormones', 'icon' => 'hormones.png'],
-										['name' => 'Gut Health', 'icon' => 'gut-microbiota.png'],
-										['name' => 'Blood', 'icon' => 'blood.png'],
-										['name' => 'Reproductive Health', 'icon' => 'reph.png'],
-									];
-
-									foreach ($organs as $organ): ?>
-										<div class="col-md-4 col-6">
-											<a href="../../admin/authentication/login" class="text-decoration-none">
-												<div class="organ-card text-center">
-													<img src="../project-assets/images/test/<?php echo $organ['icon'] ?>"
-														alt="<?php echo $organ['name'] ?>">
-													<h4 class="title"><?php echo $organ['name'] ?></h4>
-												</div>
-											</a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Wellness Section -->
-				<section class="section-highlight">
-					<div class="container section-content">
-						<div class="row align-items-center">
-							<div class="col-md-8">
-								<div class="row g-4">
-									<?php
-									$checkups = [
-										['name' => 'Women Health', 'icon' => 'Women-Health.png'],
-										['name' => 'Lifestyle Checkup', 'icon' => 'Lifestyle-Checkup.png'],
-										['name' => 'Cancer Checkup', 'icon' => 'Cancer-Checkup.png'],
-										['name' => 'Senior Citizen', 'icon' => 'Senior.png'],
-										['name' => 'Full Body Checkups', 'icon' => 'Full-Body-Checkups.png'],
-										['name' => 'Diabetes Checkup', 'icon' => 'Diabetes.png'],
-									];
-
-									foreach ($checkups as $checkup): ?>
-										<div class="col-md-4 col-6">
-											<a href="../../admin/authentication/login" class="text-decoration-none">
-												<div class="organ-card text-center">
-													<img src="../project-assets/images/test/<?php echo $checkup['icon'] ?>"
-														alt="<?php echo $checkup['name'] ?>">
-													<h4 class="title"><?php echo $checkup['name'] ?></h4>
-												</div>
-											</a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-
-							<div class="col-md-4">
-								<h2 class="title">Prioritize Your Wellness with <span class="text-primary">Personalized Care</span></h2>
-								<p class="section-description">
-									Our customized health checkups are designed to meet your unique needs, focusing on your lifestyle,
-									age, and medical history. Discover a tailored approach to preventive healthcare.
-								</p>
-							</div>
-						</div>
-					</div>
-				</section>
+				
 			</section>
 
 
@@ -730,7 +646,95 @@ include('include/logic.php');
 					</div>
 				</div>
 			</section>
-			<section class="my-3">
+			
+			<!-- Health Checks Section -->
+				<section class="section-highlight mt-5">
+					<div class="container section-content">
+						<div class="row align-items-center mb-5">
+							<div class="col-md-4">
+								<h2 class="title">Health Checks for Key <span class="text-primary">Organs</span></h2>
+								<p class="section-description">
+									Discover our extensive suite of diagnostic tests designed specifically for vital body organs.
+									These specialized tests provide comprehensive insights for optimal health maintenance.
+								</p>
+							</div>
+
+							<div class="col-md-8">
+								<div class="row g-4">
+									<!-- Organ Cards -->
+									<?php
+									$organs = [
+										['name' => 'Heart', 'icon' => 'heart.png'],
+										['name' => 'Kidney', 'icon' => 'kidney.png'],
+										['name' => 'Liver', 'icon' => 'liver.png'],
+										['name' => 'Bone', 'icon' => 'fracture.png'],
+										['name' => 'Vitamin', 'icon' => 'supplement.png'],
+										['name' => 'Hormones', 'icon' => 'hormones.png'],
+										['name' => 'Gut Health', 'icon' => 'gut-microbiota.png'],
+										['name' => 'Blood', 'icon' => 'blood.png'],
+										['name' => 'Reproductive Health', 'icon' => 'reph.png'],
+									];
+
+									foreach ($organs as $organ): ?>
+										<div class="col-md-4 col-6">
+											<a href="../../admin/authentication/login" class="text-decoration-none">
+												<div class="organ-card text-center">
+													<img src="../project-assets/images/test/<?php echo $organ['icon'] ?>"
+														alt="<?php echo $organ['name'] ?>">
+													<h4 class="title"><?php echo $organ['name'] ?></h4>
+												</div>
+											</a>
+										</div>
+									<?php endforeach; ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+				<!-- Wellness Section -->
+				<section class="section-highlight">
+					<div class="container section-content">
+						<div class="row align-items-center">
+							<div class="col-md-8">
+								<div class="row g-4">
+									<?php
+									$checkups = [
+										['name' => 'Women Health', 'icon' => 'Women-Health.png'],
+										['name' => 'Lifestyle Checkup', 'icon' => 'Lifestyle-Checkup.png'],
+										['name' => 'Cancer Checkup', 'icon' => 'Cancer-Checkup.png'],
+										['name' => 'Senior Citizen', 'icon' => 'Senior.png'],
+										['name' => 'Full Body Checkups', 'icon' => 'Full-Body-Checkups.png'],
+										['name' => 'Diabetes Checkup', 'icon' => 'Diabetes.png'],
+									];
+
+									foreach ($checkups as $checkup): ?>
+										<div class="col-md-4 col-6">
+											<a href="../../admin/authentication/login" class="text-decoration-none">
+												<div class="organ-card text-center">
+													<img src="../project-assets/images/test/<?php echo $checkup['icon'] ?>"
+														alt="<?php echo $checkup['name'] ?>">
+													<h4 class="title"><?php echo $checkup['name'] ?></h4>
+												</div>
+											</a>
+										</div>
+									<?php endforeach; ?>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<h2 class="title">Prioritize Your Wellness with <span class="text-primary">Personalized Care</span></h2>
+								<p class="section-description">
+									Our customized health checkups are designed to meet your unique needs, focusing on your lifestyle,
+									age, and medical history. Discover a tailored approach to preventive healthcare.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="my-3">
 				<div class="container mb-3">
 					<div class="row">
 						<div class="col-md-12">

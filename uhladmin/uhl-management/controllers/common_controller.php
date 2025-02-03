@@ -223,4 +223,39 @@ function GenerateTempImageID($conn)
 }
 
 
+function sendMobileOTPWhatsapp($data){
+	$curl = curl_init();
+	$phonenumber = $data['phonenumber'];
+	$template = $data['template'];
+	$body_values = $data['body_values'];
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => 'https://api.interakt.ai/v1/public/message/',
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_ENCODING => '',
+	  CURLOPT_MAXREDIRS => 10,
+	  CURLOPT_TIMEOUT => 0,
+	  CURLOPT_FOLLOWLOCATION => true,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => 'POST',
+	  CURLOPT_POSTFIELDS =>'{
+		"countryCode": "+91",
+		"phoneNumber": "'.$phonenumber.'",
+		"type": "Template",
+		"template": {
+		"name": "'.$template.'", 
+		"languageCode": "en", 
+		"bodyValues": '.$body_values.'
+		}
+	  }',
+	  CURLOPT_HTTPHEADER => array(
+	    'Authorization: Basic bW9uTU4wNWJiU1Nmd2ZvcjJzVVVpNWwzajdkeXA1UWh6RmxQS3JoUXpiZzo=',
+	    'Content-Type: application/json'
+	  ),
+	));
+	//echo $body_values;
+	$response = curl_exec($curl);
+	//var_dump($response);
+	curl_close($curl);
+}
+
 ?>

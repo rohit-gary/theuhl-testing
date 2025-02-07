@@ -35,6 +35,8 @@
     });
 
 
+
+
     $(document).ready(function ()
      {
 	    // Update the cart when an item is added

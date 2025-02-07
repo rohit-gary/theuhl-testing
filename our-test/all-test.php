@@ -10,378 +10,7 @@ include('include/logic.php');
 	<link rel="stylesheet" type="text/css" href="../project-assets/css/all_test.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<style type="text/css">
-		/* Modern Color Schemes - Choose one of these gradient options */
 
-		/* Option 1: Professional Blue-Purple Gradient */
-		:root {
-			--primary-gradient: linear-gradient(135deg, #2c3e50, #3498db);
-		}
-
-		/* Option 2: Modern Medical Blue Gradient */
-		:root {
-			--primary-gradient: linear-gradient(135deg, #235789, #29A0B1);
-		}
-
-		/* Option 3: Sophisticated Teal Gradient */
-		:root {
-			--primary-gradient: linear-gradient(135deg, #136a8a, #267871);
-		}
-
-		/* Option 4: Premium Dark Blue Gradient */
-		:root {
-			--primary-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
-		}
-
-		/* Option 5: Modern Corporate Gradient */
-		:root {
-			--primary-gradient: linear-gradient(135deg, #24C6DC, #514A9D);
-		}
-
-		/* Rest of your existing CSS remains the same, just update the root variables below */
-		:root {
-			/* Choose one of the gradients above and use it here */
-			--primary-gradient: linear-gradient(135deg, #235789, #29A0B1);
-			/* Currently using Option 2 */
-			--primary-color: #235789;
-			--secondary-color: #29A0B1;
-			--accent-color: #f8f9fa;
-			--text-dark: #2c3e50;
-			--text-light: #ffffff;
-			--shadow-sm: 0 2px 4px rgba(35, 87, 137, 0.05);
-			--shadow-md: 0 4px 6px rgba(35, 87, 137, 0.1);
-			--shadow-lg: 0 10px 20px rgba(35, 87, 137, 0.1);
-			--border-radius: 15px;
-			--transition: all 0.3s ease;
-		}
-
-		/* Updated styles for better contrast and professionalism */
-		.test-card .upper-col {
-			background: var(--primary-gradient);
-			position: relative;
-			overflow: hidden;
-		}
-
-		.test-card .upper-col::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
-		}
-
-		.test-price-info {
-			background: rgba(255, 255, 255, 0.15);
-			border: 1px solid rgba(255, 255, 255, 0.2);
-		}
-
-		.dis-span {
-			background: #28a745;
-			background: linear-gradient(135deg, #28a745, #20c997);
-		}
-
-		.cart-btn.btn-primary {
-			background: var(--primary-gradient);
-			border: none;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.cart-btn.btn-primary:hover {
-			transform: translateY(-2px);
-			box-shadow: var(--shadow-md);
-		}
-
-		.cart-btn.btn-outline-warning {
-			color: var(--primary-color);
-			border-color: var(--primary-color);
-		}
-
-		.cart-btn.btn-outline-warning:hover {
-			background: var(--primary-gradient);
-			border-color: transparent;
-			color: white;
-		}
-
-		/* Updated organ card styling */
-		.organ-card {
-			border: 1px solid rgba(35, 87, 137, 0.1);
-		}
-
-		.organ-card:hover {
-			border-color: var(--primary-color);
-		}
-
-		/* Section background update */
-		.section-highlight::before {
-			background: linear-gradient(45deg,
-					rgba(35, 87, 137, 0.05) 0%,
-					rgba(41, 160, 177, 0.1) 100%);
-		}
-
-		/* Title styling update */
-		.title span.text-primary {
-			background: var(--primary-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			position: relative;
-		}
-
-		/* Info icons color update */
-		.info-row i {
-			color: var(--primary-color);
-			opacity: 0.9;
-		}
-
-		/* Global Styles */
-		.all_test_container {
-			background-color: #f8f9fa;
-			padding: 3rem 0;
-		}
-
-		/* Test Card Styles */
-		.test-card {
-			transition: var(--transition);
-			border: none;
-			border-radius: var(--border-radius);
-			overflow: hidden;
-			background: white;
-			box-shadow: var(--shadow-sm);
-		}
-
-		.test-card:hover {
-			transform: translateY(-5px);
-			box-shadow: var(--shadow-lg);
-		}
-
-		.test-card .card-body {
-			padding: 1.5rem;
-		}
-
-		.upper-col {
-			background: var(--primary-gradient);
-			margin: -1.5rem -1.5rem 1rem -1.5rem;
-			padding: 1.5rem;
-			border-radius: var(--border-radius) var(--border-radius) 0 0;
-		}
-
-		.test-name p {
-			color: white;
-			font-size: 1.2rem;
-			font-weight: 600;
-			margin: 0;
-		}
-
-		.test-price-info {
-			background: rgba(255, 255, 255, 0.1);
-			padding: 12px;
-			border-radius: 10px;
-			backdrop-filter: blur(5px);
-		}
-
-		.dis-span {
-			background: #28a745;
-			padding: 2px 8px;
-			border-radius: 20px;
-			font-size: 12px;
-			color: white;
-			display: inline-block;
-			margin-left: 5px;
-		}
-
-		.info-row {
-			padding: 10px 0;
-			border-bottom: 1px solid #eee;
-			margin-bottom: 10px;
-		}
-
-		.info-row i {
-			color: #0d6efd;
-			margin-right: 8px;
-		}
-
-		.cart-btn {
-			width: 100%;
-			padding: 12px;
-			border-radius: 25px;
-			transition: var(--transition);
-			text-transform: uppercase;
-			font-size: 14px;
-			font-weight: 600;
-			letter-spacing: 0.5px;
-		}
-
-		.btn-outline-warning:hover {
-			background: #ffc107;
-			color: #000;
-		}
-
-		/* Organ Section Styles */
-		.organ-card {
-			transition: var(--transition);
-			border: none;
-			border-radius: var(--border-radius);
-			background: white;
-			box-shadow: var(--shadow-sm);
-			padding: 1.5rem;
-		}
-
-		.organ-card:hover {
-			transform: translateY(-5px);
-			box-shadow: var(--shadow-md);
-		}
-
-		.organ-card img {
-			transition: var(--transition);
-			height: 4em;
-			margin-bottom: 1rem;
-		}
-
-		.organ-card:hover img {
-			transform: scale(1.1);
-		}
-
-		.organ-card .title {
-			color: #333;
-			font-size: 1.1rem;
-			margin: 0;
-		}
-
-		/* Section Styles */
-		.section-highlight {
-			position: relative;
-			padding: 4rem 0;
-			background: #fff;
-		}
-
-		.section-highlight::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: linear-gradient(45deg, rgba(140, 197, 226, 0.15) 0%, rgba(140, 197, 226, 0.4) 100%);
-			z-index: 0;
-		}
-
-		.section-content {
-			position: relative;
-			z-index: 1;
-		}
-
-		.title {
-			font-size: 2rem;
-			font-weight: 700;
-			margin-bottom: 1.5rem;
-			color: #333;
-		}
-
-		.title span.text-primary {
-			background: var(--primary-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-
-		.section-description {
-			color: #666;
-			line-height: 1.6;
-			margin-bottom: 2rem;
-		}
-
-
-		.test-card {
-			transition: var(--transition);
-			border: none;
-			border-radius: var(--border-radius);
-			overflow: hidden;
-			background: white;
-			box-shadow: var(--shadow-sm);
-			max-width: 300px;
-			/* Add max-width for smaller cards */
-			margin: 0 auto;
-			/* Center the card */
-		}
-
-		.test-card .card-body {
-			padding: 1rem;
-			/* Reduced padding */
-		}
-
-		.upper-col {
-			padding: 1rem;
-			/* Reduced padding */
-			margin: -1rem -1rem 0.8rem -1rem;
-			/* Adjusted margins */
-		}
-
-		.test-name p {
-			font-size: 1rem;
-			/* Smaller font size */
-			line-height: 1.2;
-		}
-
-		.test-price-info {
-			padding: 8px;
-			/* Reduced padding */
-			border-radius: 8px;
-		}
-
-		.test-price-info p {
-			font-size: 0.9rem;
-			/* Smaller font size */
-		}
-
-		.dis-span {
-			padding: 1px 6px;
-			font-size: 10px;
-		}
-
-		.info-row {
-			padding: 8px 0;
-			/* Reduced padding */
-			font-size: 0.9rem;
-			/* Smaller font size */
-		}
-
-		.info-row i {
-			font-size: 0.9rem;
-			/* Smaller icon size */
-		}
-
-		.cart-btn {
-			padding: 8px;
-			/* Reduced padding */
-			font-size: 12px;
-			/* Smaller font size */
-			border-radius: 20px;
-		}
-
-		.pagination .page-link {
-			color: #0d6efd;
-			background-color: #fff;
-			border: 1px solid #dee2e6;
-		}
-
-		.pagination .page-item.active .page-link {
-			background-color: #0d6efd;
-			border-color: #0d6efd;
-			color: #fff;
-		}
-
-		.pagination .page-link:hover {
-			background-color: #e9ecef;
-			border-color: #dee2e6;
-			color: #0d6efd;
-		}
-
-		.pagination .page-item.disabled .page-link {
-			color: #6c757d;
-			pointer-events: none;
-			background-color: #fff;
-			border-color: #dee2e6;
-		}
 	</style>
 </head>
 
@@ -392,118 +21,74 @@ include('include/logic.php');
 		<!-- header -->
 		<?php include('../includes/header1.php'); ?>
 		<div class="content-area bg-white main-area-testpage">
-			<section class="
-			">
-				<div class="container"
-					style="background: linear-gradient(135deg, #8cc5e2, #5f9dc7); border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-					<div class="row align-items-center">
-						<!-- Content Section -->
-						<div class="col-md-6 col-lg-6 text-center text-md-start p-5">
-							<h1 class="test-banner-heading mb-4" style="color: #fff; font-weight: 700;">
-								Our Health Test<br>
-								<span style="font-size: 0.8em; font-weight: 500;">आपकी सेहत, हमारी प्राथमिकता</span>
-							</h1>
-							<p class="test-banner-content" style="color: #fff; font-size: 1.2em;">
-								आपकी सेहत, हमारी प्राथमिकता<br>
-								<span style="font-size: 0.9em;">Your Health, Our Priority</span>
-							</p>
-							<p class="mt-4" style="color: #fff; font-size: 1.1em;">
-								विश्वसनीय जांच, सटीक परिणाम<br>
-								<span style="font-size: 0.9em;">Reliable Testing, Accurate Results</span>
-							</p>
-						</div>
+				<section class="test-banner">
+			    <div class="container py-5">
+			        <div class="row align-items-center">
+			            <!-- Content Section -->
+			            <div class="col-md-6 text-center text-md-start">
+			                <h1 class="test-heading">
+			                    Our Health Test <br>
+			                    <span class="sub-heading">आपकी सेहत, हमारी प्राथमिकता</span>
+			                </h1>
+			                <p class="test-content">
+			                    विश्वसनीय जांच, सटीक परिणाम <br>
+			                    <span class="small-text">Reliable Testing, Accurate Results</span>
+			                </p>
+			            </div>
 
-						<!-- Image Section -->
-						<div class="col-md-6 col-lg-6 text-center p-4">
-							<img src="../project-assets/images/generic-old-2.png" alt="test-desktop-banner" class="img-fluid rounded"
-								style="box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-						</div>
-					</div>
-				</div>
+			            <!-- Image Section -->
+			            <div class="col-md-6 text-center">
+			                <img src="../project-assets/images/generic-old-2.png" alt="Health Test Banner"
+			                    class="img-fluid test-image">
+			            </div>
+			        </div>
+			    </div>
 			</section>
 
+               <!-- Health Checks Section -->
+				<section class="section-highlight mt-5">
+					<div class="container section-content">
+						<div class="row align-items-center mb-5">
+							<div class="col-md-4">
+								<h2 class="title">Health Checks for Key <span class="text-primary">Organs</span></h2>
+								<p class="section-description">
+									Discover our extensive suite of diagnostic tests designed specifically for vital body organs.
+									These specialized tests provide comprehensive insights for optimal health maintenance.
+								</p>
+							</div>
 
+							<div class="col-md-8">
+								<div class="row g-4">
+									<!-- Organ Cards -->
+									<?php
+									$organs = [
+										['name' => 'Heart', 'icon' => 'heart.png'],
+										['name' => 'Kidney', 'icon' => 'kidney.png'],
+										['name' => 'Liver', 'icon' => 'liver.png'],
+										['name' => 'Bone', 'icon' => 'fracture.png'],
+										['name' => 'Vitamin', 'icon' => 'supplement.png'],
+										['name' => 'Hormones', 'icon' => 'hormones.png'],
+										['name' => 'Gut Health', 'icon' => 'gut-microbiota.png'],
+										['name' => 'Blood', 'icon' => 'blood.png'],
+										['name' => 'Reproductive Health', 'icon' => 'reph.png'],
+									];
 
-			<section class="all_test_container d-none">
-				<div class="container">
-					<div class="row g-4">
-						<?php foreach ($all_test as $index => $test):
-							$testID = base64_encode($test['ID']);
-							$baseprice = intval($test['TestFee']);
-							$off = 0.16 * $baseprice;
-							$totaloff = intval($baseprice + $off);
-							?>
-							<div class="col-md-6 col-lg-3 col-sm-12">
-								<div class="test-card card">
-									<div class="card-body">
-										<div class="upper-col">
-											<div class="row align-items-center">
-												<div class="col-7">
-													<div class="test-name">
-														<p><?php echo $test['TestName'] ?></p>
-													</div>
+									foreach ($organs as $organ): ?>
+										<div class="col-md-4 col-6">
+											<a href="../../admin/authentication/login" class="text-decoration-none">
+												<div class="organ-card text-center">
+													<img src="../project-assets/images/test/<?php echo $organ['icon'] ?>"
+														alt="<?php echo $organ['name'] ?>">
+													<h4 class="title"><?php echo $organ['name'] ?></h4>
 												</div>
-												<div class="col-5">
-													<div class="test-price-info">
-														<p class="mb-0">
-															<span class="text-decoration-line-through text-white-50">₹<?php echo $totaloff ?></span>
-															<span class="text-white fw-bold">₹<?php echo $test['TestFee'] ?></span>
-															<span class="dis-span">16% OFF</span>
-														</p>
-													</div>
-												</div>
-											</div>
+											</a>
 										</div>
-
-										<div class="info-row row align-items-center">
-											<div class="col-6">
-												<div class="d-flex align-items-center">
-													<i class="fas fa-file-alt"></i>
-													<span>Reports within</span>
-												</div>
-											</div>
-											<div class="col-6 text-end">
-												<span class="fw-bold">6 hours</span>
-											</div>
-										</div>
-
-										<div class="info-row row align-items-center">
-											<div class="col-6">
-												<div class="d-flex align-items-center">
-													<i class="fas fa-microscope"></i>
-													<span>Tests included</span>
-												</div>
-											</div>
-											<div class="col-6 text-end">
-												<span class="fw-bold">1 test</span>
-											</div>
-										</div>
-
-										<div class="row g-2 mt-3">
-											<div class="col-6">
-												<a class="detais-btn btn btn-outline-warning" href="./test-details?ID=<?php echo $testID ?>">
-													View Details
-												</a>
-											</div>
-											<div class="col-6">
-												<button class="cart-btn btn btn-primary" data-product-id="<?php echo $test['ID'] ?>"
-													data-product-name="<?php echo $test['TestName'] ?>"
-													data-product-price="<?php echo $test['TestFee'] ?>">
-													Add to cart
-												</button>
-											</div>
-										</div>
-									</div>
+									<?php endforeach; ?>
 								</div>
 							</div>
-						<?php endforeach ?>
+						</div>
 					</div>
-				</div>
-
-				
-			</section>
-
-
+				</section>
 			<?php
 			// Add this at the top of the file where you fetch your data
 			$items_per_page = 30;
@@ -518,9 +103,31 @@ include('include/logic.php');
 			$current_tests = array_slice($all_test, $offset, $items_per_page);
 			?>
 
-			<section class="all_test_container">
-				<div class="container">
-					<div class="row g-4">
+			<section class="all_test_container">          
+					<div class="search-test-section">
+				            <div class="container">
+				            <div class="row d-flex mt-4 ">
+				            <div class="col-md-6">
+				                <div class="card">
+				                  <div class="d-flex justify-content-between align-items-center">
+				                      <span class="font-weight-bold">Search Test</span>
+				                      <div class="d-flex flex-row d-none">
+				                        <button class="btn btn-primary mr-2">CheckUpPlans</button>
+				                        <button class="btn btn-primary new active"></i>Test </button> 
+				                      </div>
+				                  </div>
+				                  <div class="mt-3 inputs">
+				                      <i class="fa fa-search"></i>
+				                     <input type="text" class="form-control" id="searchTest" placeholder="Search Test..." onkeyup="searchTests()">
+				                  </div>
+				                </div>
+				            </div>
+				          </div>    
+				          </div>
+		          </div> 
+
+				<div class="container mt-4">
+					<div class="row g-4" id="testList">
 						<?php foreach ($current_tests as $index => $test):
 							$testID = base64_encode($test['ID']);
 							$baseprice = intval($test['TestFee']);
@@ -647,50 +254,7 @@ include('include/logic.php');
 				</div>
 			</section>
 			
-			<!-- Health Checks Section -->
-				<section class="section-highlight mt-5">
-					<div class="container section-content">
-						<div class="row align-items-center mb-5">
-							<div class="col-md-4">
-								<h2 class="title">Health Checks for Key <span class="text-primary">Organs</span></h2>
-								<p class="section-description">
-									Discover our extensive suite of diagnostic tests designed specifically for vital body organs.
-									These specialized tests provide comprehensive insights for optimal health maintenance.
-								</p>
-							</div>
-
-							<div class="col-md-8">
-								<div class="row g-4">
-									<!-- Organ Cards -->
-									<?php
-									$organs = [
-										['name' => 'Heart', 'icon' => 'heart.png'],
-										['name' => 'Kidney', 'icon' => 'kidney.png'],
-										['name' => 'Liver', 'icon' => 'liver.png'],
-										['name' => 'Bone', 'icon' => 'fracture.png'],
-										['name' => 'Vitamin', 'icon' => 'supplement.png'],
-										['name' => 'Hormones', 'icon' => 'hormones.png'],
-										['name' => 'Gut Health', 'icon' => 'gut-microbiota.png'],
-										['name' => 'Blood', 'icon' => 'blood.png'],
-										['name' => 'Reproductive Health', 'icon' => 'reph.png'],
-									];
-
-									foreach ($organs as $organ): ?>
-										<div class="col-md-4 col-6">
-											<a href="../../admin/authentication/login" class="text-decoration-none">
-												<div class="organ-card text-center">
-													<img src="../project-assets/images/test/<?php echo $organ['icon'] ?>"
-														alt="<?php echo $organ['name'] ?>">
-													<h4 class="title"><?php echo $organ['name'] ?></h4>
-												</div>
-											</a>
-										</div>
-									<?php endforeach; ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+			
 
 
 
@@ -869,4 +433,45 @@ include('include/logic.php');
 	<?php include("../includes/footer1.php") ?>
 	<?php include("../includes/script1.php") ?>
 </body>
+
+<script>
+// 	$(document).ready(function () {
+//     $("#searchTest").on("keyup", function () {
+//         let value = $(this).val().toLowerCase();
+
+//         $(".test-card").each(function () {
+//             let testName = $(this).find(".test-name p").text().toLowerCase();
+
+//             if (testName.includes(value)) {
+//                 $(this).parent().show();  // Show matching test
+//             } else {
+//                 $(this).parent().hide();  // Hide non-matching test
+//             }
+//         });
+//     });
+// });
+
+
+function searchTests() {
+    let query = document.getElementById("searchTest").value.trim();
+
+    // Send AJAX request only if there is a search term
+    if (query.length > 0) {
+        fetch("ajax/search_test.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: "query=" + encodeURIComponent(query),
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("testList").innerHTML = data;
+        });
+    } else {
+        location.reload();
+    }
+}
+
+
+</script>
 <script type="text/javascript" src="../project-assets/js/all_test_new.js" defer></script>
+

@@ -15,346 +15,13 @@ $all_test = $test_obj->GetAllTestName();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <?php include("includes/meta.php") ?>
   <?php include("includes/links1.php") ?>
   <title>United Health Lumina New health plan for new Times</title>
   <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-
-  <style>
-    .see-more-btn {
-      cursor: pointer;
-    }
-
-    .featured-tests {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-tests::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('path/to/subtle-pattern.png') repeat;
-      opacity: 0.1;
-    }
-
-    .test-card-modern {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .test-card-modern:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .ribbon {
-      position: absolute;
-      right: -5px;
-      top: -5px;
-      z-index: 1;
-      overflow: hidden;
-      width: 75px;
-      height: 75px;
-      text-align: right;
-    }
-
-    .ribbon span {
-      font-size: 10px;
-      font-weight: bold;
-      color: #FFF;
-      text-align: center;
-      line-height: 20px;
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      width: 100px;
-      display: block;
-      background: var(--primary-gradient);
-      box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-      position: absolute;
-      top: 19px;
-      right: -21px;
-    }
-
-    .test-card-header {
-      padding: 1.5rem 1.5rem 0.5rem;
-    }
-
-    .icon-wrapper {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background: var(--primary-gradient);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-
-    .icon-wrapper i {
-      color: white;
-      font-size: 1.2rem;
-    }
-
-    .test-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #2d3436;
-      margin: 0;
-      line-height: 1.4;
-    }
-
-    .test-card-body {
-      padding: 0.5rem 1.5rem;
-    }
-
-    .price-tag {
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      background: #f8f9fa;
-      border-radius: 8px;
-    }
-
-    .price-details {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .price-details .original {
-      color: #6c757d;
-      text-decoration: line-through;
-      font-size: 0.9rem;
-    }
-
-    .price-details .current {
-      color: var(--primary-color);
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .save-text {
-      display: block;
-      font-size: 0.8rem;
-      color: #2ecc71;
-      font-weight: 500;
-    }
-
-    .features-list {
-      margin-bottom: 1rem;
-    }
-
-    .feature {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: #636e72;
-    }
-
-    .test-card-footer {
-      padding: 1rem 1.5rem;
-      border-top: 1px solid #f1f1f1;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .btn-link {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    .book-now {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      border-radius: 6px;
-    }
-
-    .see-more-btn {
-      padding: 1rem 2.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      background: var(--primary-gradient);
-      border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .see-more-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .see-more-btn i {
-      transition: transform 0.3s ease;
-    }
-
-    .see-more-btn:hover i {
-      transform: translateX(5px);
-    }
-
-    .divider-center {
-      width: 80px;
-      height: 4px;
-      background: var(--primary-gradient);
-      margin: 1.5rem auto;
-      border-radius: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .col-md-6.col-lg-3 {
-        width: 50%;
-      }
-
-      .test-card-modern {
-        font-size: 0.9rem;
-      }
-
-      .test-title {
-        font-size: 0.9rem;
-      }
-    }
-
-
-    .test-card {
-      transition: transform 0.3s ease;
-      border: none;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .test-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .test-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: rgba(0, 123, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .test-card ul li {
-      margin-bottom: 10px;
-      color: #666;
-    }
-
-    .test-feature {
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-
-    .test-feature:hover {
-      transform: translateY(-5px);
-    }
-
-    .test-feature h5 {
-      font-size: 1rem;
-      margin-top: 10px;
-      color: #333;
-    }
-
-    .test-card-modern .test-card-header.gradient-bg {
-      background: linear-gradient(135deg, #235789, #29A0B1);
-      padding: 1.5rem;
-      border-radius: 8px 8px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .test-card-modern .test-card-header.gradient-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-      pointer-events: none;
-    }
-
-    .test-card-modern .test-card-header.gradient-bg .icon-wrapper {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .test-card-modern .test-card-header.gradient-bg .icon-wrapper i {
-      color: white;
-      font-size: 1.5rem;
-    }
-
-    .test-card-modern .test-card-header.gradient-bg .test-title {
-      color: white;
-      margin: 0;
-      font-size: 1.1rem;
-      font-weight: 500;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    }
-
-    .test-card-modern .test-card-header.gradient-bg:hover .icon-wrapper {
-      transform: scale(1.05);
-    }
-
-    .test-card-modern {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .test-card-modern .test-card-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 1.5rem;
-    }
-
-    .test-card-modern .test-card-footer {
-      padding: 1rem 1.5rem;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      background: rgba(0, 0, 0, 0.02);
-      border-radius: 0 0 8px 8px;
-    }
-
-    /* Optional hover effect */
-    .test-card-modern:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-    }
-  </style>
-
-
+  <link rel="stylesheet" type="text/css" href="./project-assets/css/index.css">
 </head>
-
 <body id="bg">
   <div class="page-wraper" style="background:#fff">
     <div id="loading-area"></div>
@@ -369,11 +36,6 @@ $all_test = $test_obj->GetAllTestName();
       <!-- Main Slider -->
       <div class="dz-industry-zone">
         <div class="position-absolute dz-social-icon">
-          <!-- <ul>
-          <li><a target="_blank" href="https://www.instagram.com">INSTAGRAM</a></li>
-          <li><a target="_blank" href="https://www.facebook.com">FACEBOOK</a></li>
-          <li><a target="_blank" href="https://twitter.com">TWITTER</a></li>
-        </ul> -->
         </div>
         <div class="container ">
           <div class="row">
@@ -405,24 +67,12 @@ $all_test = $test_obj->GetAllTestName();
                     </div>
                     <div class="feature-item">
                       <h4>Zero waiting period</h4>
-                    </div>
-                    <!-- <div class="feature-item"><h4>Largest Network</h4></div> -->
-
-
+                    </div>            
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Mobile Banner -->
-          <!-- <div class="col-12 position-relative d-block d-md-none"> 
-        <div class="dz-media upper-bnr Mobile-Banner">
-            <img src="project-assets/images/banner/Mobile-Banner.png" alt="#" class="img-fluid">
-          
-        </div>
-    </div> -->
-
           <!-- Mobile Banner -->
           <div class="col-12 position-relative d-block d-md-none">
             <div class="dz-media upper-bnr Mobile-Banner">
@@ -749,7 +399,7 @@ $all_test = $test_obj->GetAllTestName();
         <div class="row g-4">
           <?php
           // Limit to first 20 tests
-          $limited_tests = array_slice($all_test, 0, 20);
+          $limited_tests = array_slice($all_test, 0, 8);
           foreach ($limited_tests as $index => $test):
             $testID = base64_encode($test['ID']);
             $baseprice = intval($test['TestFee']);

@@ -53,16 +53,16 @@ if (isset($_SESSION['dwd_UserID'])) {
 
         if ($role === 'Policy Customer') {
             if ($is_policy_exist) {
-                $redirectlink = 'http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/dashboard/policy-customer-main-dashboard';
+                $redirectlink = 'https://unitedhealthlumina.com/uhladmin/uhl-management/dashboard/policy-customer-main-dashboard';
             } else {
                 $redirectlink = '';
             }
         } else {
-            $redirectlink = 'http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/dashboard/main-dashboard';
+            $redirectlink = 'https://unitedhealthlumina.com/uhladmin/uhl-management/dashboard/main-dashboard';
         }
     } else {
 
-        $redirectlink = 'http://localhost/Projects/theuhl-testing/uhladmin/uhl-management/dashboard/main-dashboard';
+        $redirectlink = 'https://unitedhealthlumina.com/uhladmin/uhl-management/dashboard/main-dashboard';
     }
 }
 ?>
@@ -95,7 +95,7 @@ if (isset($_SESSION['dwd_UserID'])) {
 
                                     <?php if ($is_logged_in == true): ?>
 
-                                        <?php if ($role == 'Admin' || $is_policy_exist === true): ?>
+                                        <?php if ($role == 'Admin' || $is_policy_exist === true || $role == 'Sales Man' || $role == 'Channel Partner'): ?>
                                             <li>
                                                 <a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
                                                     to Policy Dashboard</a>
@@ -104,7 +104,7 @@ if (isset($_SESSION['dwd_UserID'])) {
                                     <?php endif; ?>
 
                                     <?php if ($is_logged_in == false) { ?>
-                                        <li><a class="dropdown-item" href="<?php echo $base_url; ?>/login">Login Here</a>
+                                        <li><a class="dropdown-item" href="<?php echo $base_url; ?>/mobile-login">Login Here</a>
                                         </li>
                                     <?php } ?>
                                     <li><a class="dropdown-item" href="<?php echo $base_url; ?>/account">
@@ -137,7 +137,7 @@ if (isset($_SESSION['dwd_UserID'])) {
 
                             <?php if ($is_logged_in == true): ?>
 
-                                <?php if ($role == 'Admin' || $is_policy_exist === true): ?>
+                                <?php if ($role == 'Admin' || $is_policy_exist === true || $role == 'Sales Man' || $role == 'Channel Partner'): ?>
                                     <li>
                                         <a class="dropdown-item" href="<?php echo $redirectlink; ?>" target="_blank">Go
                                             to Policy Dashboard</a>
@@ -147,7 +147,7 @@ if (isset($_SESSION['dwd_UserID'])) {
 
 
                             <?php if ($is_logged_in == false) { ?>
-                                <li><a class="dropdown-item" href="<?php echo $base_url; ?>/login">Login Here</a>
+                                <li><a class="dropdown-item" href="<?php echo $base_url; ?>/mobile-login">Login Here</a>
                                 </li>
                             <?php } ?>
                             <?php if ($is_logged_in == true) { ?>

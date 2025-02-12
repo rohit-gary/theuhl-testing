@@ -21,7 +21,473 @@ $all_test = $test_obj->GetAllTestName();
   <?php include("includes/links1.php") ?>
   <title>United Health Lumina New health plan for new Times</title>
   <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./project-assets/css/index.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./project-assets/css/index.css"> -->
+
+  <style>
+    /* .health-solutions-section {
+      position: relative;
+      padding: 100px 0;
+      background-color: #f8f9fa;
+      overflow: hidden;
+    }
+
+    .section-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h20v20H0z" fill="%23ffffff" fill-opacity="0.4"/%3E%3C/svg%3E');
+      background-size: 20px 20px;
+      opacity: 0.6;
+    } */
+
+
+
+    .custom-carousel-item {
+      height: 100vh;
+      min-height: 500px;
+    }
+
+    .custom-carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .custom-carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    }
+
+    .custom-carousel-caption {
+      bottom: 50%;
+      transform: translateY(50%);
+      padding: 0;
+    }
+
+    .custom-caption-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .custom-hindi-slogan {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: normal;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+
+    .custom-company-name {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .custom-feature-badges {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .custom-feature-badges span {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 1.1rem;
+      backdrop-filter: blur(5px);
+    }
+
+    .custom-feature-badges i {
+      margin-right: 0.5rem;
+      color: #ffd700;
+    }
+
+    .custom-plan-features,
+    .custom-test-features {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 2rem 0;
+    }
+
+    .custom-feature-item {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    .custom-feature-item i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #ffd700;
+      display: block;
+    }
+
+    .custom-cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #2C5282;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .custom-cta-button:hover {
+      background: #4299E1;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .custom-carousel-item {
+        height: 70vh;
+      }
+
+      .custom-hindi-slogan {
+        font-size: 2rem;
+      }
+
+      .custom-company-name {
+        font-size: 1.5rem;
+      }
+
+      .custom-feature-badges {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .custom-plan-features,
+      .custom-test-features {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .custom-feature-item {
+        padding: 0.5rem;
+      }
+
+      .custom-caption-content {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .custom-hindi-slogan {
+        font-size: 1.5rem;
+      }
+
+      .custom-company-name {
+        font-size: 1.2rem;
+      }
+
+      .custom-feature-badges span {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+
+
+
+
+    .section-header {
+      margin-bottom: 60px;
+    }
+
+    .section-header .subtitle {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(0, 123, 255, 0.1);
+      color: #007bff;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .section-header .title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .title-separator {
+      width: 80px;
+      height: 3px;
+      background: #007bff;
+      margin: 20px auto;
+    }
+
+    .section-description {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #6c757d;
+    }
+
+    .solution-card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+
+    .solution-icon {
+      text-align: center;
+      margin-bottom: 25px;
+      padding: 20px;
+    }
+
+    .solution-icon img {
+      height: 70px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .solution-card:hover .solution-icon img {
+      transform: scale(1.1);
+    }
+
+    .solution-content h4 {
+      color: #2d3436;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .solution-content p {
+      color: #636e72;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+    }
+
+    .features-list li {
+      margin-bottom: 10px;
+      color: #2d3436;
+      font-size: 0.9rem;
+    }
+
+    .features-list li i {
+      color: #007bff;
+      margin-right: 10px;
+    }
+
+    .nav-pills {
+      background: white;
+      padding: 8px;
+      border-radius: 50px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      display: inline-flex;
+    }
+
+    .nav-pills .nav-link {
+      color: #2d3436;
+      border-radius: 25px;
+      padding: 12px 30px;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-pills .nav-link.active {
+      background: #007bff;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    }
+
+    .nav-pills .nav-link:not(.active):hover {
+      background: rgba(0, 123, 255, 0.1);
+    }
+
+    .btn-primary {
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .health-solutions-section {
+        padding: 60px 0;
+      }
+
+      .section-header .title {
+        font-size: 2rem;
+      }
+
+      .nav-pills .nav-link {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .price-section {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .current-price {
+      color: #007bff;
+      margin-right: 10px;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #6c757d;
+      font-size: 0.9em;
+    }
+
+    .discount {
+      background: #28a745;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
+
+    .see-more-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border: 2px dashed #007bff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .see-more-card .solution-icon {
+      font-size: 3rem;
+      color: #007bff;
+      margin-bottom: 1rem;
+    }
+
+    .see-more-card:hover {
+      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid #007bff;
+      color: #007bff;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+      background: #007bff;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+
+    .carousel-controls-top {
+      position: absolute;
+      top: -60px;
+      right: 0;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .carousel-controls-top .carousel-control-prev,
+    .carousel-controls-top .carousel-control-next {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border: 2px solid #007bff;
+      border-radius: 50%;
+      opacity: 1;
+      transform: none;
+      top: auto;
+      left: auto;
+      right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-controls-top .carousel-control-prev:hover,
+    .carousel-controls-top .carousel-control-next:hover {
+      background: #007bff;
+    }
+
+    .carousel-controls-top .carousel-control-prev i,
+    .carousel-controls-top .carousel-control-next i {
+      color: #007bff;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-controls-top .carousel-control-prev:hover i,
+    .carousel-controls-top .carousel-control-next:hover i {
+      color: #fff;
+    }
+
+
+    @media (max-width: 768px) {
+      .carousel-controls-top {
+        top: -50px;
+      }
+
+      .carousel-controls-top .carousel-control-prev,
+      .carousel-controls-top .carousel-control-next {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body id="bg">
@@ -29,554 +495,1091 @@ $all_test = $test_obj->GetAllTestName();
     <div id="loading-area"></div>
     <!-- header -->
     <?php include('includes/header1.php'); ?>
-
-    <!-- header END -->
-
-    <!-- header END -->
     <!-- Content -->
-    <div class="page-content bg-white">
-      <!-- Main Slider -->
-      <div class="dz-industry-zone">
-        <div class="position-absolute dz-social-icon">
+    <!-- Carousel Section -->
+    <section class="custom-hero-carousel">
+      <div id="healthCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="2"></button>
         </div>
-        <div class="container ">
-          <div class="row">
-            <!-- Desktop Banner -->
-            <div class="col-12 position-relative d-none d-md-block">
-              <div class="overlaytextbanner dz-media upper-bnr position-relative">
-                <div class="container position-relative">
-                  <!-- Banner Image -->
-                  <img src="project-assets/images/banner/Desktop-Banner.png" alt="Banner Image" class="img-fluid"
-                    style="width: 100%;">
 
-                  <!-- Top left content -->
-                  <div class="top-left position-absolute  ">
-                    <h2 class="tag-line"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
-                    <h3 class="text-uppercase">With United Health Lumina Plans</h3>
-                    <a href="#talktoexpert" class="btnhover13 bg-white text-black">Talk to Expert</a>
-                  </div>
-
-                  <!-- Bottom left content (features) -->
-                  <div class="bottom-left d-flex justify-content-center position-absolute text-white w-100">
-                    <div class="feature-item">
-                      <h4>Free Doctor Consultation</h4>
-                    </div>
-                    <div class="feature-item">
-                      <h4>24*7 Claims Support</h4>
-                    </div>
-                    <div class="feature-item">
-                      <h4> Quick reimbursement</h4>
-                    </div>
-                    <div class="feature-item">
-                      <h4>Zero waiting period</h4>
-                    </div>
-                  </div>
+        <div class="carousel-inner">
+          <!-- Main Banner -->
+          <div class="carousel-item active custom-carousel-item">
+            <div class="custom-carousel-overlay"></div>
+            <img src="project-assets/images/banner/nb-3.png" class="d-block w-100" alt="Health Care Banner">
+            <div class="carousel-caption custom-carousel-caption">
+              <div class="custom-caption-content">
+                <div class="custom-highlight-box">
+                  <h2 class="custom-hindi-slogan"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
+                  <h3 class="custom-company-name">United Health Lumina Plans</h3>
+                </div>
+                <div class="custom-feature-badges">
+                  <span><i class="fas fa-star"></i> Trusted Healthcare</span>
+                  <span><i class="fas fa-shield-alt"></i> Complete Coverage</span>
+                  <span><i class="fas fa-clock"></i> 24/7 Support</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Mobile Banner -->
-          <div class="col-12 position-relative d-block d-md-none">
-            <div class="dz-media upper-bnr Mobile-Banner">
-              <!-- <img src="project-assets/images/banner/Mobile-Banner.png" alt="#" class="img-fluid"> -->
 
-              <div class="overlaytextbanner dz-media upper-bnr position-relative">
-                <div class="container position-relative">
-                  <!-- Banner Image -->
-                  <img src="project-assets/images/banner/mobile-banner-3.jpg" alt="Banner Image" class="img-fluid"
-                    style="width: 100%;">
-
-                  <!-- Top left content -->
-                  <div class="top-left">
-                    <h2 class="tag-line"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
-                    <h3 class="text-uppercase">With United Health Lumina Plans</h3>
-                    <div class="mobile-banner-btn">
-                      <!-- Main Heading -->
-                      <h4 class="text-uppercase white-strip btnhover13" id="talktoexpert-mobile"
-                        onclick="scrollToSection()">Check Our Plans</h4>
-                      <!-- <p class="tagline-mobile ">#सुरक्षित रहो, बेफिक्र जियो</p> -->
-                    </div>
-                  </div>
-
-
-                  <!-- Bottom left content (features) -->
-                  <!-- Bottom left content (features) -->
-                  <div class="bottom-left-mobile d-flex justify-content-center position-absolute text-white w-100">
-                    <div class="feature-item-mobile">
-                      <h4>Free Doctor Consultation</h4>
-                    </div>
-                    <div class="feature-item-mobile">
-                      <h4>24*7 Claims Support</h4>
-                    </div>
-                    <div class="feature-item-mobile">
-                      <h4> Quick reimbursement</h4>
-                    </div>
-                    <div class="feature-item-mobile">
-                      <h4>Zero waiting period</h4>
-                    </div>
-                    <div class="feature-item-mobile">
-                      <h4>Largest Network</h4>
-                    </div>
-
-
-                  </div>
-
+          <!-- Health Plans Slide -->
+          <div class="carousel-item custom-carousel-item">
+            <div class="custom-carousel-overlay"></div>
+            <img src="project-assets/images/banner/nb-3.png" class="d-block w-100" alt="Health Plans">
+            <div class="carousel-caption custom-carousel-caption">
+              <div class="custom-caption-content">
+                <div class="custom-highlight-box">
+                  <h2 class="custom-hindi-slogan"><b>Comprehensive Health Plans</b></h2>
                 </div>
+                <div class="custom-feature-badges">
+                  <span><i class="fas fa-hospital"></i> Cashless Hospitals</span>
+                  <span><i class="fas fa-user-md"></i> Expert Doctors</span>
+                  <span><i class="fas fa-ambulance"></i> Emergency Care</span>
+                </div>
+                <a href="/health-plans" class="custom-cta-button">Explore Plans</a>
               </div>
+            </div>
+          </div>
 
+          <!-- Health Tests Slide -->
+          <div class="carousel-item custom-carousel-item">
+            <div class="custom-carousel-overlay"></div>
+            <img src="project-assets/images/banner/nb-3.png" class="d-block w-100" alt="Health Tests">
+            <div class="carousel-caption custom-carousel-caption">
+              <div class="custom-caption-content">
+                <div class="custom-highlight-box">
+                  <h2 class="custom-hindi-slogan"><b>Advanced Health Tests</b></h2>
+                </div>
+                <div class="custom-feature-badges">
+                  <span><i class="fas fa-home"></i> Home Collection</span>
+                  <span><i class="fas fa-flask"></i> Latest Equipment</span>
+                  <span><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
+                </div>
+                <a href="/health-tests" class="custom-cta-button">Book Test</a>
+              </div>
             </div>
           </div>
         </div>
 
+        <button class="carousel-control-prev" type="button" data-bs-target="#healthCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon custom-nav"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#healthCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon custom-nav"></span>
+        </button>
+      </div>
+    </section>
 
-        <div class="row">
-          <!-- About Us -->
-          <div class="section-full bg-white my-5">
-            <div class="container">
-              <!-- Heading in the middle -->
-              <h2 class="title text-center">Popular <span class="text-primary">Categories</span></h2>
 
-              <div class="row my-4">
-                <!-- Card 1 -->
-                <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ==">
-                    <div class="card text-center h-100">
 
-                      <div class="card-body">
-                        <img src="project-assets/images/icon/hygiene.png" style="height:4em">
-                        <h4 class="title">REGULAR HEALTH GUARD (INDIVIDUAL)</h4>
-                      </div>
 
-                    </div>
-                  </a>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA=">
-                    <div class="card text-center h-100">
-                      <div class="card-body">
-                        <img src="project-assets/images/icon/family-insurance.png" style="height:4em">
-                        <h4 class="title">REGULAR HEALTH GUARD 2.0</h4>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE=">
-                    <div class="card text-center h-100">
-                      <div class="card-body">
-                        <img src="project-assets/images/icon/umbrella.png" style="height:4em">
-                        <h4 class="title">REGULAR HEALTH GUARD 3.0</h4>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- Card 4 -->
-                <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTI=">
-                    <div class="card text-center h-100">
-                      <div class="card-body">
-                        <img src="project-assets/images/icon/patient.png" style="height:4em">
-                        <h4 class="title">CARE ADVANTAGE SHIELD</h4>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- Card 5 -->
-                <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="#">
-                    <div class="card text-center h-100">
-                      <div class="card-body">
-                        <img src="project-assets/images/icon/health-insurance.png" style="height:4em">
-                        <h4 class="title">MED BENEFIT PRO (MED 2.0)</h4>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- Card 6 -->
-                <div class="col-6 col-md-4 col-lg-2 mb-4">
-                  <a href="#">
-                    <div class="card text-center h-100">
-                      <div class="card-body">
-                        <img src="project-assets/images/icon/shield.png" style="height:4em">
-                        <h4 class="title">UHL PRO HEALTH PLUS</h4>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+  </div>
 
+
+
+  <!-- here health plan subscription -->
+
+  <section class="section-full bg-white content-inner" id="talktoexpert">
+    <div class="container">
+      <div class="row mobile-form" style="margin-top:-16em">
+        <div class="col-md-12">
+          <div class="card gradient-bg d-none">
+            <div class="card-header gradient-bg">
+              <h2 class="title">Looking to buy a new life <span class="text-primary">Health plan?</span></h2>
+              <p>Our experts are happy to help you!</p>
+            </div>
+            <div class="card-body">
+              <form id="tte-review-form">
+                <div class="row mb-3">
+                  <div class="col-md-3">
+                    <label for="needformName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="needformName" name="needformName"
+                      placeholder="Enter full name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="needformMobile" class="form-label">Mobile No.</label>
+                    <div class="input-group">
+                      <span class="input-group-text">+91</span>
+                      <input type="tel" class="form-control" id="needformMobile" name="needformMobile"
+                        placeholder="Enter mobile number" maxlength="10" required>
+                      <div class="invalid-feedback">Please enter your mobile number.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="planSelect" class="">Plan</label>
+                    <select class="form-control" id="planSelect" name="planSelect" required>
+                      <option value="" selected disabled>Select plan</option>
+                      <option value="REGULAR HEALTH GUARD (INDIVIDUAL)(Individual)">
+                        REGULAR HEALTH GUARD (INDIVIDUAL)(Individual)</option>
+                      <option value="REGULAR HEALTH GUARD 2.0">REGULAR HEALTH GUARD 2.0</option>
+                      <option value="REGULAR HEALTH GUARD 3.0">REGULAR HEALTH GUARD 3.0</option>
+
+                      <option value="HAPPY SURAKSHA UNLIMITED (INDIVIDUAL)">
+                        HAPPY SURAKSHA UNLIMITED (INDIVIDUAL)</option>
+                      <option value="HAPPY SURAKSHA UNLIMITED (FAMILY FLOATER 3.0)">HAPPY SURAKSHA UNLIMITED (FAMILY
+                        FLOATER 3.0)</option>
+                      <option value="HAPPY SURAKSHA UNLIMITED (MAIGNIT 2.0)">HAPPY SURAKSHA UNLIMITED (MAIGNIT 2.0)
+                      </option>
+
+                      <option value="I don't know/I need help">I don't know/I need help</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a plan.</div>
+                  </div>
+                  <div class="col-md-3">
+                    <br>
+                    <div class="input-group mt-2">
+                      <button type="submit" class="btn site-button appointment-btn btnhover13 btn-rounded"
+                        onclick="Submitenquiry(event)">Get a Call Back</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="form-text">
+                United Health Lumina Plan Ltd will send you updates on your policy, new products & services.
               </div>
             </div>
           </div>
-
-          <!-- About Us End -->
-
         </div>
       </div>
-
     </div>
 
 
 
-    <!-- here health plan subscription -->
+  </section>
 
-    <section class="section-full bg-white content-inner" id="talktoexpert">
-      <div class="container">
-        <div class="row mobile-form" style="margin-top:-16em">
-          <div class="col-md-12">
-            <div class="card gradient-bg d-none">
-              <div class="card-header gradient-bg">
-                <h2 class="title">Looking to buy a new life <span class="text-primary">Health plan?</span></h2>
-                <p>Our experts are happy to help you!</p>
-              </div>
-              <div class="card-body">
-                <form id="tte-review-form">
-                  <div class="row mb-3">
-                    <div class="col-md-3">
-                      <label for="needformName" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="needformName" name="needformName"
-                        placeholder="Enter full name" required>
-                      <div class="invalid-feedback">Please enter your name.</div>
-                    </div>
-                    <div class="col-md-3">
-                      <label for="needformMobile" class="form-label">Mobile No.</label>
-                      <div class="input-group">
-                        <span class="input-group-text">+91</span>
-                        <input type="tel" class="form-control" id="needformMobile" name="needformMobile"
-                          placeholder="Enter mobile number" maxlength="10" required>
-                        <div class="invalid-feedback">Please enter your mobile number.</div>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <label for="planSelect" class="">Plan</label>
-                      <select class="form-control" id="planSelect" name="planSelect" required>
-                        <option value="" selected disabled>Select plan</option>
-                        <option value="REGULAR HEALTH GUARD (INDIVIDUAL)(Individual)">
-                          REGULAR HEALTH GUARD (INDIVIDUAL)(Individual)</option>
-                        <option value="REGULAR HEALTH GUARD 2.0">REGULAR HEALTH GUARD 2.0</option>
-                        <option value="REGULAR HEALTH GUARD 3.0">REGULAR HEALTH GUARD 3.0</option>
+  <section>
 
-                        <option value="HAPPY SURAKSHA UNLIMITED (INDIVIDUAL)">
-                          HAPPY SURAKSHA UNLIMITED (INDIVIDUAL)</option>
-                        <option value="HAPPY SURAKSHA UNLIMITED (FAMILY FLOATER 3.0)">HAPPY SURAKSHA UNLIMITED (FAMILY
-                          FLOATER 3.0)</option>
-                        <option value="HAPPY SURAKSHA UNLIMITED (MAIGNIT 2.0)">HAPPY SURAKSHA UNLIMITED (MAIGNIT 2.0)
-                        </option>
-
-                        <option value="I don't know/I need help">I don't know/I need help</option>
-                      </select>
-                      <div class="invalid-feedback">Please select a plan.</div>
-                    </div>
-                    <div class="col-md-3">
-                      <br>
-                      <div class="input-group mt-2">
-                        <button type="submit" class="btn site-button appointment-btn btnhover13 btn-rounded"
-                          onclick="Submitenquiry(event)">Get a Call Back</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <div class="form-text">
-                  United Health Lumina Plan Ltd will send you updates on your policy, new products & services.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-full bg-white content-inner">
-        <div class="container">
-          <div class="section-head text-center">
-            <h2 class="title">Comprehensive <span class="text-primary">Health Tests</span></h2>
-            <p>Get insights into your health with our wide range of diagnostic tests and health packages</p>
-          </div>
-
-          <div class="row g-4">
-            <!-- Test Category 1 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card h-100 test-card">
-                <div class="card-body">
-                  <div class="test-icon mb-3">
-                    <i class="fas fa-heartbeat fa-2x text-primary"></i>
-                  </div>
-                  <h4 class="card-title">Cardiac Health</h4>
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-check-circle text-success me-2"></i>ECG Test</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Lipid Profile</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Stress Test</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Heart Risk Assessment</li>
-                  </ul>
-                  <!-- <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a> -->
-                </div>
-              </div>
-            </div>
-
-            <!-- Test Category 2 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card h-100 test-card">
-                <div class="card-body">
-                  <div class="test-icon mb-3">
-                    <i class="fas fa-flask fa-2x text-primary"></i>
-                  </div>
-                  <h4 class="card-title">Diabetes Care</h4>
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Blood Sugar Fasting</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>HbA1c Test</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Glucose Tolerance</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Diabetes Screening</li>
-                  </ul>
-                  <!-- <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a> -->
-                </div>
-              </div>
-            </div>
-
-            <!-- Test Category 3 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card h-100 test-card">
-                <div class="card-body">
-                  <div class="test-icon mb-3">
-                    <i class="fas fa-dna fa-2x text-primary"></i>
-                  </div>
-                  <h4 class="card-title">Full Body Checkup</h4>
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Complete Blood Count</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Liver Function Test</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Kidney Function Test</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i>Thyroid Profile</li>
-                  </ul>
-                  <!-- <a href="#talktoexpert" class="btn btn-outline-primary mt-3">Book Now</a> -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Features Row -->
-          <div class="row mt-5">
-            <div class="col-md-3 col-6 text-center">
-              <div class="test-feature">
-                <i class="fas fa-hospital fa-2x mb-3 text-primary"></i>
-                <h5>NABL Accredited Labs</h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-6 text-center">
-              <div class="test-feature">
-                <i class="fas fa-user-md fa-2x mb-3 text-primary"></i>
-                <h5>Expert Technicians</h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-6 text-center">
-              <div class="test-feature">
-                <i class="fas fa-clock fa-2x mb-3 text-primary"></i>
-                <h5>Same Day Reports</h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-6 text-center">
-              <div class="test-feature">
-                <i class="fas fa-home fa-2x mb-3 text-primary"></i>
-                <h5>Home Sample Collection</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-    </section>
-
-    <section class="featured-tests py-5">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="row mb-5 text-center">
-          <div class="col-lg-8 mx-auto">
-            <h2 class="display-6 fw-bold mb-3">Our Medical <span class="text-primary">Test Services</span></h2>
-            <p class="lead text-muted">Comprehensive diagnostic solutions for your well-being</p>
-            <div class="divider-center"></div>
-          </div>
-        </div>
-
-        <!-- Test Cards Container -->
-        <div class="row g-4">
-          <?php
-          // Limit to first 20 tests
-          $limited_tests = array_slice($all_test, 0, 8);
-          foreach ($limited_tests as $index => $test):
-            $testID = base64_encode($test['ID']);
-            $baseprice = intval($test['TestFee']);
-            $off = 0.16 * $baseprice;
-            $totaloff = intval($baseprice + $off);
-            ?>
-            <div class="col-12  col-lg-3">
-              <div class="test-card-modern">
-                <div class="ribbon">
-                  <span>16% OFF</span>
-                </div>
-
-                <div class="test-card-header gradient-bg">
-                  <div class="icon-wrapper">
-                    <i class="fas fa-flask"></i>
-                  </div>
-                  <h3 class="test-title" title="<?php echo $test['TestName'] ?>">
-                    <?php echo strlen($test['TestName']) > 30 ? substr($test['TestName'], 0, 30) . '...' : $test['TestName']; ?>
-                  </h3>
-                </div>
-
-                <div class="test-card-body">
-                  <div class="price-tag">
-                    <div class="price-details">
-                      <span class="original">₹<?php echo $totaloff ?></span>
-                      <span class="current">₹<?php echo $test['TestFee'] ?></span>
-                    </div>
-                    <span class="save-text">Save ₹<?php echo $totaloff - $test['TestFee'] ?></span>
-                  </div>
-
-                  <div class="features-list">
-                    <div class="feature">
-                      <i class="fas fa-clock text-primary"></i>
-                      <span>Results in 6 hours</span>
-                    </div>
-                    <div class="feature">
-                      <i class="fas fa-home text-primary"></i>
-                      <span>Home Collection</span>
-                    </div>
-                    <div class="feature">
-                      <i class="fas fa-certificate text-primary"></i>
-                      <span>NABL Certified</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="test-card-footer">
-                  <a href="./our-test/test-details?ID=<?php echo $testID ?>" class="btn btn-link">
-                    <i class="fas fa-info-circle"></i> Details
-                  </a>
-                  <button class="btn btn-primary book-now cart-btn" data-product-id="<?php echo $test['ID'] ?>"
-                    data-product-id="<?php echo $test['ID'] ?>" data-product-name="<?php echo $test['TestName'] ?>"
-                    data-product-price="<?php echo $test['TestFee'] ?>">
-                    <i class="fas fa-calendar-check"></i> Book Now
+    <div class="health-services-section">
+      <div class="container page-container">
+        <div class="row">
+          <!-- Left Side - Health Plans Carousel -->
+          <div class="col-lg-6 mb-4">
+            <div class="health-category-box bg-soft-blue">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="category-title mb-0"><i class="fas fa-shield-alt"></i> Popular Health Plan Services</h3>
+                <div class="carousel-controls">
+                  <button class="btn btn-sm btn-outline-primary" data-bs-target="#planServicesCarousel"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-primary" data-bs-target="#planServicesCarousel"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
                   </button>
                 </div>
               </div>
+
+              <div id="planServicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- First Slide -->
+                  <div class="carousel-item active">
+                    <div class="row g-3">
+                      <!-- First Row -->
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/indi.png" alt="Renewal">
+                              </div>
+                              <h5>Individual Health Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/family.png" alt="Claims">
+                              </div>
+                              <h5>Family Health Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- Second Row -->
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/sinior.png" alt="Service">
+                              </div>
+                              <h5>Senior Citizen Health Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/unlimited.png" alt="Documents">
+                              </div>
+                              <h5>Unlimited Health Benefit Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                    <div class="row g-3">
+                      <!-- Add more service cards here for the second slide if needed -->
+                      <div class="col-6">
+                        <a href="#" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/family.png" alt="Family Plans">
+                              </div>
+                              <h5>Family Plans</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/unlimited.png" alt="Documents">
+                              </div>
+                              <h5>Unlimited Health Benefit Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/sinior.png" alt="Service">
+                              </div>
+                              <h5>Senior Citizen Health Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <a href="./all-plans" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-blue">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/plan/indi.png" alt="Renewal">
+                              </div>
+                              <h5>Individual Health Plan</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+
+                      <!-- Add more cards as needed -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          <?php endforeach ?>
+          </div>
+
+          <!-- Right Side - Health Tests Carousel -->
+          <div class="col-lg-6 mb-4">
+            <div class="health-category-box bg-soft-green">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="category-title mb-0"><i class="fas fa-heartbeat"></i> Popular Health Tests Services</h3>
+                <div class="carousel-controls">
+                  <button class="btn btn-sm btn-outline-success me-2" data-bs-target="#healthTestsCarousel"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-success" data-bs-target="#healthTestsCarousel"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div id="healthTestsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <!-- First Slide -->
+                  <div class="carousel-item active">
+                    <div class="row g-3">
+                      <!-- First Row -->
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/heart.png" alt="Checkup">
+                              </div>
+                              <h5>Heart Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card_1">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/kidney.png" alt="Lab Tests">
+                              </div>
+                              <h5>Kidney Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- Second Row -->
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/liver.png" alt="Consultation">
+                              </div>
+                              <h5>Liver Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/fracture.png" alt="Packages">
+                              </div>
+                              <h5>Bone Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                    <div class="row g-3">
+                      <!-- Add more health test cards here for the second slide if needed -->
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/supplement.png" alt="Wellness">
+                              </div>
+                              <h5>Vitamin Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/hormones.png" alt="Wellness">
+                              </div>
+                              <h5>Hormones Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/gut-microbiota.png" alt="Wellness">
+                              </div>
+                              <h5>Gut Health Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <a href="./our-test/all-test" class="service-card">
+                          <div class="card h-100 service-item gradient-card-green">
+                            <div class="card-body">
+                              <div class="icon-wrapper">
+                                <img src="./project-assets/images/test/blood.png" alt="Wellness">
+                              </div>
+                              <h5>Blood Checkups</h5>
+
+                              <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+
+
+                      <!-- Add more cards as needed -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- See More Button -->
+    <style>
+      /* Add these styles to your existing CSS */
 
+      .carousel-controls .btn {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-controls .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .hover-arrow {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+    </style>
+  </section>
+
+  <section class="featured-tests py-5 d-none">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="row mb-5 text-center">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="display-6 fw-bold mb-3">Our Medical <span class="text-primary">Test Services</span></h2>
+          <p class="lead text-muted">Comprehensive diagnostic solutions for your well-being</p>
+          <div class="divider-center"></div>
+        </div>
       </div>
 
-    </section>
+      <!-- Test Cards Container -->
+      <div class="row g-4">
+        <?php
+        // Limit to first 20 tests
+        $limited_tests = array_slice($all_test, 0, 8);
+        foreach ($limited_tests as $index => $test):
+          $testID = base64_encode($test['ID']);
+          $baseprice = intval($test['TestFee']);
+          $off = 0.16 * $baseprice;
+          $totaloff = intval($baseprice + $off);
+          ?>
+          <div class="col-12  col-lg-3">
+            <div class="test-card-modern">
+              <div class="ribbon">
+                <span>16% OFF</span>
+              </div>
+
+              <div class="test-card-header gradient-bg">
+                <div class="icon-wrapper">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <h3 class="test-title" title="<?php echo $test['TestName'] ?>">
+                  <?php echo strlen($test['TestName']) > 30 ? substr($test['TestName'], 0, 30) . '...' : $test['TestName']; ?>
+                </h3>
+              </div>
+
+              <div class="test-card-body">
+                <div class="price-tag">
+                  <div class="price-details">
+                    <span class="original">₹<?php echo $totaloff ?></span>
+                    <span class="current">₹<?php echo $test['TestFee'] ?></span>
+                  </div>
+                  <span class="save-text">Save ₹<?php echo $totaloff - $test['TestFee'] ?></span>
+                </div>
+
+                <div class="features-list">
+                  <div class="feature">
+                    <i class="fas fa-clock text-primary"></i>
+                    <span>Results in 6 hours</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-home text-primary"></i>
+                    <span>Home Collection</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-certificate text-primary"></i>
+                    <span>NABL Certified</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="test-card-footer">
+                <a href="./our-test/test-details?ID=<?php echo $testID ?>" class="btn btn-link">
+                  <i class="fas fa-info-circle"></i> Details
+                </a>
+                <button class="btn btn-primary book-now cart-btn" data-product-id="<?php echo $test['ID'] ?>"
+                  data-product-id="<?php echo $test['ID'] ?>" data-product-name="<?php echo $test['TestName'] ?>"
+                  data-product-price="<?php echo $test['TestFee'] ?>">
+                  <i class="fas fa-calendar-check"></i> Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        <?php endforeach ?>
+      </div>
+
+      <!-- See More Button -->
+
+    </div>
+
+  </section>
   </div>
-  <div class="text-center mt-5">
+  <div class="text-center mt-5 d-none">
     <a href="./our-test/all-test" class="see-more-btn">
       See More Tests
       <i class="fas fa-arrow-right ms-2"></i>
     </a>
   </div>
+  <style>
+    .hover-shadow {
+      transition: all 0.3s ease;
+    }
 
-  <section class="section-full  content-inner" style="background-color: aliceblue; margin-top:3.5em;z-index:-1">
-    <div class="container" style="margin-top:-2em">
-      <div class="text-center">
-        <h2 class="title text-center">How to knows Which <span class="text-primary">Health Plan Do you need ?</span>
-        </h2>
+    .hover-shadow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+    }
 
-        <p>Figuring out your health plan coverage can seem detailed, but it becomes easy once you understand it better.
-          Here's what you should think about when calculating how much health plan coverage you need</p>
+    .icon-md {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .icon-lg {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .max-w-800 {
+      max-width: 800px;
+    }
+
+    .rounded-lg {
+      border-radius: 1rem;
+    }
+
+    .transition {
+      transition: all 0.3s ease;
+    }
+
+    .service-card_1 {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .category-title {
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .category-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #e6f3ff;
+    }
+
+    .opacity-90 {
+      opacity: 0.9;
+    }
+
+    .service-card_1,
+    .feature-card {
+      background: rgba(255, 255, 255, 1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+  <section class="section-full content-inner position-relative py-5"
+    style="background: linear-gradient(135deg, #367eb7 0%, #196dad 100%); color: white;">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-head text-center mb-5">
+        <h2 class="title text-white">Understanding Your <span style="color: #e6f3ff">Healthcare Journey</span></h2>
+        <div class="sub-title mt-3">
+          <p class="lead max-w-800 mx-auto text-white opacity-90">We help you navigate through comprehensive health
+            testing and personalized insurance plans to ensure your complete wellness and protection.</p>
+        </div>
       </div>
 
+      <!-- Main Content Cards -->
       <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/your-family.svg" class="card-img-top"
-              alt="Health Plan for your Family’s Financial Security">
-            <div class="card-body">
-              <h3 class="card-title">Assess Your Healthcare Needs</h3>
-              <p class="card-text">Consider your medical history, any chronic conditions, and frequency of doctor
-                visits.If you have dependents, evaluate their healthcare needs as well.</p>
+        <!-- Health Assessment Column -->
+        <div class="col-lg-6">
+          <div class="health-category-wrapper p-4">
+            <h3 class="category-title mb-4 text-white">Health Assessment Services</h3>
+            <div class="row g-4">
+              <!-- Test Card 1 -->
+              <div class="col-12">
+                <div
+                  class="service-card_1 d-flex align-items-center p-3 bg-white rounded-lg shadow-sm hover-shadow transition">
+                  <div class="icon-wrapper me-4">
+                    <img src="project-assets/images/icon/your-family.svg" class="icon-md"
+                      alt="Comprehensive Health Screening">
+                  </div>
+                  <div class="content-wrapper">
+                    <h4 class="h5 mb-2 text-dark">Comprehensive Health Screening</h4>
+                    <p class="mb-0 text-secondary">Regular health checkups and preventive screenings to detect potential
+                      health issues early.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Test Card 2 -->
+              <div class="col-12">
+                <div
+                  class="service-card_1 d-flex align-items-center p-3 bg-white rounded-lg shadow-sm hover-shadow transition">
+                  <div class="icon-wrapper me-4">
+                    <img src="project-assets/images/icon/medical-emergency.svg" class="icon-md"
+                      alt="Specialized Medical Tests">
+                  </div>
+                  <div class="content-wrapper">
+                    <h4 class="h5 mb-2 text-dark">Specialized Medical Tests</h4>
+                    <p class="mb-0 text-secondary">Advanced diagnostic services tailored to your specific health
+                      concerns and family history.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/your-financial.svg" class="card-img-top"
-              alt="Income-Based Health Plan Coverage">
-            <div class="card-body">
-              <h3 class="card-title">Flexibility</h3>
-              <p class="card-text">Choose between plans like HMOs, PPOs, or high-deductible options based on how much
-                flexibility you want in choosing providers.</p>
+
+        <!-- Insurance Plans Column -->
+        <div class="col-lg-6">
+          <div class="health-category-wrapper p-4">
+            <h3 class="category-title mb-4 text-white">Health Plan Coverage Options</h3>
+            <div class="row g-4">
+              <!-- Plan Card 1 -->
+              <div class="col-12">
+                <div
+                  class="service-card_1 d-flex align-items-center p-3 bg-white rounded-lg shadow-sm hover-shadow transition">
+                  <div class="icon-wrapper me-4">
+                    <img src="project-assets/images/icon/your-financial.svg" class="icon-md"
+                      alt="Flexible Coverage Plans">
+                  </div>
+                  <div class="content-wrapper">
+                    <h4 class="h5 mb-2 text-dark">Flexible Coverage Plans</h4>
+                    <p class="mb-0 text-secondary">Customizable insurance options including HMOs, PPOs, and
+                      high-deductible plans to match needs.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Plan Card 2 -->
+              <div class="col-12">
+                <div
+                  class="service-card_1 d-flex align-items-center p-3 bg-white rounded-lg shadow-sm hover-shadow transition">
+                  <div class="icon-wrapper me-4">
+                    <img src="project-assets/images/icon/income-replace.svg" class="icon-md"
+                      alt="Comprehensive Benefits">
+                  </div>
+                  <div class="content-wrapper">
+                    <h4 class="h5 mb-2 text-dark">Comprehensive Benefits</h4>
+                    <p class="mb-0 text-secondary">Extended coverage including prescription medicines, specialist
+                      consultations,preventive care.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
-
-      <div class="row g-4 mt-4">
-        <!-- Card 3 -->
-
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/income-replace.svg" class="card-img-top"
-              alt="Income Replacement Insurance">
-            <div class="card-body">
-              <h3 class="card-title">Check Network Coverage</h3>
-              <p class="card-text">Ensure your preferred doctors, hospitals, and specialists are in the plan’s network
-                to avoid higher costs.</p>
-            </div>
+      <!-- Bottom Feature Cards -->
+      <div class="row g-4 mt-5">
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 bg-white rounded-lg shadow-sm hover-shadow transition">
+            <img src="project-assets/images/icon/change-life.svg" class="icon-lg mb-3" alt="24/7 Support">
+            <h4 class="h5 text-dark">24/7 Support</h4>
+            <p class="mb-0 text-secondary">Round-the-clock assistance for all your healthcare needs and inquiries.</p>
           </div>
         </div>
-
-
-
-        <!-- Card 4 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/loans-debets.svg" class="card-img-top" alt="Loans and Debts Insurance">
-            <div class="card-body">
-              <h3 class="card-title">Customer Service and Support</h3>
-              <p class="card-text">We provide a great customer service & support. We value you and your health. You have
-                a query, feel free to call us, it will be our pleasure to help you out.</p>
-            </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 bg-white rounded-lg shadow-sm hover-shadow transition">
+            <img src="project-assets/images/icon/loans-debets.svg" class="icon-lg mb-3" alt="Network Coverage">
+            <h4 class="h5 text-dark">Extensive Network</h4>
+            <p class="mb-0 text-secondary">Access to a wide network of healthcare providers and testing facilities.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card text-center p-4 bg-white rounded-lg shadow-sm hover-shadow transition">
+            <img src="project-assets/images/icon/your-financial.svg" class="icon-lg mb-3" alt="Smart Claims">
+            <h4 class="h5 text-dark">Smart Claims Process</h4>
+            <p class="mb-0 text-secondary">Quick and hassle-free digital claims processing for your convenience.</p>
           </div>
         </div>
       </div>
-      <div class="row g-4 mt-4">
-        <!-- Card 5 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/medical-emergency.svg" class="card-img-top"
-              alt="Medical Emergencies Insurance">
-            <div class="card-body">
-              <h3 class="card-title">Future Considerations</h3>
-              <p class="card-text">Think about any changes in your health needs that may arise in the coming years and
-                whether the plan can accommodate them.</p>
-            </div>
+    </div>
+  </section>
+  <section class="mt-5">
+    <div class="row">
+      <!-- Health Solutions Section -->
+      <div class="health-solutions-section">
+        <div class="section-background"></div>
+        <div class="container position-relative">
+          <!-- Section Header -->
+          <div class="section-header text-center mb-5">
+            <span class="subtitle">Comprehensive Healthcare</span>
+            <h2 class="title">Our Health <span class="text-primary">Solutions</span></h2>
+            <div class="title-separator"></div>
+            <p class="section-description">Discover our range of healthcare plans and diagnostic services designed for
+              your wellbeing</p>
           </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/change-life.svg" class="card-img-top"
-              alt="Changes in Life Stage Insurance">
-            <div class="card-body text-start">
-              <h3 class="card-title">Prescription Medicine Coverage</h3>
-              <p class="card-text">If you take regular medications, review the plan’s formulary (list of covered drugs)
-                and the cost-sharing structure for prescriptions</p>
-            </div>
-          </div>
-        </div>
 
+          <!-- Tab Navigation -->
+          <ul class="nav nav-pills justify-content-center mb-5" id="healthSolutionsTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="plans-tab" data-bs-toggle="pill" data-bs-target="#plans"
+                type="button">
+                <i class="fas fa-shield-alt me-2"></i>Health Plans
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tests-tab" data-bs-toggle="pill" data-bs-target="#tests" type="button">
+                <i class="fas fa-flask me-2"></i>Health Tests
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab Content -->
+          <div class="tab-content" id="healthSolutionsContent">
+            <div class="tab-pane fade show active" id="plans" role="tabpanel">
+              <!-- Plans Carousel -->
+              <div id="plansCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carousel Controls at Top -->
+                <div class="carousel-controls-top">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#plansCarousel"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#plansCarousel"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+
+                <div class="carousel-inner">
+                  <!-- First Slide -->
+                  <div class="carousel-item active">
+                    <div class="row g-4">
+                      <!-- Plan Card 1 -->
+                      <div class="col-md-4 col-sm-12">
+                        <div class="solution-card">
+                          <div class="card-badge">Popular</div>
+                          <div class="test-card-header"
+                            style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                            <div class="solution-icon">
+                              <img src="project-assets/images/icon/hygiene.png" alt="Regular Health Guard">
+                            </div>
+                            <h4 style="color: #fff;">Regular Health Guard (Individual)</h4>
+                          </div>
+                          <div class="solution-content">
+                            <p>Comprehensive individual health coverage for your peace of mind.</p>
+
+                            <ul class="features-list">
+                              <li><i class="fas fa-check-circle"></i> 24/7 Medical Support</li>
+                              <li><i class="fas fa-check-circle"></i> Cashless Treatment</li>
+                              <li><i class="fas fa-check-circle"></i> Wide Hospital Network</li>
+                            </ul>
+                            <a href="https://unitedhealthlumina.com/view-plan-details.php?id=OQ=="
+                              class="btn btn-primary">
+                              View Details <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Plan Card 2 -->
+                      <div class="col-md-4">
+                        <div class="solution-card">
+                          <div class="card-badge">Family</div>
+                          <div class="test-card-header"
+                            style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                            <div class="solution-icon">
+                              <img src="project-assets/images/icon/family-insurance.png" alt="Family Health">
+                            </div>
+                            <h4 style="color: #fff;">REGULAR HEALTH GUARD 2.0</h4>
+                          </div>
+                          <div class="solution-content">
+                            <p>Enhanced protection for you and your loved ones.</p>
+
+                            <ul class="features-list">
+                              <li><i class="fas fa-check-circle"></i> Family Coverage</li>
+                              <li><i class="fas fa-check-circle"></i> Enhanced Benefits</li>
+                            </ul>
+                            <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTA="
+                              class="btn btn-primary">
+                              View Details <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Plan Card 3 -->
+                      <div class="col-md-4">
+                        <div class="solution-card">
+                          <div class="test-card-header"
+                            style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                            <div class="solution-icon">
+                              <img src="project-assets/images/icon/umbrella.png" alt="Health Guard">
+                            </div>
+                            <h4 style="color: #fff;">REGULAR HEALTH GUARD 3.0</h4>
+                          </div>
+                          <div class="solution-content">
+
+                            <p>Advanced health protection with comprehensive coverage.</p>
+                            <ul class="features-list">
+                              <li><i class="fas fa-check-circle"></i> Premium Coverage</li>
+                              <li><i class="fas fa-check-circle"></i> Advanced Features</li>
+                            </ul>
+                            <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTE="
+                              class="btn btn-primary">
+                              View Details <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Second Slide -->
+                  <div class="carousel-item">
+                    <div class="row g-4">
+                      <!-- Plan Card 4 -->
+                      <div class="col-md-4">
+                        <div class="solution-card">
+                          <div class="test-card-header"
+                            style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                            <div class="solution-icon">
+                              <img src="project-assets/images/icon/patient.png" alt="Care Shield">
+                            </div>
+                            <h4 style="color: #fff;">CARE ADVANTAGE SHIELD</h4>
+                          </div>
+                          <div class="solution-content">
+                            <p>Superior healthcare protection with added advantages.</p>
+                            <ul class="features-list">
+
+                              <li><i class="fas fa-check-circle"></i> Premium Benefits</li>
+                              <li><i class="fas fa-check-circle"></i> Specialized Care</li>
+                            </ul>
+                            <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTI="
+                              class="btn btn-primary">
+                              View Details <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Plan Card 5 -->
+                      <div class="col-md-4">
+                        <div class="solution-card">
+                          <div class="card-badge">Pro</div>
+                          <div class="test-card-header"
+                            style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                            <div class="solution-icon">
+                              <img src="project-assets/images/icon/health-insurance.png" alt="Med Benefit">
+                            </div>
+                            <h4 style="color: #fff;">MED BENEFIT PRO (MED 2.0)</h4>
+                          </div>
+                          <div class="solution-content">
+
+                            <p>Professional medical benefits package with enhanced coverage.</p>
+                            <ul class="features-list">
+                              <li><i class="fas fa-check-circle"></i> Professional Coverage</li>
+                              <li><i class="fas fa-check-circle"></i> Enhanced Medical Benefits</li>
+                            </ul>
+                            <a href="./our-test/all-test" class="btn btn-primary">
+                              View Details <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Plan Card 6 -->
+                      <div class="col-md-4">
+                        <div class="solution-card">
+                          <div class="card-badge">Premium</div>
+                          <div class="test-card-header"
+                            style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                            <div class="solution-icon">
+                              <img src="project-assets/images/icon/shield.png" alt="Pro Health">
+                            </div>
+                            <h4 style="color: #fff;">UHL PRO HEALTH PLUS</h4>
+                          </div>
+                          <div class="solution-content">
+
+                            <p>Premium health protection with comprehensive benefits.</p>
+                            <ul class="features-list">
+                              <li><i class="fas fa-check-circle"></i> Premium Protection</li>
+                              <li><i class="fas fa-check-circle"></i> Exclusive Benefits</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">
+                              View Details <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Health Tests Tab -->
+            <div class="tab-pane fade" id="tests" role="tabpanel">
+              <!-- Tests Carousel -->
+              <div id="testsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <?php
+                  $limited_tests = array_slice($all_test, 0, 5); // Showing 6 tests (2 slides of 3 tests each)
+                  $chunks = array_chunk($limited_tests, 3); // Split into groups of 3 for carousel
+                  
+                  foreach ($chunks as $index => $chunk):
+                    ?>
+                    <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                      <div class="row g-4">
+                        <?php foreach ($chunk as $test):
+                          $testID = base64_encode($test['ID']);
+                          $baseprice = intval($test['TestFee']);
+                          $off = 0.16 * $baseprice;
+                          $totaloff = intval($baseprice + $off);
+                          ?>
+                          <div class="col-md-4">
+                            <div class="solution-card">
+                              <?php if ($index === 0 && $test === reset($chunk)): ?>
+                                <div class="card-badge">Popular</div>
+                              <?php endif; ?>
+                              <div class="test-card-header gradient-bg-2"
+                                style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
+                                <!-- <div class="solution-icon">
+                                    <img src="project-assets/images/icon/laboratory.png"
+                                      alt="<?php echo htmlspecialchars($test['TestName']); ?>">
+                                  </div> -->
+                                <h4 style="color: #fff;"><?php echo htmlspecialchars($test['TestName']); ?></h4>
+                              </div>
+                              <div class="solution-content">
+                                <p>
+
+                                  <?php echo htmlspecialchars($test['TestDescription'] ?? 'Comprehensive health screening'); ?>
+                                </p>
+                                <div class="price-section mb-3">
+                                  <span class="current-price">₹<?php echo number_format($baseprice); ?></span>
+                                  <span class="original-price">₹<?php echo number_format($totaloff); ?></span>
+                                  <span class="discount">16% OFF</span>
+                                </div>
+                                <ul class="features-list">
+                                  <li><i class="fas fa-check-circle"></i> Home Sample Collection</li>
+                                  <li><i class="fas fa-check-circle"></i> 24-Hour Report</li>
+                                </ul>
+                                <a href="./our-test/test-details.php?ID=<?php echo $testID; ?>" class="btn btn-primary">
+                                  Book Now <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        <?php endforeach; ?>
+
+                        <?php if ($index === count($chunks) - 1): // Add "See More" card in the last slide ?>
+                          <div class="col-md-4">
+                            <div class="solution-card see-more-card">
+                              <div class="solution-icon">
+                                <i class="fas fa-plus-circle"></i>
+                              </div>
+                              <div class="solution-content">
+                                <h4>See More Tests</h4>
+                                <p>Discover our complete range of diagnostic tests and health packages.</p>
+                                <a href="./our-test/all-test.php" class="btn btn-outline-primary mt-4">
+                                  View All Tests <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        <?php endif; ?>
+                      </div>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls-top">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#testsCarousel"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#testsCarousel"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
 
-
-  <section class="section-full bg-white  ">
+  <section class="section-full bg-white  d-none">
     <div class="container" style="margin-top: 4rem;">
       <div class="">
         <h2 class="title text-center">Medical Subscription Health Plans for <span class="text-primary">every stage of
@@ -895,7 +1898,7 @@ $all_test = $test_obj->GetAllTestName();
 
 
 
-  <section class="section-full  content-inner my-5" style="background-color: aliceblue;">
+  <section class="section-full content-inner my-5 d-none" style="background-color: aliceblue; ">
     <div class="container">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: -1.5em;">
         <div class="carousel-indicators">
@@ -932,218 +1935,643 @@ $all_test = $test_obj->GetAllTestName();
   </section>
 
 
-  <section class="section-full bg-white content-inner">
-    <div class="newbie-sec happy-mem-sect">
+  <section class="section-full bg-gradient-light content-inner">
+    <div class="health-services-section">
       <div class="container page-container">
         <div class="section-top-title">
-          <h2 class="title text-center">Happy <span class="text-primary">Members</span></h2>
+          <h2 class="title text-center">Your Complete <span class="text-primary">Healthcare Journey</span></h2>
+          <p class="text-center subtitle">Comprehensive health plans and preventive care solutions for your wellbeing
+          </p>
         </div>
-        <div class="row mt-4">
-          <!-- Image Section -->
-          <div class="col-md-4 d-flex justify-content-center align-items-center mb-4 mb-md-0">
-            <div class="newbie-lhs ani-rhs">
-              <img class="img-fluid" src="project-assets/images/happy-member_compressed.png"
-                alt="Happy Customer Image | UHL Health" title="Happy Customer Image">
+
+        <div class="row mt-5">
+          <!-- Left Side - Health Plans -->
+          <div class="col-lg-6 mb-4">
+            <div class="health-category-box bg-soft-blue">
+              <h3 class="category-title"><i class="fas fa-shield-alt"></i> Health Plan Services</h3>
+              <div class="row g-3">
+                <!-- Plan Service Cards -->
+                <div class="col-6">
+                  <a href="uhladmin/admin/authentication/login" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-blue">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/pay-premium.png" alt="Renewal">
+                        </div>
+                        <h5>Renewal & Payments</h5>
+                        <p class="small">Manage your subscription plans easily</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-6">
+                  <a href="uhladmin/admin/authentication/login" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-blue">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/register-claim.png" alt="Claims">
+                        </div>
+                        <h5>Claims & Reimbursements</h5>
+                        <p class="small">Quick and easy claim processing</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-6">
+                  <a href="./contact-us" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-blue">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/raise-service-request.png" alt="Service">
+                        </div>
+                        <h5>Support Services</h5>
+                        <p class="small">24/7 assistance for your needs</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-6">
+                  <a href="uhladmin/admin/authentication/login" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-blue">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/download-Statement.png" alt="Documents">
+                        </div>
+                        <h5>Policy Documents</h5>
+                        <p class="small">Access all your documents instantly</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Cards Section -->
-          <div class="col-md-8">
-            <div class="row">
-              <!-- Card 1 -->
-              <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="uhladmin/admin/authentication/login">
-                  <div class="card text-center h-100">
-                    <div class="card-body">
-                      <img src="project-assets/images/icon/pay-premium.png" style="height:4em">
-                      <h4 class="title">Renewal Subscription Plan </h4>
+          <!-- Right Side - Health Tests -->
+          <div class="col-lg-6 mb-4">
+            <div class="health-category-box bg-soft-green">
+              <h3 class="category-title"><i class="fas fa-heartbeat"></i> Preventive Healthcare</h3>
+              <div class="row g-3">
+                <!-- Health Test Cards -->
+                <div class="col-6">
+                  <a href="#" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-green">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/health-checkup.png" alt="Checkup">
+                        </div>
+                        <h5>Health Checkups</h5>
+                        <p class="small">Comprehensive health screening</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
 
-              <!-- Card 2 -->
-              <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="uhladmin/admin/authentication/login">
-                  <div class="card text-center h-100">
-                    <div class="card-body">
-                      <img src="project-assets/images/icon/download-Statement.png" style="height:4em">
-                      <h4 class="title">Download Documents</h4>
+                <div class="col-6">
+                  <a href="#" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-green">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/lab-test.png" alt="Lab Tests">
+                        </div>
+                        <h5>Lab Tests</h5>
+                        <p class="small">Wide range of diagnostic tests</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
 
-              <!-- Card 3 -->
-              <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="uhladmin/admin/authentication/login">
-                  <div class="card text-center h-100">
-                    <div class="card-body">
-                      <img src="project-assets/images/icon/register-claim.png" style="height:4em">
-                      <h4 class="title">Register Reimbursement</h4>
+                <div class="col-6">
+                  <a href="#" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-green">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/doctor-consultation.png" alt="Consultation">
+                        </div>
+                        <h5>Doctor Consultation</h5>
+                        <p class="small">Expert medical <br> advice</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
 
-              <!-- Card 4 -->
-              <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="./contact-us">
-                  <div class="card text-center h-100">
-                    <div class="card-body">
-                      <img src="project-assets/images/icon/raise-service-request.png" style="height:4em">
-                      <h4 class="title">Raise Service Request</h4>
+                <div class="col-6">
+                  <a href="#" class="service-card_1">
+                    <div class="card h-100 service-item gradient-card-green">
+                      <div class="card-body">
+                        <div class="icon-wrapper">
+                          <img src="project-assets/images/icon/health-packages.png" alt="Packages">
+                        </div>
+                        <h5>Health Packages</h5>
+                        <p class="small">Customized wellness programs</p>
+                        <div class="hover-arrow"><i class="fas fa-arrow-right"></i></div>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
-
-              <!-- Card 5 -->
-              <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="uhladmin/admin/authentication/login">
-                  <div class="card text-center h-100">
-                    <div class="card-body">
-                      <img src="project-assets/images/icon/other-services.png" style="height:4em">
-                      <h4 class="title">Other Services</h4>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Card 6 -->
-              <div class="col-6 col-md-4 col-sm-6 mt-2">
-                <a href="uhladmin/admin/authentication/login">
-                  <div class="card text-center h-100">
-                    <div class="card-body">
-                      <img src="project-assets/images/icon/whatsapp-payment.png" style="height:4em">
-                      <h4 class="title">Pay Premium using WhatsApp</h4>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- Login Button -->
-            <div class="col-12 mt-5 text-center">
-              <a class="btn site-button appointment-btn btnhover13 btn-rounded" href="./uhladmin">My Health Plan
-                Login</a>
             </div>
           </div>
         </div>
+
+        <!-- Action Buttons -->
+
       </div>
     </div>
-
-
   </section>
 
+  <style>
+    .bg-gradient-light {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
 
-  <section class="section-full content-inner" style="background-color: aliceblue;">
-    <div class="container" style="margin-top: -1.5em">
+    .health-services-section {
+      padding: 60px 0;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+
+    .health-category-box {
+      border-radius: 20px;
+      padding: 30px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bg-soft-blue {
+      background: linear-gradient(135deg, #e8f0fe 0%, #f8f9fa 100%);
+      border: 1px solid rgba(0, 123, 255, 0.1);
+    }
+
+    .bg-soft-green {
+      background: linear-gradient(135deg, #e8f8f5 0%, #f8f9fa 100%);
+      border: 1px solid rgba(40, 167, 69, 0.1);
+    }
+
+    .category-title {
+      color: #2c3e50;
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .category-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #007bff;
+      border-radius: 3px;
+    }
+
+    .service-card_1 {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .service-item {
+      border: none;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gradient-card-blue {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+      border: 1px solid rgba(0, 123, 255, 0.1);
+    }
+
+    .gradient-card-green {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fff7 100%);
+      border: 1px solid rgba(40, 167, 69, 0.1);
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item:hover .hover-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .icon-wrapper {
+      margin-bottom: 15px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .icon-wrapper img {
+      height: 40px;
+      width: auto;
+      transition: all 0.3s ease;
+    }
+
+    .service-item:hover .icon-wrapper img {
+      transform: scale(1.1);
+    }
+
+    .service-item h5 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .service-item p {
+      color: #666;
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    .hover-arrow {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.3s ease;
+      color: #007bff;
+    }
+
+    .gradient-card-green .hover-arrow {
+      color: #28a745;
+    }
+
+    .btn.site-button {
+      padding: 12px 30px;
+      font-weight: 500;
+      background: #007bff;
+      color: white;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    }
+
+    .btn.site-button-secondary {
+      padding: 12px 30px;
+      font-weight: 500;
+      background: #28a745;
+      color: white;
+      border: none;
+      box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .fas {
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .health-category-box {
+        padding: 20px;
+      }
+
+      .service-item h5 {
+        font-size: 1rem;
+      }
+
+      .service-item p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .icon-wrapper {
+      margin-bottom: 20px;
+      height: 80px;
+      /* Increased from 60px */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 15px;
+      /* Increased from 12px */
+      width: 80px;
+      /* Added fixed width */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .icon-wrapper img {
+      height: 55px;
+      /* Increased from 40px */
+      width: auto;
+      transition: all 0.3s ease;
+      object-fit: contain;
+    }
+
+    .service-item {
+      border: none;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      padding: 15px 10px;
+      /* Added padding */
+    }
+
+    .service-item .card-body {
+      padding: 1.5rem 1rem;
+      /* Adjusted padding */
+    }
+
+    .service-item h5 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-weight: 600;
+      min-height: 40px;
+      /* Added to maintain consistent height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .icon-wrapper {
+        height: 70px;
+        width: 70px;
+      }
+
+      .icon-wrapper img {
+        height: 45px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .icon-wrapper {
+        height: 60px;
+        width: 60px;
+      }
+
+      .icon-wrapper img {
+        height: 40px;
+      }
+    }
+  </style>
+
+  <section class="section-full content-inner benefits-section"
+    style="background: linear-gradient(135deg, #367eb7 0%, #196dad 100%); color: white;">
+    <div class="container">
       <div class="text-center mb-5">
-        <h2 class="title text-center">Benefits of <span class="text-primary">UHL Health Plan</span></h2>
-
-        <p>Here are the important reasons why you must have Health Plan</p>
+        <span class="subtitle text-primary">Why Choose Us</span>
+        <h2 class="title" style="color: white;">Benefits of <span class="">Our Health Services</span></h2>
+        <p class="section-description" style="color: white;">Comprehensive healthcare solutions designed for your peace
+          of mind</p>
       </div>
 
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/wealth-plans.svg" class="card-img-top"
-              alt="Health Plan for your Family’s Financial Security">
-            <div class="card-body">
-              <h3 class="card-title">Medical Protection</h3>
-              <p class="card-text"> United Health Lumina health plans offer free or low-cost preventative care (e.g.,
-                annual check-ups, vaccinations, screenings) to catch potential health issues early, reducing the need
-                for more expensive treatments later.</p>
+      <div class="benefits-grid">
+        <!-- Benefit Card 1 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <div class="icon-wrapper">
+              <img src="project-assets/images/icon/wealth-plans.svg" alt="Medical Protection">
             </div>
           </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/performance.svg" class="card-img-top"
-              alt="Income-Based Health Plan Coverage">
-            <div class="card-body">
-              <h3 class="card-title">Prescription Medicine Coverage</h3>
-              <p class="card-text">United Health Lumina Health plans often include coverage for prescription
-                medications, helping to manage the costs of both generic and brand-name drugs. Most of our plans provide
-                a list of approved pharmacies where individuals can fill prescriptions at lower prices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="row g-4 mt-4">
-        <!-- Card 3 -->
-
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/assured-return.svg" class="card-img-top"
-              alt="Income Replacement Insurance">
-            <div class="card-body">
-              <h3 class="card-title">Mental Health and Wellness Benefits</h3>
-              <p class="card-text">Our health plans include coverage for mental health services, such as therapy,
-                counseling, and psychiatric care, which can be critical for overall well-being.
-                Some Health plans offer programs or incentives to encourage healthy behaviors, such as fitness
-                discounts, smoking cessation programs, and weight management resources.
-              </p>
-            </div>
+          <div class="benefit-content">
+            <h3>Medical Protection</h3>
+            <p>Free or low-cost preventative care including annual check-ups, vaccinations, and early screening programs
+            </p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check-circle"></i> Annual health check-ups</li>
+              <li><i class="fas fa-check-circle"></i> Preventive screenings</li>
+              <li><i class="fas fa-check-circle"></i> Vaccination coverage</li>
+            </ul>
           </div>
         </div>
 
-
-
-        <!-- Card 4 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/tax-benefits.svg" class="card-img-top" alt="Loans and Debts Insurance">
-            <div class="card-body">
-              <h3 class="card-title">Prescription & Lab Test Coverage</h3>
-              <p class="card-text">These plans often include coverage for consultations, reducing out-of-pocket
-                lab test expenses</p>
+        <!-- Benefit Card 2 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <div class="icon-wrapper">
+              <img src="project-assets/images/icon/performance.svg" alt="Prescription Coverage">
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row g-4 mt-4">
-        <!-- Card 5 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/low-premium.svg" class="card-img-top"
-              alt="Medical Emergencies Insurance">
-            <div class="card-body">
-              <h3 class="card-title">Telemedicine and Virtual Care</h3>
-              <p class="card-text">Our health plans now cover telemedicine visits, allowing individuals to consult with
-                doctors remotely, saving time and reducing exposure to illnesses in waiting rooms. Virtual visits are
-                often less expensive than in-person visits, providing a more affordable alternative for non-emergency
-                situations</p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card h-100 d-flex flex-row align-items-center">
-            <img src="project-assets/images/icon/low-premium.svg" class="card-img-top"
-              alt="Changes in Life Stage Insurance">
-            <div class="card-body text-start">
-              <h3 class="card-title">Peace of Mind</h3>
-              <p class="card-text">Knowing that unexpected medical expenses are covered can relieve stress and provide
-                peace of mind. Plans allows individuals to focus on their health and well-being without worrying about
-                financial strain.
-              </p>
-            </div>
+          <div class="benefit-content">
+            <h3>Prescription Benefits</h3>
+            <p>Comprehensive coverage for both generic and brand-name medications at approved pharmacies</p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check-circle"></i> Generic drug coverage</li>
+              <li><i class="fas fa-check-circle"></i> Brand-name options</li>
+              <li><i class="fas fa-check-circle"></i> Network pharmacies</li>
+            </ul>
           </div>
         </div>
 
+        <!-- Benefit Card 3 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <div class="icon-wrapper">
+              <img src="project-assets/images/icon/assured-return.svg" alt="Mental Health">
+            </div>
+          </div>
+          <div class="benefit-content">
+            <h3>Mental Wellness</h3>
+            <p>Comprehensive mental health support including therapy, counseling, and psychiatric care</p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check-circle"></i> Therapy sessions</li>
+              <li><i class="fas fa-check-circle"></i> Counseling services</li>
+              <li><i class="fas fa-check-circle"></i> Wellness programs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Benefit Card 4 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <div class="icon-wrapper">
+              <img src="project-assets/images/icon/tax-benefits.svg" alt="Lab Coverage">
+            </div>
+          </div>
+          <div class="benefit-content">
+            <h3>Diagnostic Care</h3>
+            <p>Extensive coverage for laboratory tests and diagnostic procedures</p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check-circle"></i> Lab test coverage</li>
+              <li><i class="fas fa-check-circle"></i> Diagnostic imaging</li>
+              <li><i class="fas fa-check-circle"></i> Preventive screenings</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Benefit Card 5 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <div class="icon-wrapper">
+              <img src="project-assets/images/icon/low-premium.svg" alt="Telemedicine">
+            </div>
+          </div>
+          <div class="benefit-content">
+            <h3>Virtual Care</h3>
+            <p>24/7 access to healthcare professionals through telemedicine services</p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check-circle"></i> Video consultations</li>
+              <li><i class="fas fa-check-circle"></i> Remote monitoring</li>
+              <li><i class="fas fa-check-circle"></i> Digital prescriptions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Benefit Card 6 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <div class="icon-wrapper">
+              <img src="project-assets/images/icon/low-premium.svg" alt="Peace of Mind">
+            </div>
+          </div>
+          <div class="benefit-content">
+            <h3>Peace of Mind</h3>
+            <p>Comprehensive coverage that lets you focus on health, not expenses</p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check-circle"></i> Financial security</li>
+              <li><i class="fas fa-check-circle"></i> Family protection</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 support</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
+    <style>
+      .benefits-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 80px 0;
+      }
 
+      .subtitle {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
 
+      .section-description {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #6c757d;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .benefit-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .benefit-icon {
+        margin-bottom: 1.5rem;
+      }
+
+      .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: rgba(13, 110, 253, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      .icon-wrapper img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+      }
+
+      .benefit-content h3 {
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .benefit-content p {
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .benefit-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .benefit-features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: #495057;
+      }
+
+      .benefit-features i {
+        color: #28a745;
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .benefits-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .benefit-card {
+          padding: 1.5rem;
+        }
+      }
+    </style>
   </section>
 
 
@@ -1156,7 +2584,7 @@ $all_test = $test_obj->GetAllTestName();
         <div class="col-md-6">
           <div class=" h-100">
             <div class="card-header">
-              <h2 class="title">Need Help to Choose the Right <span class="text-primary">Health plan?</span></h2>
+              <h2 class="title">Need Help to Choose the Right <span class="text-primary">Health Solution</span></h2>
               <p>Our experts are happy to help you!</p>
             </div>
             <div class="card-body">
@@ -1221,7 +2649,7 @@ $all_test = $test_obj->GetAllTestName();
 
 
   <!-- Clients & Partnerships Section -->
-  <div class="section-full bg-gary content-inner" style="background-color:aliceblue;">
+  <div class="section-full bg-gary content-inner d-none" style="background-color:aliceblue; ">
     <div class="container">
       <div class="section-head text-center">
         <h2 class="title">Our Acceptable <span class="text-primary">Hospital and Labs</span></h2>
@@ -1245,7 +2673,7 @@ $all_test = $test_obj->GetAllTestName();
   <!-- About Company END -->
 
   <!-- Our Projects END -->
-  <div class="section-full bg-white content-inner">
+  <div class="section-full bg-white content-inner d-none">
     <div class="container">
       <div class="section-head text-center">
         <h2 class="title">Our Latest <span class="text-primary">Plans</span></h2>
@@ -1350,104 +2778,16 @@ $all_test = $test_obj->GetAllTestName();
     </div>
   </div>
 
-  <!-- Company staus End -->
-  <!-- Team member -->
-  <!--   <div class="section-full " style="background-color:aliceblue;">
-        <div class="container content-inner">
-          <div class="section-head text-center ">
-           
-            <h2 class="title">Meet Our <span class="text-primary">Doctors</span></h2>
-            <p>Discover our team of expert doctors dedicated to providing top-notch care. With diverse specialties and years of experience, they are here to ensure your health and well-being.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp">
-              <div class="dlab-box m-b30 dlab-team1">
-                <div class="dlab-media">
-                  <a href="team-1.html">
-                    <img width="358" height="460" alt="" src="project-assets/images/our-team/doctor-1.jpg" class="lazy" data-src="project-assets/images/our-team/doctor-2.jpg">
-                  </a> 
-                </div>
-                <div class="dlab-info">
-                  <h4 class="dlab-title"><a href="team-1.html">Nashid Martines</a></h4>
-                  <span class="dlab-position">Director</span>
-                  <ul class="dlab-social-icon dez-border">
-                    <li><a class="fab fa-facebook-f" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-twitter" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-linkedin-in" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-pinterest-p" href="javascript:void(0);"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
-              <div class="dlab-box m-b30 dlab-team1">
-                <div class="dlab-media">
-                  <a href="team-1.html">
-                    <img width="358" height="460" alt="" src="project-assets/images/our-team/doctor-1.jpg" class="lazy" data-src="project-assets/images/our-team/doctor-1.jpg">
-                  </a>
-                </div>
-                <div class="dlab-info">
-                  <h4 class="dlab-title"><a href="team-1.html">Konne Backfield</a></h4>
-                  <span class="dlab-position">Doctor</span>
-                  <ul class="dlab-social-icon dez-border">
-                    <li><a class="fab fa-facebook-f" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-twitter" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-linkedin-in" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-pinterest-p" href="javascript:void(0);"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
-              <div class="dlab-box m-b30 dlab-team1">
-                <div class="dlab-media">
-                  <a href="team-1.html">
-                    <img width="358" height="460" alt="" src="project-assets/images/our-team/doctor-2.jpg" class="lazy" data-src="project-assets/images/our-team/doctor-2.jpg">
-                  </a>
-                </div>
-                <div class="dlab-info">
-                  <h4 class="dlab-title"><a href="team-1.html">Hackson Willingham</a></h4>
-                  <span class="dlab-position">Doctor</span>
-                  <ul class="dlab-social-icon dez-border">
-                    <li><a class="fab fa-facebook-f" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-twitter" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-linkedin-in" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-pinterest-p" href="javascript:void(0);"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.8s">
-              <div class="dlab-box m-b30 dlab-team1">
-                <div class="dlab-media">
-                  <a href="team-1.html">
-                    <img width="358" height="460" alt="" src="project-assets/images/our-team/doctor-1.jpg" class="lazy" data-src="project-assets/images/our-team/doctor-1.jpg">
-                  </a>
-                </div>
-                <div class="dlab-info">
-                  <h4 class="dlab-title"><a href="team-1.html">Konne Backfield</a></h4>
-                  <span class="dlab-position">Doctor</span>
-                  <ul class="dlab-social-icon dez-border">
-                    <li><a class="fab fa-facebook-f" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-twitter" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-linkedin-in" href="javascript:void(0);"></a></li>
-                    <li><a class="fab fa-pinterest-p" href="javascript:void(0);"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-  <!-- Team member End -->
+
   <!-- Testimonials Style 9 -->
-  <div class="section-full  content-inner-2" style="background-color:aliceblue;">
+  <div class="section-full  content-inner-2">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="sort-title clearfix text-center">
 
-            <h2 class="title">Reviews from <span class="text-primary">UHL family members</span></h2>
+            <h2 class="title">Reviews from UHL <span class="text-primary">family members</span>
+            </h2>
           </div>
         </div>
       </div>
@@ -1820,7 +3160,8 @@ $all_test = $test_obj->GetAllTestName();
     </div>
   </div>
 
-  <section class="section-full bg-white content-inner" style="margin-bottom: 5rem;" style="background-color:white;">
+  <section class="section-full bg-white content-inner d-none" style="margin-bottom: 5rem;"
+    style="background-color:white;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -1854,11 +3195,12 @@ $all_test = $test_obj->GetAllTestName();
 
   <!-- Latest blog -->
   <div class="section-full  wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s"
-    style="background-color:aliceblue; margin-top:-3em">
+    style="background: linear-gradient(135deg, #367eb7 0%, #196dad 100%); color: white;  margin-top:-3em">
     <div class="container content-inner">
       <div class="section-head text-center">
         <h2 class="title">Latest <span class="text-primary">blog post</span></h2>
-        <p>Our health plan offers comprehensive coverage with free doctor consultations, 24/7 claims support, and fast
+        <p style="color: white;">Our health plan offers comprehensive coverage with free doctor consultations, 24/7
+          claims support, and fast
           claim settlements. Enjoy peace of mind with Quick reimbursement and access to the largest health network</p>
       </div>
       <div class="blog-carousel owl-none owl-carousel">

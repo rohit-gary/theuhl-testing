@@ -30,11 +30,14 @@ include('include/logic.php');
 			                    Our Health Test <br>
 			                    <span class="sub-heading">आपकी सेहत, हमारी प्राथमिकता</span>
 			                </h1>
+
 			                <p class="test-content">
 			                    विश्वसनीय जांच, सटीक परिणाम <br>
 			                    <span class="small-text">Reliable Testing, Accurate Results</span>
 			                </p>
+			                <div class=""><h2 class="test-banner-content display-5" style="color:#ffff"></h2></div>
 			            </div>
+                          
 
 			            <!-- Image Section -->
 			            <div class="col-md-6 text-center">

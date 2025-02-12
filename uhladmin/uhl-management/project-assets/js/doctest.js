@@ -139,11 +139,7 @@ function AddUpdateTestPackage()
     return false;
   }
 
-   if (!test_Package_cat || test_Package_cat.length === 0) 
-   {
-    Alert("Please Select at Least One Test Category");
-    return false;
-    }
+ 
 
 
   if (!package_test_name || package_test_name.length === 0) 

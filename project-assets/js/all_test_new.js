@@ -1,6 +1,6 @@
  $(document).ready(function() 
  {
-        const phrases = ["Book Your Test Now", "Book Your Test Now"];
+        const phrases = ["Book Your Test With United Health Lumina Now", "Book Your Test With United Health Lumina Now"];
         const dynamicText = $('.test-banner-content');
         let currentPhraseIndex = 0;
         let currentCharIndex = 0;

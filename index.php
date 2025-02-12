@@ -15,6 +15,7 @@ $all_test = $test_obj->GetAllTestName();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <?php include("includes/meta.php") ?>
   <?php include("includes/links1.php") ?>
@@ -22,6 +23,7 @@ $all_test = $test_obj->GetAllTestName();
   <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./project-assets/css/index.css">
 </head>
+
 <body id="bg">
   <div class="page-wraper" style="background:#fff">
     <div id="loading-area"></div>
@@ -67,7 +69,7 @@ $all_test = $test_obj->GetAllTestName();
                     </div>
                     <div class="feature-item">
                       <h4>Zero waiting period</h4>
-                    </div>            
+                    </div>
                   </div>
                 </div>
               </div>

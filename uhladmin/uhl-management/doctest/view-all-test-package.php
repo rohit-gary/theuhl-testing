@@ -134,7 +134,7 @@
                                             class="text-danger">*<span></label>
                                     <select class="form-control" id="test_Package_cat" name="test_Package_cat[]"
                                         multiple="multiple">
-                                        <option value=" " disabled></option>
+                                        <option value=" " selected></option>
                                         <?php
                                         foreach ($all_testcat as $test_value) {
                                             echo '<option value="' . $test_value['ID'] . '">' . htmlspecialchars($test_value['TestCategoryName']) . '</option>';

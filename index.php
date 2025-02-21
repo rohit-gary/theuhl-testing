@@ -539,7 +539,7 @@ $all_test = $test_obj->GetAllTestName();
                   <span><i class="fas fa-user-md"></i> Expert Doctors</span>
                   <span><i class="fas fa-ambulance"></i> Emergency Care</span>
                 </div>
-                <a href="/health-plans" class="custom-cta-button">Explore Plans</a>
+                <a href="./all-plans" class="custom-cta-button">Explore Plans</a>
               </div>
             </div>
           </div>
@@ -558,7 +558,7 @@ $all_test = $test_obj->GetAllTestName();
                   <span><i class="fas fa-flask"></i> Latest Equipment</span>
                   <span><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
                 </div>
-                <a href="/health-tests" class="custom-cta-button">Book Test</a>
+                <a href="./our-test/all-test" class="custom-cta-button">Book Test</a>
               </div>
             </div>
           </div>

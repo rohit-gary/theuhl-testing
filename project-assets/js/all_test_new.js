@@ -38,30 +38,69 @@
  // ------add cart item in the cart db--------------
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('.cart-btn').forEach(button => {
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll('.cart-btn').forEach(button => {
+                        button.addEventListener('click', function () {
+                            const productId = this.getAttribute('data-product-id');
+                            const productName = this.getAttribute('data-product-name');
+                            const productPrice = this.getAttribute('data-product-price');
+                            const cartBtn = this.closest('.cart-btn_1');
+                            const removeBtn = cartBtn.nextElementSibling; 
+
+                            // Play a cart add sound
+                            let audio = new Audio('./assets/sounds/cart-add.mp3');
+                            audio.play();
+
+                            this.classList.add('cart-added-effect');
+
+
+                            fetch('./action/add-to-cart.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/x-www-form-urlencoded',
+                                },
+                                body: `product_id=${productId}&product_name=${productName}&product_price=${productPrice}&quantity=1`
+                            })
+                            .then(response => response.text())
+                            .then(data => {
+                                var response = JSON.parse(data);
+                                 cartBtn.style.display = "none";
+                                  removeBtn.style.display = "block";
+                                loadCart();
+                                updateCartCount();
+                              
+                            })
+                            .catch(error => console.error('Error:', error));
+                        });
+                    });
+                });
+
+
+       document.querySelectorAll('.remove-btn').forEach(button => {
         button.addEventListener('click', function () {
             const productId = this.getAttribute('data-product-id');
             const productName = this.getAttribute('data-product-name');
-            const productPrice = this.getAttribute('data-product-price');
-            fetch('http://localhost/Projects/theuhl-testing/our-test/action/add-to-cart.php', {
+            const productPrice = this.getAttribute('data-product-price'); 
+                this.classList.add('cart-added-effect');
+                fetch('./action/remove_from_cart.php', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Content-Type': 'application/json'
                 },
-                body: `product_id=${productId}&product_name=${productName}&product_price=${productPrice}&quantity=1`
+                body: JSON.stringify({ id: productId })
             })
-            .then(response => response.text())
-            .then(data => {
-                var response = JSON.parse(data);
-                loadCart();
-                updateCartCount();
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    loadCart();
+                    updateCartCount(); 
+                } else {
+                    alert('Failed to remove item.');
+                }
             })
-            .catch(error => console.error('Error:', error));
-        });
-    });
-});
-
+            .catch(error => console.error('Error removing item:', error));
+                });
+            });
 
 document.addEventListener('DOMContentLoaded', function () {
     loadCart();
@@ -69,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function loadCart() 
 {
-    fetch('http://localhost/Projects/theuhl-testing/our-test/ajax/get_cart_item.php')
+    fetch('./ajax/get_cart_item.php')
         .then(response => response.json())
         .then(data => {
             const cartList = document.getElementById('cart-list');
@@ -139,7 +178,7 @@ function loadCart()
 
 function removeFromCart(itemId)
  {
-    fetch('http://localhost/Projects/theuhl-testing/our-test/action/remove_from_cart.php', {
+    fetch('./action/remove_from_cart.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -158,27 +197,85 @@ function removeFromCart(itemId)
     .catch(error => console.error('Error removing item:', error));
 }
 
-function updateCartCount()
- {
+// function updateCartCount()
+//  {
    
-    fetch('http://localhost/Projects/theuhl-testing/our-test/ajax/get_cart_item_count.php')
+//     fetch('./ajax/get_cart_item_count.php')
+//         .then(response => response.json())
+//         .then(data => {
+           
+//             document.getElementById("cart-count").textContent = data.cart_count;
+//         })
+//         .catch(error => console.error('Error fetching cart count:', error));
+// }
+
+// document.addEventListener('DOMContentLoaded', function () {
+//    updateCartCount();
+// });
+
+
+// Function to play a sound when an item is added to the cart
+function playCartSound() {
+    let audio = new Audio('./assets/sounds/cart-add.mp3'); // Change path if needed
+    audio.play();
+}
+
+// Function to show animated "+1" effect near cart icon
+function showCartAnimation(change = "+1") {
+    let cartIcon = document.getElementById("cart-icon");
+
+    // Create the floating animation element
+    let animationElement = document.createElement("span");
+    animationElement.textContent = change;
+    animationElement.classList.add("cart-popup");
+    
+    // Append it to the cart icon
+    cartIcon.appendChild(animationElement);
+    
+    // Remove the animation after it fades
+    setTimeout(() => {
+        animationElement.remove();
+    }, 800);
+}
+
+// Function to smoothly update cart count with animations
+function updateCartCount() {
+    fetch('./ajax/get_cart_item_count.php')
         .then(response => response.json())
         .then(data => {
-           
-            document.getElementById("cart-count").textContent = data.cart_count;
+            let cartCountElement = document.getElementById("cart-count");
+            let oldCount = parseInt(cartCountElement.textContent);
+            let newCount = parseInt(data.cart_count);
+
+            if (oldCount !== newCount) {
+                playCartSound(); // Play sound effect
+
+                // Show animation based on increase or decrease
+                let changeSymbol = newCount > oldCount ? "+1" : "-1";
+                showCartAnimation(changeSymbol);
+
+                // Add a glow effect to the cart count
+                cartCountElement.classList.add("cart-glow");
+
+                // Smoothly update cart count
+                setTimeout(() => {
+                    cartCountElement.textContent = data.cart_count;
+                    cartCountElement.classList.remove("cart-glow");
+                }, 400);
+            }
         })
         .catch(error => console.error('Error fetching cart count:', error));
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-   updateCartCount();
+    updateCartCount();
 });
 
 
 
 function saveTestItem(sessionData) {
     $.ajax({
-        url: 'http://localhost/Projects/theuhl-testing/our-test/ajax/get_current_cart_ID.php',
+        url: './ajax/get_current_cart_ID.php',
         method: 'GET',
         success: function (data) {
             try {
@@ -221,7 +318,7 @@ function gotocheckout(cart_id_value, user_id) {
     let cart_id = cart_id_value;
     alert(`cart_id ${cart_id}`);
     $.ajax({
-        url: 'http://localhost/Projects/theuhl-testing/our-test/ajax/update_cart_checkout.php',
+        url: './ajax/update_cart_checkout.php',
         method: 'GET',
         data: { cart_id: cart_id },
         success: function(response) {

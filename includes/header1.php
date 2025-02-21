@@ -21,6 +21,44 @@
         background-color: #f8f9fa;
         color: #000;
     }
+
+    @keyframes cart-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes cart-glow-effect {
+    0% { box-shadow: 0 0 5px rgba(255, 99, 71, 0.6); }
+    50% { box-shadow: 0 0 15px rgba(255, 99, 71, 0.9); }
+    100% { box-shadow: 0 0 5px rgba(255, 99, 71, 0.6); }
+}
+
+.cart-glow {
+    animation: cart-glow-effect 0.6s ease-in-out;
+    background-color: #ff4747 !important;
+    color: white !important;
+}
+
+/* Floating "+1" or "-1" Effect */
+.cart-popup {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4747;
+    opacity: 1;
+    animation: cart-float 0.8s ease-in-out forwards;
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes cart-float {
+    0% { transform: translateY(0px) scale(1); opacity: 1; }
+    50% { transform: translateY(-20px) scale(1.3); opacity: 0.8; }
+    100% { transform: translateY(-30px) scale(1); opacity: 0; }
+}
+
 </style>
 <?php
 @session_start();

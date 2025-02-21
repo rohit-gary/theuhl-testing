@@ -1,5 +1,15 @@
 <?php session_start();
 include('include/logic.php');
+$cartItems = [];
+if (isset($_SESSION['cart_id'])) {
+    $cart_id = $_SESSION['cart_id'];
+    $Cart_obj = new Cart($conn);
+    $cartItems = $Cart_obj->GetCartItemByCartID($cart_id);
+}
+
+$cartItemIds = array_column($cartItems, 'product_id');
+$cartProductIds=array_column($cartItems, 'id');
+
 ?>
 
 <head>
@@ -10,6 +20,32 @@ include('include/logic.php');
 	<link rel="stylesheet" type="text/css" href="../project-assets/css/all_test.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<style type="text/css">
+			/* Button Click Effect */
+			.cart-added-effect {
+			    animation: cart-bounce 0.4s ease-in-out;
+			}
+
+			@keyframes cart-bounce {
+			    0% { transform: scale(1); }
+			    50% { transform: scale(1.2); }
+			    100% { transform: scale(1); }
+			}
+
+			/* Smooth Transition */
+			.cart-btn_1, .cart-btn {
+			    transition: all 0.3s ease-in-out;
+			}
+
+			/* Subtle Glow on Add */
+			.cart-glow {
+			    animation: cart-glow-effect 0.5s ease-in-out;
+			}
+
+			@keyframes cart-glow-effect {
+			    0% { box-shadow: 0 0 5px rgba(0, 150, 0, 0.6); }
+			    50% { box-shadow: 0 0 15px rgba(0, 150, 0, 1); }
+			    100% { box-shadow: 0 0 5px rgba(0, 150, 0, 0.6); }
+			}
 
 	</style>
 </head>
@@ -30,14 +66,11 @@ include('include/logic.php');
 			                    Our Health Test <br>
 			                    <span class="sub-heading">आपकी सेहत, हमारी प्राथमिकता</span>
 			                </h1>
-
 			                <p class="test-content">
 			                    विश्वसनीय जांच, सटीक परिणाम <br>
 			                    <span class="small-text">Reliable Testing, Accurate Results</span>
 			                </p>
-			                <div class=""><h2 class="test-banner-content display-5" style="color:#ffff"></h2></div>
 			            </div>
-                          
 
 			            <!-- Image Section -->
 			            <div class="col-md-6 text-center">
@@ -78,7 +111,7 @@ include('include/logic.php');
 
 									foreach ($organs as $organ): ?>
 										<div class="col-md-4 col-6">
-											<a href="../../admin/authentication/login" class="text-decoration-none">
+											<a href="#" class="text-decoration-none">
 												<div class="organ-card text-center">
 													<img src="../project-assets/images/test/<?php echo $organ['icon'] ?>"
 														alt="<?php echo $organ['name'] ?>">
@@ -136,6 +169,15 @@ include('include/logic.php');
 							$baseprice = intval($test['TestFee']);
 							$off = 0.16 * $baseprice;
 							$totaloff = intval($baseprice + $off);
+
+							 // Find the cart item ID for this product
+								    $cartItemId = null;
+								    foreach ($cartItems as $cartItem) {
+								        if ($cartItem['product_id'] == $test['ID']) {
+								            $cartItemId = $cartItem['id']; // Get the cart item ID
+								            break;
+								        }
+								    }
 							?>
 							<div class="col-md-6 col-lg-3 col-sm-12">
 								<div class="test-card card">
@@ -189,13 +231,22 @@ include('include/logic.php');
 													View Details
 												</a>
 											</div>
-											<div class="col-6">
+											<div class="col-6 cart-btn_1" style="display: <?= in_array($test['ID'], $cartItemIds) ? 'none' : 'block' ?>;">
 												<button class="cart-btn btn btn-primary" data-product-id="<?php echo $test['ID'] ?>"
 													data-product-name="<?php echo $test['TestName'] ?>"
 													data-product-price="<?php echo $test['TestFee'] ?>">
 													Add to cart
 												</button>
 											</div>
+											<div class="col-6 cart-remove-btn_1" style="display: <?= in_array($test['ID'], $cartItemIds) ? 'block' : 'none' ?>;">
+					                        <?php if ($cartItemId !== null): ?>
+					                            <button class="remove-btn btn btn-danger ms-2" 
+					                                data-cart-id="<?php echo $cartItemId ?>" 
+					                                onclick="removeFromCart(<?php echo $cartItemId ?>)">
+					                                <i class="fa fa-trash"></i> Remove
+					                            </button>
+					                        <?php endif; ?>
+					                    </div>
 										</div>
 									</div>
 								</div>
@@ -279,7 +330,7 @@ include('include/logic.php');
 
 									foreach ($checkups as $checkup): ?>
 										<div class="col-md-4 col-6">
-											<a href="../../admin/authentication/login" class="text-decoration-none">
+											<a href="#" class="text-decoration-none">
 												<div class="organ-card text-center">
 													<img src="../project-assets/images/test/<?php echo $checkup['icon'] ?>"
 														alt="<?php echo $checkup['name'] ?>">

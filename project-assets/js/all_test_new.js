@@ -44,8 +44,7 @@
                             const productId = this.getAttribute('data-product-id');
                             const productName = this.getAttribute('data-product-name');
                             const productPrice = this.getAttribute('data-product-price');
-                            const cartBtn = this.closest('.cart-btn_1');
-                            const removeBtn = cartBtn.nextElementSibling; 
+                           
 
                             // Play a cart add sound
                             let audio = new Audio('./assets/sounds/cart-add.mp3');
@@ -64,8 +63,7 @@
                             .then(response => response.text())
                             .then(data => {
                                 var response = JSON.parse(data);
-                                 cartBtn.style.display = "none";
-                                  removeBtn.style.display = "block";
+                                  
                                 loadCart();
                                 updateCartCount();
                               
@@ -106,8 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loadCart();
 });
 
-function loadCart() 
-{
+function loadCart() {
     fetch('./ajax/get_cart_item.php')
         .then(response => response.json())
         .then(data => {
@@ -115,8 +112,10 @@ function loadCart()
             const offcanvasFooter = document.querySelector('.offcanvas-footer');
             const totalPriceElement = document.getElementById('total-price');
             const totalTestsElement = document.getElementById('total-tests');
-             // Check if data is an array
-             if (!Array.isArray(data)) {
+            const cartProductIds = []; // Store cart item IDs
+
+            // Check if data is an array
+            if (!Array.isArray(data)) {
                 cartList.innerHTML = `
                     <div class="text-center my-5">
                         <div style="background-color: #f8f9fa; border-radius: 50%; width: 200px; height: 200px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
@@ -147,6 +146,7 @@ function loadCart()
                 data.forEach(item => {
                     totalPrice += parseFloat(item.total_price);
                     totalTests += parseInt(item.quantity);
+                    cartProductIds.push(item.product_id.toString()); // Convert to string for consistency
 
                     cartList.innerHTML += `
                         <div class="card shadow-sm mb-3">
@@ -172,6 +172,21 @@ function loadCart()
                 totalPriceElement.innerHTML = `₹ ${totalPrice.toFixed(2)}`;
                 totalTestsElement.innerHTML = `${totalTests} Test${totalTests > 1 ? 's' : ''}`;
             }
+
+            // Update button visibility based on cart items
+            document.querySelectorAll('.cart-btn').forEach(button => {
+                const productId = button.getAttribute('data-product-id');
+                const removeBtnContainer = button.closest('.cart-btn_1')?.nextElementSibling; // Ensure it exists
+                const removeBtn = removeBtnContainer ? removeBtnContainer.querySelector('.remove-btn') : null;
+
+                if (cartProductIds.includes(productId)) {
+                    button.style.display = 'none'; 
+                    if (removeBtn) removeBtn.style.display = 'block'; 
+                } else {
+                    button.style.display = 'block'; 
+                    if (removeBtn) removeBtn.style.display = 'none'; 
+                }
+            });
         })
         .catch(error => console.error('Error loading cart:', error));
 }
@@ -179,6 +194,28 @@ function loadCart()
 function removeFromCart(itemId)
  {
     fetch('./action/remove_from_cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: itemId })
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            loadCart();
+            updateCartCount(); 
+        } else {
+            alert('Failed to remove item.');
+        }
+    })
+    .catch(error => console.error('Error removing item:', error));
+}
+
+function removeFromCart_2(itemId)
+ {
+
+    fetch('./action/remove_from_product_cart.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

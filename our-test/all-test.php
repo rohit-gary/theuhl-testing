@@ -1,16 +1,6 @@
 <?php session_start();
 include('include/logic.php');
-$cartItems = [];
-if (isset($_SESSION['cart_id'])) {
-    $cart_id = $_SESSION['cart_id'];
-    $Cart_obj = new Cart($conn);
-    $cartItems = $Cart_obj->GetCartItemByCartID($cart_id);
-}
-
-$cartItemIds = array_column($cartItems, 'product_id');
-$cartProductIds=array_column($cartItems, 'id');
-
-?>
+?>	
 
 <head>
 	<?php include("../includes/meta.php") ?>
@@ -169,15 +159,6 @@ $cartProductIds=array_column($cartItems, 'id');
 							$baseprice = intval($test['TestFee']);
 							$off = 0.16 * $baseprice;
 							$totaloff = intval($baseprice + $off);
-
-							 // Find the cart item ID for this product
-								    $cartItemId = null;
-								    foreach ($cartItems as $cartItem) {
-								        if ($cartItem['product_id'] == $test['ID']) {
-								            $cartItemId = $cartItem['id']; // Get the cart item ID
-								            break;
-								        }
-								    }
 							?>
 							<div class="col-md-6 col-lg-3 col-sm-12">
 								<div class="test-card card">
@@ -225,29 +206,33 @@ $cartProductIds=array_column($cartItems, 'id');
 											</div>
 										</div>
 
-										<div class="row g-2 mt-3">
-											<div class="col-6">
-												<a class="detais-btn btn btn-outline-warning" href="./test-details?ID=<?php echo $testID ?>">
-													View Details
-												</a>
-											</div>
-											<div class="col-6 cart-btn_1" style="display: <?= in_array($test['ID'], $cartItemIds) ? 'none' : 'block' ?>;">
-												<button class="cart-btn btn btn-primary" data-product-id="<?php echo $test['ID'] ?>"
-													data-product-name="<?php echo $test['TestName'] ?>"
-													data-product-price="<?php echo $test['TestFee'] ?>">
-													Add to cart
-												</button>
-											</div>
-											<div class="col-6 cart-remove-btn_1" style="display: <?= in_array($test['ID'], $cartItemIds) ? 'block' : 'none' ?>;">
-					                        <?php if ($cartItemId !== null): ?>
-					                            <button class="remove-btn btn btn-danger ms-2" 
-					                                data-cart-id="<?php echo $cartItemId ?>" 
-					                                onclick="removeFromCart(<?php echo $cartItemId ?>)">
-					                                <i class="fa fa-trash"></i> Remove
-					                            </button>
-					                        <?php endif; ?>
-					                    </div>
+										<div class="row g-2 mt-3 d-flex align-items-center">
+										    <div class="col-6">
+										        <a class="detais-btn btn btn-outline-warning" href="./test-details?ID=<?php echo $testID ?>">
+										            View Details
+										        </a>
+										    </div>
+										    
+										    <div class="col-6 d-flex justify-content-between align-items-center">
+										        <div class="cart-btn_1 flex-grow-1">
+										            <button class="cart-btn btn btn-primary" data-product-id="<?php echo $test['ID'] ?>"
+										                data-product-name="<?php echo $test['TestName'] ?>"
+										                data-product-price="<?php echo $test['TestFee'] ?>">
+										                Add to cart
+										            </button>
+										        </div>
+										        
+										        <div class="cart-remove-btn_1">
+										            <button class="remove-btn btn btn-danger ms-2"
+										                style="display: none;"
+										                data-product-id="<?php echo $test['ID'] ?>"
+										                onclick="removeFromCart_2(<?php echo $test['ID'] ?>)">
+										                <i class="fa fa-trash"></i> Remove
+										            </button>
+										        </div>
+										    </div>
 										</div>
+
 									</div>
 								</div>
 							</div>

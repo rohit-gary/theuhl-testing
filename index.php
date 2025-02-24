@@ -62,7 +62,7 @@ $all_test = $test_obj->GetAllTestName();
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+      /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)); */
     }
 
     .custom-carousel-caption {
@@ -509,9 +509,9 @@ $all_test = $test_obj->GetAllTestName();
           <!-- Main Banner -->
           <div class="carousel-item active custom-carousel-item">
             <div class="custom-carousel-overlay"></div>
-            <img src="project-assets/images/banner/nb-3.png" class="d-block w-100" alt="Health Care Banner">
+            <img src="project-assets/images/banner/nb-2101.png" class="d-block w-100" alt="Health Care Banner">
             <div class="carousel-caption custom-carousel-caption">
-              <div class="custom-caption-content">
+              <div class="custom-caption-content d-none">
                 <div class="custom-highlight-box">
                   <h2 class="custom-hindi-slogan"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
                   <h3 class="custom-company-name">United Health Lumina Plans</h3>
@@ -528,9 +528,9 @@ $all_test = $test_obj->GetAllTestName();
           <!-- Health Plans Slide -->
           <div class="carousel-item custom-carousel-item">
             <div class="custom-carousel-overlay"></div>
-            <img src="project-assets/images/banner/nb-3.png" class="d-block w-100" alt="Health Plans">
+            <img src="project-assets/images/banner/nb-202.webp" class="d-block w-100" alt="Health Plans">
             <div class="carousel-caption custom-carousel-caption">
-              <div class="custom-caption-content">
+              <div class="custom-caption-content d-none">
                 <div class="custom-highlight-box">
                   <h2 class="custom-hindi-slogan"><b>Comprehensive Health Plans</b></h2>
                 </div>

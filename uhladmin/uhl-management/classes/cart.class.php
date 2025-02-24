@@ -86,6 +86,15 @@ class Cart extends Core
 		$cart_detials = $this->delete_identity_filter($this->conn, "cart_items", $where);
 		return $cart_detials;
 	}
+
+	public function RemoveProductItemFromCart($itemId, $cartId)
+	{
+		$where = " WHERE product_id = $itemId AND cart_id = $cartId";
+		$cart_detials = $this->delete_identity_filter($this->conn, "cart_items", $where);
+		return $cart_detials;
+	}
+
+
 	public function UpdatecartCheckout($cart_id)
 	{
 		$sql = "`IsCheckout` = 1 WHERE `id` = $cart_id";

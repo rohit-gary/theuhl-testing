@@ -1,0 +1,2385 @@
+Code,Test Name,package_or_test,Billing Rate
+HM021,Platelet Count Test,test,50
+SE018,VDRL Test CSF,test,75
+CP011,Urine Pregnancy Test (UPT),test,90
+BC032,Glucose Challenge Test (GCT)- 50 Grams Of Glucose,test,99
+BC032B,Glucose Challenge Test (GCT)- 75 Grams Of Glucose,test,99
+BC023,Glucose Fasting Test,test,99
+BC033,Glucose PP (Post Prandial) Test,test,99
+BC034,Glucose Random Test,test,99
+CP020,Urine Glucose Fasting Test,test,99
+CP021,Urine Glucose PP Test,test,99
+CP022,Urine Sugar Random Test,test,99
+BC436,Albumin Test by Spot Urine,test,100
+CO02,Bleeding Time (BT) & Clotting Time (CT) Test,test,100
+CP11,Urine Bile Salt & Bile Pigments Test,test,100
+HM012,Hemoglobin (Hb) Test,test,110
+HM025,TLC (Total Leucocyte Count) Test,test,110
+HM010,ESR Test,test,117
+HM017,Malaria Parasite Test (MP) Smear,test,120
+BC065,Total Protein Test,test,125
+BC009,Blood Urea Test,test,129
+CP009,Stool Routine & Microscopic Examination,test,129
+BC456,Albumin - Fluid Test,test,130
+SE019,WIDAL Test By Slide Agglutination,test,130
+BC007,Bilirubin Direct Test,test,139
+BC008,Bilirubin Total Test,test,139
+HM004,Blood Group Test,test,139
+BC013,Chloride Test,test,139
+BC017,Creatinine Test,test,140
+CP007,Stool Occult Blood Test,test,140
+HM001,Absolute Eosinophil Count (AEC) Test,test,149
+BC003,Albumin Test,test,149
+BC004,Alkaline Phosphatase (ALP) Test,test,149
+BC010,Blood Urea Nitrogen (BUN) Test,test,149
+HM009,DLC (Differential Leucocyte Count) Test,test,149
+BC050,Potassium Test,test,149
+BC058,Sodium Test,test,149
+CP008,Stool pH & Reducing Substances Test,test,149
+HM024,TLC & DLC Test,test,149
+BC066,Total Protein & Albumin/globulin (ag) Ratio Test,test,149
+BC064,Cholesterol Test,test,150
+HM100,Peripheral Blood Smear Test,test,150
+BC049,Phosphorus Test,test,150
+BC056,Serum Ascites Albumin Gradient (SAAG) Test,test,150
+HM002,Absolute Neutrophil Count (ANC) Test,test,159
+BC072,Uric Acid Test,test,160
+BC057,SGOT / AST Test,test,169
+BC292R,Phosphorus Spot Urine Test,test,170
+BC295,SGPT / ALT Test,test,170
+SE398,VDRL - RPR Titre (Semi Quant.) Test,test,170
+HM085,Absolute Basophils Count Blood Test,test,175
+HM072,Absolute Granulocyte Count Blood Test,test,175
+HM073,Absolute Lymphocyte Count Blood Test,test,175
+HM074,Absolute Monocyte Count Blood Test,test,175
+MI018,India Ink Test,test,175
+CP023,"Reducing Substances, Paediatric Urine Test",test,175
+BC073,Urine Calcium & Creatinine Ratio Test,test,175
+HM014,Hemoglobin & Hematocrit Test,test,179
+BC021,Estimated Glomerular Filtration Rate (eGFR) Test,test,180
+BC014,"Chloride, Urine Test",test,190
+BC006,"Bilirubin (Total, Direct & Indirect) Test",test,199
+BC012,Calcium Test,test,199
+BC069,Triglycerides Test,test,199
+CP012,Urine Routine & Microscopic Examination Test,test,199
+CP001,Ascitic Fluid Analysis Test,test,200
+CP002,Cerebrospinal Fluid (CSF) Analysis Test,test,200
+CY001,Cytology For Malignant Cells Test,test,200
+CP003,Miscellaneous Fluid Analysis Test,test,200
+CP004,Pericardial Fluid Analysis Test,test,200
+CP005,Pleural Fluid Analysis Test,test,200
+CP010,Synovial/Joint Fluid Analysis Test,test,200
+BC067,Total T3 (Triiodothyronine) Test,test,200
+BC068,Total T4 (Thyroxine) Test,test,200
+SE019T,WIDAL Test By Tube Agglutination,test,200
+MI002,Acid Fast Bacilli (AFB) Test (3 Samples),test,210
+MI001,AFB Stain Test (Acid Fast Bacilli),test,219
+BC071,TSH 3rd Generation Test,test,219
+BC059,"Sodium, Spot Urine Test",test,220
+SE017,VDRL Test,test,229
+MI003,Albert Stain Test (Diphtheria),test,249
+BC016,Creatine Phosphokinase (CPK) Test,test,249
+BC040,Iron Test,test,249
+BC051,"Potassium, Spot Urine Test",test,249
+HM075,"Cell Count, Body Fluid Test",test,250
+BC383,Cholesterol Total Body Fluid Test,test,250
+BC392,Creatinine Body Fluid Test,test,250
+BC439,Creatinine Spot Urine Test,test,250
+SE010,Hepatitis C antibody (HCV) Test - Rapid card,test,250
+BC361,Protein Spot Urine Test,test,250
+MI85,Stool for Hanging Drop preparation Test,test,250
+BC030,Gamma-Glutamyl Transferase Test (GGT),test,260
+BC475,HDL Cholesterol Direct Test,test,260
+HM083,Sickling Test,test,275
+SE187,Treponema pallidium hemagglutination assay (tpha) Test,test,275
+BC453,"Uric Acid, Spot urine Test",test,275
+HM084,CBC with PS Test,test,299
+HM007,Complete Blood Count (CBC) Test,test,299
+BC019,Electrolytes (Na/K/Cl) Test,test,299
+MI017,Gram Stain Test,test,299
+BC035,HBA1C Test,test,299
+BC042,"Lactate Dehydrogenase (LDH), Serum Test",test,299
+BC047,Magnesium Test,test,299
+BC054,Protein & Creatinine Ratio Urine Test,test,299
+HM023,Reticulocyte Count Test,test,299
+BC063,Thyroid Profile Test,test,299
+BC027,FT3 (Free Triiodothyronine 3) Test,test,300
+BC029,FT4 (Free Thyroxine 4) Test,test,300
+MI016,Fungal Stain Test,test,300
+BC406,LDL Cholesterol  Direct Test,test,300
+BC218,"Methylmalonic Acid, Spot Urine Test",test,300
+BC177,"Homogentisic Acid, Urine, Qualitative Test",test,310
+BC208,Lithium Test,test,330
+BC020,"Electrolytes (Na/K/Cl), Urine Test",test,349
+SE009,Hepatitis B Surface Antigen (HBsAg) Rapid Card Test,test,349
+CP013,Acetone Urine (Qualitative) Test,test,350
+BC485,Cholesterol Profile,test,350
+BC468,Dysmorphic RBC Detection Urine spot Test,test,350
+MI046,Ova And Parasite DetectionConcentration Method Test Stool,test,350
+HM022,Prothrombin time (pt) Test,test,350
+BC061,Testosterone Total Test,test,389
+HM044,Factor XIII Activity Test,test,390
+BC188,Immunoglobulin A (IgA) Test,test,390
+BC189,Immunoglobulin G (IgG) Test,test,390
+MI044,"Isospora Test by Smear Examination, Stool",test,390
+BC024,Ferritin Test,test,399
+SE011,"HIV Antibody, Rapid Card Test",test,399
+HM013,Hemogram (CBC+ESR),test,399
+BC360,Kidney Function Test (KFT),test,399
+BC471,Lipid Profile Test,test,399
+PL94,Liver Function Test (LFT),test,399
+HM018,Microfilaria Detection Test,test,399
+SE411,Baby Screen- Basic 1 Condition Test,test,400
+BC015,CRP Test (C Reactive Protein Test),test,400
+BC127,Creatine Kinase MB Test,test,400
+BC450A,FIB-4 INDEX,test,400
+BC452,Lactate Dehydrogenase (LDH) Fluid Test,test,400
+BC005,Pancreatitis Amylase Test,test,400
+SE012,Rheumatoid Factor (RA) Quantitative Test,test,400
+SE016,Typhoid Test IGM Test,test,400
+BC081,Apolipoprotein A-I Test,test,410
+BC082,Apolipoprotein B Test,test,410
+HM008,"Direct Coombs Test (DCT), Whole Blood EDTA Test",test,449
+BC044,Lipid Profile Direct,test,450
+HM060,Myeloperoxidase (MPO) Stain Test,test,450
+SE252,Typhoid Test IGG & IGM,test,450
+BC367A,Anti A Titre IgM Test,test,460
+BC368A,Anti B Titre IgM Test,test,460
+BC190,Immunoglobulin M (IgM) Test,test,470
+SE133,HIV 1&2 Antibodies Test by CMIA Method,test,480
+HM003,Activated Partial Thromboplastin Time (APTT) Test,test,499
+BC288,Calcium 24 Hrs Urine Test,test,499
+BC348,Covid-19 IgG Antibody Test,test,499
+BC289,Creatinine 24 Hrs Urine Test,test,499
+BC018,Creatinine Clearance 24 Hrs Urine Test,test,499
+BC032A,Glucose Tolerance Test (GTT 2),test,499
+BC178,HCG Maternal Marker (Pregnancy) Test,test,499
+HM015,Indirect Coombs (ICT) Serum Test,test,499
+BC046,Luteinizing Hormone (LH) Test,test,499
+BC292,Phosphorus 24 Hrs Urine Test,test,499
+BC293,Potassium 24 Hrs Urine Test,test,499
+BC294,Protein 24 Hrs Urine Test,test,499
+BC296,Sodium 24 Hrs Urine Test,test,499
+BC54,Urea Nitrogen 24 Hrs Urine Test,test,499
+BC297,Uric Acid 24 Hrs Urine Test,test,499
+BC381,Calcium Ionised Serum Test,test,500
+HomeECG,ECG (Electrocardiogram) test,test,500
+BC026,Follicle Stimulating Hormone FSH Test,test,500
+CY003,PAP (Papanicolaou) Smear Test,test,500
+BC244,Progesterone Test,test,500
+BC162,Fructosamine Test,test,520
+BC422,Pseudo Cholinesterase OPC poisoning Test,test,540
+BC290,Magnesium 24 Hrs Urine Test,test,549
+BC048,"Microalbumin - Creatinine Ratio, Spot Urine",test,549
+BC291,Microalbumin Quantitative 24 hours Urine,test,549
+BC052,Prolactin Test (PRL),test,549
+BC062,Thyroid Profile Free Test,test,549
+BC074,Vitamin B12 Test,test,549
+SE003,"Anti Streptolysin O (ASO), Quantitative Test",test,550
+MI031,Echinococcus Detection Test,test,550
+BC022,Estradiol Test (E2),test,550
+BC041,Iron Studies Test,test,550
+SE402,Baby Screen- 2 Conditions Test,test,580
+HM016,Malaria Antigen Detection Test (Rapid),test,580
+BC002,"Adenosine Deaminase (ADA) Test, Serum",test,599
+BC180,IgE Total Test,test,599
+BC045,Liver Function Extended Panel,test,599
+CP014,Bence Jones Protein Test,test,600
+BC114,"Chylomicron Qualitative, Urine Test",test,600
+BC350E,Cortisol Evening Sample Test,test,600
+BC350,Cortisol Morning Sample Test,test,600
+BC126,"Cortisol Suppression by Dexamethasone Test, Overnight Low Dose",test,600
+SE007,"Dengue IGG Antibody Test, EIA",test,600
+SE008,"Dengue IgM Antibody Test, EIA",test,600
+SE006,Dengue NS1 Antigen Test by ELISA,test,600
+MI040,OT Culture - Single Sample (Swab/Air) Test,test,600
+HM061,Periodic Acid Schiff (PAS) Stain Test,test,600
+HP143,Second Opinion - Upto 2-5 slides Test,test,600
+HP052,Special Stain Test Histopathology,test,600
+BC205,Pancreatitis Lipase Test,test,630
+SE185,Toxoplasma IgG Avidity Test,test,639
+SE087,Cytomegalovirus (CMV) IgG Antibodies Test,test,640
+SE088,Cytomegalovirus (CMV) IgM Antibodies Test,test,640
+SE089,Cytomegalovirus IgG Avidity Test,test,640
+SE169,Rubella IgG Avidity Test,test,640
+SE184,Toxoplasma IgG Antibodies Test,test,640
+SE186,Toxoplasma IgM Antibodies Test,test,640
+BC075,Vitamin D Test,test,649
+HP153,Cell Block Examination Test,test,650
+BC447,HCG Tumor Marker (Cancer) Test,test,650
+HM103,Immature Platelet Fraction (IPF) Test,test,660
+SE438,Leptospira IgG & IgM Rapid Card Test,test,660
+SE168,Rubella IgG Antibodies Test,test,660
+SE170,Rubella IgM Antibodies Test,test,660
+BC53,"Troponin T, Rapid Card Test",test,675
+MI015,Urine Culture Test,test,699
+SE406,Baby Screen- Basic 3 Conditions Test,test,700
+BC120,Complement Protein Concentration (C3) Test,test,700
+BC330,Complement Protein Concentration (C4) Test,test,700
+MD111,Covid RT PCR Test,test,700
+BC153,Drugs Of Abuse - Urine: Methaquolone Test,test,700
+BC479,Drugs Of Abuse Urine: Nicotine / Cotinine Test,test,700
+BC144,Drugs Of Abuse: Benzodiazepines Test,test,700
+BC148,Drugs Of Abuse: Opiates Test,test,700
+BC149,Drugs Of Abuse: Phenycyclidine (PCP) Test,test,700
+SE131,Entamoeba Histolytica Antigen detection Test,test,700
+SE122,Herpes Simplex Virus (HSV) 1 & 2 IgG Ab (Combined),test,700
+SE123,Herpes Simplex Virus (HSV) 1 & 2 IgM Ab (Combined),test,700
+MI039,Leptospira Detection Test,test,700
+HP146,Second Opinion- Upto 2-4 Blocks Test,test,700
+HP003,Small Tissue Biopsy Test Histopathology,test,700
+BC105,Carcinoembryonic Antigen (CEA) Test,test,740
+BC29,Glucose Tolerance Test (GTT 3),test,749
+BC357,Adenosine Deaminase (ADA) Test Fluid,test,750
+BC489,Alcohol (Ethanol) Serum Test,test,750
+HM030,Bone Marrow Slide Review Test  ,test,750
+HM035,Coombs Titre (Rh Antibody Titre) Test,test,750
+BC145,Drugs Of Abuse: Cannabinoids Test,test,750
+HM011,"G6PD, Qualitative (Glucose-6-Phosphate Dehydrogenase) Test",test,750
+BC247,"Protein Electrophoresis, Serum Test",test,750
+MI013,Stool Culture Test,test,750
+BC301,Aldolase Test,test,760
+BC146,Drugs Of Abuse: Cocaine Test,test,760
+HM046,Fibrinogen Level Test,test,760
+BC229,"Osmolality, Serum Test",test,760
+BC230,"Osmolality, Spot Urine Test",test,760
+SE659,Acacia Spp Allergy Test,test,799
+SE573,Acarus Siro (Flour Mite) Allergy Test,test,799
+SE629,Acetylcysteine Allergy Test,test,799
+SE554,Aedes Comunis (Common Mosquito) Allergy Test,test,799
+SE561,Agrostis Stolonifera (Bentgrass) Allergy Test,test,799
+SE579,Allergy: Aspergillus Fumigatus Specific IgE Test By EIA,test,799
+SE511,Almond Allergy test,test,799
+SE582,Alternaria Alternata Allergy Test,test,799
+SE653,Amaranthus Retroflexus (Common Pigweed) Allergy Test,test,799
+SE623,Ambroxol Allergy Test,test,799
+SE692,Amidotrizoate Meglumine Allergy Test,test,799
+SE614,Amoxicillin Allergy Test,test,799
+SE613,Ampicillin Allergy Test,test,799
+SE534,Anise Allergy Test,test,799
+SE563,Anthoxanthum Odoratum (Sweet Vernal Grass) Allergy Test,test,799
+SE549,Apis Mellifera (Honey Bee) Allergy Test,test,799
+SE487,Apple Allergy Test,test,799
+SE496,Apricot Allergy Test,test,799
+SE685,Ascaris Lumbricoides Allergy Test,test,799
+SE628,Ascorbic Acid (Vitamin C) Allergy Test,test,799
+SE592,Aspirin Allergy Test,test,799
+SE467,Aubergine Eggplant Allergy Test,test,799
+SE612,Azithromycin Allergy Test,test,799
+SE491,Banana Allergy Test,test,799
+SE449,Barley Allergy Test,test,799
+SE532,Basil Allergy Test,test,799
+SE677,Beef Allergy Test,test,799
+SE469,Beet Allergy Test,test,799
+SE589,Benzocaine Allergy Test,test,799
+SE536,Black Pepper Allergy Test,test,799
+SE551,Blatella Germanica (Cockroach) Allergy Test,test,799
+SE572,Blomia Tropicalis (House Mite) Allergy Test,test,799
+SE565,Books Dust Allergy Test,test,799
+SE466,Broccoli Allergy Test,test,799
+SE624,Bromhexine Allergy Test,test,799
+SE636,Budgerigar Dropping Allergy Test,test,799
+SE637,Budgerigar Feathers Allergy Test,test,799
+SE638,Budgerigar Serum Proteins Allergy Test,test,799
+SE462,Cabbage Allergy Test,test,799
+SE648,Canarian Feathers Allergy Test,test,799
+SE581,Candida Albicans Allergy Test,test,799
+SE530,Cardamon Allergy Test,test,799
+SE513,Carp Fish Allergy test,test,799
+SE456,Carrot Allergy Test,test,799
+SE514,Cashew Nut Allergy Test,test,799
+SE647,Cat Dander Allergy Test,test,799
+SE630,Cat Epithelium Allergy Test,test,799
+SE468,Cauliflower Allergy Test,test,799
+SE524,Celery Allergy Testing,test,799
+SE616,Cephalosporin Allergy Test,test,799
+SE518,Cheddar Cheese Allergy Test,test,799
+SE651,Chenopodium Album (Goosefoot) Allergy Test,test,799
+SE497,Cherry Allergy test ,test,799
+SE548,Chick Pea Allergy Test ,test,799
+SE650,Chicken Droppings Allergy Test,test,799
+SE643,Chicken Feathers Allergy Test,test,799
+SE667,Chicken Meat Allergy Test,test,799
+SE608,Chloramphenicol Allergy Test,test,799
+SE546,Chocolate Allergy test,test,799
+SE663,Cinnamon Allergy Test,test,799
+SE528,Cinnamon Allergy test ,test,799
+SE605,Ciprofloxacin Allergy Test,test,799
+SE578,Cladosporium Herbarum Allergy Test,test,799
+SE610,Clarithromycin Allergy Test,test,799
+SE531,Clove Allergy Test,test,799
+SE603,Cloxacillin Allergy Test,test,799
+SE600,Co-Trimoxazole Allergy Test,test,799
+SE627,Cobalamin (Vitamin B12) Allergy Test,test,799
+SE505,Coconut Allergy test,test,799
+SE479,Coconut Milk Allergy Test,test,799
+SE477,Coffee Allergy Test,test,799
+SE540,Coriander Allergy Test,test,799
+SE678,Cotton Linters Allergy Test,test,799
+SE632,Cow Dander Allergy Test,test,799
+SE517,Cow Milk Allergy Test,test,799
+SE665,Crab Allergy Test,test,799
+SE503,Cranberry Allergy Test ,test,799
+SE475,Cucumber Allergy Test,test,799
+SE539,Curcuma Allergy Test,test,799
+SE519,Curd Allergy Test ,test,799
+SE537,Curry Allergy Test ,test,799
+SE583,Curvularia Lunata Allergy Test,test,799
+SE559,Cynodon Dactylon (Bermuda Grass) Allergy Test,test,799
+SE507,Date Allergy test ,test,799
+SE569,Dermatophagoides Farinae Allergy Test,test,799
+SE570,Dermatophagoides Microcerasa Allergy Test,test,799
+SE568,Dermatophagoides Pteronyssinus Allergy Test,test,799
+SE691,Diatrazaote Allergy Test,test,799
+SE596,Diclofenac Allergy Test,test,799
+SE633,Dog Dander Allergy Test,test,799
+SE631,Dog Epithelium Allergy Test,test,799
+SE601,Doxycycline Allergy Test,test,799
+SE644,Duck Feathers Allergy Test,test,799
+SE670,Duck Meat Allergy Test,test,799
+ECG,ECG (Electrocardiogram) Test at Home,test,799
+SE618,Erythromycin Allergy Test,test,799
+SE656,Eucalyptus Spp (Gum-Tree) Allergy Test,test,799
+SE571,Euroglyphus Maynei (House Mite) Allergy Test,test,799
+SE522,Fennel Allergy Testing,test,799
+SE508,Fig Allergy test ,test,799
+SE668,Fish (Cod) Allergy Test,test,799
+SE484,Flaxseed (Linseed) Allergy Test,test,799
+SE472,French Bean Allergy Test,test,799
+SE521,Garlic Allergy Test ,test,799
+SE621,Gelatin Allergy Test,test,799
+SE617,Gentamycin Allergy Test,test,799
+SE533,Ginger Allergy Test,test,799
+SE576,Glycyphagus Domesticus (Store Mite) Allergy Test,test,799
+SE639,Goat Epithelium Allergy Test,test,799
+SE635,Goose Feathers Allergy Test,test,799
+SE499,Grape Allergy Test ,test,799
+SE500,Guava Allergy Test ,test,799
+SE567,Hay Dust Allergy Test,test,799
+SE510,Hazelnut Allergy test ,test,799
+SE587,Helminthosporium Halodes Allergy Test,test,799
+SE684,Henna Allergy Test,test,799
+SE552,Heterocera Mix (Moth) Allergy Test,test,799
+SE566,House Dust- IFCI 1 Allergy Test,test,799
+SE553,Housefly Musca Domestica Allergy Test,test,799
+SE597,Ibuprofen Allergy Test,test,799
+SE680,Jute Allergy Test,test,799
+SE595,Ketoprofen Allergy Test,test,799
+SE488,Kiwi Allergy Test,test,799
+SE683,Latex Allergy Test,test,799
+SE494,Lemon Allergy test,test,799
+SE547,Lentil Allergy Test ,test,799
+SE574,Lepidoglyphus Destructor (Hay Mite) Allergy Test,test,799
+SE461,Lettuce Allergy Test,test,799
+SE588,Lidocaine Allergy Test,test,799
+SE671,Lobster Allergy Test,test,799
+SE560,Lolium Perennial (Rye-Grass) Allergy Test,test,799
+SE504,Lychee Allergy Test ,test,799
+SE674,Mackerel Allergy Test,test,799
+SE451,Maize Allergy (Corn) Test,test,799
+SE490,Mango Allergy Test,test,799
+SE555,Meadow fescue (Meadow Fescue) Allergy Test,test,799
+SE489,Melon Allergy Test,test,799
+SE609,Metronidazole Allergy Test,test,799
+SE453,Millet Allergy Test,test,799
+SE527,Mint Allergy Test,test,799
+SE657,Morus Alba (Red Mulberry) Allergy Test,test,799
+SE693,Mosquito Allergy Test,test,799
+SE645,"Mouse (Epithelium, Serum, Urine, Protein) Allergy Test",test,799
+SE473,Mushrooms Allergy Test,test,799
+SE481,Mustard Allergy Test,test,799
+SE676,Mutton Allergy Test,test,799
+SE594,Naproxen Allergy Test,test,799
+SE655,Nart V1 Artemisia Vulgaris (Mugwort) Allergy Test,test,799
+SE604,Neomycin Allergy Test,test,799
+SE611,Norfloxacin Allergy Test,test,799
+SE538,Nutmeg Allergy Test,test,799
+SE660,Oak Wood Allergy Test,test,799
+SE450,Oats Allergy Test,test,799
+SE607,Ofloxacin Allergy Test,test,799
+SE523,Olive Allergy Testing,test,799
+SE458,Onion Allergy Test,test,799
+SE485,Orange Allergy Test,test,799
+SE557,Orchard Cocksfoot (Cocksfoot) Allergy Test,test,799
+SE542,Oregano Allergy Testing,test,799
+SE606,Oxacillin Allergy Test,test,799
+SE687,P4 Anisakis Allergy Test,test,799
+SE501,Papaya Allergy Test ,test,799
+SE591,Paracetamol Allergy Test,test,799
+SE526,Parsley Allergy Test,test,799
+SE470,Pea Allergy Test,test,799
+SE493,Peach Allergy Test,test,799
+SE509,Peanut Allergy Test,test,799
+SE492,Pear Allergy Test,test,799
+SE577,Penicillium Notatum Allergy Test,test,799
+SE598,Penicilloyl G Allergy Test,test,799
+SE599,Penicilloyl V Allergy Test,test,799
+SE558,Phleum Pratense (Timothy) Allergy Test,test,799
+SE584,Phoma Betae Allergy Test,test,799
+SE602,Phosphomycin Allergy Test,test,799
+SE556,Phragmites Communis (Common Reed) Allergy Test,test,799
+SE641,Pig Epithelium Allergy Test,test,799
+SE634,Pigeon Droppings Allergy Test,test,799
+SE649,Pigeon Feathers Allergy Test,test,799
+SE495,Pineapple Allergy Test,test,799
+SE593,Piroxycam Allergy Test,test,799
+SE515,Pistachio Allergy Test,test,799
+SE498,Plum Allergy Test,test,799
+SE664,Pomegranate Allergy Test,test,799
+SE525,Poppy Seed Allergy Test,test,799
+SE675,Pork Allergy Test,test,799
+SE457,Potato Allergy Test,test,799
+SE590,Prilocaine Allergy Test,test,799
+SE658,Prosopis Juliflora (Mesquite) Allergy Test,test,799
+SE464,Pumpkin Allergy Test,test,799
+SE483,Pumpkin Seed Allergy Test,test,799
+SE625,Pyridoxine Allergy Test,test,799
+SE642,Rabbit Epithelium Allergy Test,test,799
+SE476,Radish Allergy Test,test,799
+SE506,Raisin Allergy test,test,799
+SE652,Rapeseed (Brassica Napus) Allergy Test,test,799
+SE586,Rhizopus Nigricans Allergy Test,test,799
+SE452,Rice Allergy Test,test,799
+SE620,Rifampicin Allergy Test,test,799
+SE543,Rosemary Allergy Test,test,799
+SE541,Saffron Allergy Test,test,799
+SE661,Salix Caprea (Willow) Allergy Test,test,799
+SE673,Salmon Allergy Test,test,799
+SE669,Sardine Allergy Test,test,799
+SE454,Semolina Allergy Test,test,799
+SE480,Sesame Seed Allergy Blood Test,test,799
+SE640,Sheep Epithelium Allergy Test,test,799
+SE681,Sheep Wool Allergy Test,test,799
+SE666,Shrimp Allergy Test,test,799
+SE682,Silk (Bombyx Mori) Allergy Test,test,799
+SE562,Sorghum Halepense (Johnson Grass) Allergy Test,test,799
+SE471,Soya Bean Allergy Test,test,799
+SE460,Spinach Allergy Test,test,799
+SE486,Strawberry Allergy Test,test,799
+SE619,Streptomycin Allergy Test,test,799
+SE482,Sunflower Seed Allergy Test,test,799
+SE463,Sweet Pepper Allergy Test,test,799
+SE459,Sweet Potato Allergy Test,test,799
+SE478,Tea Allergy Test,test,799
+SE615,Tetracycline Allergy Test,test,799
+SE622,Theophylline Allergy Test,test,799
+SE626,Thiamine (Vitamin B1) Allergy Test,test,799
+SE535,Thyme Allergy Test,test,799
+SE688,Timothy Grass Allergy Test,test,799
+SE564,Tobacco Dust Allergy Test,test,799
+SE474,Tofu Allergy Test,test,799
+SE455,Tomato Allergy Test,test,799
+SE686,Toxocara Canis Allergy Test,test,799
+SE585,Trichoderma Viride Allergy Test,test,799
+SE672,Tuna Allergy Test,test,799
+SE679,Turkey Allergy Test,test,799
+SE646,Turkey Feathers Allergy Test,test,799
+SE465,Turnip Allergy Test,test,799
+SE575,Tyrophagus Putresentiae (Cheese Mite) Allergy Test,test,799
+SE512,Vancomycin Allergy Test,test,799
+SE529,Vanilla Allergy Test,test,799
+SE550,Vespula Germanica (Common Wasp - Yellow Jacket) Allergy Test,test,799
+SE516,Walnut Allergy Test ,test,799
+SE502,Watermelon Allergy Test,test,799
+SE662,Wheat Flour Allergy Test,test,799
+SE544,Whole Egg (Hen) Allergy Test,test,799
+SE654,Xanthium Commune (Cocklebur) Allergy Test,test,799
+SE545,Yeast Allergy Test,test,799
+SE520,Yogurt Allergy Test ,test,799
+BC460,Anti HbcAg Test,test,800
+SE002A,Anti Nuclear Antibody (ANA) Test By ELISA ,test,800
+BC353,Apolipoproteins B & A1 Profile or Ratio Test,test,800
+MI006,Culture Aerobic Body Fluid Test,test,800
+MI005,Culture Aerobic ET Secretion/Aspirate Test,test,800
+MI008,Culture Aerobic Ear Swab Test,test,800
+MI009,Culture Aerobic Eye Swab Test,test,800
+MI081,Culture Aerobic Pus Test,test,800
+MI011,Culture Aerobic Semen Test,test,800
+MI088,Culture Aerobic Swab Test,test,800
+MI007,Culture Aerobic Test CSF,test,800
+MI086,Culture Aerobic Tip Test,test,800
+MI087,Culture Aerobic Tissue Test,test,800
+MI082,Culture Aerobic Vaginal Swab Test,test,800
+MI012,"Culture Aerobic, Sputum Test",test,800
+MI014,"Culture Aerobic, Throat Swab Test",test,800
+MI058,"Culture Aerobic, Urine (Automated)",test,800
+BC152,Drugs Of Abuse - Urine: Methadone Test,test,800
+BC142,Drugs Of Abuse: Amphetamine Test,test,800
+BC143,Drugs Of Abuse: Barbiturates Test,test,800
+BC147,Drugs Of Abuse: Methamphetamine Test,test,800
+BC150,Drugs Of Abuse: Propoxyphene Test,test,800
+CY002,Fine Needle Aspiration Cytology (FNAC) Test,test,800
+BC169,Growth Hormone (GH) Test,test,800
+SE114,Hepatitis B Surface Antibodies (HBsAb) Test,test,800
+SE124,Herpes Simplex Virus (HSV) IgG Type 1Antibodies Test,test,800
+SE125,Herpes Simplex Virus (HSV) IgG Type 2 Antibodies Test,test,800
+SE126,Herpes Simplex Virus (HSV) IgM Type 1Antibodies Test,test,800
+SE127,Herpes Simplex Virus (HSV) IgM Type 2 AAntibodies Test,test,800
+BC173,High-Sensitivity C-Reactive Protein (hsCRP ) Test,test,800
+BC191,Inhibin A (Dimeric) Test,test,800
+BC037,Insulin Fasting Test,test,800
+BC038,Insulin PP (Post Prandial) Test,test,800
+BC039,Insulin Random,test,800
+BC053,PSA Test,test,800
+HM066,Thrombin Time Test,test,800
+BC245,Prostate Specific Antigen (PSA) Free Test,test,850
+PL119,Iron Studies with Ferritin Test,test,899
+SE690,Anti Phospholipid IgA Antibodies Test,test,900
+SE050,Anti Phospholipid IgG Antibodies Test,test,900
+SE051,Anti Phospholipid IgM Antibodies Test,test,900
+SE413,Baby Screen- Haemoglobinopathies Test,test,900
+HM028,Bone Marrow Aspiration Smears Test  ,test,900
+BC102,Carbamazepine Test (Tegretol),test,900
+SE324,Cardiolipin IgA Antibodies Test,test,900
+SE325,Cardiolipin IgG Antibodies Test,test,900
+SE326,Cardiolipin IgM Antibodies Test,test,900
+SE076,Chlamydia Trachomatis IgA Antibodies Test,test,900
+SE077,Chlamydia Trachomatis IgG Antibodies Test,test,900
+SE078,Chlamydia Trachomatis IgM Antibodies Test,test,900
+BC115,Citrate 24 Hrs Urine Test,test,900
+BC124,Cortisol Free 24 Hrs Urine Test,test,900
+MI043,"Cyclospora Test by Smear Examination, Stool",test,900
+SE393,"Filaria Antibody, IgG Test",test,900
+SE394,"Filaria Antibody, IgM Test",test,900
+BC163,"G6PD, Quantitative (Glucose-6-Phospate Dehydrogenase) Test",test,900
+SE333,HIV Early Screen Test,test,900
+BC307,Maternal Marker Alpha Fetoprotein (AFP),test,900
+HP002,Medium Tissue Biopsy Test Histopathology,test,900
+BC419,"Prolactin, Active Monomeric Prolactin Test",test,900
+SE437,Scrub Typhus (Tsutsugamushi) IgM Antibody Rapid Card Test,test,900
+BC263,Theophylline Test,test,900
+BC446,Tumor Marker Alpha Fetoprotein (AFP),test,900
+SE193,Weil Felix Test,test,900
+SE448,p24 antigen with HIV 1&2 Antibody Test,test,900
+BC445,HOMA Index Insulin Resistance Test,test,920
+BC364,Alpha Feto Protein (AFP) Test CSF,test,950
+SE002,Anti Nuclear Antibody (ANA) Test By IFA (HEP-2),test,950
+MI027,Culture Legionella Species Test,test,950
+HM051,Hemoglobin Variant Analysis Test (HPLC Test),test,950
+HM054,Leucocyte Alkaline Phosphatase (LAP) / Neutrophil Alkaline Phosphatase (NAP) Score Test,test,950
+BC031,Gestational Glucose Tolerance (GTT 4) Test,test,999
+SE115,"Hepatitis B Surface Antigen (HBsAg), Quantitative Test",test,999
+SE432,Allergy: Phadiatop Test (< 5 Years),test,"1,000"
+SE392,Allergy: Phadiatop Test (Above 5 Years),test,"1,000"
+SE064,Beta 2 Glycoprotein IgA Test,test,"1,000"
+SE065,Beta 2 Glycoprotein IgG Test,test,"1,000"
+SE066,Beta 2 Glycoprotein IgM Test,test,"1,000"
+BC382,CEA Carcino Embryonic Antigen Body Fluid Test,test,"1,000"
+SE004,"Chikungunya IgM, Rapid Card Test",test,"1,000"
+SE072,Chikungunya igm Antibody Test,test,"1,000"
+HM036,"Cryoglobulin, Qualitative Test",test,"1,000"
+MD333,DNA Storage Test,test,"1,000"
+BC333,Digoxin (Lanoxin) Test,test,"1,000"
+SE099,Escherichia Coli K1 Antigen Test CSF,test,"1,000"
+SE100,"Escherichia Coli K1 Antigen, Serum Test",test,"1,000"
+HM077,Filaria Antigen Detection Test,test,"1,000"
+SE104,"Giardia Lambila Antigen Detection, Stool (Rapid Card) Test",test,"1,000"
+SE117,Hepatitis B e-Antigen (HBeAg) Test,test,"1,000"
+BC339,Homocysteine Test,test,"1,000"
+BC206,Lipoprotein (A) Test,test,"1,000"
+BC221,"Myoglobin, Urine Test",test,"1,000"
+BC450,Non Alcoholic Fatty Liver Disease (NAFLD) Fibrosis Score Test,test,"1,000"
+BC232,Paracetamol Test,test,"1,000"
+BC235,Phenobarbital Test,test,"1,000"
+SE382,Phosphatidyl Choline IgG Antibody Test,test,"1,000"
+SE357,Phosphatidyl Choline IgM Antibody Test,test,"1,000"
+SE358,Phosphatidyl Ethanolamin IgG Antibody Test,test,"1,000"
+SE359,Phosphatidyl Ethanolamin IgM Antibody Test,test,"1,000"
+SE360,Phosphatidyl Inositol IgG Antibody Test,test,"1,000"
+SE361,Phosphatidyl Inositol IgM Antibody Test,test,"1,000"
+BC242,Pregnancy Associated Plasma Protein-A(PAPP-A) Test,test,"1,000"
+MI041,"Rota Virus Antigen Detection, Stool (Rapid Card) Test",test,"1,000"
+HP145,Second Opinion- Upto 2 Blocks Test,test,"1,000"
+SE368,Sphingomyelin IgG Phospholipid Test,test,"1,000"
+SE369,Sphingomyelin IgM Phospholipid Test,test,"1,000"
+SE177,Streptococcus Group B Antigen Test CSF,test,"1,000"
+SE178,"Streptococcus Group B Antigen, Serum Test",test,"1,000"
+SE179F,"Streptococcus Pneumoniae Antigen Test, CSF",test,"1,000"
+BC260,Testicular Cancer Monitor Test,test,"1,000"
+BC094,C Peptide Fasting Test,test,"1,050"
+BC094PP,C Peptide Post Prandial Test,test,"1,050"
+BC094R,C Peptide Random Test,test,"1,050"
+MI028,"Culture, Leishmania Species Test",test,"1,050"
+HM038,D Dimer Test,test,"1,050"
+SE417, Chilli Pepper Allergy Test By ImmunoCAP,test,"1,100"
+SE251, Honey Bee Venom Allergy Test By ImmunoCAP,test,"1,100"
+SE313,Allergy: Vanilla,test,"1,100"
+BC317,Angiotensin Converting Enzyme (ACE) Test,test,"1,100"
+BC367,Anti A Titre Test,test,"1,100"
+BC368,Anti B Titre Test,test,"1,100"
+SE057,Anti Sperm Antibodies Test,test,"1,100"
+SE340,Apricot Allergy Test By ImmunoCAP,test,"1,100"
+SE407,Baby Screen- Basic 4 Conditions Test,test,"1,100"
+SE215,Brazil Nut (Bertholletia Excelsa) Allergy Test By ImmunoCAP,test,"1,100"
+SE222,Cauliflower Allergy Test By ImmunoCAP,test,"1,100"
+SE224,Cherry Allergy Test By ImmunoCAP,test,"1,100"
+SE226,Chicken Feather Allergy Test By ImmunoCAP,test,"1,100"
+SE235,Common Reed Grass Allergy Test By ImmunoCAP,test,"1,100"
+SE237,Crab Allergy Test By ImmunoCAP,test,"1,100"
+SE086,Cytomegalovirus (CMV) IgG & IgM Antibodies Test,test,"1,100"
+SE005,Dengue Duo Screening Test,test,"1,100"
+SE200,Drug ACTH Allergy Test By ImmunoCAP,test,"1,100"
+SE203,Drug Ampicillin Allergy Test By ImmunoCAP,test,"1,100"
+SE029,English Plantain Weed Pollen Allergy Test By ImmunoCAP,test,"1,100"
+SE240,Fennel Allergy Test By ImmunoCAP,test,"1,100"
+HM045,Fibrinogen Degradation Products (FDP) Test,test,"1,100"
+SE241,Fig Allergy Test By ImmunoCAP,test,"1,100"
+SE208,Food Barley Allergy Test By ImmunoCAP,test,"1,100"
+SE209,Food Basil Allergy Test By ImmunoCAP,test,"1,100"
+SE210,Food Bayleaf Allergy Test By ImmunoCAP,test,"1,100"
+SE213,Food Black Pepper Allergy Test By ImmunoCAP,test,"1,100"
+SE243,Ginger (Adarakh) Allergy Test By ImmunoCAP,test,"1,100"
+SE423,Goat Epithelium Allergy Test By ImmunoCAP,test,"1,100"
+SE031,Golden Rod Weed Pollen Allergy Test By ImmunoCAP,test,"1,100"
+SE245,Grapefruit (Citrusparadisi) Allergy Test By ImmunoCAP,test,"1,100"
+SE424,Guinea Pig Epithelium Allergy Test By ImmunoCAP,test,"1,100"
+SE330,Haemophilus Influenza B Antigen Test CSF,test,"1,100"
+SE105,"Haemophilus Influenzae B Antigen, Serum Test",test,"1,100"
+SE425,Hamster Epithelium Allergy Test By ImmunoCAP,test,"1,100"
+SE249,Hazel Nut (Corylus Avellana)  Allergy Test By ImmunoCAP,test,"1,100"
+SE250,Helmenthisporium Halodes Allergy Test By ImmunoCAP,test,"1,100"
+SE112,Hepatitis B Core Total Antibodies (HBc) Test,test,"1,100"
+SE116,Hepatitis B Virus Core IgM Antibodies (HBc IgM) Test,test,"1,100"
+SE254,House Dust Dermatophagoides Pteronyssinus Allergy Test By ImmunoCAP,test,"1,100"
+SE255,House Dust Dermatophagoieds Farinae Allergy Test By ImmunoCAP,test,"1,100"
+SE152,House Dust Greer Allergy Test By ImmunoCAP,test,"1,100"
+SE253,House Dust Hollistier Allergy Test By ImmunoCAP,test,"1,100"
+SE256,Japanese Cedar Tree Pollen Allergy Test By ImmunoCAP,test,"1,100"
+SE258,Kiwi Fruit Allergy Test By ImmunoCAP,test,"1,100"
+BC358,Lactate Test CSF,test,"1,100"
+BC197,"Lactate, Plasma Test",test,"1,100"
+SE259,"Legume Mix (Lentil, Pea, White Bean) Allergy Test By ImmunoCAP",test,"1,100"
+SE262,Lettuce Allergy Test By ImmunoCAP,test,"1,100"
+SE264,Malt Allergy Test By ImmunoCAP,test,"1,100"
+SE267,Melon Allergy Test By ImmunoCAP,test,"1,100"
+SE270,Mint (Mentha Piperita) Allergy Test,test,"1,100"
+SE271,Mosquito (Machhar) Allergy Test By ImmunoCAP,test,"1,100"
+SE272,Mucor Racemosus Allergy Test By ImmunoCAP,test,"1,100"
+SE214,Mussel Allergy Test By ImmunoCAP,test,"1,100"
+BC225U,Nicotine / Cotinine Quantitative Urine Test,test,"1,100"
+SE284,Papaya Allergy Test By ImmunoCAP,test,"1,100"
+SE285,Paperwasp Venom Allergy Test By ImmunoCAP,test,"1,100"
+SE427,Parrot Feathers Allergy Test By ImmunoCAP,test,"1,100"
+SE286,Parsley (Petroselinum Crispum) Allergy Test By ImmunoCAP,test,"1,100"
+BC237,Phenytoin (Eptoin & Dilantin) Test,test,"1,100"
+SE428,Pigeon Feathers Allergy Test By ImmunoCAP,test,"1,100"
+SE296,Plum Allergy Test By ImmunoCAP,test,"1,100"
+SE299,Pumpkin Allergy Test By ImmunoCAP,test,"1,100"
+SE300,Rhizopus Nigricans Allergy Test By ImmunoCAP,test,"1,100"
+SE173,Smith (Sm) IgG Antibodies Test,test,"1,100"
+SE305,Soyabean Allergy Test By ImmunoCAP,test,"1,100"
+SE307,Sweet Vernal Grass Allergy Test By ImmunoCAP,test,"1,100"
+SE430,Swine Epithelium Allergy Test By ImmunoCAP,test,"1,100"
+SE343,TTG-IgA (Tissue Transglutaminase) Test,test,"1,100"
+SE397,Tissue Transglutaminase (tTG) Antibody IgG Test,test,"1,100"
+SE310,Trichophyton Allergy Test By ImmunoCAP,test,"1,100"
+SE314,Velvet Grass Pollen Allergy Test By ImmunoCAP,test,"1,100"
+BC133,dehydroepiandrosterone-sulfate (dheas) Test,test,"1,100"
+BC445A,HOMA- IR With C Peptide Test,test,"1,130"
+SE118,Hepatitis Be Virus Total Antibodies (HBeAb) Test,test,"1,149"
+SE109,Hepatitis A IgG Antibody Test,test,"1,190"
+SE111,Hepatitis A Virus (HAV) IgM Antibodies Test,test,"1,190"
+SE279, Oak Allergy Test By ImmunoCAP,test,"1,200"
+SE282, Onion (Pyaaz) Allergy Test By ImmunoCAP,test,"1,200"
+SE303, Sesame (Til) Allergy Test By ImmunoCAP,test,"1,200"
+MI045,AFB Culture Test,test,"1,200"
+SE248,Alder (Bhidur) Allergy Test By ImmunoCAP,test,"1,200"
+SE201,Almond (Badam) Allergy Test By ImmunoCAP,test,"1,200"
+SE204,Apple (Seb) Allergy Test By ImmunoCAP,test,"1,200"
+SE207,Banana (Kela) Allergy Test By ImmunoCAP,test,"1,200"
+SE211,Beef Allergy Test By ImmunoCAP,test,"1,200"
+SE212,Bermuda Grass (Cynodon dactylon / Doob) Allergy Test By ImmunoCAP,test,"1,200"
+SE205,Brinjal (Baingan) Allergy Test By ImmunoCAP,test,"1,200"
+SE216,Buckwheat (Kutu) Allergy Test By ImmunoCAP,test,"1,200"
+SE217,Cabbage (Bandgobi) Allergy Test By ImmunoCAP,test,"1,200"
+SE025,Candida Albicans Allergy Test By ImmunoCAP,test,"1,200"
+SE218,Carrot (Gajar) Allergy Test By ImmunoCAP,test,"1,200"
+SE219,Casein Allergy Test By ImmunoCAP,test,"1,200"
+SE220,Cashew (Kaju) Allergy Test By ImmunoCAP,test,"1,200"
+SE221,Cat Dander / Epithelium Allergy Test By ImmunoCAP,test,"1,200"
+SE223,Celery (Ajmoda) Allergy Test By ImmunoCAP,test,"1,200"
+BC107,Ceruloplasmin Test,test,"1,200"
+SE341,Cheese (Cheddar) Allergy Test By ImmunoCAP,test,"1,200"
+SE227,Chicken (Murgi) Allergy Test By ImmunoCAP,test,"1,200"
+SE225,Chickpea (Kabuli chana) Allergy Test By ImmunoCAP,test,"1,200"
+SE229,Cladosporium Herbarum Allergy Test By ImmunoCAP,test,"1,200"
+SE026,Cocklebur (Bichha / Kutta) Allergy Test By ImmunoCAP,test,"1,200"
+SE230,Cockroach Allergy Test By ImmunoCAP,test,"1,200"
+SE231,Cocoa Allergy Test By ImmunoCAP,test,"1,200"
+SE232,Coconut (Nariyal) Allergy Test By ImmunoCAP,test,"1,200"
+SE234,Coffee Allergy Test By ImmunoCAP,test,"1,200"
+BC125,"Cortisol Suppression by Dexamethasone Test, Overnight High Dose",test,"1,200"
+SE028,Cottonwood Allergy Test By ImmunoCAP,test,"1,200"
+SE418,Cow Dander Allergy Test By ImmunoCAP,test,"1,200"
+SE269,Cow Milk Allergy Test By ImmunoCAP,test,"1,200"
+SE419,Dog Dander Allergy Test By ImmunoCAP,test,"1,200"
+SE238,Egg White (Anda) Allergy Test By ImmunoCAP,test,"1,200"
+SE239,Egg Yolk (Anda) Allergy Test By ImmunoCAP,test,"1,200"
+SE030,Eucalyptus (Nilgiri / Safeda) Allergy Test By ImmunoCAP,test,"1,200"
+SE233,Fish (Machli) Allergy Test By ImmunoCAP,test,"1,200"
+BC165,Gall Bladder Stone Analysis Test,test,"1,200"
+SE242,Garlic (Lasoon) Allergy Test By ImmunoCAP,test,"1,200"
+SE032,Goosefoot (Bathua) Allergy Test By ImmunoCAP,test,"1,200"
+HM050,HAM Test (Acidified Lysis Test),test,"1,200"
+SE426,Horse Dander Allergy Test By ImmunoCAP,test,"1,200"
+SE257,Johnson Grass (Sorghum Halepense / Jowar) Allergy Test By ImmunoCAP,test,"1,200"
+BC196,Kidney Stone Analysis Test,test,"1,200"
+SE260,Lemon (Neembu) Allergy Test By ImmunoCAP,test,"1,200"
+SE261,Lentil (Dal) Allergy Test By ImmunoCAP,test,"1,200"
+SE263,Lobster Allergy Test By ImmunoCAP,test,"1,200"
+SE236,Maize (Bhutta) Allergy Test By ImmunoCAP,test,"1,200"
+SE265,Mango (Aam) Allergy Test By ImmunoCAP,test,"1,200"
+SE266,Meadow Grass (Lawn grass) Allergy Test By ImmunoCAP,test,"1,200"
+SE268,Mesquite (Pahari Keekar) Allergy Test By ImmunoCAP,test,"1,200"
+SE273,Mug Wort (Artemisia vulgaris / Barna) Allergy Test By ImmunoCAP,test,"1,200"
+SE274,Mulberry (Shahtoot) Allergy Test By ImmunoCAP,test,"1,200"
+SE275,Mushroom (Kukurmutta) Allergy Test By ImmunoCAP,test,"1,200"
+SE277,Mutton (Meat) Allergy Test By ImmunoCAP,test,"1,200"
+SE280,Oat Allergy Test By ImmunoCAP,test,"1,200"
+SE281,Olive Allergy Test By ImmunoCAP,test,"1,200"
+SE283,Orange (Santara) Allergy Test By ImmunoCAP,test,"1,200"
+SE246,Pea (Matar) Allergy Test By ImmunoCAP,test,"1,200"
+SE287,Peach (Aaru) Allergy Test By ImmunoCAP,test,"1,200"
+SE288,Peanut (Moongfali) Allergy Test By ImmunoCAP,test,"1,200"
+SE289,Pear (Nashpati) Allergy Test By ImmunoCAP,test,"1,200"
+SE290,Pecan Nut Allergy Test By ImmunoCAP,test,"1,200"
+SE293,Pigweed (Kantewali Chauli) Allergy Test By ImmunoCAP,test,"1,200"
+SE294,Pineapple (Ananas) Allergy Test By ImmunoCAP,test,"1,200"
+SE295,Pistachio (Pista) Allergy Test By ImmunoCAP,test,"1,200"
+SE297,Pork (Pig Meat) Allergy Test By ImmunoCAP,test,"1,200"
+SE298,Potato (Aloo) Allergy Test By ImmunoCAP,test,"1,200"
+SE027,Ragweed Allergy Test By ImmunoCAP,test,"1,200"
+SE276,Rapeseed (Sarson) Allergy Test By ImmunoCAP,test,"1,200"
+SE301,Rice (Chawal) Allergy Test By ImmunoCAP,test,"1,200"
+SE167,Rubella IgG & IgM Antibodies Test,test,"1,200"
+SE302,Salmon Allergy Test By ImmunoCAP,test,"1,200"
+SE439,Scrub Typhus (Tsutsugamushi) IgG Antibody Test by EIA,test,"1,200"
+SE172,Scrub Typhus IGM Antibody Test,test,"1,200"
+HP144,Second Opinion - Upto 6 slides or more Test,test,"1,200"
+HP147,Second Opinion- More Than 4 Blocks Test,test,"1,200"
+SE304,Shrimp (Prawn / Jhinga) Allergy Test By ImmunoCAP,test,"1,200"
+SE306,Spinach (Palak) Allergy Test By ImmunoCAP,test,"1,200"
+SE179,"Streptococcus Pneumoniae Antigen, Serum Test",test,"1,200"
+SE308,Timothy Grass Allergy Test By ImmunoCAP,test,"1,200"
+SE309,Tomato (Tamatar) Allergy Test By ImmunoCAP,test,"1,200"
+BC268,Transferrin Test,test,"1,200"
+SE312,Tuna Fish Allergy Test By ImmunoCAP,test,"1,200"
+SE315,Walnut (Akhrot) Allergy Test By ImmunoCAP,test,"1,200"
+SE316,Wheat (Genhu) Allergy Test By ImmunoCAP,test,"1,200"
+SE317,White Bean Allergy Test ImmunoCAP,test,"1,200"
+SE318,White Pine Tree Pollen Allergy Test By ImmunoCAP,test,"1,200"
+SE319,Willow Tree Pollen Allergy Test By ImmunoCAP,test,"1,200"
+SE206,Yeast Allergy Test By ImmunoCAP,test,"1,200"
+SE323,Anti Dnase B Test,test,"1,300"
+MI021,"Blood Culture & Sensitivity, Bactec Test",test,"1,300"
+SE069,Brucella IgG Antibodies Test,test,"1,300"
+SE070,Brucella IgM Antibodies Test,test,"1,300"
+BC011,CA 125 Test,test,"1,300"
+SE083,"Cryptosporidium Antigen Detection, Stool Test",test,"1,300"
+BC131,Cystatin C Test,test,"1,300"
+SE396,DsDNA Anti Double Stranded DNA IgG Test By EIA,test,"1,300"
+SE092,Echinococcus IgG Antibodies (Hydiated Serology) Test,test,"1,300"
+BC025,Folic Acid Test,test,"1,300"
+MI032,Fungal Culture Test,test,"1,300"
+BC166,Gastrin Test,test,"1,300"
+SE128,Herpes Simplex Virus (HSV) Types 1 & 2 IgG & IgM Antibodies (Combined),test,"1,300"
+SE132,Heterophile Antibodies (HA)- (Paul Bunnel) Test,test,"1,300"
+CY005,Liquid Based Cytology (LBC) Test,test,"1,300"
+MI020,"Paediatric- Blood Culture & Sensitivity, Bactec Test",test,"1,300"
+SE171,SCL-70 IgG Antibodies Test,test,"1,300"
+SE190,Varicella Zoster Virus (VZV) IgG Antibodies (Chicken Pox) Test,test,"1,300"
+SE191,Varicella Zoster Virus (VZV) IgM Antibodies (Chicken Pox) Test,test,"1,300"
+BC269,High Sensitivity Troponin I Test,test,"1,350"
+BC270,High Sensitivity Troponin T Test,test,"1,350"
+BC451,"Troponin I, Rapid Card Test",test,"1,350"
+BC287,17-Alpha Hydroxyprogesterone Test,test,"1,400"
+BC362,Albumin Test CSF,test,"1,400"
+BC312,Amino Acid Plasma - Qualitative Screen Test,test,"1,400"
+SE056,Anti Soluble Liver Antigen Test (Anti SLA),test,"1,400"
+BC079,Anti Thyroglobulin Antibodies (ATG) Test,test,"1,400"
+SE408,Baby Screen- Basic 5 Conditions Test,test,"1,400"
+BC087,"Beta 2 Microglobulin, Serum Test",test,"1,400"
+HP155,Bone Marrow Biopsy Test,test,"1,400"
+SE62,Cardiolipin IgG & IgM Antibodies Test,test,"1,400"
+BC122,Copper Serum Test,test,"1,400"
+MI026,Culture Helicobacter Pylori Test,test,"1,400"
+MI024,"Culture, Anaerobic Blood Bactec Test",test,"1,400"
+SE085,Cysticercus IgG Antibodies Serum Test,test,"1,400"
+BC398,DPD Deoxypyridinoline (Pyrilinks D)Urine Test,test,"1,400"
+BC156,Estriol Unconjugated Test,test,"1,400"
+MD043,Human Papillomavirus (HPV) DNA Detector Test,test,"1,450"
+BC421,PSA Profile,test,"1,450"
+PL82,D-Dimer with IL-6 (Combo),test,"1,499"
+BC261,Testosterone Free Test,test,"1,499"
+SE198,Adenovirus IgG Test,test,"1,500"
+SE199,Adenovirus IgM Test,test,"1,500"
+BC305,Alkaline Phosphatase Isoenzymes Test (Bone Fraction),test,"1,500"
+SE322,Anti Centromere Antibodies Test,test,"1,500"
+SE038,Anti Histones Antibodies Test,test,"1,500"
+SE053,Anti Saccharomyces Cerevisiae (ASCA) IgA Antibodies Test,test,"1,500"
+SE054,Anti Saccharomyces Cerevisiae (ASCA) IgG Antibodies Test,test,"1,500"
+BC080,Anti Thyroid Peroxidase Antibodies (TPO) Test,test,"1,500"
+BC352,Bile Acids Total Test,test,"1,500"
+BC097,CA 19.9 Test,test,"1,500"
+MI030,"Culture, Yersinia Test",test,"1,500"
+SE084,Cysticercosis (Taenia Solium) IgG Antibody Test CSF,test,"1,500"
+SE093,Entamoeba Histolytica AntibodiesIgG Antibodies Test,test,"1,500"
+CY007,Hemosiderin Fluid Test,test,"1,500"
+BC340,IgG Test CSF,test,"1,500"
+SE139,JO-1 IgG Antibodies Test,test,"1,500"
+SE145,LYME Disease (Borrelia Burgdorferi) IgG Antibodies Test,test,"1,500"
+SE146,LYME Disease (Borrelia Burgdorferi) IgM Antibodies Test,test,"1,500"
+HP001,Large Tissue Biopsy Test Histopathology,test,"1,500"
+SE143,Leptospira IgG Antibodies Test,test,"1,500"
+SE144,Leptospira IgM Antibodies Test,test,"1,500"
+BC225,"Nicotine / Cotinine Quantitative, Serum Test",test,"1,500"
+BC096,ca 15.3 Test,test,"1,500"
+SE094,Epstein Barr Virus (EBV) Early Antigen IgG Antibodies (EA) Test,test,"1,550"
+SE095,Epstein Barr Virus (EBV) Nuclear Antigen IgG Ab (NA) Test,test,"1,550"
+SE096,Epstein Barr Virus (EBV) Nuclear AntigenIgM Antibodies Test,test,"1,550"
+BC300,Adrenocorticotropic Hormone (ACTH) Test,test,"1,600"
+SE048,Anti Parietal Cell Antibody (APCA) Test,test,"1,600"
+BC088,"Beta 2 Microglobulin, Spot Urine Test",test,"1,600"
+BC098,CA 72.4 Test,test,"1,600"
+HP043,Estrogen Receptor (ER) Test Immunohistochemistry,test,"1,600"
+SE101,Filaria Antibody Detection Test,test,"1,600"
+MI034,Helicobacter Pylori Antigen Detection Test,test,"1,600"
+SE119,"Hepatitis C Antibody (HCV), Quantitative Test",test,"1,600"
+SE375,Liver Kidney Microsomal (LKM) Antibody Test,test,"1,600"
+BC233,Parathyroid hormone PTH Test,test,"1,600"
+HP112,Progesterone Receptor (PR) Test Immunohistochemistry,test,"1,600"
+SE175,SS-A (Ro) IgG Antibodies Test,test,"1,600"
+SE176,SS-B (La) IgG Antibodies Test,test,"1,600"
+SE014,Torch Panel IgG (5 Parameters),test,"1,600"
+SE015,Torch Panel IgM Test (5 Parameters),test,"1,600"
+SE079,Coxsackie IgG Antibody Test,test,"1,630"
+SE080,Coxsackie IgM Antibody Test,test,"1,630"
+SE409,Baby Screen- Basic 6 Conditions Test,test,"1,700"
+HP050,C-erbB-2 (HER-2/neu) Test Immunohistochemistry,test,"1,700"
+HP012,CA 125 Test Immunohistochemistry,test,"1,700"
+HP013,CA 19.9 Test Immunohistochemistry,test,"1,700"
+HP015,Calponin Test Immunohistochemistry,test,"1,700"
+HP056,Cytokeratin AE1 / AE3 Test Immunohistochemistry,test,"1,700"
+BC396,D3 Hydroxybutarate (Ketone) Test,test,"1,700"
+HP077,Epstein Barr Virus (EBV) Immunohistochemistry,test,"1,700"
+HP044,Factor VIII Test Immunohistochemistry,test,"1,700"
+HP078,GCDFP-15 Test Immunohistochemistry,test,"1,700"
+SE380,Hepatitis Delta Virus (HDV) HDV TotalAntibody Test,test,"1,700"
+SE136,Influenza A Virus IgG Antibody Test,test,"1,700"
+SE137,Influenza A Virus IgM Antibody Test,test,"1,700"
+SE435,Influenza B Virus IgM Antibody Test,test,"1,700"
+SE335,Influenza Virus B IgG Test,test,"1,700"
+BC258,Soluble Transferrin Receptor (STFR) Test,test,"1,700"
+SE180,Syphilis Antibodies Test,test,"1,700"
+BC267,Total P1NP Test,test,"1,700"
+HP152,p40 Test Immunohistochemistry,test,"1,700"
+SE037,Anti Glomerular Basement Membrane (GBM) Test,test,"1,740"
+SE433,Coxiella Burnetti IgG Antibody Test,test,"1,750"
+SE434,Coxiella Burnetti IgM Antibody Test,test,"1,750"
+SE164,Respiratory Syncytial Virus IgG (RSV IgG) Test,test,"1,799"
+SE165,Respiratory Syncytial Virus IgM (RSV IgM) Test,test,"1,799"
+HP005,ALK1 Test Immunohistochemistry,test,"1,800"
+BC077,Active Vitamin B12 (Holotranscobalamin) Test,test,"1,800"
+BC302,Aldosterone Test,test,"1,800"
+BC375,Aryl Sulphatase B Test,test,"1,800"
+BC089,Beta Crosslaps (Beta CTX) (CTX-1) Test,test,"1,800"
+HM032,CD4 & CD8 By Flowcytometry Test,test,"1,800"
+HM033,CD4 Percentage & Absolute Count Test,test,"1,800"
+BC393,CSF Index Test,test,"1,800"
+SE074,Chlamydia Pneumoniae IgG Antibodies Test,test,"1,800"
+SE075,Chlamydia Pneumoniae IgM Antibodies Test,test,"1,800"
+SE097,Epstein Barr Virus (EBV) Viral Capsid Antigen IgG Antibodies (VCA) Test,test,"1,800"
+SE098,Epstein Barr Virus (EBV) Viral Capsid Antigen IgM Antibodies (VCA) Test,test,"1,800"
+SE331,Helicobacter Pylori IgA Antibodies Test,test,"1,800"
+SE108,Helicobacter Pylori IgG Antibodies Test,test,"1,800"
+SE107,Helicobacter Pylori IgM Antibodies Test,test,"1,800"
+SE110,Hepatitis A Virus (HAV) IgG & IgM Antibodies Test,test,"1,800"
+SE120,Hepatitis E Virus IgG Antibodies (HEV IgG) Test,test,"1,800"
+SE121,Hepatitis E Virus IgM Antibodies (HEV IgM) Test,test,"1,800"
+BC202,"Lead, Spot Urine Test",test,"1,800"
+BC203,"Lead, WB EDTA Test",test,"1,800"
+SE141,Leishmania IgG Antibody (Kala-Azar) Test,test,"1,800"
+SE147,Measles (Rubeola) IgG Antibodies Test CSF,test,"1,800"
+SE148,Measles IgG Antibodies Test,test,"1,800"
+SE149,Measles IgM Antibodies Test,test,"1,800"
+SE153,Mumps IgG Antibodies Test,test,"1,800"
+SE154,Mumps IgM Antibodies Test,test,"1,800"
+SE352,Mumps virus IgG antibody Test CSF,test,"1,800"
+HP096,PS2 Test Immunohistochemistry,test,"1,800"
+SE073,Chlamydia Pneumoniae IgA Antibodies Test,test,"1,850"
+HP004,Adrenocorticotropic Hormone (ACTH) Test Immunohistochemistry,test,"1,900"
+HP057,Alpha Fetoprotein (AFP) Test Immunohistochemistry,test,"1,900"
+BC318,Anti Cyclic Citrullinated Peptide Antibodies Test (Anti CCP),test,"1,900"
+SE035,Anti Gliadin IgA Antibodies Test,test,"1,900"
+SE036,Anti Gliadin IgG Antibodies Test,test,"1,900"
+SE055,Anti Smooth Muscle Antibodies (ASMA) Test,test,"1,900"
+SE060,Aspergillosis IgG Antibodies Test,test,"1,900"
+SE061,Aspergillosis IgM Antibodies Test,test,"1,900"
+BC086,B Type Natriuretic Peptide (BNP) Test,test,"1,900"
+HP007,BCL-2 Protein (BCL-2) Test Immunohistochemistry,test,"1,900"
+HP020,CD117 / C-Kit Test Immunohistochemistry,test,"1,900"
+HP021,CD138 Test Immunohistochemistry,test,"1,900"
+HP083,CD15 Test Immunohistochemistry,test,"1,900"
+HP022,CD1A Test Immunohistochemistry,test,"1,900"
+HP023,CD20 (Pan B Cell Antigen) Test Immunohistochemistry,test,"1,900"
+HP024,CD21 Test Immunohistochemistry,test,"1,900"
+HP026,CD3 (Pan T Cell) Test Immunohistochemistry,test,"1,900"
+HP027,CD30 (Ki-1 Antigen) Test Immunohistochemistry,test,"1,900"
+HP067,CD31 Test Immunohistochemistry,test,"1,900"
+HP028,CD34 Test Immunohistochemistry,test,"1,900"
+HP029,CD4 (T Helper Cell) Test Immunohistochemistry,test,"1,900"
+HP030,CD45/ Leucocyte Common Antigen (LCA) Test Immunohistochemistry,test,"1,900"
+HP069,CD5 Test Immunohistochemistry,test,"1,900"
+HP070,CD56 Test Immunohistochemistry,test,"1,900"
+HP073,CD68 Test Immunohistochemistry,test,"1,900"
+HP031,CD8 Test Immunohistochemistry,test,"1,900"
+HP076,CD99 (MIC-2) Test Immunohistochemistry,test,"1,900"
+HP014,Calcitonin Test Immunohistochemistry,test,"1,900"
+HP016,Calretinin Test Immunohistochemistry,test,"1,900"
+HP017,Carcinoembryonic Antigen (CEA) Test Immunohistochemistry,test,"1,900"
+HP018,Cathepsin-D Test Immunohistochemistry,test,"1,900"
+HP033,Chromogranin A Test Immunohistochemistry,test,"1,900"
+SE082,"Cryptococcus Antigen, Serum Test",test,"1,900"
+HP036,Cytokeratin 5/6 Test Immunohistochemistry,test,"1,900"
+HP037,Cytokeratin 7 Test Immunohistochemistry,test,"1,900"
+HP006,DOG-1 Test Immunohistochemistry,test,"1,900"
+HP038,Desmin Test Immunohistochemistry,test,"1,900"
+SE328,Endomysial Antibody IgA Test,test,"1,900"
+HP041,Epithelial Membrane Antigen (EMA) Test Immunohistochemistry,test,"1,900"
+HM040,Factor IX Functional/Activity Test,test,"1,900"
+HP045,Follicle Stimulating Hormone (FSH) Test Immunohistochemistry,test,"1,900"
+HP046,Glial Fibrillary Acidic Protein (GFAP) Test Immunohistochemistry,test,"1,900"
+HP054,HMB-45 Test Immunohistochemistry,test,"1,900"
+HP098,Inhibin Test Immunohistochemistry,test,"1,900"
+HM056,Lupus Anticoagulant (DRVVT) Test,test,"1,900"
+HP104,Neuron Specific Enolase (NSE) Test Immunohistochemistry,test,"1,900"
+HP106,P53¬†(Mutant Wild Type) Test Immunohistochemistry,test,"1,900"
+HP107,P63 Test Immunohistochemistry,test,"1,900"
+HP108,PAN Cytokeratin Test Immunohistochemistry,test,"1,900"
+HP113,Prolactin (PRL) Test Immunohistochemistry,test,"1,900"
+HP114,Prostate Specific Antigen (PSA) Test Immunohistochemistry,test,"1,900"
+HP116,S-100 Protein Test Immunohistochemistry,test,"1,900"
+HP118,Smooth Muscle Actin (SMA) Test Immunohistochemistry,test,"1,900"
+HP119,Synaptophysin Test Immunohistochemistry,test,"1,900"
+HP120,Terminal Deoxynucleotidyl Transferase (TDT) Test Immunohistochemistry,test,"1,900"
+BC345,Thyroglobulin Test,test,"1,900"
+SE189,U1 SnRNP Antibodies Test,test,"1,900"
+HP123,Vimentin Test Immunohistochemistry,test,"1,900"
+SE040,Anti Insulin Antibodies Test,test,"1,990"
+BC303,Aldosterone 24 Hrs Urine Test  ,test,"1,999"
+BC410,Oxalate Oxalic Acid 24 Hr Urine Test,test,"1,999"
+BC275,Valproic Acid Test,test,"1,999"
+BC316,Androstenedione Test,test,"2,000"
+SE045,Anti MPO Antibodies (Anti Myleoperoxidase Antibodies)- pANCA Test,test,"2,000"
+SE052,Anti PR3 Antibodies-cANCA Test,test,"2,000"
+SE410,Baby Screen-Basic 7 Conditions Test,test,"2,000"
+SE068,Brucella IgG & IgM Antibodies Test,test,"2,000"
+BC326,Copper 24 Hrs Urine Test,test,"2,000"
+BC123,"Copper, Spot Urine Test",test,"2,000"
+HM042,Factor VIII Functional/Activity Test,test,"2,000"
+SE244,Gluten Allergy Test By ImmunoCAP,test,"2,000"
+HP053,Liver Biopsy Test Histopathology,test,"2,000"
+MD318,Maternal Cell Contamination Test,test,"2,000"
+HP103,Myeloperoxidase (MPO) Test Immunohistochemistry,test,"2,000"
+BC476,Nor Metanephrine 24 Hr Urine Test,test,"2,000"
+BC420,Protein Electrophoresis Reflex immunofixation (Qualitative) Test,test,"2,000"
+BC285,Zinc 24 Hr Urine Test,test,"2,000"
+BC284,Zinc Test,test,"2,000"
+BC286,"Zinc, Spot Urine Test",test,"2,000"
+SE321,ANCA by IFA Test,test,"2,040"
+SE327,Anti Double Stranded DNA (DsDNA) Test By IFA,test,"2,040"
+BC438,Alpha 1 Acid Glycoprotein Serum Test,test,"2,100"
+BC374,Aryl Sulphatase A Test,test,"2,100"
+HP008,BCL-6 Test Immunohistochemistry,test,"2,100"
+SE415,Baby Screen- TMS Test,test,"2,100"
+BC480F,Combined Screening (Intermediate)- AutoDELFIA (Astraia) Test,test,"2,100"
+BC480B,Combined Screening- Roche (Astraia),test,"2,100"
+BC480A,Combined Screening- Roche (SSDW),test,"2,100"
+BC486A,Early Biochemistry- Roche (SSDW) Test,test,"2,100"
+BC171,Haptoglobin Test,test,"2,100"
+BC341,Inhibin B Test,test,"2,100"
+SE140A,Legionella Pneumophila IgG Test,test,"2,100"
+SE140,Legionella Pneumophila IgM Test,test,"2,100"
+BC342,Lipoprotein Electrophoresis Test,test,"2,100"
+BC209,Manganese 24Hrs Urine Test,test,"2,100"
+BC211,"Manganese Test, WB EDTA",test,"2,100"
+BC210,"Manganese, Spot Urine Test",test,"2,100"
+SE158,Neisseria Meningitidis A C Y W135 Antigen Detection Test CSF,test,"2,100"
+SE183,"Tissue Transglutaminase, DGP TTG-DGP Screen Test",test,"2,100"
+SE188,Trypanosoma Cruzi IgG Test,test,"2,100"
+SE041,Anti Islet Cell Antibody Test,test,"2,150"
+BC319,Anti Mullerian hormone AMH Test,test,"2,150"
+SE059,"ASKA (Skeletal/ Striated Muscle Antibody), IFA Test",test,"2,200"
+BC306,Alpha-1 Antitrypsin Test,test,"2,200"
+BC309,"Aluminium Test, Serum",test,"2,200"
+HP093,Amacr (P504S) Test Immunohistochemistry,test,"2,200"
+SE034,Anti Epidermal / Pemphigus Antibody Test,test,"2,200"
+PL135,Breast Cancer Test - Essential,test,"2,200"
+HM031,"CD19, Flowcytometry Test",test,"2,200"
+HM104,CD20 By Flowcytometry Test,test,"2,200"
+HP072,CD61 Test Immunohistochemistry,test,"2,200"
+HP039,E-Cadherin (ECAD) Test Immunohistochemistry,test,"2,200"
+BC155,Erythropoietin (EPO) Level Test,test,"2,200"
+MI033,Genexpert Ultra MTB/RIF Test,test,"2,200"
+HM049,Glycophorin A (Erythroid) Test,test,"2,200"
+HM080,IgM by Flow Cytometry Blood Test,test,"2,200"
+HP085,Luteinizing Hormone (LH) Test Immunohistochemistry,test,"2,200"
+HP160,MDM2 Test Immunohistochemistry,test,"2,200"
+HP089,MUM1 Test Immunohistochemistry,test,"2,200"
+BC218A,Methylmalonic Acid Quantitative Test,test,"2,200"
+SE155,Mycoplasma Pneumoniae IgG Antibodies Test,test,"2,200"
+SE156,Mycoplasma Pneumoniae IgM Antibodies Test,test,"2,200"
+HP092,OCT-2 Test Immunohistochemistry,test,"2,200"
+HP105,P16 Test Immunohistochemistry,test,"2,200"
+HP109,PAX-5 Test Immunohistochemistry,test,"2,200"
+HP111,Placental Alkaline Phosphatase (PLAP) Test Immunohistochemistry,test,"2,200"
+BC249,RBC Folate Test,test,"2,200"
+MD092,TB PCR Test,test,"2,200"
+HP121,Thyroglobulin (TG) Test Immunohistochemistry,test,"2,200"
+HP081,Thyroid Stimulating Hormone (TSH) Test Immunohistochemistry,test,"2,200"
+BC299,Adrenaline / Epinephrine 24 Hrs Urine Test,test,"2,299"
+PL242,Prostate Health Index (PHI) Test,test,"2,299"
+HP055,34 Beta E12 (HMW-CK) Test Immunohistochemistry,test,"2,300"
+HP162,ATRX Test Immunohistochemistry,test,"2,300"
+BC469,Acetylcholine Receptor (ACHR) Antibody Test,test,"2,300"
+BC298,Adrenalin Plasma Test,test,"2,300"
+SE702,Allergy: Aspergillus Fumigatus Specific IgG Test By EIA,test,"2,300"
+HP064,Ber-EP4 Test Immunohistochemistry,test,"2,300"
+HP019,CD10 Test Immunohistochemistry,test,"2,300"
+HP025,CD23 Test Immunohistochemistry,test,"2,300"
+HP074,CD7 Immunohistochemistry Test,test,"2,300"
+HP075,CD79A Test Immunohistochemistry,test,"2,300"
+HP032,CDX-2 Test Immunohistochemistry,test,"2,300"
+BC101,Calcitonin Test,test,"2,300"
+HP034,Cyclin-D1 Test Immunohistochemistry,test,"2,300"
+HP035,Cytokeratin 19 Test Immunohistochemistry,test,"2,300"
+HP136,Cytokeratin 20 Test Immunohistochemistry,test,"2,300"
+HP040,Epidermal Growth Factor Receptor (EGFR) Test Immunohistochemistry,test,"2,300"
+HP163,Glypican-3 (GPC3) Test Immunohistochemistry,test,"2,300"
+HP047,Growth Hormone (GH) Test Immunohistochemistry,test,"2,300"
+HP079,H-Caldesmon Test Immunohistochemistry,test,"2,300"
+SE130,Herpes Simplex Virus (HSV) Type 1 IgG Test CSF,test,"2,300"
+SE332,Herpes Simplex Virus (HSV) Type 2 IgG Test CSF,test,"2,300"
+BC179,Human Epididymis Protein-4 (HE4) Test,test,"2,300"
+HM079,IgG by Flow cytometry Blood Test,test,"2,300"
+HP082,Isocitrate Dehydrogenase (IDH-1) Test Immunohistochemistry,test,"2,300"
+HP099,Kappa Light Chain Test Immunohistochemistry,test,"2,300"
+HP100,Ki-67¬†(Proliferating Cells) Test Immunohistochemistry,test,"2,300"
+HP101,Lamda Light Chain Test Immunohistochemistry,test,"2,300"
+HP102,Melan-A Immunohistochemistry Test,test,"2,300"
+HP091,Napsin A Test Immunohistochemistry,test,"2,300"
+HP117,PAX-8 Test Immunohistochemistry,test,"2,300"
+HP161,TLE1 (1F5) Test Immunohistochemistry,test,"2,300"
+HP122,Thyroid¬†Transcription Factor (TTF-1) Test Immunohistochemistry,test,"2,300"
+HP097,WT-1 Test Immunohistochemistry,test,"2,300"
+HP065,BOB1 Test Immunohistochemistry,test,"2,400"
+HP066,CD2 Test Immunohistochemistry,test,"2,400"
+HP068,CD43 Test Immunohistochemistry,test,"2,400"
+HP071,CD57 Test Immunohistochemistry,test,"2,400"
+BC397,Dopamine 24 Hr Urine Test,test,"2,400"
+BC136,Dopamine Test,test,"2,400"
+BC138,Double Marker Test,test,"2,400"
+HM052,HLA B27 (Flow Cytometry) Test,test,"2,400"
+HP080,HepPar-1 Test Immunohistochemistry,test,"2,400"
+BC184,IL-6 (Interluekin-6) Test,test,"2,400"
+HP090,Myogenin Test Immunohistochemistry,test,"2,400"
+SE364,Phosphotidylserine IgG Antibody Test,test,"2,400"
+SE365,Phosphotidylserine IgM Antibody Test,test,"2,400"
+SE337,Quantiferon TB IGRA Test,test,"2,400"
+BC427,Sphingomyelinase Niemann Pick Disease Test,test,"2,400"
+BC308,Aluminium 24 Hrs Urine Test,test,"2,500"
+BC310,"Aluminium Test, Spot Urine",test,"2,500"
+BC095,"C1 Esterase Inhibitor, Quantitative Test",test,"2,500"
+BC386,CMV IgG antibody Test CSF,test,"2,500"
+BC480G,Combined Screening (Intermediate)- Auto DELFIA (LifeCycle) Test,test,"2,500"
+BC480D,Combined Screening- AutoDELFIA (Astraia),test,"2,500"
+BC480C,Combined Screening- AutoDELFIA (LifeCycle),test,"2,500"
+BC462,Double Marker Test- Auto-Delfia,test,"2,500"
+BC486B,Early Biochemistry- AutoDELFIA (LifeCycle) Test,test,"2,500"
+SE694,Glycosaminoglycan (GAG) / Mucopolysaccharides Quantitative Test,test,"2,500"
+HP149,Histopathology: Extra Large Tissue Biopsy Test,test,"2,500"
+MD358,Influenza H3N2 Test,test,"2,500"
+CG050,Karyotyping (KT)- Postnatal Test,test,"2,500"
+SE707,Listeria Antigen Stool Test,test,"2,500"
+MD330A,MDR TB- BD MAX Test,test,"2,500"
+BC223,"Nickel, Serum Test",test,"2,500"
+BC224,"Nickel, Spot Urine Test",test,"2,500"
+BC226A,Nor Adrenaline / Nor Epinephrine Plasma Test,test,"2,500"
+BC226,Noradrenaline Urine Test,test,"2,500"
+BC256,Sex Hormone Binding Globulin (SHBG) Test,test,"2,500"
+BC279,Vitamin B2 (Riboflavin) Test,test,"2,500"
+HM005,CD3 CD4 & CD8 Test By Flowcytometry,test,"2,600"
+BC332,Cyclosporine Test,test,"2,600"
+BC132,Dehydroepiandrosterone (DHEA) Test,test,"2,600"
+SE138,Intrinsic Factor Antibody Test,test,"2,600"
+MD055,Leptospira DNA PCR Test,test,"2,600"
+SE161,Parvovirus B19 IgG Test,test,"2,600"
+SE162,Parvovirus B19 IgM Test,test,"2,600"
+HP011,Androgen Receptor (AR) Test Immunohistochemistry,test,"2,700"
+BC441,Angiotensin Converting Enzyme (ACE) Test CSF,test,"2,700"
+HP156,BRAF V600E Test Immunohistochemistry,test,"2,700"
+SE067,Bordetella Pertussis IgG Test,test,"2,700"
+SE090,Desmoglein I Antibody (DSG 1) Test,test,"2,700"
+SE091,Desmoglein III Antibody (DSG 3) Test,test,"2,700"
+SE447,Diphtheria IgG Antibody Test,test,"2,700"
+SE436,Japanese Encephalitis Virus IgM Antibody Test,test,"2,700"
+BC195,Kappa Light Chain 24 Hrs Urine Test,test,"2,700"
+BC199,Lambda Light Chain 24 Hrs Urine Test,test,"2,700"
+SE142,Leptospira IgG & IgM Test,test,"2,700"
+HP084,Myoglobin Test Immunohistochemistry,test,"2,700"
+MD099,"Parvovirus B19 DNA Qualitative, PCR Test",test,"2,700"
+BC415A,Placental Growth Factor (PLGF)- Roche (Astraia) Test,test,"2,700"
+BC415,Placental Growth Factor (PLGF)- Roche (SSDW) Test,test,"2,700"
+SE163,Pneumocystis Carinii Detection Test,test,"2,700"
+SE174,SS-A (Ro) & SS-B (La) IgG Antibodies Test,test,"2,700"
+MD101,Spinal Cerebral Ataxia (SCA) Type- 1,test,"2,700"
+MD080,Spinal Cerebral Ataxia (SCA) Type- 10,test,"2,700"
+MD081,Spinal Cerebral Ataxia (SCA) Type- 12,test,"2,700"
+MD102,Spinal Cerebral Ataxia (SCA) Type- 2,test,"2,700"
+MD103,Spinal Cerebral Ataxia (SCA) Type- 3,test,"2,700"
+MD083,Spinal Cerebral Ataxia (SCA) Type- 6,test,"2,700"
+MD084,Spinal Cerebral Ataxia (SCA) Type- 7,test,"2,700"
+SE182,Tetanus IgG Antibodies Test,test,"2,700"
+MI019,Clostridium Difficile Toxin Assay Test,test,"2,800"
+BC334,Drugs Of Abuse - Urine : 6 Drugs Test,test,"2,800"
+SE385,Hepatitis Delta virus (HDV) HDV IgMAntibody Test,test,"2,800"
+HP150,Human Herpesvirus-8 (HHV-8) Test Immunohistochemistry,test,"2,800"
+BC281,Vitamin C (Ascorbic Acid) Test,test,"2,800"
+SE047,Anti Ovary Antibodies Test,test,"2,900"
+SE412,Baby Screen- GCMS 107 Conditions Test,test,"2,900"
+BC130,CYFRA 21-1 Test,test,"2,900"
+BC135,Dihydrotestosterone (DHT) Test,test,"2,900"
+BC457,Methotrexate Level Test,test,"2,900"
+BC231,Osteocalcin Test,test,"2,900"
+BC070,Triple Marker Test- Beckman (Benetech),test,"2,900"
+BC472,Metanephrine 24 Hr Urine Test,test,"2,999"
+SE033,ANA Profile - Qualitative Test,test,"3,000"
+BC078,Alfa 2- Macroglobulin Test,test,"3,000"
+BC320,Arsenic 24 Hrs Urine Test  ,test,"3,000"
+BC084,"Arsenic, Spot Urine Test",test,"3,000"
+BC085,"Arsenic, WB EDTA Test",test,"3,000"
+BC109,Chitotriosidase (Plasma) Test,test,"3,000"
+BC481D,Combined Screening Reflex to NIPS- AutoDELFIA (Astraia),test,"3,000"
+BC481C,Combined Screening Reflex to NIPS- AutoDELFIA (LifeCycle),test,"3,000"
+BC481B,Combined Screening Reflex to NIPS- Roche (Astraia),test,"3,000"
+BC481A,Combined Screening Reflex to NIPS- Roche (SSDW),test,"3,000"
+BC137,Double Marker Reflex Test To NIPT,test,"3,000"
+CG079,FISH For X and Y Test,test,"3,000"
+BC159,Free Androgen Index Test,test,"3,000"
+BC405,"Immunoglobulin Profile,  CSF",test,"3,000"
+MD356C,Influenza Respiratory Panel- 3,test,"3,000"
+BC213,Mercury Test,test,"3,000"
+BC214,"Mercury, Spot Urine Test",test,"3,000"
+BC227,N-Terminal Pro B Type Natriuretic Peptide Test (NT-Pro BNP),test,"3,000"
+BC240,Prealbumin Test,test,"3,000"
+BC243,Procalcitonin (pct) Test,test,"3,000"
+SE013,Torch Panel IgG & IgM Test (10 Parameters),test,"3,000"
+MD352,"Toxoplasma DNA Detection Test By PCR, CSF",test,"3,000"
+MI07,AFB Drug Susceptibility Test: Amikacin,test,"3,100"
+MI08,AFB Drug Susceptibility Test: Capreomycin,test,"3,100"
+MI10,AFB Drug Susceptibility Test: Clofazimine,test,"3,100"
+MI11,AFB Drug Susceptibility Test: Ethambutol,test,"3,100"
+MI12,AFB Drug Susceptibility Test: Ethionamide,test,"3,100"
+MI13,AFB Drug Susceptibility Test: Isoniazid,test,"3,100"
+MI14,AFB Drug Susceptibility Test: Kanamycin,test,"3,100"
+MI15,AFB Drug Susceptibility Test: Levofloxacin,test,"3,100"
+MI18,AFB Drug Susceptibility Test: Ofloxacin,test,"3,100"
+MI19,AFB Drug Susceptibility Test: PAS,test,"3,100"
+MI22,AFB Drug Susceptibility Test: Rifampicin ,test,"3,100"
+MI23,AFB Drug Susceptibility Test: Streptomycin,test,"3,100"
+SE044,Anti Mitochondrial Antibodies (AMA) Test,test,"3,100"
+HM027,Anti Thrombin III Activity/Functional Test,test,"3,100"
+HM041,Factor VII Activity Test,test,"3,100"
+SE15,5-Hydroxyindoleacetic Acid (5-HIAA ) 24hrs Urine Test,test,"3,199"
+BC076,"1,25-Dihydroxy vitamin D Test",test,"3,200"
+BC461,1T Quadruple Marker- AutoDELFIA (LifeCycle) Test,test,"3,200"
+BC482A,Combined Screening with PlGF- Roche (Astraia) Test,test,"3,200"
+BC482,Combined Screening with PlGF- Roche (SSDW),test,"3,200"
+MD017,Dengue RNA PCR Test,test,"3,200"
+BC448,Double Marker Test + PLGF- Roche Test,test,"3,200"
+BC327,Fecal Calprotectin Test,test,"3,200"
+BC170,Growth Hormone Stimulation Test,test,"3,200"
+MD042,HLA B27 Test By RT PCR,test,"3,200"
+MD044,Huntington Disease Molecular Analysis Test,test,"3,200"
+MD356B,Influenza Respiratory  Panel- 2,test,"3,200"
+MD356A,Influenza Respiratory Panel- 1,test,"3,200"
+MD051,Japanese Encephalitis Virus Test By PCR,test,"3,200"
+CG030,Karyotyping: Blood Lympho Culture Single Test,test,"3,200"
+BC250,ROMA (Ovarian Malignancy Risk Algorithm) Test,test,"3,200"
+BC254,"Serotonin, Serum Test",test,"3,200"
+MD133,Sickle Cell Disease Mutation Screening Test,test,"3,200"
+MD082,Spinal Cerebral Ataxia (SCA) Type- 17,test,"3,200"
+MD089,"Varicella Zoster Virus (VZV) Qualitative, PCR Test",test,"3,200"
+SE194,West Nile Virus IgG Test,test,"3,250"
+SE195,West Nile Virus IgM Test,test,"3,250"
+MD151,BCR/ABL Qualitative (Philadelphia Chromosome) Test,test,"3,300"
+BC336,Drugs Of Abuse - Urine: 9 Drugs Test,test,"3,300"
+SE386,Ganglioside IgG antibody panel,test,"3,300"
+SE379,Ganglioside IgM Antibody Panel,test,"3,300"
+BC428,Thallium Serum Test,test,"3,300"
+BC262,"Thallium, Spot Urine Test",test,"3,300"
+BC251,Selenium Serum Test,test,"3,400"
+BC252,"Selenium, Spot Urine Test",test,"3,400"
+BC463,1T Penta Marker- AutoDELFIA (LifeCycle),test,"3,500"
+MI21,AFB Drug Susceptibility Test: Rifabutin ,test,"3,500"
+BC322,Cadmium 24 Hrs Urine Test  ,test,"3,500"
+BC099,Cadmium Test,test,"3,500"
+BC100,"Cadmium, Spot Urine Test",test,"3,500"
+MD008,Chlamydia Trachomatis DNA Detector Qualitative PCR Test,test,"3,500"
+BC324,Chromium 24 Hrs Urine Test,test,"3,500"
+BC329,Chromium Blood Test,test,"3,500"
+BC112,"Chromium, Spot Urine Test",test,"3,500"
+BC325,Cobalt 24 Hrs Urine Test,test,"3,500"
+BC118,"Cobalt, Spot Urine Test",test,"3,500"
+BC119,"Cobalt, WB EDTA Test",test,"3,500"
+MD024,FLT3 Mutation Detection Test,test,"3,500"
+HM109,Factor V Functional/Activity Test,test,"3,500"
+HM101,Factor XI Activity Test,test,"3,500"
+MD327,Fever Panel Qualitative By RT PCR,test,"3,500"
+HM086,HIT Heparin Induced Thrombocytopenia Test,test,"3,500"
+BC194,Kappa Free Light Chain Test,test,"3,500"
+BC201,LDH Isoenzymes Test,test,"3,500"
+BC198,Lambda Free Light Chain Test,test,"3,500"
+MD148,"Methylenetetrahydrofolate Reductase (MTHFR)- 2 Variants (C677T, A1298C) Test",test,"3,500"
+BC222,Neuron Specific Enolase (NSE) Test,test,"3,500"
+BC359,Pyruvate Pyruvic acid¬† Test,test,"3,500"
+BC425,Silver Blood Test,test,"3,500"
+BC426,Silver Urine Test,test,"3,500"
+SE716,Vitamin B3 (Niacin),test,"3,500"
+SE371,Antidiuretic Hormone Test,test,"3,600"
+MD328,Factor II (Prothrombin) Mutation Detection Test,test,"3,600"
+SE134,HIV Antibodies (confirmation) Test by Western Blot,test,"3,600"
+HP110,PD-L1 Clone SP263 Test Immunohistochemistry,test,"3,600"
+HM082,Protein S Functional / Activity Test,test,"3,600"
+BC248,Quadruple Marker Test- Beckman (Benetech),test,"3,600"
+BC366,"Amyloid A, Serum Test",test,"3,650"
+BC328,CH 50 Complement Total Test,test,"3,700"
+SE329,Endomysial Antibody IgA with Titre Test,test,"3,700"
+BC172,Haptoglobin Genotyping Test,test,"3,700"
+SE157,Myelin Associated Glycoprotein (MAG) Test,test,"3,700"
+BC083,Apolipoprotein- E Test,test,"3,800"
+BC467,DCP-Decarboxy Prothrombin PIVKA-II Test,test,"3,800"
+CG052,Karyotyping: Hematologic Malignancy Test,test,"3,800"
+MD064,"Neisseria Gonorrhoeae DNA Qualitative, PCR Test",test,"3,800"
+BC476A,Nor Metanephrine Free Plasma Test,test,"3,800"
+BC416,Porphobilinogen PBG Quantitative Urine 24 Hr Test,test,"3,800"
+BC417,"Porphobilinogen PBG Quantitative,Urine Spot Test",test,"3,800"
+BC274,Urinary VMA (Vanilyl Mandelic Acid) Test,test,"3,800"
+SE320,Amphiphysin Antibody Test,test,"3,900"
+SE039,Anti Hu Antibody Test,test,"3,900"
+SE043,Anti Ma2/Ta (PNMA2) Test,test,"3,900"
+SE058,Anti Yo Antibody Test,test,"3,900"
+SE151,Meningitis IgG Panel,test,"3,900"
+SE336,Meningitis IgM Panel,test,"3,900"
+BC259,Tacrolimus Test,test,"3,900"
+SE042,Anti Islet Cell Antibody With Titre Test,test,"3,960"
+MD094,"Adenovirus DNA PCR, Quantitative Test",test,"4,000"
+SE388,Allergy Panel - Food ( 20 allergen ),test,"4,000"
+SE443,Allergy Panel- Drugs (7 Allergen),test,"4,000"
+BC369,Antimony Blood Test,test,"4,000"
+BC370,Antimony Urine Test,test,"4,000"
+BC371,"Antimony, Urine Spot Test",test,"4,000"
+MD339,Chikungunya DNA Detection Test By PCR,test,"4,000"
+HP158,Her 2 Gastric Tissue Test Immunohistochemistry,test,"4,000"
+HM081,Protein C Antigen Test,test,"4,000"
+BC283,Vitamin K1 (Phylloquinone) Test,test,"4,000"
+BC090,Biotinidase Test,test,"4,100"
+HM106,HLA T & B Cell Crossmatch Test By Flowcytometry,test,"4,100"
+SE135,HTLV I & II Antibodies Test,test,"4,100"
+BC200,Lamotrigine Test,test,"4,100"
+BC272,TSH Receptor Antibodies Test,test,"4,100"
+MI17,AFB Drug Susceptibility Test: Moxifloxacin,test,"4,200"
+HM068,Activated Protein C Resistance (APCR) Test,test,"4,200"
+SE321T,Antineutrophil Cytoplasmic Antibodies (ANCA) Test By IFA In Dilutions,test,"4,200"
+SE445B,Bacterial Meningitis Panel - 5 antigen Serum,test,"4,200"
+SE445F,"Bacterial Meningitis Panel 5 antigen, CSF",test,"4,200"
+MD015,Cytomegalovirus (CMV) DNA Detector Qualitative PCR Test,test,"4,200"
+CG075,ETV6-RUNX1 t(12;21) (p13;q22) Test By FISH,test,"4,200"
+CG072,Iso 17q Test By FISH,test,"4,200"
+BC204,Leptin Test,test,"4,200"
+HM087,Natural Killer Cells (NKC),test,"4,200"
+BC246,Protein Electrophoresis 24 Hr Urine Test,test,"4,200"
+MD078,Rubella Qualitative PCR Test,test,"4,200"
+CG067,TCRA/D (14q11.2) Gene Rearrangement Test By FISH,test,"4,200"
+CG074,Trisomy 11 Test By FISH,test,"4,200"
+BC273,"Tumor Necrosis Factor (TNF), Alpha Test",test,"4,200"
+MI20,AFB Drug Susceptibility Test: Pyrazinamide,test,"4,300"
+MD117,Alpha Thalassemia Mutation Screening Test (3 Common Mutation),test,"4,300"
+BC314,Aminolevulinic Acid (ALA) 24 Hrs Urine Test  ,test,"4,300"
+BC315,"Aminolevulinic Acid (ALA), Spot Urine Test",test,"4,300"
+MD107,"Clostridium Difficile, PCR Test",test,"4,300"
+CG016,Deletion 7Q Test By FISH,test,"4,300"
+CG018,Deletion/Monosomy 7 Test By FISH,test,"4,300"
+CG020,E2A (TCF3) Breakapart Test By FISH,test,"4,300"
+MD110,Enterovirus PCR Test,test,"4,300"
+MD021,"Epstein Barr Virus (EBV) Qualitative, PCR Test",test,"4,300"
+MD032,"Hepatitis B Virus (HBV) DNA Detector, Qualitative Test",test,"4,300"
+MD034B,Hepatitis C (HCV) RNA By PCR Qualitative Test,test,"4,300"
+BC404,Homovanillic Acid (HVA) 24 Hr Urine Test,test,"4,300"
+BC176,Homovanillic Acid (HVA) Spot Urine Test,test,"4,300"
+CG028,IGH/FGFR3 t(4;14) Test By FISH,test,"4,300"
+CG029,IGH/MAF t(14;16) Test By FISH,test,"4,300"
+BC193,Insulin Like Growth Factor-1 (IGF-1) Test,test,"4,300"
+HM055,Leukocyte Adhesion Deficiency (LAD) Test,test,"4,300"
+BC220,"Myoglobin, Serum Test",test,"4,300"
+MD067,NPM1 Mutation Detection Test,test,"4,300"
+HM063,Protein C Activity Test,test,"4,300"
+MD155,Spinal Muscular Atrophy (SMA) SMN1 Gene Deletion Test,test,"4,300"
+MD104,TEL/AML Quantitative Test,test,"4,300"
+BC277,Vitamin A (Retinol) Test,test,"4,300"
+BC278,Vitamin B1 (Thiamine) Test,test,"4,300"
+BC280,Vitamin B6 (Pyridoxine) Test,test,"4,300"
+BC282,Vitamin E (Tocopherol) Test,test,"4,300"
+BC458,ZnT8 (ZINC TRANSPORTER 8) ANTIBODY Test,test,"4,300"
+CG008,BCR ABL t(9:22) Philadelphia Chromosome Test By FISH,test,"4,400"
+BC335,Drugs Of Abuse - Urine: 12 Drugs Test,test,"4,400"
+HP141,Histopathology: Kidney Biopsy Test With DIF,test,"4,400"
+BC181,IGF Binding Protein-3 Test,test,"4,400"
+CG073,6q Deletion Test By FISH,test,"4,500"
+SE698,Acylcarnitine Quantitative Neonatal Test,test,"4,500"
+SE444,Anti Ri Antibody Test,test,"4,500"
+BC321,Bismuth 24 Hrs Urine Test  ,test,"4,500"
+BC092,"Bismuth, Spot Urine Test",test,"4,500"
+BC093,"Bismuth, WB EDTA Test",test,"4,500"
+CG011,"CEP 8, Trisomy 8 Test By FISH",test,"4,500"
+MD035,Hepatitis C Virus (HCV) Genotyping Test,test,"4,500"
+HP148,Histopathology: Radical Tissue Biopsy Test,test,"4,500"
+MD047,Inv(16) Test,test,"4,500"
+CG066,"Inv(3) (MECOM, 3q26) Gene Rearrangement Test By FISH",test,"4,500"
+CG065,JAK2 (9p24) Gene Rearrangement Test By FISH,test,"4,500"
+MD052,"JC Virus Quantitative, PCR Test",test,"4,500"
+BC001,Oxcarbazepine Metabolite Test,test,"4,500"
+CG062,PDGFR Alpha (4q12) Gene Rearrangement Test By FISH,test,"4,500"
+CG061,PDGFR Beta (5q33) Gene Rearrangement Test By FISH,test,"4,500"
+HP049,ROS1 Test Immunohistochemistry,test,"4,500"
+CG070,RUNX-RUNX1 t(8;21) (q22;q22) Test By FISH,test,"4,500"
+MD087,Swine Flu (H1N1) Test,test,"4,500"
+CG068,iAMP21 Test By FISH,test,"4,500"
+BC103,Carbamazepine Free Test,test,"4,580"
+CG001,"14q32.3 Gene Rearrangement (ALL, NHL) Test By FISH",test,"4,600"
+CG005,AML/ETO t(8;21) Test By FISH,test,"4,600"
+CG006,ATM Deletion 11q Test By FISH,test,"4,600"
+MD486,FLT3 D835 Point Mutation Analysis Test,test,"4,600"
+MD154,HLA - B5 (B51/52) Test,test,"4,600"
+MD506,HLA B Locus Typing Any Antigen Test,test,"4,600"
+CG059,Inv(16) t(16;16) (p13.1;q22) Test By FISH,test,"4,600"
+CG032,MLL Test By FISH,test,"4,600"
+CG060,PML Ra Ra t(15;17) Test By FISH,test,"4,600"
+CG013,cMYC Breakapart Test By FISH,test,"4,600"
+CG014,Deletion 13Q Test By FISH,test,"4,700"
+BC186,"Immunotyping Qualitative, Serum Test",test,"4,700"
+MD071,Panfungal DNA Detector Test,test,"4,700"
+HP058,ALKD5F3 For Lung Tumors Test Immunohistochemistry,test,"4,800"
+MD309,Cystic Fibrosis Mutation Screening Test,test,"4,800"
+MD118,Full Gene Sequencing- HBB Test,test,"4,800"
+MD040,HIV 1 Proviral DNA Qualitative Test,test,"4,800"
+MD034,Hepatitis C (HCV) Viral Load Test By RT PCR,test,"4,800"
+CG026,IGH Gene Rearrangement Test By FISH,test,"4,800"
+CG035,Karyotyping (KT)- Prenatal test,test,"4,800"
+SE706,Orotic Acid Test,test,"4,800"
+BC493,Porphyrins Qualitative Spot Urine Test,test,"4,800"
+BC239,"Porphyrins, 24 Hrs Urine Test",test,"4,800"
+CG051,"QFPCR - 13, 18, 21, X & Y Test",test,"4,800"
+MD132,"Sanger Sequencing (SS) Variant Confirmation, Single Test",test,"4,800"
+MD106,Calreticulin Test (CALR) Mutation,test,"4,900"
+BC323,Catecholamines 24 Hrs Urine Test,test,"4,900"
+BC490,Fecal Immunochemical Test (FIT),test,"4,900"
+MD507,Hepatitis E Virus (HEV) PCR Qualitative Test,test,"4,900"
+MD061,MPL Mutation Detection Test,test,"4,900"
+BC255,"Serotonin, Urine Test",test,"4,900"
+CG053,Sperm DNA Fragmentation Test,test,"4,900"
+MD508,Typhoid DNA Test By RT PCR,test,"4,999"
+SE049,Anti Phospholipase A2 Receptor Test (PLA2R),test,"5,000"
+SE714,Bullous Pemphigoid 180,test,"5,000"
+SE715,Bullous Pemphigoid 230,test,"5,000"
+BC400,Everolimus Test,test,"5,000"
+MD551,HIV 2 RNA Quantitative,test,"5,000"
+SE381,Infectious Mononucleosis panel,test,"5,000"
+MD356D,Influenza Respiratory Advance Panel,test,"5,000"
+BC483,Integrated Screening Test,test,"5,000"
+BC470,Levetiracetam Test,test,"5,000"
+CG069,Retinoblastoma Gene 13q14 Region Test By FISH,test,"5,000"
+MD134,Sickle Cell Mutation Screening (Prenatal) Test,test,"5,000"
+BC257,Sirolimus Test,test,"5,000"
+BC266,Thyroxine Binding Globulin (TBG) Test,test,"5,000"
+HM043,Factor X Activity Test,test,"5,100"
+BC276,Vancomycin Test,test,"5,100"
+MD003,Beta Thalassemia Mutation Detection Test - Blood (5 Common Mutations),test,"5,200"
+MD014,Cytochrome P450 CYP2D6 Test,test,"5,200"
+MD030,Hepatitis B (HBV) Viral Load Test By RT PCR,test,"5,200"
+MD098,IR28b Genotype Test,test,"5,200"
+BC238,Plasma Renin Activity Test,test,"5,200"
+BC449,Vorloconazole Test,test,"5,200"
+CG010,"CEP 12, Trisomy 12 Test By FISH",test,"5,300"
+SE700,Anti IA-2 (Insulinoma Associated Antigen) Test,test,"5,400"
+HP061,Any 3 Markers Test Immunohistochemistry,test,"5,400"
+MD041,HIV 1 Viral Load Test,test,"5,400"
+BC478,HLA DSA (Donor Specific IgG Antibodies) Class I & II Test,test,"5,400"
+BC343,Oligoclonal Band Test CSF & Serum,test,"5,400"
+SE431,Pancreatic Elastase Stool Test,test,"5,400"
+HM064,Protein S Antigen- Free Test,test,"5,400"
+SE103,Galactomannan Test,test,"5,500"
+SE102,Glutamate Decarboxylase 65 (GAD 65) Antibody Paraneoplastic Syndrome Test,test,"5,500"
+MD031,Hepatitis B Virus (HBV) Basal Core Promoter Mutation Test,test,"5,500"
+CG076,IGH/CCND1 t(11;14) (q13;q32) Test By FISH,test,"5,500"
+BC414,Platelet Antibodies Qualitative test,test,"5,500"
+BC304,Alkaline Phosphatase Isoenzyme Test,test,"5,600"
+BC311,Amino Acid Quantitative Test CSF,test,"5,600"
+BC313,Amino Acid Urine - Qualitative screen Test,test,"5,600"
+MD028,Glucose 6 Phosphate Ddehydrogenase (G6PD) Gene Mutation Test,test,"5,600"
+MD074,"PML Ra Ra t(15:17), Qualitative Test",test,"5,600"
+MD075,"PML Ra Ra t(15:17), Quantitative Test",test,"5,600"
+BC492,Plasma Renin Direct Test,test,"5,600"
+MD088,Thiopurine Methyltransferase (TPMT) Genotyping Test,test,"5,600"
+MD004,"BK Virus Quantitative Test, PCR",test,"5,700"
+CG038,Deletion 20Q Test By FISH,test,"5,700"
+CG015,Deletion 5Q Test By FISH,test,"5,700"
+CG017,Deletion/Monosomy Test 5 By FISH,test,"5,700"
+MD471,JAK2 Exon 14 Mutation Test,test,"5,700"
+MD049,JAK2 V617F Mutation Detection Test,test,"5,700"
+MD010,C-KIT Mutation Test,test,"5,800"
+MD048,JAK2 Exon 12 Mutation Test,test,"5,800"
+MD022,Factor V Leiden Mutation Test,test,"5,900"
+SE353,MuSK Antibody Muscle specific KinaseAb Test,test,"5,900"
+BC431,Tobramycin Test,test,"5,900"
+MD354,UGT1A1 Genotyping for Gilbert Syndrome (Qualitative) Test,test,"5,900"
+BC440,3 Methyl Histidine Quantitative Urine Test,test,"5,950"
+BC433,"3 Methyl Histidine Quantitative, Serum Test",test,"5,950"
+BC372,"Arginine Quantitative, Serum Test",test,"5,950"
+BC373,"Arginine Quantitative, Urine Test",test,"5,950"
+BC376,"Asparagine Quantitative, Serum Test",test,"5,950"
+BC377,"Asparagine Quantitative, Urine Test",test,"5,950"
+BC378,"Aspartic Acid Quantitative, Serum Test",test,"5,950"
+BC379,"Aspartic Acid Quantitative, Urine Test",test,"5,950"
+BC385,Citrulline Quantitative Urine Test,test,"5,950"
+BC384,"Citrulline Quantitative, Serum Test",test,"5,950"
+BC394,"Cystine Quantitative, Serum Test",test,"5,950"
+BC395,"Cystine Quantitative, Urine Test",test,"5,950"
+BC432,Histidine Quantitative Serum Test,test,"5,950"
+BC402,Histidine Quantitative Urine Test,test,"5,950"
+BC217A,Methionine Quantitative Plasma Test,test,"5,950"
+BC217,"Methionine, Quantitative 24 Hrs Urine Test",test,"5,950"
+BC354,Ornithine Quantitative Plasma Test,test,"5,950"
+BC355,Ornithine Quantitative Urine Test,test,"5,950"
+BC411,Phenyl Alanine Neonatal Screen Driedblood spot Test,test,"5,950"
+BC412,"Phenylalanine Quantitative, Spot Urine Test",test,"5,950"
+BC423,Serine Quantitative Serum Test,test,"5,950"
+BC424,"Serine Quantitative, Urine 24H Test",test,"5,950"
+BC429,Threonine Quantitative Serum Test,test,"5,950"
+BC430,Threonine Quantitative Urine 24H Test,test,"5,950"
+BC413,Pheochromocytoma Marker Profile Urine 24 Hr Test,test,"5,999"
+MD005,Candida Albicans DNA Detector Test,test,"6,000"
+MD503,DPYD IVS14+1G>A Mutation Analysis Test,test,"6,000"
+MD350,DRPLA Gene Analysis Autosomal Dominant Ataxia Test,test,"6,000"
+CG019,DiGeorge Syndrome Test By FISH,test,"6,000"
+BC399,Estrone Test,test,"6,000"
+BC174,Histamine Test,test,"6,000"
+MD487,MPL-S204P Gene Analysis Test,test,"6,000"
+MD488,MPL-Y591 Gene Analysis Test,test,"6,000"
+MD152,Predictive Genetics Panel -1,test,"6,000"
+CG043,"QF-PCR (T13,T18,T21, X & Y) + MCC Tests",test,"6,000"
+MD485,SF3B1 Mutation Analysis Test,test,"6,000"
+MD465,STD Panel Qualitative PCR Test,test,"6,000"
+MD466,Varicella Zoster Virus (VZV) Quantitative PCR Test,test,"6,000"
+MD029,Hepatitis A Virus (HAV) Test by RNA PCR,test,"6,100"
+BC346,17-Ketosteroids 24 Hrs Urine Test,test,"6,200"
+BC365,"Amino Acid Quantitative, Plasma",test,"6,200"
+MD007,Chimerism (Post Transplant) Test,test,"6,200"
+MD505,HLA Celiac Disease (DQ2 & DQ8) Test,test,"6,200"
+CG031,"Karyotyping: Blood Lympho Culture, Couple Test",test,"6,200"
+HP063,Any 5 Markers Test Immunohistochemistry,test,"6,300"
+CG007,BCL6 By FISH,test,"6,500"
+SE378,"DPT Antibodies, Serum Diphtheria,Tetanus, Pertusis Antibody Tests",test,"6,500"
+MD467,Epstein Barr Virus (EBV) Quantitative PCR Test,test,"6,500"
+MD153,HLA B 57:01 Genotyping Abacavir Hypersensitivity Blood Test,test,"6,500"
+MD464,Herpes Simplex Virus (HSV) 1 & 2 Quantitative PCR Test,test,"6,500"
+BC215,Metanephrine Free Plasma Test,test,"6,500"
+MD348,Myotonic Dystrophy For DMPK Gene Test,test,"6,500"
+MD073,Philadelphia Chromosome (BCR/ABL Quantitative) Test,test,"6,500"
+SE366,"Pneumonia Panel, Viral III",test,"6,500"
+MD114,Zika Virus Test,test,"6,500"
+HP157,c-MET Test Immunohistochemistry,test,"6,500"
+MD037,Herpes Simplex Virus (HSV) 1 & 2 Qualitativ Test PCR,test,"6,600"
+CG037,Karyotyping: Products Of Conception (POC) Reflex Testing To FISH,test,"6,600"
+MD093,ACTN3 Genotyping (Sports Gene) Test,test,"6,700"
+BC164,Glutamate Decarboxylase 65 (GAD 65) Antibody Type 1 Diabetes Test,test,"6,700"
+HM057,Lymphocyte Enumeration Basic & NK Cells Test,test,"6,700"
+MD124,MLPA- Spinal Muscular Atrophy (SMA)- SMN 1&2 Test,test,"6,700"
+MD068,NRAS Mutation Detection Test,test,"6,700"
+MD085,Spinal Muscular Atrophy Microdeletion Test,test,"6,700"
+CG045,"Aneuploidy Five Probes (13, 18, 21, X & Y) By FISH Test",test,"6,800"
+MD108,Connexin 30 Mutation Detection Test,test,"6,800"
+HM062,PNH Confirmation Test Flaer Method,test,"6,800"
+SE150,Meningitis IgG & IgM Panel,test,"6,900"
+MD070,"Pan Neurotropic Virus Panel Qualitative Test By PCR, CSF",test,"6,900"
+CG080,Williams Syndrome Test By FISH,test,"6,900"
+MD001,Acute Myeloid Leukemia (AML) Panel By PCR,test,"7,000"
+MD023,FIP1L1-PDGFRA Gene Rearrangement Test By PCR,test,"7,000"
+BC160,Free Light Chain Assay (kappa & Lambda) Test - Serum,test,"7,000"
+BC161,Free Light Chain Assay (kappa & Lambda) Test - Urine,test,"7,000"
+CG027,IGH/BCL2 t(14;18) Follicular Lymphoma Test By FISH,test,"7,000"
+BC182,IgG 4 Test,test,"7,000"
+MD349,Myotonic Dystrophy For ZFN9 Gene Test,test,"7,000"
+BC185,Immunofixation Electrophoresis Quantitative 24 Hrs Urine Test,test,"7,100"
+MD053,"JC/BK Virus Quantitative, PCR Test",test,"7,100"
+BC351,17 Hydroxy Corticosteroids Urine 24 hr Test,test,"7,200"
+BC466,Aldosterone / Plasma Renin Ratio Test,test,"7,200"
+MD036,Hepatitis Delta Virus (HDV) Test - RNA PCR,test,"7,300"
+SE387,Allergy Panel- Comprehensive Mini (40 Allergen),test,"7,500"
+SE046F,"Anti NMDA Receptor / Anti Glutamate Antibody Test, CSF",test,"7,500"
+SE046,Anti NMDA Receptor Encephalitis IgG Antibodies Test,test,"7,500"
+BC484,Biotinidase Enzyme Assay Test,test,"7,500"
+BC113,Chromogranin A Test,test,"7,500"
+MD357,Adenovirus Respiratory Panel,test,"7,600"
+MD018,DPD (Dihydropyrimidine Dehydrogenase) Gene Mutation Test,test,"7,600"
+MD020,EGFR Mutation Detection Test By RTPCR,test,"7,600"
+SE356,"Ena profile/Anti Nuclear Aantibodies (ANA), Quantitative Profile",test,"7,600"
+MD320,Y Chromosome Microdeletion Test,test,"7,600"
+MD033,Hepatitis B Virus (HBV) Drug Resistance Test,test,"7,700"
+SE399,ANTI NMO PANEL (NMO with MOG),test,"7,800"
+SE401,Anti Myelin Oligodendrocyte Glycoprotein (MOG) Test,test,"7,800"
+MD006,CEBPA Mutation Detection Test,test,"7,800"
+BC106,Catecholamines Plasma Test,test,"7,800"
+PL190,Gene Sequencing (HBB) + QF-PCR (Basic) + MCC Package,test,"7,800"
+MD319,Acute Lymphoblastic Leukemia (ALL) Panel By PCR,test,"7,900"
+MD012,Cryptococcus Neoformans DNA Detector Test,test,"7,900"
+CG022,Fanconi Anemia (FA) Stress Cytogenetics Test,test,"8,000"
+MD045,IDH1 & IDH2 Gene Mutations Test,test,"8,000"
+MD050,JAK2 V617 Reflex Panel,test,"8,000"
+MD493,Leukemia Panel By RT PCR,test,"8,000"
+MD501,MLPA- IKZF1 & CDKN2A Deletion/Duplication Analysis Test,test,"8,000"
+MD492,MLPA- Lynch syndrome (HNPCC) Deletion/Duplication Analysis Test,test,"8,000"
+MD504,MLPA- Silver Russell Syndrome (SRS) Test,test,"8,000"
+MD500,MLPA- Von Hippel Lindau Syndrome (VHL) Deletion/Duplication Analysis Test,test,"8,000"
+MD046,IgVH Gene Mutation Test,test,"8,100"
+MD054,KRAS Mutation Detection Test,test,"8,100"
+MD019,MLPA- Duchenne & Becker Muscular Dystrophy (DMD/BMD) Test,test,"8,100"
+MD002,BCR ABL1 Kinase Domain Mutation Analysis Test,test,"8,400"
+SE701,Hypersensitivity Pneumonitis (HP) Panel,test,"8,400"
+SE033A,Myositis Profile (11 Antigens),test,"8,400"
+SE192,Voltage Gated Potassium Channel (VGKC) Antibody Test,test,"8,400"
+SE192F,"Voltage Gated Potassium Channel (VGKC) Antibody Test, CSF",test,"8,400"
+MI79,AFB-MOTT Drug Sensitivity Test (Rapid Grower),test,"8,500"
+BC487,GM1 Gangliosidosis Beta Galactosidase Enzyme Assay Test,test,"8,500"
+MD484,JAK2 Gene Analysis Test 2 Exons (12 & 14),test,"8,500"
+MD497,RET Oncogene- 2 Exons Test,test,"8,500"
+BC391,"CPK, Isoenzymes, Serum Test",test,"8,600"
+MD109,CYP2C19 (Clopidogrel) Genotyping Test,test,"8,600"
+HP140,Final Diagnosis Panel By IHC,test,"8,600"
+BC187,"Immunofixation Electrophoresis Quantitative, Serum Test",test,"8,600"
+PL04,Multiple Myeloma Panel,test,"8,600"
+SE416,Autoimmune Liver Diseases Profile IgG Test,test,"8,700"
+CG034,Myelodysplastic Syndrome (MDS) Panel By FISH,test,"8,900"
+BC418,Pro GRP Pro Gastrin Releasing Peptide Test,test,"8,900"
+MD026,Freidreichs Ataxia Mutation Analysis (FRDA) Test,test,"9,000"
+MD331,Sanger Sequencing (SS) Variant Confirmation Two Test,test,"9,000"
+MD091,WT1 Mutation Detection Test By PCR,test,"9,060"
+MD076,MS Prader Willi Syndrome (PWS) Test,test,"9,100"
+MD069,O6-Methylguanine Methyltransferase (MGMT) Promoter Test,test,"9,100"
+CG078,"1p19q co-deletion, 1p3619q13 By FISH",test,"9,200"
+MD149,Methylenetetrahydrofolate Reductase (MTHFR)- Factor-V & Factor-II Test,test,"9,200"
+CG012,CLL Panel Test By FISH,test,"9,300"
+MD016,"Cytomegalovirus (CMV) Quantitative, PCR Test",test,"9,300"
+CG09,EGFR Gene Amplification Test By FISH,test,"9,300"
+MI80,AFB-MOTT Drug Sensitivity Test (Slow Grower),test,"9,600"
+CG003,ALK Gene Rearrangements Test By FISH,test,"9,600"
+MD470,"Chronic Neutrophilic Leukemia (CNL), CSF3R Gene Analysis Test",test,"9,600"
+CG10,EML4 ALK Translocation Test By FISH,test,"9,600"
+MD345,"HLA DRB1, DQB1 & DPB1 (Class II) Typing Test",test,"9,600"
+HM026,Acute Leukemia Diagnostic Panel By Flowcytometry,test,"9,700"
+MD013,Cystic Fibrosis Delta F508 Gene Mutation Test,test,"9,700"
+MD119,Hemochromatosis Common Mutation Analysis Test In HFE Gene,test,"9,800"
+MD097,Hepatitis B Virus (HBV) Genotyping Test,test,"10,000"
+MD065,"Neuropathy, Ataxia & Retinitis Pigmentosa (NARP) Test",test,"10,000"
+MD495,"PDGFRA Gene Analysis Test 3 Exons (12, 14, 18)",test,"10,000"
+HM110,Acute Leukemia MRD Panel,test,"10,400"
+MD332,Congenital Adrenal Hyperplasia (CAH) MLPA Test,test,"10,400"
+PL233,Autoimmune Package For Diabetes Type 1,test,"10,500"
+MD118A,HBB Sequencing - Trio Test,test,"10,500"
+HM115,Myelodysplasia Panel By Flowcytometry,test,"10,500"
+BC477,"Beta-D-Glucan (1,3) Test",test,"10,800"
+MD060,Microsatellite Instability (MSI) Test By PCR,test,"10,800"
+SE159,Neuronal (Paraneoplastic) Antibody Panel (6 Parameters) Test,test,"10,800"
+HM067,"Von Willebrand Factor, Plasma Test",test,"10,800"
+PL216,Lung Cancer Combo Panel,test,"11,000"
+HP159,Lung Tumor Panel Immunohistochemistry,test,"11,000"
+CG033,Multiple Myeloma Test By FISH,test,"11,000"
+HM111,Myelodysplastic Syndrome (MDS) Panel By Flowcytometry,test,"11,000"
+MD122,Retinoblastoma (RB1) Deletion/Duplication Analysis Test,test,"11,000"
+MD123,Rett Syndrome (MECP2) Deletion/Duplication Analysis Test,test,"11,000"
+MD340,Sanger Sequencing (SS) Variant Confirmation Three Test,test,"11,000"
+MD344,HLA- ABC (Class 1) Typing Test,test,"11,100"
+HM047,MRD For B- ALL Test By Flowcytometry,test,"11,200"
+CG025,HER2/neu Test By FISH,test,"11,900"
+MD077,RAS Mutation Panel,test,"11,900"
+MD489,ALK Resistance Mutations Test By NGS,test,"12,000"
+MD346,Angelman Syndrome Test By MLPA,test,"12,000"
+MD342,HBB MLPA Test,test,"12,000"
+MD491,"KIT Gene Analysis, 4 Exons (9, 11, 13, 17) Test by NGS",test,"12,000"
+MD056,Lung Cancer Mutation Panel- 1,test,"12,000"
+MD329,Russell Silver Syndrome (RSS) Test,test,"12,000"
+MD086,Spino Cerebral Ataxia (SCA) Panel,test,"12,000"
+MD115,NIPT- All Chromosome Test,test,"12,200"
+MD313,Chromosomal Microarray 315K Test,test,"12,300"
+HM112,Acute Myeloid Leukemia (AML) MRD Panel By Flowcytometry,test,"12,500"
+SE699,Carnitine Free & Total Plasma Test,test,"12,500"
+HM113,Chronic Lymphocytic Leukemia (CLL) MRD Panel By Flowcytometry,test,"12,500"
+HM114,Myelodysplastic Syndrome (MDS) MRD Panel By Flowcytometry,test,"12,500"
+MD390,Disorders Of Amino Acid & Peptide Metabolism Test,test,"13,000"
+MD058,Lung Cancer Mutation Panel- 3,test,"13,000"
+HM058,Multiple Myeloma MRD Panel By Flowcytometry,test,"13,000"
+SE696,"Neuronal (Paraneoplastic) Autoantibodies Profile, CSF",test,"13,000"
+MD341,"Sanger Sequencing (SS) Variant Confirmation, Four Package",test,"13,000"
+MD479,"EGFR (T790M, L858R, Exon 19 deletion) Screening Test by ddPCR",test,"13,500"
+MD482,ctDNA for EGFR T790M & C797S Test,test,"13,500"
+MD359,4H Syndrome Gene Panel,test,"14,000"
+MD157,Acute Intermittent Porphyria (AIP) Gene Panel,test,"14,000"
+MD360,Aicardi Goutieres Syndrome Gene Panel,test,"14,000"
+MD160,Alagille Syndrome Gene Panel,test,"14,000"
+MD518,BRAF Mutation Analysis Test by NGS,test,"14,000"
+MD321,BRCA1 & BRCA2 Mutation Analysis Test By NGS,test,"14,000"
+MD365,Benign Infantile Epilepsy Gene Panel,test,"14,000"
+MD367,Brown Vialetto Van Laere Syndrome Gene Panel,test,"14,000"
+MD175,Carney Complex (PRKAR1A) Gene Panel,test,"14,000"
+MD372,Choroideremia Test,test,"14,000"
+MD181,Citrullinemia Gene Panel,test,"14,000"
+MD185,Cockayne Syndrome Gene Panel,test,"14,000"
+MD188,Congenital Afibrinogenemia Gene Panel,test,"14,000"
+MD192,Congenital Hypopituitarism Gene Panel,test,"14,000"
+MD194,Congenital Stationary Night Blindness (CSNB) Gene Panel,test,"14,000"
+MD375,Cornelia De Lange Syndrome Gene Panel,test,"14,000"
+MD378,Defects In Calcium Homeostasis Test,test,"14,000"
+MD380,Defects In Magnesium Homeostasis Test,test,"14,000"
+MD381,Defects In Renal Phosphate Handling Test,test,"14,000"
+MD382,Defects Of Renal Handling Of Amino Acids Test,test,"14,000"
+MD384,Discorders Of Hearing Loss Test,test,"14,000"
+MD386,Disorder Of Ureteral Test,test,"14,000"
+MD387,Disorders In The Metabolism Of Trace Elements & Metals Test,test,"14,000"
+MD389,Disorders Of Amino Acid Test,test,"14,000"
+MD392,Disorders Of Carbohydrate Metabolism Test,test,"14,000"
+MD394,Disorders Of Fatty Acid & Peroxisomal Test,test,"14,000"
+MD395,Disorders Of Fatty Acid Oxidation Test,test,"14,000"
+MD397,Disorders Of Lipid & Lipoprotein Metabolism Test,test,"14,000"
+MD398,Disorders Of Lysosomal Storage Test,test,"14,000"
+MD399,Disorders Of Mitochondria Test,test,"14,000"
+MD400,Disorders Of Mitochondrial Membrane Transport Test,test,"14,000"
+MD401,Disorders Of Neurotransmitters Metabolism Test,test,"14,000"
+MD402,Disorders Of Organic Acid Test,test,"14,000"
+MD404,"Disorders Of Purines, Pyrimidines & Nucleotide Metabolism Test",test,"14,000"
+MD406,Disorders Of The Metabolism Of Sterols Test,test,"14,000"
+MD407,Disorders Of Vitamins & Co-Factor Metabolism Test,test,"14,000"
+MD204,Ehlers Danlos Syndrome (EDS) Gene Panel,test,"14,000"
+MD205,Epidermolysis Bullosa Gene Panel,test,"14,000"
+MD413,Episodic Ataxia Gene Panel,test,"14,000"
+MD252,Familial Hemiplegic Migraine Gene Panel,test,"14,000"
+MD415,Fanconi Syndrome Gene Panel,test,"14,000"
+MD416,Focal Segmental Glomerulosclerosis Gene Panel,test,"14,000"
+BC158,Food Intolerance Test,test,"14,000"
+MD212,Fraser Syndrome Gene Panel,test,"14,000"
+MD214,Galactosemia Gene Panel,test,"14,000"
+MD418,Glaucoma Gene Panel,test,"14,000"
+MD219,Glycine Encephalopathy Gene Panel,test,"14,000"
+MD220,Glycogen Storage Disease (GSD) Gene Panel,test,"14,000"
+MD338,HLA DNA Typing High Resolution Test By NGS,test,"14,000"
+MD223,Haemophilia (F8 & F9) Gene Panel,test,"14,000"
+MD226,Hemophagocytic Lymphohistiocytosis (HLH) Gene Panel,test,"14,000"
+MD227,Hereditary Elliptocytosis Gene Panel,test,"14,000"
+MD231,Hereditary Pancreatitis Gene Panel,test,"14,000"
+MD232,Hereditary Spherocytosis Gene Panel,test,"14,000"
+MD233,Homocystinuria Gene Panel,test,"14,000"
+MD420,Hypercalciuria Gene Panel,test,"14,000"
+MD421,Hyperekplexia Gene Panel,test,"14,000"
+MD520,IDH1 & IDH2 Gene Analysis Test by NGS (Hotspot Regions),test,"14,000"
+MD425,Iron Sulfur (Fe-S) Cluster Biogenesis Gene Panel,test,"14,000"
+MD490,KIT Gene Analysis Test by NGS (Hotspot Regions),test,"14,000"
+MD241,Kallmann Syndrome Gene Panel,test,"14,000"
+MD243,Leber Congenital Amaurosis (LCA) Gene Panel,test,"14,000"
+MD246,Lysosomal Storage Disorders Test,test,"14,000"
+MD432,Meckel Syndrome Gene Panel,test,"14,000"
+MD433,Medullary Cystic Kidney Disease Gene Panel,test,"14,000"
+MD434,Metachromatic Leukodystrophy Gene Panel,test,"14,000"
+MD335,Mitochondrial Sequencing Test,test,"14,000"
+MD260,Mucopolysaccharidosis (MPS) Gene Panel,test,"14,000"
+MD439,Myotonia Congenita Gene Panel,test,"14,000"
+MD440,Nephrogenic Diabetes Insipidus Gene Panel,test,"14,000"
+MD442,Neurodegeneration With Brain Iron Accumulation Gene Panel,test,"14,000"
+MD262,Niemann-Pick Disease Gene Panel,test,"14,000"
+MD263,Non Immune Hydrops Gene Panel,test,"14,000"
+MD324,Oncocliffe Lynch Syndrome/HNPCC Gene Panel,test,"14,000"
+MD521,PDGFRA Gene Analysis Test by NGS (Hotspot Regions),test,"14,000"
+MD519,PIK3CA Mutation Analysis Test by NGS,test,"14,000"
+MD273,Peroxisomal Disorders Gene Panel (Includes Adrenoleukodystrophy),test,"14,000"
+MD274,Phenylketonuria (PAH) Gene Analysis Test,test,"14,000"
+MD280,Primary Hyperoxaluria Gene Panel,test,"14,000"
+MD282,Progressive Familial Intrahepatic Cholestasis Gene Panel,test,"14,000"
+MD449,Pseudohypoaldosteronism Gene Panel,test,"14,000"
+MD451,Renal Diseases Of Glucose Handling Gene Panel,test,"14,000"
+MD452,Renal Tubular Acidosis Gene Panel,test,"14,000"
+MD453,Renal Tubular Dysgenesis Gene Panel,test,"14,000"
+MD455,Retinal Dysplasia Gene Panel,test,"14,000"
+MD456,Retinitis Pigmentosa Gene Panel,test,"14,000"
+MD457,Rett Syndrome Gene Panel,test,"14,000"
+MD291,Sideroblastic Anaemia Gene Panel,test,"14,000"
+MD460,Stargardt Disease Gene Panel,test,"14,000"
+MD299,Tyrosinemia Gene Panel,test,"14,000"
+MD300,Urea Cycle Defects Gene Panel,test,"14,000"
+MD461,Vitelliform Macular Dystrophy Gene Panel,test,"14,000"
+MD462,Vitreoretinopathy Gene Panel,test,"14,000"
+MD307,Xanthinuria Gene Panel,test,"14,000"
+MD308,Xeroderma Pigmentosum Gene Panel,test,"14,000"
+MD277,Zellweger Syndrome Gene Panel,test,"14,000"
+CG004,Acute Myeloid Leukemia (AML) Panel By FISH,test,"14,300"
+MD311,MLPA- BRCA1 & BRCA2 Deletion/Duplication Test,test,"14,300"
+HM048,MRD For T- ALL Test Flowcytometry,test,"14,600"
+MD347,Beckwith Wiedemann Syndrome Test By MLPA,test,"15,000"
+MD351,DMD / BMD-79 exons Deletion / Duplication Analysis Test,test,"15,000"
+MD523,ERBB2 Mutation Analysis Test by NGS (Hotspot Regions),test,"15,000"
+MD522,GNAS McCune Albright Syndrome Test by NGS,test,"15,000"
+MD524,NTRK1 Gene Fusion Test by NGS,test,"15,000"
+MD138,Clinical Exome Sequencing Test - Carrier (Single),test,"15,100"
+MD481,ctDNA for EGFR Test,test,"15,500"
+SE442,Neuronal (Paraneoplastic) Antibody Panel (12 Parameters),test,"15,600"
+MD314,Chromosomal Microarray 750K,test,"16,000"
+MD476,RAS Extended Profiling Analysis Test by NGS,test,"16,000"
+HM034,Chronic Lymphocytic Leukemia (CLL) Comprehensive Diagnostic Panel,test,"16,200"
+HM116,Leukemia Lymphoma Panel By Flowcytometry,test,"16,200"
+CG081,NTRK1/2/3 Gene Rearrangement Test by FISH,test,"16,200"
+PL191,FISH (5 Probe) + CMA (315K) + MCC Package,test,"16,250"
+MD164,Alport Syndrome Gene Panel,test,"16,500"
+MD361,Amyotrophic Lateral Sclerosis Test,test,"17,000"
+PL191A,"CMA 315K + FISH (3 Probes- 21, X & Y)",test,"17,000"
+MD373,Ciliopathies With Major Skeletal Involvement Gene Panel,test,"17,000"
+MD374,Congenital Myasthenic Syndrome Test,test,"17,000"
+MD379,Defects In Joint Formation & Synostoses Gene Panel,test,"17,000"
+MD385,Disorder Of Osteopetrosis Related Test,test,"17,000"
+MD388,Disorders Of Abnormal Mineralization Test,test,"17,000"
+MD403,Disorders Of Osteolysis Related Test,test,"17,000"
+MD414,Familial Female Mental Retardation/Epilepsy Gene Panel,test,"17,000"
+MD211,Fatty Acid Oxidation Disorders Gene Panel,test,"17,000"
+MD417,Genetic Inflammatory /Rheumatoid Like Osteoarthropathies Gene Panel,test,"17,000"
+MD230,Hereditary Multiple Exostoses (HME) Gene Analysis Test,test,"17,000"
+MD431,Macrocephaly Gene Panel,test,"17,000"
+MD437,Muscular Dystrophy Gene Panel,test,"17,000"
+MD438,Myopathy Gene Panel,test,"17,000"
+RFX002,NIPT Reflex To Karyotyping Test,test,"17,000"
+RFX001,NIPT Reflex To QF PCR Test,test,"17,000"
+MD446,Overgrowth Syndromes With Skeletal Involvement Gene Panel,test,"17,000"
+MD270,"Pachydermoperiostosis & primary
+hypertrophic osteoarthropathy gene
+panel",test,"17,000"
+MD447,Polydactyly Syndactyly Triphalangism Gene Panel,test,"17,000"
+MD450,Rasopathies Gene Panel,test,"17,000"
+MD289,Severe Combined Immunodeficiency (SCID) Gene Panel,test,"17,000"
+MD458,Spastic Paraplegia Gene Panel,test,"17,000"
+MD090,Warfarin Clopidogrel Drug Response Test,test,"17,200"
+MD315,Clinical Exome Seqencing Test,test,"17,400"
+MD525,NTRK1/2/3 Gene Fusions Test by NGS,test,"17,500"
+MD511C,Lung Fusions Panel by NGS,test,"18,000"
+MD498,RET Oncogene- 8 Exons Test,test,"18,000"
+MD526,Tissue Specific Breast Triple Negative Test by NGS,test,"18,000"
+PL182,Karyotyping + QF-PCR (Basic) + CMA (315K) Test,test,"18,200"
+MD529,Glioma Solid Tumor Gene Panel by NGS,test,"19,000"
+MD472,Lung Cancer Mutation Analysis Test by NGS,test,"19,000"
+MD528,RET Mutation Analysis Test by NGS (Hotspot Regions),test,"19,000"
+MD145,Whole Exome Sequencing Test - Carrier (Single),test,"19,200"
+PL188,Karyotyping + QF-PCR (Basic) + CMA (315K) + MCC Package,test,"19,500"
+MD135,Clinical Exome Sequencing (CES) Test - Mitochondrial,test,"19,800"
+MD168,Aplastic Anemia Gene Panel,test,"20,000"
+MD362,Arthrogryposis & Congenital Myasthenic Syndrome Gene Panel,test,"20,000"
+MD363,Ataxia Gene Panel,test,"20,000"
+MD169,Bardet Biedl Syndrome (BBS) Gene Panel,test,"20,000"
+MD364,Bardet Biedl Syndrome Gene Panel,test,"20,000"
+MD170,Bartter Syndrome Gene Panel,test,"20,000"
+MD172,Bone-Marrow Failure Syndrome Gene Panel,test,"20,000"
+MD366,Brain Malformations Gene Panel,test,"20,000"
+MD173,C8orf37 Gene Sequencing Test,test,"20,000"
+MD368,Cakut Gene Panel,test,"20,000"
+MD369,Cardiomyopathies Gene Panel,test,"20,000"
+MD370,Cardiomyopathy Gene Panel,test,"20,000"
+MD371,Charcot Marie Tooth & Sensory Neuropathies Gene Panel,test,"20,000"
+MD184,Chronic Kidney Disease (CKD) Gene Panel,test,"20,000"
+MD180,Ciliopathy Gene Panel,test,"20,000"
+MD189,Congenital Cataract Gene Panel,test,"20,000"
+MD221,"Congenital Disorders of Glycosylation (CDG) 
+ Gene Panel",test,"20,000"
+MD191,Congenital Hepatic Fibrosis (CHF) Gene Panel,test,"20,000"
+MD193,Congenital Neutropenia Gene Panel,test,"20,000"
+MD195,Connective Tissue Disorders Gene Panel,test,"20,000"
+MD196,Corneal Dystrophy (CDs) Gene Panel,test,"20,000"
+MD376,Craniosynostosis Gene Panel,test,"20,000"
+MD377,Critical Congenital Heart Disease Gene Panel,test,"20,000"
+MD197,Cutis Laxa Gene Panel,test,"20,000"
+MD200,Deafness Gene Panel,test,"20,000"
+MD383,Diamond Blackfan Anemia Gene Panel,test,"20,000"
+MD391,Disorders Of Autism Spectrum Test,test,"20,000"
+MD393,Disorders Of Congenital Glycosylation Test,test,"20,000"
+MD396,"Disorders Of Fatty Acid, Ketone & Energy Metabolism Test",test,"20,000"
+MD405,Disorders Of Renal Test,test,"20,000"
+MD408,Dysostosis Gene Panel,test,"20,000"
+MD409,Dystonia Gene Panel,test,"20,000"
+MD410,Early Onset Juvenile Parkinsonism Gene Panel,test,"20,000"
+MD203,Ectodermal Dysplasia Gene Panel,test,"20,000"
+MD411,Epilepsy Gene Panel,test,"20,000"
+MD412,Epileptic Encephalopathy Gene Panel,test,"20,000"
+MD208,Fanconi Anemia Gene Panel,test,"20,000"
+MD419,Hereditary Spastic Paraplegia Gene Panel,test,"20,000"
+MD236,Hypercholesterolemia Gene Panel,test,"20,000"
+MD422,Hypomyelination Syndrome Gene Panel,test,"20,000"
+MD237,Icthyosis Gene Panel,test,"20,000"
+MD423,Immunodeficiency (Rheumatology) Gene Panel,test,"20,000"
+MD424,Intellectual Disability Gene Panel,test,"20,000"
+MD426,Joubert Syndrome Gene Panel,test,"20,000"
+MD242,Klippel Feil Syndrome (KFS) Gene Panel,test,"20,000"
+MD427,Leber Congenital Amaurosis Gene Panel,test,"20,000"
+MD244,Leigh Syndrome & Mitochondrial Encephalopathy Gene Panel,test,"20,000"
+MD428,Leukodystrophies Gene Panel,test,"20,000"
+MD429,Leukodystrophy Gene Panel,test,"20,000"
+MD430,Limb Hypoplasia Reduction Defects Gene Panel,test,"20,000"
+MD473,Liquid Biopsy Fusion Gene Panel,test,"20,000"
+MD249,Maturity Onset Diabetes Of The Young (MODY) & Neonatal Diabetes Gene Panel,test,"20,000"
+MD253,Meckel Gruber Syndrome Gene Panel,test,"20,000"
+MD256,Methylmalonic Aciduria Gene Panel,test,"20,000"
+MD435,Microcephaly Gene Panel,test,"20,000"
+MD257,Microphthalmia & Anophthalmia Gene Panel,test,"20,000"
+MD258,Monogenic & Syndromic Obesity Gene Panel,test,"20,000"
+MD436,Muscular Dystrophy & Congenital Myopathy Gene Panel,test,"20,000"
+MD441,Nephropathies Gene Panel,test,"20,000"
+MD261,Nephrotic Syndrome Gene Panel,test,"20,000"
+MD443,Neuropathy Gene Panel,test,"20,000"
+MD444,Neurotransmitter Disorders Gene Panel,test,"20,000"
+MD264,Noonan Syndrome Gene Panel,test,"20,000"
+MD265,Oculocutaneous Albinism (OCA) Gene Panel,test,"20,000"
+MD323,Oncocliffe Hereditary Cancer Gene Panel,test,"20,000"
+MD266,Optic Atrophy Gene Panel,test,"20,000"
+MD267,Organic Acidemia Gene Panel,test,"20,000"
+MD445,Osteogenesis Imperfecta (Oi) & Decreased Bone Density Gene Panel,test,"20,000"
+MD268,Osteogenesis Imperfecta Gene Panel,test,"20,000"
+MD269,Osteopetrosis Gene Panel,test,"20,000"
+MD276,Polycystic Kidney Disease Gene Panel,test,"20,000"
+MD278,Polycystic Liver Disease Gene Panel,test,"20,000"
+MD281,Primary immunodeficiency gene panel,test,"20,000"
+MD448,Progressive Myoclonic Epilepsy Gene Panel,test,"20,000"
+MD285,Rasopathy Gene Panel,test,"20,000"
+MD454,Renal Uricosuria & Uricemia Gene Panel,test,"20,000"
+MD287,Retinal Degeneration Gene Panel,test,"20,000"
+MD288,Seckel Syndrome Gene Panel,test,"20,000"
+MD293,Skeletal Dysplasia Gene Panel,test,"20,000"
+MD296,Sotos Syndrome Gene Panel,test,"20,000"
+MD459,Spinal Muscular Atrophy Gene Panel,test,"20,000"
+MD187,Congenital Adrenal Hyperplasia (CAH) Gene Analysis Test,test,"20,500"
+MD190,Congenital Dyserythropoietic Anemia (CDA) Gene Panel,test,"20,500"
+MD199,Cystic Fibrosis Full Gene Sequence Analysis Test,test,"20,500"
+MD201,DiGeorge Syndrome Deletion/Duplication Analysis Test,test,"20,500"
+MD202,Dyskeratosis Congenita Gene Panel,test,"20,500"
+MD206,Fabry Disease Gene Analysis Test,test,"20,500"
+MD207,Factor VII Deficiency (F7) Gene Analysis Test,test,"20,500"
+MD209,Fanconi Bickel Syndrome Gene Analysis Test,test,"20,500"
+MD210,Farber Lipogranulomatosis Gene Analysis,test,"20,500"
+MD213,Fucosidosis Gene Analysis Test,test,"20,500"
+MD222,GM1 Gangliosidosis/Mucopolysaccharidosis Type IVB Gene Analysis Test,test,"20,500"
+MD215,Galactosialidosis Gene Analysis Test,test,"20,500"
+MD216,Gaucher Disease Gene Analysis Test,test,"20,500"
+MD218,Glucose Transporter Type 1 (GLUT1) Deficiency Gene Analysis Test,test,"20,500"
+MD224,Harlequin Ichthyosis Gene Analysis Test,test,"20,500"
+MD316,Hemochromatosis HFE Full Gene Sequence Analysis Test,test,"20,500"
+MD140,Hereditary Breast & Ovarian Cancer Syndrome (HBOC) Extended Panel By NGS,test,"20,500"
+MD228,Hereditary Fructose Intolerance (ALDOB) Gene Sequencing Test,test,"20,500"
+MD229,Hereditary Hemolytic Anemia (HHA) Panel,test,"20,500"
+MD234,Hyper Immunoglobulin E syndrome (HIES) Gene Sequencing Test,test,"20,500"
+MD235,Hyperargininemia (ARG1) Gene Analysis Test,test,"20,500"
+MD238,Iron-Refractory Iron Deficiency Anemia (IRIDA) Gene Analysis Test,test,"20,500"
+MD240,Johanson-Blizzard Syndrome (JBS) Gene Analysis,test,"20,500"
+MD239,Juvenile Myelomonocytic Leukemia (JMML) Risk Stratification Gene Panel,test,"20,500"
+MD245,Leptin Deficiency (LEP) Gene Analysis Test,test,"20,500"
+MD251,MDS Prognostication And Risk Stratification Gene Panel,test,"20,500"
+MD259,MPN Prognostication & Risk Stratification Panel,test,"20,500"
+MD247,Maple Syrup Urine Disease (MSUD) Gene Panel,test,"20,500"
+MD248,Marfan syndrome (FBN1) deletion/duplication analysis Test,test,"20,500"
+MD250,McArdle Disease Gene Analysis Test,test,"20,500"
+MD254,Menkes Disease Gene Analysis Test,test,"20,500"
+MD255,Methemoglobinemia (CYB5R3) Gene Analysis Test,test,"20,500"
+MD272,PDGFRB Gene Sequencing Test,test,"20,500"
+MD496,PTEN Gene Analysis Test,test,"20,500"
+MD271,Pallister Hall Syndrome (PHS) Gene Analysis Test,test,"20,500"
+MD275,Polymerase Gamma (POLG) Gene Analysis Test,test,"20,500"
+MD279,Pompe Disease (GAA) Gene Analysis Test,test,"20,500"
+MD283,Pulmonary Alveolar Microlithiasis (PAM) Gene Analysis Test,test,"20,500"
+MD284,Pulmonary Surfactant Metabolism Dysfunction Gene Panel,test,"20,500"
+MD286,RB1 Gene Analysis (Germline) Test,test,"20,500"
+MD294,SLC26A4 Gene Analysis Test,test,"20,500"
+MD290,Sialidosis Gene Analysis Test,test,"20,500"
+MD292,Sjogren Larsson syndrome (SLS) Test,test,"20,500"
+MD295,Smith Lemli Opitz Syndrome (SLOS) Test,test,"20,500"
+MD512A,Solid Tumor Basic Panel by NGS,test,"20,500"
+MD298,TTN Gene Sequencing Test,test,"20,500"
+MD141,Targeted Exome Sequencing (TES) Test,test,"20,500"
+MD297,Thrombotic Thrombocytopenia Purpura (ADAMTS13) Gene Analysis Test,test,"20,500"
+MD217,UGT1A1 Gene Analysis Test,test,"20,500"
+MD302,Von Hippel-Lindau Syndrome (VHL) Gene Analysis Test,test,"20,500"
+MD303,Von Willebrand Factor (vWF) Gene Analysis Test,test,"20,500"
+MD304,Waardenburg Syndrome Gene Panel,test,"20,500"
+MD317,Whole Exome Sequencing Test,test,"20,500"
+MD305,Wilson Disease (ATP7B) Gene Analysis Test,test,"20,500"
+MD306,Wiskott Aldrich Syndrome (WAS) Gene Analysis Test,test,"20,500"
+MD163,Alpha Mannosidosis Gene Analysis Test,test,"21,000"
+MD165,Alstrom Syndrome (ALMS1) Gene Analysis Test,test,"21,000"
+MD167,Androgen Receptor (AR) Gene Analysis Test,test,"21,000"
+MD171,Biotinidase Deficiency (BTD) Gene Analysis Test,test,"21,000"
+MD158,Adenomatous Polyposis Coli (APC) Gene Analysis Test,test,"21,400"
+MD159,Agammaglobulinemia (BTK) Gene Analysis Test,test,"21,400"
+MD156,FGFRs Mutation Analysis Test by NGS,test,"21,400"
+MD183,Atypical Hemolytic Uremic Syndrome Test,test,"21,600"
+SE062,Autoimmune Encephalitis Panel- 1,test,"21,600"
+MD510,Biofire Gastrointestinal (GI) Stool Panel,test,"21,600"
+MD355,"Biofire ME (Meningoencephalitis) Panel, CSF",test,"21,600"
+MD509,Biofire Respiratory Pathogen Panel,test,"21,600"
+PL187,Karyotyping + QF-PCR (Basic) + CMA (750K) Package,test,"22,100"
+BC494,Neopterin Test,test,"22,200"
+MD116,NIPT- All Chromosomes + Microdeletions Test,test,"22,500"
+MD477,Somatic Cancer Mutation Panel by NGS,test,"22,500"
+MD039,HIV 1 Genotypic Resistance Test,test,"22,700"
+PL189,Karyotyping + QF-PCR (Basic) + CMA (750K) + MCC Package,test,"23,400"
+MD161,ALL Risk Stratification Gene Panel- B-ALL,test,"24,000"
+MD162,ALL Risk Stratification Gene Panel- T-ALL,test,"24,000"
+MD166,AML Risk Stratification Gene Panel,test,"24,000"
+MD312,Breast Cancer Gene Panel,test,"24,000"
+MD177,CEL/HES Prognostic Gene Panel,test,"24,000"
+MD182,CLL Prognostication/Risk Stratification Gene Panel,test,"24,000"
+MD469,CMML Risk Stratification Gene Panel,test,"24,000"
+MD174,Cantu Syndrome Panel,test,"24,000"
+MD178,Chediak Higashi Syndrome (LYST) Gene Analysis,test,"24,000"
+MD179,Chronic Myeloproliferative Disorder Gene Panel (CMPD),test,"24,000"
+MD474,Colorectal Cancer Panel by NGS,test,"24,000"
+MD186,Comprehensive Leukemia Gene Panel,test,"24,000"
+MD326,Gastrointestinal Stromal Tumor (GIST) Basic Panel by NGS,test,"24,000"
+MD478,Liquid Biopsy Test For 56 Theranostic Genes,test,"24,000"
+MD513,Myeloid Panel by NGS,test,"24,000"
+MD483,"ctDNA for Hot Spot Mutations in 4 Genes Test (EGFR, KRAS, NRAS, BRAF)",test,"24,000"
+MD512B,Solid Tumor Advanced Panel by NGS,test,"24,500"
+MD301,Usher Syndrome Gene Panel,test,"26,500"
+PL110,Autoimmune Encephalitis Panel - 2,test,"28,000"
+MD511A,Lung Cancer Basic Panel by NGS,test,"28,000"
+MD137,Clinical Exome Sequencing Test - Carrier (Couple),test,"30,100"
+MD176,Carrier screening Test,test,"30,700"
+MD511B,Lung Cancer Advance Panel by NGS,test,"35,000"
+MD527,Metastatic Melanoma Panel by NGS,test,"35,000"
+MD144,Whole Exome Sequencing Test - Carrier (Couple),test,"38,300"
+CG046,Chromosomal Microarray (CMA-HD) Test,test,"38,800"
+MD468,Somatic 161 Gene Panel,test,"39,000"
+MD136,Clinical Exome Sequencing (CES) Test - TRIOS,test,"45,000"
+MD322,Oncocliffe Comprehensive Cancer Panel,test,"50,000"
+MD143,Whole Exome Sequencing Test (WES) - TRIOS,test,"53,200"
+MD146,Whole Genome Sequencing (WGS) Test,test,"1,30,000"
+BC028,FT4 & TSH 3rd Gen Panel,package,399
+PL117,Low Energy Screening Package,package,399
+PL225,Metabolic Panel Essential,package,399
+PL121D,Vital Screening Package - Lite,package,399
+PL112,Weight Management Screening,package,399
+PL175A,Thyroid Preventive Care Package,package,449
+PL114,BP Monitoring Package- Essential,package,499
+PL199A,Full Body Checkup With Blood Group Test,package,499
+PL206,Lipid & Diabetes Monitoring Test,package,499
+PL17A,Pre Diabetic Screening Package,package,499
+PL109,Prime Full body Check Up,package,499
+PL84,Allergy Screening Package - Essential,package,599
+PL21A,Arthritis Screening Package,package,599
+PL78,Basic Body Screening Package,package,599
+PL219A,GYM Pre Screening Panel,package,599
+PL175D,Thyroid Screening Panel,package,599
+PL121,Vital Screening Package,package,599
+HM006A,Coagulation Panel Test,package,650
+HM016A,Malaria Screening Panel,package,670
+PL209,Frequent Pain Assessment Package,package,699
+PL179A,Pancreas Profile,package,699
+PL223,Pre Employment Test,package,699
+PL105,Special Full Body Package,package,699
+PL148A,Supersaver Vital Care Pack for 2,package,699
+PL40,Vitamin Profile,package,699
+PL145A,MotherHealth Package - Essential,package,750
+PL59,Bone Density Test - Essential,package,799
+BC036,Female Hormones Screening,package,799
+PL08H,Fever Package - Essential,package,799
+PL179,Gastro care package,package,799
+PL39G,Monsoon Fever Package- Essential,package,799
+PL39C,Monsoon Package - Essential,package,799
+PL11C,Partner Special Care Package,package,799
+PL228,SMAC Profile,package,799
+PL11,Smart Full Body Checkup,package,799
+PL201A,Smoking Impact Assessment Profile,package,799
+PL175B,Thyroid profile advance,package,799
+PL204,Urinary Tract Infection Panel,package,799
+PL215,Urine Profile,package,799
+SE339,Viral Markers Rapid Test,package,799
+PL11F,Winter Care Package,package,799
+PL79,HIV 1 and 2 Antibodies with full body screening,package,849
+PL103,STD Panel Essential,package,849
+PL11B,Smart Pro Full Body Checkup,package,849
+PL83,D dimer with CBC Test,package,899
+PL17B,Diabetes Profile- Essential,package,899
+PL219B,GYM Fitness Health Checkup - Male,package,899
+PL71E,Menopause Screening Panel,package,899
+PL148C,Supersaver Diabetic Profile Essential (Combo for 2),package,899
+BC043,FSH & LH Test,package,900
+PL145B,MotherHealth Silver Package,package,925
+PL109A,One-Plus-One Prime Full Body Check-Up,package,948
+PL198,Acne (Pimples) Panel,package,999
+PL01,Anemia Profile- Essential,package,999
+PL196,Chikungunya Panel,package,999
+PL17C,Diabetes Profile- Advance,package,999
+PL72,Fertility Panel - Male,package,999
+PL219D,GYM Fitness Health Checkup - Female,package,999
+PL03,Liver Kidney Function Profile,package,999
+PL39B,Monsoon Package Basic,package,999
+PL190A,Pollution Risk Assessment - Essential,package,999
+PL201B,Smoking Impact Assessment Profile Advance,package,999
+PL126,Summer Special Essential Package,package,999
+PL116,Cancer Screening Package Essential - Male,package,"1,099"
+PL17D,Diabetes Profile- Comprehensive,package,"1,099"
+PL246A,Diabetes Special Care Package - Essential with Free HsCRP,package,"1,099"
+PL124,Fit India Full Body Checkup,package,"1,099"
+PL124F,Fit India Full Body Checkup with Free Vitamin B12,package,"1,099"
+PL199B,Full Body Checkup With Urine Culture & Sensitivity Test,package,"1,099"
+PL39H,Monsoon Fever Package- Advance,package,"1,099"
+PL134G,Mother's Special Essential Care Package,package,"1,099"
+PL61A,Polycystic Ovary Syndrome (PCOS) Panel - Essential,package,"1,099"
+PL226C,Preconception Screening Package - Male,package,"1,099"
+PL102,Smart Full Body checkup with Total IgE,package,"1,099"
+PL12,Smart Plus Full Body Checkup,package,"1,099"
+PL122,Swasth Bharat Full Body Checkup,package,"1,099"
+PL245,One Plus One Vital Screening Package with Blood Sugar Fasting Free,package,"1,198"
+PL115C,Cancer Screening Profile - 2 (Female),package,"1,199"
+PL147A,Cardiac Risk Markers- Essential,package,"1,199"
+PL214A,Executive Full Body Checkup - Male (Essential),package,"1,199"
+PL220A,Fathers Special Care Package - Essential,package,"1,199"
+PL08I,Fever Package - Advance,package,"1,199"
+PL19A,Healthy Heart Package,package,"1,199"
+PL245A,Heart Day Special Package - Essential,package,"1,199"
+PL44,Immunity Test - Essential,package,"1,199"
+PL205,Nerve Health Check,package,"1,199"
+PL86D,Senior Citizen Full Body Checkup - Female (Essential),package,"1,199"
+PL85D,Senior Citizen Full Body Checkup - Male (Essential),package,"1,199"
+PL73,Smart Full Body Check up with RA factor,package,"1,199"
+PL91,Smart Full Body Checkup with CRP Test,package,"1,199"
+PL101,Smart Full Body checkup with PSA test,package,"1,199"
+PL98,Smart Full Body checkup with testosterone Test,package,"1,199"
+PL90,Smart Full body Checkup with Hs-CRP,package,"1,199"
+PL148D,Supersaver Diabetic Care Pro Pack for 2,package,"1,199"
+PL181,Vegetarians Health Checkup,package,"1,199"
+PL35,"VitaCliffe(Vitamin B12, Vitamin D,TSH)",package,"1,199"
+PL203,Vitamins & Mineral Screening Package,package,"1,199"
+PL250A,Celiac Disease Screening Package,package,"1,200"
+PL106B,Smart Pro Full Body With Vitamin Screening,package,"1,249"
+PL02,Antenatal Care Profile (ANC)- Essential,package,"1,299"
+PL115,Cancer Screening Package Essential - Female,package,"1,299"
+PL227A,Dengue Fever Panel,package,"1,299"
+PL124G,Fit India Full Body Checkup with Vitamin D,package,"1,299"
+PL176,Hypertension Profile Advance,package,"1,299"
+PL39D,Monsoon Advance Package,package,"1,299"
+PL207,Nutritional Anaemia Package,package,"1,299"
+PL190B,Pollution Risk Assessment- Advanced Test,package,"1,299"
+PL74,Smart Full Body Check up with Vitamin D,package,"1,299"
+PL99,Smart Full Body checkup with D-dimer test,package,"1,299"
+PL140A,OvaScreen Test,package,"1,300"
+PL50,Special Full Body Check up Combo for two,package,"1,349"
+PL145C,MotherHealth Gold Package,package,"1,350"
+PL153,Thalassemia Profile,package,"1,350"
+PL84B,Allergy Screening Package- Advance (Above 5 Years),package,"1,399"
+PL218A,Lipid Profile Extended,package,"1,399"
+PL95A,Pre Operative Extended Panel,package,"1,399"
+PL55A,Sedentary Lifestyle Screening Package A,package,"1,399"
+PL106D,Winter Advance Care Package,package,"1,399"
+PL210,ABPA Screen (Allergic Bronchopulmonary Aspergillosis) Test,package,"1,499"
+PL244,Advance Cardiovascular Check,package,"1,499"
+PL202,Alcohol Impact Assessment Package,package,"1,499"
+SE689C,Beverages Allergy Panel Test,package,"1,499"
+PL214D,Executive Full Body Checkup - Female (Essential),package,"1,499"
+PL47,Fatigue Syndrome Test,package,"1,499"
+PL08E,Fever Panel With Covid-19 RT PCR,package,"1,499"
+PL11A,One-Plus-One Smart Full Body Checkup,package,"1,499"
+PL81,Post Covid Checkup Package,package,"1,499"
+PL75C,Smart Pro Plus Full Body Checkup With Vitamin Screening,package,"1,499"
+SE689T,Worms Allergy Panel Test,package,"1,499"
+PL137A,Hirsutism Panel - Essential,package,"1,500"
+PL42,LBC With HPV DNA Detector Test,package,"1,500"
+PL139,Obesity Panel,package,"1,500"
+PL123B,Swasth Bharat Pro Full Body Checkup With Vitamin Screening,package,"1,549"
+PL13,Advance Full Body Checkup,package,"1,599"
+PL180C,Annual Health Checkup- Advance with Free HsCRP,package,"1,599"
+PL24,Antenatal Care Profile (ANC)- Advance,package,"1,599"
+PL21B,Arthritis Package - Essential,package,"1,599"
+PL146L,BharatFit Diabetes Check Package,package,"1,599"
+PL134B,Brother's Special Care Package,package,"1,599"
+PL115A,Cancer Screening Package Advance - Female,package,"1,599"
+PL116A,Cancer Screening Package Advance - Male,package,"1,599"
+PL111,Covid Recovery Package,package,"1,599"
+PL246C,Diabetes Special Care Package - Advance with Free HsCRP,package,"1,599"
+PL214B,Executive Full Body Checkup - Male (Advance),package,"1,599"
+PL134,Father's Special Care Package,package,"1,599"
+PL220B,Fathers Special Care Package - Advance,package,"1,599"
+PL08S,Fever Package Advance Plus,package,"1,599"
+PL246E,Fit India Full Body Checkup With Vitamin Screening with Free HsCRP,package,"1,599"
+PL125,Fit India Full Body checkup with Vitamin Screening,package,"1,599"
+PL178,Fitness Check package,package,"1,599"
+PL19B,Healthy Heart Advance Package,package,"1,599"
+PL245B,Heart Day Special Package - Advance,package,"1,599"
+PL134A,Mother's Special Advance Care Package,package,"1,599"
+PL61B,Polycystic Ovary Syndrome (PCOS) Panel- Advance,package,"1,599"
+PL134C,Sister's Special Care Package,package,"1,599"
+PL75,Smart Plus Full Body Checkup With Vitamin Screening,package,"1,599"
+PL124E,Smart Plus Full Body Checkup with Vitamin Screening & Free Heart Risk Assessment (HsCRP),package,"1,599"
+PL75B,Special Health Care Package,package,"1,599"
+PL123,Swasth Bharat Full Body Checkup with Vitamin screening,package,"1,599"
+PL45A,Women Health package,package,"1,599"
+SE689G,Dairy Allergy Panel Test,package,"1,699"
+PL227B,Dengue Fever Panel - Advance,package,"1,699"
+SE689L,Dust Allergy Panel Test,package,"1,699"
+PL190C,Pollution Risk Assessment- Comprehensive Package,package,"1,699"
+PL226A,Premarital Screening Package - Male,package,"1,699"
+PL75D,Smart Plus Full Body Checkup With Vitamin & Arthritis (RA Factor) Test,package,"1,699"
+PL249B,Winter Special offer with Free Allergy Testing,package,"1,699"
+PL249C,Winter Special offer with Free Cardiac Screening,package,"1,699"
+PL249A,Winter Special offer with free Arthritis Testing,package,"1,699"
+PL56,Cardiac Risk Markers With Full Body Screening,package,"1,799"
+PL147B,Cardiac Risk Markers- Advanced,package,"1,799"
+PL230,Early Detection Package,package,"1,799"
+PL53A,Fitness Package Essential,package,"1,799"
+PL226B,Premarital Screening Package - Female,package,"1,799"
+PL127,Summer Special Advance Package,package,"1,799"
+SE89,"Dengue IGG & IGM Antibody Test, EIA",package,"1,800"
+SE005A,Dengue Panel by EIA,package,"1,800"
+PL201C,Full Body Check Up With Smoking Impact Assessment Profile,package,"1,899"
+PL46,Hair Fall Screening Package,package,"1,899"
+PL128D,Mother’s Special Stay Fit Full Body Checkup with Free RA Factor,package,"1,899"
+SE689D,Oil Seeds Allergy Panel Test,package,"1,899"
+PL126A,One Plus One Summer Special Essential Package,package,"1,899"
+PL55,Sedentary Lifestyle Screening Panel Test,package,"1,899"
+PL128A,Stay Fit Plus Full Body Checkup With Free RA Factor - Female,package,"1,899"
+PL129A,Stay Fit Plus Full Body Checkup With Free RA Factor - Male,package,"1,899"
+SE689Q,Weed Allergy Panel Test,package,"1,899"
+BC060,Testosterone Free And Total,package,"1,920"
+PL13E,Advance Full Body Checkup With Alcohol Impact Assessment,package,"1,999"
+PL243,Advance Glucometabolic Profile,package,"1,999"
+PL24A,Antenatal Care Profile (ANC) - Comprehensive,package,"1,999"
+PL60,Bone Density Test - Advance,package,"1,999"
+PL239,Bone Vitamin Profile,package,"1,999"
+PL115B,Cancer Advance Profile - 2 (Female),package,"1,999"
+PL147C,Cardiac Profile - Essential,package,"1,999"
+PL197,Covid Inflammatory Panel,package,"1,999"
+PL241,Day to Day Toxic Elements Profile,package,"1,999"
+PL227C,Dengue Fever Panel - Comprehensive,package,"1,999"
+PL214E,Executive Full Body Checkup - Female (Advance),package,"1,999"
+PL08F,Fever Panel with LFT and Covid RTPCR,package,"1,999"
+SE689S,Fibres Allergy Panel Test,package,"1,999"
+PL134D,Grandma's Special Care Package,package,"1,999"
+PL134E,Grandpa's Special care package,package,"1,999"
+PL43,Immunity Test - Advanced,package,"1,999"
+PL177,Immunity care package,package,"1,999"
+SE689J,Insects Allergy Panel Test,package,"1,999"
+PL39I,Monsoon Fever Package- Comprehensive,package,"1,999"
+PL39A,Monsoon Package Advance,package,"1,999"
+PL39E,Monsoon Special Package,package,"1,999"
+PL48,Obesity Screening Package,package,"1,999"
+PL246B,One Plus One Diabetes Special Care Package - Essential with Free HsCRP,package,"1,999"
+PL61C,Polycystic Ovary Syndrome (PCOS) Panel- Comprehensive,package,"1,999"
+PL129,StayFit Full Body Checkup - Female,package,"1,999"
+PL128,StayFit Full Body Checkup - Male,package,"1,999"
+PL80D,Winter Special Care Package,package,"1,999"
+PL112A,Womens Weight Management Panel,package,"1,999"
+PL76,Advance Full Body Checkup with Covid Antibody,package,"2,099"
+PL213B,Couple Health Checkup Package Advance,package,"2,099"
+PL08J,Fever Package - Comprehensive,package,"2,099"
+PL53B,Fitness Package Advanced - Male,package,"2,099"
+PL211,Gut Health Package,package,"2,099"
+PL218B,Lipid Profile Comprehensive,package,"2,099"
+PL134H,One Plus One Mother's Special Essential Care Package,package,"2,099"
+PL124A,One-Plus-One Fit India Full Body Checkup,package,"2,099"
+PL71A,AMH Profile (Female),package,"2,199"
+PL14,Advance Plus Full Body Checkup,package,"2,199"
+PL180D,Annual Health Checkup- Advance Plus with Free HsCRP,package,"2,199"
+SE689A,Cereals Allergy Panel Test,package,"2,199"
+PL220C,Fathers Special Care Package - Comprehensive,package,"2,199"
+PL134I,Mother's Special Comprehensive Care Package,package,"2,199"
+PL222B,One Plus One Family Duo Package,package,"2,199"
+PL245D,One plus One Heart Day Essential Special Package,package,"2,199"
+PL226D,Preconception Screening Package - Female,package,"2,199"
+PL86E,Senior Citizen Full Body Checkup - Female (Advance),package,"2,199"
+PL85E,Senior Citizen Full Body Checkup - Male (Advance),package,"2,199"
+PL212,Summer Special Comprehensive Package,package,"2,199"
+SE689R,Trees Allergy Panel Test,package,"2,199"
+PL49,STD Panel Essential Plus,package,"2,200"
+PL138,Anemia Profile- Advance Package,package,"2,299"
+PL53C,Fitness Package Advanced - Female,package,"2,299"
+PL103C,Sexual Wellness Check up Panel,package,"2,299"
+PL45B,Womens Day Special Full Body Check up with Ovarian Cancer Screening,package,"2,299"
+PL154,"Rheumatoid Panel (Rheumatoid Factor, Anti CCP) Test",package,"2,300"
+PL13B,Advance Full Body Checkup With Cancer Screening- Male,package,"2,349"
+PL140B,OvaScreen Advanced Panel,package,"2,350"
+PL13D,Advance Full Body Checkup With Hypertension Profile,package,"2,499"
+PL13A,Advance Full Body Health Check Package with Thyroid Panel,package,"2,499"
+PL84A,Allergy Screening Package- Advance (Below 5 Years),package,"2,499"
+PL146K,BharatFit Healthy Heart Package,package,"2,499"
+SE689F,Dry Fruits Allergy Panel Test,package,"2,499"
+SE689M,Dust Mites Panel Test,package,"2,499"
+SE689K,Grasses Allergy Panel Test,package,"2,499"
+SE689N,Molds Yeast Allergy Panel Test,package,"2,499"
+PL74B,One Plus One Smart Full Body Check Up With Vitamin D,package,"2,499"
+PL144,Polycystic Ovary Syndrome (PCOS) Panel - Comprehensive Plus,package,"2,499"
+PL175C,Thyroid Profile Extensive,package,"2,499"
+PL208,Vasculitis Panel,package,"2,499"
+PL45,Women Smart Health Package,package,"2,499"
+PL150,Acute Hepatitis Marker Profile,package,"2,500"
+SE71,"Chlamydia Trachomatis IgA, IgG & IgM Antibodies Test",package,"2,500"
+PL194A,Combined Screening with Haemoglobinopathies- Roche (SSDW) Test,package,"2,500"
+PL136,Thyroid Panel Advanced,package,"2,500"
+PL13C,Advance Full Body Checkup With Cancer Screening- Female,package,"2,549"
+PL147D,Cardiac Profile - Advance,package,"2,599"
+PL124H,One Plus One Fit India Full Body Checkup with Vitamin D,package,"2,599"
+PL129B,Stay Fit Pro Full Body Checkup - Female,package,"2,599"
+PL128B,Stay Fit Pro Full Body Checkup - Male,package,"2,599"
+PL131A,Super Tax Saver Health Checkup- Female,package,"2,599"
+PL131B,Super Tax Saver Health Checkup- Male,package,"2,599"
+PL21C,Arthritis Package - Advance,package,"2,699"
+SE689AC,Asthma Rhinitis Allergy Panel Test,package,"2,699"
+SE689AB,Drugs Allergy Panel Test 12 allergens,package,"2,699"
+SE689AD,Eczema Allergy Panel Test,package,"2,699"
+PL71B,Fertility Panel - Female,package,"2,699"
+SE689I,Non Veg Allergy Panel Test,package,"2,699"
+PL80B,Winter Special Pro Package,package,"2,699"
+BC265,"Thyroid Antibodies Panel (Anti TPO, Anti TG) Test",package,"2,700"
+PL138A,Anemia Profile - Comprehensive,package,"2,799"
+SE689P,Animals Allergy Panel Test,package,"2,799"
+MD111A,Covid-19 RT PCR Test With H3N2,package,"2,799"
+SE689AA,Drugs Allergy Panel Test 24 Allergens,package,"2,799"
+SE689E,Fruits Allergy Panel Test,package,"2,799"
+PL219E,GYM Pro Health Checkup - Female,package,"2,799"
+PL219C,GYM Pro Health Checkup - Male,package,"2,799"
+SE689H,Spices Allergy Panel Test,package,"2,799"
+SE689Z,Veg Non Veg Allergy Panel Test,package,"2,799"
+SE689B,Vegetables Allergy Panel Test,package,"2,799"
+PL194B,Combined Screening with Haemoglobinopathies- Auto DELFIA (LifeCycle) Test,package,"2,800"
+PL213C,Couple Health Checkup Package Comprehensive,package,"2,899"
+PL214F,Executive Full Body Checkup - Female (Comprehensive),package,"2,899"
+MI042,Tuberculosis (TB) Panel,package,"2,950"
+PL13G,One Plus One Advance Full Body Checkup,package,"2,998"
+PL221A,One Plus One Parent's Screening Package,package,"2,998"
+PL146P,BharatFit Senior Citizen Package- Female,package,"2,999"
+PL146O,BharatFit Senior Citizen Package- Male,package,"2,999"
+PL237,Body Builder Hormones Profile,package,"2,999"
+PL147E,Cardiac Profile - Comprehensive,package,"2,999"
+PL224B,Corporate Health Checkup - Female,package,"2,999"
+PL224A,Corporate Health Checkup - Male,package,"2,999"
+PL23,Covid Management Advanced,package,"2,999"
+SE689O,Drugs Allergy Panel Test 42 Allergens,package,"2,999"
+PL214C,Executive Full Body Checkup - Male (Comprehensive),package,"2,999"
+PL71D,Fertility Panel - Advance + Haemoglobinopathies,package,"2,999"
+PL245C,Heart Day Special Package - Comprehensive,package,"2,999"
+PL112B,Mens Weight Management Panel,package,"2,999"
+PL246D,One Plus One Diabetes Special Care Package - Advance with Free HsCRP,package,"2,999"
+PL246F,One Plus One Fit India Full Body Checkup With Vitamin Screening with Free HsCRP,package,"2,999"
+PL245E,One Plus One Heart Day Advance Special Package,package,"2,999"
+PL134F,One Plus One Mother's Special Advance Care Package,package,"2,999"
+PL106F,One Plus One Rakshabandhan Special Package,package,"2,999"
+PL75E,One Plus One Smart Plus Full Body Checkup With Vitamin Screening,package,"2,999"
+PL123A,One-Plus-One Swasth Bharat Full Body Checkup With Vitamin Screening,package,"2,999"
+SE689AE,Pollen Allergy Panel Test (42 Allergens),package,"2,999"
+PL55C,Sedentary Lifestyle Screening Package C,package,"2,999"
+PL86F,Senior Citizen Full Body Checkup - Female (Comprehensive),package,"2,999"
+PL85F,Senior Citizen Full Body Checkup - Male (Comprehensive),package,"2,999"
+PL129C,Stay Fit Ultra Full Body Checkup - Female,package,"2,999"
+PL128C,Stay Fit Ultra Full Body Checkup - Male,package,"2,999"
+PL16,Super Advance Full Body Checkup Female,package,"2,999"
+PL15,Super Advance Full Body Checkup Male,package,"2,999"
+PL148E,Supersaver Fit India Full Body Checkup Pack for 2,package,"2,999"
+PL61D,Women Health Package Comprehensive with PCOS Panel,package,"2,999"
+PL180E,One Plus One Annual Health Checkup- Advance with Free HsCRP,package,"3,099"
+PL21D,Arthritis Package - Comprehensive,package,"3,199"
+PL53E,Fitness Package Comprehensive - Female,package,"3,199"
+PL53D,Fitness Package Comprehensive - Male,package,"3,199"
+PL103A,STD Panel Advance,package,"3,199"
+PL174,Allergic Bronchopulmonary Aspergillosis (ABPA) Panel,package,"3,200"
+PL08G,Fever Comprehensive Package With H3N2,package,"3,299"
+PL127A,One Plus One Summer Special Advance Package,package,"3,399"
+PL231,Comprehensive Health Package,package,"3,499"
+PL55B,Sedentary Lifestyle Screening Package B,package,"3,499"
+PL232,Total Body Wellness Package,package,"3,499"
+PL221B,One Plus One Grand Parent's Screening Package,package,"3,699"
+PL39F,One-Plus-One Monsoon Special Package,package,"3,699"
+PL80A,One-Plus-One Winter Special Package,package,"3,699"
+PL148F,Supersaver Senior Citizen Care Package Pack for 2,package,"3,699"
+PL80E,Winter Full Body Buy 1 Get One Package,package,"3,699"
+PL152,Hepatitis B Profile Test,package,"3,700"
+PL145D,MotherHealth Platinum Package,package,"3,750"
+PL195A,Karyotyping + DNA Storage Package,package,"3,900"
+PL195B,Karyotyping + MCC Package,package,"3,900"
+PL146M,BharatFit Premium Health Check,package,"3,999"
+PL146N,BharatFit Women Care Package,package,"3,999"
+SE689Y,Food Allergy Panel Test,package,"3,999"
+PL21F,Full Body Check Up With Arthritis Package,package,"3,999"
+PL19C,Healthy Heart Premium Package,package,"3,999"
+SE071,Celiac Profile Test,package,"4,100"
+PL180F,One Plus One Annual Health Checkup- Advance Plus with Free HsCRP,package,"4,199"
+PL134J,One Plus One Mother's Special Comprehensive Care Package,package,"4,199"
+PL212A,One Plus One Summer Special Comprehensive Package,package,"4,199"
+PL14A,One-Plus-One Advance Plus Full Body Checkup,package,"4,199"
+PL103B,STD Panel Comprehensive,package,"4,199"
+PL137B,Hirsutism Panel - Advanced,package,"4,400"
+SE689X,Drug Inhalant Allergy Panel Test,package,"4,499"
+PL15A,Master Full Body Checkup Package - Male,package,"4,499"
+PL16A,Master Full Body Checkup Package - Women,package,"4,499"
+PL240,Vitamin B Complex Profile,package,"4,499"
+SE181,Systemic Lupus Erythematosus (SLE) Panel,package,"4,500"
+PL150A,Hepatitis Screening Panel,package,"4,599"
+PL55D,Sedentary Lifestyle Screening Package D,package,"4,599"
+PL131D,Super Tax Saver Health Checkup One Plus One- Female,package,"4,798"
+PL131C,Super Tax Saver Health Checkup One Plus One- Male,package,"4,798"
+SE689AF,"Allergy Panel: Food, Drugs & Inhalant (150 Allergens) By EIA",package,"4,999"
+PL236F,Anti Aging Profile (Female),package,"4,999"
+PL236M,Anti Aging Profile (Male),package,"4,999"
+PL55E,Sedentary Lifestyle Screening Package E,package,"4,999"
+PL142,Coagulation Panel Advance,package,"5,000"
+SE67,"Chlamydia Pneumoniae IgA, IgG, IgM Antibodies Test",package,"5,100"
+PL13F,Advance Full Body Checkup with STD Panel Comprehensive,package,"5,199"
+PL235B,Enteric Fever (2nd Week Of Illness),package,"5,199"
+SE695,Desmoglein (DSG) 1 & 3 Antibody Test,package,"5,400"
+PL245F,One Plus One Heart Day Comprehensive Special Package,package,"5,699"
+PL143A,Bad Obstetric History (BOH) Profile- Basic,package,"5,799"
+PL235A,Enteric Fever (1st Week Of Illness),package,"5,799"
+PL151,Anti Phospholipid Antibody (APLA) Panel,package,"6,000"
+MD132A,Sanger Sequencing (SS) Variant Confirmation Single + MCC Test,package,"6,000"
+SE063,Autoimmune Hepatitis Panel,package,"6,200"
+PL143B,Bad Obstetric History (BOH) Profile- Advance,package,"6,799"
+SE689W,Comprehensive Allergy Panel Test,package,"6,999"
+PL238,Vitamin Profile Comprehensive,package,"6,999"
+PL195C,Karyotyping + FISH (5 Probe) Package,package,"7,200"
+CG055,QFPCR + Karyotyping (KT)- Prenatal Test,package,"7,500"
+PL148,HIV-1 Monitor Test,package,"7,600"
+CG055A,QF-PCR (Basic) + Karyotyping Prenatal + MCC Package,package,"7,800"
+PL195D,Karyotyping + FISH (5 Probe) + MCC Package,package,"8,000"
+PL149,Thrombophilia Profile,package,"8,200"
+PL100,Myasthenia Gravis Panel,package,"9,600"
+PL234,Interstitial Lung Disease (ILD) Panel,package,"9,700"
+PL143C,Bad Obstetric History (BOH) Profile- Comprehensive,package,"10,999"
+MI69,AFB Susceptibility 13 Drugs Panel,package,"11,500"
+MI68,AFB Susceptibility 10 Drugs Panel,package,"11,900"
+MD062,Myeloproliferative Neoplasm (MPN) Panel By PCR,package,"12,400"
+CG077,Lung Cancer (ALK & ROS1) Gene Rearrangement Test By FISH,package,"13,000"
+CG044,Chromosomal Microarray (CMA-315K) + MCC Test,package,"13,400"
+MD011,Colorectal Cancer Panel,package,"14,600"
+CG047,Chromosomal Microarray (CMA-315K) + Karyotyping Prenatal,package,"15,300"
+CG056,Chromosomal Microarray (CMA-315K) + QFPCR Test,package,"15,300"
+PL188B,Karyotyping + CMA (315K) + MCC Package,package,"16,000"
+PL188D,QF-PCR (Basic) + CMA (315K) + DNA Storage Package,package,"16,000"
+PL188A,QF-PCR (Basic) + CMA (315K) + MCC Package,package,"16,000"
+PL188C,QF-PCR (Basic) + CMA (315K) + MCC + DNA Storage Package,package,"17,000"
+PL149A,Thrombophilia Profile- Comprehensive,package,"17,800"
+CG049,Chromosomal Microarray (CMA-750K) + MCC -1 Test,package,"18,800"
+CG054,Chromosomal Microarray (CMA-750K) + QFPCR Test,package,"19,000"
+CG048,Chromosomal Microarray (CMA-750K) + Karyotyping Prenatal Test,package,"20,000"
+PL192,FISH (5 Probe) + CMA (750K) + MCC Package,package,"20,150"
+PL189B,Karyotyping + CMA (750K) + MCC Package,package,"21,000"
+MD317B,Whole Exome Sequencing (WES) + DNA Storage Package,package,"21,500"
+MD317C,Whole Exome Sequencing (WES) + MCC Package,package,"21,500"
+MD317D,Whole Exome Sequencing (WES) + MCC + DNA Storage Package,package,"22,500"
+PL189A,QF-PCR (Basic) + CMA (750K) + MCC Package,package,"23,000"
+MD142,Whole Exome Sequencing Test (WES) + Mito,package,"23,900"
+PL193,Whole Exome Sequencing (WES) & Chromosomal Microarray (CMA-750K) Package,package,"36,000"

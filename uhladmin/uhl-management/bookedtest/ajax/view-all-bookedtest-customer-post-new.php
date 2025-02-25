@@ -76,7 +76,8 @@ if (!$result) {
 $data = [];
 while ($row = $result->fetch_assoc()) {
   $ID = $row['ID'];
-  $details_html = "<a onclick='GetCustomerDetails(" . $ID . ")' style='cursor:pointer'><span class='badge bg-info'>View</span></a>";
+  $encryptedID = base64_encode($row['ID']);
+  $details_html = "<a href='view-test-details?bookingid=" . $encryptedID . "' style='cursor:pointer'><span class='badge bg-info'>View</span></a>";
   $action_html = "<a onclick='delete_customer(" . $ID . ")' style='cursor:pointer'><span class='badge bg-info' style='cursor:pointer'><i class='fa fa-trash'></i> Delete</span></a>";
 
   // Split concatenated product details

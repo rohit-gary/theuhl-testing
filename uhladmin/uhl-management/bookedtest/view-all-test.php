@@ -101,7 +101,7 @@ $conf = new Conf();
     <?php
     include("../include/common-script.php");
     ?>
-
+    <script src="../project-assets/js/bookedtest.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
         console.log('Loading policy customer data');

@@ -62,7 +62,7 @@ $all_test = $test_obj->GetAllTestName();
       left: 0;
       width: 100%;
       height: 100%;
-      /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)); */
+       background:linear-gradient(rgb(0 0 0 / 0%), rgba(0, 0, 0, 0.6));
     }
 
     .custom-carousel-caption {
@@ -506,63 +506,79 @@ $all_test = $test_obj->GetAllTestName();
         </div>
 
         <div class="carousel-inner">
-          <!-- Main Banner -->
-          <div class="carousel-item active custom-carousel-item">
-            <div class="custom-carousel-overlay"></div>
-            <img src="project-assets/images/banner/nb-2101.png" class="d-block w-100" alt="Health Care Banner">
-            <div class="carousel-caption custom-carousel-caption">
-              <div class="custom-caption-content d-none">
+    <!-- Main Banner -->
+    <div class="carousel-item active custom-carousel-item">
+        <div class="custom-carousel-overlay"></div>
+        <!-- Desktop & Large Tablet Banner -->
+        <img src="project-assets/images/banner/nb-2101.png" class="d-none d-xl-block w-100"
+            alt="Health Care Banner">
+        <!-- Mobile & iPad Banner -->
+        <img src="project-assets/images/banner/nbm-2101.png" class="d-block d-xl-none w-100"
+            alt="Health Care Banner">
+        <div class="carousel-caption custom-carousel-caption">
+            <div class="custom-caption-content d-none">
                 <div class="custom-highlight-box">
-                  <h2 class="custom-hindi-slogan"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
-                  <h3 class="custom-company-name">United Health Lumina Plans</h3>
+                    <h2 class="custom-hindi-slogan"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
+                    <h3 class="custom-company-name">United Health Lumina Plans</h3>
                 </div>
                 <div class="custom-feature-badges">
-                  <span><i class="fas fa-star"></i> Trusted Healthcare</span>
-                  <span><i class="fas fa-shield-alt"></i> Complete Coverage</span>
-                  <span><i class="fas fa-clock"></i> 24/7 Support</span>
+                    <span><i class="fas fa-star"></i> Trusted Healthcare</span>
+                    <span><i class="fas fa-shield-alt"></i> Complete Coverage</span>
+                    <span><i class="fas fa-clock"></i> 24/7 Support</span>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <!-- Health Plans Slide -->
-          <div class="carousel-item custom-carousel-item">
-            <div class="custom-carousel-overlay"></div>
-            <img src="project-assets/images/banner/nb-202.webp" class="d-block w-100" alt="Health Plans">
-            <div class="carousel-caption custom-carousel-caption">
-              <div class="custom-caption-content d-none">
+    <!-- Health Plans Slide -->
+    <div class="carousel-item custom-carousel-item">
+        <div class="custom-carousel-overlay"></div>
+        <!-- Desktop & Large Tablet Banner -->
+        <img src="project-assets/images/banner/nb2-2502.png" class="d-none d-xl-block w-100"
+            alt="Health Care Banner">
+        <!-- Mobile & iPad Banner -->
+        <img src="project-assets/images/banner/nbm2-2502.png" class="d-block d-xl-none w-100"
+            alt="Health Care Banner">
+        <div class="carousel-caption custom-carousel-caption">
+            <div class="custom-caption-content d-none">
                 <div class="custom-highlight-box">
-                  <h2 class="custom-hindi-slogan"><b>Comprehensive Health Plans</b></h2>
+                    <h2 class="custom-hindi-slogan"><b>Comprehensive Health Plans</b></h2>
                 </div>
                 <div class="custom-feature-badges">
-                  <span><i class="fas fa-hospital"></i> Cashless Hospitals</span>
-                  <span><i class="fas fa-user-md"></i> Expert Doctors</span>
-                  <span><i class="fas fa-ambulance"></i> Emergency Care</span>
+                    <span><i class="fas fa-hospital"></i> Cashless Hospitals</span>
+                    <span><i class="fas fa-user-md"></i> Expert Doctors</span>
+                    <span><i class="fas fa-ambulance"></i> Emergency Care</span>
                 </div>
                 <a href="./all-plans" class="custom-cta-button">Explore Plans</a>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <!-- Health Tests Slide -->
-          <div class="carousel-item custom-carousel-item">
-            <div class="custom-carousel-overlay"></div>
-            <img src="project-assets/images/banner/nb-3.png" class="d-block w-100" alt="Health Tests">
-            <div class="carousel-caption custom-carousel-caption">
-              <div class="custom-caption-content">
-                <div class="custom-highlight-box">
-                  <h2 class="custom-hindi-slogan"><b>Advanced Health Tests</b></h2>
+    <!-- Health Tests Slide -->
+    <div class="carousel-item custom-carousel-item">
+        <div class="custom-carousel-overlay"></div>
+        <!-- Desktop & Large Tablet Banner -->
+        <img src="project-assets/images/banner/nb3-2502.png" class="d-none d-xl-block w-100"
+            alt="Health Care Banner">
+        <!-- Mobile & iPad Banner -->
+        <img src="project-assets/images/banner/nbm3-2502.png" class="d-block d-xl-none w-100"
+            alt="Health Care Banner">
+        <div class="carousel-caption custom-carousel-caption">
+            <div class="custom-caption-content">
+                <div class="custom-highlight-box d-none">
+                    <h2 class="custom-hindi-slogan"><b>Advanced Health Tests</b></h2>
                 </div>
-                <div class="custom-feature-badges">
-                  <span><i class="fas fa-home"></i> Home Collection</span>
-                  <span><i class="fas fa-flask"></i> Latest Equipment</span>
-                  <span><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
+                <div class="custom-feature-badges d-none">
+                    <span><i class="fas fa-home"></i> Home Collection</span>
+                    <span><i class="fas fa-flask"></i> Latest Equipment</span>
+                    <span><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
                 </div>
                 <a href="./our-test/all-test" class="custom-cta-button">Book Test</a>
-              </div>
             </div>
-          </div>
         </div>
+    </div>
+</div>
+
 
         <button class="carousel-control-prev" type="button" data-bs-target="#healthCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon custom-nav"></span>

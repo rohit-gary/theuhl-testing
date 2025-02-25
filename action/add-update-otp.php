@@ -23,12 +23,18 @@ include("../uhladmin/uhl-management/controllers/common_controller.php");
         $wdata['body_values'] = $body_values;
         // $wdata['template'] = "browse_userotp_whatsapp";
 				$wdata['otp']=$OTP;
+				$smsdata=array(
+                		"variables_values" =>$OTP,
+				    	"route" => "otp",
+				    	"numbers" => $MobileNumber,
+						);
     
 
         if($response['error']==false){
         	$response['error'] = false;
         	$response['message']='OTP Generated Successfully and Send to Your Registered Mobile Number';
         	sendMobileOTPWhatsapp($wdata);
+        	sendSmsOtp($smsdata);
         }
 	}
 	else

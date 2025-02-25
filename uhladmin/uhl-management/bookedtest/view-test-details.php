@@ -1,5 +1,7 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 @session_start();
 require_once "../include/autoloader.inc.php";
 $conf = new Conf();
@@ -24,12 +26,27 @@ $conf = new Conf();
     $BookingID = $_GET["bookingid"];
     $BookingID = $encrypt->decrypt_message($BookingID);
     $filter = "WHERE C.ID = $BookingID";
-    $sql = "SELECT C.ID, C.OrderID, C.PaymentID, C.TotalAmount, C.PaymentMode, C.Status, C.CreatedDate, C.CreatedTime, 
-       GROUP_CONCAT(CI.product_name SEPARATOR ', ') AS ProductNames,
-       GROUP_CONCAT(CI.product_price SEPARATOR ', ') AS ProductPrices,
-       GROUP_CONCAT(CI.quantity SEPARATOR ', ') AS Quantities,
-       GROUP_CONCAT(CI.total_price SEPARATOR ', ') AS TotalPrices,
-       DI.FirstName, DI.LastName, DI.Phone, DI.Email, DI.Address, DI.City, DI.State, DI.Postcode
+    $sql = "SELECT 
+          MAX(C.ID) AS ID, 
+          C.OrderID, 
+          MAX(C.PaymentID) AS PaymentID, 
+          MAX(C.TotalAmount) AS TotalAmount, 
+          MAX(C.PaymentMode) AS PaymentMode, 
+          MAX(C.Status) AS Status, 
+          MAX(C.CreatedDate) AS CreatedDate, 
+          MAX(C.CreatedTime) AS CreatedTime,
+          GROUP_CONCAT(CI.product_name SEPARATOR ', ') AS ProductNames,
+          GROUP_CONCAT(CI.product_price SEPARATOR ', ') AS ProductPrices,
+          GROUP_CONCAT(CI.quantity SEPARATOR ', ') AS Quantities,
+          GROUP_CONCAT(CI.total_price SEPARATOR ', ') AS TotalPrices,
+          MAX(DI.FirstName) AS FirstName, 
+          MAX(DI.LastName) AS LastName, 
+          MAX(DI.Phone) AS Phone, 
+          MAX(DI.Email) AS Email, 
+          MAX(DI.Address) AS Address, 
+          MAX(DI.City) AS City, 
+          MAX(DI.State) AS State, 
+          MAX(DI.Postcode) AS Postcode
         FROM checkout C
         LEFT JOIN cart_items CI ON C.CartID = CI.cart_id
         LEFT JOIN test_customer_delivery_info DI ON C.UserID = DI.UserID
@@ -37,6 +54,12 @@ $conf = new Conf();
         GROUP BY C.OrderID";
 
     $booked_response = $core->_getRecords($conn, $sql);
+
+    $sql_2 = "SELECT * FROM order_report WHERE OrderID = '" . $booked_response[0]['OrderID'] . "'";
+    $reportFile = $core->_getRecords($conn, $sql_2);
+
+    // var_dump($reportFile);
+    
 
 
     ?>
@@ -121,6 +144,20 @@ $conf = new Conf();
             color: #2c3e50;
             text-align: right;
             margin-top: 20px;
+        }
+
+        .card {
+            border: 1px solid rgba(0, 0, 0, .125);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-footer {
+            border-top: 1px solid rgba(0, 0, 0, .125);
         }
     </style>
 </head>
@@ -207,11 +244,62 @@ $conf = new Conf();
                             </div>
                         </div>
                     </div>
+                    <!-- Add new Reports section -->
+                    <div class="info-section mt-4">
+                        <div class="info-title d-flex justify-content-between align-items-center">
+                            <span>Uploaded Reports</span>
+                            <span class="badge bg-primary rounded-pill"><?php echo count($reportFile); ?> Files</span>
+                        </div>
+
+                        <?php if (empty($reportFile)): ?>
+                            <div class="text-center py-4 text-muted">
+                                <i class="fa fa-file-medical fa-3x mb-3"></i>
+                                <p>No reports have been uploaded yet.</p>
+                            </div>
+                        <?php else: ?>
+                            <div class="row g-3">
+                                <?php foreach ($reportFile as $report): ?>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <i class="fa fa-file-medical text-primary me-2"></i>
+                                                    <h6 class="mb-0">Report #<?php echo $report['ID']; ?></h6>
+                                                    <a href="javascript:void(0)"
+                                                        onclick="deleteReport('<?php echo $report['ID']; ?>') " class="ms-auto"
+                                                        style="cursor: pointer;">
+                                                        <i class="fa fa-trash text-danger"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="small text-muted">
+                                                    <p class="mb-1">
+                                                        <i class="fa fa-calendar-alt me-1"></i>
+                                                        <?php echo date('F d, Y', strtotime($report['CreatedDate'])); ?>
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <i class="fa fa-clock me-1"></i>
+                                                        <?php echo date('h:i A', strtotime($report['CreatedTime'])); ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer bg-light">
+                                                <a href="./bookedreport/<?php echo $report['FileName']; ?>"
+                                                    class="btn btn-sm btn-outline-primary w-100" target="_blank">
+                                                    <i class="fa fa-download me-1"></i> Download Report
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-            <?php include "../navigation/right-side-navigation.php"; ?>
         </div>
-        <?php include "../include/common-script.php"; ?>
+        <?php include "../navigation/right-side-navigation.php"; ?>
+    </div>
+    <?php include "../include/common-script.php"; ?>
     </div>
 </body>
 
@@ -274,7 +362,6 @@ $conf = new Conf();
     }
 
     function AddUpdateReport() {
-        alert("test");
         var formData = new FormData($("#uploadReportForm")[0]);
         $.ajax({
             url: "action/upload-report.php",
@@ -284,11 +371,41 @@ $conf = new Conf();
             contentType: false,
             success: function (response) {
                 console.log(response);
+                var data = JSON.parse(response);
+                Alert(data.message);
+                if (data.error == false) {
+                    setTimeout(function () {
+
+                        location.reload();
+
+                    }, 3000)
+
+                }
             },
             error: function (xhr, status, error) {
                 console.log(xhr.responseText);
             }
         });
     }
+
+    function deleteReport(id) {
+        console.log("AJAX called for ID:", id);
+        if (confirm("Are you sure you want to delete this report?")) {
+            $.ajax({
+                url: "action/delete-uploaded-report.php",
+                method: "POST",
+                data: { id: id },
+                success: function (response) {
+                    console.log("Server Response:", response);
+                    var data = JSON.parse(response);
+                    Alert(data.message);
+                    setTimeout(function () {
+                        location.reload();
+                    }, 3000);
+                }
+            });
+        }
+    }
+
 
 </script>

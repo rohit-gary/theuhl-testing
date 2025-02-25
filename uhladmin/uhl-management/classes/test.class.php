@@ -303,6 +303,26 @@ class Test extends Core
 		return $orders;
 	}
 
+	public function InsertTestReportFile($data)
+	{
+		$OrderID = $data['order_ID'];
+		$BookingID = $data['booking_ID'];
+		$CreatedDate = $data['CreatedDate'];
+		$CreatedTime = $data['CreatedTime'];
+		$FileName = $data['documents'];
+		$sql = "INSERT INTO `order_report` (`OrderID`, `BookingID`, `FileName`, `CreatedDate`, `CreatedTime`) 
+            VALUES ('$OrderID', $BookingID, '$FileName', '$CreatedDate', '$CreatedTime')";
+		$response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
+		return $response_insert_details;
+	}
+
+	public function DeleteTestReportFile($data)
+	{
+		$ID = $data['id'];
+		$where = " where ID = $ID";
+		$service_details = $this->delete_identity_filter($this->conn, "order_report", $where);
+		return $service_details;
+	}
 
 }
 

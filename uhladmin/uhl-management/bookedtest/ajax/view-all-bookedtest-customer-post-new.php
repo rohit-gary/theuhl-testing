@@ -51,18 +51,33 @@ $totalResult = $result_total->fetch_assoc();
 $totalRecords = $totalResult['total_count'];
 
 ## SQL to fetch records
-$sql = "SELECT C.ID, C.OrderID, C.PaymentID, C.TotalAmount, C.PaymentMode, C.Status, C.CreatedDate, C.CreatedTime, 
-       GROUP_CONCAT(CI.product_name SEPARATOR ', ') AS ProductNames,
-       GROUP_CONCAT(CI.product_price SEPARATOR ', ') AS ProductPrices,
-       GROUP_CONCAT(CI.quantity SEPARATOR ', ') AS Quantities,
-       GROUP_CONCAT(CI.total_price SEPARATOR ', ') AS TotalPrices,
-       DI.FirstName, DI.LastName, DI.Phone, DI.Email, DI.Address, DI.City, DI.State, DI.Postcode
+$sql = "SELECT 
+  MAX(C.ID) AS ID, 
+  C.OrderID, 
+  MAX(C.PaymentID) AS PaymentID, 
+  MAX(C.TotalAmount) AS TotalAmount, 
+  MAX(C.PaymentMode) AS PaymentMode, 
+  MAX(C.Status) AS Status, 
+  MAX(C.CreatedDate) AS CreatedDate, 
+  MAX(C.CreatedTime) AS CreatedTime,
+  GROUP_CONCAT(CI.product_name SEPARATOR ', ') AS ProductNames,
+  GROUP_CONCAT(CI.product_price SEPARATOR ', ') AS ProductPrices,
+  GROUP_CONCAT(CI.quantity SEPARATOR ', ') AS Quantities,
+  GROUP_CONCAT(CI.total_price SEPARATOR ', ') AS TotalPrices,
+  MAX(DI.FirstName) AS FirstName, 
+  MAX(DI.LastName) AS LastName, 
+  MAX(DI.Phone) AS Phone, 
+  MAX(DI.Email) AS Email, 
+  MAX(DI.Address) AS Address, 
+  MAX(DI.City) AS City, 
+  MAX(DI.State) AS State, 
+  MAX(DI.Postcode) AS Postcode
 FROM checkout C
 LEFT JOIN cart_items CI ON C.CartID = CI.cart_id
 LEFT JOIN test_customer_delivery_info DI ON C.UserID = DI.UserID
 $filter
 GROUP BY C.OrderID
-ORDER BY C.ID $columnSortOrder
+ORDER BY MAX(C.ID) DESC
 LIMIT $row, $rowperpage";
 
 $result = mysqli_query($conn, $sql);

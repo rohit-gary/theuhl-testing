@@ -11,30 +11,34 @@ $secret_key = $conf->getJWTKey();
 $data_raw = file_get_contents('php://input');
 $logs = new Logs();
 $logs->SetCurrentAPILogFile();
-$logs->WriteLog($data_raw,__FILE__,__LINE__);
-$data = json_decode($data_raw,true);
-$response = array();
-if(true)
-{
-	try
-	{
+$logs->WriteLog($data_raw, __FILE__, __LINE__);
 
-		  $Test_Obj = new Test($conn);
-          $all_categories = $Test_Obj->GetAllTestName();
-		  $response['error'] = false;
-	
-		$response['data'] = $all_categories;
-	}
-	catch (Exception $e) {
-	    
-	    $response['error'] = true;
-	    $response['message'] = "Invalid Token";
-	}
+$data = json_decode($data_raw, true);
+$response = array();
+
+try {
+    $Test_Obj = new Test($conn);
+
+    
+    if (isset($data['query']) && !empty(trim($data['query']))) {
+        $searchQuery = strtolower(trim($data['query']));
+        $all_tests = $Test_Obj->GetTestBySearch($searchQuery); 
+    } else {
+        $all_tests = $Test_Obj->GetAllTestName(); 
+    }
+
+    if (!empty($all_tests)) {
+        $response['error'] = false;
+        $response['data'] = $all_tests;
+    } else {
+        $response['error'] = true;
+        $response['message'] = "No results found.";
+    }
+} catch (Exception $e) {
+    $response['error'] = true;
+    $response['message'] = "Database error: " . $e->getMessage();
 }
-else
-{
-	$response['error'] = true;
-    $response['message'] = "Missing User Field";
-}
-$logs->WriteLog(json_encode($response),__FILE__,__LINE__);
+
+$logs->WriteLog(json_encode($response), __FILE__, __LINE__);
 echo json_encode($response);
+?>

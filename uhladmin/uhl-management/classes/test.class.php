@@ -21,6 +21,16 @@ class Test extends Core
 		return $services_list;
 	}
 
+	   public function GetTestBySearch($query) {
+        $sql = "SELECT * FROM doc_test WHERE LOWER(TestName) LIKE ?";
+        $stmt = $this->conn->prepare($sql);
+        $searchTerm = "%$query%";
+        $stmt->bind_param("s", $searchTerm);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
 
 	public function GetTestCats($data)
 	{

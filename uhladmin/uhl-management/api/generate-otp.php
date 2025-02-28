@@ -18,6 +18,7 @@ $response = array();
 if(isset($data['PhoneNumber']))
 {
 
+   $MobileNumber=$data['PhoneNumber'];
    $dbh = new Dbh();
    $conn = $dbh->_connectodb();
    $authentication = new Authentication($conn);
@@ -29,8 +30,14 @@ if(isset($data['PhoneNumber']))
 	$data['otp'] = $otp;
     
 	$response["error"] = false;
-	$response["message"] = "Kindly Enter the OTP sent to your phone number on whatsapp";
+	$response["message"] = "Kindly Enter the OTP sent to your phone number";
    $response['otp']=$data['otp'];
+   $smsdata=array(
+                  "variables_values" =>$otp,
+                  "route" => "otp",
+                  "numbers" => $MobileNumber,
+                  );
+   sendSmsOtp($smsdata);
   
 }
 else

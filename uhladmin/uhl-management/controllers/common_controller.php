@@ -49,7 +49,9 @@ function InsertTempOTP($conn,$phonenumber,$otp)
 	$CreatedDate = date("Y-m-d");
 	$CreatedTime = date("H:i:s");
 	$query_parameter = " IsActive = 0 where PhoneNumber = '$phonenumber'";
+	$query_parameter_1 = "OTP = '$otp' where PhoneNumber = '$phonenumber'";
 	_UpdateTableRecords($conn,'temp_otp', $query_parameter);
+	_UpdateTableRecords($conn,'users', $query_parameter_1);
 	$sql = " INSERT INTO temp_otp(PhoneNumber,OTP,CreatedDate,CreatedTime) VALUES ('$phonenumber','$otp','$CreatedDate','$CreatedTime')";
 	_InsertTableRecords($conn, $sql);
 }

@@ -252,18 +252,16 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
 <!-- Transaction Details Card -->
 
 <?php if (!empty($transDetails) && is_array($transDetails)): ?>
-<?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer' && $_SESSION['dwd_UserType'] == 'Client Admin') : ?>
+    <?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer' && $_SESSION['dwd_UserType'] == 'Client Admin') : ?>
         <p>Want to Add Another NEFT Details</p>
         <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPaymentModal"> 
             <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
     <?php endif; ?>
-<div class="row">
-    <?php foreach ($transDetails as $transaction) { ?>  
-        <div class="col-md-6">
-            <?php if ($transaction): ?>
-                
-                
+
+    <div class="row">
+        <?php foreach ($transDetails as $transaction) { ?>  
+            <div class="col-md-6">
                 <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
                     <div class="card-header text-white d-flex justify-content-between align-items-center" 
                         style="background: linear-gradient(135deg, #28a745, #218838);">
@@ -287,12 +285,10 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
                                     <th style="text-align: left; color: #6c757d;">Amount:</th>
                                     <td>₹<?php echo htmlspecialchars(number_format($transaction['amount'], 2)); ?></td>
                                 </tr>
-
                                 <tr>
                                     <th style="text-align: left; color: #6c757d;">Refund Amount:</th>
                                     <td>₹<?php echo htmlspecialchars(number_format($transaction['refundamount'], 2)); ?></td>
                                 </tr>
-
                                 <tr>
                                     <th style="text-align: left; color: #6c757d;">Status:</th>
                                     <td><?php echo htmlspecialchars($transaction['status']); ?></td>
@@ -305,24 +301,27 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
                         </table>
                     </div>
                 </div>
-            <?php else: ?>
-                <div class="card mt-5 shadow-sm text-center" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
-                    <div class="card-header text-white" style="background: linear-gradient(135deg, #dc3545, #c82333);">
-                        <h4 class="mb-0">Payment Status</h4>
-                    </div>
-                    <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
-                        <h6 class="text-muted">Payment Pending</h6>
-                        <p class="text-muted" style="font-size: 0.9rem;">No transaction details are available at the moment.</p>
-                        <?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer'): ?>
-                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPaymentModal">Edit Payment</button>
-                        <?php endif; ?>
-                    </div>
-                </div>
+            </div>
+        <?php } ?>
+    </div>
+<?php else: ?>
+    <!-- Show this block if there are no transaction details -->
+    <div class="col-6">
+    <div class="card mt-5 shadow-sm text-center" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
+        <div class="card-header text-white" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+            <h4 class="mb-0">Payment Status</h4>
+        </div>
+        <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
+            <h6 class="text-muted">Payment Pending</h6>
+            <p class="text-muted" style="font-size: 0.9rem;">No transaction details are available at the moment.</p>
+            <?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer'): ?>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPaymentModal">Edit Payment</button>
             <?php endif; ?>
         </div>
-    <?php } ?>
+    </div>
 </div>
 <?php endif; ?>
+
 
 
 

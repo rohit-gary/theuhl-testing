@@ -35,6 +35,7 @@ public function insertPaymentsDetails($data) {
     $razorpay_payment_id = $_POST['razorpay_payment_id'];
     $razorpay_order_id = $_POST['razorpay_order_id'];
     $amount = $_POST['amount'];
+    $refundamount = $_POST['amount_refund']??0.00;
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $status = $_POST['status'];
@@ -55,6 +56,7 @@ public function insertPaymentsDetails($data) {
         'razorpay_payment_id' => $razorpay_payment_id,
         'razorpay_order_id' => $razorpay_order_id,
         'Amount' => $amount,
+        'RefundAmount'=>$refundamount,
         'Name' => $name,
         'Phone' => $phone,
         'Status' => $status,

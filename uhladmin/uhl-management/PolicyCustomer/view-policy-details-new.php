@@ -1,8 +1,11 @@
 <?php
-
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 @session_start();
 require_once "../include/autoloader.inc.php";
 $conf = new Conf();
+
 // print_r($_SESSION);
 // die();
 ?>
@@ -127,115 +130,113 @@ $conf = new Conf();
                                 </div>
                                 </div>
                            <div class="col-lg-12">
-                          <!-- Policy Details Card -->
-                            <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
-                                <div class="card-header text-white d-flex justify-content-between align-items-center" 
-                                     style="background: linear-gradient(135deg, #007bff, #0056b3);">
-                                    <h4 class="mb-0">Policy Details</h4>
-                                    <span class="badge bg-success">Active</span>
-                                </div>
-                                <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
+    <!-- Policy Details Card -->
+    <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
+        <div class="card-header text-white d-flex justify-content-between align-items-center" 
+             style="background: linear-gradient(135deg, #007bff, #0056b3);">
+            <h4 class="mb-0">Policy Details</h4>
+            <span class="badge bg-success">Active</span>
+        </div>
+        <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
 
-                                    <!-- Policy Details Table -->
-                                    <table class="table table-borderless align-middle">
-                                        <tbody>
-                                            <tr>
-                                                <th style="width: 30%; text-align: left; color: #6c757d;">Policy Name:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["PlanNames"]
-                                                ); ?></td>
-                                            </tr>
+            <!-- Policy Details Table -->
+            <table class="table table-borderless align-middle">
+                <tbody>
+                    <tr>
+                        <th style="width: 30%; text-align: left; color: #6c757d;">Policy Name:</th>
+                        <td><?php echo htmlspecialchars(
+                            $PolicyDetails["PlanNames"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                    <th style="width: 30%; text-align: left; color: #6c757d;">Policy Amount:</th>
+                    <td><?php echo htmlspecialchars(
+                        $PolicyDetails["TotalAmount"]
+                    ); ?></td>
+                </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Policy Number:</th>
+                        <td><?php echo htmlspecialchars(
+                            $PolicyDetails["PolicyNumber"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Name:</th>
+                        <td><?php echo htmlspecialchars(
+                            $PolicyDetails["UserName"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Contact Number:</th>
+                        <td><?php echo htmlspecialchars(
+                            $PolicyDetails["MobileNumber"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                    <th style="width: 30%; text-align: left; color: #6c757d;">DOB:</th>
+                    <td><?php echo htmlspecialchars(
+                        $PolicyDetails["DOB"]
+                    ); ?></td>
+                </tr>
 
-                                            <tr>
-                                                <th style="width: 30%; text-align: left; color: #6c757d;">Policy Amount:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["TotalAmount"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Policy Number:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["PolicyNumber"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Name:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["UserName"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Contact Number:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["MobileNumber"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="width: 30%; text-align: left; color: #6c757d;">DOB:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["DOB"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Email:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["Email"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Address:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["Address"]
-                                                ); ?></td>
-                                            </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Email:</th>
+                        <td><?php echo htmlspecialchars(
+                            $PolicyDetails["Email"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Address:</th>
+                        <td><?php echo htmlspecialchars(
+                            $PolicyDetails["Address"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                    <th style="width: 30%; text-align: left; color: #6c757d;">PermanentAddress  :</th>
+                    <td><?php echo htmlspecialchars(
+                        $PolicyDetails["PermanentAddress"]
+                    ); ?></td>
+                </tr>
 
-                                            <tr>
-                                                <th style="width: 30%; text-align: left; color: #6c757d;">PermanentAddress  :</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["PermanentAddress"]
-                                                ); ?></td>
-                                            </tr>
+                <tr>
+                <th style="width: 30%; text-align: left; color: #6c757d;">Pincode  :</th>
+                <td><?php echo htmlspecialchars(
+                    $PolicyDetails["Pincode"]
+                ); ?></td>
+            </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">State:</th>
+                        <td><?php echo htmlspecialchars(
+                            $StateDetails["StateName"]
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Policy Start Date:</th>
+                        <td><?php echo htmlspecialchars(
+                           $formattedDate
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; color: #6c757d;">Policy End Date:</th>
+                        <td><?php echo htmlspecialchars(
+                            $expiryFormattedDate
+                        ); ?></td>
+                    </tr>
+                    <tr>
+                    <th style="text-align: left; color: #6c757d;">PaymentLink:</th>
+                    <td>
+                        <span id="paymentLinkText">
+                        https://unitedhealthlumina.com/pay-booking-amount-new?policyNumber=<?php echo htmlspecialchars($EncPolicyID); ?>
+                        </span>
+                        <button onclick="copyPaymentLink()" class="btn btn-link p-0" style="color: #007bff; text-decoration: underline; font-size: 14px;"><i class="ion ion-clipboard"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
-                                             <tr>
-                                                <th style="width: 30%; text-align: left; color: #6c757d;">Pincode  :</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $PolicyDetails["Pincode"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">State:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $StateDetails["StateName"]
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Policy Start Date:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                   $formattedDate
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: left; color: #6c757d;">Policy End Date:</th>
-                                                <td><?php echo htmlspecialchars(
-                                                    $expiryFormattedDate
-                                                ); ?></td>
-                                            </tr>
-                                            <tr>
-                                            <th style="text-align: left; color: #6c757d;">PaymentLink:</th>
-                                            <td>
-                                                <span id="paymentLinkText">
-                                                    http://localhost/Projects/theuhl-testing/pay-booking-amount-new?policyNumber=<?php echo htmlspecialchars($EncPolicyID); ?>
-                                                </span>
-                                                <button onclick="copyPaymentLink()" class="btn btn-link p-0" style="color: #007bff; text-decoration: underline; font-size: 14px;"><i class="ion ion-clipboard"></i></button>
-                                            </td>
-                                        </tr>
-
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-                        </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -249,59 +250,79 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
 ?>
 
 <!-- Transaction Details Card -->
-<div class="col-md-6">
-    <?php if ($transaction): ?>
-        <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
-            <div class="card-header text-white d-flex justify-content-between align-items-center" 
-                 style="background: linear-gradient(135deg, #28a745, #218838);">
-                <h4 class="mb-0">Transaction Details</h4>
-                <span class="badge <?php echo $transaction['status'] === 'Success' ? 'bg-success' : 'bg-danger'; ?>">
-                    <?php echo htmlspecialchars($transaction['status']); ?>
-                </span>
-            </div>
-            <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
-                <!-- Transaction Details Table -->
-                <table class="table table-borderless align-middle">
-                    <tbody>
-                        <tr>
-                            <th style="text-align: left; color: #6c757d;">Payment ID:</th>
-                            <td><?php echo htmlspecialchars($transaction['razorpay_payment_id']); ?></td>
-                        </tr>
-                        <tr>
-                            <th style="text-align: left; color: #6c757d;">Order ID:</th>
-                            <td><?php echo htmlspecialchars($transaction['razorpay_order_id']); ?></td>
-                        </tr>
-                        <tr>
-                            <th style="text-align: left; color: #6c757d;">Amount:</th>
-                            <td>₹<?php echo htmlspecialchars(number_format($transaction['amount'], 2)); ?></td>
-                        </tr>
-                        <tr>
-                            <th style="text-align: left; color: #6c757d;">Status:</th>
-                            <td><?php echo htmlspecialchars($transaction['status']); ?></td>
-                        </tr>
-                        <tr>
-                            <th style="text-align: left; color: #6c757d;">Date:</th>
-                            <td><?php echo htmlspecialchars(date("d-m-Y H:i:s", strtotime($transaction['created_at']))); ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    <?php else: ?>
-        <div class="card mt-5 shadow-sm text-center" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
-        <div class="card-header text-white" style="background: linear-gradient(135deg, #dc3545, #c82333);">
-            <h4 class="mb-0">Payment Status</h4>
-        </div>
-        <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
-            <h6 class="text-muted">Payment Pending</h6>
-            <p class="text-muted" style="font-size: 0.9rem;">No transaction details are available at the moment.</p>
-           <?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer'): ?>
-            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPaymentModal">Edit Payment</button>
+
+<?php if (!empty($transDetails) && is_array($transDetails)): ?>
+<?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer' && $_SESSION['dwd_UserType'] == 'Client Admin') : ?>
+        <p>Want to Add Another NEFT Details</p>
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPaymentModal"> 
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    <?php endif; ?>
+<div class="row">
+    <?php foreach ($transDetails as $transaction) { ?>  
+        <div class="col-md-6">
+            <?php if ($transaction): ?>
+                
+                
+                <div class="card mt-5 shadow-sm" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
+                    <div class="card-header text-white d-flex justify-content-between align-items-center" 
+                        style="background: linear-gradient(135deg, #28a745, #218838);">
+                        <h4 class="mb-0">Transaction Details</h4>
+                        <span class="badge <?php echo $transaction['status'] === 'Success' ? 'bg-success' : 'bg-danger'; ?>">
+                            <?php echo htmlspecialchars($transaction['status']); ?>
+                        </span>
+                    </div>
+                    <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                        <table class="table table-borderless align-middle">
+                            <tbody>
+                                <tr>
+                                    <th style="text-align: left; color: #6c757d;">Payment ID:</th>
+                                    <td><?php echo htmlspecialchars($transaction['razorpay_payment_id']); ?></td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: left; color: #6c757d;">Order ID:</th>
+                                    <td><?php echo htmlspecialchars($transaction['razorpay_order_id']); ?></td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: left; color: #6c757d;">Amount:</th>
+                                    <td>₹<?php echo htmlspecialchars(number_format($transaction['amount'], 2)); ?></td>
+                                </tr>
+
+                                <tr>
+                                    <th style="text-align: left; color: #6c757d;">Refund Amount:</th>
+                                    <td>₹<?php echo htmlspecialchars(number_format($transaction['refundamount'], 2)); ?></td>
+                                </tr>
+
+                                <tr>
+                                    <th style="text-align: left; color: #6c757d;">Status:</th>
+                                    <td><?php echo htmlspecialchars($transaction['status']); ?></td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: left; color: #6c757d;">Date:</th>
+                                    <td><?php echo htmlspecialchars(date("d-m-Y", strtotime($transaction['created_at']))); ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <?php else: ?>
+                <div class="card mt-5 shadow-sm text-center" style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd;">
+                    <div class="card-header text-white" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                        <h4 class="mb-0">Payment Status</h4>
+                    </div>
+                    <div class="card-body px-4 py-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                        <h6 class="text-muted">Payment Pending</h6>
+                        <p class="text-muted" style="font-size: 0.9rem;">No transaction details are available at the moment.</p>
+                        <?php if ($_SESSION['dwd_UserType'] !== 'Policy Customer'): ?>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPaymentModal">Edit Payment</button>
+                        <?php endif; ?>
+                    </div>
+                </div>
             <?php endif; ?>
         </div>
-    </div>
-    <?php endif; ?>
+    <?php } ?>
 </div>
+<?php endif; ?>
 
 
 
@@ -319,7 +340,7 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
             <form id="payments_form" onsubmit="return false;" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-group">
-                         <input type="text" class="form-control" id="policy_id" name="policy_id" value="<?php echo $PolicyID?>"required readonly>
+                         <input type="hidden" class="form-control" id="policy_id" name="policy_id" value="<?php echo $PolicyID?>"required readonly>
                         <label for="razorpay_payment_id">Transaction ID</label>
                         <input type="text" class="form-control" id="razorpay_payment_id" name="razorpay_payment_id" required>
                     </div>
@@ -331,6 +352,12 @@ $transaction = !empty($transDetails) && isset($transDetails[0]) ? $transDetails[
                         <label for="amount">Amount</label>
                         <input type="number" class="form-control" id="amount" name="amount" step="0.01" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount Refund</label>
+                        <input type="number" class="form-control" id="amount_refund" name="amount_refund" step="0.01" required>
+                    </div>
+
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -1178,7 +1205,7 @@ function savefamilyMember() {
             Alert(response.message);
             if (response.error == false) { 
                 setTimeout(function() {
-                    // location.reload();
+                    location.reload();
                 }, 1500);
                 $("#UpdatePaymentsBtn").html("Update Payment");
                 $('form')[0].reset();  // Reset the form
@@ -1197,7 +1224,6 @@ function savefamilyMember() {
 
 
 </script>
-
 <script>
     function copyPaymentLink() {
         var paymentLink = document.getElementById("paymentLinkText").innerText;

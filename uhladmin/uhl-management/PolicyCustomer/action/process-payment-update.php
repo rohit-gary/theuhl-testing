@@ -46,7 +46,7 @@ if (isset($_POST['policy_id'])) {
                       $core = new Core();
                       $data_api["PolicyNumber"] = $customer['PolicyNumber'] ;
                       $core->sendCurlRequest($postdata,$conf_new->generate_report_url);
-                      $response['message'] = "Policy Doc pdf has been sent to email";
+                      $response['message'] = "Policy Doc pdf has Generated";
              }else {
                 echo "Customer details not found for the policy.";
             }

@@ -1,4 +1,8 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once('common_api_header.php');
 require_once '../../vendor/autoload.php';
 use Firebase\JWT\JWT;
@@ -19,12 +23,18 @@ $response = array();
 try {
     $Test_Obj = new Test($conn);
 
-    
+       if (isset($data['start_counter'])) {
+                $start_counter = $data['start_counter'];
+                $no_of_records = $data['no_of_records'];
+                $filter_limit = " LIMIT $start_counter, $no_of_records ";
+            }
     if (isset($data['query']) && !empty(trim($data['query']))) {
         $searchQuery = strtolower(trim($data['query']));
-        $all_tests = $Test_Obj->GetTestBySearch($searchQuery); 
+        $all_tests = $Test_Obj->GetTestBySearch($searchQuery, $start_counter, $no_of_records); 
     } else {
-        $all_tests = $Test_Obj->GetAllTestName(); 
+        $all_tests = $Test_Obj->GetAllTestNameFilter($filter_limit);
+
+        $where = " where IsActive = 1 "; 
     }
 
     if (!empty($all_tests)) {

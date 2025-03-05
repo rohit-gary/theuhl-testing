@@ -21,16 +21,22 @@ class Test extends Core
 		return $services_list;
 	}
 
-	   public function GetTestBySearch($query) {
-        $sql = "SELECT * FROM doc_test WHERE LOWER(TestName) LIKE ?";
-        $stmt = $this->conn->prepare($sql);
-        $searchTerm = "%$query%";
-        $stmt->bind_param("s", $searchTerm);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        return $result->fetch_all(MYSQLI_ASSOC);
-    }
+	public function GetAllTestNameFilter($filter_limit)
+	{
+		$where = " where IsActive = 1 ORDER BY ID DESC $filter_limit";
+		$services_list = $this->_getTableRecords($this->conn, 'doc_test', $where);
+		return $services_list;
+	}
 
+	public function GetTestBySearch($query,$start_counter = 0, $no_of_records = 10) {
+	  $sql = "SELECT * FROM doc_test WHERE LOWER(TestName) LIKE ? ORDER BY ID DESC LIMIT ?, ?";
+		$stmt = $this->conn->prepare($sql);
+		$searchTerm = "%$query%";
+		$stmt->bind_param("sii", $searchTerm, $start_counter, $no_of_records);
+		$stmt->execute();
+		$result = $stmt->get_result();
+		return $result->fetch_all(MYSQLI_ASSOC);
+}
 
 	public function GetTestCats($data)
 	{
@@ -313,6 +319,7 @@ class Test extends Core
 		return $orders;
 	}
 
+	
 	public function InsertTestReportFile($data)
 	{
 		$OrderID = $data['order_ID'];
@@ -333,6 +340,7 @@ class Test extends Core
 		$service_details = $this->delete_identity_filter($this->conn, "order_report", $where);
 		return $service_details;
 	}
+
 
 }
 

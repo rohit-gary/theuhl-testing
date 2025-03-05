@@ -273,9 +273,10 @@ class Test extends Core
 		$Postcode = $data['postcode'];
 		$Email = $data['email'];
 		$Notes = $data['notes'];
+		$OrderID = $data['OrderID'];
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedTime = $data['CreatedTime'];
-		$sql = "INSERT INTO `test_customer_delivery_info`(`UserID`,`FirstName`,`LastName`,`Phone`,`Address`,`Apartment`,`City`,`State`,`Postcode`,`Email`,`Notes`,`CreatedDate`,`CreatedTime`) VALUES ('$UserID','$FirstName','$LastName','$Phone','$Address','$Apartment','$City','$State','$Postcode','$Email','$Notes','$CreatedDate','$CreatedTime')";
+		$sql = "INSERT INTO `test_customer_delivery_info`(`UserID`,`FirstName`,`LastName`,`Phone`,`Address`,`Apartment`,`City`,`State`,`Postcode`,`Email`,`Notes`,`OrderID`,`CreatedDate`,`CreatedTime`) VALUES ('$UserID','$FirstName','$LastName','$Phone','$Address','$Apartment','$City','$State','$Postcode','$Email','$Notes','$OrderID','$CreatedDate','$CreatedTime')";
 		$response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
 		return $response_insert_details;
 	}

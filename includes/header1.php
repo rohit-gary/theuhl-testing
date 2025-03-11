@@ -23,42 +23,68 @@
     }
 
     @keyframes cart-bounce {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
+        0% {
+            transform: scale(1);
+        }
 
-@keyframes cart-glow-effect {
-    0% { box-shadow: 0 0 5px rgba(255, 99, 71, 0.6); }
-    50% { box-shadow: 0 0 15px rgba(255, 99, 71, 0.9); }
-    100% { box-shadow: 0 0 5px rgba(255, 99, 71, 0.6); }
-}
+        50% {
+            transform: scale(1.5);
+        }
 
-.cart-glow {
-    animation: cart-glow-effect 0.6s ease-in-out;
-    background-color: #ff4747 !important;
-    color: white !important;
-}
+        100% {
+            transform: scale(1);
+        }
+    }
 
-/* Floating "+1" or "-1" Effect */
-.cart-popup {
-    position: absolute;
-    top: -10px;
-    right: -5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ff4747;
-    opacity: 1;
-    animation: cart-float 0.8s ease-in-out forwards;
-    font-family: "Poppins", sans-serif;
-}
+    @keyframes cart-glow-effect {
+        0% {
+            box-shadow: 0 0 5px rgba(255, 99, 71, 0.6);
+        }
 
-@keyframes cart-float {
-    0% { transform: translateY(0px) scale(1); opacity: 1; }
-    50% { transform: translateY(-20px) scale(1.3); opacity: 0.8; }
-    100% { transform: translateY(-30px) scale(1); opacity: 0; }
-}
+        50% {
+            box-shadow: 0 0 15px rgba(255, 99, 71, 0.9);
+        }
 
+        100% {
+            box-shadow: 0 0 5px rgba(255, 99, 71, 0.6);
+        }
+    }
+
+    .cart-glow {
+        animation: cart-glow-effect 0.6s ease-in-out;
+        background-color: #ff4747 !important;
+        color: white !important;
+    }
+
+    /* Floating "+1" or "-1" Effect */
+    .cart-popup {
+        position: absolute;
+        top: -10px;
+        right: -5px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ff4747;
+        opacity: 1;
+        animation: cart-float 0.8s ease-in-out forwards;
+        font-family: "Poppins", sans-serif;
+    }
+
+    @keyframes cart-float {
+        0% {
+            transform: translateY(0px) scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateY(-20px) scale(1.3);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translateY(-30px) scale(1);
+            opacity: 0;
+        }
+    }
 </style>
 <?php
 @session_start();
@@ -142,7 +168,8 @@ if (isset($_SESSION['dwd_UserID'])) {
                                     <?php endif; ?>
 
                                     <?php if ($is_logged_in == false) { ?>
-                                        <li><a class="dropdown-item" href="<?php echo $base_url; ?>/mobile-login">Login Here</a>
+                                        <li><a class="dropdown-item" href="<?php echo $base_url; ?>/mobile-login">Login
+                                                Here</a>
                                         </li>
                                     <?php } ?>
                                     <li><a class="dropdown-item" href="<?php echo $base_url; ?>/account">
@@ -262,6 +289,10 @@ if (isset($_SESSION['dwd_UserID'])) {
                         <li><a href="<?php echo $base_url; ?>/faqs">FAQ'S</a></li>
 
                         <li><a href="<?php echo $base_url; ?>/contact-us">Contact Us</a></li>
+                        <li><a href="<?php echo $base_url; ?>/project-assets/unitedhealthlumina-brochure.pdf"
+                                target="_blank"><i class="fa fa-download"></i>
+                                Brochure</a></li>
+
 
                     </ul>
                 </div>

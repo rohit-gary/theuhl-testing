@@ -5,7 +5,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 require_once('./uhladmin/uhl-management/include/autoloader.inc.php');
 include("./uhladmin/uhl-management/include/db-connection.php");
-
 $conf = new Conf();
 $dbh = new Dbh();
 $core = new Core();
@@ -21,473 +20,8 @@ $all_test = $test_obj->GetAllTestName();
   <?php include("includes/links1.php") ?>
   <title>United Health Lumina New health plan for new Times</title>
   <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" type="text/css" href="./project-assets/css/index.css"> -->
-
-  <style>
-    /* .health-solutions-section {
-      position: relative;
-      padding: 100px 0;
-      background-color: #f8f9fa;
-      overflow: hidden;
-    }
-
-    .section-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h20v20H0z" fill="%23ffffff" fill-opacity="0.4"/%3E%3C/svg%3E');
-      background-size: 20px 20px;
-      opacity: 0.6;
-    } */
-
-
-
-    .custom-carousel-item {
-      height: 100vh;
-      min-height: 500px;
-    }
-
-    .custom-carousel-item img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
-
-    .custom-carousel-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-       background:linear-gradient(rgb(0 0 0 / 0%), rgba(0, 0, 0, 0.6));
-    }
-
-    .custom-carousel-caption {
-      bottom: 50%;
-      transform: translateY(50%);
-      padding: 0;
-    }
-
-    .custom-caption-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .custom-hindi-slogan {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      line-height: normal;
-      font-weight: 700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      color: #fff;
-    }
-
-    .custom-company-name {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .custom-feature-badges {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .custom-feature-badges span {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 1.1rem;
-      backdrop-filter: blur(5px);
-    }
-
-    .custom-feature-badges i {
-      margin-right: 0.5rem;
-      color: #ffd700;
-    }
-
-    .custom-plan-features,
-    .custom-test-features {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      margin: 2rem 0;
-    }
-
-    .custom-feature-item {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-    }
-
-    .custom-feature-item i {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #ffd700;
-      display: block;
-    }
-
-    .custom-cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #2C5282;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      margin-top: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .custom-cta-button:hover {
-      background: #4299E1;
-      transform: translateY(-3px);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .custom-carousel-item {
-        height: 70vh;
-      }
-
-      .custom-hindi-slogan {
-        font-size: 2rem;
-      }
-
-      .custom-company-name {
-        font-size: 1.5rem;
-      }
-
-      .custom-feature-badges {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .custom-plan-features,
-      .custom-test-features {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .custom-feature-item {
-        padding: 0.5rem;
-      }
-
-      .custom-caption-content {
-        padding: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .custom-hindi-slogan {
-        font-size: 1.5rem;
-      }
-
-      .custom-company-name {
-        font-size: 1.2rem;
-      }
-
-      .custom-feature-badges span {
-        font-size: 0.9rem;
-      }
-    }
-
-
-
-
-
-
-
-    .section-header {
-      margin-bottom: 60px;
-    }
-
-    .section-header .subtitle {
-      display: inline-block;
-      padding: 8px 20px;
-      background: rgba(0, 123, 255, 0.1);
-      color: #007bff;
-      border-radius: 25px;
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    .section-header .title {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    .title-separator {
-      width: 80px;
-      height: 3px;
-      background: #007bff;
-      margin: 20px auto;
-    }
-
-    .section-description {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #6c757d;
-    }
-
-    .solution-card {
-      background: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      padding: 30px;
-      transition: all 0.3s ease;
-      position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      height: 100%;
-    }
-
-    .solution-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    }
-
-    .card-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #007bff;
-      color: white;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-    }
-
-    .solution-icon {
-      text-align: center;
-      margin-bottom: 25px;
-      padding: 20px;
-    }
-
-    .solution-icon img {
-      height: 70px;
-      width: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .solution-card:hover .solution-icon img {
-      transform: scale(1.1);
-    }
-
-    .solution-content h4 {
-      color: #2d3436;
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .solution-content p {
-      color: #636e72;
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .features-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 25px 0;
-    }
-
-    .features-list li {
-      margin-bottom: 10px;
-      color: #2d3436;
-      font-size: 0.9rem;
-    }
-
-    .features-list li i {
-      color: #007bff;
-      margin-right: 10px;
-    }
-
-    .nav-pills {
-      background: white;
-      padding: 8px;
-      border-radius: 50px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      display: inline-flex;
-    }
-
-    .nav-pills .nav-link {
-      color: #2d3436;
-      border-radius: 25px;
-      padding: 12px 30px;
-      margin: 0 5px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .nav-pills .nav-link.active {
-      background: #007bff;
-      color: white;
-      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-    }
-
-    .nav-pills .nav-link:not(.active):hover {
-      background: rgba(0, 123, 255, 0.1);
-    }
-
-    .btn-primary {
-      border-radius: 25px;
-      padding: 12px 30px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border: none;
-      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .health-solutions-section {
-        padding: 60px 0;
-      }
-
-      .section-header .title {
-        font-size: 2rem;
-      }
-
-      .nav-pills .nav-link {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-      }
-    }
-
-    .price-section {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .current-price {
-      color: #007bff;
-      margin-right: 10px;
-    }
-
-    .original-price {
-      text-decoration: line-through;
-      color: #6c757d;
-      font-size: 0.9em;
-    }
-
-    .discount {
-      background: #28a745;
-      color: white;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 0.8em;
-      margin-left: 10px;
-    }
-
-    .see-more-card {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border: 2px dashed #007bff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .see-more-card .solution-icon {
-      font-size: 3rem;
-      color: #007bff;
-      margin-bottom: 1rem;
-    }
-
-    .see-more-card:hover {
-      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
-    }
-
-    .btn-outline-primary {
-      border: 2px solid #007bff;
-      color: #007bff;
-      background: transparent;
-      transition: all 0.3s ease;
-    }
-
-    .btn-outline-primary:hover {
-      background: #007bff;
-      color: white;
-      transform: translateY(-2px);
-    }
-
-
-    .carousel-controls-top {
-      position: absolute;
-      top: -60px;
-      right: 0;
-      display: flex;
-      gap: 10px;
-      z-index: 10;
-    }
-
-    .carousel-controls-top .carousel-control-prev,
-    .carousel-controls-top .carousel-control-next {
-      position: relative;
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      border: 2px solid #007bff;
-      border-radius: 50%;
-      opacity: 1;
-      transform: none;
-      top: auto;
-      left: auto;
-      right: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .carousel-controls-top .carousel-control-prev:hover,
-    .carousel-controls-top .carousel-control-next:hover {
-      background: #007bff;
-    }
-
-    .carousel-controls-top .carousel-control-prev i,
-    .carousel-controls-top .carousel-control-next i {
-      color: #007bff;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .carousel-controls-top .carousel-control-prev:hover i,
-    .carousel-controls-top .carousel-control-next:hover i {
-      color: #fff;
-    }
-
-
-    @media (max-width: 768px) {
-      .carousel-controls-top {
-        top: -50px;
-      }
-
-      .carousel-controls-top .carousel-control-prev,
-      .carousel-controls-top .carousel-control-next {
-        width: 35px;
-        height: 35px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="./project-assets/css/index.css">
+  <link rel="stylesheet" type="text/css" href="./project-assets/css/all_test.css">
 </head>
 
 <body id="bg">
@@ -497,7 +31,7 @@ $all_test = $test_obj->GetAllTestName();
     <?php include('includes/header1.php'); ?>
     <!-- Content -->
     <!-- Carousel Section -->
-    <section class="custom-hero-carousel">
+    <section class="custom-hero-carousel d-none">
       <div id="healthCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="0" class="active"></button>
@@ -506,78 +40,78 @@ $all_test = $test_obj->GetAllTestName();
         </div>
 
         <div class="carousel-inner">
-    <!-- Main Banner -->
-    <div class="carousel-item active custom-carousel-item">
-        <div class="custom-carousel-overlay"></div>
-        <!-- Desktop & Large Tablet Banner -->
-        <img src="project-assets/images/banner/nb-2101.png" class="d-none d-xl-block w-100"
-            alt="Health Care Banner">
-        <!-- Mobile & iPad Banner -->
-        <img src="project-assets/images/banner/nbm-2101.png" class="d-block d-xl-none w-100"
-            alt="Health Care Banner">
-        <div class="carousel-caption custom-carousel-caption">
-            <div class="custom-caption-content d-none">
+          <!-- Main Banner -->
+          <div class="carousel-item active custom-carousel-item">
+            <div class="custom-carousel-overlay"></div>
+            <!-- Desktop & Large Tablet Banner -->
+            <img src="project-assets/images/banner/nb-2101.png" class="d-none d-xl-block w-100"
+              alt="Health Care Banner">
+            <!-- Mobile & iPad Banner -->
+            <img src="project-assets/images/banner/nbm-2101.png" class="d-block d-xl-none w-100"
+              alt="Health Care Banner">
+            <div class="carousel-caption custom-carousel-caption">
+              <div class="custom-caption-content d-none">
                 <div class="custom-highlight-box">
-                    <h2 class="custom-hindi-slogan"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
-                    <h3 class="custom-company-name">United Health Lumina Plans</h3>
+                  <h2 class="custom-hindi-slogan"><b>बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</b></h2>
+                  <h3 class="custom-company-name">United Health Lumina Plans</h3>
                 </div>
                 <div class="custom-feature-badges">
-                    <span><i class="fas fa-star"></i> Trusted Healthcare</span>
-                    <span><i class="fas fa-shield-alt"></i> Complete Coverage</span>
-                    <span><i class="fas fa-clock"></i> 24/7 Support</span>
+                  <span><i class="fas fa-star"></i> Trusted Healthcare</span>
+                  <span><i class="fas fa-shield-alt"></i> Complete Coverage</span>
+                  <span><i class="fas fa-clock"></i> 24/7 Support</span>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <!-- Health Plans Slide -->
-    <div class="carousel-item custom-carousel-item">
-        <div class="custom-carousel-overlay"></div>
-        <!-- Desktop & Large Tablet Banner -->
-        <img src="project-assets/images/banner/nb2-2502.png" class="d-none d-xl-block w-100"
-            alt="Health Care Banner">
-        <!-- Mobile & iPad Banner -->
-        <img src="project-assets/images/banner/nbm2-2502.png" class="d-block d-xl-none w-100"
-            alt="Health Care Banner">
-        <div class="carousel-caption custom-carousel-caption">
-            <div class="custom-caption-content d-none">
+          <!-- Health Plans Slide -->
+          <div class="carousel-item custom-carousel-item">
+            <div class="custom-carousel-overlay"></div>
+            <!-- Desktop & Large Tablet Banner -->
+            <img src="project-assets/images/banner/nb2-2502.png" class="d-none d-xl-block w-100"
+              alt="Health Care Banner">
+            <!-- Mobile & iPad Banner -->
+            <img src="project-assets/images/banner/nbm2-2502.png" class="d-block d-xl-none w-100"
+              alt="Health Care Banner">
+            <div class="carousel-caption custom-carousel-caption">
+              <div class="custom-caption-content d-none">
                 <div class="custom-highlight-box">
-                    <h2 class="custom-hindi-slogan"><b>Comprehensive Health Plans</b></h2>
+                  <h2 class="custom-hindi-slogan"><b>Comprehensive Health Plans</b></h2>
                 </div>
                 <div class="custom-feature-badges">
-                    <span><i class="fas fa-hospital"></i> Cashless Hospitals</span>
-                    <span><i class="fas fa-user-md"></i> Expert Doctors</span>
-                    <span><i class="fas fa-ambulance"></i> Emergency Care</span>
+                  <span><i class="fas fa-hospital"></i> Cashless Hospitals</span>
+                  <span><i class="fas fa-user-md"></i> Expert Doctors</span>
+                  <span><i class="fas fa-ambulance"></i> Emergency Care</span>
                 </div>
                 <a href="./all-plans" class="custom-cta-button">Explore Plans</a>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <!-- Health Tests Slide -->
-    <div class="carousel-item custom-carousel-item">
-        <div class="custom-carousel-overlay"></div>
-        <!-- Desktop & Large Tablet Banner -->
-        <img src="project-assets/images/banner/nb3-2502.png" class="d-none d-xl-block w-100"
-            alt="Health Care Banner">
-        <!-- Mobile & iPad Banner -->
-        <img src="project-assets/images/banner/nbm3-2502.png" class="d-block d-xl-none w-100"
-            alt="Health Care Banner">
-        <div class="carousel-caption custom-carousel-caption">
-            <div class="custom-caption-content">
+          <!-- Health Tests Slide -->
+          <div class="carousel-item custom-carousel-item">
+            <div class="custom-carousel-overlay"></div>
+            <!-- Desktop & Large Tablet Banner -->
+            <img src="project-assets/images/banner/nb3-2502.png" class="d-none d-xl-block w-100"
+              alt="Health Care Banner">
+            <!-- Mobile & iPad Banner -->
+            <img src="project-assets/images/banner/nbm3-2502.png" class="d-block d-xl-none w-100"
+              alt="Health Care Banner">
+            <div class="carousel-caption custom-carousel-caption">
+              <div class="custom-caption-content">
                 <div class="custom-highlight-box d-none">
-                    <h2 class="custom-hindi-slogan"><b>Advanced Health Tests</b></h2>
+                  <h2 class="custom-hindi-slogan"><b>Advanced Health Tests</b></h2>
                 </div>
                 <div class="custom-feature-badges d-none">
-                    <span><i class="fas fa-home"></i> Home Collection</span>
-                    <span><i class="fas fa-flask"></i> Latest Equipment</span>
-                    <span><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
+                  <span><i class="fas fa-home"></i> Home Collection</span>
+                  <span><i class="fas fa-flask"></i> Latest Equipment</span>
+                  <span><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
                 </div>
                 <a href="./our-test/all-test" class="custom-cta-button">Book Test</a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
 
 
         <button class="carousel-control-prev" type="button" data-bs-target="#healthCarousel" data-bs-slide="prev">
@@ -588,85 +122,58 @@ $all_test = $test_obj->GetAllTestName();
         </button>
       </div>
     </section>
-
-
-
-
-  </div>
-
-
-
-  <!-- here health plan subscription -->
-
-  <section class="section-full bg-white content-inner" id="talktoexpert">
-    <div class="container">
-      <div class="row mobile-form" style="margin-top:-16em">
-        <div class="col-md-12">
-          <div class="card gradient-bg d-none">
-            <div class="card-header gradient-bg">
-              <h2 class="title">Looking to buy a new life <span class="text-primary">Health plan?</span></h2>
-              <p>Our experts are happy to help you!</p>
+    <div class="container-fluid my-3" style="background-color: #fff;">
+      <div class="tp-banner-container container">
+        <div class="tp-banner">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1" style="background-color:#673AB7 "></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2" style="background-color:#673AB7 "></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3" style="background-color:#673AB7 "></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4" style="background-color:#673AB7 "></button>
             </div>
-            <div class="card-body">
-              <form id="tte-review-form">
-                <div class="row mb-3">
-                  <div class="col-md-3">
-                    <label for="needformName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="needformName" name="needformName"
-                      placeholder="Enter full name" required>
-                    <div class="invalid-feedback">Please enter your name.</div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="needformMobile" class="form-label">Mobile No.</label>
-                    <div class="input-group">
-                      <span class="input-group-text">+91</span>
-                      <input type="tel" class="form-control" id="needformMobile" name="needformMobile"
-                        placeholder="Enter mobile number" maxlength="10" required>
-                      <div class="invalid-feedback">Please enter your mobile number.</div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="planSelect" class="">Plan</label>
-                    <select class="form-control" id="planSelect" name="planSelect" required>
-                      <option value="" selected disabled>Select plan</option>
-                      <option value="REGULAR HEALTH GUARD (INDIVIDUAL)(Individual)">
-                        REGULAR HEALTH GUARD (INDIVIDUAL)(Individual)</option>
-                      <option value="REGULAR HEALTH GUARD 2.0">REGULAR HEALTH GUARD 2.0</option>
-                      <option value="REGULAR HEALTH GUARD 3.0">REGULAR HEALTH GUARD 3.0</option>
 
-                      <option value="HAPPY SURAKSHA UNLIMITED (INDIVIDUAL)">
-                        HAPPY SURAKSHA UNLIMITED (INDIVIDUAL)</option>
-                      <option value="HAPPY SURAKSHA UNLIMITED (FAMILY FLOATER 3.0)">HAPPY SURAKSHA UNLIMITED (FAMILY
-                        FLOATER 3.0)</option>
-                      <option value="HAPPY SURAKSHA UNLIMITED (MAIGNIT 2.0)">HAPPY SURAKSHA UNLIMITED (MAIGNIT 2.0)
-                      </option>
-
-                      <option value="I don't know/I need help">I don't know/I need help</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a plan.</div>
-                  </div>
-                  <div class="col-md-3">
-                    <br>
-                    <div class="input-group mt-2">
-                      <button type="submit" class="btn site-button appointment-btn btnhover13 btn-rounded"
-                        onclick="Submitenquiry(event)">Get a Call Back</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <div class="form-text">
-                United Health Lumina Plan Ltd will send you updates on your policy, new products & services.
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <!-- Desktop Image -->
+                <img src="project-assets/images/banner/nb-2101.png" class="d-none d-md-block w-100" alt="Slide-1">
+                <!-- Mobile Image -->
+                <img src="project-assets/images/banner/nbm-2101.png" class="d-md-none w-100" alt="Mobile-Slide-1">
+              </div>
+              <div class="carousel-item">
+                <img src="project-assets/images/banner/nb2-2502.png" class="d-none d-md-block w-100" alt="Slide-2">
+                <img src="project-assets/images/banner/nbm-2101.png" class="d-md-none w-100" alt="Mobile-Slide-2">
+              </div>
+              <div class="carousel-item">
+                <img src="project-assets/images/banner/nb3-2502.png" class="d-none d-md-block w-100" alt="Slide-3">
+                <img src="project-assets/images/banner/nbm-2101.png" class="d-md-none w-100" alt="Mobile-Slide-3">
+              </div>
+              <div class="carousel-item">
+                <img src="project-assets/images/banner/nb-2101.png" class="d-none d-md-block w-100" alt="Slide-4">
+                <img src="project-assets/images/banner/nbm-2101.png" class="d-md-none w-100" alt="Mobile-Slide-4">
               </div>
             </div>
+
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-
-
-
-  </section>
-
+  </div>
   <section>
 
     <div class="health-services-section">
@@ -1595,6 +1102,55 @@ $all_test = $test_obj->GetAllTestName();
   </section>
 
 
+  <!-- ----new test card secton----- -->
+
+  <!-- Health Checks Section -->
+  <section class="section-highlight mt-5">
+    <div class="container section-content">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-4">
+          <h2 class="title">Health Checks for Key <span class="text-primary">Organs</span></h2>
+          <p class="section-description">
+            Discover our extensive suite of diagnostic tests designed specifically for vital body organs.
+            These specialized tests provide comprehensive insights for optimal health maintenance.
+          </p>
+        </div>
+
+        <div class="col-md-8">
+          <div class="row g-4">
+            <!-- Organ Cards -->
+            <?php
+            $organs = [
+              ['name' => 'Heart', 'icon' => 'heart.png'],
+              ['name' => 'Kidney', 'icon' => 'kidney.png'],
+              ['name' => 'Liver', 'icon' => 'liver.png'],
+              ['name' => 'Bone', 'icon' => 'fracture.png'],
+              ['name' => 'Vitamin', 'icon' => 'supplement.png'],
+              ['name' => 'Hormones', 'icon' => 'hormones.png'],
+              ['name' => 'Gut Health', 'icon' => 'gut-microbiota.png'],
+              ['name' => 'Blood', 'icon' => 'blood.png'],
+              ['name' => 'Reproductive Health', 'icon' => 'reph.png'],
+            ];
+
+            foreach ($organs as $organ): ?>
+              <div class="col-md-4 col-6">
+                <a href="#" class="text-decoration-none">
+                  <div class="organ-card text-center">
+                    <img src="./project-assets/images/test/<?php echo $organ['icon'] ?>"
+                      alt="<?php echo $organ['name'] ?>">
+                    <h4 class="title"><?php echo $organ['name'] ?></h4>
+                  </div>
+                </a>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <section class="section-full bg-white  d-none">
     <div class="container" style="margin-top: 4rem;">
       <div class="">
@@ -2106,259 +1662,47 @@ $all_test = $test_obj->GetAllTestName();
     </div>
   </section>
 
-  <style>
-    .bg-gradient-light {
-      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    }
 
-    .health-services-section {
-      padding: 60px 0;
-    }
+  <!-- Wellness Section -->
+  <section class="section-highlight">
+    <div class="container section-content">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="row g-4">
+            <?php
+            $checkups = [
+              ['name' => 'Women Health', 'icon' => 'Women-Health.png'],
+              ['name' => 'Lifestyle Checkup', 'icon' => 'Lifestyle-Checkup.png'],
+              ['name' => 'Cancer Checkup', 'icon' => 'Cancer-Checkup.png'],
+              ['name' => 'Senior Citizen', 'icon' => 'Senior.png'],
+              ['name' => 'Full Body Checkups', 'icon' => 'Full-Body-Checkups.png'],
+              ['name' => 'Diabetes Checkup', 'icon' => 'Diabetes.png'],
+            ];
 
-    .subtitle {
-      color: #666;
-      margin-top: 15px;
-      font-size: 1.1rem;
-    }
+            foreach ($checkups as $checkup): ?>
+              <div class="col-md-4 col-6">
+                <a href="#" class="text-decoration-none">
+                  <div class="organ-card text-center">
+                    <img src="./project-assets/images/test/<?php echo $checkup['icon'] ?>"
+                      alt="<?php echo $checkup['name'] ?>">
+                    <h4 class="title"><?php echo $checkup['name'] ?></h4>
+                  </div>
+                </a>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
 
-    .health-category-box {
-      border-radius: 20px;
-      padding: 30px;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bg-soft-blue {
-      background: linear-gradient(135deg, #e8f0fe 0%, #f8f9fa 100%);
-      border: 1px solid rgba(0, 123, 255, 0.1);
-    }
-
-    .bg-soft-green {
-      background: linear-gradient(135deg, #e8f8f5 0%, #f8f9fa 100%);
-      border: 1px solid rgba(40, 167, 69, 0.1);
-    }
-
-    .category-title {
-      color: #2c3e50;
-      margin-bottom: 25px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      position: relative;
-      padding-bottom: 15px;
-    }
-
-    .category-title:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: #007bff;
-      border-radius: 3px;
-    }
-
-    .service-card_1 {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: all 0.3s ease;
-    }
-
-    .service-item {
-      border: none;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .gradient-card-blue {
-      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-      border: 1px solid rgba(0, 123, 255, 0.1);
-    }
-
-    .gradient-card-green {
-      background: linear-gradient(135deg, #ffffff 0%, #f0fff7 100%);
-      border: 1px solid rgba(40, 167, 69, 0.1);
-    }
-
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-item:hover .hover-arrow {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .icon-wrapper {
-      margin-bottom: 15px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      padding: 12px;
-    }
-
-    .icon-wrapper img {
-      height: 40px;
-      width: auto;
-      transition: all 0.3s ease;
-    }
-
-    .service-item:hover .icon-wrapper img {
-      transform: scale(1.1);
-    }
-
-    .service-item h5 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .service-item p {
-      color: #666;
-      margin-bottom: 0;
-      font-size: 0.9rem;
-    }
-
-    .hover-arrow {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      opacity: 0;
-      transform: translateX(20px);
-      transition: all 0.3s ease;
-      color: #007bff;
-    }
-
-    .gradient-card-green .hover-arrow {
-      color: #28a745;
-    }
-
-    .btn.site-button {
-      padding: 12px 30px;
-      font-weight: 500;
-      background: #007bff;
-      color: white;
-      border: none;
-      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
-    }
-
-    .btn.site-button-secondary {
-      padding: 12px 30px;
-      font-weight: 500;
-      background: #28a745;
-      color: white;
-      border: none;
-      box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .fas {
-      margin-right: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .health-category-box {
-        padding: 20px;
-      }
-
-      .service-item h5 {
-        font-size: 1rem;
-      }
-
-      .service-item p {
-        font-size: 0.8rem;
-      }
-    }
-
-    .icon-wrapper {
-      margin-bottom: 20px;
-      height: 80px;
-      /* Increased from 60px */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      padding: 15px;
-      /* Increased from 12px */
-      width: 80px;
-      /* Added fixed width */
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .icon-wrapper img {
-      height: 55px;
-      /* Increased from 40px */
-      width: auto;
-      transition: all 0.3s ease;
-      object-fit: contain;
-    }
-
-    .service-item {
-      border: none;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      padding: 15px 10px;
-      /* Added padding */
-    }
-
-    .service-item .card-body {
-      padding: 1.5rem 1rem;
-      /* Adjusted padding */
-    }
-
-    .service-item h5 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #2c3e50;
-      font-weight: 600;
-      min-height: 40px;
-      /* Added to maintain consistent height */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .icon-wrapper {
-        height: 70px;
-        width: 70px;
-      }
-
-      .icon-wrapper img {
-        height: 45px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .icon-wrapper {
-        height: 60px;
-        width: 60px;
-      }
-
-      .icon-wrapper img {
-        height: 40px;
-      }
-    }
-  </style>
+        <div class="col-md-4">
+          <h2 class="title">Prioritize Your Wellness with <span class="text-primary">Personalized Care</span></h2>
+          <p class="section-description">
+            Our customized health checkups are designed to meet your unique needs, focusing on your lifestyle,
+            age, and medical history. Discover a tailored approach to preventive healthcare.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section-full content-inner benefits-section"
     style="background: linear-gradient(135deg, #367eb7 0%, #196dad 100%); color: white;">
@@ -2482,112 +1826,7 @@ $all_test = $test_obj->GetAllTestName();
       </div>
     </div>
 
-    <style>
-      .benefits-section {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        padding: 80px 0;
-      }
 
-      .subtitle {
-        display: block;
-        font-size: 1.1rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      .section-description {
-        max-width: 700px;
-        margin: 0 auto;
-        color: #6c757d;
-      }
-
-      .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
-
-      .benefit-card {
-        background: white;
-        border-radius: 15px;
-        padding: 2rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .benefit-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      }
-
-      .benefit-icon {
-        margin-bottom: 1.5rem;
-      }
-
-      .icon-wrapper {
-        width: 70px;
-        height: 70px;
-        background: rgba(13, 110, 253, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-      }
-
-      .icon-wrapper img {
-        width: 35px;
-        height: 35px;
-        object-fit: contain;
-      }
-
-      .benefit-content h3 {
-        color: #2c3e50;
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-      }
-
-      .benefit-content p {
-        color: #6c757d;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-
-      .benefit-features {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .benefit-features li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
-        color: #495057;
-      }
-
-      .benefit-features i {
-        color: #28a745;
-        margin-right: 0.5rem;
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 768px) {
-        .benefits-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .benefit-card {
-          padding: 1.5rem;
-        }
-      }
-    </style>
   </section>
 
 

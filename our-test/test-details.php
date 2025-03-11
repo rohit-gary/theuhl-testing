@@ -48,6 +48,9 @@ $totaloff = intval($baseprice + $off);
       }
     }
   </style>
+
+
+
 </head>
 
 
@@ -84,13 +87,22 @@ $totaloff = intval($baseprice + $off);
               </div>
 
               <!-- Add to Cart Button -->
-              <div class="mt-4">
-                <button class="btn cart-btn btn-success w-100 py-3" data-product-id="<?php echo $test_details['ID'] ?>"
-                  data-product-name="<?php echo $test_details['TestName'] ?>"
-                  data-product-price=" <?php echo $test_details['TestFee'] ?>"
-                  style="border-radius: 8px; font-size: 18px; font-weight: 700;">
-                  Add to Cart
-                </button>
+              <div class="col-12 d-flex  my-4">
+                <div class="cart-btn_1 flex-grow-1">
+                  <button class="cart-btn btn btn-primary" data-product-id="<?php echo $test_details['ID'] ?>"
+                    data-product-name="<?php echo $test_details['TestName'] ?>"
+                    data-product-price="<?php echo $test_details['TestFee'] ?>"
+                    style="font-size: 12px; font-weight: 700;"><i class="fa-solid fa-cart-shopping"></i>
+                    Add to cart
+                  </button>
+                </div>
+                <div class=" col-12 cart-remove-btn_1">
+                  <button class="remove-btn btn btn-danger ms-2" style="display: none;"
+                    data-product-id="<?php echo $test_details['ID'] ?>"
+                    onclick="removeFromCart_2(<?php echo $test_details['ID'] ?>)">
+                    <i class="fa fa-trash"></i> Remove
+                  </button>
+                </div>
               </div>
             </div>
           </div>

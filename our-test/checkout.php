@@ -30,7 +30,16 @@ if (isset($_SESSION['dwd_UserID']) && !empty($_SESSION['dwd_UserID'])) {
 
     </style>
 </head>
-<?php include('../includes/header1.php'); ?>
+
+<?php 
+
+if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
+{
+    include('../includes/header1.php');
+}
+
+
+ ?>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <!-- Content -->
 <div class="page-content bg-white">
@@ -207,7 +216,19 @@ if (isset($_SESSION['dwd_UserID']) && !empty($_SESSION['dwd_UserID'])) {
 <!-- Content END-->
 
 </div>
-<?php include("../includes/footer1.php") ?>
+<?php 
+
+if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
+{
+   include("../includes/footer1.php");
+}
+
+
+
+
+ ?>
+
+
 <?php include("../includes/script1.php") ?>
 </body>
 <script type="text/javascript" src="../project-assets/js/all_test_new.js" defer></script>

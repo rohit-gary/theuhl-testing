@@ -11,7 +11,6 @@ unset($_SESSION['policy_form_Id']);
 unset($_SESSION['PolicyNumber']);
 unset($_SESSION['policy_form_action']);
 unset($_SESSION['family_member']);
-unset($_SESSION['cart_id']);
 
 // Return success response
 echo 'success';

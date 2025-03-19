@@ -108,6 +108,12 @@ if (
                     </li>
 
                     <li>
+                        <a href="#" class="side-menu__item has-link clearSessionLinkTest">
+                            <i class="side-menu__icon fa fa-user-plus"></i> Add Test Customer
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="../PolicyCustomer/view-all-policy-customer-new" class="side-menu__item has-link">
                             <i class="side-menu__icon fa fa-list mr-2"></i><span class="side-menu__label">Policy Customer
                                 List</span>
@@ -383,4 +389,29 @@ if (
         });
     });
 
+
+     $(document).ready(function () {
+        $('.clearSessionLinkTest').on('click', function (e) {
+            // Check if the item exists in localStorage
+            if (localStorage.getItem('currentStep') !== null) {
+                // If it exists, remove it
+                localStorage.removeItem('currentStep');
+               
+            }
+            e.preventDefault();
+            $.ajax({
+                url: '../controllers/clear-session.php',
+                type: 'POST',
+                success: function (response) {
+                    // After clearing the session, redirect the user
+                    window.location.href = '../testCustomer/add_test_customer';
+                },
+                error: function () {
+                    alert('Error clearing session.');
+                }
+            });
+        });
+    });
+
 </script>
+

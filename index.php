@@ -266,7 +266,7 @@ $all_test = $test_obj->GetAllTestName();
                     <div class="row g-3">
                       <!-- Add more service cards here for the second slide if needed -->
                       <div class="col-6">
-                        <a href="#" class="service-card_1">
+                        <a href="./all-plans" class="service-card_1">
                           <div class="card h-100 service-item gradient-card-blue">
                             <div class="card-body">
                               <div class="icon-wrapper">
@@ -969,7 +969,7 @@ $all_test = $test_obj->GetAllTestName();
                               <li><i class="fas fa-check-circle"></i> Professional Coverage</li>
                               <li><i class="fas fa-check-circle"></i> Enhanced Medical Benefits</li>
                             </ul>
-                            <a href="./our-test/all-test" class="btn btn-primary">
+                            <a href="view-plan-details.php?id=MTM=" class="btn btn-primary">
                               View Details <i class="fas fa-arrow-right ms-2"></i>
                             </a>
                           </div>
@@ -979,22 +979,22 @@ $all_test = $test_obj->GetAllTestName();
                       <!-- Plan Card 6 -->
                       <div class="col-md-4">
                         <div class="solution-card">
-                          <div class="card-badge">Premium</div>
                           <div class="test-card-header"
                             style="background: linear-gradient(135deg, #235789, #29A0B1); color: #fff;">
                             <div class="solution-icon">
-                              <img src="project-assets/images/icon/shield.png" alt="Pro Health">
+                              <img src="project-assets/images/icon/patient.png" alt="Care Shield">
                             </div>
-                            <h4 style="color: #fff;">UHL PRO HEALTH PLUS</h4>
+                            <h4 style="color: #fff;">CARE ADVANTAGE SHIELD</h4>
                           </div>
                           <div class="solution-content">
-
-                            <p>Premium health protection with comprehensive benefits.</p>
+                            <p>Superior healthcare protection with added advantages.</p>
                             <ul class="features-list">
-                              <li><i class="fas fa-check-circle"></i> Premium Protection</li>
-                              <li><i class="fas fa-check-circle"></i> Exclusive Benefits</li>
+
+                              <li><i class="fas fa-check-circle"></i> Premium Benefits</li>
+                              <li><i class="fas fa-check-circle"></i> Specialized Care</li>
                             </ul>
-                            <a href="#" class="btn btn-primary">
+                            <a href="https://unitedhealthlumina.com/view-plan-details.php?id=MTI="
+                              class="btn btn-primary">
                               View Details <i class="fas fa-arrow-right ms-2"></i>
                             </a>
                           </div>
@@ -1134,7 +1134,7 @@ $all_test = $test_obj->GetAllTestName();
 
             foreach ($organs as $organ): ?>
               <div class="col-md-4 col-6">
-                <a href="#" class="text-decoration-none">
+                 <a href="./our-test/all-test#test_container" class="text-decoration-none">
                   <div class="organ-card text-center">
                     <img src="./project-assets/images/test/<?php echo $organ['icon'] ?>"
                       alt="<?php echo $organ['name'] ?>">
@@ -1681,7 +1681,7 @@ $all_test = $test_obj->GetAllTestName();
 
             foreach ($checkups as $checkup): ?>
               <div class="col-md-4 col-6">
-                <a href="#" class="text-decoration-none">
+                 <a href="./our-test/all-test#test_container" class="text-decoration-none">
                   <div class="organ-card text-center">
                     <img src="./project-assets/images/test/<?php echo $checkup['icon'] ?>"
                       alt="<?php echo $checkup['name'] ?>">

@@ -143,6 +143,13 @@ public function ApigetPlanDetailsbyID($ID){
 }
 
 
+public function GetFamilyMembersByPlanIDAndPolicyNumber($planID, $policyNumber)
+{
+    $where = "WHERE PlanID = '$planID' AND PolicyNumber = '$policyNumber'";
+    $family_members = $this->_getTableRecords($this->conn, 'policy_member_details', $where);
+    return $family_members;
+}
+
 // public function UpdatePlanForm($data){
 // 	    extract($data);
 // 		$update_sql = " Question = '$Question',Answer='$Answer' where ID = $form_id";

@@ -49,8 +49,8 @@ class Test extends Core
 
 	public function GetAllTestPackage()
 	{
-		$where = " where IsActive = 1";
-		$services_list = $this->_getTableRecords($this->conn, 'test_package', $where);
+		$where = " where IsActive = 1 And Type='Package'";
+		$services_list = $this->_getTableRecords($this->conn, 'doc_test', $where);
 		return $services_list;
 	}
 

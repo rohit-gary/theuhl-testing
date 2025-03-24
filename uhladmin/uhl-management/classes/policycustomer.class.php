@@ -710,6 +710,15 @@ LIMIT 0, 25;";
         return $response_insert_user;
     }
 
+    public function PostEnqiryNew($data)
+    {
+        extract($data);
+        $sql = "INSERT INTO `enquiry_form` (`Name`,`Email`, `MobileNumber`, `Message`)
+                                     VALUES ('$Name','$Email', '$MobileNumber', '$Message')";
+        $response_insert_user = $this->_InsertTableRecords($this->conn, $sql);
+        return $response_insert_user;
+    }
+
 
     public function GetUserCurrentPlan($data)
     {
@@ -741,6 +750,52 @@ LIMIT 0, 25;";
 
         return ["error" => true, "message" => "No records found"];
     }
+
+
+
+public function GetUserCurrentPlanNew($data)
+{
+    extract($data);
+    $where = "WHERE UserID = '$ID' OR ContactNumber = '$MobileNumber'";
+    $user_details = $this->_getTableRecords($this->conn, 'all_customer', $where);
+
+    if (empty($user_details)) {
+        return ["error" => true, "message" => "No customer records found"];
+    }
+
+    $customerIDs = array_column($user_details, 'ID'); // Extract all Customer IDs
+    $customerPolicies = [];
+
+    foreach ($customerIDs as $customerId) {
+        $where = "WHERE CustomerID = '$customerId'";
+        $user_policy_details = $this->_getTableRecords($this->conn, 'customerpolicy', $where);
+
+        if (!empty($user_policy_details)) {
+            foreach ($user_policy_details as $policy) {
+                $policyKey = $policy['CustomerID'] . '-' . $policy['PolicyNumber']; // Unique Key
+                if (!isset($customerPolicies[$policyKey])) { // Avoid duplicates
+                    $customerPolicies[$policyKey] = [
+                        "CustomerID" => $policy['CustomerID'],
+                        "PolicyNumber" => $policy['PolicyNumber'],
+                        "CreatedDate" => $policy['CreatedDate'],
+                        "CreatedTime" => $policy['CreatedTime'],
+                        "CreatedBy" => $policy['CreatedBy'],
+                        "IsActive" => $policy['IsActive'],
+                    ];
+                }
+            }
+        }
+    }
+
+    if (!empty($customerPolicies)) {
+        return [array_values($customerPolicies)]; // Convert associative array to indexed
+    } else {
+        return ["error" => true, "message" => "No policy records found"];
+    }
+}
+
+
+
 
 
 

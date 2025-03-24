@@ -1,11 +1,13 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
 require_once('common_api_header.php');
 require_once '../../vendor/autoload.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+
 require_once('../include/autoloader.inc.php');
 require_once("../include/db-connection.php");
 
@@ -18,27 +20,37 @@ $logs->WriteLog($data_raw, __FILE__, __LINE__);
 $data = json_decode($data_raw, true);
 
 $response = array();
+
 if (isset($data['token']) && isset($data['PolicyNumber'])) {
     $jwt = $data['token'];
+
     try {
         $token_decoded = JWT::decode($jwt, new Key($secret_key, 'HS512'));
         $username = $token_decoded->data->username;
         $userId = $token_decoded->data->user_id;
+
         $data['username'] = $username;
         $data['ID'] = $userId;
         $PolicyNumber = $data['PolicyNumber'];
+
         $PolicyCustomer_obj = new PolicyCustomer($conn);
-        $Plans_obj = new Plans($conn); 
+        $Plans_obj = new Plans($conn);
+
+        // Get all Plan IDs linked to the PolicyNumber
         $result = $PolicyCustomer_obj->GetCustomerAllPlansIDByPolicyNumber($PolicyNumber);
         $planIDs = array_column($result, 'PlanID');
-        $planDetails = [];
+
+        $familyDetails = [];
         foreach ($planIDs as $planID) {
-            $planDetails[] = $Plans_obj->ApigetPlanDetailsbyID($planID);
+            $familyDetails[] = [
+                'PlanDetails' => $Plans_obj->ApigetPlanDetailsbyID($planID),
+                'FamilyMembers' => $Plans_obj->GetFamilyMembersByPlanIDAndPolicyNumber($planID, $PolicyNumber)
+            ];
         }
-        
-        // Prepare response
+
         $response['error'] = false;
-        $response['data'] = $planDetails;
+        $response['data'] = $familyDetails;
+
     } catch (Exception $e) {
         $logs->WriteLog($e->getMessage(), __FILE__, __LINE__);
         $response['error'] = true;
@@ -48,6 +60,7 @@ if (isset($data['token']) && isset($data['PolicyNumber'])) {
     $response['error'] = true;
     $response['message'] = "Missing User Field";
 }
+
 $logs->WriteLog(json_encode($response), __FILE__, __LINE__);
 echo json_encode($response);
 ?>

@@ -1,0 +1,49 @@
+
+2025-03-24_13:43:57_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_17
+{
+   "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ1aGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6InVobCIsImlhdCI6MTc0MjgwMDUwMSwiZXhwIjo0ODk2NDAwNTAxLCJkYXRhIjp7InVzZXJfaWQiOiI1NzgiLCJ1c2VybmFtZSI6IlRlc3RpbmdOYW1lIn19.akpd461zCzJDquPc-kvitrj_A8WuAYVm_U-pgIXB650juT0myvj0uex4ie1BURQm61raqkHHb8pUCridHpOAhw"
+   
+}
+
+2025-03-24_13:43:57_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_57
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=578 And IsActive=1' at line 1
+2025-03-24_13:43:57_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_67
+{"error":true,"message":"Invalid Token"}
+2025-03-24_13:44:30_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_17
+{
+   "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ1aGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6InVobCIsImlhdCI6MTc0MjgwMDUwMSwiZXhwIjo0ODk2NDAwNTAxLCJkYXRhIjp7InVzZXJfaWQiOiI1NzgiLCJ1c2VybmFtZSI6IlRlc3RpbmdOYW1lIn19.akpd461zCzJDquPc-kvitrj_A8WuAYVm_U-pgIXB650juT0myvj0uex4ie1BURQm61raqkHHb8pUCridHpOAhw"
+   
+}
+
+2025-03-24_13:44:30_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_57
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=578 And IsActive=1' at line 1
+2025-03-24_13:44:30_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_67
+{"error":true,"message":"Invalid Token"}
+2025-03-24_13:45:16_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_17
+{
+   "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ1aGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6InVobCIsImlhdCI6MTc0MjgwMDUwMSwiZXhwIjo0ODk2NDAwNTAxLCJkYXRhIjp7InVzZXJfaWQiOiI1NzgiLCJ1c2VybmFtZSI6IlRlc3RpbmdOYW1lIn19.akpd461zCzJDquPc-kvitrj_A8WuAYVm_U-pgIXB650juT0myvj0uex4ie1BURQm61raqkHHb8pUCridHpOAhw"
+   
+}
+
+2025-03-24_13:45:16_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_57
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=578 And IsActive=1' at line 1
+2025-03-24_13:45:16_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_67
+{"error":true,"message":"Invalid Token"}
+2025-03-24_13:46:02_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_17
+{
+   "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ1aGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6InVobCIsImlhdCI6MTc0MjgwMDUwMSwiZXhwIjo0ODk2NDAwNTAxLCJkYXRhIjp7InVzZXJfaWQiOiI1NzgiLCJ1c2VybmFtZSI6IlRlc3RpbmdOYW1lIn19.akpd461zCzJDquPc-kvitrj_A8WuAYVm_U-pgIXB650juT0myvj0uex4ie1BURQm61raqkHHb8pUCridHpOAhw"
+   
+}
+
+2025-03-24_13:46:02_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_57
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=578 And IsActive=1' at line 1
+2025-03-24_13:46:02_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_67
+{"error":true,"message":"Invalid TokenYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=578 And IsActive=1' at line 1"}
+2025-03-24_13:47:42_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_17
+{
+   "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ1aGwuZGlnaXRhbHdvcmtkZXNrLmNvbSIsImF1ZCI6InVobCIsImlhdCI6MTc0MjgwMDUwMSwiZXhwIjo0ODk2NDAwNTAxLCJkYXRhIjp7InVzZXJfaWQiOiI1NzgiLCJ1c2VybmFtZSI6IlRlc3RpbmdOYW1lIn19.akpd461zCzJDquPc-kvitrj_A8WuAYVm_U-pgIXB650juT0myvj0uex4ie1BURQm61raqkHHb8pUCridHpOAhw"
+   
+}
+
+2025-03-24_13:47:42_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\get_current_user_plan.php_67
+{"error":false,"data":{"error":true,"message":"No records found"}}

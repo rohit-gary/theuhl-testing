@@ -23,7 +23,7 @@ if(isset($data['ID']))
 	    $Test_Obj = new Test($conn);
         $test_details = $Test_Obj->GetTestDetailsByID($ID);
 		$response['error'] = false;
-		$response['data'] = $test_details;
+		$response['data'] = [$test_details];
 	}
 	catch (Exception $e) {
 	    // Invalid token

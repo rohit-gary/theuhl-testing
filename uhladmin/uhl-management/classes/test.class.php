@@ -23,7 +23,7 @@ class Test extends Core
 
 	public function GetAllTestNameFilter($filter_limit)
 	{
-		$where = " where IsActive = 1 ORDER BY ID DESC $filter_limit";
+		$where = " where IsActive = 1 ORDER BY ID ASC $filter_limit";
 		$services_list = $this->_getTableRecords($this->conn, 'doc_test', $where);
 		return $services_list;
 	}

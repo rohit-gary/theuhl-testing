@@ -12,6 +12,9 @@ if (isset($_POST['user_id'])) {
   $data['CreatedDate'] = date('Y-m-d');
   $data['CreatedTime'] = date('H:i:s');
   $data['OrderID'] = 'UHLTEST' . rand(100000, 999999);
+  $checkcartalredyexist=$test_customer->checkCartCheckout($data);
+  if($checkcartalredyexist){
+
   $Info_response = $test_customer->InsertTestCustomerDeliveryInfo($data);
   $InfoID = $Info_response['last_insert_id'];
   if ($Info_response['error'] == false) {
@@ -34,6 +37,11 @@ if (isset($_POST['user_id'])) {
     $response['message'] = "Customer delivery info failed to add";
     $response['error'] = true;
   }
+  }else{
+    $response['message'] = "Sorry this Order is Already Placed!";
+    $response['error'] = true;
+  }
+  
 } else {
   $response['message'] = "missing User Field";
   $response['error'] = true;

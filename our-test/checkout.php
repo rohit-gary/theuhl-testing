@@ -14,7 +14,7 @@ if (isset($_SESSION['dwd_UserID']) && !empty($_SESSION['dwd_UserID'])) {
     if (isset($_GET['user_id'])) {
         $user_id = $_GET['user_id'];
     } else {
-        echo "<script> window.location.href = 'http://localhost/Projects/theuhl-testing/our-test/create-account.php';</script>";
+        echo "<script> window.location.href = 'https://unitedhealthlumina.com/our-test/create-account.php';</script>";
     }
 }
 ?>
@@ -71,44 +71,53 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
                         <h4>Billing & Shipping Address</h4>
                         <div class="row">
                             <div class="form-group col-md-6">
+                                <label class="form-check-label" for="first_name_checkout">First Name</label>
                                 <input type="text" class="form-control" placeholder="First Name"
                                     id="first_name_checkout" name="first_name">
                             </div>
                             <div class="form-group col-md-6">
+                                <label class="form-check-label" for="last_name_checkout">Last Name</label>
                                 <input type="text" class="form-control" placeholder="Last Name" id="last_name_checkout"
                                     name="last_name">
                             </div>
                         </div>
                         <div class="form-group">
+                            <label class="form-check-label" for="address_checkout">Address</label>
                             <input type="text" class="form-control" placeholder="Address" id="address_checkout"
                                 name="address">
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
+                                 <label class="form-check-label" for="apartment_checkout">Apartment, suite, unit etc.</label>
                                 <input type="text" class="form-control" placeholder="Apartment, suite, unit etc."
                                     id="apartment_checkout" name="apartment">
                             </div>
                             <div class="form-group col-md-6">
+                                <label class="form-check-label" for="city_checkout">Town / City</label>
                                 <input type="text" class="form-control" placeholder="Town / City" id="city_checkout"
                                     name="city">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
+                                <label class="form-check-label" for="state_checkout">State / County</label>
                                 <input type="text" class="form-control" placeholder="State / County" id="state_checkout"
                                     name="state">
                             </div>
                             <div class="form-group col-md-6">
+                                 <label class="form-check-label" for="postcode_checkout">Postcode / Zip</label>
                                 <input type="text" class="form-control dz-number" placeholder="Postcode / Zip"
                                     id="postcode_checkout" name="postcode">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
+                                <label class="form-check-label" for="email_checkout">Email</label>
                                 <input type="email" class="form-control" placeholder="Email" id="email_checkout"
                                     name="email">
                             </div>
                             <div class="form-group col-md-6">
+                                 <label class="form-check-label" for="phone_checkout">Phone</label>
                                 <input type="text" class="form-control dz-number" placeholder="Phone"
                                     id="phone_checkout" name="phone">
                             </div>
@@ -188,7 +197,14 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
                                     <label class="form-check-label me-3" for="idfc">UPI</label>
                                     <img src="../project-assets/images/upi-logo.png" style="height:50px">
                                 </div>
+
                                 <div class="form-check d-flex align-items-center mt-2">
+                                    <input type="radio" class="form-check-input me-2" id="cod" name="payment_gateway"
+                                        value="cod">
+                                    <label class="form-check-label me-3" for="cod">COD (cash on delivery)</label>
+                                </div>
+
+                                <div class="form-check d-flex align-items-center mt-2 d-none">
                                     <input type="radio" class="form-check-input me-2" id="payu" name="payment_gateway"
                                         value="payu">
                                     <label class="form-check-label me-3" for="payu">PayU</label>
@@ -238,8 +254,8 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
         // let selectedGateway = document.getElementById('payment_gateway').value;
         let selectedGateway = document.querySelector('input[name="payment_gateway"]:checked').value;
         console.log(selectedGateway);
-        // let amount = document.getElementById('amount').value;
-        let amount = '1';
+        let amount = document.getElementById('amount').value;
+        // let amount = '1';
         let card_name = document.getElementById('first_name_checkout').value;
         let phone = document.getElementById('phone_checkout').value;
         let cart_id = document.getElementById('cart_id').value;
@@ -255,8 +271,8 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
         let notes = document.getElementById('notes_checkout').value;
         let user_id = document.getElementById('user_id').value;
 
-        if (first_name == '' || last_name == '' || address == '' || apartment == '' || city == '' || state == '' || postcode == '' || email == '' || notes == '') {
-            alert('Please fill all the fields');
+        if (first_name == '' || last_name == '' || address == '' || apartment == '' || city == '' || state == '' || postcode == '' || email == '') {
+            uhlAlert('Please fill all the fields');
             return;
         }
 
@@ -264,6 +280,7 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
         formData = $('#pay_amount').serialize();
         // Prevent default action only once
         e.preventDefault();
+        $("#pay-button").html("Please Wait..");
         $.ajax({
             url: 'action/add-test-customer-delivery-info.php',
             method: 'POST',
@@ -271,7 +288,7 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
             success: function (response) {
                 var response = JSON.parse(response);
                 if (response.error == false) {
-                    alert('Customer delivery info added successfully Please wait for payment verification');
+                    uhlAlert('Customer delivery info added successfully Please wait for payment verification');
                     setTimeout(function () {
 
                         if (selectedGateway === 'idfc') {
@@ -296,7 +313,7 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
                                 .then(response => response.json())
                                 .then(data => {
                                     if (data.error) {
-                                        alert('Error: ' + data.error);
+                                        uhlAlert('Error: ' + data.error);
                                         return;
                                     }
 
@@ -334,7 +351,7 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
                                                             icon: "success",
                                                             confirmButtonText: "OK"
                                                         }).then(() => {
-                                                            window.location.href = "./our-test/all-test"; // Redirect after successful payment
+                                                            window.location.href = "./all-test"; // Redirect after successful payment
                                                         });
                                                     } else {
                                                         Swal.fire({
@@ -366,13 +383,16 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
                         } else if (selectedGateway === 'payu') {
                             frmsubmit()
                         }
+                        else if (selectedGateway === 'cod') {
+                           thanksOnCode();
+                        }
 
 
                     }, 5000)
 
 
                 } else {
-                    alert(response.message);
+                    uhlAlert(response.message);
                 }
             }
 
@@ -391,4 +411,10 @@ if(!(isset($_GET['source']) && $_GET['source'] === 'mobile'))
         return true;
     }
 
+  function thanksOnCode() {
+    uhlAlert("Order placed successfully! Thank you for your booking.");
+    setTimeout(function () {
+        window.location.href = "./all-test";
+    }, 5000);
+}
 </script>

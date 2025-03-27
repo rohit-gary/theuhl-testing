@@ -259,10 +259,20 @@ class Test extends Core
 		return $Test_cart_item;
 	}
 
+	public function checkCartCheckout($data)
+	{
+		$UserID = $data['user_id'];
+		$CartID = $data['cart_id'];
+		$where="Where UserID=$UserID And CartID='$CartID'";
+		$response=$this->check_unique_identity_filter($this->conn, "test_customer_delivery_info", $where);
+		return $response;
+	}
+
 
 	public function InsertTestCustomerDeliveryInfo($data)
 	{
 		$UserID = $data['user_id'];
+		$CartID = $data['cart_id'];
 		$FirstName = $data['first_name'];
 		$LastName = $data['last_name'];
 		$Phone = $data['phone'];
@@ -274,9 +284,10 @@ class Test extends Core
 		$Email = $data['email'];
 		$Notes = $data['notes'];
 		$OrderID = $data['OrderID'];
+		$PaymentType = $data['payment_gateway'];
 		$CreatedDate = $data['CreatedDate'];
 		$CreatedTime = $data['CreatedTime'];
-		$sql = "INSERT INTO `test_customer_delivery_info`(`UserID`,`FirstName`,`LastName`,`Phone`,`Address`,`Apartment`,`City`,`State`,`Postcode`,`Email`,`Notes`,`OrderID`,`CreatedDate`,`CreatedTime`) VALUES ('$UserID','$FirstName','$LastName','$Phone','$Address','$Apartment','$City','$State','$Postcode','$Email','$Notes','$OrderID','$CreatedDate','$CreatedTime')";
+		$sql = "INSERT INTO `test_customer_delivery_info`(`UserID`,`CartID`,`FirstName`,`LastName`,`Phone`,`Address`,`Apartment`,`City`,`State`,`Postcode`,`Email`,`Notes`,`OrderID`,`PaymentType`,`CreatedDate`,`CreatedTime`) VALUES ('$UserID','$CartID','$FirstName','$LastName','$Phone','$Address','$Apartment','$City','$State','$Postcode','$Email','$Notes','$OrderID','$PaymentType','$CreatedDate','$CreatedTime')";
 		$response_insert_details = $this->_InsertTableRecords($this->conn, $sql);
 		return $response_insert_details;
 	}

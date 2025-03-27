@@ -64,3 +64,8 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script> -->
 <!--End of Tawk.to Script-->
+<script type="text/javascript">
+  function uhlAlert(message) {
+  alertify.alert("", message).set({ transition: "fade" });
+}
+</script>

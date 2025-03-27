@@ -1,3 +1,4 @@
+ <?php @session_start()?>
 <head>
   <?php include("includes/meta.php") ?>
   <?php include("includes/links1.php") ?>

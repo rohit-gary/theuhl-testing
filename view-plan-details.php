@@ -23,10 +23,10 @@
          $All_State = $state_obj->GetAllState();
          
         $planCost = $planDetails[0]['PlanCost']; // Original plan cost
-        $discountPercentage = 28; // Percentage to subtract
+        $discountPercentage = 118; // Percentage to subtract
 
         // Calculate the cost after subtracting 28%
-        $newCost = $planCost * (1 - $discountPercentage / 100);
+        $newCost = $planCost / ($discountPercentage / 100);
         $originalCost = round($newCost * 1.28); // Calculating 28% extra of the plan cost
 
         $planExclusions=$plans->GetAllPlanExclusitions();
@@ -37,7 +37,7 @@
     ?>
     <head>
          <?php include("includes/meta.php") ?>
-        <?php include("includes/links.php") ?>
+        <?php include("includes/links1.php") ?>
         <title>Plan Details</title>  
      <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
      <style type="text/css">
@@ -47,7 +47,7 @@
 
     </head>
 
-    <?php include('includes/header.php'); ?>
+    <?php include('includes/header1.php'); ?>
     <body id="bg">
     <div class="page-wraper">
     <div id="loading-area"></div>
@@ -113,11 +113,17 @@
                                    preg_match_all('/"(.*?)"/', $highlightsString, $matches);
                                  
                                   if (!empty($matches[1])) {
+                                    $first = true; // Flag for the fi
                                     foreach ($matches[1] as $highlight) {
                                         // Trim whitespace around the highlight
                                         $highlight = trim($highlight);
                                         if (!empty($highlight)) { // Ensure the highlight is not empty
-                                            echo '<p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2 me-3"></i>' . htmlspecialchars($highlight) . '</p>';
+                                            if ($first) {
+                                                echo '<p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-28 mr-2 me-3"></i><strong style=" font-weight: 900; font-size: 18px;">' . htmlspecialchars($highlight) . '</strong></p>';
+                                                $first = false;
+                                            } else {
+                                                echo '<p class="mb-2"><i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2 me-3"></i>' . htmlspecialchars($highlight) . '</p>';
+                                            }
                                         }
                                     }
                                 } 
@@ -131,7 +137,7 @@
                                             echo '<div class="accordion mt-3" id="coverageAccordion">';
                                             
                                             // Accordion Header
-                                            echo '<div class="accordion-item">';
+                                            echo '<div class="accordion-item d-none">';
                                             echo '<h2 class="accordion-header" id="headingCoverage">';
                                             echo '<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCoverage" aria-expanded="false" aria-controls="collapseCoverage">';
                                             echo '<b>Full Checkup Panel 3 Features:</b>';
@@ -204,7 +210,7 @@
                             <div class="dlab-tabs  product-description tabs-site-button">
                                 <ul class="nav nav-tabs ">
                                     <li><a data-bs-toggle="tab" href="#graphic-design-1" class="active"><i class="far fa-image"></i> Additional Information</a></li>
-                                    <li><a data-bs-toggle="tab" href="#web-design-1" ><i class="fas fa-globe"></i>Description </a></li>
+                                    <li class="d-none"><a data-bs-toggle="tab" href="#web-design-1" ><i class="fas fa-globe"></i>Description </a></li>
                                     
                                     <!-- <li><a data-bs-toggle="tab" href="#developement-1"><i class="fas fa-cog"></i> Product Review</a></li> -->
                                 </ul>
@@ -289,6 +295,27 @@
                         </div>
                     </div>
                
+
+                    <div class="row">
+                        <h3 class=""><i class="fas fa-globe"></i> Description</h3>
+                        <div class="col-lg-12">
+                            <div class="product-description tabs-site-button">
+                                <div class="">
+                                    <div id="web-design-1" class="tab-pane ">
+
+                                    <?php 
+                                        if (!empty($planDetails[0]['PlanDescription'])) {
+                                            echo '<div class="description-content">' . $planDetails[0]['PlanDescription'] . '</div>';
+                                        } else {
+                                            echo '<p class="mb-2">No highlighted features available.</p>';
+                                        }
+                                        ?>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                
             </div>
@@ -333,8 +360,8 @@
                     </div>
                     <!-- ------------------- -->
         </div>
-         <?php include("includes/footer.php") ?>
-         <?php include("includes/script.php") ?>
+         <?php include("includes/footer1.php") ?>
+         <?php include("includes/script1.php") ?>
         <button class="scroltop fas fa-chevron-up" ></button>
     </div>
 

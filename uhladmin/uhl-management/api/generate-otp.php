@@ -24,7 +24,7 @@ if(isset($data['PhoneNumber']))
    $authentication = new Authentication($conn);
     $phonenumber = $data['PhoneNumber'];
    $otp = generateOTP($phonenumber);
-   
+   $OTP=$otp;
 	InsertTempOTP($conn,$phonenumber,$otp);
      $data['phonenumber'] = $phonenumber;
 	$data['otp'] = $otp;
@@ -32,12 +32,18 @@ if(isset($data['PhoneNumber']))
 	$response["error"] = false;
 	$response["message"] = "Kindly Enter the OTP sent to your phone number";
    $response['otp']=$data['otp'];
-   $smsdata=array(
+    $wdata['phonenumber'] = $MobileNumber;
+        $body_values = '["' . $OTP . '"]';
+        $wdata['body_values'] = $body_values;
+        // $wdata['template'] = "browse_userotp_whatsapp";
+            $wdata['otp']=$OTP;
+          $smsdata=array(
                   "variables_values" =>$otp,
                   "route" => "otp",
                   "numbers" => $MobileNumber,
                   );
    sendSmsOtp($smsdata);
+   sendMobileOTPWhatsapp($wdata);
   
 }
 else

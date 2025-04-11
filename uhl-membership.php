@@ -130,7 +130,7 @@ table th {
 /*--------------new css-----------*/
 
 .section-full {
-    padding: 100px 0;
+    padding: 64px 0;
     overflow: hidden;
 }
 
@@ -170,6 +170,7 @@ table th {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -197,7 +198,7 @@ table th {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
     z-index: 1;
 }
 
@@ -214,7 +215,7 @@ table th {
 
 .hindi-slogan {
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .company-name {
@@ -231,9 +232,9 @@ table th {
 }
 
 .feature-badges .badge {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 12px 24px;
     font-size: 1rem;
     font-weight: 500;
@@ -242,7 +243,7 @@ table th {
 }
 
 .feature-badges .badge:hover {
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
 }
 
@@ -263,7 +264,7 @@ table th {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
 .carousel-indicators {
@@ -275,7 +276,7 @@ table th {
     height: 12px;
     border-radius: 50%;
     margin: 0 8px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border: none;
     transition: all 0.3s ease;
 }
@@ -317,7 +318,7 @@ table th {
 
 .benefits-section {
     background: linear-gradient(135deg, #367eb7 0%, #196dad 100%);
-    padding: 100px 0;
+    padding: 64px 0;
     position: relative;
     overflow: hidden;
 }
@@ -347,6 +348,7 @@ table th {
     font-size: 0.9rem;
     margin-bottom: 20px;
     backdrop-filter: blur(5px);
+
 }
 
 .title {
@@ -364,6 +366,7 @@ table th {
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
+    color: white;
 }
 
 /* Benefits Grid */
@@ -421,13 +424,23 @@ table th {
 }
 
 .content-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    /* background: linear-gradient(to top, rgb(104 179 218), transparent);
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 30px;
+    color: white; */
+
+    background: linear-gradient(to top, rgb(104 179 218), #86e5f378);
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 49px;
+    text-align: center;
     color: white;
+    border-radius: 16px;
 }
 
 .card-back {
@@ -547,7 +560,7 @@ table th {
 }
 
 .health-plan-section {
-    padding: 100px 0;
+    padding: 72px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
@@ -565,7 +578,7 @@ table th {
 
 .highlight {
     display: block;
-    color: #4aa4d3;
+    color: white;
     margin-top: 10px;
 }
 
@@ -582,18 +595,21 @@ table th {
 }
 
 .feature-item {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background: white;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -624,7 +640,7 @@ table th {
     background: white;
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-title {
@@ -742,7 +758,7 @@ table th {
     right: 0;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
     border-radius: 50%;
     transform: translate(50%, -50%);
 }
@@ -759,7 +775,7 @@ table th {
     background: white;
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -780,7 +796,7 @@ table th {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card:hover::after {
@@ -858,18 +874,23 @@ table th {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -919,6 +940,37 @@ table th {
         font-size: 1.5rem;
     }
 }
+
+/* Main carousel container fix */
+.hero-carousel .carousel,
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+    height: auto !important;
+}
+
+/* Ensure image fits naturally */
+.hero-carousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optional: Remove Bootstrap default min-height */
+.carousel-item {
+    min-height: auto !important;
+}
+
+/* Position controls properly */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Indicators styling */
+.carousel-indicators {
+    bottom: 10px;
+}
 </style>
 
 <body id="bg">
@@ -932,445 +984,458 @@ table th {
 
     </div>
 
-    
 
-   <div class="section-full content-inner position-relative" style="background: linear-gradient(135deg, #e3f0f7 0%, #f5f9fb 100%);">
-    <div class="container">
-        <div class="section-content">
-            <div class="row align-items-center">
-                <!-- Left Content Column -->
-                <div class="col-lg-7 col-md-12 pe-lg-5 mb-5 mb-lg-0">
-                    <div class="content-bx1 animation-block">
-                        <span class="text-primary d-block mb-3 fw-semibold text-uppercase letter-spacing-2">Healthcare Solutions</span>
-                        <h2 class="mb-4 display-4 fw-bold">
-                            UNITED HEALTH LUMINA
-                            <span class="text-primary d-block mt-2">IS YOUR IDEAL FINANCIAL PARTNER</span>
-                        </h2>
 
-                        <div class="feature-list mb-4">
-                            <p class="lead fw-normal text-dark-50">
-                                Comprehensive protection against healthcare expenses including:
-                            </p>
-                            <ul class="list-unstyled">
-                                <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-primary me-3"></i>
-                                    <span>OPP Consultation & Diagnosis Coverage</span>
-                                </li>
-                                <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-primary me-3"></i>
-                                    <span>Complete Protection for Medical Expenses</span>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-primary me-3"></i>
-                                    <span>Comprehensive Primary Healthcare Plan</span>
-                                </li>
-                            </ul>
+    <div class="section-full content-inner position-relative"
+        style="background: linear-gradient(135deg, #e3f0f7 0%, #f5f9fb 100%);">
+        <div class="container">
+            <div class="section-content">
+                <div class="row align-items-center">
+                    <!-- Left Content Column -->
+                    <div class="col-lg-7 col-md-12 pe-lg-5 mb-5 mb-lg-0">
+                        <div class="content-bx1 animation-block">
+                            <span
+                                style="background: linear-gradient(to right, #1e3c72, #2a5298, #00b4db); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                                class="d-block mb-3 fw-semibold text-uppercase letter-spacing-2">Healthcare
+                                Solutions</span>
+                            <h2 class="mb-4 display-4" style="font-size: 2.5rem; font-weight: 500;">
+                                UNITED HEALTH LUMINA
+                                <span
+                                    style="background: linear-gradient(to right, #1e3c72, #2a5298, #00b4db); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                                    class="d-block mt-2">IS YOUR IDEAL FINANCIAL PARTNER</span>
+                            </h2>
+
+                            <div class="mb-4">
+                                <p class="lead fw-normal text-dark">
+                                    Comprehensive protection against healthcare expenses including:
+                                </p>
+                                <ul class="list-unstyled text-dark" style=" cursor: pointer; margin-bottom: 0px;">
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-check-circle text-primary me-3"></i>
+                                        <span>OPP Consultation & Diagnosis Coverage</span>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-check-circle text-primary me-3"></i>
+                                        <span>Complete Protection for Medical Expenses</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <i class="fas fa-check-circle text-primary me-3"></i>
+                                        <span>Comprehensive Primary Healthcare Plan</span>
+                                    </li>
+                                    <p class="mt-2">It is a Comprehensive Preimany
+                                        healthomere plan that Provides Complete Protection against a wide eange of
+                                        Perinary
+                                        medical expenses.</p>
+                                </ul>
+                            </div>
+
                         </div>
-                        
-                        <a href="#" class="btn btn-primary btn-lg rounded-pill">Learn More</a>
                     </div>
-                </div>
-                
-                <!-- Right Image Column -->
-                <div class="col-lg-5 col-md-12">
-                    <div class="image-wrapper position-relative">
-                        <img src="project-assets/images/about-us-2.jpg" alt="Healthcare Services" 
-                             class="img-fluid rounded-4 shadow-lg">
-                        <div class="floating-shape"></div>
+
+                    <!-- Right Image Column -->
+                    <div class="col-lg-5 col-md-12">
+                        <div class="image-wrapper position-relative">
+                            <div class="shadow-lg rounded-4" style="background: white; padding: 26px;">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center mb-4">Your Enquiry</h4>
+                                    <style>
+
+                                    </style>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name"
+                                                placeholder="Enter your name" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Enter your email" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="option" class="form-label">Plan</label>
+                                            <select class="form-control" id="option" name="option" required>
+                                                <option value="" selected disabled>Select plan</option>
+                                                <option value="family-cover">Primary Health Care Cover for Family
+                                                </option>
+                                                <option value="family-protection">Family Health Protection</option>
+                                                <option value="senior-healthcare">Primary Healthcare for Senior Citizens
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="d-grid">
+                                            <button type="submit" class="btn btn-primary btnhover13"
+                                                style="border-radius: 8px;">Submit
+                                                Enquiry</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Carousel Section -->
-<section class="hero-carousel">
-    <div id="healthCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="0" class="active" 
+    <!-- Carousel Section -->
+    <section class="hero-carousel">
+        <div id="healthCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="1" 
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="2" 
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Main Banner -->
+                <div class="carousel-item active">
+                    <div class="overlay-gradient"></div>
+                    <picture>
+                        <!-- <source media="(min-width: 1200px)" srcset="project-assets/images/banner/nb-2101.png"> -->
+                        <img src="project-assets/images/uhl.png" class="w-100" alt="Health Care Banner">
+                    </picture>
+                </div>
+                <!-- Health Plans Slide -->
+                <div class="carousel-item">
+                    <div class="overlay-gradient"></div>
+                    <picture>
+                        <!-- <source media="(min-width: 1200px)" srcset="project-assets/images/banner/nb2-2502.png"> -->
+                        <img src="project-assets/images/uhl.png" class="w-100" alt="Health Care Banner">
+                    </picture>
+                </div>
+                <!-- Health Tests Slide -->
+                <div class="carousel-item">
+                    <div class="overlay-gradient"></div>
+                    <picture>
+                        <!-- <source media="(min-width: 1200px)" srcset="project-assets/images/banner/nb3-2502.png"> -->
+                        <img src="project-assets/images/uhl.png" class="w-100" alt="Health Care Banner">
+                    </picture>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#healthCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#healthCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-        <div class="carousel-inner">
-            <!-- Main Banner -->
-            <div class="carousel-item active">
-                <div class="overlay-gradient"></div>
-                <picture>
-                    <source media="(min-width: 1200px)" srcset="project-assets/images/banner/nb-2101.png">
-                    <img src="project-assets/images/banner/nbm-2101.png" class="w-100" alt="Health Care Banner">
-                </picture>
-                <div class="carousel-caption">
-                    <div class="caption-content animate__animated animate__fadeInUp">
-                        <div class="highlight-box">
-                            <h2 class="hindi-slogan display-4 mb-3">बीमारी का डर छोड़ो, UHL से नाता जोड़ो।</h2>
-                            <h3 class="company-name h2 mb-4">United Health Lumina Plans</h3>
-                        </div>
-                        <div class="feature-badges">
-                            <span class="badge"><i class="fas fa-star"></i> Trusted Healthcare</span>
-                            <span class="badge"><i class="fas fa-shield-alt"></i> Complete Coverage</span>
-                            <span class="badge"><i class="fas fa-clock"></i> 24/7 Support</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Health Plans Slide -->
-            <div class="carousel-item">
-                <div class="overlay-gradient"></div>
-                <picture>
-                    <source media="(min-width: 1200px)" srcset="project-assets/images/banner/nb2-2502.png">
-                    <img src="project-assets/images/banner/nbm2-2502.png" class="w-100" alt="Health Plans">
-                </picture>
-                <div class="carousel-caption">
-                    <div class="caption-content animate__animated animate__fadeInUp">
-                        <div class="highlight-box">
-                            <h2 class="display-4 mb-4">Comprehensive Health Plans</h2>
-                        </div>
-                        <div class="feature-badges">
-                            <span class="badge"><i class="fas fa-hospital"></i> Cashless Hospitals</span>
-                            <span class="badge"><i class="fas fa-user-md"></i> Expert Doctors</span>
-                            <span class="badge"><i class="fas fa-ambulance"></i> Emergency Care</span>
-                        </div>
-                        <a href="./all-plans" class="btn btn-primary btn-lg rounded-pill mt-4">Explore Plans</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Health Tests Slide -->
-            <div class="carousel-item">
-                <div class="overlay-gradient"></div>
-                <picture>
-                    <source media="(min-width: 1200px)" srcset="project-assets/images/banner/nb3-2502.png">
-                    <img src="project-assets/images/banner/nbm3-2502.png" class="w-100" alt="Health Tests">
-                </picture>
-                <div class="carousel-caption">
-                    <div class="caption-content animate__animated animate__fadeInUp">
-                        <div class="highlight-box">
-                            <h2 class="display-4 mb-4">Advanced Health Tests</h2>
-                        </div>
-                        <div class="feature-badges">
-                            <span class="badge"><i class="fas fa-home"></i> Home Collection</span>
-                            <span class="badge"><i class="fas fa-flask"></i> Latest Equipment</span>
-                            <span class="badge"><i class="fas fa-file-medical-alt"></i> Quick Reports</span>
-                        </div>
-                        <a href="#" class="btn btn-primary btn-lg rounded-pill mt-4">Book Test</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#healthCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#healthCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</section>
+    </section>
 
     <!-- Card Section -->
     <section class="benefits-section">
-    <div class="container">
-        <div class="section-header text-center mb-5 reveal-fade">
-            <span class="subtitle">Why Choose Us</span>
-            <h2 class="title">Benefits of <span class="highlight">Our Health Services</span></h2>
-            <p class="section-description">Comprehensive healthcare solutions designed for your peace of mind</p>
+        <div class="container">
+            <div class="section-header text-center mb-5 reveal-fade">
+                <span class="subtitle text-primary"> <b>Why Choose Us</b></span>
+                <h2 class="title text-white"> <span class="">Benefits of </span><span class="highlight ">Our Health
+                        Services</span></h2>
+                <p class="section-description">Comprehensive healthcare solutions designed for your peace of mind</p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Individual Health Cover Card -->
+                <div class="benefit-card reveal-slide-left">
+                    <div class="card-inner">
+                        <div class="card-front single-person-bg">
+                            <div class="content-overlay">
+                                <h3>Primary Health Cover for Individuals</h3>
+                                <div class="icon-wrapper">
+                                    <!-- <i class="fas fa-user-shield"></i> -->
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="benefit-content">
+                                <h3>Individual Health Coverage</h3>
+                                <ul class="benefit-features">
+                                    <li>
+                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <span>Coverage for unexpected primary medical expenses</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <span>Holistic Benefits - United Health Care Plan</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Health Cover Card -->
+                <div class="benefit-card reveal-slide-right">
+                    <div class="card-inner">
+                        <div class="card-front family-bg">
+                            <div class="content-overlay">
+                                <h3>Primary Health Care Cover for Family</h3>
+                                <div class="icon-wrapper">
+                                    <!-- <i class="fas fa-users"></i> -->
+                                    <i class="fas fa-people-roof"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="benefit-content">
+                                <h3>Family Health Protection</h3>
+                                <ul class="benefit-features">
+                                    <li>
+                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <span>Primary Coverage for entire family</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <span>Well-being and financial safety ensured</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senior Citizen Health Cover Card -->
+                <div class="benefit-card reveal-slide-up">
+                    <div class="card-inner">
+                        <div class="card-front senior-bg">
+                            <div class="content-overlay">
+                                <h3>Primary Healthcare for Senior Citizens</h3>
+                                <div class="icon-wrapper">
+                                    <!-- <i class="fas fa-heart"></i> -->
+                                    <i class="fas fa-person-cane"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="benefit-content">
+                                <h3>Senior Citizen Care</h3>
+                                <ul class="benefit-features">
+                                    <li>
+                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <span>Well-being and financial safety assured</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <span>Primary Coverage for Pre-existing conditions</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="benefits-grid">
-            <!-- Individual Health Cover Card -->
-            <div class="benefit-card reveal-slide-left">
-                <div class="card-inner">
-                    <div class="card-front single-person-bg">
-                        <div class="content-overlay">
-                            <h3>Primary Health Cover for Individuals</h3>
-                            <div class="icon-wrapper">
-                                <i class="fas fa-user-shield"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-back">
-                        <div class="benefit-content">
-                            <h3>Individual Health Coverage</h3>
-                            <ul class="benefit-features">
-                                <li>
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Coverage for unexpected primary medical expenses</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Holistic Benefits - United Health Care Plan</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Family Health Cover Card -->
-            <div class="benefit-card reveal-slide-right">
-                <div class="card-inner">
-                    <div class="card-front family-bg">
-                        <div class="content-overlay">
-                            <h3>Primary Health Care Cover for Family</h3>
-                            <div class="icon-wrapper">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-back">
-                        <div class="benefit-content">
-                            <h3>Family Health Protection</h3>
-                            <ul class="benefit-features">
-                                <li>
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Primary Coverage for entire family</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Well-being and financial safety ensured</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Senior Citizen Health Cover Card -->
-            <div class="benefit-card reveal-slide-up">
-                <div class="card-inner">
-                    <div class="card-front senior-bg">
-                        <div class="content-overlay">
-                            <h3>Primary Healthcare for Senior Citizens</h3>
-                            <div class="icon-wrapper">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-back">
-                        <div class="benefit-content">
-                            <h3>Senior Citizen Care</h3>
-                            <ul class="benefit-features">
-                                <li>
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Well-being and financial safety assured</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check-circle"></i>
-                                    <span>Primary Coverage for Pre-existing conditions</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <section class="health-plan-section">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="section-header text-center reveal-fade">
-            <h2 class="main-title">
-                What Does a Primary Health Plan Mean
-                <span class="highlight">and How Does it Work?</span>
-            </h2>
-        </div>
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center reveal-fade">
+                <h2 class="main-title">
+                    What Does a Primary Health Plan Mean
+                    <span class="highlight"
+                        style="background: linear-gradient(to right, #1e3c72, #2a5298, #00b4db); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">and
+                        How Does it Work?</span>
+                </h2>
+            </div>
 
-        <!-- Features List -->
-        <div class="features-container reveal-slide-up">
-            <div class="feature-list">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-md"></i>
+            <!-- Features List -->
+            <div class="features-container reveal-slide-up">
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="feature-text">
+                            UHL Healthcare Doctor creates a health profile for you and designs specialized programs with
+                            in-house experts to address your health risks and wellness goals.
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        UHL Healthcare Doctor creates a health profile for you and designs specialized programs with in-house experts to address your health risks and wellness goals.
-                    </div>
-                </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-clipboard-check"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="feature-text">
+                            Once your membership is active, you will get Standard Preventive health check-ups and are
+                            available
+                            at a fee of up to ₹1,500.
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        Once your membership is active, you will get Standard Preventive health check-ups available at a fee of up to ₹1,500.
-                    </div>
-                </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-microscope"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="feature-text">
+                            Getting better begins When the problem is diagnosed at its root.
+                            You Can get any lab tests (X-Ray, Blood test, MRI, Etc) done at any medical
+                            facility Suggested by UHL Healthcare team.
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        Get any lab tests (X-Ray, Blood test, MRI, etc.) done at any medical facility suggested by UHL Healthcare team.
-                    </div>
-                </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-home"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="feature-text">
+                            If the list Can be done at home, we will aveange for a lab
+                            Partnere to come to you. </div>
                     </div>
-                    <div class="feature-text">
-                        Home collection service available for laboratory tests through our lab partners.
-                    </div>
-                </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-stethoscope"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="feature-text">
+                            UHL Speciaties Suggested by the doctor or personal Consultation
+                            with your expest doctor are covered, all we say is that before embarking on Such
+                            a jouwerwey, you must talk to us.
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        UHL Specialties suggested by the doctor or personal consultation with expert doctors are covered.
-                    </div>
-                </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-medical"></i>
-                    </div>
-                    <div class="feature-text">
-                        Access healthcare services from home with unlimited consultation from our in-house doctors, nutritionists, psychologists, physiotherapists, and others.
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <div class="feature-text">
+                            you Can get access to better healthear Senures from the comfort of
+                            your Couch (Sofa), you Coan get unlimited consultation from our in-house dodom
+                            and erepent nutritionists, psychologists, phyrusotherapists and others.
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Pricing Table -->
-        <div class="pricing-section reveal-fade">
-            <h3 class="pricing-title text-center mb-4">Coverage Plans Comparison</h3>
-            <div class="pricing-table-wrapper">
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Coverage Plan Variant</th>
-                            <th class="plan-column">
-                                <div class="plan-name">UHL Secure Lite</div>
-                                <div class="plan-price">₹25,000</div>
-                            </th>
-                            <th class="plan-column">
-                                <div class="plan-name">UHL Secure Plus</div>
-                                <div class="plan-price">₹50,000</div>
-                            </th>
-                            <th class="plan-column">
-                                <div class="plan-name">UHL Secure Prime</div>
-                                <div class="plan-price">₹1,00,000</div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table rows remain the same but with updated styling -->
-                        <!-- ... existing table rows ... -->
-                        <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
+            <!-- Pricing Table -->
+            <div class="pricing-section reveal-fade">
+                <h3 class="pricing-title text-center mb-4">Coverage Plans Comparison</h3>
+                <div class="pricing-table-wrapper table-responsive">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Coverage Plan Variant</th>
+                                <th class="plan-column">
+                                    <div class="plan-name">UHL Secure Lite</div>
+                                    <div class="plan-price">₹25,000</div>
+                                </th>
+                                <th class="plan-column">
+                                    <div class="plan-name">UHL Secure Plus</div>
+                                    <div class="plan-price">₹50,000</div>
+                                </th>
+                                <th class="plan-column">
+                                    <div class="plan-name">UHL Secure Prime</div>
+                                    <div class="plan-price">₹1,00,000</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows remain the same but with updated styling -->
+                            <!-- ... existing table rows ... -->
+                            <tr>
+                                <td><b>Personlised Health Care</b></td>
+                                <td>24×7</td>
+                                <td>24×7</td>
+                                <td>24×7</td>
 
-                        </tr>
-                         <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
+                            </tr>
+                            <tr>
+                                <td><b>Cover for OPD</b></td>
+                                <td>2.5 LAKH A YEAR<br><small>(top-up plan, not main base)</small></td>
+                                <td>5 LAKH A YEAR<br><small>(top-up plan, not main base)</small></td>
+                                <td>10 LAKH A YEAR<br><small>(top-up plan, not main base)</small></td>
+                            </tr>
+                            <tr>
+                                <td><b>Claim Process</b></td>
+                                <td>Cashless / Reimbursement</td>
+                                <td>Cashless / Reimbursement</td>
+                                <td>Cashless / Reimbursement</td>
 
-                        </tr>
-                         <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
+                            </tr>
+                            <tr>
+                                <td><b>Age Limit</b></td>
+                                <td>1 to 65 years</td>
+                                <td>1 to 75 years</td>
+                                <td>1 to 75 years</td>
+                            </tr>
+                            <tr>
+                                <td><b>Service Ability</b></td>
+                                <td>Anywhere in India</td>
+                                <td>Anywhere in India</td>
+                                <td>Anywhere in India</td>
+                            </tr>
+                            <tr>
+                                <td><b>Online Consultation</b></td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
 
-                        </tr>
-                         <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
+                            </tr>
+                            <tr>
+                                <td><b>Co-pay</b></td>
+                                <td>50%</td>
+                                <td>40%</td>
+                                <td>30%</td>
 
-                        </tr>
-                         <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
+                            </tr>
+                            <tr>
+                                <td><b>Subscription Membership</b></td>
+                                <td>1, 2 & 3 Year</td>
+                                <td>1, 2 & 3 Year</td>
+                                <td>1, 2, & 3 Year</td>
 
-                        </tr>
-                         <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-
-                        </tr>
-                         <tr>
-                            <td>Personlised Health Care</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-                            <td>24*7</td>
-
-                        </tr>
-                    </tbody>
-                </table>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <section class="healthcare-features">
-    <div class="container">
-        <div class="features-wrapper">
-            <!-- Personalized Healthcare Card -->
-            <div class="feature-card reveal-slide-right">
-                <div class="feature-icon">
-                    <i class="fas fa-heartbeat pulse-animation"></i>
-                </div>
-                <div class="feature-content">
-                    <h2>Personalised Healthcare</h2>
-                    <div class="tagline">In Sickness and in Health Too!</div>
-                    <p class="feature-description">
-                        We create your unique health profile and design professionally crafted programs 
-                        to improve your health and reduce your chances of hospitalization.
-                    </p>
-                    <a href="#" class="learn-more">
-                        Learn More
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="container">
+            <div class="features-wrapper">
+                <!-- Personalized Healthcare Card -->
+                <div class="feature-card reveal-slide-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat pulse-animation"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h2>Personalised Healthcare</h2>
+                        <div class="tagline">In Sickness and in Health Too!</div>
+                        <p class="feature-description">
+                            We create your unique health profile and design professionally crafted programs
+                            to improve your health and reduce your chances of hospitalization.
+                        </p>
 
-            <!-- OPD Coverage Card -->
-            <div class="feature-card reveal-slide-left">
-                <div class="feature-icon">
-                    <i class="fas fa-user-md bounce-animation"></i>
+                    </div>
                 </div>
-                <div class="feature-content">
-                    <h2>Cover for OPD</h2>
-                    <div class="tagline">Comprehensive Outpatient Care</div>
-                    <p class="feature-description">
-                        Get unlimited consultations with doctors and access INC-approved lab consultations 
-                        at recommended facilities and doctor's practices.
-                    </p>
-                    <a href="#" class="learn-more">
-                        Explore Coverage
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+
+                <!-- OPD Coverage Card -->
+                <div class="feature-card reveal-slide-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md bounce-animation"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h2>Cover for OPD</h2>
+                        <div class="tagline">Comprehensive Outpatient Care</div>
+                        <p class="feature-description">
+                            Get unlimited consultations with uhl doctors and access UHL approved lab consultations
+                            at recommended facilities and doctor's practices.
+                        </p>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- Content END-->
 
     </div>

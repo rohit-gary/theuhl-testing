@@ -114,7 +114,7 @@ $conf = new Conf();
           'serverSide': true,
           'ordering': false,
           'ajax': {
-            'url': 'ajax/view-all-bookedtest-customer-post-new.php',
+            'url': 'ajax/view-all-bookedtest-processed-post.php',
             'type': 'POST'
           },
           'columnDefs': [{

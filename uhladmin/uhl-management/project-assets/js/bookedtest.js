@@ -39,3 +39,27 @@ function processCustomer(id) {
 		});
 	}
 }
+
+function delete_customer(id) {
+	if (confirm('Are you sure you want to delete this customer?')) {
+		$.ajax({
+			url: 'action/delete_customer.php',
+			type: 'POST',
+			data: { customer_id: id },
+			dataType: 'json',
+			success: function (response) {
+				if (response.success) {
+					alert(response.message);
+					// Reload the DataTable
+					$('#all_policy_customer').DataTable().ajax.reload(null, false);
+				} else {
+					alert(response.message);
+				}
+			},
+			error: function (xhr, status, error) {
+				console.error('AJAX Error:', status, error);
+				alert('Error deleting customer: ' + error);
+			}
+		});
+	}
+}

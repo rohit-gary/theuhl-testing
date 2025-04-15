@@ -19,7 +19,7 @@ $searchValue = $_POST['search']['value'];
 $columnSortOrder = "DESC";
 
 ## Filter logic for access control
-$filter = "WHERE C.Processed = 1"; // default where clause to only show processed records
+$filter = "WHERE C.Processed = 1 AND C.IsActive = 1"; // default where clause to only show processed records
 ## Search query
 if ($searchValue != '') {
   $searchQuery = " AND (DI.FirstName LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%' 

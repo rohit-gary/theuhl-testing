@@ -16,50 +16,62 @@ function GetBookedCustomerDetails(id) {
 
 function processCustomer(id) {
 	console.log('Processing customer ID:', id); // Debug log
-	if (confirm('Are you sure you want to mark this order as processed?')) {
-		$.ajax({
-			url: 'action/process_customer.php',
-			type: 'POST',
-			data: { customer_id: id },
-			dataType: 'json',
-			success: function (response) {
-				console.log('Response:', response); // Debug log
-				if (response.success) {
-					alert(response.message);
-					// Reload the DataTable
-					$('#all_policy_customer').DataTable().ajax.reload(null, false);
-				} else {
-					alert(response.message);
+	alertify.confirm(
+		'Are you sure you want to mark this order as processed?',
+		function () {
+			$.ajax({
+				url: 'action/process_customer.php',
+				type: 'POST',
+				data: { customer_id: id },
+				dataType: 'json',
+				success: function (response) {
+					console.log('Response:', response); // Debug log
+					if (response.success) {
+						alertify.success(response.message);
+						// Reload the DataTable
+						$('#all_policy_customer').DataTable().ajax.reload(null, false);
+					} else {
+						alertify.error(response.message);
+					}
+				},
+				error: function (xhr, status, error) {
+					console.error('AJAX Error:', status, error);
+					alertify.error('Error processing order: ' + error);
 				}
-			},
-			error: function (xhr, status, error) {
-				console.error('AJAX Error:', status, error);
-				alert('Error processing order: ' + error);
-			}
-		});
-	}
+			});
+		},
+		function () {
+			alertify.error('Process cancelled');
+		}
+	);
 }
 
 function delete_customer(id) {
-	if (confirm('Are you sure you want to delete this customer?')) {
-		$.ajax({
-			url: 'action/delete_customer.php',
-			type: 'POST',
-			data: { customer_id: id },
-			dataType: 'json',
-			success: function (response) {
-				if (response.success) {
-					alert(response.message);
-					// Reload the DataTable
-					$('#all_policy_customer').DataTable().ajax.reload(null, false);
-				} else {
-					alert(response.message);
+	alertify.confirm(
+		'Are you sure you want to delete this customer?',
+		function () {
+			$.ajax({
+				url: 'action/delete_customer.php',
+				type: 'POST',
+				data: { customer_id: id },
+				dataType: 'json',
+				success: function (response) {
+					if (response.success) {
+						alertify.success(response.message);
+						// Reload the DataTable
+						$('#all_policy_customer').DataTable().ajax.reload(null, false);
+					} else {
+						alertify.error(response.message);
+					}
+				},
+				error: function (xhr, status, error) {
+					console.error('AJAX Error:', status, error);
+					alertify.error('Error deleting customer: ' + error);
 				}
-			},
-			error: function (xhr, status, error) {
-				console.error('AJAX Error:', status, error);
-				alert('Error deleting customer: ' + error);
-			}
-		});
-	}
+			});
+		},
+		function () {
+			alertify.error('Deletion cancelled');
+		}
+	);
 }

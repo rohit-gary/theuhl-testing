@@ -302,6 +302,11 @@ if (
                             href="../bookedtest/view-all-test"><i class="side-menu__icon fa fa-user"></i><span
                                 class="side-menu__label">Test Booking Customer</span></a>
                     </li>
+                    <li class="slide">
+                        <a class="side-menu__item" id="nav_doctest" data-bs-toggle="slide"
+                            href="../processed/view_all_processed"><i class="side-menu__icon fa fa-user"></i><span
+                                class="side-menu__label">Processed Customer</span></a>
+                    </li>
                 <?php } ?>
 
 
@@ -390,13 +395,13 @@ if (
     });
 
 
-     $(document).ready(function () {
+    $(document).ready(function () {
         $('.clearSessionLinkTest').on('click', function (e) {
             // Check if the item exists in localStorage
             if (localStorage.getItem('currentStep') !== null) {
                 // If it exists, remove it
                 localStorage.removeItem('currentStep');
-               
+
             }
             e.preventDefault();
             $.ajax({
@@ -414,4 +419,3 @@ if (
     });
 
 </script>
-

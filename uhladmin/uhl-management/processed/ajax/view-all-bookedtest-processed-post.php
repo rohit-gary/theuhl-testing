@@ -19,7 +19,7 @@ $searchValue = $_POST['search']['value'];
 $columnSortOrder = "DESC";
 
 ## Filter logic for access control
-$filter = "WHERE C.Processed = 0 AND C.IsActive = 1"; // default where clause to only show unprocessed records
+$filter = "WHERE C.Processed = 1 AND C.IsActive = 1"; // default where clause to only show processed records
 ## Search query
 if ($searchValue != '') {
   $searchQuery = " AND (DI.FirstName LIKE '%" . mysqli_real_escape_string($conn, $searchValue) . "%' 
@@ -93,10 +93,10 @@ $data = [];
 while ($row = $result->fetch_assoc()) {
   $ID = $row['ID'];
   $encryptedID = base64_encode($row['ID']);
-  $details_html = "<a href='view-test-details?bookingid=" . $encryptedID . "' style='cursor:pointer'><span class='badge bg-info'>View</span></a>";
+  $details_html = "<a href='../bookedtest/view-test-details?bookingid=" . $encryptedID . "' style='cursor:pointer'><span class='badge bg-info'>View</span></a>";
   $action_html = "<a onclick='delete_customer(" . $ID . ")' style='cursor:pointer'><span class='badge bg-info' style='cursor:pointer'><i class='fa fa-trash'></i> Delete</span></a>";
 
-  $process = "<button type='button' class='btn btn-success btn-sm' onclick='processCustomer(" . $ID . ")'><i class='fa fa-check'></i> Mark as Processed</button>";
+  $process = "<button disabled type='button' class='btn btn-success btn-sm'>Processed<i class='fa fa-check'></i></button>";
 
   // Split concatenated product details
   $productNames = explode(',', $row['ProductNames']);

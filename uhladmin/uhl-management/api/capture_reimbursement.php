@@ -32,7 +32,7 @@ if (isset($data['Token']) && isset($data['imageData'])) {
         $token_decoded = JWT::decode($jwt,new Key($secret_key, 'HS512'));
         $user_id = $token_decoded->data->user_id;
         $username = $token_decoded->data->username;
-        $CreatedBy = $data['CreatedBy'];
+        $CreatedBy = $data['CreatedBy']??'';
         $CreatedDate = date('Y-m-d');
         $CreatedTime = date('H:i:s');
         $imageData = base64_decode($data['imageData']);

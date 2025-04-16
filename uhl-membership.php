@@ -984,10 +984,7 @@ $all_test = $test_obj->GetAllTestName();
 
     </div>
 
-
-
-    <div class="section-full content-inner position-relative"
-        style="background: linear-gradient(135deg, #e3f0f7 0%, #f5f9fb 100%);">
+    <div class="content-inner position-relative" style="background: linear-gradient(135deg, #e3f0f7 0%, #f5f9fb 100%);">
         <div class="container">
             <div class="section-content">
                 <div class="row align-items-center">

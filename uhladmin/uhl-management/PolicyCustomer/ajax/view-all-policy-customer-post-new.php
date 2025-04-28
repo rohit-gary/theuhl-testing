@@ -93,8 +93,8 @@ $totalRecords = $totalResult['total_count'];
 // $policy_details_arr = $PolicyCustomer->_getTotalRecord($conn, 'policy_customer', $filter);
 
 ## Main SQL query to fetch policy details
-$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber, MAX(ac.CreatedBy) AS CreatedBy, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN JSON_LENGTH(pmd.Documents) > 0 THEN 1 END) THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_customer_documents pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
-     GROUP BY ac.ID, cp.PolicyNumber ORDER BY ac.ID DESC, cp.PolicyNumber  LIMIT $row, $rowperpage ";
+$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber,  MAX(ac.CreatedBy) AS CreatedBy, cp.IsBarcode, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN JSON_LENGTH(pmd.Documents) > 0 THEN 1 END) THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_customer_documents pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
+     GROUP BY ac.ID, cp.PolicyNumber  ORDER BY ac.ID DESC, cp.PolicyNumber  LIMIT $row, $rowperpage ";
 
 // echo $sql;
 $result = mysqli_query($conn, $sql);
@@ -147,10 +147,10 @@ foreach ($policy_details_arr as $policy_details_value) {
     $Policy_ID = $encrypt->encrypt_message($PolicyNumber);
 
 
-    $Name_html = $UserName."<br><small class='text-muted'>Created By: ".$CreatedBy."</small>";
+    $Name_html = $UserName . "<br><small class='text-muted'>Created By: " . $CreatedBy . "</small>";
 
     $data[] = array(
- 
+
         "id" => $CustomerID,
         "Name" => $Name_html,
         "ContactNumber" => $MobileNumber,
@@ -160,6 +160,7 @@ foreach ($policy_details_arr as $policy_details_value) {
         "CreatedDate" => $CreatedDate,
         "Transection Status" => $PaymentStatus,
         "Details" => "<a href='view-policy-details-new?PolicyID=" . $Policy_ID . "'><span class='badge bg-info badge-sm  me-1 mb-1 mt-1'>View Policy Details</span></a>",
+
         "Action" => ($access ?
             "<a class='btn text-secondary bg-secondary-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DownloadePolicyDoc(\"$PolicyNumber\")' data-bs-original-title='Download'> 
                 <span class='fa fa-download'></span>
@@ -172,6 +173,9 @@ foreach ($policy_details_arr as $policy_details_value) {
                 <span class='badge bg-info'>View</span>
              </a>"
                 : ''),
+        "Barcode" => ($IsBarcode == 0)
+            ? "<span class='fa fa-toggle-off fs-30' onclick='toggleBarcodeStatus(\"$PolicyNumber\", 1)'></span>"
+            : "<span class='fa fa-toggle-on fs-30' onclick='toggleBarcodeStatus(\"$PolicyNumber\", 0)'></span>"
 
     );
 }

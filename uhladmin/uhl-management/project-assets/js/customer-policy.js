@@ -1,5 +1,3 @@
-
-
 function isValidEmail(email) {
     // Regular expression to check if the email is valid
     var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -40,29 +38,29 @@ function generateFamilyMemberForm() {
 
     var maxFamilyMembers = document.getElementById('planFamilyMemberInput').value;
 
-     var minFamilyMembers = document.getElementById('planMinFamilyMemberInput').value;
-     console.log('ffdfd',minFamilyMembers);
-       
-        if(memberCount<(minFamilyMembers-1)){
+    var minFamilyMembers = document.getElementById('planMinFamilyMemberInput').value;
+    console.log('ffdfd', minFamilyMembers);
+
+    if (memberCount < (minFamilyMembers - 1)) {
         Alert(`You must enter details for at least ${minFamilyMembers} family member(s).`);
         return false;
     }
 
-    if(memberCount>(maxFamilyMembers)){
-        Alert(`You can Add only ${(maxFamilyMembers-1)} Family Member  , Thank You`);
+    if (memberCount > (maxFamilyMembers)) {
+        Alert(`You can Add only ${(maxFamilyMembers - 1)} Family Member  , Thank You`);
         return;
     }
-    
+
     // Clear the previous forms
     container.innerHTML = '';
-    
+
     // Loop to create form fields for each family member
     for (var i = 1; i <= memberCount; i++) {
         // Start a new row every two cards
         if (i % 2 === 1) {
             container.innerHTML += `<div class="row mb-3">`;
         }
-        
+
         var memberForm = `
         <div class="col-md-12">
             <div class="card mb-3">
@@ -113,7 +111,7 @@ function generateFamilyMemberForm() {
         // Append the card to the container
         container.innerHTML += memberForm;
 
-        // Close the row after every two cards or if it’s the last card
+        // Close the row after every two cards or if it's the last card
         if (i % 2 === 0 || i === memberCount) {
             container.innerHTML += `</div>`;
         }
@@ -133,49 +131,49 @@ function UpdateFaqs_modal(faq_id) {
     },
         function (data, status) {
             var response = JSON.parse(data);
-           
-            
 
 
-                if (Array.isArray(response.data)) {
-                    var faqData = response.data[0];  
-                } else {
-                    var faqData = response.data;
-                }
+
+
+            if (Array.isArray(response.data)) {
+                var faqData = response.data[0];
+            } else {
+                var faqData = response.data;
+            }
             if (response.error == false) {
                 $("#Question").val(faqData.Question);
 
 
-                 if (!editor) {
-                editor = new RichTextEditor("#Answer");
-            }
-               
-                 editor.setHTMLCode(faqData.Answer);
-                    $("#form_action").val("Update");
-                    $("#form_id").val(faq_id);
+                if (!editor) {
+                    editor = new RichTextEditor("#Answer");
+                }
+
+                editor.setHTMLCode(faqData.Answer);
+                $("#form_action").val("Update");
+                $("#form_id").val(faq_id);
             }
         });
     $("#add_faqs").modal("show");
 }
 
- $(document).ready(function () {
-    
+$(document).ready(function () {
+
     $("#customer_policy_form")[0].reset();
 
-   
-   $("#add_faqs").modal("show");
-   
+
+    $("#add_faqs").modal("show");
+
     // $("#addCusPolicyBtn").text("Create Policy");
     $("#addCusPolicyBtn").text("Save Policy & Generate Payment Link");
-   
+
     $("#form_id").val('-1');
 
-    
+
     editor.setHTML('');
 });
 
 function AddUpdateCustomerPolicyForm() {
-   
+
 
     var PocName = $("#poc_name").val();
     if (PocName == "") {
@@ -190,16 +188,16 @@ function AddUpdateCustomerPolicyForm() {
     }
 
 
-    if(!validaphone(PocNumber)){
+    if (!validaphone(PocNumber)) {
         Alert("Please Enter Valid  Contact Number.");
         return false;
     }
 
-     var gender = $("input[name='gender']:checked").val();
-  
-       
-    
-     if (gender === undefined || gender === null) {
+    var gender = $("input[name='gender']:checked").val();
+
+
+
+    if (gender === undefined || gender === null) {
         Alert("Please select an option for Gender");
         return false;
     }
@@ -228,160 +226,160 @@ function AddUpdateCustomerPolicyForm() {
     if (state == "") {
         Alert("Please Enter POC state");
         return false;
-    }  
+    }
 
-    var issue_date=$("#issue_date").val();
-    if(issue_date==''){
-         Alert("Please Enter  POC issue_date");
+    var issue_date = $("#issue_date").val();
+    if (issue_date == '') {
+        Alert("Please Enter  POC issue_date");
         return false;
     }
 
 
     var buyingFor = $("input[name='buying_for']:checked").val();
 
-     const planMinFamilyMember = $("#planMinFamilyMemberHidden").val();
-    
+    const planMinFamilyMember = $("#planMinFamilyMemberHidden").val();
+
 
     // var buyingFor = 'MySelf';
-    if (buyingFor==undefined || buyingFor==null) {
+    if (buyingFor == undefined || buyingFor == null) {
         Alert("Please select an option for Buying Plan For");
         return false;
     }
 
-    if(buyingFor=='other'){
-        var familyMemberCount= $('#familyMemberCount').val();
+    if (buyingFor == 'other') {
+        var familyMemberCount = $('#familyMemberCount').val();
 
-        if(familyMemberCount==''){
-          Alert("Please provide family member");
-        return false;
+        if (familyMemberCount == '') {
+            Alert("Please provide family member");
+            return false;
         }
 
 
 
 
-            for (var i = 1; i <= familyMemberCount; i++) {
+        for (var i = 1; i <= familyMemberCount; i++) {
             var name = $(`input[name='member_name_${i}']`).val();
             var dob = $(`input[name='member_dob_${i}']`).val();
             // var age = $(`input[name='member_age_${i}']`).val();
             var gender = $(`input[name='member_gender_${i}']:checked`).val();
             var relationship = $(`select[name='member_relationship_${i}']`).val();
 
-            
-            if (!name || !dob  || !gender || !relationship) {
+
+            if (!name || !dob || !gender || !relationship) {
                 Alert(`Please fill out all fields for Family Member ${i}.`);
                 return false;
             }
         }
-        }
+    }
 
 
-         
-        var pincode = $("#pincode").val();
-        if (pincode == "") {
-            Alert("Please Enter POC Pincode.");
-            return false;
-        }
-        
-         
-        let form_action = $("#form_action").val();
-        let btntext = "";
-        if (form_action == "add") {
-            btntext = "Add";
-        } else {
-            btntext = "Update";
-        }
+
+    var pincode = $("#pincode").val();
+    if (pincode == "") {
+        Alert("Please Enter POC Pincode.");
+        return false;
+    }
+
+
+    let form_action = $("#form_action").val();
+    let btntext = "";
+    if (form_action == "add") {
+        btntext = "Add";
+    } else {
+        btntext = "Update";
+    }
 
 
 
     let myForm = document.getElementById("customer_policy_form");
     var formData = new FormData(myForm);
-    formData.forEach(function(value, key){
-    
-});
-     $("#addCusPolicyBtn").html("Please Wait..");
+    formData.forEach(function (value, key) {
+
+    });
+    $("#addCusPolicyBtn").html("Please Wait..");
     $.ajax({
         url: "action/add-update-policy-customer.php",
         type: "POST",
         data: formData,
         success: function (data) {
             var response = JSON.parse(data);
-            var PolicyID=response.last_insert_id;
-            Alert(response.message,'Please Wait for PaymentLink Doc');
-            
+            var PolicyID = response.last_insert_id;
+            Alert(response.message, 'Please Wait for PaymentLink Doc');
+
             if (response.error == false) {
-             setTimeout(function(){      
-                var paymentLink = 'https://unitedhealthlumina.com//pay-booking-amount?id=' + PolicyID;
-                $('#paymentLink').val(paymentLink);
+                setTimeout(function () {
+                    var paymentLink = 'https://unitedhealthlumina.com//pay-booking-amount?id=' + PolicyID;
+                    $('#paymentLink').val(paymentLink);
 
-                $('#paymentLink').val(paymentLink);
+                    $('#paymentLink').val(paymentLink);
 
-                  $.ajax({
+                    $.ajax({
                         url: "action/send-payment-link-email.php",
                         type: "POST",
                         data: { email: $("#email").val(), paymentLink: paymentLink },
-                        success: function(emailResponse) {
-                           
+                        success: function (emailResponse) {
+
                             if (emailResponse.errorp == false) {
                                 Alert(emailResponse.message);
                             } else {
-                                 Alert(emailResponse.message);
+                                Alert(emailResponse.message);
                             }
                         }
                     });
 
-                    
-                       // Start checking the payment status every 5 seconds
-                       var checkPaymentStatusInterval = setInterval(function() {
+
+                    // Start checking the payment status every 5 seconds
+                    var checkPaymentStatusInterval = setInterval(function () {
                         $.ajax({
                             url: "action/check-payment-status.php", // Add your API or PHP script to check payment status
                             type: "POST",
                             data: { PolicyID: PolicyID },
-                            success: function(statusResponse) {
+                            success: function (statusResponse) {
                                 var paymentStatus = JSON.parse(statusResponse);
-                               
+
 
                                 if (paymentStatus.error == false) {
                                     clearInterval(checkPaymentStatusInterval); // Stop the interval
                                     Alert("Thank you for your payment! Your payment was successful.");
-                                    setTimeout(function() {
+                                    setTimeout(function () {
                                         location.reload(); // Reload the page after 10 seconds
                                     }, 4000); // 10 seconds delay
                                 }
                             }
                         });
                     }, 5000); // Check every 5 seconds
-           
-           // Show the modal
-           $('#paymentLinkModal').modal('show');
 
-           // Copy to clipboard functionality
-           $("#copyLinkBtn").click(function() {
-               var copyText = document.getElementById("paymentLink");
-               copyText.select();
-               document.execCommand("copy");
-               Alert('Payment link copied to clipboard');
-           });
+                    // Show the modal
+                    $('#paymentLinkModal').modal('show');
 
-           // Share via Email functionality
-           $("#shareLinkEmailBtn").click(function() {
-               var subject = "Payment Link";
-               var body = "Please make the payment using this link: " + paymentLink;
-               window.location.href = "mailto:?subject=" + subject + "&body=" + body;
-           });
+                    // Copy to clipboard functionality
+                    $("#copyLinkBtn").click(function () {
+                        var copyText = document.getElementById("paymentLink");
+                        copyText.select();
+                        document.execCommand("copy");
+                        Alert('Payment link copied to clipboard');
+                    });
 
-           // Share on WhatsApp functionality
-           $("#shareLinkWhatsappBtn").click(function() {
-               var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent("Please make the payment using this link: " + paymentLink);
-               window.open(whatsappUrl, "_blank");
-           });
+                    // Share via Email functionality
+                    $("#shareLinkEmailBtn").click(function () {
+                        var subject = "Payment Link";
+                        var body = "Please make the payment using this link: " + paymentLink;
+                        window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+                    });
 
-                },1000)
-               
-            }else{
-                 $("#addCusPolicyBtn").html('Please Wait..');
-                
+                    // Share on WhatsApp functionality
+                    $("#shareLinkWhatsappBtn").click(function () {
+                        var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent("Please make the payment using this link: " + paymentLink);
+                        window.open(whatsappUrl, "_blank");
+                    });
+
+                }, 1000)
+
+            } else {
+                $("#addCusPolicyBtn").html('Please Wait..');
+
             }
-            
+
         },
         cache: false,
         contentType: false,
@@ -389,17 +387,17 @@ function AddUpdateCustomerPolicyForm() {
     });
 
     // Close modal when the close button is clicked
-    $('#paymentLinkModal .btn-close').on('click', function() {
+    $('#paymentLinkModal .btn-close').on('click', function () {
         $('#paymentLinkModal').modal('hide');
     });
     return false;
- 
+
 }
 
 
 function DeletePolicy(PolicyNumber) {
     alertify.confirm(
-        
+
         "Do you really want to delete Policy Customer?",
         function () {
             $.post(
@@ -426,69 +424,108 @@ function DeletePolicy(PolicyNumber) {
 function DownloadePolicyDoc(Id) {
 
 
-   $.ajax({
+    $.ajax({
         url: "include/check-payment-status.php", // Add your API or PHP script to check payment status
         type: "POST",
-        data: {Id: Id,},
-        success: function(statusResponse) {
+        data: { Id: Id, },
+        success: function (statusResponse) {
             var paymentStatus = JSON.parse(statusResponse);
             if (paymentStatus.error == false) {
                 alertify.confirm("United Health Lumina",
-        "Do you really want to download the Policy Customer Doc?",
-        function () {
-            $.post(
-                "include/create-policy-doc.php",
-                {
-                    Id: Id,
-                },
-                function (data, status) {
-                  
-                    alertify.success("Document is being prepared for download.");
+                    "Do you really want to download the Policy Customer Doc?",
+                    function () {
+                        $.post(
+                            "include/create-policy-doc.php",
+                            {
+                                Id: Id,
+                            },
+                            function (data, status) {
 
-                    
-                    setTimeout(function () {
-                        window.open('include/create-policy-doc.php?Id=' + Id, '_blank');
-                    }, 1000); 
-                }
-            ).fail(function (xhr, status, error) {
-                
-                alertify.error("An error occurred while preparing the document.");
-            });
-        },
-        function () {
-            alertify.error("Cancelled");
-        }
-    );
-            }else{
+                                alertify.success("Document is being prepared for download.");
+
+
+                                setTimeout(function () {
+                                    window.open('include/create-policy-doc.php?Id=' + Id, '_blank');
+                                }, 1000);
+                            }
+                        ).fail(function (xhr, status, error) {
+
+                            alertify.error("An error occurred while preparing the document.");
+                        });
+                    },
+                    function () {
+                        alertify.error("Cancelled");
+                    }
+                );
+            } else {
                 Alert(paymentStatus.message);
             }
         }
     });
-   
+
 }
+
+
+function toggleBarcodeStatus(PolicyNumber, newStatus) {
+    alertify.confirm(
+        'Do you really want to change the barcode status?',
+        function () {
+            console.log('Toggling barcode status for Policy:', PolicyNumber, 'New status:', newStatus);
+            $.ajax({
+                url: 'action/update-barcode-status.php',
+                type: 'POST',
+                data: {
+                    PolicyNumber: PolicyNumber,
+                    status: newStatus
+                },
+                dataType: 'json',
+                success: function (response) {
+                    console.log('Server response:', response);
+                    if (response.success) {
+                        alertify.success(response.message);
+                        // Refresh the DataTable to show updated status
+                        $('#all_policy_customer').DataTable().ajax.reload(null, false);
+                    } else {
+                        alertify.error(response.message || 'Failed to update barcode status');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('AJAX Error:', status, error);
+                    console.error('Response:', xhr.responseText);
+                    alertify.error('Failed to update barcode status. Please try again.');
+                }
+            });
+        },
+        function () {
+            alertify.error('Status change cancelled');
+        }
+    );
+}
+
+
 
 
 
 function toggleMemberNumber(show) {
     var memberNumberDiv = document.getElementById('memberNumberDiv');
     var memberNumberInput = document.getElementById('memberNumber');
-    
+
     if (show) {
         memberNumberDiv.style.display = 'block';
-       
+
     } else {
         memberNumberDiv.style.display = 'none';
-        
+
     }
 }
 
 
 
-function viewPlanDetails(){
-    
+function viewPlanDetails() {
+
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     function planSelected(planDropdown) {
         const selectedOption = planDropdown.options[planDropdown.selectedIndex];
         const planCost = selectedOption.getAttribute('data-cost');
@@ -502,11 +539,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-         if (planFamilyMember > 1) {
-        buyingPlanOptions.style.display = "block";
-    } else {
-        buyingPlanOptions.style.display = "none";
-    }
+        if (planFamilyMember > 1) {
+            buyingPlanOptions.style.display = "block";
+        } else {
+            buyingPlanOptions.style.display = "none";
+        }
 
 
         // Check if all values are retrieved correctly
@@ -517,10 +554,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show the plan cost, duration format, and family member count
             document.getElementById('planCostInput').value = `₹${planCost}`;
             document.getElementById('planCostHidden').value = planCost;
-            document.getElementById('planDurationInput').value = planDuration; 
+            document.getElementById('planDurationInput').value = planDuration;
             document.getElementById('planDurationHidden').value = planDuration;
-            document.getElementById('planDurationFormatInput').value = planDurationFormat; 
-            document.getElementById('planDurationFormatHidden').value = planDurationFormat; 
+            document.getElementById('planDurationFormatInput').value = planDurationFormat;
+            document.getElementById('planDurationFormatHidden').value = planDurationFormat;
             document.getElementById('planFamilyMemberInput').value = planFamilyMember; // Display family members covered
             document.getElementById('planFamilyMemberHidden').value = planFamilyMember;
             document.getElementById('planMinFamilyMemberInput').value = planMinFamilyMember;
@@ -541,230 +578,138 @@ document.addEventListener('DOMContentLoaded', function() {
 /// -----new js for new form --------------------------------------------------------
 
 
-                   let currentStep = 1;
+let currentStep = 1;
 
-                    // Retrieve the current step from localStorage if it exists
-                    if (localStorage.getItem('currentStep') !== null) {
-                        currentStep = parseInt(localStorage.getItem('currentStep'), 10);
-                    }
+// Retrieve the current step from localStorage if it exists
+if (localStorage.getItem('currentStep') !== null) {
+    currentStep = parseInt(localStorage.getItem('currentStep'), 10);
+}
 
-                    // Function to initialize the step form on page load
-                    function initializeStepForm() {
-                        goToStep(currentStep); // Call goToStep with the currentStep value
-                    }
+// Function to initialize the step form on page load
+function initializeStepForm() {
+    goToStep(currentStep); // Call goToStep with the currentStep value
+}
 
-                    // Function to navigate to the next step
-                    function goToNextStep() {
-                        currentStep++;
-                        localStorage.setItem('currentStep', currentStep); // Update localStorage
-                        goToStep(currentStep);
-                    }
+// Function to navigate to the next step
+function goToNextStep() {
+    currentStep++;
+    localStorage.setItem('currentStep', currentStep); // Update localStorage
+    goToStep(currentStep);
+}
 
-                    // Function to navigate to the previous step
-                    function goToPreviousStep() {
-                        currentStep--;
-                        localStorage.setItem('currentStep', currentStep); // Update localStorage
-                        goToStep(currentStep);
-                    }
+// Function to navigate to the previous step
+function goToPreviousStep() {
+    currentStep--;
+    localStorage.setItem('currentStep', currentStep); // Update localStorage
+    goToStep(currentStep);
+}
 
-                    // Function to display the specific step form
-                    function goToStep(step) {
-                        const steps = document.querySelectorAll(".step-box");
-                        const sections = document.querySelectorAll(".form-section");
+// Function to display the specific step form
+function goToStep(step) {
+    const steps = document.querySelectorAll(".step-box");
+    const sections = document.querySelectorAll(".form-section");
 
-                        if (step > 0 && step <= steps.length) {
-                            // Remove 'active' class from the current step and section
-                            steps.forEach((el, index) => {
-                                el.classList.remove("active", "completed", "inactive");
-                                sections[index].classList.remove("active");
-                            });
+    if (step > 0 && step <= steps.length) {
+        // Remove 'active' class from the current step and section
+        steps.forEach((el, index) => {
+            el.classList.remove("active", "completed", "inactive");
+            sections[index].classList.remove("active");
+        });
 
-                            // Mark previous steps as completed
-                            for (let i = 0; i < step - 1; i++) {
-                                steps[i].classList.add("completed");
-                            }
+        // Mark previous steps as completed
+        for (let i = 0; i < step - 1; i++) {
+            steps[i].classList.add("completed");
+        }
 
-                            // Mark the current step as active
-                            steps[step - 1].classList.add("active");
-                            sections[step - 1].classList.add("active");
+        // Mark the current step as active
+        steps[step - 1].classList.add("active");
+        sections[step - 1].classList.add("active");
 
-                            currentStep = step; // Update the current step variable
+        currentStep = step; // Update the current step variable
 
-                            // Handle specific logic for certain steps
-                            if (step === 3) {
-                                fetchPlansAndGenerateForms();
-                                setTimeout(() => {
-                                    PopulateFamilyMemberDetails();
-                                }, 1000); // 1000 milliseconds = 1 second
-                            }
-                            if (step === 4) {
-                                displaySelectedPlans();
-                            }
-                            if (step === 5) {
-                                displayUploadDocumentForm();
-                                displayUploadedDocument();
-                            }
-                        }
-                    }
+        // Handle specific logic for certain steps
+        if (step === 3) {
+            fetchPlansAndGenerateForms();
+            setTimeout(() => {
+                PopulateFamilyMemberDetails();
+            }, 1000); // 1000 milliseconds = 1 second
+        }
+        if (step === 4) {
+            displaySelectedPlans();
+        }
+        if (step === 5) {
+            displayUploadDocumentForm();
+            displayUploadedDocument();
+        }
+    }
+}
 
-                    // Call the initializeStepForm function on page load
-                    document.addEventListener('DOMContentLoaded', initializeStepForm);
+// Call the initializeStepForm function on page load
+document.addEventListener('DOMContentLoaded', initializeStepForm);
 
-                    // Add click event listener for steps to go directly to a particular step
-                    // document.querySelectorAll(".step-box").forEach((stepBox, index) => {
-                    //     stepBox.addEventListener("click", () => goToStep(index + 1));
-                    // });
+// Add click event listener for steps to go directly to a particular step
+// document.querySelectorAll(".step-box").forEach((stepBox, index) => {
+//     stepBox.addEventListener("click", () => goToStep(index + 1));
+// });
 
-                    // Function to upload document form
-                    function displayUploadDocumentForm()
-                    {
-                        $.post("ajax/upload_documents_form.php", {
-                            
-                        },
-                        function(data, status) {
-                            
-                            document.getElementById("member_document_upload_form").innerHTML = data;
-                            
-                        });
-                    }
-                    
+// Function to upload document form
+function displayUploadDocumentForm() {
+    $.post("ajax/upload_documents_form.php", {
+
+    },
+        function (data, status) {
+
+            document.getElementById("member_document_upload_form").innerHTML = data;
+
+        });
+}
 
 
-                    // function for add Additionalfamilymember form
 
-                    //  function displayAdditionalMemberForm()
-                    // {
-                    //     $.post("ajax/save-Additionalfamily-members.php", {
-                            
-                    //     },
-                    //     function(data, status) {
-                            
-                    //         document.getElementById("member_add_form").innerHTML = data;
-                            
-                    //     });
-                    // } 
+// function for add Additionalfamilymember form
 
-                 // Function to toggle card selection and display green check mark with opacity
-                    function togglePlanSelection(planID)
-                     {
-                        // Get the selected card and check mark
-                        let selectedCard = document.getElementById('plan-card-' + planID);
-                        let checkMark = selectedCard.querySelector('.check-mark');
-                        let checkbox = selectedCard.querySelector('input[type="checkbox"]');
+//  function displayAdditionalMemberForm()
+// {
+//     $.post("ajax/save-Additionalfamily-members.php", {
 
-                        // If the card is not selected, select it
-                        if (!selectedCard.classList.contains('selected')) 
-                        {
-                            selectedCard.classList.add('selected'); // Add selected style
-                            checkMark.style.display = 'block'; // Show check mark
-                            checkbox.checked = true; // Check the hidden checkbox
-                        } else
-                         {
-                            selectedCard.classList.remove('selected'); // Deselect the card
-                            checkMark.style.display = 'none'; // Hide check mark
-                            checkbox.checked = false; // Uncheck the hidden checkbox
-                         }
-                    }
+//     },
+//     function(data, status) {
+
+//         document.getElementById("member_add_form").innerHTML = data;
+
+//     });
+// } 
+
+// Function to toggle card selection and display green check mark with opacity
+function togglePlanSelection(planID) {
+    // Get the selected card and check mark
+    let selectedCard = document.getElementById('plan-card-' + planID);
+    let checkMark = selectedCard.querySelector('.check-mark');
+    let checkbox = selectedCard.querySelector('input[type="checkbox"]');
+
+    // If the card is not selected, select it
+    if (!selectedCard.classList.contains('selected')) {
+        selectedCard.classList.add('selected'); // Add selected style
+        checkMark.style.display = 'block'; // Show check mark
+        checkbox.checked = true; // Check the hidden checkbox
+    } else {
+        selectedCard.classList.remove('selected'); // Deselect the card
+        checkMark.style.display = 'none'; // Hide check mark
+        checkbox.checked = false; // Uncheck the hidden checkbox
+    }
+}
 
 
-                   
 
 
-                    // Save the selected plans (supporting multiple selections)
 
-                          $('#gotothirdstep').hide();
-                            async function saveSelectedPlans() 
-                            {
-                                let customer_id_1 = $('#customer_id').val();
+// Save the selected plans (supporting multiple selections)
 
-                                if (customer_id_1 === "") 
-                                {
-                                    try {
-                                        // Fetch customer ID from the session via AJAX
-                                        const response = await $.ajax({
-                                            url: 'action/get_session_value.php', // Replace with your server endpoint
-                                            method: 'GET',
-                                            dataType: 'json',
-                                        });
+$('#gotothirdstep').hide();
+async function saveSelectedPlans() {
+    let customer_id_1 = $('#customer_id').val();
 
-                                        if (response.customer_id) {
-                                            // Set the fetched customer ID
-                                            customer_id_1 = response.customer_id;
-                                            //alert("Customer ID fetched: " + customer_id_1);
-                                        } else {
-                                            //alert("Customer ID not found in session.");
-                                            return false;
-                                        }
-                                    } catch (error) {
-                                        console.error('Error fetching customer ID from session:', error);
-                                        Alert('An error occurred while fetching the customer ID.');
-                                        return false;
-                                    }
-                                }
-
-                                console.log('Customer ID:', customer_id_1);
-                                //alert("Current Customer ID: " + customer_id_1);
-
-                                if (!customer_id_1) {
-                                    Alert("Customer ID not found. Please complete Step 1 first.");
-                                    return false;
-                                }
-
-                                // Get form action and form ID
-                                let form_action = $("#form_action_policy").val();
-                                let form_id = $("#form_id_policy").val();
-
-                                // alert(form_action);
-                                // alert(form_id);
-
-
-                                // Get selected plans
-                                let selectedPlans = document.querySelectorAll('input[name="selected_plan[]"]:checked');
-                                let selectedPlanIDs = Array.from(selectedPlans).map(plan => plan.value);
-
-                                if (selectedPlanIDs.length > 0) {
-                                    $("#savePolicyBtn").html('Please Wait..');
-
-                                    try {
-                                        // Save the selected plans via AJAX
-                                        const response = await $.ajax({
-                                            url: "action/add-update-customer-plans.php",
-                                            type: "POST",
-                                            data: {
-                                                customer_id: customer_id_1,
-                                                plans: selectedPlanIDs,
-                                                form_action: form_action,
-                                                form_id: form_id,
-                                            },
-                                        });
-
-                                        const parsedResponse = JSON.parse(response);
-                                        const policyNumber = parsedResponse.PolicyNumber;
-
-                                        Alert("Plans saved successfully.");
-                                        $("#PolicyNumber").val(policyNumber);
-                                        $('#savePolicyBtn').hide();
-                                        $('#gotothirdstep').show();
-                                    } catch (error) {
-                                        console.error('Error saving plans:', error);
-                                        alert("Error saving plans. Please try again.");
-                                    }
-                                } else {
-                                    Alert("Please select at least one plan.");
-                                }
-                            }
-
-
-            ////step-3
-
-     
-
-async function fetchPlansAndGenerateForms() 
-{
-    var PolicyNumber=$("#PolicyNumber").val();
-    
-    if (PolicyNumber === "") 
-    {
+    if (customer_id_1 === "") {
         try {
             // Fetch customer ID from the session via AJAX
             const response = await $.ajax({
@@ -773,12 +718,94 @@ async function fetchPlansAndGenerateForms()
                 dataType: 'json',
             });
 
-            if (response.PolicyNumber) 
-            {
+            if (response.customer_id) {
+                // Set the fetched customer ID
+                customer_id_1 = response.customer_id;
+                //alert("Customer ID fetched: " + customer_id_1);
+            } else {
+                //alert("Customer ID not found in session.");
+                return false;
+            }
+        } catch (error) {
+            console.error('Error fetching customer ID from session:', error);
+            Alert('An error occurred while fetching the customer ID.');
+            return false;
+        }
+    }
+
+    console.log('Customer ID:', customer_id_1);
+    //alert("Current Customer ID: " + customer_id_1);
+
+    if (!customer_id_1) {
+        Alert("Customer ID not found. Please complete Step 1 first.");
+        return false;
+    }
+
+    // Get form action and form ID
+    let form_action = $("#form_action_policy").val();
+    let form_id = $("#form_id_policy").val();
+
+    // alert(form_action);
+    // alert(form_id);
+
+
+    // Get selected plans
+    let selectedPlans = document.querySelectorAll('input[name="selected_plan[]"]:checked');
+    let selectedPlanIDs = Array.from(selectedPlans).map(plan => plan.value);
+
+    if (selectedPlanIDs.length > 0) {
+        $("#savePolicyBtn").html('Please Wait..');
+
+        try {
+            // Save the selected plans via AJAX
+            const response = await $.ajax({
+                url: "action/add-update-customer-plans.php",
+                type: "POST",
+                data: {
+                    customer_id: customer_id_1,
+                    plans: selectedPlanIDs,
+                    form_action: form_action,
+                    form_id: form_id,
+                },
+            });
+
+            const parsedResponse = JSON.parse(response);
+            const policyNumber = parsedResponse.PolicyNumber;
+
+            Alert("Plans saved successfully.");
+            $("#PolicyNumber").val(policyNumber);
+            $('#savePolicyBtn').hide();
+            $('#gotothirdstep').show();
+        } catch (error) {
+            console.error('Error saving plans:', error);
+            alert("Error saving plans. Please try again.");
+        }
+    } else {
+        Alert("Please select at least one plan.");
+    }
+}
+
+
+////step-3
+
+
+
+async function fetchPlansAndGenerateForms() {
+    var PolicyNumber = $("#PolicyNumber").val();
+
+    if (PolicyNumber === "") {
+        try {
+            // Fetch customer ID from the session via AJAX
+            const response = await $.ajax({
+                url: 'action/get_session_value.php', // Replace with your server endpoint
+                method: 'GET',
+                dataType: 'json',
+            });
+
+            if (response.PolicyNumber) {
                 PolicyNumber = response.PolicyNumber;
-            } 
-            else 
-            {
+            }
+            else {
                 return false;
             }
         } catch (error) {
@@ -801,8 +828,8 @@ async function fetchPlansAndGenerateForms()
         data: { policy_number: PolicyNumber },
         success: function (response) {
             var plans = JSON.parse(response); // Assume the response is a JSON array of plan details
-           
-            
+
+
             if (plans.length > 0) {
                 plans.forEach(function (plan) {
                     fetchPlanDetailsAndGenerateForm(plan); // Pass each plan to generate the form
@@ -824,33 +851,33 @@ function fetchPlanDetailsAndGenerateForm(plan) {
         return;
     }
 
-        $.ajax({
-            url: "include/fetch-plan-details.php",
-            type: "POST",
-            data: { plan_id: plan.PlanID },
-            success: function (response) {
-                var planDetails = JSON.parse(response); // Assume the response contains plan details
-                
-                if (planDetails.length > 0) {
-                    var numOfMembers = planDetails[0]?.PlanFamilyMember; // Get the number of family members covered
-                   
+    $.ajax({
+        url: "include/fetch-plan-details.php",
+        type: "POST",
+        data: { plan_id: plan.PlanID },
+        success: function (response) {
+            var planDetails = JSON.parse(response); // Assume the response contains plan details
 
-                    if (numOfMembers && !isNaN(numOfMembers) && numOfMembers > 0) {
-                        generateMemberForm(planDetails, numOfMembers); // Pass the plan and number of family members
-                    } else {
-                        Alert("No family members information found for Plan ID " + plan.PlanID);
-                    }
+            if (planDetails.length > 0) {
+                var numOfMembers = planDetails[0]?.PlanFamilyMember; // Get the number of family members covered
+
+
+                if (numOfMembers && !isNaN(numOfMembers) && numOfMembers > 0) {
+                    generateMemberForm(planDetails, numOfMembers); // Pass the plan and number of family members
                 } else {
-                    Alert("No details found for Plan ID " + plan.PlanID);
+                    Alert("No family members information found for Plan ID " + plan.PlanID);
                 }
-            },
-            error: function () {
-                Alert("Error fetching plan details. Please try again.");
+            } else {
+                Alert("No details found for Plan ID " + plan.PlanID);
             }
-        });
+        },
+        error: function () {
+            Alert("Error fetching plan details. Please try again.");
+        }
+    });
 }
 
-    function generateMemberForm(planDetails, numOfMembers) {
+function generateMemberForm(planDetails, numOfMembers) {
     var plan = planDetails[0];
     var formContainerId = 'plan-' + plan.ID + '-members';
 
@@ -860,7 +887,7 @@ function fetchPlanDetailsAndGenerateForm(plan) {
         return;
     }
 
-   
+
 
     if (!numOfMembers || isNaN(numOfMembers)) {
         Alert("Invalid number of family members!");
@@ -869,9 +896,9 @@ function fetchPlanDetailsAndGenerateForm(plan) {
 
     var formHtml = `<div id="${formContainerId}" class="member-form">`;
 
-   
-        formHtml += `<h1>Enter Member Details for ${plan.PlanName}</h1>`;
-    
+
+    formHtml += `<h1>Enter Member Details for ${plan.PlanName}</h1>`;
+
 
     for (var i = 1; i <= numOfMembers; i++) {
         formHtml += `
@@ -940,16 +967,16 @@ function fetchPlanDetailsAndGenerateForm(plan) {
         startDate: new Date(new Date().getFullYear() - 75, new Date().getMonth(), new Date().getDate()),
         endDate: new Date()
     });
-    
+
 }
 
 function myFunction(selectElement) {
     // Find the closest parent div containing the select dropdown and the input field for 'Other'
     const formGroup = selectElement.closest('.form-group');
-    
+
     // Find the input field for 'Other' within the same parent container
     const otherInput = formGroup.querySelector('input[type="text"]');
-    
+
     // Check if "Other" is selected
     if (selectElement.value === 'other') {
         // Show the 'Other' input field
@@ -963,12 +990,12 @@ function myFunction(selectElement) {
 
 
 
- $('#gotosecondstep').hide();
-function SaveCustomer(){
+$('#gotosecondstep').hide();
+function SaveCustomer() {
 
-    
-   
-     var PocName = $("#poc_name").val();
+
+
+    var PocName = $("#poc_name").val();
     if (PocName == "") {
         Alert("Please Enter Name");
         return false;
@@ -981,16 +1008,16 @@ function SaveCustomer(){
     }
 
 
-    if(!validaphone(PocNumber)){
+    if (!validaphone(PocNumber)) {
         Alert("Please Enter Valid  Contact Number.");
         return false;
     }
 
-     var gender = $("input[name='gender']:checked").val();
-  
-       
-    
-     if (gender === undefined || gender === null) {
+    var gender = $("input[name='gender']:checked").val();
+
+
+
+    if (gender === undefined || gender === null) {
         Alert("Please select an option for Gender");
         return false;
     }
@@ -1003,41 +1030,39 @@ function SaveCustomer(){
     }
 
     // Check if the date is in valid format dd-mm-yyyy
-            var datePattern = /^(\d{2})-(\d{2})-(\d{4})$/;
-            var match = dob.match(datePattern);
+    var datePattern = /^(\d{2})-(\d{2})-(\d{4})$/;
+    var match = dob.match(datePattern);
 
-            if (match) {
-                var day = parseInt(match[1], 10);
-                var month = parseInt(match[2], 10);
-                var year = parseInt(match[3], 10);
+    if (match) {
+        var day = parseInt(match[1], 10);
+        var month = parseInt(match[2], 10);
+        var year = parseInt(match[3], 10);
 
-                // Check if the year is between 1900 and the current year
-                var currentYear = new Date().getFullYear();
-                if (year < 1900 || year > currentYear) {
-                    Alert("Year should be Valid.");
-                    return false;
-                }
+        // Check if the year is between 1900 and the current year
+        var currentYear = new Date().getFullYear();
+        if (year < 1900 || year > currentYear) {
+            Alert("Year should be Valid.");
+            return false;
+        }
 
-                // Check if the date is valid
-                var date = new Date(year, month - 1, day);
-                if (date.getDate() !== day || date.getMonth() !== month - 1 || date.getFullYear() !== year) {
-                    Alert("Invalid date. Please enter a valid date.");
-                    return false;
-                }
-            } else {
-                Alert("Please enter the date in dd-mm-yyyy format.");
-                return false;
-            }
-    
+        // Check if the date is valid
+        var date = new Date(year, month - 1, day);
+        if (date.getDate() !== day || date.getMonth() !== month - 1 || date.getFullYear() !== year) {
+            Alert("Invalid date. Please enter a valid date.");
+            return false;
+        }
+    } else {
+        Alert("Please enter the date in dd-mm-yyyy format.");
+        return false;
+    }
+
     var email = $("#email").val();
     if (email == "") {
         Alert("Please Enter Email.");
         return false;
     }
-    else
-    {
-        if(!isValidEmail(email))
-        {
+    else {
+        if (!isValidEmail(email)) {
             Alert("Please Enter Valid Email.");
             return false;
         }
@@ -1053,16 +1078,16 @@ function SaveCustomer(){
     if (state == "") {
         Alert("Please Enter state");
         return false;
-    }  
+    }
 
-     
+
     var pincode = $("#pincode").val();
     if (pincode == "") {
         Alert("Please Enter Pincode.");
         return false;
     }
-    
-     
+
+
     let form_action = $("#form_action").val();
     let btntext = "";
     if (form_action == "add") {
@@ -1075,40 +1100,40 @@ function SaveCustomer(){
 
     let myForm = document.getElementById("customer_form");
     var formData = new FormData(myForm);
-    formData.forEach(function(value, key){
-    
-});
-     $("#addCusPolicyBtn").html("Please Wait..");
+    formData.forEach(function (value, key) {
+
+    });
+    $("#addCusPolicyBtn").html("Please Wait..");
     $.ajax({
         url: "action/add-update-customer.php",
         type: "POST",
         data: formData,
         success: function (data) {
             var response = JSON.parse(data);
-            var ID=response.ID;
-            
-            Alert(response.message);
-            
-            if (response.error == false) {
-                 $("#form_action").val("Update");
-                 $("#form_id").val(ID);
-                 $("#customer_id").val(ID);
-                 $('#gotosecondstep').show();
-                 setTimeout(function(){      
-                   // window.location.reload();
-                // $("#savecustomerBtn").html('update');
-                  $('#savecustomerBtn').hide();
-                $('#gotosecondstep').show();
-             
-                },1000)
-               
-            }else{
-                 
+            var ID = response.ID;
 
-                 $("#savecustomerBtn").html('Please Wait..');
-                
+            Alert(response.message);
+
+            if (response.error == false) {
+                $("#form_action").val("Update");
+                $("#form_id").val(ID);
+                $("#customer_id").val(ID);
+                $('#gotosecondstep').show();
+                setTimeout(function () {
+                    // window.location.reload();
+                    // $("#savecustomerBtn").html('update');
+                    $('#savecustomerBtn').hide();
+                    $('#gotosecondstep').show();
+
+                }, 1000)
+
+            } else {
+
+
+                $("#savecustomerBtn").html('Please Wait..');
+
             }
-            
+
         },
         cache: false,
         contentType: false,
@@ -1120,7 +1145,7 @@ function SaveCustomer(){
 
 
 $('#gotofourthstep').hide();
-$(document).ready(function() {
+$(document).ready(function () {
     // Initialize datepicker for all member DOB fields
     $("input[id^='member_dob']").datepicker({
         format: 'dd-mm-yyyy',
@@ -1145,46 +1170,46 @@ function savefamilyMember() {
     let atLeastOneFilled = false;
 
     // Loop through each form to validate and collect data
-   familyMemberForms.forEach((form, index) => {
-    const memberName = form.querySelector('input[name^="member_name_"]');
-    const memberDob = form.querySelector('input[name^="member_dob_"]');
-    const memberGender = form.querySelector('input[name^="member_gender_"]:checked');
-    const memberRelationship = form.querySelector('select[name^="member_relationship_"]');
+    familyMemberForms.forEach((form, index) => {
+        const memberName = form.querySelector('input[name^="member_name_"]');
+        const memberDob = form.querySelector('input[name^="member_dob_"]');
+        const memberGender = form.querySelector('input[name^="member_gender_"]:checked');
+        const memberRelationship = form.querySelector('select[name^="member_relationship_"]');
 
-    const planId = form.querySelector('input[name^="plan_Id_"]');
+        const planId = form.querySelector('input[name^="plan_Id_"]');
 
-    const otherRelationship = form.querySelector('input[name^="other_relationship_"]'); // Get the "Other" relationship field
-    const PolicyMemberID = form.querySelector('input[name^="PolicyMemberID_"]');
+        const otherRelationship = form.querySelector('input[name^="other_relationship_"]'); // Get the "Other" relationship field
+        const PolicyMemberID = form.querySelector('input[name^="PolicyMemberID_"]');
 
-    // Check if at least one family member's required fields are filled
-    if (memberName && memberName.value.trim() && 
-        memberDob && memberDob.value.trim() && 
-        memberGender && memberGender.value && 
-        memberRelationship && memberRelationship.value.trim() && 
-        planId && planId.value.trim()
-    ) {
-        atLeastOneFilled = true; // If all fields of at least one member are filled, set the flag
-    }
+        // Check if at least one family member's required fields are filled
+        if (memberName && memberName.value.trim() &&
+            memberDob && memberDob.value.trim() &&
+            memberGender && memberGender.value &&
+            memberRelationship && memberRelationship.value.trim() &&
+            planId && planId.value.trim()
+        ) {
+            atLeastOneFilled = true; // If all fields of at least one member are filled, set the flag
+        }
 
-    // Validate individual fields and add to formData if they are not empty
-    if (memberName && memberName.value.trim()) {
-        formData.append(`member_name_${index + 1}`, memberName.value);
-    } else {
-        errorMessage += `Family member ${index + 1} - Name is required.\n`;
-    }
+        // Validate individual fields and add to formData if they are not empty
+        if (memberName && memberName.value.trim()) {
+            formData.append(`member_name_${index + 1}`, memberName.value);
+        } else {
+            errorMessage += `Family member ${index + 1} - Name is required.\n`;
+        }
 
-    // Validate individual fields and add to formData if they are not empty
-    if (PolicyMemberID && PolicyMemberID.value.trim()) {
-        formData.append(`PolicyMemberID_${index + 1}`, PolicyMemberID.value);
-    }
+        // Validate individual fields and add to formData if they are not empty
+        if (PolicyMemberID && PolicyMemberID.value.trim()) {
+            formData.append(`PolicyMemberID_${index + 1}`, PolicyMemberID.value);
+        }
 
-    if (planId && planId.value.trim()) {
-        formData.append(`plan_Id_${index + 1}`, planId.value.trim());
-    } else {
-        errorMessage += `Family member ${index + 1} - Plan ID is required.\n`;
-    }
+        if (planId && planId.value.trim()) {
+            formData.append(`plan_Id_${index + 1}`, planId.value.trim());
+        } else {
+            errorMessage += `Family member ${index + 1} - Plan ID is required.\n`;
+        }
 
-     if (memberDob && memberDob.value.trim()) {
+        if (memberDob && memberDob.value.trim()) {
             // Date validation
             let dob = new Date(memberDob.value);
             let currentYear = new Date().getFullYear();
@@ -1204,13 +1229,13 @@ function savefamilyMember() {
 
 
 
-    if (memberGender) {
-        formData.append(`member_gender_${index + 1}`, memberGender.value);
-    } else {
-        errorMessage += `Family member ${index + 1} - Gender is required.\n`;
-    }
+        if (memberGender) {
+            formData.append(`member_gender_${index + 1}`, memberGender.value);
+        } else {
+            errorMessage += `Family member ${index + 1} - Gender is required.\n`;
+        }
 
-     if (memberRelationship && memberRelationship.value.trim()) {
+        if (memberRelationship && memberRelationship.value.trim()) {
             formData.append(`member_relationship_${index + 1}`, memberRelationship.value);
 
             // If "other" relationship is selected, add the other relationship value
@@ -1221,26 +1246,26 @@ function savefamilyMember() {
             errorMessage += `Family member ${index + 1} - Relationship is required.\n`;
         }
 
-    // Append the Policy Number for each member
-    var policyNumber=$('#PolicyNumber').val();
-    if (policyNumber) {
-        formData.append(`policy_number_${index + 1}`, policyNumber);
-    } else {
-        errorMessage += `Family member ${index + 1} - Policy Number is missing.\n`;
+        // Append the Policy Number for each member
+        var policyNumber = $('#PolicyNumber').val();
+        if (policyNumber) {
+            formData.append(`policy_number_${index + 1}`, policyNumber);
+        } else {
+            errorMessage += `Family member ${index + 1} - Policy Number is missing.\n`;
+        }
+
+
+    });
+
+    // Final check to ensure at least one member's form is filled
+    if (!atLeastOneFilled) {
+        isValid = false;
+        errorMessage += `At least one family member's details are required.\n`;
     }
 
-   
-});
-
-// Final check to ensure at least one member's form is filled
-if (!atLeastOneFilled) {
-    isValid = false;
-    errorMessage += `At least one family member's details are required.\n`;
-}
-
-if (!isValid) {
-    Alert(errorMessage); // Show the errors, or handle them as required
-}
+    if (!isValid) {
+        Alert(errorMessage); // Show the errors, or handle them as required
+    }
 
     // If everything is valid, proceed with AJAX request
     $.ajax({
@@ -1252,9 +1277,9 @@ if (!isValid) {
         success: function (response) {
             try {
                 var result = JSON.parse(response);
-                console.log('fgffffgf',result);
+                console.log('fgffffgf', result);
                 Alert(result.message);
-                if (result.error===false) {
+                if (result.error === false) {
                     // After successful submission
                     $('#savefamilyMemberBtn').hide();
                     $('#gotofourthstep').show();
@@ -1303,30 +1328,30 @@ function generatePaymentLink(policyID) {
 
 
         function createConfetti() {
-  const confettiContainer = document.getElementById('confetti-container');
-  
-  // Define confetti colors
-  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FFFF33', '#FF33FF'];
+            const confettiContainer = document.getElementById('confetti-container');
 
-  // Create 50 confetti pieces
-  for (let i = 0; i < 50; i++) {
-    const confettiPiece = document.createElement('div');
-    confettiPiece.classList.add('confetti');
-    
-    // Randomize position, animation timing, and colors
-    confettiPiece.style.left = Math.random() * 100 + 'vw';
-    confettiPiece.style.animationDuration = Math.random() * 1 + 2 + 's';
-    confettiPiece.style.animationDelay = Math.random() * 3 + 's';
-    confettiPiece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    
-    confettiContainer.appendChild(confettiPiece);
-    
-    // Remove confetti piece after animation ends to prevent clutter
-    setTimeout(() => {
-      confettiPiece.remove();
-    }, 10000);
-  }
-}
+            // Define confetti colors
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#FFFF33', '#FF33FF'];
+
+            // Create 50 confetti pieces
+            for (let i = 0; i < 50; i++) {
+                const confettiPiece = document.createElement('div');
+                confettiPiece.classList.add('confetti');
+
+                // Randomize position, animation timing, and colors
+                confettiPiece.style.left = Math.random() * 100 + 'vw';
+                confettiPiece.style.animationDuration = Math.random() * 1 + 2 + 's';
+                confettiPiece.style.animationDelay = Math.random() * 3 + 's';
+                confettiPiece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                confettiContainer.appendChild(confettiPiece);
+
+                // Remove confetti piece after animation ends to prevent clutter
+                setTimeout(() => {
+                    confettiPiece.remove();
+                }, 10000);
+            }
+        }
 
         // Start checking payment status every 5 seconds
         var checkPaymentStatusInterval = setInterval(function () {
@@ -1379,19 +1404,19 @@ function generatePaymentLink(policyID) {
 // --------------save additional family member-----------------------
 
 function saveAdditionalFamilyMember() {
-       event.preventDefault(); 
-     var PolicyNumber=$("#PolicyNumber").val();
-     console.log('policynumberrrr',PolicyNumber);
-      if (!PolicyNumber) {
+    event.preventDefault();
+    var PolicyNumber = $("#PolicyNumber").val();
+    console.log('policynumberrrr', PolicyNumber);
+    if (!PolicyNumber) {
         Alert(`Family PolicyNumber  is required`);
-        
+
     }
 
     let errorMessage = '';
     let isValid = true;
 
     const form = document.getElementById('familyMemberForm');
-   
+
     const formData = new FormData(form); // Collect form data using FormData
     formData.append('policy_number', PolicyNumber);
     const memberName = form.querySelector('input[name="member_name"]');
@@ -1446,12 +1471,12 @@ function saveAdditionalFamilyMember() {
                     Alert(result.message); // Show error message if any
                 } else {
                     Alert('Family member details saved successfully!');
-                    $('#familyMemberModal').modal('hide'); 
+                    $('#familyMemberModal').modal('hide');
                     form.reset();
-                    setTimeout(function (){
+                    setTimeout(function () {
                         location.reload();
-                    },2000);
-                     
+                    }, 2000);
+
                 }
             } catch (error) {
                 console.error("Error parsing response:", error);
@@ -1465,53 +1490,52 @@ function saveAdditionalFamilyMember() {
     });
 }
 
-function AddNewMemberModal()
-{
+function AddNewMemberModal() {
     fetchPlans();
     $("#familyMemberModal").modal("show");
 
 }
 
- // Generate confetti
+// Generate confetti
 const confettiContainer = document.querySelector('.confetti');
 for (let i = 0; i < 50; i++) {
-  const piece = document.createElement('div');
-  piece.classList.add('confetti-piece');
-  piece.style.setProperty('--color', `hsl(${Math.random() * 360}, 100%, 50%)`);
-  piece.style.left = Math.random() * 100 + 'vw';
-  piece.style.animationDelay = Math.random() * 2 + 's';
-  confettiContainer.appendChild(piece);
+    const piece = document.createElement('div');
+    piece.classList.add('confetti-piece');
+    piece.style.setProperty('--color', `hsl(${Math.random() * 360}, 100%, 50%)`);
+    piece.style.left = Math.random() * 100 + 'vw';
+    piece.style.animationDelay = Math.random() * 2 + 's';
+    confettiContainer.appendChild(piece);
 }
 
 
 function feezesendmail(PolicyNumber) {
-   
+
     $.ajax({
         url: "action/send-policy-doc-email.php",
         method: "GET",
         data: { PolicyNumber: PolicyNumber },
-        success: function(data) {
-            var response=JSON.parse(data);
+        success: function (data) {
+            var response = JSON.parse(data);
             Alert(response.message);
-            if(response.error==false){     
-                 $('#policyDocumentss_form').hide();
-                 $('#feezesendmail').hide();
-                 $('#last_step_thanks').fadeIn();
-                 $('#AddNewMemberModalbtn').hide();
-                  setTimeout(function() {
-                       $.ajax({
-                          url:'../controllers/clear-session.php',
-                          method:"GET",
-                          success:function(data){
-                            if(data=='success'){
-                              window.location.href="../PolicyCustomer/view-all-policy-customer-new"
+            if (response.error == false) {
+                $('#policyDocumentss_form').hide();
+                $('#feezesendmail').hide();
+                $('#last_step_thanks').fadeIn();
+                $('#AddNewMemberModalbtn').hide();
+                setTimeout(function () {
+                    $.ajax({
+                        url: '../controllers/clear-session.php',
+                        method: "GET",
+                        success: function (data) {
+                            if (data == 'success') {
+                                window.location.href = "../PolicyCustomer/view-all-policy-customer-new"
                             }
-                          }
-                       })
-                    }, 3000);
+                        }
+                    })
+                }, 3000);
             }
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             Alert("Error occurred:", error);
         }
     });
@@ -1524,16 +1548,16 @@ function sendNeftPolicyDoc(PolicyNumber) {
         url: "../controllers/send-policy-doc-email.php",
         method: "GET",
         data: { PolicyNumber: PolicyNumber },
-        success: function(data) {
-            var response=JSON.parse(data);
+        success: function (data) {
+            var response = JSON.parse(data);
             Alert(response.message);
-            if(response.error==false){     
-                  setTimeout(function() {
-                      location.reload();
-                    }, 3000);
+            if (response.error == false) {
+                setTimeout(function () {
+                    location.reload();
+                }, 3000);
             }
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             Alert("Error occurred:", error);
         }
     });
@@ -1543,31 +1567,27 @@ function sendNeftPolicyDoc(PolicyNumber) {
 
 
 // --------------Export all Policy Customer data----------------------
-function ExportPolicyCustomer(){
-   
-   window.location.href="action/export-policy-customer-data.php"
+function ExportPolicyCustomer() {
 
-} 
+    window.location.href = "action/export-policy-customer-data.php"
 
-function PopulateFamilyMemberDetails()
-{
-    
+}
+
+function PopulateFamilyMemberDetails() {
+
     $.post("ajax/get-member-details.php",
-    {
-    },
-    function (data, status) 
-    {
-        var response = JSON.parse(data);
-        if(response.member_exists === true)
         {
-            
-            populateForms(response)
-        }
-        else
-        {
-            // Alert("Please Wait");
-        }
-    })
+        },
+        function (data, status) {
+            var response = JSON.parse(data);
+            if (response.member_exists === true) {
+
+                populateForms(response)
+            }
+            else {
+                // Alert("Please Wait");
+            }
+        })
 }
 
 function populateForms(response) {
@@ -1589,41 +1609,35 @@ function populateForms(response) {
         let index = 1; // Reset index for each PlanID
         members.forEach((member) => {
             // Populate Name
-            var nameField1 = "member_name_"+planID+"_"+index;
+            var nameField1 = "member_name_" + planID + "_" + index;
             console.log(nameField1);
             console.log(member.Name);
-            
-            if(document.getElementById(nameField1))
-            {
-               
-                $("#"+nameField1).val(member.Name);
-               // document.getElementById(nameField1).value = member.Name;
+
+            if (document.getElementById(nameField1)) {
+
+                $("#" + nameField1).val(member.Name);
+                // document.getElementById(nameField1).value = member.Name;
             }
-            else
-            {
+            else {
                 //alert("Element doesn'exist");
             }
-            
-            var dobField = "member_dob_"+planID+"_"+index;
-            if(document.getElementById(dobField))
-            {
-                
-                $("#"+dobField).val(member.DateOfBirth);
-               // document.getElementById(nameField1).value = member.Name;
+
+            var dobField = "member_dob_" + planID + "_" + index;
+            if (document.getElementById(dobField)) {
+
+                $("#" + dobField).val(member.DateOfBirth);
+                // document.getElementById(nameField1).value = member.Name;
             }
-            else
-            {
+            else {
                 //alert("Element doesn'exist");
             }
-            var PolicyMemberID = "PolicyMemberID_"+planID+"_"+index;
-            if(document.getElementById(PolicyMemberID))
-            {
-                
-                $("#"+PolicyMemberID).val(member.ID);
-               // document.getElementById(nameField1).value = member.Name;
+            var PolicyMemberID = "PolicyMemberID_" + planID + "_" + index;
+            if (document.getElementById(PolicyMemberID)) {
+
+                $("#" + PolicyMemberID).val(member.ID);
+                // document.getElementById(nameField1).value = member.Name;
             }
-            else
-            {
+            else {
                 //alert("Element doesn'exist");
             }
 
@@ -1655,9 +1669,9 @@ function openPlanDetailsModel(plan) {
     // document.getElementById('modalPlanImportantPoints').textContent = plan.PlanImportantPoint;
     const cleanedCoverageComments = cleanRichText(plan.PlanHighlights);
     const coverageCommentsList = cleanedCoverageComments
-    .split(',')
-    .map(comment => `<li style="list-style-type: disc">${comment.trim()}</li>`)
-    .join('');
+        .split(',')
+        .map(comment => `<li style="list-style-type: disc">${comment.trim()}</li>`)
+        .join('');
     document.getElementById('modalCoverageComments').innerHTML = coverageCommentsList;
     // Show the modal
     const modal = new bootstrap.Modal(document.getElementById('planDetailsModal'));
@@ -1665,12 +1679,11 @@ function openPlanDetailsModel(plan) {
 }
 
 // Function to clean up unwanted styles and quotation marks
-function cleanRichText(content)
- {
+function cleanRichText(content) {
 
-    content = content.replace(/style="[^"]*"/g, ''); 
-    content = content.replace(/"/g, ''); 
-    content = content.replace(/\s+/g, ' ').trim(); 
+    content = content.replace(/style="[^"]*"/g, '');
+    content = content.replace(/"/g, '');
+    content = content.replace(/\s+/g, ' ').trim();
     return content;
 }
 
@@ -1697,11 +1710,11 @@ function deleteDocument(doc) {
             url: 'action/delete_document.php', // A PHP script to handle the document deletion
             method: 'POST',
             data: { document: doc },
-            success: function(response) {
+            success: function (response) {
                 Alert('Document deleted successfully!');
                 // location.reload();  // Reload the page to update the document list
             },
-            error: function(error) {
+            error: function (error) {
                 Alert('Error deleting document.');
             }
         });

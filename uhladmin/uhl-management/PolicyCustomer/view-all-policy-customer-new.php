@@ -64,7 +64,7 @@ $conf = new Conf();
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
 
-                         
+
 
                             <?php if ($access_2 == true) { ?>
                                 <button class="btn btn-primary export-button" onclick="ExportPolicyCustomer()"
@@ -101,6 +101,7 @@ $conf = new Conf();
                                                         <th class="wd-15p border-bottom-0">Transaction Status</th>
                                                         <th class="wd-15p border-bottom-0">Details</th>
                                                         <th class="wd-10p border-bottom-0">Action</th>
+                                                        <th class="wd-10p border-bottom-0">Barcode</th>
                                                     </tr>
                                                 </thead>
 
@@ -229,6 +230,9 @@ $conf = new Conf();
                     {
                         data: 'Action'
                     },
+                    {
+                        data: 'Barcode'
+                    },
 
                     ]
 
@@ -242,6 +246,7 @@ $conf = new Conf();
                 $("#nav_program").addClass("active");
             });
         </script>
+
 
 </body>
 

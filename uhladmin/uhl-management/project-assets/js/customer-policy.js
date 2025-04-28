@@ -470,7 +470,6 @@ function toggleBarcodeStatus(PolicyNumber, newStatus) {
     alertify.confirm(
         'Do you really want to change the barcode status?',
         function () {
-            console.log('Toggling barcode status for Policy:', PolicyNumber, 'New status:', newStatus);
             $.ajax({
                 url: 'action/update-barcode-status.php',
                 type: 'POST',

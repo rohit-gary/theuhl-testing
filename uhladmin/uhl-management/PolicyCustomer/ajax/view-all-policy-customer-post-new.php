@@ -93,7 +93,7 @@ $totalRecords = $totalResult['total_count'];
 // $policy_details_arr = $PolicyCustomer->_getTotalRecord($conn, 'policy_customer', $filter);
 
 ## Main SQL query to fetch policy details
-$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber,  MAX(ac.CreatedBy) AS CreatedBy, cp.IsBarcode, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN JSON_LENGTH(pmd.Documents) > 0 THEN 1 END) THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_customer_documents pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
+$sql = "SELECT ac.ID AS CustomerID, MAX(ac.Name) AS UserName, MAX(ac.ContactNumber) AS MobileNumber,  MAX(ac.CreatedBy) AS CreatedBy, MAX(cp.IsBarcode) AS IsBarcode, cp.PolicyNumber,MAX(cp.CreatedBy) AS CreatedDate, MAX(cpa.Amount) AS Amount, COALESCE(MAX(p.status), 'Not Done') AS PaymentStatus, CASE WHEN COUNT(CASE WHEN JSON_LENGTH(pmd.Documents) > 0 THEN 1 END) THEN 'Complete' ELSE 'Incomplete' END AS DocumentStatus FROM all_customer ac INNER JOIN customerpolicy cp ON ac.ID = cp.CustomerID LEFT JOIN customerpolicyamount cpa ON cp.PolicyNumber = cpa.PolicyNumber LEFT JOIN payments p ON cp.PolicyNumber = p.PolicyNumber LEFT JOIN policy_customer_documents pmd ON cp.PolicyNumber = pmd.PolicyNumber $filter
      GROUP BY ac.ID, cp.PolicyNumber  ORDER BY ac.ID DESC, cp.PolicyNumber  LIMIT $row, $rowperpage ";
 
 // echo $sql;

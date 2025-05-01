@@ -56,18 +56,18 @@ $PolicyID = $policyNumbers[0]['ID'];
                         <!-- PAGE-HEADER -->
                         <div class="page-header mb-3">
 
-                            <h1 class="page-title d-flex align-items-center">Apply for Reimbursement
-                                <span data-bs-placement="bottom" data-bs-toggle='tooltip'
+                            <h1 class="page-title d-flex align-items-center">View All Reimbursement
+                                <!-- <span data-bs-placement="bottom" data-bs-toggle='tooltip'
                                     data-bs-original-title='Add Leave'
                                     onclick="AddReimbursement(<?php echo $PolicyID; ?>)"
-                                    class="fe fe-plus add_btn"></span>
+                                    class="fe fe-plus add_btn"></span> -->
                             </h1>
 
-                            <h1 class="page-title">All Medical CheckUp</h1>
+                            <!-- <h1 class="page-title">All Reimbursement</h1> -->
                             <div>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="../dashboard/admin-dashboard">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">View Medical CheckUps </li>
+                                    <li class="breadcrumb-item active" aria-current="page">View Reimbursement </li>
                                 </ol>
                             </div>
                         </div>
@@ -91,8 +91,7 @@ $PolicyID = $policyNumbers[0]['ID'];
                                                         <th class="wd-15p border-bottom-0">Checkup Cost</th>
                                                         <th class="wd-25p border-bottom-0">Checkup Documents</th>
                                                         <th class="wd-25p border-bottom-0">Status</th>
-                                                        <th class="wd-25p border-bottom-0">Remark</th>
-                                                        <th class="wd-25p border-bottom-0">Action</th>
+                                                        <th class="wd-25p border-bottom-0">View Details</th>
                                                     </tr>
                                                 </thead>
 
@@ -168,14 +167,14 @@ $PolicyID = $policyNumbers[0]['ID'];
                             if (data && Array.isArray(data)) {
                                 let pdfLinks = '';
                                 data.forEach(function (doc) {
-                                    if (doc && doc.endsWith('.pdf')) {
+                                    if (doc) {
                                         // Create a link to view the PDF file with PDF icon
-                                        pdfLinks += `<a href="../reimbursement-media/${doc}" target="_blank" class="btn btn-link"><i class="fas fa-file-pdf"></i> View PDF</a><br>`;
+                                        pdfLinks += `<a href="../reimbursement-media/${doc}" target="_blank" class="btn btn-link bg-danger" style="color: white; text-decoration: none;">View Assets <i class="fa fa-file"></i></a><br>`;
                                     }
                                 });
                                 // If no PDFs found, display a message
                                 if (!pdfLinks) {
-                                    return 'No PDFs available';
+                                    return "No PDF's available";
                                 }
                                 return pdfLinks;
                             }
@@ -187,10 +186,7 @@ $PolicyID = $policyNumbers[0]['ID'];
                         data: 'Status'
                     },
                     {
-                        data: 'Reason'
-                    },
-                    {
-                        data: 'Action'
+                        data: 'Details'
                     }
 
                     ]

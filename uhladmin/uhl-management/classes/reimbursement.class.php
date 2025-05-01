@@ -95,42 +95,134 @@ class Reimbursement extends Core
 
 
 
-	public function DeleteReimbursement($data)
+	public function DeleteReimbursement($conn, $table, $id)
 	{
-		$ReimbursementID = $data['ID'];
-		// Delete course
-		$where = " where ID = $ReimbursementID";
-		$response = $this->delete_identity_filter($this->conn, "Reimbursement", $where);
-		return $response;
+		try {
+			// Update the record to set IsActive = 0 (soft delete)
+			$sql = "UPDATE $table SET IsActive = 0 WHERE ID = ?";
+			$stmt = mysqli_prepare($conn, $sql);
+
+			if ($stmt === false) {
+				throw new Exception("Failed to prepare statement: " . mysqli_error($conn));
+			}
+
+			mysqli_stmt_bind_param($stmt, "i", $id);
+
+			if (!mysqli_stmt_execute($stmt)) {
+				throw new Exception("Failed to execute statement: " . mysqli_stmt_error($stmt));
+			}
+
+			$affected_rows = mysqli_stmt_affected_rows($stmt);
+			mysqli_stmt_close($stmt);
+
+			return $affected_rows > 0;
+		} catch (Exception $e) {
+			error_log("Error in DeleteReimbursement: " . $e->getMessage());
+			return false;
+		}
 	}
 
+	public function GetReimbursementByID($conn, $table, $id)
+	{
+		try {
+			// Validate inputs
+			if (!$conn || !$table || !$id) {
+				error_log("Invalid parameters in GetReimbursementByID: conn=" . ($conn ? "valid" : "null") . ", table=$table, id=$id");
+				return false;
+			}
+
+			// Prepare the SQL statement
+			$sql = "SELECT * FROM $table WHERE ID = ? AND IsActive = 1";
+			$stmt = mysqli_prepare($conn, $sql);
+
+			if ($stmt === false) {
+				error_log("Failed to prepare statement in GetReimbursementByID: " . mysqli_error($conn));
+				return false;
+			}
+
+			// Bind parameters
+			if (!mysqli_stmt_bind_param($stmt, "i", $id)) {
+				error_log("Failed to bind parameters in GetReimbursementByID: " . mysqli_stmt_error($stmt));
+				mysqli_stmt_close($stmt);
+				return false;
+			}
+
+			// Execute the statement
+			if (!mysqli_stmt_execute($stmt)) {
+				error_log("Failed to execute statement in GetReimbursementByID: " . mysqli_stmt_error($stmt));
+				mysqli_stmt_close($stmt);
+				return false;
+			}
+
+			// Get the result
+			$result = mysqli_stmt_get_result($stmt);
+			if ($result === false) {
+				error_log("Failed to get result in GetReimbursementByID: " . mysqli_stmt_error($stmt));
+				mysqli_stmt_close($stmt);
+				return false;
+			}
+
+			// Fetch the record
+			$record = mysqli_fetch_assoc($result);
+			mysqli_stmt_close($stmt);
+
+			if (!$record) {
+				error_log("No record found in GetReimbursementByID for ID: $id");
+				return false;
+			}
+
+			return $record;
+		} catch (Exception $e) {
+			error_log("Exception in GetReimbursementByID: " . $e->getMessage());
+			return false;
+		}
+	}
 
 	public function GetAllReimbursementByUser($conn, $tableName, $filter)
 	{
+
 		try {
 			// Remove hardcoded table name since it's passed as parameter
 			$query = "SELECT * FROM $tableName $filter";
-			
+
 			// Use direct query instead of prepared statement since filter already contains the conditions
 			$result = mysqli_query($conn, $query);
-			
+
 			if ($result === false) {
 				error_log("Query failed: " . mysqli_error($conn));
 				return [];
 			}
-			
+
 			$reimbursementRecords = [];
 			while ($row = mysqli_fetch_assoc($result)) {
 				$reimbursementRecords[] = $row;
 			}
-			
+
 			return $reimbursementRecords;
 		} catch (Exception $e) {
 			error_log("Error in GetAllReimbursementByUser: " . $e->getMessage());
 			return [];
+
 		}
+
 	}
 
+	public function UpdateReimbursementStatus($conn, $ReimbursementID, $Status, $Comments = '')
+	{
+		// Data to update
+		$data = [
+			'Status' => $Status,
+			'Comments' => $Comments
+		];
+
+		$where = [
+			'ID' => $ReimbursementID
+		];
+
+		$result = $this->_UpdateTableRecords_prepare($conn, 'customer_reimbursement', $data, $where);
+
+		return isset($result['error']) && $result['error'] === false;
+	}
 
 
 }

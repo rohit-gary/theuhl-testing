@@ -1,0 +1,286 @@
+[01-May-2025 16:41:14 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:41:14 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OQ==
+    [Status] => Rejected
+    [Comment] => ywhrtcfg
+)
+
+[01-May-2025 16:41:14 Asia/Kolkata] Decrypted ReimbursementID: 9
+[01-May-2025 16:41:14 Asia/Kolkata] Processing update with:
+[01-May-2025 16:41:14 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:41:14 Asia/Kolkata] Comments: 
+[01-May-2025 16:41:14 Asia/Kolkata] === Starting UpdateReimbursementStatus ===
+[01-May-2025 16:41:14 Asia/Kolkata] Parameters received:
+[01-May-2025 16:41:14 Asia/Kolkata] ReimbursementID: 9
+[01-May-2025 16:41:14 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:41:14 Asia/Kolkata] Comments: 
+[01-May-2025 16:41:14 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:41:14 Asia/Kolkata] Binding parameters: Status=Rejected, Comments=, ID=9
+[01-May-2025 16:41:14 Asia/Kolkata] Executing statement...
+[01-May-2025 16:41:14 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:41:14 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:41:14 Asia/Kolkata] Update successful for ReimbursementID: 9
+[01-May-2025 16:41:14 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:42:04 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:42:04 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OQ==
+    [Status] => Rejected
+    [Comment] => testing
+)
+
+[01-May-2025 16:42:04 Asia/Kolkata] Decrypted ReimbursementID: 9
+[01-May-2025 16:42:04 Asia/Kolkata] Processing update with:
+[01-May-2025 16:42:04 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:42:04 Asia/Kolkata] Comments: testing
+[01-May-2025 16:42:04 Asia/Kolkata] === Starting UpdateReimbursementStatus ===
+[01-May-2025 16:42:04 Asia/Kolkata] Parameters received:
+[01-May-2025 16:42:04 Asia/Kolkata] ReimbursementID: 9
+[01-May-2025 16:42:04 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:42:04 Asia/Kolkata] Comments: testing
+[01-May-2025 16:42:04 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:42:04 Asia/Kolkata] Binding parameters: Status=Rejected, Comments=testing, ID=9
+[01-May-2025 16:42:04 Asia/Kolkata] Executing statement...
+[01-May-2025 16:42:04 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:42:04 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:42:04 Asia/Kolkata] Update successful for ReimbursementID: 9
+[01-May-2025 16:42:04 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:43:37 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:43:37 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OQ==
+    [Status] => Rejected
+    [Comment] => tesxt
+)
+
+[01-May-2025 16:43:37 Asia/Kolkata] Decrypted ReimbursementID: 9
+[01-May-2025 16:43:37 Asia/Kolkata] Processing update with:
+[01-May-2025 16:43:37 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:43:37 Asia/Kolkata] Comments: tesxt
+[01-May-2025 16:43:37 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:43:37 Asia/Kolkata] Binding parameters: Status=Rejected, Comments=tesxt, ID=9
+[01-May-2025 16:43:37 Asia/Kolkata] Executing statement...
+[01-May-2025 16:43:37 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:43:37 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:43:37 Asia/Kolkata] Update successful for ReimbursementID: 9
+[01-May-2025 16:43:37 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:48:08 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:48:08 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OQ==
+    [Status] => Rejected
+    [Comment] => test
+)
+
+[01-May-2025 16:48:08 Asia/Kolkata] Decrypted ReimbursementID: 9
+[01-May-2025 16:48:08 Asia/Kolkata] Processing update with:
+[01-May-2025 16:48:08 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:48:08 Asia/Kolkata] Comments: test
+[01-May-2025 16:48:08 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:48:08 Asia/Kolkata] Binding parameters: Status=Rejected, Comments=test, ID=9
+[01-May-2025 16:48:08 Asia/Kolkata] Executing statement...
+[01-May-2025 16:48:08 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:48:08 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:48:08 Asia/Kolkata] Update successful for ReimbursementID: 9
+[01-May-2025 16:48:08 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:50:32 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:50:32 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OA==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 16:50:32 Asia/Kolkata] Decrypted ReimbursementID: 8
+[01-May-2025 16:50:32 Asia/Kolkata] Processing update with:
+[01-May-2025 16:50:32 Asia/Kolkata] Status: Complete
+[01-May-2025 16:50:32 Asia/Kolkata] Comments: 
+[01-May-2025 16:50:32 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:50:32 Asia/Kolkata] Binding parameters: Status=Complete, Comments=, ID=8
+[01-May-2025 16:50:32 Asia/Kolkata] Executing statement...
+[01-May-2025 16:50:32 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:50:32 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:50:32 Asia/Kolkata] Update successful for ReimbursementID: 8
+[01-May-2025 16:50:32 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:52:26 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:52:26 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OA==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 16:52:26 Asia/Kolkata] Decrypted ReimbursementID: 8
+[01-May-2025 16:52:26 Asia/Kolkata] Processing update with:
+[01-May-2025 16:52:26 Asia/Kolkata] Status: Complete
+[01-May-2025 16:52:26 Asia/Kolkata] Comments: 
+[01-May-2025 16:52:26 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:52:26 Asia/Kolkata] Binding parameters: Status=Complete, Comments=, ID=8
+[01-May-2025 16:52:26 Asia/Kolkata] Executing statement...
+[01-May-2025 16:52:26 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:52:26 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:52:26 Asia/Kolkata] Update successful for ReimbursementID: 8
+[01-May-2025 16:52:26 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:54:27 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:54:27 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OA==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 16:54:27 Asia/Kolkata] Decrypted ReimbursementID: 8
+[01-May-2025 16:54:27 Asia/Kolkata] Processing update with:
+[01-May-2025 16:54:27 Asia/Kolkata] Status: Complete
+[01-May-2025 16:54:27 Asia/Kolkata] Comments: 
+[01-May-2025 16:54:27 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:54:27 Asia/Kolkata] Binding parameters: Status=Complete, Comments=, ID=8
+[01-May-2025 16:54:27 Asia/Kolkata] Executing statement...
+[01-May-2025 16:54:27 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:54:27 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:54:27 Asia/Kolkata] Update successful for ReimbursementID: 8
+[01-May-2025 16:54:27 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:55:11 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:55:11 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OA==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 16:55:11 Asia/Kolkata] Decrypted ReimbursementID: 8
+[01-May-2025 16:55:11 Asia/Kolkata] Processing update with:
+[01-May-2025 16:55:11 Asia/Kolkata] Status: Complete
+[01-May-2025 16:55:11 Asia/Kolkata] Comments: 
+[01-May-2025 16:55:11 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:55:11 Asia/Kolkata] Binding parameters: Status=Complete, Comments=, ID=8
+[01-May-2025 16:55:11 Asia/Kolkata] Executing statement...
+[01-May-2025 16:55:11 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:55:11 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:55:11 Asia/Kolkata] Update successful for ReimbursementID: 8
+[01-May-2025 16:55:11 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:56:04 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:56:04 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OA==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 16:56:04 Asia/Kolkata] Decrypted ReimbursementID: 8
+[01-May-2025 16:56:04 Asia/Kolkata] Processing update with:
+[01-May-2025 16:56:04 Asia/Kolkata] Status: Complete
+[01-May-2025 16:56:04 Asia/Kolkata] Comments: 
+[01-May-2025 16:56:04 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:56:04 Asia/Kolkata] Binding parameters: Status=Complete, Comments=, ID=8
+[01-May-2025 16:56:04 Asia/Kolkata] Executing statement...
+[01-May-2025 16:56:04 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:56:04 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:56:04 Asia/Kolkata] Update successful for ReimbursementID: 8
+[01-May-2025 16:56:04 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 16:56:18 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 16:56:18 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => OA==
+    [Status] => Rejected
+    [Comment] => ewterg
+)
+
+[01-May-2025 16:56:18 Asia/Kolkata] Decrypted ReimbursementID: 8
+[01-May-2025 16:56:18 Asia/Kolkata] Processing update with:
+[01-May-2025 16:56:18 Asia/Kolkata] Status: Rejected
+[01-May-2025 16:56:18 Asia/Kolkata] Comments: ewterg
+[01-May-2025 16:56:18 Asia/Kolkata] Preparing SQL: UPDATE customer_reimbursement 
+					SET Status = ?, 
+						Comments = ?
+					WHERE ID = ?
+[01-May-2025 16:56:18 Asia/Kolkata] Binding parameters: Status=Rejected, Comments=ewterg, ID=8
+[01-May-2025 16:56:18 Asia/Kolkata] Executing statement...
+[01-May-2025 16:56:18 Asia/Kolkata] Update successful. Affected rows: 1
+[01-May-2025 16:56:18 Asia/Kolkata] === End of UpdateReimbursementStatus ===
+[01-May-2025 16:56:18 Asia/Kolkata] Update successful for ReimbursementID: 8
+[01-May-2025 16:56:18 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 17:04:22 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 17:04:22 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => NQ==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 17:04:22 Asia/Kolkata] Decrypted ReimbursementID: 5
+[01-May-2025 17:04:22 Asia/Kolkata] Processing update with:
+[01-May-2025 17:04:22 Asia/Kolkata] Status: Complete
+[01-May-2025 17:04:22 Asia/Kolkata] Comments: 
+[01-May-2025 17:04:22 Asia/Kolkata] Update successful for ReimbursementID: 5
+[01-May-2025 17:04:22 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 17:07:47 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 17:07:47 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => NQ==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 17:07:47 Asia/Kolkata] Decrypted ReimbursementID: 5
+[01-May-2025 17:07:47 Asia/Kolkata] Processing update with:
+[01-May-2025 17:07:47 Asia/Kolkata] Status: Complete
+[01-May-2025 17:07:47 Asia/Kolkata] Comments: 
+[01-May-2025 17:07:47 Asia/Kolkata] Update successful for ReimbursementID: 5
+[01-May-2025 17:07:47 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 17:08:04 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 17:08:04 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => NQ==
+    [Status] => Rejected
+    [Comment] => erywtgsrg
+)
+
+[01-May-2025 17:08:04 Asia/Kolkata] Decrypted ReimbursementID: 5
+[01-May-2025 17:08:04 Asia/Kolkata] Processing update with:
+[01-May-2025 17:08:04 Asia/Kolkata] Status: Rejected
+[01-May-2025 17:08:04 Asia/Kolkata] Comments: erywtgsrg
+[01-May-2025 17:08:04 Asia/Kolkata] Update successful for ReimbursementID: 5
+[01-May-2025 17:08:04 Asia/Kolkata] === End of update-reimbursement-status.php ===
+[01-May-2025 17:09:55 Asia/Kolkata] === Starting update-reimbursement-status.php ===
+[01-May-2025 17:09:55 Asia/Kolkata] POST data received: Array
+(
+    [ReimbursementID] => NQ==
+    [Status] => Complete
+    [Comment] => 
+)
+
+[01-May-2025 17:09:55 Asia/Kolkata] Decrypted ReimbursementID: 5
+[01-May-2025 17:09:55 Asia/Kolkata] Processing update with:
+[01-May-2025 17:09:55 Asia/Kolkata] Status: Complete
+[01-May-2025 17:09:55 Asia/Kolkata] Comments: 
+[01-May-2025 17:09:55 Asia/Kolkata] Update successful for ReimbursementID: 5
+[01-May-2025 17:09:55 Asia/Kolkata] === End of update-reimbursement-status.php ===

@@ -1,0 +1,2772 @@
+[01-May-2025 16:43:41 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Rejected
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:43:47 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Rejected
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:46:28 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Rejected
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:48:18 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Rejected
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:50:28 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Rejected
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:51:38 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:56:56 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 16:58:44 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 17:05:06 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 17:05:17 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 17:08:17 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 17:45:27 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 17:45:28 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+
+[01-May-2025 17:45:30 Asia/Kolkata] Final Response: Array
+(
+    [draw] => 1
+    [iTotalRecords] => 9
+    [iTotalDisplayRecords] => 9
+    [aaData] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 9
+                    [PolicyNumber] => 230000
+                    [HospitalName] => Fortesh 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                            [0] => test1.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => tset
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:58:21
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(9)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [1] => Array
+                (
+                    [id] => 8
+                    [PolicyNumber] => TYU090980
+                    [HospitalName] => Fortish 
+                    [CheckupDate] => 2024-11-30
+                    [CheckupCost] => 23000.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Fever
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 14:52:04
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=OA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(8)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [2] => Array
+                (
+                    [id] => 7
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:50:33
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Nw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(7)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [3] => Array
+                (
+                    [id] => 6
+                    [PolicyNumber] => P123456789
+                    [HospitalName] => City Hospital
+                    [CheckupDate] => 2024-11-29
+                    [CheckupCost] => 1500.00
+                    [Documents] => Array
+                        (
+                        )
+
+                    [Status] => Pending
+                    [Reason] => Routine checkup
+                    [createdDate] => 2024-11-29
+                    [createdTime] => 12:38:45
+                    [createdBy] => 
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Ng=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(6)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [4] => Array
+                (
+                    [id] => 5
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746ca1ad63f8.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:58:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(5)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [5] => Array
+                (
+                    [id] => 4
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-27
+                    [CheckupCost] => 20500.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL267549_6746c9bfc9204.png
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-27
+                    [createdTime] => 12:56:55
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=NA=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(4)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [6] => Array
+                (
+                    [id] => 3
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => sdfghj
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => Uhl002_672c5d1021a2f.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:09:13
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mw=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(3)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [7] => Array
+                (
+                    [id] => 2
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d446.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => 
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:08:56
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=Mg=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(2)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+            [8] => Array
+                (
+                    [id] => 1
+                    [PolicyNumber] => UHL267549
+                    [HospitalName] => Testing
+                    [CheckupDate] => 2024-11-26
+                    [CheckupCost] => 20000.00
+                    [Documents] => Array
+                        (
+                            [0] => UHL001_672c52237d234.pdf
+                        )
+
+                    [Status] => Pending
+                    [Reason] => test
+
+                    [createdDate] => 2024-11-26
+                    [createdTime] => 16:07:26
+                    [createdBy] => rohitmaurya.gary@gmail.com
+                    [Details] => <a href='view-reimbursement-details?ReimbursementID=MQ=='><span class='btn btn-link bg-primary text-white'style='text-decoration:none;'>View Details</span></a>
+                    [Action] => <a class='btn text-danger bg-danger-transparent btn-icon py-1' data-bs-toggle='tooltip' onclick='DeleteReimbursement(1)' data-bs-original-title='Delete'><span class='fe fe-trash-2 fs-14'></span></a>
+                )
+
+        )
+
+)
+

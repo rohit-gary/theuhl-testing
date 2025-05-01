@@ -10,7 +10,7 @@
 <!-- <link rel="manifest" href="../project-assets/images/favicon/site.webmanifest"> -->
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-
+<link rel="icon" href="../project-assets/images/logo.png" type="image/png">
 <!-- DATA TABLE SCSS -->
 <link href="../theme-assets/scss/plugins/_dataTables.bootstrap.scss" rel="stylesheet">
 <link href="../theme-assets/scss/plugins/_buttons.bootstrap5.scss" rel="stylesheet">
@@ -21,7 +21,7 @@
 <link id="style" href="../theme-assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- STYLE CSS -->
- <link href="../theme-assets/css/style.css" rel="stylesheet">
+<link href="../theme-assets/css/style.css" rel="stylesheet">
 
 <!-- Plugins CSS -->
 <link href="../theme-assets/css/plugins.css" rel="stylesheet">
@@ -36,14 +36,29 @@
 <!-- PROJECT CSS -->
 <link href="../project-assets/css/style.css" rel="stylesheet">
 
-<!-- Alertify -->
+<!-- Alertify CSS -->
+<link rel="stylesheet" href="../theme-assets/plugins/alertifyjs/css/alertify.min.css">
+<link rel="stylesheet" href="../theme-assets/plugins/alertifyjs/css/themes/default.min.css">
 
-<link rel="stylesheet" media="screen, print" href="../theme-assets/plugins/alertifyjs/css/alertify.css">
-<link rel="stylesheet" media="screen, print" href="../theme-assets/plugins/alertifyjs/css/themes/default.min.css">
+<!-- Lightgallery CSS -->
+<link rel="stylesheet" href="../theme-assets/plugins/gallery/lightgallery.css">
+
+<!-- Initialize alertify -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        alertify.set('notifier', 'position', 'top-right');
+        alertify.set('notifier', 'delay', 3);
+    });
+</script>
+
+<!-- Lightgallery JS -->
+<script src="../theme-assets/plugins/gallery/lightgallery.js"></script>
+<script src="../theme-assets/plugins/gallery/lg-thumbnail.js"></script>
+<script src="../theme-assets/plugins/gallery/lg-fullscreen.js"></script>
+<script src="../theme-assets/plugins/gallery/lg-zoom.js"></script>
 
 <style>
-    .datepicker{
+    .datepicker {
         z-index: 100000 !important;
     }
 </style>
-

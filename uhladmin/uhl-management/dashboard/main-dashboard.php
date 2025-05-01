@@ -72,45 +72,46 @@ $userType = $authentication->SessionCheck();
         }
 
         .flip-card {
-        perspective: 1000px;
-    }
+            perspective: 1000px;
+        }
 
-    .flip-card-inner {
-        position: relative;
-        width: 100%;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-    }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
 
-    .flipped .flip-card-inner {
-        transform: rotateY(180deg);
-    }
+        .flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
 
-    .flip-card-front,
-    .flip-card-back {
-        position: absolute;
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
 
-       
-        backface-visibility: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .flip-card-front {
-        background: #ffc107; /* Warning color */
-    }
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .flip-card-back {
-        background: #ffc107;
-        transform: rotateY(180deg);
-    }
+        .flip-card-front {
+            background: #ffc107;
+            /* Warning color */
+        }
 
-    .eye-icon {
-        font-size: 30px;
-        color: black;
-        cursor: pointer;
-    }
+        .flip-card-back {
+            background: #ffc107;
+            transform: rotateY(180deg);
+        }
+
+        .eye-icon {
+            font-size: 30px;
+            color: black;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -204,41 +205,42 @@ $userType = $authentication->SessionCheck();
 
 
 
-                                      <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                                    <div class="flip-card" onclick="flipCard(this)">
-                                        <div class="flip-card-inner">
-                                            <!-- Default Side (Eye) -->
-                                            <div class="card bg-warning img-card box-warning-shadow flip-card-front">
-                                                <div class="card-body text-center">
-                                                    <i class="fa fa-eye eye-icon"></i>
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="flip-card" onclick="flipCard(this)">
+                                            <div class="flip-card-inner">
+                                                <!-- Default Side (Eye) -->
+                                                <div class="card bg-warning img-card box-warning-shadow flip-card-front">
+                                                    <div class="card-body text-center">
+                                                        <i class="fa fa-eye eye-icon"></i>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <!-- Flipped Side (Number) -->
-                                            <div class="card bg-warning img-card box-warning-shadow flip-card-back">
-                                                <div class="card-body">
-                                                    <div class="d-flex">
-                                                        <div class="text-dark">
-                                                            <h2 class="mb-0 number-font">
-                                                                <?php echo $dashboard->GetTotalRevenueBy(); ?>
-                                                            </h2>
-                                                            <p class="text-dark mb-0">Total PREMIUM COLLECTED WITH SERVICE FEE & GST</p>
-                                                        </div>
-                                                        <div class="ms-auto">
-                                                            <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>
+                                                <!-- Flipped Side (Number) -->
+                                                <div class="card bg-warning img-card box-warning-shadow flip-card-back">
+                                                    <div class="card-body">
+                                                        <div class="d-flex">
+                                                            <div class="text-dark">
+                                                                <h2 class="mb-0 number-font">
+                                                                    <?php echo $dashboard->GetTotalRevenueBy(); ?>
+                                                                </h2>
+                                                                <p class="text-dark mb-0">Total PREMIUM COLLECTED WITH
+                                                                    SERVICE FEE & GST</p>
+                                                            </div>
+                                                            <div class="ms-auto">
+                                                                <i class="fa fa-inr text-white fs-30 me-2 mt-2"></i>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <script>
-                                    function flipCard(card) {
-                                        card.classList.toggle("flipped");
-                                    }
-                                </script>
+                                    <script>
+                                        function flipCard(card) {
+                                            card.classList.toggle("flipped");
+                                        }
+                                    </script>
 
 
 

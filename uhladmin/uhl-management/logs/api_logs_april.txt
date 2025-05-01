@@ -1,0 +1,13 @@
+
+2025-04-30_09:28:36_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\mobile_login.php_16
+
+2025-04-30_09:28:36_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\mobile_login.php_74
+{"error":true,"message":"Missing User Fields!"}
+2025-04-30_10:19:53_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\mobile_login.php_16
+
+2025-04-30_10:19:53_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\mobile_login.php_73
+{"error":true,"message":"Missing User Fields!"}
+2025-04-30_10:20:23_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\mobile_login.php_16
+
+2025-04-30_10:20:23_C:\wamp64\www\Projects\theuhl-testing\uhladmin\uhl-management\api\mobile_login.php_73
+{"error":true,"message":"Missing User Fields!"}

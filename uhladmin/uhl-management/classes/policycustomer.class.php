@@ -753,46 +753,46 @@ LIMIT 0, 25;";
 
 
 
-public function GetUserCurrentPlanNew($data)
-{
-    extract($data);
-    $where = "WHERE UserID = '$ID' OR ContactNumber = '$MobileNumber'";
-    $user_details = $this->_getTableRecords($this->conn, 'all_customer', $where);
+    public function GetUserCurrentPlanNew($data)
+    {
+        extract($data);
+        $where = "WHERE UserID = '$ID' OR ContactNumber = '$MobileNumber'";
+        $user_details = $this->_getTableRecords($this->conn, 'all_customer', $where);
 
-    if (empty($user_details)) {
-        return ["error" => true, "message" => "No customer records found"];
-    }
+        if (empty($user_details)) {
+            return ["error" => true, "message" => "No customer records found"];
+        }
 
-    $customerIDs = array_column($user_details, 'ID'); // Extract all Customer IDs
-    $customerPolicies = [];
+        $customerIDs = array_column($user_details, 'ID'); // Extract all Customer IDs
+        $customerPolicies = [];
 
-    foreach ($customerIDs as $customerId) {
-        $where = "WHERE CustomerID = '$customerId'";
-        $user_policy_details = $this->_getTableRecords($this->conn, 'customerpolicy', $where);
+        foreach ($customerIDs as $customerId) {
+            $where = "WHERE CustomerID = '$customerId'";
+            $user_policy_details = $this->_getTableRecords($this->conn, 'customerpolicy', $where);
 
-        if (!empty($user_policy_details)) {
-            foreach ($user_policy_details as $policy) {
-                $policyKey = $policy['CustomerID'] . '-' . $policy['PolicyNumber']; // Unique Key
-                if (!isset($customerPolicies[$policyKey])) { // Avoid duplicates
-                    $customerPolicies[$policyKey] = [
-                        "CustomerID" => $policy['CustomerID'],
-                        "PolicyNumber" => $policy['PolicyNumber'],
-                        "CreatedDate" => $policy['CreatedDate'],
-                        "CreatedTime" => $policy['CreatedTime'],
-                        "CreatedBy" => $policy['CreatedBy'],
-                        "IsActive" => $policy['IsActive'],
-                    ];
+            if (!empty($user_policy_details)) {
+                foreach ($user_policy_details as $policy) {
+                    $policyKey = $policy['CustomerID'] . '-' . $policy['PolicyNumber']; // Unique Key
+                    if (!isset($customerPolicies[$policyKey])) { // Avoid duplicates
+                        $customerPolicies[$policyKey] = [
+                            "CustomerID" => $policy['CustomerID'],
+                            "PolicyNumber" => $policy['PolicyNumber'],
+                            "CreatedDate" => $policy['CreatedDate'],
+                            "CreatedTime" => $policy['CreatedTime'],
+                            "CreatedBy" => $policy['CreatedBy'],
+                            "IsActive" => $policy['IsActive'],
+                        ];
+                    }
                 }
             }
         }
-    }
 
-    if (!empty($customerPolicies)) {
-        return [array_values($customerPolicies)]; // Convert associative array to indexed
-    } else {
-        return ["error" => true, "message" => "No policy records found"];
+        if (!empty($customerPolicies)) {
+            return [array_values($customerPolicies)]; // Convert associative array to indexed
+        } else {
+            return ["error" => true, "message" => "No policy records found"];
+        }
     }
-}
 
 
 
@@ -803,6 +803,14 @@ public function GetUserCurrentPlanNew($data)
     public function PolicyDetailsByUserID($UserID)
     {
         $where = "where UserID = $UserID";
+        $user_policy_details = $this->_getTableRecords($this->conn, 'all_customer', $where);
+
+        return $user_policy_details;
+    }
+
+    public function PolicyDetailsByUsersID($UserID)
+    {
+        $where = "where CreatedBy = $UserID";
         $user_policy_details = $this->_getTableRecords($this->conn, 'all_customer', $where);
 
         return $user_policy_details;

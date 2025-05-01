@@ -9,7 +9,8 @@
        "_Nav_Customer",
        "_Nav_Account",
        "_Nav_Neft",
-       "_Nav_DocTest"
+       "_Nav_DocTest",
+       "_Nav_Reimbursement"
   ],
   "Admin": [
     "_Nav_Dashboard",
@@ -21,7 +22,8 @@
        "_Nav_Customer",
        "_Nav_Account",
        "_Nav_Neft",
-       "_Nav_DocTest"
+       "_Nav_DocTest",
+       "_Nav_Reimbursement"
 
   ],
   "Client Admin": [
@@ -53,7 +55,6 @@
     "_Nav_Dashboard_Customer",
     "_Nav_Document",
     "_Nav_Reimbursement"
-   
   ],
 
   "Accountant":[

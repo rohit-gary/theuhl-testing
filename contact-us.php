@@ -1,6 +1,6 @@
     <head>
     <?php include("includes/meta.php") ?>
-    <?php include("includes/links.php") ?>
+    <?php include("includes/links1.php") ?>
     <title>Contact US</title>  
 <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
 
@@ -9,7 +9,7 @@
 <div class="page-wraper">
 <div id="loading-area"></div>
   <!-- header -->
-  <?php include('includes/header.php'); ?>
+  <?php include('includes/header1.php'); ?>
 
     <div class="page-content bg-white">
         <!-- inner page banner -->
@@ -48,7 +48,7 @@
                             <div class="icon-lg text-primary m-b20"> <a href="javascript:void(0);" class="icon-cell"><i class="ti-email"></i></a> </div>
                             <div class="icon-content">
                                 <h5 class="dlab-tilte text-uppercase">Email</h5>
-                                <p><a href="mailto:someone@example.com">info@unitedhealthlumina.com</a> <br> <a href="mailto:someone@example.com">support@unitedhealthlumina.com</a></p>
+                                <p><a href="mailto:info@unitedhealthlumina.com">info@unitedhealthlumina.com</a> <br> <a href="mailto:contact@unitedhealthlumina.com">contact@unitedhealthlumina.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -58,6 +58,7 @@
                             <div class="icon-content">
                                 <h5 class="dlab-tilte text-uppercase">Phone</h5>
                                 <p><a href="tel:1206053551">+911206053551</a></p>
+                                <p><a href="tel:8860055057">+91 88 600 55 057</a></p>
                             </div>
                         </div>
                     </div>
@@ -140,7 +141,7 @@
     </div>
 
 </div>
- <?php include("includes/footer.php") ?>
-    <?php include("includes/script.php") ?>
-    <script type="text/javascript" src="project-assets/js/all_test_new.js"></script>
+ <?php include("includes/footer1.php") ?>
+    <?php include("includes/script1.php") ?>
+    <script type="text/javascript" src="project-assets/js/common-test.js"></script>
 </body>
